@@ -1,0 +1,187 @@
+COMMAND: sh tools/godot.sh test --intentional-failure
+EXIT: 1
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: valid .tres fixtures accepted
+EXPECTED INVALID FIXTURE: res://tests/fixtures/invalid_weapon.tres [fixture.invalid_weapon]: attack_interval: must be finite and greater than zero
+EXPECTED INVALID FIXTURE: res://tests/fixtures/missing_reference.tres [fixture.missing_reference]: missing reference 'fixture.unknown_enemy'
+PASS: invalid fixtures produce exactly two errors
+PASS: interval error identifies content and field
+PASS: reference error identifies owner and missing ID
+PASS: duplicate IDs rejected
+PASS: empty stable ID rejected
+PASS: malformed stable ID rejected
+PASS: null definition reported safely
+PASS: NaN attack interval rejected
+PASS: all nine typed definition skeletons instantiate
+PASS: unauthored definition rejected: res://scripts/core/definitions/weapon_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/shield_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/upgrade_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/enemy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/wave_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/mission_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/module_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/synergy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/achievement_definition.gd
+PASS: new weapon state uses rank-1 definition baseline
+PASS: runtime mutation leaves cached weapon resource unchanged
+PASS: state serialization exposes stable ID
+PASS: new shield state starts at baseline
+PASS: runtime mutation leaves shield resource unchanged
+PASS: run instances own independent collections
+PASS: profile instances own independent option collections
+PASS: one separate main slot and shield slot
+PASS: support contract is five slots from six families
+PASS: foundation suite completed
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: boot opens menu
+PASS: English translation imported
+PASS: declared input action: menu_back
+PASS: declared input action: pause
+PASS: declared input action: focus_target
+PASS: declared input action: aim_override
+PASS: declared input action: shield_ability
+PASS: Start signal opens placeholder
+PASS: placeholder Back returns to menu
+PASS: Settings signal opens settings
+PASS: setting disables decorative signal
+PASS: settings Back returns to menu
+PASS: display preference survives page navigation
+PASS: menu_back action returns to menu
+PASS: Quit signal is connected
+PASS: boot suite completed
+PASS: safe area converts pixels through scale and letterbox offset
+PASS: safe area clamps extra display space to fixed canvas
+PASS: unavailable safe-area measurement uses full canvas
+PASS: first launch has no checkpoint
+PASS: probe checkpoint commits
+PASS: second checkpoint rotates backup
+PASS: latest checkpoint loads
+PASS: truncated checkpoint recovers validated backup
+PASS: save after recovery repairs primary
+PASS: repaired primary loads
+PASS: negative tap count rejected
+PASS: nonfinite clock rejected
+PASS: unsupported checkpoint version rejected
+PASS: fractional tap count rejected
+PASS: string counter rejected
+PASS: unexpected checkpoint fields rejected
+PASS: write failure reported honestly
+M1_PROBE {"active_seconds":4.5,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":5}
+PASS: new probe instance restores saved taps
+PASS: actual process node advances while active
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":1,"resumes":0,"taps":5}
+PASS: cycle 1 freezes actual scene processing
+PASS: resume waits for focus in cycle 1
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":1,"resumes":1,"taps":5}
+PASS: cycle 1 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":2,"resumes":1,"taps":5}
+PASS: cycle 2 freezes actual scene processing
+PASS: resume waits for focus in cycle 2
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":2,"resumes":2,"taps":5}
+PASS: cycle 2 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":3,"resumes":2,"taps":5}
+PASS: cycle 3 freezes actual scene processing
+PASS: resume waits for focus in cycle 3
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":3,"resumes":3,"taps":5}
+PASS: cycle 3 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":4,"resumes":3,"taps":5}
+PASS: cycle 4 freezes actual scene processing
+PASS: resume waits for focus in cycle 4
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":4,"resumes":4,"taps":5}
+PASS: cycle 4 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":5,"resumes":4,"taps":5}
+PASS: cycle 5 freezes actual scene processing
+PASS: resume waits for focus in cycle 5
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":5,"resumes":5,"taps":5}
+PASS: cycle 5 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":6,"resumes":5,"taps":5}
+PASS: cycle 6 freezes actual scene processing
+PASS: resume waits for focus in cycle 6
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":6,"resumes":6,"taps":5}
+PASS: cycle 6 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":7,"resumes":6,"taps":5}
+PASS: cycle 7 freezes actual scene processing
+PASS: resume waits for focus in cycle 7
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":7,"resumes":7,"taps":5}
+PASS: cycle 7 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":8,"resumes":7,"taps":5}
+PASS: cycle 8 freezes actual scene processing
+PASS: resume waits for focus in cycle 8
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":8,"resumes":8,"taps":5}
+PASS: cycle 8 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":9,"resumes":8,"taps":5}
+PASS: cycle 9 freezes actual scene processing
+PASS: resume waits for focus in cycle 9
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":9,"resumes":9,"taps":5}
+PASS: cycle 9 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":10,"resumes":9,"taps":5}
+PASS: cycle 10 freezes actual scene processing
+PASS: resume waits for focus in cycle 10
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":10,"resumes":10,"taps":5}
+PASS: cycle 10 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":11,"resumes":10,"taps":5}
+PASS: cycle 11 freezes actual scene processing
+PASS: resume waits for focus in cycle 11
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":11,"resumes":11,"taps":5}
+PASS: cycle 11 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":12,"resumes":11,"taps":5}
+PASS: cycle 12 freezes actual scene processing
+PASS: resume waits for focus in cycle 12
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":12,"resumes":12,"taps":5}
+PASS: cycle 12 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":13,"resumes":12,"taps":5}
+PASS: cycle 13 freezes actual scene processing
+PASS: resume waits for focus in cycle 13
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":13,"resumes":13,"taps":5}
+PASS: cycle 13 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":14,"resumes":13,"taps":5}
+PASS: cycle 14 freezes actual scene processing
+PASS: resume waits for focus in cycle 14
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":14,"resumes":14,"taps":5}
+PASS: cycle 14 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":15,"resumes":14,"taps":5}
+PASS: cycle 15 freezes actual scene processing
+PASS: resume waits for focus in cycle 15
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":15,"resumes":15,"taps":5}
+PASS: cycle 15 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":16,"resumes":15,"taps":5}
+PASS: cycle 16 freezes actual scene processing
+PASS: resume waits for focus in cycle 16
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":16,"resumes":16,"taps":5}
+PASS: cycle 16 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":17,"resumes":16,"taps":5}
+PASS: cycle 17 freezes actual scene processing
+PASS: resume waits for focus in cycle 17
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":17,"resumes":17,"taps":5}
+PASS: cycle 17 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":18,"resumes":17,"taps":5}
+PASS: cycle 18 freezes actual scene processing
+PASS: resume waits for focus in cycle 18
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":18,"resumes":18,"taps":5}
+PASS: cycle 18 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":19,"resumes":18,"taps":5}
+PASS: cycle 19 freezes actual scene processing
+PASS: resume waits for focus in cycle 19
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":19,"resumes":19,"taps":5}
+PASS: cycle 19 resumes
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":20,"resumes":19,"taps":5}
+PASS: cycle 20 freezes actual scene processing
+PASS: resume waits for focus in cycle 20
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":20,"resumes":20,"taps":5}
+PASS: cycle 20 resumes
+PASS: duplicate notifications counted once over 20 cycles
+PASS: 20 synthetic cycles record no paused clock drift
+PASS: lifecycle transitions retain one probe instance
+PASS: manual pause suspends tree
+M1_PROBE {"active_seconds":4.566716,"event":"os_pause","instances":1,"paused_drift":0,"pauses":21,"resumes":20,"taps":5}
+M1_PROBE {"active_seconds":4.566716,"event":"os_resume","instances":1,"paused_drift":0,"pauses":21,"resumes":21,"taps":5}
+PASS: focus regain preserves manual pause
+M1_PROBE {"active_seconds":4.566716,"event":"tap","instances":1,"paused_drift":0,"pauses":21,"resumes":21,"taps":6}
+PASS: one button activation commits exactly one tap
+PASS: probe removal releases pause ownership
+M1_PROBE {"active_seconds":4.566716,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":6}
+PASS: replacement instance restores committed tap
+PASS: mobile probe suite completed
+RESULT: 134 checks; 1 failures
+FAIL: intentional failure proves nonzero exit

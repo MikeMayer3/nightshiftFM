@@ -1,0 +1,41 @@
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 1
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 2
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 3
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 4
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 5
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 6
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 7
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 8
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 9
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 10
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 11
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 12
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 13
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 14
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 15
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 16
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 17
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 18
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 19
+Warning: Activity not started, its current task has been brought to the front
+PASS: physical lifecycle cycle 20
+PASS: force-stop/relaunch restores checkpoint; report: docs/evidence/M1/pixel-lifecycle.json

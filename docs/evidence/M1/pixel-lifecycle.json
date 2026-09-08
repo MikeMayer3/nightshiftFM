@@ -1,0 +1,445 @@
+{
+  "model": "Pixel 10 Pro XL",
+  "android": "16",
+  "emulator": false,
+  "cycles": [
+    {
+      "cycle": 1,
+      "pause": {
+        "active_seconds": 113.17614715151,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 21,
+        "resumes": 20,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 113.17614715151,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 21,
+        "resumes": 21,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 2,
+      "pause": {
+        "active_seconds": 113.880035818177,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 22,
+        "resumes": 21,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 113.880035818177,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 22,
+        "resumes": 22,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 3,
+      "pause": {
+        "active_seconds": 114.533923818178,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 23,
+        "resumes": 22,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 114.533923818178,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 23,
+        "resumes": 23,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 4,
+      "pause": {
+        "active_seconds": 115.229748818178,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 24,
+        "resumes": 23,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 115.229748818178,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 24,
+        "resumes": 24,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 5,
+      "pause": {
+        "active_seconds": 115.852985818178,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 25,
+        "resumes": 24,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 115.852985818178,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 25,
+        "resumes": 25,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 6,
+      "pause": {
+        "active_seconds": 116.531616484845,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 26,
+        "resumes": 25,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 116.531616484845,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 26,
+        "resumes": 26,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 7,
+      "pause": {
+        "active_seconds": 117.152956151512,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 27,
+        "resumes": 26,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 117.152956151512,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 27,
+        "resumes": 27,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 8,
+      "pause": {
+        "active_seconds": 117.774838484845,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 28,
+        "resumes": 27,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 117.774838484845,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 28,
+        "resumes": 28,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 9,
+      "pause": {
+        "active_seconds": 118.462581151512,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 29,
+        "resumes": 28,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 118.462581151512,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 29,
+        "resumes": 29,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 10,
+      "pause": {
+        "active_seconds": 119.145429818179,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 30,
+        "resumes": 29,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 119.145429818179,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 30,
+        "resumes": 30,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 11,
+      "pause": {
+        "active_seconds": 119.952772818179,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 31,
+        "resumes": 30,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 119.952772818179,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 31,
+        "resumes": 31,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 12,
+      "pause": {
+        "active_seconds": 120.758460151513,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 32,
+        "resumes": 31,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 120.758460151513,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 32,
+        "resumes": 32,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 13,
+      "pause": {
+        "active_seconds": 121.498937151513,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 33,
+        "resumes": 32,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 121.498937151513,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 33,
+        "resumes": 33,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 14,
+      "pause": {
+        "active_seconds": 122.119243151513,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 34,
+        "resumes": 33,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 122.119243151513,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 34,
+        "resumes": 34,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 15,
+      "pause": {
+        "active_seconds": 122.740652484847,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 35,
+        "resumes": 34,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 122.740652484847,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 35,
+        "resumes": 35,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 16,
+      "pause": {
+        "active_seconds": 123.451163484847,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 36,
+        "resumes": 35,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 123.451163484847,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 36,
+        "resumes": 36,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 17,
+      "pause": {
+        "active_seconds": 124.243178151515,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 37,
+        "resumes": 36,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 124.243178151515,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 37,
+        "resumes": 37,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 18,
+      "pause": {
+        "active_seconds": 124.891977151515,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 38,
+        "resumes": 37,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 124.891977151515,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 38,
+        "resumes": 38,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 19,
+      "pause": {
+        "active_seconds": 125.721465484848,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 39,
+        "resumes": 38,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 125.721465484848,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 39,
+        "resumes": 39,
+        "taps": 10
+      }
+    },
+    {
+      "cycle": 20,
+      "pause": {
+        "active_seconds": 126.485294151515,
+        "event": "os_pause",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 40,
+        "resumes": 39,
+        "taps": 10
+      },
+      "resume": {
+        "active_seconds": 126.485294151515,
+        "event": "os_resume",
+        "instances": 1,
+        "paused_drift": 0,
+        "pauses": 40,
+        "resumes": 40,
+        "taps": 10
+      }
+    }
+  ],
+  "status": "PASS",
+  "recovery": {
+    "saved": {
+      "active_seconds": 126.485294151515,
+      "schema": 1,
+      "taps": 10
+    },
+    "restored": {
+      "active_seconds": 126.485294151515,
+      "event": "ready",
+      "instances": 1,
+      "paused_drift": 0,
+      "pauses": 0,
+      "resumes": 0,
+      "taps": 10
+    },
+    "process_changed": true
+  }
+}

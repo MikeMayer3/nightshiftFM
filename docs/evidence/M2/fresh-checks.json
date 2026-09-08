@@ -1,0 +1,80 @@
+[
+  {
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "import"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "test"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "test",
+      "--intentional-failure"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "smoke"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "test",
+      "--quit-smoke"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "sh",
+      "-n",
+      "tools/godot.sh"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_foundation.py"
+    ],
+    "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "result": "PASS"
+  }
+]

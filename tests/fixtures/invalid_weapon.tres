@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="WeaponDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"fixture.invalid_weapon"
+name_key = &"FIXTURE_INVALID_NAME"
+description_key = &"FIXTURE_INVALID_DESCRIPTION"
+attack_interval = 0.0

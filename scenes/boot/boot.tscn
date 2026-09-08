@@ -1,0 +1,158 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/boot.gd" id="1_boot"]
+[ext_resource type="Script" path="res://scripts/ui/transmitter_art.gd" id="2_art"]
+[ext_resource type="PackedScene" path="res://scenes/ui/mobile_probe.tscn" id="3_probe"]
+[ext_resource type="Script" path="res://scripts/ui/safe_margin.gd" id="4_safe"]
+
+[node name="Boot" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_boot")
+
+[node name="Margin" type="MarginContainer" parent="."]
+script = ExtResource("4_safe")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 70
+
+[node name="Column" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Eyebrow" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.46, 0.86, 0.78, 1)
+theme_override_font_sizes/font_size = 24
+text = "BOOT_EYEBROW"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "BOOT_TITLE"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "BOOT_SUBTITLE"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Transmitter" type="Control" parent="Margin/Column"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_art")
+
+[node name="Menu" type="VBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Start" type="Button" parent="Margin/Column/Menu"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_START"
+
+[node name="Settings" type="Button" parent="Margin/Column/Menu"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_SETTINGS"
+
+[node name="Quit" type="Button" parent="Margin/Column/Menu"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_QUIT"
+
+[node name="MobileChecks" type="Button" parent="Margin/Column/Menu"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_MOBILE_CHECKS"
+
+[node name="StartPlaceholder" type="VBoxContainer" parent="Margin/Column"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Heading" type="Label" parent="Margin/Column/StartPlaceholder"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "START_HEADING"
+horizontal_alignment = 1
+
+[node name="Explanation" type="Label" parent="Margin/Column/StartPlaceholder"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "START_BODY"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MobileProbe" parent="." instance=ExtResource("3_probe")]
+visible = false
+
+[node name="Back" type="Button" parent="Margin/Column/StartPlaceholder"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_BACK"
+
+[node name="Settings" type="VBoxContainer" parent="Margin/Column"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Heading" type="Label" parent="Margin/Column/Settings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "MENU_SETTINGS"
+horizontal_alignment = 1
+
+[node name="ShowSignal" type="CheckButton" parent="Margin/Column/Settings"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+button_pressed = true
+text = "SETTINGS_SIGNAL"
+
+[node name="Explanation" type="Label" parent="Margin/Column/Settings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS_BODY"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="Margin/Column/Settings"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "MENU_BACK"
+
+[node name="Spacer" type="Control" parent="Margin/Column"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Footer" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.72, 0.79, 1)
+theme_override_font_sizes/font_size = 22
+text = "BOOT_FOOTER"
+horizontal_alignment = 1
+autowrap_mode = 2

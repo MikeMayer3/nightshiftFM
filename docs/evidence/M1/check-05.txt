@@ -1,0 +1,2 @@
+COMMAND: sh -n tools/godot.sh
+EXIT: 0

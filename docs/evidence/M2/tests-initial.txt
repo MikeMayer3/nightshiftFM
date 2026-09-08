@@ -1,0 +1,429 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: valid .tres fixtures accepted
+EXPECTED INVALID FIXTURE: res://tests/fixtures/invalid_weapon.tres [fixture.invalid_weapon]: attack_interval: must be finite and greater than zero
+EXPECTED INVALID FIXTURE: res://tests/fixtures/missing_reference.tres [fixture.missing_reference]: missing reference 'fixture.unknown_enemy'
+PASS: invalid fixtures produce exactly two errors
+PASS: interval error identifies content and field
+PASS: reference error identifies owner and missing ID
+PASS: duplicate IDs rejected
+PASS: empty stable ID rejected
+PASS: malformed stable ID rejected
+PASS: null definition reported safely
+PASS: NaN attack interval rejected
+PASS: all nine typed definition skeletons instantiate
+PASS: unauthored definition rejected: res://scripts/core/definitions/weapon_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/shield_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/upgrade_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/enemy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/wave_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/mission_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/module_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/synergy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/achievement_definition.gd
+PASS: new weapon state uses rank-1 definition baseline
+PASS: runtime mutation leaves cached weapon resource unchanged
+PASS: state serialization exposes stable ID
+PASS: new shield state starts at baseline
+PASS: runtime mutation leaves shield resource unchanged
+PASS: run instances own independent collections
+PASS: profile instances own independent option collections
+PASS: one separate main slot and shield slot
+PASS: support contract is five slots from six families
+PASS: foundation suite completed
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: boot opens menu
+PASS: English translation imported
+PASS: declared input action: menu_back
+PASS: declared input action: pause
+PASS: declared input action: focus_target
+PASS: declared input action: aim_override
+PASS: declared input action: shield_ability
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+PASS: Start signal opens combat
+PASS: combat Back returns to menu
+PASS: Settings signal opens settings
+PASS: setting disables decorative signal
+PASS: settings Back returns to menu
+PASS: display preference survives page navigation
+PASS: menu_back action returns to menu
+PASS: Quit signal is connected
+PASS: boot suite completed
+PASS: safe area converts pixels through scale and letterbox offset
+PASS: safe area clamps extra display space to fixed canvas
+PASS: unavailable safe-area measurement uses full canvas
+PASS: first launch has no checkpoint
+PASS: probe checkpoint commits
+PASS: second checkpoint rotates backup
+PASS: latest checkpoint loads
+PASS: truncated checkpoint recovers validated backup
+PASS: save after recovery repairs primary
+PASS: repaired primary loads
+PASS: negative tap count rejected
+PASS: nonfinite clock rejected
+PASS: unsupported checkpoint version rejected
+PASS: fractional tap count rejected
+PASS: string counter rejected
+PASS: unexpected checkpoint fields rejected
+PASS: write failure reported honestly
+M1_PROBE {"active_seconds":4.5,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":5}
+PASS: new probe instance restores saved taps
+PASS: actual process node advances while active
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":1,"resumes":0,"taps":5}
+PASS: cycle 1 freezes actual scene processing
+PASS: resume waits for focus in cycle 1
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":1,"resumes":1,"taps":5}
+PASS: cycle 1 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":2,"resumes":1,"taps":5}
+PASS: cycle 2 freezes actual scene processing
+PASS: resume waits for focus in cycle 2
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":2,"resumes":2,"taps":5}
+PASS: cycle 2 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":3,"resumes":2,"taps":5}
+PASS: cycle 3 freezes actual scene processing
+PASS: resume waits for focus in cycle 3
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":3,"resumes":3,"taps":5}
+PASS: cycle 3 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":4,"resumes":3,"taps":5}
+PASS: cycle 4 freezes actual scene processing
+PASS: resume waits for focus in cycle 4
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":4,"resumes":4,"taps":5}
+PASS: cycle 4 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":5,"resumes":4,"taps":5}
+PASS: cycle 5 freezes actual scene processing
+PASS: resume waits for focus in cycle 5
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":5,"resumes":5,"taps":5}
+PASS: cycle 5 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":6,"resumes":5,"taps":5}
+PASS: cycle 6 freezes actual scene processing
+PASS: resume waits for focus in cycle 6
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":6,"resumes":6,"taps":5}
+PASS: cycle 6 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":7,"resumes":6,"taps":5}
+PASS: cycle 7 freezes actual scene processing
+PASS: resume waits for focus in cycle 7
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":7,"resumes":7,"taps":5}
+PASS: cycle 7 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":8,"resumes":7,"taps":5}
+PASS: cycle 8 freezes actual scene processing
+PASS: resume waits for focus in cycle 8
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":8,"resumes":8,"taps":5}
+PASS: cycle 8 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":9,"resumes":8,"taps":5}
+PASS: cycle 9 freezes actual scene processing
+PASS: resume waits for focus in cycle 9
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":9,"resumes":9,"taps":5}
+PASS: cycle 9 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":10,"resumes":9,"taps":5}
+PASS: cycle 10 freezes actual scene processing
+PASS: resume waits for focus in cycle 10
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":10,"resumes":10,"taps":5}
+PASS: cycle 10 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":11,"resumes":10,"taps":5}
+PASS: cycle 11 freezes actual scene processing
+PASS: resume waits for focus in cycle 11
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":11,"resumes":11,"taps":5}
+PASS: cycle 11 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":12,"resumes":11,"taps":5}
+PASS: cycle 12 freezes actual scene processing
+PASS: resume waits for focus in cycle 12
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":12,"resumes":12,"taps":5}
+PASS: cycle 12 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":13,"resumes":12,"taps":5}
+PASS: cycle 13 freezes actual scene processing
+PASS: resume waits for focus in cycle 13
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":13,"resumes":13,"taps":5}
+PASS: cycle 13 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":14,"resumes":13,"taps":5}
+PASS: cycle 14 freezes actual scene processing
+PASS: resume waits for focus in cycle 14
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":14,"resumes":14,"taps":5}
+PASS: cycle 14 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":15,"resumes":14,"taps":5}
+PASS: cycle 15 freezes actual scene processing
+PASS: resume waits for focus in cycle 15
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":15,"resumes":15,"taps":5}
+PASS: cycle 15 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":16,"resumes":15,"taps":5}
+PASS: cycle 16 freezes actual scene processing
+PASS: resume waits for focus in cycle 16
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":16,"resumes":16,"taps":5}
+PASS: cycle 16 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":17,"resumes":16,"taps":5}
+PASS: cycle 17 freezes actual scene processing
+PASS: resume waits for focus in cycle 17
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":17,"resumes":17,"taps":5}
+PASS: cycle 17 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":18,"resumes":17,"taps":5}
+PASS: cycle 18 freezes actual scene processing
+PASS: resume waits for focus in cycle 18
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":18,"resumes":18,"taps":5}
+PASS: cycle 18 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":19,"resumes":18,"taps":5}
+PASS: cycle 19 freezes actual scene processing
+PASS: resume waits for focus in cycle 19
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":19,"resumes":19,"taps":5}
+PASS: cycle 19 resumes
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":20,"resumes":19,"taps":5}
+PASS: cycle 20 freezes actual scene processing
+PASS: resume waits for focus in cycle 20
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":20,"resumes":20,"taps":5}
+PASS: cycle 20 resumes
+PASS: duplicate notifications counted once over 20 cycles
+PASS: 20 synthetic cycles record no paused clock drift
+PASS: lifecycle transitions retain one probe instance
+PASS: manual pause suspends tree
+M1_PROBE {"active_seconds":4.562858,"event":"os_pause","instances":1,"paused_drift":0,"pauses":21,"resumes":20,"taps":5}
+M1_PROBE {"active_seconds":4.562858,"event":"os_resume","instances":1,"paused_drift":0,"pauses":21,"resumes":21,"taps":5}
+PASS: focus regain preserves manual pause
+M1_PROBE {"active_seconds":4.562858,"event":"tap","instances":1,"paused_drift":0,"pauses":21,"resumes":21,"taps":6}
+PASS: one button activation commits exactly one tap
+PASS: probe removal releases pause ownership
+M1_PROBE {"active_seconds":4.562858,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":6}
+PASS: replacement instance restores committed tap
+PASS: mobile probe suite completed
+PASS: nine M2 definitions validate with resolved references
+PASS: M2 content name translates: m2.pulse
+PASS: M2 content name translates: m2.capacitor
+PASS: M2 content name translates: m2.swarmer
+PASS: M2 content name translates: m2.diver
+PASS: M2 content name translates: m2.carrier
+PASS: M2 content name translates: m2.wave_1
+PASS: M2 content name translates: m2.wave_2
+PASS: M2 content name translates: m2.wave_3
+PASS: M2 content name translates: m2.test
+PASS: enemy validator rejects nonfinite speed and unbounded spawning
+PASS: spawn clamps to top band
+PASS: spawn clamps to top band
+PASS: spawn clamps to top band
+PASS: spawn clamps to top band
+PASS: spawn clamps to top band
+PASS: swarmer descends straight
+PASS: diver telegraphs with a slower weaving approach
+PASS: diver accelerates after tell
+PASS: carrier follows slower straight path
+PASS: both far edges breach once through shield
+PASS: resolved breach cannot damage twice
+PASS: main-gun kill at boundary cannot also breach
+PASS: duplicate kill resolves once
+PASS: shield absorbs ten and fifteen overflow reaches hull
+PASS: active shield available
+PASS: brace reduces damage 75 percent and cannot repeat during cooldown
+PASS: pause freezes wave, firing, shield, recharge and all damage
+PASS: shield recharges only after hit delay
+PASS: carrier remains capped after twelve ability intervals
+PASS: finite reinforcements and shots resolve without stale actors
+PASS: auto-aim can intercept the closest hostile shot
+PASS: ordinary main pulse destroys ranged fixture
+PASS: held focus selects target nearest the pointer
+PASS: release returns to nearest-to-breach targeting
+PASS: auto-aim completes three waves, run 1
+PASS: one results signal and no stale actors, run 1
+M2 RUN 1: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 2
+PASS: one results signal and no stale actors, run 2
+M2 RUN 2: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 3
+PASS: one results signal and no stale actors, run 3
+M2 RUN 3: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 4
+PASS: one results signal and no stale actors, run 4
+M2 RUN 4: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 5
+PASS: one results signal and no stale actors, run 5
+M2 RUN 5: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 6
+PASS: one results signal and no stale actors, run 6
+M2 RUN 6: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 7
+PASS: one results signal and no stale actors, run 7
+M2 RUN 7: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 8
+PASS: one results signal and no stale actors, run 8
+M2 RUN 8: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 9
+PASS: one results signal and no stale actors, run 9
+M2 RUN 9: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: auto-aim completes three waves, run 10
+PASS: one results signal and no stale actors, run 10
+M2 RUN 10: seconds=35.60 hull=100.0 shield=50.0 kills=23 breaches=0 intercepted=3
+PASS: unopposed authored enemies can destroy the station
+PASS: defeat retains an attributable last hit and breach count
+PASS: finished mission cannot emit results twice
+PASS: restart clears actors and all combat timers
+PASS: restart restores rank one and fixed baseline with no inherited upgrades
+PASS: missions never mutate shared definitions
+PASS: combat unit suite completed
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+PASS: single combat screen instance
+M2_COMBAT {"actors":0,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+PASS: real frame processing freezes under pause overlay
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+PASS: resume notification alone does not override lost focus
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+PASS: OS resume preserves manual pause
+M2_COMBAT {"actors":0,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0833333333333333,"shield":50.0,"wave":0}
+PASS: Resume button advances real simulation
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 0
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 0
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 1
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 1
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 2
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 2
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 3
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 3
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 4
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 4
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 5
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 5
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 6
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 6
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 7
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 7
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 8
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 8
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 9
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 9
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 10
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 10
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 11
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 11
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 12
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 12
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 13
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 13
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 14
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 14
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 15
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 15
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 16
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 16
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 17
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 17
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 18
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 18
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: combat focus pause freezes cycle 19
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: first resume frame skips background delta cycle 19
+PASS: pointer maps visible arena to fixed combat coordinates
+PASS: pointer release outside arena clears focus
+M2_COMBAT {"actors":0,"event":"shield","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.166666666666667,"shield":50.0,"wave":0}
+PASS: shield button activates with cooldown UI
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 1
+PASS: no duplicate scene or results subscription run 1
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 2
+PASS: no duplicate scene or results subscription run 2
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 3
+PASS: no duplicate scene or results subscription run 3
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 4
+PASS: no duplicate scene or results subscription run 4
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 5
+PASS: no duplicate scene or results subscription run 5
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 6
+PASS: no duplicate scene or results subscription run 6
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 7
+PASS: no duplicate scene or results subscription run 7
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 8
+PASS: no duplicate scene or results subscription run 8
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 9
+PASS: no duplicate scene or results subscription run 9
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":12.3333333333335,"shield":50.0,"wave":2}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":23.9833333333333,"shield":50.0,"wave":3}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":35.5999999999993,"shield":50.0,"wave":3}
+PASS: UI results and restart complete run 10
+PASS: no duplicate scene or results subscription run 10
+M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":0.0,"instances":1,"paused":false,"phase":3,"seconds":0.0,"shield":0.0,"wave":0}
+PASS: defeat UI explains source of fatal damage
+PASS: leaving combat frees its entire screen
+PASS: combat screen suite completed
+RESULT: 266 checks; 0 failures

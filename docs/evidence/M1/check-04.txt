@@ -1,0 +1,6 @@
+COMMAND: sh tools/godot.sh test --quit-smoke
+EXIT: 0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+QUIT SMOKE: emitting the menu Quit button; expected process exit 0

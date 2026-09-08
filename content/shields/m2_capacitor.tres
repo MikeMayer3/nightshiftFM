@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ShieldDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/shield_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m2.capacitor"
+name_key = &"M2_CAPACITOR_NAME"
+description_key = &"M2_CAPACITOR_DESC"
+base_capacity = 50.0

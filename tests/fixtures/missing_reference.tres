@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"fixture.missing_reference"
+name_key = &"FIXTURE_WAVE_NAME"
+description_key = &"FIXTURE_WAVE_DESCRIPTION"
+enemy_ids = Array[StringName]([&"fixture.unknown_enemy"])

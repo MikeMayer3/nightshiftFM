@@ -1,0 +1,116 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/combat/combat_screen.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/combat/combat_arena.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/ui/safe_margin.gd" id="3"]
+[node name="Combat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+[node name="Safe" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("3")
+base_margins = Vector4(32, 24, 32, 24)
+[node name="Column" type="VBoxContainer" parent="Safe"]
+layout_mode = 2
+theme_override_constants/separation = 10
+[node name="Header" type="HBoxContainer" parent="Safe/Column"]
+layout_mode = 2
+[node name="Title" type="Label" parent="Safe/Column/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+[node name="Pause" type="Button" parent="Safe/Column/Header"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 72)
+theme_override_font_sizes/font_size = 24
+text = "COMBAT_PAUSE"
+[node name="Health" type="Label" parent="Safe/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+[node name="Bars" type="HBoxContainer" parent="Safe/Column"]
+layout_mode = 2
+theme_override_constants/separation = 16
+[node name="Hull" type="ProgressBar" parent="Safe/Column/Bars"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 12)
+show_percentage = false
+[node name="Shield" type="ProgressBar" parent="Safe/Column/Bars"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 12)
+show_percentage = false
+[node name="Status" type="Label" parent="Safe/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+[node name="Arena" type="Control" parent="Safe/Column"]
+layout_mode = 2
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 520)
+script = ExtResource("2")
+[node name="Legend" type="Label" parent="Safe/Column"]
+layout_mode = 2
+text = "COMBAT_LEGEND"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 20
+[node name="Hint" type="Label" parent="Safe/Column"]
+layout_mode = 2
+text = "COMBAT_HINT"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 22
+[node name="Ability" type="Button" parent="Safe/Column"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 88)
+text = "COMBAT_ABILITY"
+theme_override_font_sizes/font_size = 27
+[node name="AbilityHint" type="Label" parent="Safe/Column"]
+layout_mode = 2
+text = "COMBAT_ABILITY_HINT"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 20
+[node name="Overlay" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.06
+anchor_top = 0.18
+anchor_right = 0.94
+anchor_bottom = 0.84
+[node name="Inset" type="MarginContainer" parent="Overlay"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 28
+[node name="Column" type="VBoxContainer" parent="Overlay/Inset"]
+layout_mode = 2
+theme_override_constants/separation = 20
+[node name="Title" type="Label" parent="Overlay/Inset/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+autowrap_mode = 2
+[node name="Details" type="Label" parent="Overlay/Inset/Column"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 2
+[node name="Resume" type="Button" parent="Overlay/Inset/Column"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+theme_override_font_sizes/font_size = 27
+text = "COMBAT_RESUME"
+[node name="Restart" type="Button" parent="Overlay/Inset/Column"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+theme_override_font_sizes/font_size = 27
+text = "COMBAT_RESTART"
+[node name="Menu" type="Button" parent="Overlay/Inset/Column"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+theme_override_font_sizes/font_size = 27
+text = "MENU_BACK"

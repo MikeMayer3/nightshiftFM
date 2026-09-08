@@ -1,0 +1,88 @@
+keys,en
+BOOT_EYEBROW,OFFLINE • COMBAT PROTOTYPE M2
+BOOT_TITLE,Nightshift FM
+BOOT_SUBTITLE,A little light on a haunted frequency.
+MENU_START,Start · Three waves
+MENU_SETTINGS,Settings
+MENU_QUIT,Quit
+MENU_BACK,Back to menu
+START_HEADING,Stand by for a signal
+START_BODY,The station is ready for its first broadcast. Combat is not available in this foundation preview.
+SETTINGS_SIGNAL,Show decorative signal
+SETTINGS_BODY,This display preference lasts until you close the preview.
+BOOT_FOOTER,Provisional theme • Original placeholder art
+MENU_MOBILE_CHECKS,Mobile checks
+PROBE_TITLE,Mobile checks
+PROBE_BODY,"Tap to save a local checkpoint. Background and return: active time must freeze. This is a device test, not a mission."
+PROBE_SUMMARY,"Saved taps: %d
+Active seconds: %.1f
+OS pauses / resumes: %d / %d
+Paused drift errors: %d"
+PROBE_TAP,Tap and save
+PROBE_PAUSE,Pause counter
+PROBE_RESUME,Resume counter
+PROBE_SAVE,Save checkpoint
+PROBE_LOAD,Reload checkpoint
+PROBE_READY,No checkpoint yet.
+PROBE_SAVED,Checkpoint saved on this device.
+PROBE_LOADED,Checkpoint loaded.
+PROBE_RECOVERED,Recovered the previous valid checkpoint.
+PROBE_SAVE_ERROR,Save failed. The checkpoint was not committed.
+PROBE_LOAD_ERROR,Checkpoint is invalid. No data was loaded.
+PROBE_SAFE_INFO,Green border: safe canvas area %s. Controls must stay inside it. Native achievements are unavailable in this spike.
+COMBAT_WAVE,Nightshift / Wave %d of %d
+COMBAT_HEALTH,Hull %.0f / 100                  Shield %.0f / 50
+COMBAT_PAUSE,Pause
+COMBAT_RESUME,Resume
+COMBAT_RESTART,Restart mission
+COMBAT_SPAWN,INCOMING SIGNALS
+COMBAT_BREACH,BREACH LINE
+COMBAT_AUTO,Auto-aim · Nearest to breach
+COMBAT_FOCUS,Focus fire · Release for auto-aim
+COMBAT_NEXT_WAVE,Wave %d begins in %d…
+COMBAT_HINT,Hold a target to focus; drag to switch. Release for auto-aim.
+COMBAT_ABILITY,Brace shield · Ready
+COMBAT_ABILITY_ACTIVE,Shield braced
+COMBAT_ABILITY_WAIT,Brace shield · %ds
+COMBAT_ABILITY_HINT,75% less damage for 2.5s · 12s cooldown
+COMBAT_PAUSED,Broadcast paused
+COMBAT_PAUSE_BODY,"The mission is frozen.
+
+Stop threats before they cross the entire bottom line. Your gun also destroys incoming shots.
+
+Closing the app ends this prototype mission."
+COMBAT_VICTORY,Signal restored
+COMBAT_DEFEAT,Signal lost
+COMBAT_RESULTS,"Wave %d / 3 · %.1f seconds
+
+Threats stopped: %d
+Shots intercepted: %d
+Enemies breached: %d
+Hull remaining: %.0f / 100
+
+%s"
+COMBAT_NO_DAMAGE,No damage
+COMBAT_CLEAN,The station took no damage.
+COMBAT_CAUSE,Last hit: %s (%s). Shield absorbs first; overflow reaches hull.
+COMBAT_BREACH_HIT,crossed the breach line
+COMBAT_PROJECTILE_HIT,incoming shot
+COMBAT_PROJECTILE,Carrier shot
+M2_PULSE_NAME,Pulse Transmitter
+M2_PULSE_DESC,A fixed rank-1 pulse gun.
+M2_CAPACITOR_NAME,Capacitor
+M2_CAPACITOR_DESC,Shield reserve with a temporary brace.
+M2_SWARMER_NAME,Swarmer
+M2_SWARMER_DESC,Round interference. Descends straight down.
+M2_DIVER_NAME,Diver
+M2_DIVER_DESC,"Triangular threat. Telegraphs, then accelerates along a weaving path."
+M2_CARRIER_NAME,Carrier
+M2_CARRIER_DESC,Square broadcast. Sends at most three reinforcements and three destructible shots.
+M2_TEST_NAME,First broadcast
+M2_TEST_DESC,Three waves with fixed rank-1 equipment.
+M2_WAVE_1_NAME,Wave 1
+M2_WAVE_1_DESC,An authored prototype wave.
+M2_WAVE_2_NAME,Wave 2
+M2_WAVE_2_DESC,An authored prototype wave.
+M2_WAVE_3_NAME,Wave 3
+M2_WAVE_3_DESC,An authored prototype wave.
+COMBAT_LEGEND,● Swarmer   ▼ Diver   □ Carrier   ○ Incoming shot

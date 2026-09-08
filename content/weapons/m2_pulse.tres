@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m2.pulse"
+name_key = &"M2_PULSE_NAME"
+description_key = &"M2_PULSE_DESC"
+behavior = 4
+base_damage = 8.0
+attack_interval = 0.48

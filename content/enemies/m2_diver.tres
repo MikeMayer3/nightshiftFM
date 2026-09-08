@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m2.diver"
+name_key = &"M2_DIVER_NAME"
+description_key = &"M2_DIVER_DESC"
+path_kind = 1
+health = 24.0
+speed = 55.0
+radius = 22.0
+breach_damage = 20.0

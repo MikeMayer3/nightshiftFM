@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "input": "ADB synthetic touch on physical device",
+  "checks": [
+    {
+      "result": "PASS",
+      "check": "Start opens one combat screen"
+    },
+    {
+      "result": "PASS",
+      "check": "Touch Pause freezes combat"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 1 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 2 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 3 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 4 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 5 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 6 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 7 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 8 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 9 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 10 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 11 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 12 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 13 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 14 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 15 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 16 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 17 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 18 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 19 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Manual pause survives physical Home/resume 20 without time drift or duplicates"
+    },
+    {
+      "result": "PASS",
+      "check": "Touch Resume retains exact paused mission time"
+    },
+    {
+      "result": "PASS",
+      "check": "Active mission freezes across OS background/resume"
+    },
+    {
+      "result": "PASS",
+      "check": "Physical touch hold/drag enters focus targeting"
+    },
+    {
+      "result": "PASS",
+      "check": "Touch release returns to auto-aim"
+    },
+    {
+      "result": "PASS",
+      "check": "Touch shield button activates ability"
+    },
+    {
+      "result": "PASS",
+      "check": "Physical mission reaches results and clears actors"
+    },
+    {
+      "result": "PASS",
+      "check": "Touch Restart restores fresh mission baseline"
+    },
+    {
+      "result": "PASS",
+      "check": "Second physical run wins using auto-aim with one results event per run"
+    }
+  ],
+  "results": [
+    {
+      "actors": 0,
+      "event": "results",
+      "focus": false,
+      "hull": 63.6,
+      "instances": 1,
+      "paused": false,
+      "phase": 2,
+      "seconds": 52.016666666665,
+      "shield": 0.0,
+      "wave": 3
+    },
+    {
+      "actors": 0,
+      "event": "results",
+      "focus": false,
+      "hull": 63.6,
+      "instances": 1,
+      "paused": false,
+      "phase": 2,
+      "seconds": 52.016666666665,
+      "shield": 0.0,
+      "wave": 3
+    }
+  ]
+}

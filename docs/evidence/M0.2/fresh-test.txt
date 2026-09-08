@@ -1,0 +1,50 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: valid .tres fixtures accepted
+EXPECTED INVALID FIXTURE: res://tests/fixtures/invalid_weapon.tres [fixture.invalid_weapon]: attack_interval: must be finite and greater than zero
+EXPECTED INVALID FIXTURE: res://tests/fixtures/missing_reference.tres [fixture.missing_reference]: missing reference 'fixture.unknown_enemy'
+PASS: invalid fixtures produce exactly two errors
+PASS: interval error identifies content and field
+PASS: reference error identifies owner and missing ID
+PASS: duplicate IDs rejected
+PASS: empty stable ID rejected
+PASS: malformed stable ID rejected
+PASS: null definition reported safely
+PASS: NaN attack interval rejected
+PASS: all nine typed definition skeletons instantiate
+PASS: unauthored definition rejected: res://scripts/core/definitions/weapon_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/shield_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/upgrade_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/enemy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/wave_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/mission_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/module_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/synergy_definition.gd
+PASS: unauthored definition rejected: res://scripts/core/definitions/achievement_definition.gd
+PASS: new weapon state uses rank-1 definition baseline
+PASS: runtime mutation leaves cached weapon resource unchanged
+PASS: state serialization exposes stable ID
+PASS: new shield state starts at baseline
+PASS: runtime mutation leaves shield resource unchanged
+PASS: run instances own independent collections
+PASS: profile instances own independent option collections
+PASS: one separate main slot and shield slot
+PASS: support contract is five slots from six families
+PASS: foundation suite completed
+PASS: boot opens menu
+PASS: English translation imported
+PASS: declared input action: menu_back
+PASS: declared input action: pause
+PASS: declared input action: focus_target
+PASS: declared input action: aim_override
+PASS: declared input action: shield_ability
+PASS: Start signal opens placeholder
+PASS: placeholder Back returns to menu
+PASS: Settings signal opens settings
+PASS: setting disables decorative signal
+PASS: settings Back returns to menu
+PASS: display preference survives page navigation
+PASS: menu_back action returns to menu
+PASS: Quit signal is connected
+PASS: boot suite completed
+RESULT: 45 checks; 0 failures

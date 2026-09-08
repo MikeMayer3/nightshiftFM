@@ -1,0 +1,17 @@
+.godot/
+.DS_Store
+builds/
+dist/
+*.log
+__pycache__/
+.venv/
+.env
+.env.*
+!.env.example
+export_credentials.cfg
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+# Keep .gd.uid and asset .import sidecars when the pinned editor generates them.

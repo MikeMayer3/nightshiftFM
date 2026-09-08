@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m2.wave_1"
+name_key = &"M2_WAVE_1_NAME"
+description_key = &"M2_WAVE_1_DESC"
+spawn_interval = 1.6
+enemy_ids = Array[StringName]([&"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer"])

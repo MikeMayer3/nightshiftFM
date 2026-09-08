@@ -1,0 +1,60 @@
+COMMAND: sh tools/godot.sh import
+EXIT: 0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (28 steps)
+[   0% ] update_scripts_classes | AchievementDefinition
+[   3% ] update_scripts_classes | ContentDefinition
+[   6% ] update_scripts_classes | EnemyDefinition
+[  10% ] update_scripts_classes | MissionDefinition
+[  13% ] update_scripts_classes | ModuleDefinition
+[  17% ] update_scripts_classes | ShieldDefinition
+[  20% ] update_scripts_classes | SynergyDefinition
+[  24% ] update_scripts_classes | UpgradeDefinition
+[  27% ] update_scripts_classes | WaveDefinition
+[  31% ] update_scripts_classes | WeaponDefinition
+[  34% ] update_scripts_classes | ProfileState
+[  37% ] update_scripts_classes | RunState
+[  41% ] update_scripts_classes | ShieldState
+[  44% ] update_scripts_classes | WeaponState
+[  48% ] update_scripts_classes | ContentValidator
+[  51% ] update_scripts_classes | GameRules
+[  55% ] update_scripts_classes | MobileProbe
+[  58% ] update_scripts_classes | ProbeClock
+[  62% ] update_scripts_classes | ProbeStore
+[  65% ] update_scripts_classes | SafeArea
+[  68% ] update_scripts_classes | BootScreen
+[  72% ] update_scripts_classes | SafeMargin
+[  75% ] update_scripts_classes | TransmitterArt
+[  79% ] update_scripts_classes | 
+[  82% ] update_scripts_classes | 
+[  86% ] update_scripts_classes | 
+[  89% ] update_scripts_classes | TestContext
+[  93% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | ui_strings.csv
+[  50% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[ DONE ] loading_editor_layout
+

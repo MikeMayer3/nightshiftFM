@@ -1,0 +1,52 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (22 steps)
+[   0% ] update_scripts_classes | AchievementDefinition
+[   4% ] update_scripts_classes | ContentDefinition
+[   8% ] update_scripts_classes | EnemyDefinition
+[  13% ] update_scripts_classes | MissionDefinition
+[  17% ] update_scripts_classes | ModuleDefinition
+[  21% ] update_scripts_classes | ShieldDefinition
+[  26% ] update_scripts_classes | SynergyDefinition
+[  30% ] update_scripts_classes | UpgradeDefinition
+[  34% ] update_scripts_classes | WaveDefinition
+[  39% ] update_scripts_classes | WeaponDefinition
+[  43% ] update_scripts_classes | ProfileState
+[  47% ] update_scripts_classes | RunState
+[  52% ] update_scripts_classes | ShieldState
+[  56% ] update_scripts_classes | WeaponState
+[  60% ] update_scripts_classes | ContentValidator
+[  65% ] update_scripts_classes | GameRules
+[  69% ] update_scripts_classes | BootScreen
+[  73% ] update_scripts_classes | TransmitterArt
+[  78% ] update_scripts_classes | 
+[  82% ] update_scripts_classes | 
+[  86% ] update_scripts_classes | TestContext
+[  91% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | ui_strings.csv
+[  50% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[ DONE ] loading_editor_layout
+
