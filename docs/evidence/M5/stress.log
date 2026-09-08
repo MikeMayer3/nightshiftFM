@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"branch":1,"cpu_ms":149.996,"events":2609,"excluded":"arc_aerial","pending_peak":13,"report":{},"seconds":29.9999999999996}
+{"branch":1,"cpu_ms":153.059,"events":3573,"excluded":"bass_driver","pending_peak":12,"report":{},"seconds":29.9999999999996}
+{"branch":1,"cpu_ms":135.743,"events":2507,"excluded":"static_net","pending_peak":12,"report":{},"seconds":29.9999999999996}
+{"branch":1,"cpu_ms":139.184,"events":1631,"excluded":"echo_deck","pending_peak":8,"report":{},"seconds":29.9999999999996}
+{"branch":1,"cpu_ms":143.129,"events":2492,"excluded":"needle_swarm","pending_peak":9,"report":{},"seconds":29.9999999999996}
+{"branch":1,"cpu_ms":140.821,"events":1636,"excluded":"reverb_well","pending_peak":11,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":137.403,"events":2394,"excluded":"arc_aerial","pending_peak":18,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":138.103,"events":2556,"excluded":"bass_driver","pending_peak":18,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":116.947,"events":2078,"excluded":"static_net","pending_peak":17,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":126.573,"events":1767,"excluded":"echo_deck","pending_peak":9,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":127.813,"events":2354,"excluded":"needle_swarm","pending_peak":11,"report":{},"seconds":29.9999999999996}
+{"branch":2,"cpu_ms":123.394,"events":2500,"excluded":"reverb_well","pending_peak":17,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":145.299,"events":2053,"excluded":"arc_aerial","pending_peak":14,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":145.483,"events":1975,"excluded":"bass_driver","pending_peak":13,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":131.98,"events":1962,"excluded":"static_net","pending_peak":13,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":132.439,"events":1402,"excluded":"echo_deck","pending_peak":9,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":121.674,"events":2001,"excluded":"needle_swarm","pending_peak":8,"report":{},"seconds":29.9999999999996}
+{"branch":3,"cpu_ms":143.874,"events":1815,"excluded":"reverb_well","pending_peak":13,"report":{},"seconds":29.9999999999996}

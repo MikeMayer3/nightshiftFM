@@ -15,9 +15,16 @@ func _ready() -> void:
 	screen = (load("res://scenes/combat/combat.tscn") as PackedScene).instantiate() as CombatScreen
 	screen.m3_enabled = true
 	screen.active_enabled = true
+	screen.arsenal_enabled = true
 	screen.store = MissionStore.new("user://qa_mission.json")
 	add_child(screen)
-	screen.session.start_active(seed_value, &"run.1")
+	var chosen: Dictionary = ArsenalContent.DEFAULT.duplicate()
+	if FileAccess.file_exists("user://qa_loadout.json"):
+		var provided: Variant = JSON.parse_string(FileAccess.get_file_as_string("user://qa_loadout.json"))
+		if ArsenalContent.valid_loadout(provided): chosen = provided
+	screen.loadout = chosen
+	screen.session.start_arsenal(seed_value, &"run.1", chosen)
+	screen._save_checkpoint()
 	screen._refresh_decision()
 
 func aim_point(value: CombatSession) -> Vector2:
@@ -53,7 +60,7 @@ func _process(delta: float) -> void:
 	if next_sample > 0: return
 	next_sample = 0.25
 	var value: CombatSession = screen.session
-	var row: Dictionary = {"seed": seed_value, "phase": value.phase, "wave": value.wave, "seconds": value.elapsed, "hull": value.hull, "kills": value.kills, "bursts": value.active_combat.uses, "cooldown": value.active_combat.cooldown, "choices": value.signal_progress.choices, "paused": value.paused, "save_failed": screen.save_failed, "fps": Engine.get_frames_per_second(), "finished": value.is_finished(), "victory": value.phase == CombatSession.Phase.VICTORY, "decisions": value.draft.accepted, "support_timers": value.supports.timers, "equipped": screen.arena.equipped_supports()}
+	var row: Dictionary = {"seed": seed_value, "phase": value.phase, "wave": value.wave, "seconds": value.elapsed, "hull": value.hull, "kills": value.kills, "bursts": value.active_combat.uses, "cooldown": value.active_combat.cooldown, "choices": value.signal_progress.choices, "paused": value.paused, "save_failed": screen.save_failed, "fps": Engine.get_frames_per_second(), "finished": value.is_finished(), "victory": value.phase == CombatSession.Phase.VICTORY, "decisions": value.draft.accepted, "support_timers": value.supports.timers, "equipped": screen.arena.equipped_supports(), "loadout": (value.draft as ArsenalDraft).loadout, "shield": value.run.shield.current, "shield_wait": value.ability_wait, "pending": value.arsenal.peak_pending}
 	row["coordinates"] = {"window": str(DisplayServer.window_get_size()), "origin": str(DisplayServer.window_get_position()), "viewport": str(screen.get_viewport_rect()), "arena": str(screen.arena.get_global_rect()), "canvas": str(screen.arena.get_global_transform_with_canvas()), "stretch": str(get_viewport().get_stretch_transform()), "safe": str(DisplayServer.get_display_safe_area())}
 	if value.is_deciding() and screen.draft_panel.visible and not screen.draft_panel.cards.is_empty():
 		if decision_key != value.signal_progress.choices:
@@ -63,6 +70,9 @@ func _process(delta: float) -> void:
 		row["index"] = decision_index
 		row["offers"] = value.draft.offers
 		row["point"] = physical(screen.draft_panel.cards[decision_index].get_global_rect().get_center())
+	elif value.phase == CombatSession.Phase.COMBAT and value.run.shield.current < value.run.shield.capacity * .3 and value.ability_wait == 0 and not value.paused:
+		row["action"] = "shield"
+		row["point"] = physical(screen.shield_button.get_global_rect().get_center())
 	elif value.phase == CombatSession.Phase.COMBAT and value.active_combat.cooldown <= 0 and not value.paused:
 		var point: Vector2 = aim_point(value)
 		if point.is_finite():

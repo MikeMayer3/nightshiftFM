@@ -26,7 +26,7 @@ func burst(session: CombatSession, at: Vector2) -> bool:
 	uses += 1
 	session.attack_serial += 1
 	var root: int = session.attack_serial
-	session._event(CombatEvent.Kind.ATTACK, &"main", root, 0, 0)
+	session._event(CombatEvent.Kind.ATTACK, &"main", root, 0, 0, session.arsenal == null)
 	session.support_effect.emit(&"main", at, Vector2.ONE * RADIUS)
 	var hit: int = 0
 	for actor: CombatActor in targets:

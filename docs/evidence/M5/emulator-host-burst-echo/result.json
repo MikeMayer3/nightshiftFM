@@ -1,0 +1,180 @@
+{
+  "bursts": 111,
+  "choices": 31,
+  "cooldown": 0.6666666666666798,
+  "coordinates": {
+    "arena": "[P: (12.0, 224.0), S: (696.0, 1137.0)]",
+    "canvas": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (12.0, 224.0)]",
+    "origin": "(0, 0)",
+    "safe": "[P: (0, 0), S: (720, 1471)]",
+    "stretch": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+    "viewport": "[P: (0.0, 0.0), S: (720.0, 1471.0)]",
+    "window": "(720, 1471)"
+  },
+  "decisions": [
+    {
+      "bonus": false,
+      "id": "recruit.needle_swarm"
+    },
+    {
+      "bonus": false,
+      "id": "recruit.static_net"
+    },
+    {
+      "bonus": false,
+      "id": "recruit.reverb_well"
+    },
+    {
+      "bonus": false,
+      "id": "m5.feedback.t2"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.t4"
+    },
+    {
+      "bonus": false,
+      "id": "m5.burst.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.b2"
+    },
+    {
+      "bonus": false,
+      "id": "m5.feedback.b1"
+    },
+    {
+      "bonus": false,
+      "id": "recruit.arc_aerial"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.t5"
+    },
+    {
+      "bonus": false,
+      "id": "m5.echo_deck.t1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.arc_aerial.t1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.b1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.t1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.t1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.arc_aerial.b2"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.t2"
+    },
+    {
+      "bonus": false,
+      "id": "m5.arc_aerial.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.arc_aerial.t3"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.b1m1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.static_net.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.burst.b3"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.b2m1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.burst.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.static_net.b1"
+    },
+    {
+      "bonus": false,
+      "id": "m5.echo_deck.b2"
+    },
+    {
+      "bonus": false,
+      "id": "m5.reverb_well.t4"
+    },
+    {
+      "bonus": false,
+      "id": "m5.needle_swarm.t5"
+    },
+    {
+      "bonus": false,
+      "id": "m5.echo_deck.t0"
+    },
+    {
+      "bonus": false,
+      "id": "m5.static_net.t3"
+    }
+  ],
+  "equipped": [
+    "arc_aerial",
+    "static_net",
+    "echo_deck",
+    "needle_swarm",
+    "reverb_well"
+  ],
+  "finished": true,
+  "fps": 59.0,
+  "hull": 100.0,
+  "kills": 611,
+  "loadout": {
+    "main": "burst",
+    "shield": "feedback",
+    "support": "echo_deck"
+  },
+  "paused": false,
+  "pending": 17,
+  "phase": 2,
+  "save_failed": false,
+  "seconds": 639.1499999997474,
+  "seed": 1,
+  "shield": 50.0,
+  "shield_wait": 0.0,
+  "support_timers": {
+    "arc_aerial": 0.5984848484848476,
+    "bass_driver": 0.0,
+    "echo_deck": 0.0,
+    "needle_swarm": 1.4318181818181843,
+    "reverb_well": 1.062121212121224,
+    "static_net": 2.1121212121212203
+  },
+  "victory": true,
+  "wave": 10,
+  "wall_seconds": 657.233,
+  "random_choice_audit": {
+    "pass": true,
+    "count": 31,
+    "mismatches": []
+  }
+}

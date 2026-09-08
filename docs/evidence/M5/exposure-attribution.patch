@@ -1,0 +1,67 @@
+--- scripts/combat/status_state.gd (QA)
++++ scripts/combat/status_state.gd (final)
+@@ -8,6 +8,7 @@
+ var slow_source: StringName = &"static_net"
+ var slow: float = 0.0
+ var slow_left: float = 0.0
++var exposure_source: StringName = &"bass_driver"
+ var exposure: float = 0.0
+ var exposure_left: float = 0.0
+ var jam_left: float = 0.0
+@@ -34,7 +35,8 @@
+ 	slow = maxf(slow, clampf(strength, 0, ELITE_SLOW_CAP if elite else SLOW_CAP))
+ 	slow_left = 0.6
+ 
+-func expose(amount: float) -> void:
++func expose(amount: float, source: StringName = &"bass_driver") -> void:
++	if amount >= exposure: exposure_source = source
+ 	exposure = maxf(exposure, clampf(amount, 0, 100))
+ 	exposure_left = 3.0
+ 
+--- scripts/combat/arsenal_combat.gd (QA)
++++ scripts/combat/arsenal_combat.gd (final)
+@@ -275,7 +275,7 @@
+ 				if p.get(&"slow", 0) > 0: actor.status.apply_slow(float(p.slow), actor.elite, source)
+ 			if zone.tick == 0:
+ 				if p.get(&"exposure", 0) > 0:
+-					actor.status.expose(float(p.exposure))
++					actor.status.expose(float(p.exposure), source)
+ 					actor.status.exposure_left = p.duration
+ 				if source == &"bass_driver":
+ 					if not actor.displacement_immune:
+--- scripts/combat/combat_session.gd (QA)
++++ scripts/combat/combat_session.gd (final)
+@@ -164,7 +164,7 @@
+ 	if supports != null and not actor.projectile:
+ 		amount *= 100.0 / (100.0 + maxf(0, actor.armor - penetration - actor.status.exposure))
+ 		var unexposed: float = minf(actor.health, base_amount * 100.0 / (100.0 + maxf(0, actor.armor - penetration)))
+-		if actor.status.exposure > 0: supports.report.add(&"bass_driver", &"exposure_bonus", minf(actor.health, amount) - unexposed)
++		if actor.status.exposure > 0: supports.report.add(actor.status.exposure_source if arsenal != null else &"bass_driver", &"exposure_bonus", minf(actor.health, amount) - unexposed)
+ 	var effective: float = minf(actor.health, amount)
+ 	if supports != null and not actor.projectile: supports.report.add(source, &"damage", effective)
+ 	actor.health = maxf(0.0, actor.health - amount)
+--- scripts/save/signal_snapshot.gd (QA)
++++ scripts/save/signal_snapshot.gd (final)
+@@ -12,6 +12,7 @@
+ 		var item: Dictionary = {"id": String(actor.definition_id), "source": String(actor.source_id), "position": [actor.position.x, actor.position.y], "status": {"source": String(actor.status.slow_source)}}
+ 		for key: String in ACTOR_FIELDS: item[key] = actor.get(key)
+ 		for key: String in STATUS_LIMITS: item.status[key] = actor.status.get(key)
++		if session.arsenal != null: item.status["exposure_source"] = String(actor.status.exposure_source)
+ 		actors.append(item)
+ 	var field: Dictionary = session.supports.field.duplicate(true)
+ 	if not field.is_empty(): field.position = [field.position.x, field.position.y]
+@@ -102,10 +103,13 @@
+ 		if projectile and M4Content.enemy(StringName(item.source)) == null: return false
+ 		actor.source_id = StringName(item.source)
+ 		var status: Variant = item.get("status")
+-		if not status is Dictionary or status.size() != STATUS_LIMITS.size() + 1 or status.get("source") not in (["static_net", "bass_driver", "reverb_well"] if session.arsenal != null else ["static_net", "bass_driver"]): return false
++		if not status is Dictionary or status.size() != STATUS_LIMITS.size() + 1 + (1 if session.arsenal != null and status.has("exposure_source") else 0) or status.get("source") not in (["static_net", "bass_driver", "reverb_well"] if session.arsenal != null else ["static_net", "bass_driver"]): return false
+ 		for key: String in STATUS_LIMITS:
+ 			if not SaveChecks.number(status.get(key), 0, (10.0 if session.arsenal != null and key in ["charge_left", "exposure_left", "slow_left"] else float(STATUS_LIMITS[key])), key == "charged"): return false
+ 			actor.status.set(key, status[key])
++		if session.arsenal != null:
++			if status.get("exposure_source", "bass_driver") not in ["bass_driver", "reverb_well"]: return false
++			actor.status.exposure_source = StringName(status.get("exposure_source", "bass_driver"))
+ 		actor.status.slow_source = StringName(status.source)
+ 		seen.append(actor.serial)
+ 		session.actors.append(actor)

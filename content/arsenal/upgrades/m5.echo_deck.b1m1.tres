@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.echo_deck.b1m1"
+name_key = &"M5_ECHO_DECK_B1M1_NAME"
+description_key = &"M5_ECHO_DECK_B1M1_DESC"
+target_id = &"echo_deck"
+required_rank = 6
+prerequisite = &"m5.echo_deck.b1"
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"copies": 1.0, &"echo_damage": -0.1, &"modifier": 1.0}

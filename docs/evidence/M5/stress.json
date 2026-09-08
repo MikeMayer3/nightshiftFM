@@ -1,0 +1,1766 @@
+[
+	{
+		"branch": 1,
+		"cpu_ms": 149.996,
+		"events": 2609,
+		"excluded": "arc_aerial",
+		"pending_peak": 13,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1527.77777777778,
+				"exposure_bonus": 578.437275985662,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 9075.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 8668.67999999996,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 11.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4023.20000000003,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 11.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2109.0752688172,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 460.430107526883,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3415.11825218797,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 471.541218637994,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 64.0,
+				"push_distance": 0.0,
+				"slow_seconds": 65.0916666666645
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 1,
+		"cpu_ms": 153.059,
+		"events": 3573,
+		"excluded": "bass_driver",
+		"pending_peak": 12,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1041.13548387097,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 13042.8759999999,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 6.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 6128.79999999995,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 15.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2475.87096774194,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 627.096774193546,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 375.00059813261,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 627.096774193546,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 6.0,
+				"interrupts": 90.0,
+				"push_distance": 0.0,
+				"slow_seconds": 90.0000000000177
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 1,
+		"cpu_ms": 135.743,
+		"events": 2507,
+		"excluded": "static_net",
+		"pending_peak": 12,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 708.943369175627,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1527.77777777778,
+				"exposure_bonus": 606.273835125447,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 9075.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 8588.96799999996,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 16.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3995.00000000003,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 15.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2163.74193548387,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 460.430107526883,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3411.20143018663,
+				"slow_seconds": 25.4333333333357
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 1,
+		"cpu_ms": 139.184,
+		"events": 1631,
+		"excluded": "echo_deck",
+		"pending_peak": 8,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 731.607168458781,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1527.77777777778,
+				"exposure_bonus": 659.125448028675,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 9075.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4060.80000000003,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 20.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2109.0752688172,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 458.207885304661,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3409.94243426621,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 471.541218637994,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 6.0,
+				"interrupts": 64.0,
+				"push_distance": 0.0,
+				"slow_seconds": 65.0916666666645
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 1,
+		"cpu_ms": 143.129,
+		"events": 2492,
+		"excluded": "needle_swarm",
+		"pending_peak": 9,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 756.587813620071,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1527.77777777778,
+				"exposure_bonus": 394.672401433692,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 9075.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 8668.67999999996,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 11.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4023.20000000003,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 16.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 460.430107526883,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3415.11825218797,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 471.541218637994,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 64.0,
+				"push_distance": 0.0,
+				"slow_seconds": 65.0916666666645
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 1,
+		"cpu_ms": 140.821,
+		"events": 1636,
+		"excluded": "reverb_well",
+		"pending_peak": 11,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1149.84372759857,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 10.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1953.70370370371,
+				"exposure_bonus": 605.002628434888,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 11605.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2341.54,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 3.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1099.8,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 11.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 956.666666666665,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 691.111111111108,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 94.0,
+				"push_distance": 0.0,
+				"slow_seconds": 90.1416666666845
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 137.403,
+		"events": 2394,
+		"excluded": "arc_aerial",
+		"pending_peak": 18,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1472.5,
+				"exposure_bonus": 2787.3024313728,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 310.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4571.89846394978,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 7.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3560.46499477532,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 686.950992555831,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1142.14743589744,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 455.910094559193,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 920.142679900743,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 24.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 57.6000000000189
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 138.103,
+		"events": 2556,
+		"excluded": "bass_driver",
+		"pending_peak": 18,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1234.755,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 1994.31321033345,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4864.92977011496,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3530.08045977008,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 2.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 625.622828784119,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1310.76923076923,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 249.999550104141,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 826.823821339945,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 24.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 57.6000000000189
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 116.947,
+		"events": 2078,
+		"excluded": "static_net",
+		"pending_peak": 17,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1085.715,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 3.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1520.0,
+				"exposure_bonus": 2641.59114659254,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 320.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4457.32965517238,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 24.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3486.5120167189,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 676.984491315136,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1134.30128205128,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 480.910054028034,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 126.573,
+		"events": 1767,
+		"excluded": "echo_deck",
+		"pending_peak": 9,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1139.535,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1472.5,
+				"exposure_bonus": 1895.04855206253,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 310.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3518.48380355275,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 3.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 686.950992555831,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1142.14743589744,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 455.910094559193,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 920.142679900743,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 28.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 57.6000000000189
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 127.813,
+		"events": 2354,
+		"excluded": "needle_swarm",
+		"pending_peak": 11,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1139.535,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1472.5,
+				"exposure_bonus": 2831.713454946,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 310.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4571.89846394978,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 7.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3560.46499477532,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1142.14743589744,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 455.910094559193,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 920.142679900743,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 24.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 57.6000000000189
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 2,
+		"cpu_ms": 123.394,
+		"events": 2500,
+		"excluded": "reverb_well",
+		"pending_peak": 17,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 523.1925,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1235.0,
+				"exposure_bonus": 2003.46619147537,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 260.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 5686.58557993723,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 5.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3812.12539184952,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 633.556451612904,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 846.129032258061,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 25.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 57.2708333333519
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 145.299,
+		"events": 2053,
+		"excluded": "arc_aerial",
+		"pending_peak": 14,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2995.11111111111,
+				"exposure_bonus": 2608.50424167947,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 5880.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 11835.4382857143,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 13.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 5684.11428571429,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 11.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1159.64157706093,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 893.84229390681,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2650.23386359409,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1407.13978494624,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 29.9624999999986
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 145.483,
+		"events": 1975,
+		"excluded": "bass_driver",
+		"pending_peak": 13,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 136.242580645161,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 9680.37599999996,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 10.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 5792.40000000001,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 14.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1042.25806451613,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1253.03225806451,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2690.68445908259,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1892.90322580645,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 44.6333333333419
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 131.98,
+		"events": 1962,
+		"excluded": "static_net",
+		"pending_peak": 13,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 143.640752688172,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2995.11111111111,
+				"exposure_bonus": 2462.99802560164,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 5880.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 11835.4382857143,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 15.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 5621.02857142858,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 17.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1159.64157706093,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 890.953405017922,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2658.1794364187,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 132.439,
+		"events": 1402,
+		"excluded": "echo_deck",
+		"pending_peak": 9,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 136.428494623656,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2995.11111111111,
+				"exposure_bonus": 1220.21216589861,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 5880.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 5588.28571428572,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 23.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1149.71326164874,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 876.265232974911,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2588.17044668094,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1420.67383512545,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 30.0624999999986
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 121.674,
+		"events": 2001,
+		"excluded": "needle_swarm",
+		"pending_peak": 8,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 117.238709677419,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2504.44444444445,
+				"exposure_bonus": 2141.36581669228,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 5880.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 11228.5714285714,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 16.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4830.28571428572,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 725.734767025088,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2650.23386359409,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1132.04301075269,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 29.9624999999986
+			}
+		},
+		"seconds": 29.9999999999996
+	},
+	{
+		"branch": 3,
+		"cpu_ms": 143.874,
+		"events": 1815,
+		"excluded": "reverb_well",
+		"pending_peak": 13,
+		"report": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 145.867956989247,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4433.88888888886,
+				"exposure_bonus": 2659.21047004609,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 8220.0,
+				"slow_seconds": 0.0
+			},
+			"echo_deck": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 9477.58799999999,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 10.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3950.74285714285,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 14.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"needle_swarm": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1176.82795698924,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"reverb_well": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2033.0035842294,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 43.9333333333413
+			}
+		},
+		"seconds": 29.9999999999996
+	}
+]

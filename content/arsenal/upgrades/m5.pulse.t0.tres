@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.pulse.t0"
+name_key = &"M5_PULSE_T0_NAME"
+description_key = &"M5_PULSE_T0_DESC"
+target_id = &"main"
+required_rank = 0
+prerequisite = &""
+stack_cap = 3
+stat = &"m5_marker"
+effects = {&"damage_bonus": 0.15}

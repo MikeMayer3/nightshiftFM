@@ -1,8 +1,10 @@
 class_name BootScreen
 extends Control
 
-enum Page { MENU, START_PLACEHOLDER, SETTINGS, MOBILE_CHECKS, COMBAT }
+enum Page { MENU, START_PLACEHOLDER, SETTINGS, MOBILE_CHECKS, COMBAT, ARSENAL }
 const COMBAT_SCENE: PackedScene = preload("res://scenes/combat/combat.tscn")
+var picker: ArsenalPicker
+var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
 var save_path: String = "user://m3_mission.json"
 var continue_button: Button
 var _continuing: bool = false
@@ -17,7 +19,7 @@ var current_page: Page = Page.MENU
 
 func _ready() -> void:
 	# Literal localization keys also remain visible to the editor's string extractor.
-	(menu.get_node("Start") as Button).pressed.connect(show_page.bind(Page.COMBAT))
+	(menu.get_node("Start") as Button).pressed.connect(show_page.bind(Page.ARSENAL))
 	(menu.get_node("Settings") as Button).pressed.connect(show_page.bind(Page.SETTINGS))
 	(menu.get_node("Quit") as Button).pressed.connect(_quit)
 	(menu.get_node("MobileChecks") as Button).pressed.connect(show_page.bind(Page.MOBILE_CHECKS))
@@ -37,6 +39,10 @@ func _ready() -> void:
 	show_page(Page.MENU)
 
 func show_page(page: Page) -> void:
+	if picker != null:
+		remove_child(picker)
+		picker.queue_free()
+		picker = null
 	if combat != null:
 		remove_child(combat)
 		combat.queue_free()
@@ -45,14 +51,23 @@ func show_page(page: Page) -> void:
 	menu.visible = page == Page.MENU
 	start_placeholder.visible = page == Page.START_PLACEHOLDER
 	settings.visible = page == Page.SETTINGS
-	($Margin as MarginContainer).visible = page not in [Page.MOBILE_CHECKS, Page.COMBAT]
+	($Margin as MarginContainer).visible = page not in [Page.MOBILE_CHECKS, Page.COMBAT, Page.ARSENAL]
 	probe.set_enabled(page == Page.MOBILE_CHECKS)
+	if page == Page.ARSENAL:
+		picker = ArsenalPicker.new()
+		add_child(picker)
+		picker.back_requested.connect(show_page.bind(Page.MENU))
+		picker.launched.connect(func(chosen: Dictionary) -> void:
+			loadout = chosen.duplicate()
+			show_page(Page.COMBAT))
 	if page == Page.COMBAT:
 		combat = COMBAT_SCENE.instantiate() as CombatScreen
 		combat.m3_enabled = true
 		combat.m4_enabled = true
 		combat.signal_enabled = true
 		combat.active_enabled = true
+		combat.arsenal_enabled = true
+		combat.loadout = loadout.duplicate()
 		combat.resume_existing = _continuing
 		combat.store = MissionStore.new(save_path)
 		_continuing = false

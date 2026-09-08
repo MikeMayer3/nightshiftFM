@@ -17,6 +17,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--adb', required=True)
 parser.add_argument('--serial', required=True)
 parser.add_argument('--seed', type=int, required=True)
+parser.add_argument('--main', choices=['pulse','sweep','burst'], default='pulse')
+parser.add_argument('--shield', choices=['capacitor','relay','feedback'], default='capacitor')
+parser.add_argument('--support', choices=['arc_aerial','bass_driver','static_net','echo_deck','needle_swarm','reverb_well'], default='arc_aerial')
 parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args()
 package = 'org.nightshiftfm.turretqa'
@@ -30,7 +33,9 @@ def screenshot(name):
 
 adb('shell', 'am', 'force-stop', package)
 # Only the dedicated QA package is written; player saves are never accessed.
-adb('shell', 'run-as', package, 'sh', '-c', f"'mkdir -p files; echo {args.seed} > files/qa_seed.txt; rm -f files/qa_telemetry.json'")
+adb('shell', 'run-as', package, 'sh', '-c', f"'mkdir -p files; echo {args.seed} > files/qa_seed.txt; rm -f files/qa_telemetry.json files/qa_mission.json files/qa_mission.json.bak files/qa_mission.json.tmp'")
+loadout = json.dumps({'main': args.main, 'shield': args.shield, 'support': args.support}, separators=(',', ':'))
+subprocess.run([args.adb, '-s', args.serial, 'shell', 'run-as', package, 'sh', '-c', "'cat > files/qa_loadout.json'"], input=loadout, text=True, check=True)
 adb('shell', 'am', 'start', '-n', package + '/com.godot.game.GodotAppLauncher')
 started = time.monotonic()
 last_action = None
@@ -74,7 +79,7 @@ with (args.output / 'telemetry.jsonl').open('w') as log:
         if row['wave'] != last_wave and row['wave'] > 0 and not row.get('action') == 'upgrade':
             screenshot(f"wave-{row['wave']:02d}.png")
             last_wave = row['wave']
-        if len(row['equipped']) == 3 and not support_capture and row['phase'] == 1:
+        if len(row['equipped']) == 5 and not support_capture and row['phase'] == 1:
             screenshot('all-supports.png')
             support_capture = True
         if row['finished']:
@@ -90,7 +95,7 @@ with (args.output / 'telemetry.jsonl').open('w') as log:
             break
         action = row.get('action')
         if action:
-            key = (action, row['choices'] if action == 'upgrade' else row['bursts'])
+            key = (action, row['choices'] if action == 'upgrade' else row['shield_wait'] if action == 'shield' else row['bursts'])
             if key != last_action or time.monotonic() - last_action_time > 1.0:
                 x, y = (round(v) for v in row['point'])
                 x += surface_origin[0]

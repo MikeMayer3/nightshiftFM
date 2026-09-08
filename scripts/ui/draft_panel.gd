@@ -14,6 +14,9 @@ var banish_mode: bool = false
 var banish_button: Button
 var heading: Label
 const ICONS: Dictionary = {
+	&"echo_deck": preload("res://assets/art/equipment/echo.svg"),
+	&"needle_swarm": preload("res://assets/art/equipment/needle.svg"),
+	&"reverb_well": preload("res://assets/art/equipment/reverb.svg"),
 	&"main": preload("res://assets/art/equipment/pulse.svg"),
 	&"shield": preload("res://assets/art/equipment/shield.svg"),
 	&"arc_aerial": preload("res://assets/art/equipment/arc.svg"),
@@ -22,6 +25,7 @@ const ICONS: Dictionary = {
 	&"repair": preload("res://assets/art/equipment/repair.svg"),
 }
 const ACCENTS: Dictionary = {
+	&"echo_deck": Color("ed93ca"), &"needle_swarm": Color("f3d57b"), &"reverb_well": Color("8bddb0"),
 	&"main": Color("76dbca"), &"shield": Color("efa968"),
 	&"bass_driver": Color("efa968"), &"static_net": Color("7ad8ee"),
 	&"arc_aerial": Color("bba5f4"), &"repair": Color("96dbac"),
@@ -168,6 +172,8 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	header.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	body.add_child(header)
 	var caption: Label = label_text(tr("M3_" + String(identity).to_upper() + "_SHORT_NAME") if option != null else tr("M3_STATION"), header, 22)
+	if session.arsenal != null and identity in [&"main", &"shield"]:
+		caption.text = tr(draft.track(identity).definition.name_key)
 	caption.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	caption.modulate = accent
 	if option != null and id != SignalDraft.OVERDRIVE:
@@ -290,6 +296,16 @@ func _show_m4_details(session: CombatSession, id: StringName) -> void:
 			if alternative.id == id or alternative.id in session.draft.offers: continue
 			var alternative_id: StringName = alternative.id
 			button_text(tr("M4_SWAP_BRANCH") % tr(alternative.name_key), column, func() -> void: branch_swapped.emit(alternative_id))
+	if session.arsenal != null:
+		var after: UpgradeTrack = UpgradeTrack.new(owned.definition)
+		for choice: StringName in owned.choices: after.accept(choice, [])
+		after.accept(id, [])
+		var before_stats: Dictionary = ArsenalStats.parameters(owned)
+		var after_stats: Dictionary = ArsenalStats.parameters(after)
+		for key: StringName in after_stats:
+			if key in [&"mode", &"modifier", &"capstone", &"m5_marker", &"damage_bonus", &"cadence", &"orbit", &"reserve", &"overheal", &"stagger", &"priority", &"distinct"]: continue
+			if not is_equal_approx(float(before_stats.get(key, 0)), float(after_stats[key])):
+				label_text(tr("M5_STAT_" + String(key).to_upper()) + ": %.2f → %.2f" % [float(before_stats.get(key, 0)), float(after_stats[key])], column, 24)
 	var branch: StringName = option.id if option.required_rank == 3 else &""
 	for accepted: StringName in owned.choices:
 		if session.draft.card(accepted).required_rank == 3: branch = accepted

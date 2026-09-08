@@ -1,0 +1,69 @@
+{
+  "reason": "Reduced resolution did not recover performance of the long-lived AVD. Cold restarting emulator with explicit host GPU; no completed balance result.",
+  "last": {
+    "bursts": 11,
+    "choices": 4,
+    "cooldown": 1.9333333333333442,
+    "coordinates": {
+      "arena": "[P: (12.0, 224.0), S: (696.0, 1137.0)]",
+      "canvas": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (12.0, 224.0)]",
+      "origin": "(0, 0)",
+      "safe": "[P: (0, 0), S: (720, 1471)]",
+      "stretch": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (0.0, 0.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (720.0, 1471.0)]",
+      "window": "(720, 1471)"
+    },
+    "decisions": [
+      {
+        "bonus": false,
+        "id": "recruit.needle_swarm"
+      },
+      {
+        "bonus": false,
+        "id": "recruit.static_net"
+      },
+      {
+        "bonus": false,
+        "id": "recruit.reverb_well"
+      },
+      {
+        "bonus": false,
+        "id": "m5.feedback.t2"
+      }
+    ],
+    "equipped": [
+      "static_net",
+      "echo_deck",
+      "needle_swarm",
+      "reverb_well"
+    ],
+    "finished": false,
+    "fps": 3.0,
+    "hull": 100.0,
+    "kills": 55,
+    "loadout": {
+      "main": "burst",
+      "shield": "feedback",
+      "support": "echo_deck"
+    },
+    "paused": false,
+    "pending": 6,
+    "phase": 1,
+    "save_failed": false,
+    "seconds": 63.38333333333102,
+    "seed": 1,
+    "shield": 50.0,
+    "shield_wait": 0.0,
+    "support_timers": {
+      "arc_aerial": 0.0,
+      "bass_driver": 0.0,
+      "echo_deck": 0.0,
+      "needle_swarm": 0.0,
+      "reverb_well": 0.016666666666679427,
+      "static_net": 0.016666666666679427
+    },
+    "victory": false,
+    "wave": 2,
+    "wall_seconds": 239.636
+  }
+}

@@ -206,7 +206,6 @@ M3_REPAIR_EFFECT,Restore up to 10 hull
 M3_REFILL_EFFECT,Restore up to 15 shield
 M3_MAIN_SHORT_NAME,Pulse
 M3_SHIELD_SHORT_NAME,Shield
-M3_ARC_AERIAL_SHORT_NAME,Arc Aerial
 M3_SUPPORT_CAP_NOTE,Arc is fully upgraded. Take a repair or refill instead.
 M3_STATION,Station
 M3_RECOVERY_CHOICE,Choose a recovery
@@ -321,8 +320,6 @@ M4_PLATED_NAME,Plated carrier
 M4_PLATED_DESC,Armored carrier with four telegraphed shots.
 M4_ELITE_NAME,Overseer
 M4_ELITE_DESC,Armored elite. Resists slow and knockback; repeat interruptions have a cooldown.
-M3_BASS_DRIVER_SHORT_NAME,Bass Driver
-M3_STATIC_NET_SHORT_NAME,Static Net
 M4_RECRUIT,Add a support?
 M4_RECRUIT_HINT,New equipment starts at rank 1. Or strengthen your current build.
 M4_BASS_DRIVER_ROLE,Area pulses push enemies back and strip armor.
@@ -459,12 +456,6 @@ SIGNAL_METER,Signal · %d / %d
 SIGNAL_READY,Signal boosted
 SIGNAL_HINT,Choose an upgrade or a new weapon
 SIGNAL_NEW,New · Rank 1
-SIGNAL_BASS_DRIVER_NEW_NAME,Bass Driver
-SIGNAL_BASS_DRIVER_NEW_SHORT,Area damage · Push and strip armor
-SIGNAL_BASS_DRIVER_NEW_DESC,"Add a rank-1 Bass Driver. Its pulses deal area damage, expose armor and push enemies back. Uses one support slot."
-SIGNAL_STATIC_NET_NEW_NAME,Static Net
-SIGNAL_STATIC_NET_NEW_SHORT,Damage field · Slow enemies
-SIGNAL_STATIC_NET_NEW_DESC,"Add a rank-1 Static Net. Fields deal 3 damage every 0.75s to up to eight enemies, slow movement and intercept two shots. Uses one support slot."
 SIGNAL_OVERDRIVE_NAME,Overdrive
 SIGNAL_OVERDRIVE_SHORT,+25% weapon damage for 20 seconds
 SIGNAL_OVERDRIVE_DESC,Your weapons are fully ranked. Increase their damage by 25% for 20 seconds. Repeated choices refresh the duration without stacking.
@@ -485,3 +476,760 @@ Drag to direct automatic fire. The Burst button fires at your current target.
 Kills fill Signal. Upgrades pause the fight. Continue restores the latest wave or upgrade checkpoint."
 ACTIVE_REPORT,Aimed bursts: %d · Damage: %.0f
 ACTIVE_REPORT_HINT,Burst damage is included in Pulse damage above.
+M5_ARSENAL,Choose your signal
+M5_FRESH_RANKS,All gear starts at rank 1. Find more weapons in the field.
+M5_SELECT_MAIN,Main weapon
+M5_SELECT_SHIELD,Shield
+M5_SELECT_SUPPORT,Starting support
+M5_LAUNCH,Go live
+M5_SHIELD_READY,Shield
+M5_SHIELD_WAIT,Shield %ds
+M5_STAT_DELAY,Delay
+M5_STAT_EXPOSURE,Exposure
+M5_STAT_RESIDUAL,Residual
+M5_STAT_FALLOFF,Falloff
+M5_STAT_CHARGES,Charges
+M5_STAT_BREAK_DAMAGE,Break damage
+M5_STAT_SLOW,Slow
+M5_STAT_REFLECT,Reflect
+M5_STAT_DAMAGE,Damage
+M5_STAT_TARGETS,Targets
+M5_STAT_COPIES,Copies
+M5_STAT_PULL,Pull
+M5_STAT_SUSTAIN,Sustain
+M5_STAT_WIDTH,Width
+M5_STAT_DAMAGE_BONUS,Damage bonus
+M5_STAT_REACH,Reach
+M5_STAT_ELITE_BONUS,Elite bonus
+M5_STAT_CRIT,Crit
+M5_STAT_INTERVAL,Interval
+M5_STAT_STAGGER,Stagger
+M5_STAT_DISTINCT,Distinct
+M5_STAT_ORBIT,Orbit
+M5_STAT_SHIELD_RADIUS,Shield radius
+M5_STAT_PENETRATION,Penetration
+M5_STAT_TICK_RATE,Tick rate
+M5_STAT_CAPACITY,Capacity
+M5_STAT_PULSES,Pulses
+M5_STAT_BREAK_RECOVERY,Break recovery
+M5_STAT_JAM,Jam
+M5_STAT_RADIUS,Radius
+M5_STAT_PROJECTILES,Projectiles
+M5_STAT_MITIGATION,Mitigation
+M5_STAT_EMERGENCY,Emergency
+M5_STAT_PUSH,Push
+M5_STAT_MARK,Mark
+M5_STAT_PRIORITY,Priority
+M5_STAT_BOUNCE,Bounce
+M5_STAT_COOLDOWN,Cooldown
+M5_STAT_RETALIATION,Retaliation
+M5_STAT_PIERCE,Pierce
+M5_STAT_ATTACKS,Attacks
+M5_STAT_ECHO_DAMAGE,Echo damage
+M5_STAT_OVERHEAL,Overheal
+M5_STAT_HEALING,Healing
+M5_STAT_TERMINAL,Terminal
+M5_STAT_RESERVE,Reserve
+M5_STAT_STEERING,Steering
+M5_STAT_RECHARGE,Recharge
+M5_STAT_CADENCE,Cadence
+M5_STAT_RECOVERY,Recovery
+M5_STAT_DURATION,Duration
+M5_STAT_RELEASE,Release
+M5_STAT_SPEED,Speed
+M5_ARC_AERIAL_T0_NAME,Gain
+M5_ARC_AERIAL_T0_SHORT,+15% base damage
+M5_ARC_AERIAL_T0_DESC,+15% base damage.
+M5_ARC_AERIAL_T1_NAME,Tempo
+M5_ARC_AERIAL_T1_SHORT,+10% attack speed
+M5_ARC_AERIAL_T1_DESC,+10% attack speed.
+M5_ARC_AERIAL_T2_NAME,Reach
+M5_ARC_AERIAL_T2_SHORT,+36 reach
+M5_ARC_AERIAL_T2_DESC,+36 reach.
+M5_ARC_AERIAL_T3_NAME,Extra Contact
+M5_ARC_AERIAL_T3_SHORT,+1 targets
+M5_ARC_AERIAL_T3_DESC,+1 targets.
+M5_ARC_AERIAL_T4_NAME,Long Charge
+M5_ARC_AERIAL_T4_SHORT,+0.75s duration
+M5_ARC_AERIAL_T4_DESC,+0.75s duration.
+M5_ARC_AERIAL_T5_NAME,Elite Hunter
+M5_ARC_AERIAL_T5_SHORT,+15% elite damage
+M5_ARC_AERIAL_T5_DESC,+15% elite damage.
+M5_ARC_AERIAL_B1_NAME,Storm
+M5_ARC_AERIAL_B1_SHORT,"+2 targets, -20% base damage"
+M5_ARC_AERIAL_B1_DESC,"+2 targets, -20% base damage."
+M5_ARC_AERIAL_B1M1_NAME,Long Route
+M5_ARC_AERIAL_B1M1_SHORT,"+120 reach, -15% attack speed"
+M5_ARC_AERIAL_B1M1_DESC,"+120 reach, -15% attack speed."
+M5_ARC_AERIAL_B1M2_NAME,Tight Circuit
+M5_ARC_AERIAL_B1M2_SHORT,"-70 reach, +35% base damage"
+M5_ARC_AERIAL_B1M2_DESC,"-70 reach, +35% base damage."
+M5_ARC_AERIAL_B1CAP_NAME,Broadcast Storm
+M5_ARC_AERIAL_B1CAP_SHORT,+2 targets
+M5_ARC_AERIAL_B1CAP_DESC,+2 targets.
+M5_ARC_AERIAL_B2_NAME,Lightning Spear
+M5_ARC_AERIAL_B2_SHORT,"-1 targets, +100% base damage, +35 armor penetration"
+M5_ARC_AERIAL_B2_DESC,"-1 targets, +100% base damage, +35 armor penetration."
+M5_ARC_AERIAL_B2M1_NAME,Needle Arc
+M5_ARC_AERIAL_B2M1_SHORT,"+30 armor penetration, -10 width"
+M5_ARC_AERIAL_B2M1_DESC,"+30 armor penetration, -10 width."
+M5_ARC_AERIAL_B2M2_NAME,Capacitor Strike
+M5_ARC_AERIAL_B2M2_SHORT,"+100% base damage, -30% attack speed"
+M5_ARC_AERIAL_B2M2_DESC,"+100% base damage, -30% attack speed."
+M5_ARC_AERIAL_B2CAP_NAME,Thunder Needle
+M5_ARC_AERIAL_B2CAP_SHORT,+2 pierce
+M5_ARC_AERIAL_B2CAP_DESC,+2 pierce.
+M5_ARC_AERIAL_B3_NAME,Shield Tap
+M5_ARC_AERIAL_B3_SHORT,"-1 targets, -40% base damage, +3 shield per discharge"
+M5_ARC_AERIAL_B3_DESC,"-1 targets, -40% base damage, +3 shield per discharge."
+M5_ARC_AERIAL_B3M1_NAME,Quick Charge
+M5_ARC_AERIAL_B3M1_SHORT,"+40% attack speed, -1 shield per discharge"
+M5_ARC_AERIAL_B3M1_DESC,"+40% attack speed, -1 shield per discharge."
+M5_ARC_AERIAL_B3M2_NAME,Reserve Charge
+M5_ARC_AERIAL_B3M2_SHORT,"Store shield restoration, +2 shield per discharge"
+M5_ARC_AERIAL_B3M2_DESC,"Store shield restoration, +2 shield per discharge."
+M5_ARC_AERIAL_B3CAP_NAME,Closed Circuit
+M5_ARC_AERIAL_B3CAP_SHORT,Overflow becomes overshield
+M5_ARC_AERIAL_B3CAP_DESC,Overflow becomes overshield.
+M5_ARC_AERIAL_NAME,Arc Aerial
+M5_ARC_AERIAL_PREVIEW,Chains and armor piercing
+M3_ARC_AERIAL_SHORT_NAME,Arc Aerial
+SIGNAL_ARC_AERIAL_NEW_NAME,Arc Aerial
+SIGNAL_ARC_AERIAL_NEW_SHORT,Chains and armor piercing
+SIGNAL_ARC_AERIAL_NEW_DESC,Chains and armor piercing. Starts at rank 1.
+M5_ECHO_DECK_T0_NAME,Replay Gain
+M5_ECHO_DECK_T0_SHORT,+12% replay damage
+M5_ECHO_DECK_T0_DESC,+12% replay damage.
+M5_ECHO_DECK_T1_NAME,Short Loop
+M5_ECHO_DECK_T1_SHORT,-1 shots per replay
+M5_ECHO_DECK_T1_DESC,-1 shots per replay.
+M5_ECHO_DECK_T2_NAME,Quick Replay
+M5_ECHO_DECK_T2_SHORT,-0.09s replay delay
+M5_ECHO_DECK_T2_DESC,-0.09s replay delay.
+M5_ECHO_DECK_T3_NAME,Extra Copy
+M5_ECHO_DECK_T3_SHORT,+1 replays
+M5_ECHO_DECK_T3_DESC,+1 replays.
+M5_ECHO_DECK_T4_NAME,Retarget
+M5_ECHO_DECK_T4_SHORT,+34 reach
+M5_ECHO_DECK_T4_DESC,+34 reach.
+M5_ECHO_DECK_T5_NAME,Replay Crit
+M5_ECHO_DECK_T5_SHORT,+5% crit chance
+M5_ECHO_DECK_T5_DESC,+5% crit chance.
+M5_ECHO_DECK_B1_NAME,Rapid Repeat
+M5_ECHO_DECK_B1_SHORT,"-1 shots per replay, -10% replay damage"
+M5_ECHO_DECK_B1_DESC,"-1 shots per replay, -10% replay damage."
+M5_ECHO_DECK_B1M1_NAME,Double Tap
+M5_ECHO_DECK_B1M1_SHORT,"+1 replays, -10% replay damage"
+M5_ECHO_DECK_B1M1_DESC,"+1 replays, -10% replay damage."
+M5_ECHO_DECK_B1M2_NAME,Staccato
+M5_ECHO_DECK_B1M2_SHORT,"-1 shots per replay, -60 reach"
+M5_ECHO_DECK_B1M2_DESC,"-1 shots per replay, -60 reach."
+M5_ECHO_DECK_B1CAP_NAME,Loop Pedal
+M5_ECHO_DECK_B1CAP_SHORT,+1 replays
+M5_ECHO_DECK_B1CAP_DESC,+1 replays.
+M5_ECHO_DECK_B2_NAME,Layered Recording
+M5_ECHO_DECK_B2_SHORT,"+1 shots per replay, +1 replays, +0.5s replay delay"
+M5_ECHO_DECK_B2_DESC,"+1 shots per replay, +1 replays, +0.5s replay delay."
+M5_ECHO_DECK_B2M1_NAME,Long Side
+M5_ECHO_DECK_B2M1_SHORT,"+1 replays, +1 shots per replay"
+M5_ECHO_DECK_B2M1_DESC,"+1 replays, +1 shots per replay."
+M5_ECHO_DECK_B2M2_NAME,Hot Master
+M5_ECHO_DECK_B2M2_SHORT,"+30% replay damage, +0.3s replay delay"
+M5_ECHO_DECK_B2M2_DESC,"+30% replay damage, +0.3s replay delay."
+M5_ECHO_DECK_B2CAP_NAME,Master Tape
+M5_ECHO_DECK_B2CAP_SHORT,"+1 replays, prioritize elites and marked targets"
+M5_ECHO_DECK_B2CAP_DESC,"+1 replays, prioritize elites and marked targets."
+M5_ECHO_DECK_B3_NAME,Ghost Chorus
+M5_ECHO_DECK_B3_SHORT,"Replay at other targets, +100 reach"
+M5_ECHO_DECK_B3_DESC,"Replay at other targets, +100 reach."
+M5_ECHO_DECK_B3M1_NAME,Wide Chorus
+M5_ECHO_DECK_B3M1_SHORT,"+150 reach, -10% replay damage"
+M5_ECHO_DECK_B3M1_DESC,"+150 reach, -10% replay damage."
+M5_ECHO_DECK_B3M2_NAME,Lead Singer
+M5_ECHO_DECK_B3M2_SHORT,"Prioritize elites and marked targets, +15% replay damage, -50 reach"
+M5_ECHO_DECK_B3M2_DESC,"Prioritize elites and marked targets, +15% replay damage, -50 reach."
+M5_ECHO_DECK_B3CAP_NAME,Phantom Broadcast
+M5_ECHO_DECK_B3CAP_SHORT,+2 replays
+M5_ECHO_DECK_B3CAP_DESC,+2 replays.
+M5_ECHO_DECK_NAME,Echo Deck
+M5_ECHO_DECK_PREVIEW,Replays main attacks
+M3_ECHO_DECK_SHORT_NAME,Echo Deck
+SIGNAL_ECHO_DECK_NEW_NAME,Echo Deck
+SIGNAL_ECHO_DECK_NEW_SHORT,Replays main attacks
+SIGNAL_ECHO_DECK_NEW_DESC,Replays main attacks. Starts at rank 1.
+M5_BASS_DRIVER_T0_NAME,Gain
+M5_BASS_DRIVER_T0_SHORT,+15% base damage
+M5_BASS_DRIVER_T0_DESC,+15% base damage.
+M5_BASS_DRIVER_T1_NAME,Coverage
+M5_BASS_DRIVER_T1_SHORT,+15 radius
+M5_BASS_DRIVER_T1_DESC,+15 radius.
+M5_BASS_DRIVER_T2_NAME,Tempo
+M5_BASS_DRIVER_T2_SHORT,+10% attack speed
+M5_BASS_DRIVER_T2_DESC,+10% attack speed.
+M5_BASS_DRIVER_T3_NAME,Push
+M5_BASS_DRIVER_T3_SHORT,+4 push
+M5_BASS_DRIVER_T3_DESC,+4 push.
+M5_BASS_DRIVER_T4_NAME,Exposure
+M5_BASS_DRIVER_T4_SHORT,+3 exposure
+M5_BASS_DRIVER_T4_DESC,+3 exposure.
+M5_BASS_DRIVER_T5_NAME,Long Exposure
+M5_BASS_DRIVER_T5_SHORT,+0.75s duration
+M5_BASS_DRIVER_T5_DESC,+0.75s duration.
+M5_BASS_DRIVER_B1_NAME,Wideband
+M5_BASS_DRIVER_B1_SHORT,"+40 radius, -20% base damage"
+M5_BASS_DRIVER_B1_DESC,"+40 radius, -20% base damage."
+M5_BASS_DRIVER_B1M1_NAME,Wide Cone
+M5_BASS_DRIVER_B1M1_SHORT,"+35 radius, -10 push"
+M5_BASS_DRIVER_B1M1_DESC,"+35 radius, -10 push."
+M5_BASS_DRIVER_B1M2_NAME,Deep Cone
+M5_BASS_DRIVER_B1M2_SHORT,"-20 radius, +35 push"
+M5_BASS_DRIVER_B1M2_DESC,"-20 radius, +35 push."
+M5_BASS_DRIVER_B1CAP_NAME,Wall of Sound
+M5_BASS_DRIVER_B1CAP_SHORT,+2 pulses
+M5_BASS_DRIVER_B1CAP_DESC,+2 pulses.
+M5_BASS_DRIVER_B2_NAME,Compression
+M5_BASS_DRIVER_B2_SHORT,"-30 radius, +80% base damage, +15 exposure"
+M5_BASS_DRIVER_B2_DESC,"-30 radius, +80% base damage, +15 exposure."
+M5_BASS_DRIVER_B2M1_NAME,Hard Clip
+M5_BASS_DRIVER_B2M1_SHORT,"+25 exposure, -20% attack speed"
+M5_BASS_DRIVER_B2M1_DESC,"+25 exposure, -20% attack speed."
+M5_BASS_DRIVER_B2M2_NAME,Direct Injection
+M5_BASS_DRIVER_B2M2_SHORT,"+50% elite damage, -15 push"
+M5_BASS_DRIVER_B2M2_DESC,"+50% elite damage, -15 push."
+M5_BASS_DRIVER_B2CAP_NAME,Crushing Note
+M5_BASS_DRIVER_B2CAP_SHORT,+60% base damage
+M5_BASS_DRIVER_B2CAP_DESC,+60% base damage.
+M5_BASS_DRIVER_B3_NAME,Aftershock
+M5_BASS_DRIVER_B3_SHORT,"+2 pulses, -30% base damage"
+M5_BASS_DRIVER_B3_DESC,"+2 pulses, -30% base damage."
+M5_BASS_DRIVER_B3M1_NAME,Ringing Floor
+M5_BASS_DRIVER_B3M1_SHORT,"+2s duration, -15% base damage"
+M5_BASS_DRIVER_B3M1_DESC,"+2s duration, -15% base damage."
+M5_BASS_DRIVER_B3M2_NAME,Double Thump
+M5_BASS_DRIVER_B3M2_SHORT,"+1 pulses, -1s duration"
+M5_BASS_DRIVER_B3M2_DESC,"+1 pulses, -1s duration."
+M5_BASS_DRIVER_B3CAP_NAME,Seismic Chorus
+M5_BASS_DRIVER_B3CAP_SHORT,+2 pulses
+M5_BASS_DRIVER_B3CAP_DESC,+2 pulses.
+M5_BASS_DRIVER_NAME,Bass Driver
+M5_BASS_DRIVER_PREVIEW,Area damage and armor exposure
+M3_BASS_DRIVER_SHORT_NAME,Bass Driver
+SIGNAL_BASS_DRIVER_NEW_NAME,Bass Driver
+SIGNAL_BASS_DRIVER_NEW_SHORT,Area damage and armor exposure
+SIGNAL_BASS_DRIVER_NEW_DESC,Area damage and armor exposure. Starts at rank 1.
+M5_NEEDLE_SWARM_T0_NAME,Gain
+M5_NEEDLE_SWARM_T0_SHORT,+15% base damage
+M5_NEEDLE_SWARM_T0_DESC,+15% base damage.
+M5_NEEDLE_SWARM_T1_NAME,Tempo
+M5_NEEDLE_SWARM_T1_SHORT,+10% attack speed
+M5_NEEDLE_SWARM_T1_DESC,+10% attack speed.
+M5_NEEDLE_SWARM_T2_NAME,Pierce
+M5_NEEDLE_SWARM_T2_SHORT,+1 pierce
+M5_NEEDLE_SWARM_T2_DESC,+1 pierce.
+M5_NEEDLE_SWARM_T3_NAME,Steering
+M5_NEEDLE_SWARM_T3_SHORT,Sharper homing
+M5_NEEDLE_SWARM_T3_DESC,Sharper homing.
+M5_NEEDLE_SWARM_T4_NAME,Extra Needle
+M5_NEEDLE_SWARM_T4_SHORT,+1 projectiles
+M5_NEEDLE_SWARM_T4_DESC,+1 projectiles.
+M5_NEEDLE_SWARM_T5_NAME,Long Mark
+M5_NEEDLE_SWARM_T5_SHORT,+0.75s duration
+M5_NEEDLE_SWARM_T5_DESC,+0.75s duration.
+M5_NEEDLE_SWARM_B1_NAME,Piercing Needles
+M5_NEEDLE_SWARM_B1_SHORT,"+2 pierce, straight flight"
+M5_NEEDLE_SWARM_B1_DESC,"+2 pierce, straight flight."
+M5_NEEDLE_SWARM_B1M1_NAME,Long Groove
+M5_NEEDLE_SWARM_B1M1_SHORT,"+2 pierce, damage fades after each pierced target"
+M5_NEEDLE_SWARM_B1M1_DESC,"+2 pierce, damage fades after each pierced target."
+M5_NEEDLE_SWARM_B1M2_NAME,Hard Cut
+M5_NEEDLE_SWARM_B1M2_SHORT,"+60% base damage, -1 pierce"
+M5_NEEDLE_SWARM_B1M2_DESC,"+60% base damage, -1 pierce."
+M5_NEEDLE_SWARM_B1CAP_NAME,Record Cutter
+M5_NEEDLE_SWARM_B1CAP_SHORT,+3 pierce
+M5_NEEDLE_SWARM_B1CAP_DESC,+3 pierce.
+M5_NEEDLE_SWARM_B2_NAME,Homing Swarm
+M5_NEEDLE_SWARM_B2_SHORT,"Sharper homing, -1 pierce"
+M5_NEEDLE_SWARM_B2_DESC,"Sharper homing, -1 pierce."
+M5_NEEDLE_SWARM_B2M1_NAME,Wide Seek
+M5_NEEDLE_SWARM_B2M1_SHORT,"+200 reach, slower projectiles"
+M5_NEEDLE_SWARM_B2M1_DESC,"+200 reach, slower projectiles."
+M5_NEEDLE_SWARM_B2M2_NAME,Close Pursuit
+M5_NEEDLE_SWARM_B2M2_SHORT,"Sharper homing, faster projectiles, -0.5s duration"
+M5_NEEDLE_SWARM_B2M2_DESC,"Sharper homing, faster projectiles, -0.5s duration."
+M5_NEEDLE_SWARM_B2CAP_NAME,Needle Hurricane
+M5_NEEDLE_SWARM_B2CAP_SHORT,+3 projectiles
+M5_NEEDLE_SWARM_B2CAP_DESC,+3 projectiles.
+M5_NEEDLE_SWARM_B3_NAME,Marking Pins
+M5_NEEDLE_SWARM_B3_SHORT,"+20% mark strength, -20% base damage"
+M5_NEEDLE_SWARM_B3_DESC,"+20% mark strength, -20% base damage."
+M5_NEEDLE_SWARM_B3M1_NAME,Spotlight
+M5_NEEDLE_SWARM_B3M1_SHORT,"+15% mark strength, -1 projectiles"
+M5_NEEDLE_SWARM_B3M1_DESC,"+15% mark strength, -1 projectiles."
+M5_NEEDLE_SWARM_B3M2_NAME,Full Set
+M5_NEEDLE_SWARM_B3M2_SHORT,"+2 projectiles, -5% mark strength"
+M5_NEEDLE_SWARM_B3M2_DESC,"+2 projectiles, -5% mark strength."
+M5_NEEDLE_SWARM_B3CAP_NAME,Perfect Groove
+M5_NEEDLE_SWARM_B3CAP_SHORT,"+15% mark strength, prioritize elites and marked targets"
+M5_NEEDLE_SWARM_B3CAP_DESC,"+15% mark strength, prioritize elites and marked targets."
+M5_NEEDLE_SWARM_NAME,Needle Swarm
+M5_NEEDLE_SWARM_PREVIEW,Traveling projectiles and marks
+M3_NEEDLE_SWARM_SHORT_NAME,Needle Swarm
+SIGNAL_NEEDLE_SWARM_NEW_NAME,Needle Swarm
+SIGNAL_NEEDLE_SWARM_NEW_SHORT,Traveling projectiles and marks
+SIGNAL_NEEDLE_SWARM_NEW_DESC,Traveling projectiles and marks. Starts at rank 1.
+M5_REVERB_WELL_T0_NAME,Long Well
+M5_REVERB_WELL_T0_SHORT,+0.6s duration
+M5_REVERB_WELL_T0_DESC,+0.6s duration.
+M5_REVERB_WELL_T1_NAME,Coverage
+M5_REVERB_WELL_T1_SHORT,+15 radius
+M5_REVERB_WELL_T1_DESC,+15 radius.
+M5_REVERB_WELL_T2_NAME,Strong Pull
+M5_REVERB_WELL_T2_SHORT,+6.4 pull
+M5_REVERB_WELL_T2_DESC,+6.4 pull.
+M5_REVERB_WELL_T3_NAME,Tick Gain
+M5_REVERB_WELL_T3_SHORT,+15% base damage
+M5_REVERB_WELL_T3_DESC,+15% base damage.
+M5_REVERB_WELL_T4_NAME,Tempo
+M5_REVERB_WELL_T4_SHORT,+10% attack speed
+M5_REVERB_WELL_T4_DESC,+10% attack speed.
+M5_REVERB_WELL_T5_NAME,More Targets
+M5_REVERB_WELL_T5_SHORT,+2 targets
+M5_REVERB_WELL_T5_DESC,+2 targets.
+M5_REVERB_WELL_B1_NAME,Trap Room
+M5_REVERB_WELL_B1_SHORT,"+35 radius, +1s duration, -10 pull"
+M5_REVERB_WELL_B1_DESC,"+35 radius, +1s duration, -10 pull."
+M5_REVERB_WELL_B1M1_NAME,Long Hall
+M5_REVERB_WELL_B1M1_SHORT,"+2s duration, -8 pull"
+M5_REVERB_WELL_B1M1_DESC,"+2s duration, -8 pull."
+M5_REVERB_WELL_B1M2_NAME,Narrow Door
+M5_REVERB_WELL_B1M2_SHORT,"+25 pull, -40 radius"
+M5_REVERB_WELL_B1M2_DESC,"+25 pull, -40 radius."
+M5_REVERB_WELL_B1CAP_NAME,Dead Room
+M5_REVERB_WELL_B1CAP_SHORT,+20% slow
+M5_REVERB_WELL_B1CAP_DESC,+20% slow.
+M5_REVERB_WELL_B2_NAME,Pressure Well
+M5_REVERB_WELL_B2_SHORT,"-20 radius, +35 pull"
+M5_REVERB_WELL_B2_DESC,"-20 radius, +35 pull."
+M5_REVERB_WELL_B2M1_NAME,Hard Walls
+M5_REVERB_WELL_B2M1_SHORT,"+30 pull, -1s duration"
+M5_REVERB_WELL_B2M1_DESC,"+30 pull, -1s duration."
+M5_REVERB_WELL_B2M2_NAME,Heavy Air
+M5_REVERB_WELL_B2M2_SHORT,"+25 exposure, -30% base damage"
+M5_REVERB_WELL_B2M2_DESC,"+25 exposure, -30% base damage."
+M5_REVERB_WELL_B2CAP_NAME,Implosion
+M5_REVERB_WELL_B2CAP_SHORT,Burst when the well ends
+M5_REVERB_WELL_B2CAP_DESC,Burst when the well ends.
+M5_REVERB_WELL_B3_NAME,Orbit Chamber
+M5_REVERB_WELL_B3_SHORT,"Orbit trapped enemies, -10 pull"
+M5_REVERB_WELL_B3_DESC,"Orbit trapped enemies, -10 pull."
+M5_REVERB_WELL_B3M1_NAME,Slow Orbit
+M5_REVERB_WELL_B3M1_SHORT,"+2s duration, -2 targets"
+M5_REVERB_WELL_B3M1_DESC,"+2s duration, -2 targets."
+M5_REVERB_WELL_B3M2_NAME,Fast Orbit
+M5_REVERB_WELL_B3M2_SHORT,"-1s duration, burst when the well ends"
+M5_REVERB_WELL_B3M2_DESC,"-1s duration, burst when the well ends."
+M5_REVERB_WELL_B3CAP_NAME,Slingshot
+M5_REVERB_WELL_B3CAP_SHORT,Launch enemies back on release
+M5_REVERB_WELL_B3CAP_DESC,Launch enemies back on release.
+M5_REVERB_WELL_NAME,Reverb Well
+M5_REVERB_WELL_PREVIEW,Pull fields and release bursts
+M3_REVERB_WELL_SHORT_NAME,Reverb Well
+SIGNAL_REVERB_WELL_NEW_NAME,Reverb Well
+SIGNAL_REVERB_WELL_NEW_SHORT,Pull fields and release bursts
+SIGNAL_REVERB_WELL_NEW_DESC,Pull fields and release bursts. Starts at rank 1.
+M5_STATIC_NET_T0_NAME,Deep Slow
+M5_STATIC_NET_T0_SHORT,+5% slow
+M5_STATIC_NET_T0_DESC,+5% slow.
+M5_STATIC_NET_T1_NAME,Long Net
+M5_STATIC_NET_T1_SHORT,+0.6s duration
+M5_STATIC_NET_T1_DESC,+0.6s duration.
+M5_STATIC_NET_T2_NAME,Coverage
+M5_STATIC_NET_T2_SHORT,+16.5 radius
+M5_STATIC_NET_T2_DESC,+16.5 radius.
+M5_STATIC_NET_T3_NAME,Tempo
+M5_STATIC_NET_T3_SHORT,+10% attack speed
+M5_STATIC_NET_T3_DESC,+10% attack speed.
+M5_STATIC_NET_T4_NAME,Interception
+M5_STATIC_NET_T4_SHORT,+1 interceptions
+M5_STATIC_NET_T4_DESC,+1 interceptions.
+M5_STATIC_NET_T5_NAME,Residual
+M5_STATIC_NET_T5_SHORT,+0.12s lingering slow
+M5_STATIC_NET_T5_DESC,+0.12s lingering slow.
+M5_STATIC_NET_B1_NAME,Dead Air
+M5_STATIC_NET_B1_SHORT,"+0.4 jam, +10% slow"
+M5_STATIC_NET_B1_DESC,"+0.4 jam, +10% slow."
+M5_STATIC_NET_B1M1_NAME,Blank Channel
+M5_STATIC_NET_B1M1_SHORT,"+0.5 jam, -20% attack speed"
+M5_STATIC_NET_B1M1_DESC,"+0.5 jam, -20% attack speed."
+M5_STATIC_NET_B1M2_NAME,Low Hum
+M5_STATIC_NET_B1M2_SHORT,"+2s duration, -0.2 jam"
+M5_STATIC_NET_B1M2_DESC,"+2s duration, -0.2 jam."
+M5_STATIC_NET_B1CAP_NAME,Dead Zone
+M5_STATIC_NET_B1CAP_SHORT,"+30 radius, +1s duration"
+M5_STATIC_NET_B1CAP_DESC,"+30 radius, +1s duration."
+M5_STATIC_NET_B2_NAME,Interference
+M5_STATIC_NET_B2_SHORT,"+2 interceptions, -15% slow"
+M5_STATIC_NET_B2_DESC,"+2 interceptions, -15% slow."
+M5_STATIC_NET_B2M1_NAME,Dense Weave
+M5_STATIC_NET_B2M1_SHORT,"+3 interceptions, -35 radius"
+M5_STATIC_NET_B2M1_DESC,"+3 interceptions, -35 radius."
+M5_STATIC_NET_B2M2_NAME,Wide Mesh
+M5_STATIC_NET_B2M2_SHORT,"+65 radius, -1 interceptions"
+M5_STATIC_NET_B2M2_DESC,"+65 radius, -1 interceptions."
+M5_STATIC_NET_B2CAP_NAME,Firewall
+M5_STATIC_NET_B2CAP_SHORT,+4 interceptions
+M5_STATIC_NET_B2CAP_DESC,+4 interceptions.
+M5_STATIC_NET_B3_NAME,Live Current
+M5_STATIC_NET_B3_SHORT,"+100% base damage, -15% slow"
+M5_STATIC_NET_B3_DESC,"+100% base damage, -15% slow."
+M5_STATIC_NET_B3M1_NAME,Rapid Static
+M5_STATIC_NET_B3M1_SHORT,"+50% tick speed, -25% base damage"
+M5_STATIC_NET_B3M1_DESC,"+50% tick speed, -25% base damage."
+M5_STATIC_NET_B3M2_NAME,High Voltage
+M5_STATIC_NET_B3M2_SHORT,"+100% base damage, -30% tick speed"
+M5_STATIC_NET_B3M2_DESC,"+100% base damage, -30% tick speed."
+M5_STATIC_NET_B3CAP_NAME,Live Wire
+M5_STATIC_NET_B3CAP_SHORT,"+100% base damage, +1s duration"
+M5_STATIC_NET_B3CAP_DESC,"+100% base damage, +1s duration."
+M5_STATIC_NET_NAME,Static Net
+M5_STATIC_NET_PREVIEW,"Slows, intercepts and live damage"
+M3_STATIC_NET_SHORT_NAME,Static Net
+SIGNAL_STATIC_NET_NEW_NAME,Static Net
+SIGNAL_STATIC_NET_NEW_SHORT,"Slows, intercepts and live damage"
+SIGNAL_STATIC_NET_NEW_DESC,"Slows, intercepts and live damage. Starts at rank 1."
+M5_PULSE_T0_NAME,Gain
+M5_PULSE_T0_SHORT,+15% base damage
+M5_PULSE_T0_DESC,+15% base damage.
+M5_PULSE_T1_NAME,Tempo
+M5_PULSE_T1_SHORT,+10% attack speed
+M5_PULSE_T1_DESC,+10% attack speed.
+M5_PULSE_T2_NAME,Critical Signal
+M5_PULSE_T2_SHORT,+5% crit chance
+M5_PULSE_T2_DESC,+5% crit chance.
+M5_PULSE_T3_NAME,Reach
+M5_PULSE_T3_SHORT,+60 reach
+M5_PULSE_T3_DESC,+60 reach.
+M5_PULSE_T4_NAME,Extra Contact
+M5_PULSE_T4_SHORT,+1 pierce
+M5_PULSE_T4_DESC,+1 pierce.
+M5_PULSE_T5_NAME,Penetration
+M5_PULSE_T5_SHORT,+15 armor penetration
+M5_PULSE_T5_DESC,+15 armor penetration.
+M5_PULSE_B1_NAME,Penetrator
+M5_PULSE_B1_SHORT,"+30 armor penetration, +1 pierce"
+M5_PULSE_B1_DESC,"+30 armor penetration, +1 pierce."
+M5_PULSE_B1M1_NAME,Long Needle
+M5_PULSE_B1M1_SHORT,"+1 pierce, -15% base damage"
+M5_PULSE_B1M1_DESC,"+1 pierce, -15% base damage."
+M5_PULSE_B1M2_NAME,Hard Point
+M5_PULSE_B1M2_SHORT,"+35 armor penetration, +15% base damage"
+M5_PULSE_B1M2_DESC,"+35 armor penetration, +15% base damage."
+M5_PULSE_B1CAP_NAME,Throughline
+M5_PULSE_B1CAP_SHORT,+2 pierce
+M5_PULSE_B1CAP_DESC,+2 pierce.
+M5_PULSE_B2_NAME,Ricochet
+M5_PULSE_B2_SHORT,"+1 ricochets, -50 reach"
+M5_PULSE_B2_DESC,"+1 ricochets, -50 reach."
+M5_PULSE_B2M1_NAME,Wide Bounce
+M5_PULSE_B2M1_SHORT,"+1 ricochets, -20% base damage"
+M5_PULSE_B2M1_DESC,"+1 ricochets, -20% base damage."
+M5_PULSE_B2M2_NAME,Heavy Bounce
+M5_PULSE_B2M2_SHORT,"+35% base damage, -15% attack speed"
+M5_PULSE_B2M2_DESC,"+35% base damage, -15% attack speed."
+M5_PULSE_B2CAP_NAME,Pinball Signal
+M5_PULSE_B2CAP_SHORT,+2 ricochets
+M5_PULSE_B2CAP_DESC,+2 ricochets.
+M5_PULSE_B3_NAME,Charge Shot
+M5_PULSE_B3_SHORT,"+140% base damage, -45% attack speed, +10 width"
+M5_PULSE_B3_DESC,"+140% base damage, -45% attack speed, +10 width."
+M5_PULSE_B3M1_NAME,Fast Charge
+M5_PULSE_B3M1_SHORT,"+20% attack speed, -30% base damage"
+M5_PULSE_B3M1_DESC,"+20% attack speed, -30% base damage."
+M5_PULSE_B3M2_NAME,Full Charge
+M5_PULSE_B3M2_SHORT,"+100% base damage, +25 armor penetration"
+M5_PULSE_B3M2_DESC,"+100% base damage, +25 armor penetration."
+M5_PULSE_B3CAP_NAME,Final Charge
+M5_PULSE_B3CAP_SHORT,"+2 pierce, +15 width"
+M5_PULSE_B3CAP_DESC,"+2 pierce, +15 width."
+M5_PULSE_NAME,Pulse Spindle
+M5_PULSE_PREVIEW,Balanced precision shots
+M5_SWEEP_T0_NAME,Gain
+M5_SWEEP_T0_SHORT,+15% base damage
+M5_SWEEP_T0_DESC,+15% base damage.
+M5_SWEEP_T1_NAME,Tempo
+M5_SWEEP_T1_SHORT,+10% attack speed
+M5_SWEEP_T1_DESC,+10% attack speed.
+M5_SWEEP_T2_NAME,Critical Signal
+M5_SWEEP_T2_SHORT,+5% crit chance
+M5_SWEEP_T2_DESC,+5% crit chance.
+M5_SWEEP_T3_NAME,Reach
+M5_SWEEP_T3_SHORT,+60 reach
+M5_SWEEP_T3_DESC,+60 reach.
+M5_SWEEP_T4_NAME,Coverage
+M5_SWEEP_T4_SHORT,+8 width
+M5_SWEEP_T4_DESC,+8 width.
+M5_SWEEP_T5_NAME,Penetration
+M5_SWEEP_T5_SHORT,+15 armor penetration
+M5_SWEEP_T5_DESC,+15 armor penetration.
+M5_SWEEP_B1_NAME,Focused Beam
+M5_SWEEP_B1_SHORT,"+40% base damage, -6 width"
+M5_SWEEP_B1_DESC,"+40% base damage, -6 width."
+M5_SWEEP_B1M1_NAME,Fine Focus
+M5_SWEEP_B1M1_SHORT,"+35 armor penetration, -4 width"
+M5_SWEEP_B1M1_DESC,"+35 armor penetration, -4 width."
+M5_SWEEP_B1M2_NAME,Hot Focus
+M5_SWEEP_B1M2_SHORT,"+50% base damage, -20% attack speed"
+M5_SWEEP_B1M2_DESC,"+50% base damage, -20% attack speed."
+M5_SWEEP_B1CAP_NAME,Burn Through
+M5_SWEEP_B1CAP_SHORT,+50 armor penetration
+M5_SWEEP_B1CAP_DESC,+50 armor penetration.
+M5_SWEEP_B2_NAME,Fan Sweep
+M5_SWEEP_B2_SHORT,"+38 width, -30% base damage"
+M5_SWEEP_B2_DESC,"+38 width, -30% base damage."
+M5_SWEEP_B2M1_NAME,Broad Fan
+M5_SWEEP_B2M1_SHORT,"+35 width, -15% base damage"
+M5_SWEEP_B2M1_DESC,"+35 width, -15% base damage."
+M5_SWEEP_B2M2_NAME,Tight Fan
+M5_SWEEP_B2M2_SHORT,"-15 width, +40% base damage"
+M5_SWEEP_B2M2_DESC,"-15 width, +40% base damage."
+M5_SWEEP_B2CAP_NAME,Full Spectrum
+M5_SWEEP_B2CAP_SHORT,+45 width
+M5_SWEEP_B2CAP_DESC,+45 width.
+M5_SWEEP_B3_NAME,Pulse Beam
+M5_SWEEP_B3_SHORT,"+100% base damage, -40% attack speed"
+M5_SWEEP_B3_DESC,"+100% base damage, -40% attack speed."
+M5_SWEEP_B3M1_NAME,Fast Pulse
+M5_SWEEP_B3M1_SHORT,"+20% attack speed, -20% base damage"
+M5_SWEEP_B3M1_DESC,"+20% attack speed, -20% base damage."
+M5_SWEEP_B3M2_NAME,Heavy Pulse
+M5_SWEEP_B3M2_SHORT,"+80% base damage, +20 armor penetration"
+M5_SWEEP_B3M2_DESC,"+80% base damage, +20 armor penetration."
+M5_SWEEP_B3CAP_NAME,Resonant Beam
+M5_SWEEP_B3CAP_SHORT,"+50% base damage, +20 width"
+M5_SWEEP_B3CAP_DESC,"+50% base damage, +20 width."
+M5_SWEEP_NAME,Sweep Laser
+M5_SWEEP_PREVIEW,Sweeps through aligned enemies
+M5_BURST_T0_NAME,Gain
+M5_BURST_T0_SHORT,+15% base damage
+M5_BURST_T0_DESC,+15% base damage.
+M5_BURST_T1_NAME,Tempo
+M5_BURST_T1_SHORT,+10% attack speed
+M5_BURST_T1_DESC,+10% attack speed.
+M5_BURST_T2_NAME,Critical Signal
+M5_BURST_T2_SHORT,+5% crit chance
+M5_BURST_T2_DESC,+5% crit chance.
+M5_BURST_T3_NAME,Reach
+M5_BURST_T3_SHORT,+60 reach
+M5_BURST_T3_DESC,+60 reach.
+M5_BURST_T4_NAME,Coverage
+M5_BURST_T4_SHORT,+15 width
+M5_BURST_T4_DESC,+15 width.
+M5_BURST_T5_NAME,Penetration
+M5_BURST_T5_SHORT,+15 armor penetration
+M5_BURST_T5_DESC,+15 armor penetration.
+M5_BURST_B1_NAME,Wide Scatter
+M5_BURST_B1_SHORT,"+60 width, +2 projectiles, -20% base damage"
+M5_BURST_B1_DESC,"+60 width, +2 projectiles, -20% base damage."
+M5_BURST_B1M1_NAME,Full Spread
+M5_BURST_B1M1_SHORT,"+50 width, +1 projectiles"
+M5_BURST_B1M1_DESC,"+50 width, +1 projectiles."
+M5_BURST_B1M2_NAME,Heavy Pellets
+M5_BURST_B1M2_SHORT,"+40% base damage, -1 projectiles"
+M5_BURST_B1M2_DESC,"+40% base damage, -1 projectiles."
+M5_BURST_B1CAP_NAME,Scatterstorm
+M5_BURST_B1CAP_SHORT,+3 projectiles
+M5_BURST_B1CAP_DESC,+3 projectiles.
+M5_BURST_B2_NAME,Converging Volley
+M5_BURST_B2_SHORT,"-55 width, +30% base damage"
+M5_BURST_B2_DESC,"-55 width, +30% base damage."
+M5_BURST_B2M1_NAME,Tight Group
+M5_BURST_B2M1_SHORT,"-15 width, +25 armor penetration"
+M5_BURST_B2M1_DESC,"-15 width, +25 armor penetration."
+M5_BURST_B2M2_NAME,Heavy Group
+M5_BURST_B2M2_SHORT,"+40% base damage, -20% attack speed"
+M5_BURST_B2M2_DESC,"+40% base damage, -20% attack speed."
+M5_BURST_B2CAP_NAME,Focal Volley
+M5_BURST_B2CAP_SHORT,+2 projectiles
+M5_BURST_B2CAP_DESC,+2 projectiles.
+M5_BURST_B3_NAME,Stagger Burst
+M5_BURST_B3_SHORT,"Stagger the volley, +20% attack speed"
+M5_BURST_B3_DESC,"Stagger the volley, +20% attack speed."
+M5_BURST_B3M1_NAME,Quick Stagger
+M5_BURST_B3M1_SHORT,"+25% attack speed, -15% base damage"
+M5_BURST_B3M1_DESC,"+25% attack speed, -15% base damage."
+M5_BURST_B3M2_NAME,Long Stagger
+M5_BURST_B3M2_SHORT,"+2 projectiles, -15% attack speed"
+M5_BURST_B3M2_DESC,"+2 projectiles, -15% attack speed."
+M5_BURST_B3CAP_NAME,Rolling Thunder
+M5_BURST_B3CAP_SHORT,+2 projectiles
+M5_BURST_B3CAP_DESC,+2 projectiles.
+M5_BURST_NAME,Burst Rack
+M5_BURST_PREVIEW,Close-range volleys
+M5_CAPACITOR_T0_NAME,Capacity
+M5_CAPACITOR_T0_SHORT,+10 capacity
+M5_CAPACITOR_T0_DESC,+10 capacity.
+M5_CAPACITOR_T1_NAME,Recharge
+M5_CAPACITOR_T1_SHORT,+2 recharge
+M5_CAPACITOR_T1_DESC,+2 recharge.
+M5_CAPACITOR_T2_NAME,Quick Restart
+M5_CAPACITOR_T2_SHORT,-0.3s recharge delay
+M5_CAPACITOR_T2_DESC,-0.3s recharge delay.
+M5_CAPACITOR_T3_NAME,Ability Tempo
+M5_CAPACITOR_T3_SHORT,-1s ability cooldown
+M5_CAPACITOR_T3_DESC,-1s ability cooldown.
+M5_CAPACITOR_T4_NAME,Mitigation
+M5_CAPACITOR_T4_SHORT,+4% damage reduction
+M5_CAPACITOR_T4_DESC,+4% damage reduction.
+M5_CAPACITOR_T5_NAME,Break Recovery
+M5_CAPACITOR_T5_SHORT,+3 break recovery
+M5_CAPACITOR_T5_DESC,+3 break recovery.
+M5_CAPACITOR_B1_NAME,Deep Reserve
+M5_CAPACITOR_B1_SHORT,"+25 capacity, -1 recharge"
+M5_CAPACITOR_B1_DESC,"+25 capacity, -1 recharge."
+M5_CAPACITOR_B1M1_NAME,Deep Cell
+M5_CAPACITOR_B1M1_SHORT,"+25 capacity, +1s recharge delay"
+M5_CAPACITOR_B1M1_DESC,"+25 capacity, +1s recharge delay."
+M5_CAPACITOR_B1M2_NAME,Quick Cell
+M5_CAPACITOR_B1M2_SHORT,"+3 recharge, -10 capacity"
+M5_CAPACITOR_B1M2_DESC,"+3 recharge, -10 capacity."
+M5_CAPACITOR_B1CAP_NAME,Vault
+M5_CAPACITOR_B1CAP_SHORT,+30 capacity
+M5_CAPACITOR_B1CAP_DESC,+30 capacity.
+M5_CAPACITOR_B2_NAME,Damage Smoothing
+M5_CAPACITOR_B2_SHORT,"+15% damage reduction, -10 capacity"
+M5_CAPACITOR_B2_DESC,"+15% damage reduction, -10 capacity."
+M5_CAPACITOR_B2M1_NAME,Soft Clip
+M5_CAPACITOR_B2M1_SHORT,"+12% damage reduction, -1 recharge"
+M5_CAPACITOR_B2M1_DESC,"+12% damage reduction, -1 recharge."
+M5_CAPACITOR_B2M2_NAME,Even Current
+M5_CAPACITOR_B2M2_SHORT,"-1s recharge delay, +2 recharge"
+M5_CAPACITOR_B2M2_DESC,"-1s recharge delay, +2 recharge."
+M5_CAPACITOR_B2CAP_NAME,Limiter
+M5_CAPACITOR_B2CAP_SHORT,+15% damage reduction
+M5_CAPACITOR_B2CAP_DESC,+15% damage reduction.
+M5_CAPACITOR_B3_NAME,Emergency Reserve
+M5_CAPACITOR_B3_SHORT,"+15 emergency shield, +2s ability cooldown"
+M5_CAPACITOR_B3_DESC,"+15 emergency shield, +2s ability cooldown."
+M5_CAPACITOR_B3M1_NAME,Rapid Reserve
+M5_CAPACITOR_B3M1_SHORT,"-4s ability cooldown, -5 emergency shield"
+M5_CAPACITOR_B3M1_DESC,"-4s ability cooldown, -5 emergency shield."
+M5_CAPACITOR_B3M2_NAME,Deep Reserve Cell
+M5_CAPACITOR_B3M2_SHORT,"+15 emergency shield, +2s ability cooldown"
+M5_CAPACITOR_B3M2_DESC,"+15 emergency shield, +2s ability cooldown."
+M5_CAPACITOR_B3CAP_NAME,Last Stand
+M5_CAPACITOR_B3CAP_SHORT,+20 emergency shield
+M5_CAPACITOR_B3CAP_DESC,+20 emergency shield.
+M5_CAPACITOR_NAME,Capacitor
+M5_CAPACITOR_PREVIEW,Large reserve / temporary overshield
+M5_RELAY_T0_NAME,Capacity
+M5_RELAY_T0_SHORT,+10 capacity
+M5_RELAY_T0_DESC,+10 capacity.
+M5_RELAY_T1_NAME,Recharge
+M5_RELAY_T1_SHORT,+2 recharge
+M5_RELAY_T1_DESC,+2 recharge.
+M5_RELAY_T2_NAME,Quick Restart
+M5_RELAY_T2_SHORT,-0.3s recharge delay
+M5_RELAY_T2_DESC,-0.3s recharge delay.
+M5_RELAY_T3_NAME,Ability Tempo
+M5_RELAY_T3_SHORT,-1s ability cooldown
+M5_RELAY_T3_DESC,-1s ability cooldown.
+M5_RELAY_T4_NAME,Mitigation
+M5_RELAY_T4_SHORT,+4% damage reduction
+M5_RELAY_T4_DESC,+4% damage reduction.
+M5_RELAY_T5_NAME,Break Recovery
+M5_RELAY_T5_SHORT,+3 break recovery
+M5_RELAY_T5_DESC,+3 break recovery.
+M5_RELAY_B1_NAME,Fast Restart
+M5_RELAY_B1_SHORT,-0.6s recharge delay
+M5_RELAY_B1_DESC,-0.6s recharge delay.
+M5_RELAY_B1M1_NAME,Quick Switch
+M5_RELAY_B1M1_SHORT,"-0.6s recharge delay, -5 capacity"
+M5_RELAY_B1M1_DESC,"-0.6s recharge delay, -5 capacity."
+M5_RELAY_B1M2_NAME,Safe Switch
+M5_RELAY_B1M2_SHORT,"+10 capacity, +0.2s recharge delay"
+M5_RELAY_B1M2_DESC,"+10 capacity, +0.2s recharge delay."
+M5_RELAY_B1CAP_NAME,Instant Link
+M5_RELAY_B1CAP_SHORT,-0.6s recharge delay
+M5_RELAY_B1CAP_DESC,-0.6s recharge delay.
+M5_RELAY_B2_NAME,Sustained Recharge
+M5_RELAY_B2_SHORT,"+4 recharge, -5 capacity"
+M5_RELAY_B2_DESC,"+4 recharge, -5 capacity."
+M5_RELAY_B2M1_NAME,Strong Current
+M5_RELAY_B2M1_SHORT,"+4 recharge, +0.5s recharge delay"
+M5_RELAY_B2M1_DESC,"+4 recharge, +0.5s recharge delay."
+M5_RELAY_B2M2_NAME,Steady Current
+M5_RELAY_B2M2_SHORT,"-0.5s recharge delay, +1 recharge"
+M5_RELAY_B2M2_DESC,"-0.5s recharge delay, +1 recharge."
+M5_RELAY_B2CAP_NAME,Continuous Signal
+M5_RELAY_B2CAP_SHORT,+40% recharge while under fire
+M5_RELAY_B2CAP_DESC,+40% recharge while under fire.
+M5_RELAY_B3_NAME,Recovery Pulse
+M5_RELAY_B3_SHORT,"+10 shield per activation, +2s ability cooldown"
+M5_RELAY_B3_DESC,"+10 shield per activation, +2s ability cooldown."
+M5_RELAY_B3M1_NAME,Frequent Pulse
+M5_RELAY_B3M1_SHORT,"-4s ability cooldown, -3 shield per activation"
+M5_RELAY_B3M1_DESC,"-4s ability cooldown, -3 shield per activation."
+M5_RELAY_B3M2_NAME,Heavy Pulse
+M5_RELAY_B3M2_SHORT,"+12 shield per activation, +3s ability cooldown"
+M5_RELAY_B3M2_DESC,"+12 shield per activation, +3s ability cooldown."
+M5_RELAY_B3CAP_NAME,Return Signal
+M5_RELAY_B3CAP_SHORT,+15 shield per activation
+M5_RELAY_B3CAP_DESC,+15 shield per activation.
+M5_RELAY_NAME,Relay
+M5_RELAY_PREVIEW,Fast recharge / instant restart
+M5_FEEDBACK_T0_NAME,Capacity
+M5_FEEDBACK_T0_SHORT,+10 capacity
+M5_FEEDBACK_T0_DESC,+10 capacity.
+M5_FEEDBACK_T1_NAME,Recharge
+M5_FEEDBACK_T1_SHORT,+2 recharge
+M5_FEEDBACK_T1_DESC,+2 recharge.
+M5_FEEDBACK_T2_NAME,Quick Restart
+M5_FEEDBACK_T2_SHORT,-0.3s recharge delay
+M5_FEEDBACK_T2_DESC,-0.3s recharge delay.
+M5_FEEDBACK_T3_NAME,Ability Tempo
+M5_FEEDBACK_T3_SHORT,-1s ability cooldown
+M5_FEEDBACK_T3_DESC,-1s ability cooldown.
+M5_FEEDBACK_T4_NAME,Mitigation
+M5_FEEDBACK_T4_SHORT,+4% damage reduction
+M5_FEEDBACK_T4_DESC,+4% damage reduction.
+M5_FEEDBACK_T5_NAME,Break Recovery
+M5_FEEDBACK_T5_SHORT,+3 break recovery
+M5_FEEDBACK_T5_DESC,+3 break recovery.
+M5_FEEDBACK_B1_NAME,Reflection
+M5_FEEDBACK_B1_SHORT,+15 reflected damage
+M5_FEEDBACK_B1_DESC,+15 reflected damage.
+M5_FEEDBACK_B1M1_NAME,Hot Mirror
+M5_FEEDBACK_B1M1_SHORT,"+15 reflected damage, +2s ability cooldown"
+M5_FEEDBACK_B1M1_DESC,"+15 reflected damage, +2s ability cooldown."
+M5_FEEDBACK_B1M2_NAME,Quick Mirror
+M5_FEEDBACK_B1M2_SHORT,"-3s ability cooldown, -3 reflected damage"
+M5_FEEDBACK_B1M2_DESC,"-3s ability cooldown, -3 reflected damage."
+M5_FEEDBACK_B1CAP_NAME,Mirror Wall
+M5_FEEDBACK_B1CAP_SHORT,+25 reflected damage
+M5_FEEDBACK_B1CAP_DESC,+25 reflected damage.
+M5_FEEDBACK_B2_NAME,Break Pulse
+M5_FEEDBACK_B2_SHORT,+30 shield-break damage
+M5_FEEDBACK_B2_DESC,+30 shield-break damage.
+M5_FEEDBACK_B2M1_NAME,Wide Pulse
+M5_FEEDBACK_B2M1_SHORT,"+70 shield radius, -5 shield-break damage"
+M5_FEEDBACK_B2M1_DESC,"+70 shield radius, -5 shield-break damage."
+M5_FEEDBACK_B2M2_NAME,Heavy Pulse
+M5_FEEDBACK_B2M2_SHORT,"+25 shield-break damage, +2s ability cooldown"
+M5_FEEDBACK_B2M2_DESC,"+25 shield-break damage, +2s ability cooldown."
+M5_FEEDBACK_B2CAP_NAME,Feedback Crash
+M5_FEEDBACK_B2CAP_SHORT,+40 shield-break damage
+M5_FEEDBACK_B2CAP_DESC,+40 shield-break damage.
+M5_FEEDBACK_B3_NAME,Retaliation Charge
+M5_FEEDBACK_B3_SHORT,+50% retaliation charge
+M5_FEEDBACK_B3_DESC,+50% retaliation charge.
+M5_FEEDBACK_B3M1_NAME,Quick Retort
+M5_FEEDBACK_B3M1_SHORT,"-3s ability cooldown, -10% retaliation charge"
+M5_FEEDBACK_B3M1_DESC,"-3s ability cooldown, -10% retaliation charge."
+M5_FEEDBACK_B3M2_NAME,Heavy Retort
+M5_FEEDBACK_B3M2_SHORT,"+40% retaliation charge, +2s ability cooldown"
+M5_FEEDBACK_B3M2_DESC,"+40% retaliation charge, +2s ability cooldown."
+M5_FEEDBACK_B3CAP_NAME,Return to Sender
+M5_FEEDBACK_B3CAP_SHORT,+60% retaliation charge
+M5_FEEDBACK_B3CAP_DESC,+60% retaliation charge.
+M5_FEEDBACK_NAME,Feedback
+M5_FEEDBACK_PREVIEW,Retaliation / projectile reflection

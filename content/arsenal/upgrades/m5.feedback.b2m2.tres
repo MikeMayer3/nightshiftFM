@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.feedback.b2m2"
+name_key = &"M5_FEEDBACK_B2M2_NAME"
+description_key = &"M5_FEEDBACK_B2M2_DESC"
+target_id = &"shield"
+required_rank = 6
+prerequisite = &"m5.feedback.b2"
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"break_damage": 25.0, &"cooldown": 2.0, &"modifier": 2.0}

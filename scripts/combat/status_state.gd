@@ -8,6 +8,7 @@ var charge_left: float = 0.0
 var slow_source: StringName = &"static_net"
 var slow: float = 0.0
 var slow_left: float = 0.0
+var exposure_source: StringName = &"bass_driver"
 var exposure: float = 0.0
 var exposure_left: float = 0.0
 var jam_left: float = 0.0
@@ -34,7 +35,8 @@ func apply_slow(strength: float, elite: bool, source: StringName = &"static_net"
 	slow = maxf(slow, clampf(strength, 0, ELITE_SLOW_CAP if elite else SLOW_CAP))
 	slow_left = 0.6
 
-func expose(amount: float) -> void:
+func expose(amount: float, source: StringName = &"bass_driver") -> void:
+	if amount >= exposure: exposure_source = source
 	exposure = maxf(exposure, clampf(amount, 0, 100))
 	exposure_left = 3.0
 

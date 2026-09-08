@@ -5,6 +5,8 @@ const BOOT: PackedScene = preload("res://scenes/boot/boot.tscn")
 func run(context: TestContext, tree: SceneTree) -> bool:
 	var boot: BootScreen = BOOT.instantiate() as BootScreen
 	boot.save_path = "user://test_boot_m3.json"
+	for suffix: String in ["", ".bak", ".tmp"]:
+		if FileAccess.file_exists(boot.save_path + suffix): DirAccess.remove_absolute(boot.save_path + suffix)
 	tree.root.add_child(boot)
 	await tree.process_frame
 	context.check(boot.current_page == BootScreen.Page.MENU and boot.menu.visible, "boot opens menu")
@@ -12,6 +14,8 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	for action: StringName in [&"menu_back", &"pause", &"focus_target", &"aim_override", &"shield_ability"]:
 		context.check(InputMap.has_action(action), "declared input action: %s" % action)
 	(boot.menu.get_node("Start") as Button).pressed.emit()
+	context.check(boot.picker != null, "Start opens arsenal selector")
+	boot.picker.launch_button.pressed.emit()
 	context.check(boot.combat != null and not boot.menu.visible, "Start signal opens combat")
 	context.check(boot.combat.session.signal_progress != null, "New mission uses kill-meter flow")
 	context.check(boot.combat.session.active_combat != null, "New mission starts active combat flow")

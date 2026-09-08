@@ -1,5 +1,65 @@
 # Implementation status
 
+Evidence revision: **M5 — six-family arsenal**
+Date: **2026-09-08** (America/Chicago)
+Requested milestone: **M5 only**, explicitly authorized by the owner.
+Outcome: **Playable M5 implemented. Human acceptance remains NOT RUN.**
+
+See [M5 arsenal](M5_ARSENAL.md) for controls, coefficients, attack/save contracts,
+reproduction commands and evidence limits. M6 has not started.
+
+| Scope | Implementation |
+|---|---|
+| Equipment selection | New mission → main/shield/starting support → Go live; fresh rank 1; all M5 playtest options exposed |
+| Complete catalog | 12 immutable tracks, 216 options: 108 support + 108 chassis; six tunings, three branches, two modifiers per branch and a cap per branch |
+| New families | Echo Deck with stored/repeated/alternate-target packets; traveling Needle Swarm with pierce/homing/marks; Reverb Well with pull/orbit/release fields |
+| Existing families | Complete Arc/Bass/Net branches; offensive Live Current retained in place of the original Net healing design |
+| Main/shield behavior | Precision/beam/volley contracts; Capacitor/Relay/Feedback active and passive effects; separate compact shield button |
+| UI | Up to five equipped support turrets and cooldown bars; new placeholder icons; rank/branch comparisons; short player-facing captions |
+| Saves | New m5.1 content version; strict actor/effect/loadout validation; legacy behavior retained; Continue/Restart retains equipment and exposes correct controls |
+
+Primary files: `tools/generate_arsenal_content.py`, `content/arsenal/`,
+`scripts/progression/arsenal_{content,draft,stats}.gd`,
+`scripts/combat/arsenal_combat.gd`, `scripts/save/arsenal_runtime.gd`,
+`scripts/ui/arsenal_picker.gd`, and integrations in CombatSession, SignalSnapshot,
+CombatScreen, CombatArena, DraftPanel and BootScreen. Tests and reproducible
+emulator tools are in `tests/arsenal_*`, `tests/unit/test_arsenal.gd`,
+`tests/integration/test_arsenal_screen.gd` and `tools/emulator_playtest.py`.
+
+| Check | Result |
+|---|---|
+| Pinned Godot import | PASS — Godot 4.7.2 standard; clean temporary QA-source import also passed |
+| Regression | PASS — 1,731 checks, 0 failures; includes 72 serialized rank-8 branch/modifier paths, legacy controls, restart selection and actual mid-wave recovery |
+| Effect matrix | PASS — all 216 options cause observed gameplay changes in controlled fixtures; no leaked fixture listeners |
+| Python foundation | PASS — 7 checks; 363 total immutable resources |
+| Desktop smoke | PASS |
+| Desktop UI | PASS — equipment selection, five turrets, draft/comparison, 450×800, 360×640 and 450×950 |
+| Final random policy | PASS — 54 completed runs, 49 victories; Pulse 15/18, Sweep 18/18, Burst 16/18 |
+| Idle policy | PASS — 18 completed runs, zero victories |
+| Stress | PASS — 18 legal five-of-six rank-8 combinations, 30 simulated seconds each; peak 18 pending effects, worst CPU ~153 ms per 1,800 steps |
+| Android exports | PASS — separate QA and regular debug APKs; regular Android 0.5.0/code 8; APK signature verifies (existing Java native-access warning only) |
+| Actual emulator full mission | PASS — wave-10 victory; 611 kills, 111 bursts, 31/31 random choices audited; 639.15 simulated / 657.23 wall seconds; median 60 FPS |
+| Regular APK selector/pause/recovery | PASS — Sweep/Relay/Reverb selection, enlarged dropdown targets, shield button, Pause/Resume, identical saved draft after force-stop and in-place update, single accepted choice and fresh-rank Restart |
+| Human acceptance / final art | NOT RUN |
+| Physical phone / iOS M5 | NOT RUN |
+| M5 source handoff | Owner authorized commit and push; source and verification evidence included in this handoff |
+
+Evidence: `docs/evidence/M5/`. The full-run QA export differs only in its entry
+scene, read-only observer and isolated Android package. `qa-source-manifest.json`
+and `apk-parity.json` document source hashes and subsequent display/resume UI
+changes. A final exposure-assistance attribution fix records whether Bass or Reverb supplied the debuff; its exact metadata-only patch is retained. Damage, targeting, wave coefficients and upgrade selection rules are unchanged from the completed full-run QA test.
+
+Two early emulator attempts were explicitly interrupted because the long-lived
+AVD degraded to 1–2 FPS; they are not completed balance samples. Reducing render
+resolution alone did not fix it. A cold boot with `-gpu host` restored ~50–60 FPS
+at 720×1600. The display size/density overrides were reset to the original 1280×2856/480 after testing. The regular 0.5.0 APK is installed and left at the menu. This is emulator evidence, not physical Pixel or human usability
+acceptance. The initial 13/54-win balance batch and intermediate 47/54 batch are
+retained alongside final results.
+
+---
+
+# Historical M4.5 implementation report
+
 Status schema version: **1**
 Evidence revision: **M4.5 — support turrets and random-build balance**
 Date: **2026-09-08** (America/Chicago)

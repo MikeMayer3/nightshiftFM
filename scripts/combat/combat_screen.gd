@@ -2,6 +2,9 @@ class_name CombatScreen
 extends Control
 
 signal back_requested
+var arsenal_enabled: bool = false
+var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
+var shield_button: Button
 var active_enabled: bool = false
 var signal_enabled: bool = false
 var signal_bar: ProgressBar
@@ -70,6 +73,19 @@ func _ready() -> void:
 		draft_panel.back_requested.connect(func() -> void: back_requested.emit())
 		session.checkpoint_changed.connect(_save_checkpoint)
 		_setup_m3()
+	if arsenal_enabled or session.arsenal != null:
+		var actions: HBoxContainer = HBoxContainer.new()
+		var footer: Node = ability_button.get_parent()
+		var place: int = ability_button.get_index()
+		footer.add_child(actions)
+		footer.move_child(actions, place)
+		ability_button.reparent(actions)
+		ability_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		shield_button = Button.new()
+		shield_button.custom_minimum_size = Vector2(180, 76)
+		shield_button.add_theme_font_size_override("font_size", 26)
+		actions.add_child(shield_button)
+		shield_button.pressed.connect(func() -> void: session.activate_shield())
 	arena.session = session
 	session.fired.connect(arena.show_shot)
 	session.chain_fired.connect(arena.show_chain)
@@ -191,6 +207,10 @@ func _refresh() -> void:
 	if session.active_combat != null:
 		ability_button.text = tr("ACTIVE_WAIT") % ceili(session.active_combat.cooldown) if session.active_combat.cooldown > 0 else tr("ACTIVE_BURST")
 		ability_button.disabled = session.paused or session.phase != CombatSession.Phase.COMBAT or session.active_combat.cooldown > 0
+	if shield_button != null:
+		shield_button.visible = session.arsenal != null
+		shield_button.text = tr("M5_SHIELD_WAIT") % ceili(session.ability_wait) if session.ability_wait > 0 else tr("M5_SHIELD_READY")
+		shield_button.disabled = session.paused or session.is_finished() or session.is_deciding() or session.ability_wait > 0
 	if m3_enabled and session.draft != null:
 		($Safe/Column/Health as Label).text = tr("M3_HEALTH") % [session.hull, session.run.shield.current, session.run.shield.capacity]
 		($Safe/Column/AbilityHint as Label).text = tr("M3_ABILITY_HINT") % [session.shield_stat(&"duration", 2.5), session.shield_stat(&"cooldown", 12)]
@@ -264,6 +284,7 @@ func _setup_m3() -> void:
 	if not data.is_empty(): profile.restore(data.profile)
 	if resume_existing and not data.is_empty() and data.run != null:
 		session.restore_checkpoint(data.run)
+		if session.draft is ArsenalDraft: loadout = (session.draft as ArsenalDraft).loadout.duplicate()
 		last_checkpoint = data.run.duplicate(true)
 		_refresh_decision()
 	else:
@@ -273,7 +294,10 @@ func _start_m3() -> void:
 	draft_panel.banish_mode = false
 	var identity: StringName = StringName("run.%d" % profile.next_run)
 	profile.next_run += 1
-	if active_enabled:
+	if arsenal_enabled:
+		profile.enable_m4()
+		session.start_arsenal(int(Time.get_unix_time_from_system()) ^ Time.get_ticks_usec(), identity, loadout)
+	elif active_enabled:
 		profile.enable_m4()
 		session.start_active(int(Time.get_unix_time_from_system()) ^ Time.get_ticks_usec(), identity)
 	elif signal_enabled:

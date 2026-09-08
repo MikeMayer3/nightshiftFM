@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.arc_aerial.b3"
+name_key = &"M5_ARC_AERIAL_B3_NAME"
+description_key = &"M5_ARC_AERIAL_B3_DESC"
+target_id = &"arc_aerial"
+required_rank = 3
+prerequisite = &""
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"targets": -1.0, &"damage_bonus": -0.4, &"healing": 3.0, &"mode": 3.0}

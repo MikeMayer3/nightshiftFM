@@ -1,0 +1,866 @@
+[
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.pulse.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.sweep.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.burst.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.capacitor.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.relay.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.feedback.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.arc_aerial.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.bass_driver.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.static_net.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.echo_deck.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.needle_swarm.b3cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t0"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t4"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.t5"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b1m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b1m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b1cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b2m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b2m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b2cap"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b3"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b3m1"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b3m2"
+	},
+	{
+		"effect_observed": true,
+		"id": "m5.reverb_well.b3cap"
+	}
+]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.reverb_well.b1"
+name_key = &"M5_REVERB_WELL_B1_NAME"
+description_key = &"M5_REVERB_WELL_B1_DESC"
+target_id = &"reverb_well"
+required_rank = 3
+prerequisite = &""
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"radius": 35.0, &"duration": 1.0, &"pull": -10.0, &"mode": 1.0}

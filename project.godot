@@ -2,8 +2,8 @@
 config_version=5
 
 [application]
-config/name="Nightshift FM — M4"
-config/version="0.4.3"
+config/name="Nightshift FM — M5"
+config/version="0.5.0"
 config/icon="res://assets/art/icon.svg"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="NightshiftFM"

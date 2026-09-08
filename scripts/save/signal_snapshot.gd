@@ -12,6 +12,7 @@ static func capture(session: CombatSession) -> Dictionary:
 		var item: Dictionary = {"id": String(actor.definition_id), "source": String(actor.source_id), "position": [actor.position.x, actor.position.y], "status": {"source": String(actor.status.slow_source)}}
 		for key: String in ACTOR_FIELDS: item[key] = actor.get(key)
 		for key: String in STATUS_LIMITS: item.status[key] = actor.status.get(key)
+		if session.arsenal != null: item.status["exposure_source"] = String(actor.status.exposure_source)
 		actors.append(item)
 	var field: Dictionary = session.supports.field.duplicate(true)
 	if not field.is_empty(): field.position = [field.position.x, field.position.y]
@@ -28,7 +29,7 @@ static func _point(value: Variant) -> bool:
 	return value is Array and value.size() == 2 and SaveChecks.number(value[0], 0, 640) and SaveChecks.number(value[1], 0, 720)
 
 static func restore(session: CombatSession, data: Dictionary) -> bool:
-	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION]
+	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION]
 	if data.size() != (16 if is_active else 15) or data.get("schema") != 2 or data.get("engine") != Engine.get_version_info().string: return false
 	if not data.get("run_id") is String or not data.run_id.begins_with("run.") or not data.run_id.trim_prefix("run.").is_valid_int(): return false
 	if not RunRandom.valid(data.get("random")) or not data.get("values") is Dictionary: return false
@@ -40,7 +41,10 @@ static func restore(session: CombatSession, data: Dictionary) -> bool:
 	if int(data.values.phase) not in [0, 1, 2, 3, 4] or data.values.wave > 10 or data.values.hull > 100: return false
 	if data.get("last_cause") not in ["COMBAT_NO_DAMAGE", "M2_SWARMER_NAME", "M2_DIVER_NAME", "M2_CARRIER_NAME", "COMBAT_PROJECTILE", "M4_PLATED_NAME", "M4_ELITE_NAME"]: return false
 	if data.get("last_kind") not in ["COMBAT_BREACH_HIT", "COMBAT_PROJECTILE_HIT"]: return false
-	if is_active: session.start_active(int(data.random.seed), StringName(data.run_id))
+	if data.get("content") == ArsenalContent.VERSION:
+		if not data.get("draft") is Dictionary or not ArsenalContent.valid_loadout(data.draft.get("loadout")): return false
+		session.start_arsenal(int(data.random.seed), StringName(data.run_id), data.draft.loadout)
+	elif is_active: session.start_active(int(data.random.seed), StringName(data.run_id))
 	else: session.start_signal(int(data.random.seed), StringName(data.run_id))
 	if is_active: session.active_combat.content_version = data.content
 	if is_active and not session.active_combat.restore(data.get("active")): return false
@@ -55,6 +59,7 @@ static func restore(session: CombatSession, data: Dictionary) -> bool:
 	session.last_cause = StringName(data.last_cause)
 	session.last_kind = StringName(data.last_kind)
 	if not _actors(session, data.get("actors")) or not _effects(session, data): return false
+	if session.arsenal != null and not ArsenalRuntime.references(session): return false
 	if session.phase == CombatSession.Phase.DRAFT:
 		if session.draft.offers.is_empty() or not session.signal_progress.ready() or session.wave < 1: return false
 	elif not session.draft.offers.is_empty(): return false
@@ -98,10 +103,13 @@ static func _actors(session: CombatSession, items: Variant) -> bool:
 		if projectile and M4Content.enemy(StringName(item.source)) == null: return false
 		actor.source_id = StringName(item.source)
 		var status: Variant = item.get("status")
-		if not status is Dictionary or status.size() != STATUS_LIMITS.size() + 1 or status.get("source") not in ["static_net", "bass_driver"]: return false
+		if not status is Dictionary or status.size() != STATUS_LIMITS.size() + 1 + (1 if session.arsenal != null and status.has("exposure_source") else 0) or status.get("source") not in (["static_net", "bass_driver", "reverb_well"] if session.arsenal != null else ["static_net", "bass_driver"]): return false
 		for key: String in STATUS_LIMITS:
-			if not SaveChecks.number(status.get(key), 0, float(STATUS_LIMITS[key]), key == "charged"): return false
+			if not SaveChecks.number(status.get(key), 0, (10.0 if session.arsenal != null and key in ["charge_left", "exposure_left", "slow_left"] else float(STATUS_LIMITS[key])), key == "charged"): return false
 			actor.status.set(key, status[key])
+		if session.arsenal != null:
+			if status.get("exposure_source", "bass_driver") not in ["bass_driver", "reverb_well"]: return false
+			actor.status.exposure_source = StringName(status.get("exposure_source", "bass_driver"))
 		actor.status.slow_source = StringName(status.source)
 		seen.append(actor.serial)
 		session.actors.append(actor)
@@ -109,6 +117,7 @@ static func _actors(session: CombatSession, items: Variant) -> bool:
 
 static func _effects(session: CombatSession, data: Dictionary) -> bool:
 	if not data.get("field") is Dictionary or not data.get("shocks") is Array or data.shocks.size() > 16: return false
+	if session.arsenal != null and (not data.field.is_empty() or not data.shocks.is_empty()): return false
 	var field: Dictionary = data.field.duplicate(true)
 	if not field.is_empty():
 		if session.draft.track(&"static_net") == null or field.size() != 10 or not _point(field.get("position")): return false

@@ -1,0 +1,33 @@
+{
+  "force_stop_checkpoint_identical": true,
+  "one_pick_committed_once": true,
+  "restart_loadout_preserved": true,
+  "restart_all_ranks_one": true,
+  "pause": {
+    "actors": 4,
+    "event": "manual_pause",
+    "focus": false,
+    "hull": 100.0,
+    "instances": 1,
+    "paused": true,
+    "phase": 1,
+    "seconds": 11.1833333333335,
+    "shield": 40.0,
+    "wave": 1
+  },
+  "resume": {
+    "actors": 4,
+    "event": "manual_resume",
+    "focus": false,
+    "hull": 100.0,
+    "instances": 1,
+    "paused": false,
+    "phase": 1,
+    "seconds": 11.1833333333335,
+    "shield": 40.0,
+    "wave": 1
+  },
+  "pause_seconds_unchanged": true,
+  "shield_button": "Actual touch activated Relay; screenshot shows Shield 10s cooldown.",
+  "prior_regular_save": "No existing save before this emulator check. Installed in place with adb install -r."
+}

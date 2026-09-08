@@ -1,15 +1,15 @@
 # Nightshift FM — Codex development handoff
 
-**M4 now includes support turrets with live cooldown bars, aimed bursts, and kill-earned offensive upgrades.**
+**M5 adds the complete six-family arsenal, three mains and three shields.**
 M0 is accepted; iOS is deferred at the owner's request. The M4 human fun gate remains open: three testers, two phone attempts each. The title and haunted-radio theme are provisional.
 
 Open `project.godot` in Godot 4.7.2 standard, or follow the
 [development instructions](docs/DEVELOPMENT.md). Select **New mission · Standard**
-or **Continue saved mission**. Read [support turrets and random-build tests](docs/M4_SUPPORT_TURRETS.md), [current controls and balance](docs/M4_ACTIVE_COMBAT.md), [kill-meter flow](docs/M4_SIGNAL_FLOW.md), [M4 mechanics](docs/M4_SLICE.md), [phone playtest](docs/M4_PLAYTEST.md),
+then choose your equipment and **Go live**, or **Continue saved mission**. Read [M5 arsenal and verification](docs/M5_ARSENAL.md), [support turrets and random-build tests](docs/M4_SUPPORT_TURRETS.md), [current controls and balance](docs/M4_ACTIVE_COMBAT.md), [kill-meter flow](docs/M4_SIGNAL_FLOW.md), [M4 mechanics](docs/M4_SLICE.md), [phone playtest](docs/M4_PLAYTEST.md),
 [implementation evidence](docs/IMPLEMENTATION_STATUS.md), and
 [mobile setup](docs/MOBILE_DEVELOPMENT.md). The Android debug export is
-`builds/android/nightshift-m4.apk`; download the installable APK from the
-[M4 0.4.3 playtest release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.4.3). Android 0.4.3/code 7. Existing M3/M4/Signal saves Continue with their original rules; choose New mission to play the new flow. Radio-tuner art comes later.
+`builds/android/nightshift-m5.apk`; download the installable APK from the
+[M4 0.4.3 playtest release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.4.3). That published release is M4.5. The current local M5 build is Android 0.5.0/code 8. Existing M3/M4/Signal saves Continue with their original rules; choose New mission to play the new flow. Radio-tuner art comes later.
 
 ## Project in one paragraph
 
@@ -28,10 +28,10 @@ commands, to import with Godot 4.7.2 standard before running tests or the game.
 Generated `.godot/` caches, APKs/builds, credentials, and local saves are excluded.
 GitHub synchronizes source and evidence; it does not synchronize device saves.
 
-M4 technical implementation is ready; human playtesting is still required. Read
+M5 implementation is ready for owner playtesting; human acceptance is still required. Read
 `docs/IMPLEMENTATION_STATUS.md` before continuing and request one milestone at a
 time. `prompts/START_HERE.md` preserves the original M0 prompt as history; do not
-restart the foundation or begin M5 before M4 gameplay acceptance.
+restart the foundation or begin M6 without owner authorization. The owner explicitly authorized M5; earlier human gates remain recorded as unverified.
 
 | File | Purpose |
 |---|---|

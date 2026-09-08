@@ -1,6 +1,8 @@
 extends SceneTree
 ## No plugins. Explicit suites, counters, and process exit codes, even in release mode.
 
+const ARSENAL_SCREEN: Script = preload("res://tests/integration/test_arsenal_screen.gd")
+const ARSENAL_TEST: Script = preload("res://tests/unit/test_arsenal.gd")
 const FOUNDATIONS: Script = preload("res://tests/unit/test_foundations.gd")
 const BOOT_TEST: Script = preload("res://tests/integration/test_boot.gd")
 const MOBILE_TEST: Script = preload("res://tests/integration/test_mobile_probe.gd")
@@ -50,6 +52,8 @@ func _run() -> void:
 	context.check(await SIGNAL_SCREEN_TEST.new().run(context, self) == true, "signal screen suite completed")
 	context.check(ACTIVE_TEST.new().run(context) == true, "active combat suite completed")
 	context.check(await ACTIVE_SCREEN.new().run(context, self) == true, "active screen suite completed")
+	context.check(await ARSENAL_SCREEN.new().run(context, self) == true, "M5 screen suite completed")
+	context.check(ARSENAL_TEST.new().run(context) == true, "M5 arsenal suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true

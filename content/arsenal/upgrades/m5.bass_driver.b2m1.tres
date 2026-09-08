@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.bass_driver.b2m1"
+name_key = &"M5_BASS_DRIVER_B2M1_NAME"
+description_key = &"M5_BASS_DRIVER_B2M1_DESC"
+target_id = &"bass_driver"
+required_rank = 6
+prerequisite = &"m5.bass_driver.b2"
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"exposure": 25.0, &"cadence": -0.2, &"modifier": 1.0}

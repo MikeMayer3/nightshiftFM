@@ -1,0 +1,18 @@
+{
+  "qa_apk_sha256": "942684d9f12d488db5a36cd0dd22a639d033039535a6c7b5895c34568233b310",
+  "regular_apk_sha256": "14d789b456a8c03de47ba3f8e886f7d6341d80e43c06500609e3e288756e0c6a",
+  "qa_runtime_files": 519,
+  "post_qa_changes": [
+    "scripts/combat/arsenal_combat.gd",
+    "scripts/combat/combat_screen.gd",
+    "scripts/combat/combat_session.gd",
+    "scripts/combat/status_state.gd",
+    "scripts/save/signal_snapshot.gd",
+    "scripts/ui/arsenal_picker.gd",
+    "scripts/ui/draft_panel.gd",
+    "assets/ui_strings.csv",
+    "assets/ui_strings.en.translation"
+  ],
+  "explanation": "The full-run QA build has identical damage/targeting/wave coefficients and upgrade selection rules. Later changes improve captions, dropdown touch sizing, selected-chassis labels, Continue/Restart UI and exposure-assistance attribution. The attribution metadata patch is recorded separately; all 1731 regression checks pass. Regular APK controls and checkpoint recovery were tested with real emulator input.",
+  "attribution_patch": "exposure-attribution.patch"
+}

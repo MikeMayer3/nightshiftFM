@@ -25,7 +25,7 @@ case "${1:-help}" in
     editor) exec "$GODOT_BIN" --path "$project_dir" --editor ;;
     android-debug)
         mkdir -p "$project_dir/builds/android"
-        exec "$GODOT_BIN" --headless --path "$project_dir" --export-debug 'Android Debug' "$project_dir/builds/android/nightshift-m4.apk" ;;
+        exec "$GODOT_BIN" --headless --path "$project_dir" --export-debug 'Android Debug' "$project_dir/builds/android/nightshift-m5.apk" ;;
     ios-project)
         mkdir -p "$project_dir/builds/ios"
         exec "$GODOT_BIN" --headless --path "$project_dir" --export-debug 'iOS Xcode' "$project_dir/builds/ios/NightshiftM1.zip" ;;

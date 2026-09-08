@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m5.static_net.b3m1"
+name_key = &"M5_STATIC_NET_B3M1_NAME"
+description_key = &"M5_STATIC_NET_B3M1_DESC"
+target_id = &"static_net"
+required_rank = 6
+prerequisite = &"m5.static_net.b3"
+stack_cap = 1
+stat = &"m5_marker"
+effects = {&"tick_rate": 0.5, &"damage_bonus": -0.25, &"modifier": 1.0}

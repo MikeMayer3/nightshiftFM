@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=20 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t0.tres" id="2"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t1.tres" id="3"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t2.tres" id="4"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t3.tres" id="5"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t4.tres" id="6"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.t5.tres" id="7"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b1.tres" id="8"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b1m1.tres" id="9"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b1m2.tres" id="10"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b1cap.tres" id="11"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b2.tres" id="12"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b2m1.tres" id="13"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b2m2.tres" id="14"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b2cap.tres" id="15"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b3.tres" id="16"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b3m1.tres" id="17"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b3m2.tres" id="18"]
+[ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.capacitor.b3cap.tres" id="19"]
+[resource]
+script = ExtResource("1")
+id = &"shield"
+name_key = &"M5_CAPACITOR_NAME"
+preview_key = &"M5_CAPACITOR_PREVIEW"
+support = false
+baseline = {&"damage": 0.0, &"interval": 1.0, &"damage_bonus": 0.0, &"cadence": 0.0, &"crit": 0.0, &"reach": 180.0, &"width": 24.0, &"targets": 1.0, &"pierce": 0.0, &"penetration": 0.0, &"duration": 3.0, &"mode": 0.0, &"modifier": 0.0, &"capstone": 0.0, &"capacity": 65.0, &"recharge": 7.0, &"delay": 4.0, &"cooldown": 14.0, &"mitigation": 0.05, &"break_recovery": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13"), ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18"), ExtResource("19")]

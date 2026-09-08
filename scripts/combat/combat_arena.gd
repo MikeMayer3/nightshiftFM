@@ -104,6 +104,16 @@ func _draw() -> void:
 			draw_string(font, center + Vector2(-32, 0), str(field.charges), HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("7ad8ee"))
 		for shock: Dictionary in session.supports.shocks:
 			draw_line(Vector2(float(shock.x) - float(shock.width), float(shock.y)), Vector2(float(shock.x) + float(shock.width), float(shock.y)), Color("efa968"), 7)
+	if session.arsenal != null:
+		for needle: Dictionary in session.arsenal.needles:
+			var at: Vector2 = Vector2(needle.x, needle.y)
+			draw_line(at, at - Vector2(needle.dx, needle.dy) * 14, DraftPanel.ACCENTS[&"needle_swarm"], 4)
+		for zone: Dictionary in session.arsenal.zones:
+			var tint: Color = DraftPanel.ACCENTS[StringName(zone.source)]
+			tint.a = .13
+			draw_circle(Vector2(zone.x, zone.y), float(zone.p.radius), tint)
+			tint.a = .7
+			draw_arc(Vector2(zone.x, zone.y), float(zone.p.radius), session.elapsed, session.elapsed + TAU * .8, 32, tint, 2)
 	for pulse: Dictionary in pulses:
 		var points: PackedVector2Array = []
 		for index: int in 49:
@@ -117,6 +127,8 @@ func _draw() -> void:
 		var p: Vector2 = actor.position
 		# Fill the battlefield while preserving round enemy silhouettes.
 		draw_set_transform(arena_offset() + p * (arena_stretch() - Vector2.ONE * arena_scale()), 0.0, Vector2.ONE * arena_scale())
+		if session.arsenal != null and session.arsenal.mark_strength(actor.serial) > 0:
+			draw_arc(p, actor.radius + 7, 0, TAU, 24, Color("f3d57b"), 3)
 		var color: Color = Color("efa968")
 		if actor.projectile:
 			color = Color("f78279")
@@ -178,13 +190,18 @@ func _draw() -> void:
 func equipped_supports() -> Array[StringName]:
 	var result: Array[StringName] = []
 	if session == null or session.supports == null: return result
-	for id: StringName in SUPPORT_POSITIONS:
+	for id: StringName in (ArsenalContent.FAMILIES if session.arsenal != null else SUPPORT_POSITIONS.keys()):
 		if session.draft.track(id) != null: result.append(id)
 	return result
 
+func support_position(id: StringName) -> Vector2:
+	if session.arsenal == null: return SUPPORT_POSITIONS[id]
+	var slots: Array[float] = [155, 435, 55, 555, 235]
+	return Vector2(slots[equipped_supports().find(id)], 682)
+
 func _draw_support_turrets(aimed: CombatActor) -> void:
 	for id: StringName in equipped_supports():
-		var p: Vector2 = SUPPORT_POSITIONS[id]
+		var p: Vector2 = support_position(id)
 		var tint: Color = DraftPanel.ACCENTS[id]
 		var fraction: float = session.supports.recharge_fraction(session.draft.track(id))
 		# Position follows the expanded field; the miniature and its bar stay undistorted.
@@ -206,12 +223,12 @@ func _draw_support_turrets(aimed: CombatActor) -> void:
 func show_chain(points: PackedVector2Array, support: bool) -> void:
 	if support and &"arc_aerial" in equipped_supports() and points.size() > 0 and points[0].is_equal_approx(CombatSession.TRANSMITTER):
 		points = points.duplicate()
-		points[0] = SUPPORT_POSITIONS[&"arc_aerial"]
+		points[0] = support_position(&"arc_aerial")
 		support_flashes[&"arc_aerial"] = 0.18
 	chains.append({"points": points, "support": support, "left": 0.18})
 
 func show_support(source: StringName, center: Vector2, radius: Vector2) -> void:
 	if source in equipped_supports():
 		support_flashes[source] = 0.35
-		chains.append({"points": PackedVector2Array([SUPPORT_POSITIONS[source], center]), "support": true, "left": 0.12, "color": DraftPanel.ACCENTS[source]})
+		chains.append({"points": PackedVector2Array([support_position(source), center]), "support": true, "left": 0.12, "color": DraftPanel.ACCENTS[source]})
 	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.35})

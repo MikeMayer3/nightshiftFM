@@ -1,0 +1,15 @@
+Cold start:
+/Users/michaelmayer/Library/Android/sdk/emulator/emulator -avd Pixel_10_Pro -no-snapshot -no-audio -no-boot-anim -gpu host
+
+Full normal-speed QA run (720x1600, density 270):
+python3 tools/emulator_playtest.py --adb /Users/michaelmayer/Library/Android/sdk/platform-tools/adb --serial emulator-5554 --seed 1 --main burst --shield feedback --support echo_deck --output docs/evidence/M5/emulator-host-burst-echo
+
+Regular APK:
+adb -s emulator-5554 install -r builds/android/nightshift-m5.apk
+adb -s emulator-5554 shell am start -n org.nightshiftfm.spike/com.godot.game.GodotAppLauncher
+Actual taps selected Sweep / Relay / Reverb, launched, earned a draft, force-stopped, installed in place, continued, selected one card, activated Shield, paused/resumed and restarted.
+Read-only checkpoint copies and screenshots are included. No regular-app save was present before these checks.
+
+Restore display configuration:
+adb -s emulator-5554 shell wm size reset
+adb -s emulator-5554 shell wm density reset

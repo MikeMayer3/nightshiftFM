@@ -1,0 +1,106 @@
+{
+  "reason": "Rendering deteriorated from 16 to 1-2 FPS under emulator memory/software graphics pressure. Stopped at wave 5 to rerun final code at 720x1600. Not a completed balance sample.",
+  "last": {
+    "bursts": 46,
+    "choices": 13,
+    "cooldown": 2.333333333333343,
+    "coordinates": {
+      "arena": "[P: (12.0, 224.0), S: (696.0, 1144.0)]",
+      "canvas": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (12.0, 224.0)]",
+      "origin": "(0, 0)",
+      "safe": "[P: (0, 0), S: (1280, 2628)]",
+      "stretch": "[X: (1.777778, 0.0), Y: (0.0, 1.778078), O: (0.0, 0.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (720.0, 1478.0)]",
+      "window": "(1280, 2628)"
+    },
+    "decisions": [
+      {
+        "bonus": false,
+        "id": "recruit.echo_deck"
+      },
+      {
+        "bonus": false,
+        "id": "recruit.static_net"
+      },
+      {
+        "bonus": false,
+        "id": "recruit.reverb_well"
+      },
+      {
+        "bonus": false,
+        "id": "m5.capacitor.t2"
+      },
+      {
+        "bonus": false,
+        "id": "m5.needle_swarm.t4"
+      },
+      {
+        "bonus": false,
+        "id": "m5.pulse.t0"
+      },
+      {
+        "bonus": false,
+        "id": "m5.needle_swarm.b2"
+      },
+      {
+        "bonus": false,
+        "id": "m5.capacitor.b1"
+      },
+      {
+        "bonus": false,
+        "id": "recruit.arc_aerial"
+      },
+      {
+        "bonus": false,
+        "id": "m5.reverb_well.t5"
+      },
+      {
+        "bonus": false,
+        "id": "m5.echo_deck.t1"
+      },
+      {
+        "bonus": false,
+        "id": "m5.arc_aerial.t1"
+      },
+      {
+        "bonus": false,
+        "id": "m5.reverb_well.b1"
+      }
+    ],
+    "equipped": [
+      "arc_aerial",
+      "static_net",
+      "echo_deck",
+      "needle_swarm",
+      "reverb_well"
+    ],
+    "finished": false,
+    "fps": 2.0,
+    "hull": 100.0,
+    "kills": 245,
+    "loadout": {
+      "main": "pulse",
+      "shield": "capacitor",
+      "support": "needle_swarm"
+    },
+    "paused": false,
+    "pending": 11,
+    "phase": 1,
+    "save_failed": false,
+    "seconds": 267.30000000008556,
+    "seed": 1,
+    "shield": 90.0,
+    "shield_wait": 0.0,
+    "support_timers": {
+      "arc_aerial": 0.4484848484848474,
+      "bass_driver": 0.0,
+      "echo_deck": 0.0,
+      "needle_swarm": 0.816666666666671,
+      "reverb_well": 4.883333333333334,
+      "static_net": 4.883333333333334
+    },
+    "victory": false,
+    "wave": 5,
+    "wall_seconds": 509.949
+  }
+}
