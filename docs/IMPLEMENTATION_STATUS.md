@@ -1,15 +1,49 @@
 # Implementation status
 
 Status schema version: **1**  
-Evidence revision: **M2.1**  
+Evidence revision: **M2.2**  
 Date: **2026-09-07** (America/Chicago)  
-Requested milestone: **M2 only**  
+Requested milestone: **M2 only, followed by authorized GitHub handoff**  
 Outcome: **M2 implementation, automated checks, desktop rendering, and physical Pixel checks PASS. Human M2 playtest acceptance remains NOT RUN. iOS remains deferred; M3 has not started.**
 
 M0 was accepted by the owner. M2 was explicitly authorized with “start 2” after
 the owner deferred iOS. M2 depends on M0 and can proceed with recorded M1
 platform/account gates. Historical M0/M1 evidence below retains its original
 results; the current implementation and commands are described here.
+
+## M2.2 — GitHub handoff
+
+The owner explicitly requested Git initialization and upload as `nightshiftFM`.
+Created the private repository [MikeMayer3/nightshiftFM](https://github.com/MikeMayer3/nightshiftFM)
+and pushed `main` from this project root. `origin` is
+`https://github.com/MikeMayer3/nightshiftFM.git`; `main` tracks `origin/main`.
+Initial source commit: `712ef97c2e8a8f5e1bca3b6c4242ce0efa458c78`.
+
+**PASS:** local initialization, initial commit, private repository creation,
+initial push, and remote commit match. The 180-file initial source snapshot
+contains about 2 MB of source/docs/evidence. `.godot/`, `builds/`, credentials,
+and local device saves are excluded. Staged-file checks found no excluded-path
+violations or private-key/GitHub-token/AWS-key patterns. README and development
+instructions now describe cloning the actual repository.
+
+**PASS:** a literal fresh clone from GitHub imported and ran on the pinned
+Godot 4.7.2 standard engine: **268 engine checks, 0 failures**, desktop headless
+smoke exit 0, and **7 Python checks**. Commands were:
+
+```sh
+git clone https://github.com/MikeMayer3/nightshiftFM.git /path/to/nightshiftFM
+cd /path/to/nightshiftFM
+export GODOT_BIN="/Applications/Godot.app/Contents/MacOS/Godot"
+sh tools/godot.sh import
+sh tools/godot.sh test
+sh tools/godot.sh smoke
+python3 tools/check_foundation.py
+```
+
+The exact temporary clone path, source commit, commands, exit codes and logs are
+in `docs/evidence/GITHUB/`. This revision adds handoff documentation and clone
+evidence only; gameplay is unchanged from the tested source commit. M2's human
+playtest remains **NOT RUN**, iOS remains deferred, and M3 has not started.
 
 ## M2.1 — three-wave combat prototype
 
@@ -73,8 +107,8 @@ expected/actual exits and results are in `docs/evidence/M2/fresh-checks.json`.
 
 Fresh verification copied source to
 `/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m2-fresh-u58oj5ct/project`.
-No Git metadata exists, so this is a fresh-source copy/import, not a claimed
-clone, commit, or push.
+At the time of M2.1 verification, no Git metadata existed; that check was a
+fresh-source copy/import. M2.2 above adds actual GitHub and clone evidence.
 
 The ten renderer-independent auto-aim runs and ten scene-driven complete runs
 all reached victory without duplicate result subscriptions or stale actors.

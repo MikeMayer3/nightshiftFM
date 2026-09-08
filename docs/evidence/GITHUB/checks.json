@@ -1,0 +1,44 @@
+{
+  "cloned_commit": "712ef97c2e8a8f5e1bca3b6c4242ce0efa458c78",
+  "checks": [
+    {
+      "command": [
+        "sh",
+        "tools/godot.sh",
+        "import"
+      ],
+      "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshiftfm-github-check-c0r52cxa/nightshiftFM",
+      "exit": 0,
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "sh",
+        "tools/godot.sh",
+        "test"
+      ],
+      "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshiftfm-github-check-c0r52cxa/nightshiftFM",
+      "exit": 0,
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "sh",
+        "tools/godot.sh",
+        "smoke"
+      ],
+      "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshiftfm-github-check-c0r52cxa/nightshiftFM",
+      "exit": 0,
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_foundation.py"
+      ],
+      "cwd": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshiftfm-github-check-c0r52cxa/nightshiftFM",
+      "exit": 0,
+      "result": "PASS"
+    }
+  ]
+}
