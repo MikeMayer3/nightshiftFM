@@ -1,0 +1,3424 @@
+[
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.741766467065868,
+		"damage_taken": 170.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 22.8333333333333,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 34.5333333333327,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 52.2333333333317,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 72.8999999999971,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 101.883333333329,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 93,
+		"mode": "idle",
+		"seconds": 133.449999999998,
+		"seed": 11,
+		"style": "main",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 9726.78974514732,
+		"bursts": 91,
+		"crowded_fraction": 0.4211071946921,
+		"damage_taken": 245.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 16.866666666667,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 32.1833333333328,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 49.2999999999985,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 68.1333333333308,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 95.1499999999959,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 131.93333333333,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 161.350000000021,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 181.666666666703,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 201.150000000052,
+				"wave": 4
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 225.616666666738,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 247.116666666755,
+				"wave": 5
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 268.233333333418,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 291.350000000064,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 309.566666666714,
+				"wave": 6
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 333.200000000026,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 354.216666666673,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 375.483333333321,
+				"wave": 7
+			},
+			{
+				"id": "static_net.rapid",
+				"seconds": 396.083333333302,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 417.866666666615,
+				"wave": 7
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 441.48333333326,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 466.899999999904,
+				"wave": 8
+			}
+		],
+		"hull": 0.0,
+		"kills": 423,
+		"mode": "button",
+		"seconds": 480.999999999891,
+		"seed": 11,
+		"style": "main",
+		"victory": false,
+		"wave": 8
+	},
+	{
+		"active": true,
+		"burst_damage": 26372.2481524927,
+		"bursts": 111,
+		"crowded_fraction": 0.236024844720497,
+		"damage_taken": 196.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 47.8999999999986,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 64.5166666666643,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 92.399999999996,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 114.516666666661,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 138.533333333336,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 167.033333333358,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 187.450000000041,
+				"wave": 4
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 211.066666666727,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 233.766666666745,
+				"wave": 5
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 253.183333333427,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 278.916666666742,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 299.733333333389,
+				"wave": 6
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 323.850000000034,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 347.16666666668,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 368.449999999994,
+				"wave": 7
+			},
+			{
+				"id": "static_net.rapid",
+				"seconds": 393.449999999971,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 416.366666666617,
+				"wave": 8
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 445.199999999924,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 466.483333333238,
+				"wave": 8
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 500.799999999873,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 523.249999999853,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 548.69999999983,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 571.816666666475,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 597.633333333118,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 617.949999999767,
+				"wave": 10
+			}
+		],
+		"hull": 45.1000000000002,
+		"kills": 560,
+		"mode": "aimed",
+		"seconds": 642.216666666411,
+		"seed": 11,
+		"style": "main",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.647547169811321,
+		"damage_taken": 173.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 20.8833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 33.4166666666661,
+				"wave": 1
+			},
+			{
+				"id": "main.reach",
+				"seconds": 51.4833333333317,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 72.2999999999972,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 100.783333333329,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 93,
+		"mode": "idle",
+		"seconds": 132.166666666664,
+		"seed": 42,
+		"style": "main",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 14060.75480054,
+		"bursts": 123,
+		"crowded_fraction": 0.427088176042151,
+		"damage_taken": 0.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 16.666666666667,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 32.1833333333328,
+				"wave": 1
+			},
+			{
+				"id": "main.reach",
+				"seconds": 49.0666666666652,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 68.0166666666641,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 94.9333333333292,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 123.649999999994,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 146.366666666675,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 173.716666666697,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 190.766666666711,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 213.283333333395,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 237.300000000081,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 259.683333333426,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 282.883333333405,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 301.250000000055,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 322.666666666702,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 342.400000000017,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 362.733333333332,
+				"wave": 7
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 384.266666666646,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 406.483333333292,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 427.999999999939,
+				"wave": 8
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 453.716666666583,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 478.066666666561,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 506.666666666535,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 528.366666666515,
+				"wave": 9
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 548.483333333163,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 572.849999999808,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 596.633333333119,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 616.533333333101,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 634.583333333085,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 593,
+		"mode": "button",
+		"seconds": 643.599999999743,
+		"seed": 42,
+		"style": "main",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": true,
+		"burst_damage": 23678.1627776381,
+		"bursts": 107,
+		"crowded_fraction": 0.212755830556878,
+		"damage_taken": 0.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "main.reach",
+				"seconds": 47.6166666666652,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 64.533333333331,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 91.9833333333294,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 114.499999999995,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 138.616666666669,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 166.866666666692,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 187.383333333375,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 210.60000000006,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 234.616666666746,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 252.633333333427,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 280.46666666674,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 299.38333333339,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 323.500000000034,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 346.71666666668,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 370.733333333325,
+				"wave": 7
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 394.84999999997,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 423.083333333277,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 446.849999999922,
+				"wave": 8
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 463.899999999907,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 495.333333333211,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 518.366666666524,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 542.483333333169,
+				"wave": 9
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 566.71666666648,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 588.833333333126,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 608.883333333108,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 556,
+		"mode": "aimed",
+		"seconds": 628.249999999757,
+		"seed": 42,
+		"style": "main",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.785505124450952,
+		"damage_taken": 156.0,
+		"decisions": [
+			{
+				"id": "main.rate",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 22.8333333333333,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 36.8333333333325,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 56.0499999999981,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 76.5333333333303,
+				"wave": 2
+			},
+			{
+				"id": "main.gain",
+				"seconds": 105.016666666662,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 94,
+		"mode": "idle",
+		"seconds": 136.383333333334,
+		"seed": 91,
+		"style": "main",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 14104.2686868687,
+		"bursts": 128,
+		"crowded_fraction": 0.491697830964847,
+		"damage_taken": 239.0,
+		"decisions": [
+			{
+				"id": "main.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 17.216666666667,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 32.1333333333328,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 49.3499999999985,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 68.816666666664,
+				"wave": 2
+			},
+			{
+				"id": "main.gain",
+				"seconds": 95.5333333333292,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 125.199999999994,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 147.000000000009,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 174.600000000031,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 191.916666666712,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 214.233333333396,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 238.050000000082,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 257.683333333428,
+				"wave": 5
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 283.800000000071,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 300.950000000055,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 319.366666666705,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 343.18333333335,
+				"wave": 7
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 364.116666666664,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 385.283333333312,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 406.599999999959,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 426.916666666607,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 452.88333333325,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 479.949999999892,
+				"wave": 8
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 515.883333333193,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 539.949999999838,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 561.666666666485,
+				"wave": 9
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 582.066666666466,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 607.483333333109,
+				"wave": 10
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 628.549999999757,
+				"wave": 10
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 649.816666666404,
+				"wave": 10
+			}
+		],
+		"hull": 46.4500000000003,
+		"kills": 593,
+		"mode": "button",
+		"seconds": 666.799999999722,
+		"seed": 91,
+		"style": "main",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": true,
+		"burst_damage": 25822.3112414467,
+		"bursts": 111,
+		"crowded_fraction": 0.246879334257975,
+		"damage_taken": 48.0,
+		"decisions": [
+			{
+				"id": "main.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 48.6666666666652,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "main.gain",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 114.583333333328,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 138.600000000002,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 167.716666666692,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 187.933333333375,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 213.350000000062,
+				"wave": 5
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 236.683333333414,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 255.500000000095,
+				"wave": 5
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 282.283333333405,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 302.500000000054,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 324.400000000034,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 348.350000000012,
+				"wave": 7
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 371.449999999991,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 392.166666666639,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 417.166666666616,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 442.466666666593,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 468.483333333236,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 504.816666666536,
+				"wave": 9
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 528.399999999848,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 551.98333333316,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 579.216666666469,
+				"wave": 10
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 601.533333333115,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 626.949999999758,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 558,
+		"mode": "aimed",
+		"seconds": 647.216666666407,
+		"seed": 91,
+		"style": "main",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.808463251670379,
+		"damage_taken": 216.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 24.3333333333332,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 40.699999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 61.5666666666645,
+				"wave": 2
+			}
+		],
+		"hull": 0.0,
+		"kills": 58,
+		"mode": "idle",
+		"seconds": 89.5999999999962,
+		"seed": 11,
+		"style": "arc",
+		"victory": false,
+		"wave": 2
+	},
+	{
+		"active": true,
+		"burst_damage": 2125.37677419355,
+		"bursts": 24,
+		"crowded_fraction": 0.272525849335303,
+		"damage_taken": 156.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 17.4500000000003,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 69.5499999999973,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 96.3666666666625,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 98,
+		"mode": "button",
+		"seconds": 134.933333333333,
+		"seed": 11,
+		"style": "arc",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 25832.7181869587,
+		"bursts": 118,
+		"crowded_fraction": 0.511070110701107,
+		"damage_taken": 264.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 119.183333333328,
+				"wave": 3
+			},
+			{
+				"id": "main.reach",
+				"seconds": 153.000000000014,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 177.683333333367,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 193.300000000046,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 211.016666666727,
+				"wave": 4
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 233.933333333412,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 253.133333333427,
+				"wave": 5
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 269.550000000084,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 294.350000000061,
+				"wave": 6
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 310.216666666713,
+				"wave": 6
+			},
+			{
+				"id": "main.rate",
+				"seconds": 330.633333333361,
+				"wave": 6
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 350.45000000001,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 371.466666666657,
+				"wave": 7
+			},
+			{
+				"id": "main.rate",
+				"seconds": 395.483333333302,
+				"wave": 7
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 419.599999999947,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 448.516666666587,
+				"wave": 8
+			},
+			{
+				"id": "main.reach",
+				"seconds": 468.833333333236,
+				"wave": 8
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 506.699999999868,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 529.366666666514,
+				"wave": 9
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 556.783333333156,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.direct",
+				"seconds": 580.816666666467,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 606.233333333111,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 626.033333333093,
+				"wave": 10
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 644.483333333076,
+				"wave": 10
+			}
+		],
+		"hull": 11.2000000000001,
+		"kills": 586,
+		"mode": "aimed",
+		"seconds": 648.449999999739,
+		"seed": 11,
+		"style": "arc",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.807031888798038,
+		"damage_taken": 276.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 22.8333333333333,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 40.699999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 62.5499999999977,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 89.2333333333296,
+				"wave": 2
+			}
+		],
+		"hull": 0.0,
+		"kills": 73,
+		"mode": "idle",
+		"seconds": 122.049999999994,
+		"seed": 42,
+		"style": "arc",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 2042.31612903226,
+		"bursts": 23,
+		"crowded_fraction": 0.228395061728395,
+		"damage_taken": 154.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 17.4500000000003,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 69.7333333333307,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 96.3499999999958,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 95,
+		"mode": "button",
+		"seconds": 129.149999999995,
+		"seed": 42,
+		"style": "arc",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 3841.72,
+		"bursts": 26,
+		"crowded_fraction": 0.395070422535211,
+		"damage_taken": 178.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 123.199999999994,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 113,
+		"mode": "aimed",
+		"seconds": 141.500000000005,
+		"seed": 42,
+		"style": "arc",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.817582417582418,
+		"damage_taken": 220.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 24.3333333333332,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 40.699999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 65.9499999999975,
+				"wave": 2
+			}
+		],
+		"hull": 0.0,
+		"kills": 56,
+		"mode": "idle",
+		"seconds": 90.8499999999961,
+		"seed": 91,
+		"style": "arc",
+		"victory": false,
+		"wave": 2
+	},
+	{
+		"active": true,
+		"burst_damage": 2017.984,
+		"bursts": 23,
+		"crowded_fraction": 0.238759689922481,
+		"damage_taken": 151.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 17.4500000000003,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 70.0333333333306,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 96.3499999999958,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 93,
+		"mode": "button",
+		"seconds": 128.483333333328,
+		"seed": 91,
+		"style": "arc",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 25327.9902224084,
+		"bursts": 117,
+		"crowded_fraction": 0.476074367570863,
+		"damage_taken": 224.0,
+		"decisions": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 124.083333333328,
+				"wave": 3
+			},
+			{
+				"id": "main.gain",
+				"seconds": 160.016666666686,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 178.350000000034,
+				"wave": 4
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 196.966666666716,
+				"wave": 4
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 222.850000000069,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 244.666666666754,
+				"wave": 5
+			},
+			{
+				"id": "main.reach",
+				"seconds": 262.783333333423,
+				"wave": 5
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 285.900000000069,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 307.916666666715,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 327.516666666697,
+				"wave": 6
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 350.933333333343,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 375.049999999988,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 397.299999999967,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 419.88333333328,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 446.616666666589,
+				"wave": 8
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 467.61666666657,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 504.983333333203,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 529.149999999847,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 552.166666666493,
+				"wave": 9
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 576.283333333138,
+				"wave": 9
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 608.216666666442,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 626.216666666426,
+				"wave": 10
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 649.716666666404,
+				"wave": 10
+			}
+		],
+		"hull": 4.70000000000027,
+		"kills": 565,
+		"mode": "aimed",
+		"seconds": 654.433333333067,
+		"seed": 91,
+		"style": "arc",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.701674277016743,
+		"damage_taken": 155.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 22.8333333333333,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 34.5333333333327,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 51.066666666665,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 71.2333333333306,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 99.6166666666623,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 94,
+		"mode": "idle",
+		"seconds": 131.149999999997,
+		"seed": 11,
+		"style": "bass",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 3354.36958525346,
+		"bursts": 41,
+		"crowded_fraction": 0.497964721845319,
+		"damage_taken": 243.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 16.866666666667,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 32.1833333333328,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 49.2999999999985,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 67.0333333333308,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 94.3499999999959,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 122.049999999994,
+				"wave": 3
+			},
+			{
+				"id": "main.rate",
+				"seconds": 170.766666666695,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 191.083333333378,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 216.500000000064,
+				"wave": 4
+			}
+		],
+		"hull": 0.0,
+		"kills": 165,
+		"mode": "button",
+		"seconds": 220.400000000068,
+		"seed": 11,
+		"style": "bass",
+		"victory": false,
+		"wave": 4
+	},
+	{
+		"active": true,
+		"burst_damage": 28463.2690327236,
+		"bursts": 115,
+		"crowded_fraction": 0.397220077220077,
+		"damage_taken": 215.0,
+		"decisions": [
+			{
+				"id": "main.reach",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 48.4999999999985,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 64.5166666666643,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 92.599999999996,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 114.516666666661,
+				"wave": 3
+			},
+			{
+				"id": "main.rate",
+				"seconds": 138.533333333336,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 167.700000000026,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 187.616666666708,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 206.68333333339,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 231.000000000076,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 251.116666666759,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 277.300000000076,
+				"wave": 6
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 293.716666666728,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 316.883333333374,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 340.416666666686,
+				"wave": 7
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 364.333333333331,
+				"wave": 7
+			},
+			{
+				"id": "main.rate",
+				"seconds": 386.899999999977,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 407.316666666625,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 436.649999999932,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 460.166666666577,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 503.449999999871,
+				"wave": 9
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 519.966666666522,
+				"wave": 9
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 546.199999999832,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 569.966666666477,
+				"wave": 9
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 588.983333333126,
+				"wave": 10
+			},
+			{
+				"id": "main.reach",
+				"seconds": 611.783333333106,
+				"wave": 10
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 630.933333333088,
+				"wave": 10
+			}
+		],
+		"hull": 0.0,
+		"kills": 577,
+		"mode": "aimed",
+		"seconds": 645.716666666408,
+		"seed": 11,
+		"style": "bass",
+		"victory": false,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.741337630942788,
+		"damage_taken": 236.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 18.9500000000002,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 34.5333333333327,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 52.9666666666649,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 80.1666666666634,
+				"wave": 2
+			}
+		],
+		"hull": 0.0,
+		"kills": 80,
+		"mode": "idle",
+		"seconds": 123.966666666661,
+		"seed": 42,
+		"style": "bass",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 2755.62806451613,
+		"bursts": 28,
+		"crowded_fraction": 0.355245683930943,
+		"damage_taken": 155.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 14.5500000000003,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 64.7999999999976,
+				"wave": 2
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 93.9166666666626,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 122.549999999994,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 114,
+		"mode": "button",
+		"seconds": 150.050000000012,
+		"seed": 42,
+		"style": "bass",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 25493.0572554153,
+		"bursts": 111,
+		"crowded_fraction": 0.349539243724182,
+		"damage_taken": 0.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 114.583333333328,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.direct",
+				"seconds": 138.600000000002,
+				"wave": 3
+			},
+			{
+				"id": "main.reach",
+				"seconds": 166.100000000024,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 181.08333333337,
+				"wave": 4
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 199.083333333384,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 221.400000000068,
+				"wave": 5
+			},
+			{
+				"id": "main.reach",
+				"seconds": 239.166666666749,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 258.683333333427,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 282.900000000071,
+				"wave": 6
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 301.816666666721,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 327.933333333364,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 349.350000000011,
+				"wave": 7
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 373.166666666656,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 397.183333333301,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 423.799999999943,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 450.716666666585,
+				"wave": 8
+			},
+			{
+				"id": "main.rate",
+				"seconds": 478.61666666656,
+				"wave": 8
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 498.733333333208,
+				"wave": 9
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 526.033333333184,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 552.949999999826,
+				"wave": 9
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 577.96666666647,
+				"wave": 10
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 600.766666666449,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 621.933333333096,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 569,
+		"mode": "aimed",
+		"seconds": 627.566666666425,
+		"seed": 42,
+		"style": "bass",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.739164086687306,
+		"damage_taken": 232.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 18.9500000000002,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 34.816666666666,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 53.4166666666649,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 77.1166666666636,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 111.883333333328,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 85,
+		"mode": "idle",
+		"seconds": 129.049999999995,
+		"seed": 91,
+		"style": "bass",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 2525.8587938289,
+		"bursts": 26,
+		"crowded_fraction": 0.337265787647467,
+		"damage_taken": 160.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 14.5500000000003,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 65.9833333333309,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 93.1833333333293,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.hard",
+				"seconds": 124.499999999994,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 109,
+		"mode": "button",
+		"seconds": 143.616666666673,
+		"seed": 91,
+		"style": "bass",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 27800.6149672745,
+		"bursts": 117,
+		"crowded_fraction": 0.401161014359914,
+		"damage_taken": 60.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 48.8666666666652,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 92.1333333333294,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.hard",
+				"seconds": 114.549999999995,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 138.666666666669,
+				"wave": 3
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 163.500000000022,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 181.700000000037,
+				"wave": 4
+			},
+			{
+				"id": "main.rate",
+				"seconds": 202.500000000053,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 230.300000000075,
+				"wave": 5
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 251.800000000093,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 270.21666666675,
+				"wave": 5
+			},
+			{
+				"id": "main.gain",
+				"seconds": 292.150000000063,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 312.783333333378,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 335.500000000024,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 359.266666666669,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 381.049999999982,
+				"wave": 7
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 408.216666666624,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 436.733333333265,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 459.266666666578,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 482.866666666556,
+				"wave": 8
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 514.683333333194,
+				"wave": 9
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 541.549999999836,
+				"wave": 9
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 565.616666666481,
+				"wave": 9
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 594.383333333121,
+				"wave": 10
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 614.949999999769,
+				"wave": 10
+			},
+			{
+				"id": "main.rate",
+				"seconds": 637.116666666416,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 576,
+		"mode": "aimed",
+		"seconds": 653.066666666401,
+		"seed": 91,
+		"style": "bass",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.658008658008658,
+		"damage_taken": 156.0,
+		"decisions": [
+			{
+				"id": "recruit.static_net",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 19.4333333333335,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 34.5333333333327,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 50.9999999999984,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 71.1499999999972,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 98.583333333329,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 100,
+		"mode": "idle",
+		"seconds": 138.383333333336,
+		"seed": 11,
+		"style": "net",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 4150.18073732719,
+		"bursts": 53,
+		"crowded_fraction": 0.57825311942959,
+		"damage_taken": 251.0,
+		"decisions": [
+			{
+				"id": "recruit.static_net",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 16.0000000000004,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 32.2166666666661,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 49.3333333333318,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 66.0166666666642,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 93.9333333333293,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 119.349999999995,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 154.966666666682,
+				"wave": 3
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 187.066666666708,
+				"wave": 4
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 205.883333333389,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 230.616666666742,
+				"wave": 4
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 266.933333333419,
+				"wave": 5
+			}
+		],
+		"hull": 0.0,
+		"kills": 218,
+		"mode": "button",
+		"seconds": 279.666666666741,
+		"seed": 11,
+		"style": "net",
+		"victory": false,
+		"wave": 5
+	},
+	{
+		"active": true,
+		"burst_damage": 26166.3160666574,
+		"bursts": 115,
+		"crowded_fraction": 0.369958275382476,
+		"damage_taken": 261.0,
+		"decisions": [
+			{
+				"id": "recruit.static_net",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 92.1333333333294,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 114.549999999995,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 140.966666666671,
+				"wave": 3
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 168.450000000026,
+				"wave": 4
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 184.466666666706,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 205.783333333389,
+				"wave": 4
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 233.600000000078,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 253.433333333427,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 267.650000000085,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 289.566666666732,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 317.35000000004,
+				"wave": 6
+			},
+			{
+				"id": "main.gain",
+				"seconds": 342.966666666683,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 366.599999999995,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 390.349999999974,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 412.933333333286,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 442.649999999926,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 464.833333333239,
+				"wave": 8
+			},
+			{
+				"id": "main.reach",
+				"seconds": 506.049999999868,
+				"wave": 9
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 530.166666666513,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 554.183333333158,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 581.116666666467,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 608.483333333109,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 627.816666666424,
+				"wave": 10
+			}
+		],
+		"hull": 0.0,
+		"kills": 560,
+		"mode": "aimed",
+		"seconds": 645.149999999742,
+		"seed": 11,
+		"style": "net",
+		"victory": false,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.670180722891566,
+		"damage_taken": 168.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 20.8833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 34.7333333333326,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 52.9333333333316,
+				"wave": 2
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 73.3833333333305,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 101.749999999996,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 94,
+		"mode": "idle",
+		"seconds": 132.499999999998,
+		"seed": 42,
+		"style": "net",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 2182.82387096774,
+		"bursts": 28,
+		"crowded_fraction": 0.373143963847644,
+		"damage_taken": 198.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 16.666666666667,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 32.1833333333328,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 49.2999999999985,
+				"wave": 2
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 68.5833333333307,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 95.3999999999959,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 130.666666666663,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 114,
+		"mode": "button",
+		"seconds": 154.383333333348,
+		"seed": 42,
+		"style": "net",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 25199.1892847125,
+		"bursts": 109,
+		"crowded_fraction": 0.271826031339942,
+		"damage_taken": 0.0,
+		"decisions": [
+			{
+				"id": "main.gain",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 48.5666666666652,
+				"wave": 2
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 114.583333333328,
+				"wave": 3
+			},
+			{
+				"id": "main.gain",
+				"seconds": 144.200000000007,
+				"wave": 3
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 172.716666666696,
+				"wave": 4
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 187.933333333375,
+				"wave": 4
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 216.150000000064,
+				"wave": 5
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 240.06666666675,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 261.066666666758,
+				"wave": 5
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 284.766666666736,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 308.233333333382,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 333.850000000025,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 360.600000000001,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 385.483333333311,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 411.399999999955,
+				"wave": 7
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 441.266666666594,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 458.866666666578,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 483.083333333223,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 509.466666666532,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 533.31666666651,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 561.733333333151,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 588.283333333127,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 606.199999999777,
+				"wave": 10
+			}
+		],
+		"hull": 100.0,
+		"kills": 537,
+		"mode": "aimed",
+		"seconds": 623.716666666428,
+		"seed": 42,
+		"style": "net",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": false,
+		"burst_damage": 0.0,
+		"bursts": 0,
+		"crowded_fraction": 0.641711229946524,
+		"damage_taken": 150.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.2500000000001,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 18.9500000000002,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 33.616666666666,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 50.9999999999984,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 70.6166666666639,
+				"wave": 2
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 99.4999999999956,
+				"wave": 3
+			}
+		],
+		"hull": 0.0,
+		"kills": 92,
+		"mode": "idle",
+		"seconds": 130.633333333329,
+		"seed": 91,
+		"style": "net",
+		"victory": false,
+		"wave": 3
+	},
+	{
+		"active": true,
+		"burst_damage": 18081.484688754,
+		"bursts": 140,
+		"crowded_fraction": 0.700732955331213,
+		"damage_taken": 235.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 14.5500000000003,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 32.1666666666661,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 49.2833333333318,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 64.7999999999976,
+				"wave": 2
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 93.2166666666627,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 123.199999999994,
+				"wave": 3
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 160.116666666686,
+				"wave": 3
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 185.533333333373,
+				"wave": 4
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 208.016666666724,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 229.683333333408,
+				"wave": 4
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 261.100000000091,
+				"wave": 5
+			},
+			{
+				"id": "main.rate",
+				"seconds": 279.950000000074,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 301.233333333388,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 331.950000000027,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 350.40000000001,
+				"wave": 6
+			},
+			{
+				"id": "main.gain",
+				"seconds": 370.783333333325,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 389.099999999975,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 414.649999999952,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 435.233333333266,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 456.049999999914,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 478.41666666656,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 505.799999999869,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.strike",
+				"seconds": 533.016666666511,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 572.966666666474,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 592.016666666457,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 610.833333333106,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 632.016666666421,
+				"wave": 9
+			},
+			{
+				"id": "main.rate",
+				"seconds": 646.483333333074,
+				"wave": 9
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 678.283333333045,
+				"wave": 10
+			},
+			{
+				"id": "consumable.overdrive",
+				"seconds": 695.899999999696,
+				"wave": 10
+			},
+			{
+				"id": "consumable.overdrive",
+				"seconds": 719.149999999675,
+				"wave": 10
+			}
+		],
+		"hull": 42.7499999999998,
+		"kills": 629,
+		"mode": "button",
+		"seconds": 721.266666666339,
+		"seed": 91,
+		"style": "net",
+		"victory": true,
+		"wave": 10
+	},
+	{
+		"active": true,
+		"burst_damage": 27430.5966848206,
+		"bursts": 121,
+		"crowded_fraction": 0.434521124642911,
+		"damage_taken": 90.0,
+		"decisions": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 8.11666666666665,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 14.1333333333336,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 32.1499999999995,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 49.2666666666652,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 64.483333333331,
+				"wave": 2
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 114.583333333328,
+				"wave": 3
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 141.000000000004,
+				"wave": 3
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 168.716666666693,
+				"wave": 4
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 185.95000000004,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 209.466666666726,
+				"wave": 4
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 230.283333333409,
+				"wave": 5
+			},
+			{
+				"id": "main.rate",
+				"seconds": 255.700000000096,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 273.55000000008,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 298.466666666724,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 320.566666666704,
+				"wave": 6
+			},
+			{
+				"id": "main.gain",
+				"seconds": 342.53333333335,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 362.933333333332,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 389.649999999974,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 413.666666666619,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 444.933333333257,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 465.549999999905,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 503.566666666537,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.strike",
+				"seconds": 527.249999999849,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 554.066666666491,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 578.183333333136,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 608.699999999775,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 630.566666666422,
+				"wave": 10
+			},
+			{
+				"id": "main.rate",
+				"seconds": 650.716666666404,
+				"wave": 10
+			}
+		],
+		"hull": 80.0,
+		"kills": 569,
+		"mode": "aimed",
+		"seconds": 663.199999999725,
+		"seed": 91,
+		"style": "net",
+		"victory": true,
+		"wave": 10
+	}
+]

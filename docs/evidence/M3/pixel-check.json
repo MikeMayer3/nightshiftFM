@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "device": "Pixel 10 Pro XL",
+  "os": "Android 16 / API 36",
+  "serial": "57261FDCQ00593",
+  "input": "ADB synthetic touch on physical device; screenshots inspected by agent, not human usability approval",
+  "checks": [
+    {
+      "check": "Physical app installed and launched",
+      "result": "PASS"
+    },
+    {
+      "check": "Natural first wave reached draft",
+      "result": "PASS"
+    },
+    {
+      "check": "Force-stop/Continue restores selected offer and run ID",
+      "result": "PASS"
+    },
+    {
+      "check": "Touch choice commits once",
+      "result": "PASS"
+    },
+    {
+      "check": "Common banish persists and removes offered card",
+      "result": "PASS"
+    },
+    {
+      "check": "Touch swipe reaches lower cards and reroll control after propagation fix",
+      "result": "PASS"
+    },
+    {
+      "check": "Touch reroll consumes one token",
+      "result": "PASS"
+    },
+    {
+      "check": "Rank-3 Arc branch and separate recruitment bonus accepted",
+      "result": "PASS"
+    },
+    {
+      "check": "Active-wave force-stop restores wave-start time and zero actors",
+      "result": "PASS"
+    },
+    {
+      "check": "Active-wave recovery retains checkpoint hull",
+      "result": "PASS"
+    }
+  ]
+}

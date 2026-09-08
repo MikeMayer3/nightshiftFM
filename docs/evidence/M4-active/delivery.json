@@ -1,0 +1,9 @@
+{
+  "version": "0.4.2",
+  "code": 6,
+  "package": "org.nightshiftfm.spike",
+  "apk_sha256": "4a9d611a30b84abb91b5b256051f48a4708737fbb190424d29d84f0e00a954f3",
+  "save_preserved_byte_for_byte": true,
+  "save_sha256": "e4c360dbdb8fc3e1b65514a6ccf6b6499a50a051b33c89df54073e154d233562",
+  "existing_content": "m4.signal.1"
+}

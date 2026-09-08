@@ -33,6 +33,8 @@ class FoundationChecks(unittest.TestCase):
                 if reference == generated:
                     self.assertTrue((ROOT / "assets/ui_strings.csv").is_file())
                     self.assertTrue((ROOT / reference).is_file(), "Keep the generated translation in source for a clean first import")
+                elif reference.endswith("/"):
+                    self.assertTrue((ROOT / reference).is_dir(), (path, reference))
                 else:
                     self.assertTrue((ROOT / reference).is_file(), (path, reference))
 
@@ -46,9 +48,9 @@ class FoundationChecks(unittest.TestCase):
             for key in re.findall(r'^text = "([^"]+)"', scene_path.read_text(), re.MULTILINE):
                 self.assertIn(key, keys)
 
-    def test_bounded_m2_content_and_no_release_credentials(self):
-        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 9)
-        self.assertFalse(list((ROOT / "content/upgrades").rglob("*.tres")))
+    def test_bounded_m4_content_and_no_release_credentials(self):
+        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 135)
+        self.assertEqual(len(list((ROOT / "content/upgrades").rglob("*.tres"))), 18)
         presets = (ROOT / "export_presets.cfg").read_text()
         self.assertIn('application/export_project_only=true', presets)
         self.assertIn('permissions/internet=false', presets)

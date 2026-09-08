@@ -4,6 +4,7 @@ const BOOT: PackedScene = preload("res://scenes/boot/boot.tscn")
 
 func run(context: TestContext, tree: SceneTree) -> bool:
 	var boot: BootScreen = BOOT.instantiate() as BootScreen
+	boot.save_path = "user://test_boot_m3.json"
 	tree.root.add_child(boot)
 	await tree.process_frame
 	context.check(boot.current_page == BootScreen.Page.MENU and boot.menu.visible, "boot opens menu")
@@ -12,6 +13,8 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 		context.check(InputMap.has_action(action), "declared input action: %s" % action)
 	(boot.menu.get_node("Start") as Button).pressed.emit()
 	context.check(boot.combat != null and not boot.menu.visible, "Start signal opens combat")
+	context.check(boot.combat.session.signal_progress != null, "New mission uses kill-meter flow")
+	context.check(boot.combat.session.active_combat != null, "New mission starts active combat flow")
 	var probe_seconds: float = boot.probe.clock.active_seconds
 	await tree.create_timer(0.08).timeout
 	context.check(boot.probe.clock.active_seconds == probe_seconds, "hidden diagnostic clock stays frozen during combat")

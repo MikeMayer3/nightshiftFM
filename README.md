@@ -1,15 +1,15 @@
 # Nightshift FM — Codex development handoff
 
-**M2 is implemented: one playable offline three-wave combat prototype.**
-M0 is accepted; iOS is deferred at the owner's request. M2 human playtest
-acceptance remains open. The title and haunted-radio theme are provisional.
+**M4 now includes support turrets with live cooldown bars, aimed bursts, and kill-earned offensive upgrades.**
+M0 is accepted; iOS is deferred at the owner's request. The M4 human fun gate remains open: three testers, two phone attempts each. The title and haunted-radio theme are provisional.
 
 Open `project.godot` in Godot 4.7.2 standard, or follow the
-[development instructions](docs/DEVELOPMENT.md). Select **Start · Three waves**.
-See [M2 controls and reproduction](docs/M2_COMBAT.md),
+[development instructions](docs/DEVELOPMENT.md). Select **New mission · Standard**
+or **Continue saved mission**. Read [support turrets and random-build tests](docs/M4_SUPPORT_TURRETS.md), [current controls and balance](docs/M4_ACTIVE_COMBAT.md), [kill-meter flow](docs/M4_SIGNAL_FLOW.md), [M4 mechanics](docs/M4_SLICE.md), [phone playtest](docs/M4_PLAYTEST.md),
 [implementation evidence](docs/IMPLEMENTATION_STATUS.md), and
-[mobile setup](docs/MOBILE_DEVELOPMENT.md). The current Android export is
-`builds/android/nightshift-m2.apk`. No M3 upgrades or mission saves are implemented.
+[mobile setup](docs/MOBILE_DEVELOPMENT.md). The Android debug export is
+`builds/android/nightshift-m4.apk`; download the installable APK from the
+[M4 0.4.3 playtest release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.4.3). Android 0.4.3/code 7. Existing M3/M4/Signal saves Continue with their original rules; choose New mission to play the new flow. Radio-tuner art comes later.
 
 ## Project in one paragraph
 
@@ -28,10 +28,10 @@ commands, to import with Godot 4.7.2 standard before running tests or the game.
 Generated `.godot/` caches, APKs/builds, credentials, and local saves are excluded.
 GitHub synchronizes source and evidence; it does not synchronize device saves.
 
-M2 is implemented, with its human playtest gate still open. Read
+M4 technical implementation is ready; human playtesting is still required. Read
 `docs/IMPLEMENTATION_STATUS.md` before continuing and request one milestone at a
 time. `prompts/START_HERE.md` preserves the original M0 prompt as history; do not
-restart the foundation or begin M3 automatically.
+restart the foundation or begin M5 before M4 gameplay acceptance.
 
 | File | Purpose |
 |---|---|

@@ -1,8 +1,8 @@
 keys,en
-BOOT_EYEBROW,OFFLINE • COMBAT PROTOTYPE M2
+BOOT_EYEBROW,OFFLINE • ACTIVE COMBAT PLAYTEST
 BOOT_TITLE,Nightshift FM
 BOOT_SUBTITLE,A little light on a haunted frequency.
-MENU_START,Start · Three waves
+MENU_START,New mission · Standard
 MENU_SETTINGS,Settings
 MENU_QUIT,Quit
 MENU_BACK,Back to menu
@@ -86,3 +86,402 @@ M2_WAVE_2_DESC,An authored prototype wave.
 M2_WAVE_3_NAME,Wave 3
 M2_WAVE_3_DESC,An authored prototype wave.
 COMBAT_LEGEND,● Swarmer   ▼ Diver   □ Carrier   ○ Incoming shot
+M3_MAIN_NAME,Pulse Transmitter
+M3_MAIN_PREVIEW,Rank 3: Ricochet → Rank 6: Long rebound → Rank 8: Broadcast burst.
+M3_MAIN_GAIN_NAME,Signal gain
+M3_MAIN_GAIN_DESC,+2 damage per hit.
+M3_MAIN_RATE_NAME,Quick pulse
+M3_MAIN_RATE_DESC,-0.04 seconds between attacks.
+M3_MAIN_REACH_NAME,Clean signal
+M3_MAIN_REACH_DESC,+1 damage per hit; -0.02 seconds between attacks.
+M3_MAIN_RICOCHET_NAME,Ricochet
+M3_MAIN_RICOCHET_DESC,+1 maximum distinct targets; -2 damage per hit.
+M3_MAIN_LONG_ROUTE_NAME,Long rebound
+M3_MAIN_LONG_ROUTE_DESC,+160 jump range; +0.08 seconds between attacks.
+M3_MAIN_CAPSTONE_NAME,Broadcast burst
+M3_MAIN_CAPSTONE_DESC,+2 maximum distinct targets.
+M3_SHIELD_NAME,Capacitor
+M3_SHIELD_PREVIEW,Rank 3: Bastion → Rank 6: Live coil → Rank 8: Night reserve.
+M3_SHIELD_RESERVE_NAME,Larger reserve
+M3_SHIELD_RESERVE_DESC,+12 shield capacity (no instant refill).
+M3_SHIELD_RECOVERY_NAME,Recovery coil
+M3_SHIELD_RECOVERY_DESC,+0.6 shield per second after hit delay.
+M3_SHIELD_HOLD_NAME,Long brace
+M3_SHIELD_HOLD_DESC,+0.5 brace seconds.
+M3_SHIELD_BASTION_NAME,Bastion
+M3_SHIELD_BASTION_DESC,+2 brace seconds; +2 brace cooldown seconds.
+M3_SHIELD_LIVE_COIL_NAME,Live coil
+M3_SHIELD_LIVE_COIL_DESC,"+6 shield per second while braced, even during hit delay; -0.5 shield per second after hit delay."
+M3_SHIELD_CAPSTONE_NAME,Night reserve
+M3_SHIELD_CAPSTONE_DESC,+30 shield capacity (no instant refill); -4 brace cooldown seconds.
+M3_ARC_AERIAL_NAME,Arc Aerial
+M3_ARC_AERIAL_PREVIEW,Rank 3: Storm Network → Rank 6: Long Route → Rank 8: Broadcast Storm.
+M3_ARC_AERIAL_GAIN_NAME,Coil gain
+M3_ARC_AERIAL_GAIN_DESC,+0.75 damage per hit.
+M3_ARC_AERIAL_RATE_NAME,Fast oscillator
+M3_ARC_AERIAL_RATE_DESC,-0.1 seconds between attacks.
+M3_ARC_AERIAL_REACH_NAME,Antenna reach
+M3_ARC_AERIAL_REACH_DESC,+34 jump range.
+M3_ARC_AERIAL_STORM_NAME,Storm Network
+M3_ARC_AERIAL_STORM_DESC,+2 maximum distinct targets; -1 damage per hit.
+M3_ARC_AERIAL_LONG_ROUTE_NAME,Long Route
+M3_ARC_AERIAL_LONG_ROUTE_DESC,+120 jump range; +0.2 seconds between attacks.
+M3_ARC_AERIAL_CAPSTONE_NAME,Broadcast Storm
+M3_ARC_AERIAL_CAPSTONE_DESC,+2 maximum distinct targets; +1 branching mode (each hit may branch from an earlier contact; total target cap still applies).
+M3_CONTINUE,Continue saved mission
+M3_DRAFT,Choose an upgrade
+M3_BONUS,Boost your support
+M3_RANKS,Ranks · Pulse %d / 8 · Shield %d / 8 · Arc %d / 8
+M3_DRAFT_HINT,Pick one card. Scroll to compare all offers. Combat is frozen; every choice is saved.
+M3_CARD_RANK,%s · Rank %d → %d
+M3_COMMON,Common tuning · Repeatable up to 4 picks
+M3_REQUIRED,Requires rank %d · Required branch; cannot banish
+M3_PREVIEW,Show / hide branch path
+M3_SELECT,Choose
+M3_BANISH_CARD,Banish · 1
+M3_REROLL,Reroll · %d
+M3_REROLL_HINT,Reroll spends one shared token and redraws options on these tracks; a sole required option stays. Banish excludes one common card for this mission and replaces offers. Ranks and waves stay unchanged.
+M3_REPAIR,Repair hull · Restore up to 10 hull. No rank increase.
+M3_REFILL,Refill shield · Restore up to 15 shield. No rank increase.
+M3_RECRUIT_TITLE,Support bonus
+M3_RECRUIT_BODY,Arc Aerial is your only available support. Take an extra upgrade for it.
+M3_DECLINE,Upgrade Arc Aerial
+M3_RECOVERY_TITLE,Checkpoint recovery
+M3_RETRY,Retry checkpoint
+M3_FRESH,Discard this mission · Start fresh
+M3_CORRUPT,"No compatible checkpoint could be recovered from the save, temporary file or backup. Retry after restoring a valid file, or start fresh. Starting fresh also resets an unrecoverable local profile."
+M3_SAVE_ERROR,The checkpoint could not be written. Combat is paused. Retry saving to keep this choice; returning to the menu loads the last durable checkpoint.
+M3_HEALTH,Hull %.0f / 100         Shield %.0f / %.0f
+M3_ABILITY_HINT,75%% less damage for %.1fs · %.1fs cooldown
+M3_PAUSE_BODY,"The mission is frozen.
+
+Hold and drag to focus; release for auto-aim. Purple chains are Arc Aerial.
+
+Closing the app replays the current wave from its start. Upgrade screens resume with the same cards. Use Continue from the menu."
+M3_RESULTS,"Wave %d / 10 · %.1f seconds
+
+Threats stopped: %d
+Shots intercepted: %d
+Enemies breached: %d
+Hull remaining: %.0f / 100
+
+%s
+
+A victory records one local completion. New missions reset all ranks and run bonuses."
+M3_MAIN_GAIN_SHORT,+2 damage
+M3_MAIN_RATE_SHORT,Fire faster · −0.04s between shots
+M3_MAIN_REACH_SHORT,+1 damage · Fire faster (−0.02s)
+M3_MAIN_RICOCHET_SHORT,Hit +1 target · −2 damage per hit
+M3_MAIN_LONG_ROUTE_SHORT,+160 jump range · Fire slower (+0.08s)
+M3_MAIN_CAPSTONE_SHORT,Hit +2 targets per burst
+M3_SHIELD_RESERVE_SHORT,+12 shield capacity
+M3_SHIELD_RECOVERY_SHORT,+0.6 shield recovery / sec
+M3_SHIELD_HOLD_SHORT,Brace lasts +0.5 seconds
+M3_SHIELD_BASTION_SHORT,+2s brace · +2s cooldown
+M3_SHIELD_LIVE_COIL_SHORT,"Heal 6 / sec while braced
+−0.5 / sec normal recovery"
+M3_SHIELD_CAPSTONE_SHORT,+30 shield capacity · −4s cooldown
+M3_ARC_AERIAL_GAIN_SHORT,+0.75 damage per hit
+M3_ARC_AERIAL_RATE_SHORT,Fire faster · −0.1s between attacks
+M3_ARC_AERIAL_REACH_SHORT,+34 chain range
+M3_ARC_AERIAL_STORM_SHORT,Chain to +2 targets · −1 damage per hit
+M3_ARC_AERIAL_LONG_ROUTE_SHORT,+120 chain range · Fire slower (+0.2s)
+M3_ARC_AERIAL_CAPSTONE_SHORT,Branching chains · Hit +2 targets
+M3_PICK_HINT,Wave %d cleared · Tap a card to choose
+M3_INFO,Details
+M3_RANK_SHORT,Rank %d → %d
+M3_BANISH_ACTION,Banish · %d
+M3_BANISH_TITLE,Banish a card
+M3_BANISH_HINT,Remove a common upgrade for this mission.
+M3_CANCEL_BANISH,Cancel
+M3_BACK_DRAFT,Back to upgrades
+M3_HELP,What do these do?
+M3_HELP_BODY,"Reroll spends 1 token to redraw these cards. Required options may stay.
+
+Banish spends 1 token to remove a common upgrade for this mission. Branch upgrades are protected."
+M3_DETAILS_PATH,Upgrade path
+M3_REPAIR_SHORT,Repair hull
+M3_REFILL_SHORT,Refill shield
+M3_REPAIR_EFFECT,Restore up to 10 hull
+M3_REFILL_EFFECT,Restore up to 15 shield
+M3_MAIN_SHORT_NAME,Pulse
+M3_SHIELD_SHORT_NAME,Shield
+M3_ARC_AERIAL_SHORT_NAME,Arc Aerial
+M3_SUPPORT_CAP_NOTE,Arc is fully upgraded. Take a repair or refill instead.
+M3_STATION,Station
+M3_RECOVERY_CHOICE,Choose a recovery
+M4_ARC_AERIAL_NAME,Arc Aerial
+M4_ARC_AERIAL_PREVIEW,Storm Network / Shield Tap. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
+M4_ARC_AERIAL_GAIN_NAME,Coil gain
+M4_ARC_AERIAL_GAIN_SHORT,+1 damage per hit
+M4_ARC_AERIAL_GAIN_DESC,+1 damage per hit.
+M4_ARC_AERIAL_RATE_NAME,Fast oscillator
+M4_ARC_AERIAL_RATE_SHORT,Fire faster · −0.1s between arcs
+M4_ARC_AERIAL_RATE_DESC,Fire faster · −0.1s between arcs.
+M4_ARC_AERIAL_REACH_NAME,Antenna reach
+M4_ARC_AERIAL_REACH_SHORT,+36 chain range
+M4_ARC_AERIAL_REACH_DESC,+36 chain range.
+M4_ARC_AERIAL_STORM_NAME,Storm Network
+M4_ARC_AERIAL_STORM_SHORT,Chain to +2 targets · 20% less damage
+M4_ARC_AERIAL_STORM_DESC,Hit up to four distinct targets at 80% damage. Each arc adds one Charged stack for 3s (maximum 3); each stack adds 5% arc damage.
+M4_ARC_AERIAL_TAP_NAME,Shield Tap
+M4_ARC_AERIAL_TAP_SHORT,Restore shield on hits · Fewer targets
+M4_ARC_AERIAL_TAP_DESC,"One target at 60% damage. Eligible direct hits restore up to 2 shield, at most once per 0.8s. No overheal. Each hit also fills a separate 12-point reservoir for Closed Circuit."
+M4_ARC_AERIAL_LONG_ROUTE_NAME,Long Route
+M4_ARC_AERIAL_LONG_ROUTE_SHORT,+120 chain range · 20% slower attacks
+M4_ARC_AERIAL_LONG_ROUTE_DESC,+120 chain range · 20% slower attacks.
+M4_ARC_AERIAL_TIGHT_NAME,Tight Circuit
+M4_ARC_AERIAL_TIGHT_SHORT,35% more arc damage · 40% less range
+M4_ARC_AERIAL_TIGHT_DESC,35% more arc damage · 40% less range.
+M4_ARC_AERIAL_QUICK_NAME,Quick Charge
+M4_ARC_AERIAL_QUICK_SHORT,30% faster arcs · Smaller shield gains
+M4_ARC_AERIAL_QUICK_DESC,Attack interval ×0.7. Each eligible restoration is reduced from 2 to 1.5 shield; shared 0.8s restoration cooldown remains.
+M4_ARC_AERIAL_RESERVE_NAME,Reserve Charge
+M4_ARC_AERIAL_RESERVE_SHORT,Store shield energy · Release on brace
+M4_ARC_AERIAL_RESERVE_DESC,Direct hits store 2 energy (maximum 12) instead of restoring shield immediately. Brace releases stored energy as effective shield restoration.
+M4_ARC_AERIAL_STORM_CAP_NAME,Broadcast Storm
+M4_ARC_AERIAL_STORM_CAP_SHORT,Branching arcs · Hit +2 targets
+M4_ARC_AERIAL_STORM_CAP_DESC,Branching arcs · Hit +2 targets.
+M4_ARC_AERIAL_TAP_CAP_NAME,Closed Circuit
+M4_ARC_AERIAL_TAP_CAP_SHORT,Full reservoir grants a brief overshield
+M4_ARC_AERIAL_TAP_CAP_DESC,"When brace consumes a full 12-point reservoir, grant 10 overshield for 4s. It absorbs before ordinary shield and cannot refill itself. Quick Charge also fills the reservoir on direct hits."
+M4_BASS_DRIVER_NAME,Bass Driver
+M4_BASS_DRIVER_PREVIEW,Wideband / Compression. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
+M4_BASS_DRIVER_GAIN_NAME,Heavy cone
+M4_BASS_DRIVER_GAIN_SHORT,+1.5 pulse damage
+M4_BASS_DRIVER_GAIN_DESC,+1.5 pulse damage.
+M4_BASS_DRIVER_RADIUS_NAME,Big cabinet
+M4_BASS_DRIVER_RADIUS_SHORT,+15 pulse radius
+M4_BASS_DRIVER_RADIUS_DESC,+15 pulse radius.
+M4_BASS_DRIVER_RATE_NAME,Quick beat
+M4_BASS_DRIVER_RATE_SHORT,Fire faster · −0.15s between pulses
+M4_BASS_DRIVER_RATE_DESC,Fire faster · −0.15s between pulses.
+M4_BASS_DRIVER_WIDE_NAME,Wideband
+M4_BASS_DRIVER_WIDE_SHORT,40% wider pulses · 20% less damage
+M4_BASS_DRIVER_WIDE_DESC,40% wider pulses · 20% less damage.
+M4_BASS_DRIVER_COMPRESSION_NAME,Compression
+M4_BASS_DRIVER_COMPRESSION_SHORT,Heavy armor-breaking hits · Narrow pulses
+M4_BASS_DRIVER_COMPRESSION_DESC,"Pulse radius ×0.65, damage ×1.5 and exposure +25 armor reduction for 3s. Armor cannot fall below zero. Up to eight enemies per pulse."
+M4_BASS_DRIVER_WIDE_CONE_NAME,Wide Cone
+M4_BASS_DRIVER_WIDE_CONE_SHORT,50% wider · 35% shorter reach
+M4_BASS_DRIVER_WIDE_CONE_DESC,50% wider · 35% shorter reach.
+M4_BASS_DRIVER_DEEP_NAME,Deep Cone
+M4_BASS_DRIVER_DEEP_SHORT,60% longer reach · 30% narrower
+M4_BASS_DRIVER_DEEP_DESC,60% longer reach · 30% narrower.
+M4_BASS_DRIVER_HARD_NAME,Hard Clip
+M4_BASS_DRIVER_HARD_SHORT,Strip more armor · 25% slower pulses
+M4_BASS_DRIVER_HARD_DESC,Add 25 armor reduction to exposure. Pulse interval ×1.25; armor floor remains zero.
+M4_BASS_DRIVER_DIRECT_NAME,Direct Injection
+M4_BASS_DRIVER_DIRECT_SHORT,50% more elite damage · Half knockback
+M4_BASS_DRIVER_DIRECT_DESC,50% more elite damage · Half knockback.
+M4_BASS_DRIVER_WALL_NAME,Wall of Sound
+M4_BASS_DRIVER_WALL_SHORT,Send a broad shockwave up the arena
+M4_BASS_DRIVER_WALL_DESC,"Replace the local pulse with a shockwave traveling up to 600 units upward at 400 units/s (234 with Wide Cone, 576 with Deep Cone). Hit each enemy once, up to 12 enemies per wave; damage and exposure retain branch modifiers."
+M4_BASS_DRIVER_CRUSH_NAME,Crushing Note
+M4_BASS_DRIVER_CRUSH_SHORT,Heavier pulses · Strip +20 armor
+M4_BASS_DRIVER_CRUSH_DESC,Pulse damage ×1.5 and exposure +20. Up to eight targets; armor floor zero. No percentage-health execution.
+M4_STATIC_NET_NAME,Static Net
+M4_STATIC_NET_PREVIEW,Dead Air / Interference Screen. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
+M4_STATIC_NET_SLOW_NAME,Thick static
+M4_STATIC_NET_SLOW_SHORT,+5% slow strength · 60% maximum
+M4_STATIC_NET_SLOW_DESC,+5% slow strength · 60% maximum.
+M4_STATIC_NET_RADIUS_NAME,Wide screen
+M4_STATIC_NET_RADIUS_SHORT,+18 field radius
+M4_STATIC_NET_RADIUS_DESC,+18 field radius.
+M4_STATIC_NET_DURATION_NAME,Long broadcast
+M4_STATIC_NET_DURATION_SHORT,Fields last +0.5 seconds
+M4_STATIC_NET_DURATION_DESC,Fields last +0.5 seconds.
+M4_STATIC_NET_DEAD_NAME,Dead Air
+M4_STATIC_NET_DEAD_SHORT,Stronger slow · Interrupt enemy abilities
+M4_STATIC_NET_DEAD_DESC,"Slow strength +15 percentage points (60% normal cap, 25% elite cap). Interrupt abilities for 0.35s; reapplication cooldown is 2s, or 4s for elites. Resistant targets retain a 20% ability-speed reduction."
+M4_STATIC_NET_SCREEN_NAME,Interference Screen
+M4_STATIC_NET_SCREEN_SHORT,Intercept +3 shots · Weaker slow
+M4_STATIC_NET_SCREEN_DESC,Intercept +3 shots · Weaker slow.
+M4_STATIC_NET_BLANK_NAME,Blank Channel
+M4_STATIC_NET_BLANK_SHORT,Longer interruption · 25% slower fields
+M4_STATIC_NET_BLANK_DESC,Interruption lasts 0.7s; activation interval ×1.25. Elite interruption is capped at 0.2s with 4s cooldown.
+M4_STATIC_NET_HUM_NAME,Low Hum
+M4_STATIC_NET_HUM_SHORT,Longer fields · Shorter interruption
+M4_STATIC_NET_HUM_DESC,Field duration +1.5s; interruption reduced to 0.15s. Slow ends 0.6s after leaving a field.
+M4_STATIC_NET_DENSE_NAME,Dense Mesh
+M4_STATIC_NET_DENSE_SHORT,Intercept +3 shots · 25% smaller fields
+M4_STATIC_NET_DENSE_DESC,Intercept +3 shots · 25% smaller fields.
+M4_STATIC_NET_WIDE_NAME,Wide Mesh
+M4_STATIC_NET_WIDE_SHORT,40% wider fields · Intercept −1 shot
+M4_STATIC_NET_WIDE_DESC,40% wider fields · Intercept −1 shot.
+M4_STATIC_NET_ZONE_NAME,Dead Zone
+M4_STATIC_NET_ZONE_SHORT,Long disruption · Elites resist repeat jams
+M4_STATIC_NET_ZONE_DESC,Field duration +1s and interruption +0.25s. Elite jam caps and cooldown still apply; immune targets retain the ability-speed reduction.
+M4_STATIC_NET_FIREWALL_NAME,Signal Firewall
+M4_STATIC_NET_FIREWALL_SHORT,Block up to 12 shots per field
+M4_STATIC_NET_FIREWALL_DESC,Each field has a total budget of 12 intercepted projectiles and lasts +1s. Budget never refills during the field. One active field at a time.
+M4_WAVE_NAME,Standard wave
+M4_WAVE_DESC,Protect the station through ten waves.
+M4_PLATED_NAME,Plated carrier
+M4_PLATED_DESC,Armored carrier with four telegraphed shots.
+M4_ELITE_NAME,Overseer
+M4_ELITE_DESC,Armored elite. Resists slow and knockback; repeat interruptions have a cooldown.
+M3_BASS_DRIVER_SHORT_NAME,Bass Driver
+M3_STATIC_NET_SHORT_NAME,Static Net
+M4_RECRUIT,Add a support?
+M4_RECRUIT_HINT,New equipment starts at rank 1. Or strengthen your current build.
+M4_BASS_DRIVER_ROLE,Area pulses push enemies back and strip armor.
+M4_STATIC_NET_ROLE,Fields slow enemies and block incoming shots.
+M4_KEEP_BUILD,Keep my build · Take a support upgrade
+M4_SWAP_BRANCH,Show %s instead
+M4_PATH_STEP,Rank %d · %s
+M4_REPORT,Contribution report
+M4_REPORT_HINT,"Effective output. Armor assistance is part of damage, not extra damage."
+M4_NO_OUTPUT,No effective output recorded.
+M4_BACK_RESULTS,Back to results
+M4_RANKS,%d supports · Builds reset each mission
+M4_LEGEND,"Purple: Charged · Blue: slowed · Orange: exposed
+Cross: jammed · Ring: incoming shot"
+M4_FINALE,Finale · Overseers resist control
+M4_METRIC_DAMAGE,%.0f damage
+M4_METRIC_SLOW_SECONDS,%.1fs movement prevented
+M4_METRIC_PUSH_DISTANCE,%.0f push distance
+M4_METRIC_INTERCEPTS,%.0f shots blocked
+M4_METRIC_HEALING,%.0f shield restored
+M4_METRIC_EXPOSURE_BONUS,%.0f armor assistance
+M4_METRIC_INTERRUPTS,%.0f interrupts
+M4_METRIC_ABSORBED,%.0f shield absorbed
+M4_METRIC_BREAKS,%.0f shield breaks
+M4_ELITE_TAG,ELITE
+SIGNAL_ARC_AERIAL_GAIN_NAME,Coil gain
+SIGNAL_ARC_AERIAL_GAIN_SHORT,+1 damage per hit
+SIGNAL_ARC_AERIAL_GAIN_DESC,+1 damage per hit.
+SIGNAL_ARC_AERIAL_SPEAR_CAP_NAME,Thunder Needle
+SIGNAL_ARC_AERIAL_SPEAR_CAP_SHORT,Pierce up to 3 aligned enemies
+SIGNAL_ARC_AERIAL_SPEAR_CAP_DESC,"A strike can hit three distinct enemies in a lane extending 220 units beyond the first target. Lane width is 24, or 12 with Needle Arc. Each target is hit once."
+SIGNAL_ARC_AERIAL_STORM_NAME,Storm Network
+SIGNAL_ARC_AERIAL_STORM_SHORT,Chain to +2 targets · 20% less damage
+SIGNAL_ARC_AERIAL_STORM_DESC,Hit up to four distinct targets at 80% damage. Each arc adds one Charged stack for 3s (maximum 3); each stack adds 5% arc damage.
+SIGNAL_ARC_AERIAL_STORM_CAP_NAME,Broadcast Storm
+SIGNAL_ARC_AERIAL_STORM_CAP_SHORT,Branching arcs · Hit +2 targets
+SIGNAL_ARC_AERIAL_STORM_CAP_DESC,Branching arcs · Hit +2 targets.
+SIGNAL_ARC_AERIAL_NEEDLE_NAME,Needle Arc
+SIGNAL_ARC_AERIAL_NEEDLE_SHORT,Pierce +30 armor · −15% damage
+SIGNAL_ARC_AERIAL_NEEDLE_DESC,Ignore 65 armor in total at 85% strike damage. The capstone uses a narrower 12-unit piercing lane.
+SIGNAL_ARC_AERIAL_RATE_NAME,Fast oscillator
+SIGNAL_ARC_AERIAL_RATE_SHORT,Fire faster · −0.1s between arcs
+SIGNAL_ARC_AERIAL_RATE_DESC,Fire faster · −0.1s between arcs.
+SIGNAL_ARC_AERIAL_SPEAR_NAME,Lightning Spear
+SIGNAL_ARC_AERIAL_SPEAR_SHORT,Heavy strike · Pierce 35 armor
+SIGNAL_ARC_AERIAL_SPEAR_DESC,"Strike one target for twice Arc damage, ignoring 35 armor. Replaces chain coverage with focused damage."
+SIGNAL_ARC_AERIAL_TIGHT_NAME,Tight Circuit
+SIGNAL_ARC_AERIAL_TIGHT_SHORT,35% more arc damage · 40% less range
+SIGNAL_ARC_AERIAL_TIGHT_DESC,35% more arc damage · 40% less range.
+SIGNAL_ARC_AERIAL_STRIKE_NAME,Capacitor Strike
+SIGNAL_ARC_AERIAL_STRIKE_SHORT,70% more damage · 50% slower
+SIGNAL_ARC_AERIAL_STRIKE_DESC,Multiply strike damage by 1.7 and attack interval by 1.5.
+SIGNAL_ARC_AERIAL_REACH_NAME,Antenna reach
+SIGNAL_ARC_AERIAL_REACH_SHORT,+36 chain range
+SIGNAL_ARC_AERIAL_REACH_DESC,+36 chain range.
+SIGNAL_ARC_AERIAL_LONG_ROUTE_NAME,Long Route
+SIGNAL_ARC_AERIAL_LONG_ROUTE_SHORT,+120 chain range · 20% slower attacks
+SIGNAL_ARC_AERIAL_LONG_ROUTE_DESC,+120 chain range · 20% slower attacks.
+SIGNAL_ARC_AERIAL_NAME,Arc Aerial
+SIGNAL_ARC_AERIAL_PREVIEW,Storm Network or Lightning Spear. Choose a modifier at rank 6 and a capstone at rank 8.
+SIGNAL_BASS_DRIVER_GAIN_NAME,Heavy cone
+SIGNAL_BASS_DRIVER_GAIN_SHORT,+1.5 pulse damage
+SIGNAL_BASS_DRIVER_GAIN_DESC,+1.5 pulse damage.
+SIGNAL_BASS_DRIVER_RADIUS_NAME,Big cabinet
+SIGNAL_BASS_DRIVER_RADIUS_SHORT,+15 pulse radius
+SIGNAL_BASS_DRIVER_RADIUS_DESC,+15 pulse radius.
+SIGNAL_BASS_DRIVER_COMPRESSION_NAME,Compression
+SIGNAL_BASS_DRIVER_COMPRESSION_SHORT,Heavy armor-breaking hits · Narrow pulses
+SIGNAL_BASS_DRIVER_COMPRESSION_DESC,"Pulse radius ×0.65, damage ×1.5 and exposure +25 armor reduction for 3s. Armor cannot fall below zero. Up to eight enemies per pulse."
+SIGNAL_BASS_DRIVER_WIDE_NAME,Wideband
+SIGNAL_BASS_DRIVER_WIDE_SHORT,40% wider pulses · 20% less damage
+SIGNAL_BASS_DRIVER_WIDE_DESC,40% wider pulses · 20% less damage.
+SIGNAL_BASS_DRIVER_WALL_NAME,Wall of Sound
+SIGNAL_BASS_DRIVER_WALL_SHORT,Send a broad shockwave up the arena
+SIGNAL_BASS_DRIVER_WALL_DESC,"Replace the local pulse with a shockwave traveling up to 600 units upward at 400 units/s (234 with Wide Cone, 576 with Deep Cone). Hit each enemy once, up to 12 enemies per wave; damage and exposure retain branch modifiers."
+SIGNAL_BASS_DRIVER_RATE_NAME,Quick beat
+SIGNAL_BASS_DRIVER_RATE_SHORT,Fire faster · −0.15s between pulses
+SIGNAL_BASS_DRIVER_RATE_DESC,Fire faster · −0.15s between pulses.
+SIGNAL_BASS_DRIVER_DEEP_NAME,Deep Cone
+SIGNAL_BASS_DRIVER_DEEP_SHORT,60% longer reach · 30% narrower
+SIGNAL_BASS_DRIVER_DEEP_DESC,60% longer reach · 30% narrower.
+SIGNAL_BASS_DRIVER_WIDE_CONE_NAME,Wide Cone
+SIGNAL_BASS_DRIVER_WIDE_CONE_SHORT,50% wider · 35% shorter reach
+SIGNAL_BASS_DRIVER_WIDE_CONE_DESC,50% wider · 35% shorter reach.
+SIGNAL_BASS_DRIVER_CRUSH_NAME,Crushing Note
+SIGNAL_BASS_DRIVER_CRUSH_SHORT,Heavier pulses · Strip +20 armor
+SIGNAL_BASS_DRIVER_CRUSH_DESC,Pulse damage ×1.5 and exposure +20. Up to eight targets; armor floor zero. No percentage-health execution.
+SIGNAL_BASS_DRIVER_DIRECT_NAME,Direct Injection
+SIGNAL_BASS_DRIVER_DIRECT_SHORT,50% more elite damage · Half knockback
+SIGNAL_BASS_DRIVER_DIRECT_DESC,50% more elite damage · Half knockback.
+SIGNAL_BASS_DRIVER_HARD_NAME,Hard Clip
+SIGNAL_BASS_DRIVER_HARD_SHORT,Strip more armor · 25% slower pulses
+SIGNAL_BASS_DRIVER_HARD_DESC,Add 25 armor reduction to exposure. Pulse interval ×1.25; armor floor remains zero.
+SIGNAL_BASS_DRIVER_NAME,Bass Driver
+SIGNAL_BASS_DRIVER_PREVIEW,Wideband / Compression. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
+SIGNAL_STATIC_NET_ZONE_NAME,Dead Zone
+SIGNAL_STATIC_NET_ZONE_SHORT,Long disruption · Elites resist repeat jams
+SIGNAL_STATIC_NET_ZONE_DESC,Field duration +1s and interruption +0.25s. Elite jam caps and cooldown still apply; immune targets retain the ability-speed reduction.
+SIGNAL_STATIC_NET_LIVE_CAP_NAME,Live Broadcast
+SIGNAL_STATIC_NET_LIVE_CAP_SHORT,50% more damage · +1s field duration
+SIGNAL_STATIC_NET_LIVE_CAP_DESC,Field damage ×1.5 and duration +1s. Every tick affects at most eight enemies. Fields never extend themselves.
+SIGNAL_STATIC_NET_RAPID_NAME,Rapid Current
+SIGNAL_STATIC_NET_RAPID_SHORT,Faster damage ticks · Lighter hits
+SIGNAL_STATIC_NET_RAPID_DESC,"Damage ticks every 0.5s instead of 0.75s, at 75% damage per tick."
+SIGNAL_STATIC_NET_BLANK_NAME,Blank Channel
+SIGNAL_STATIC_NET_BLANK_SHORT,Longer interruption · 25% slower fields
+SIGNAL_STATIC_NET_BLANK_DESC,Interruption lasts 0.7s; activation interval ×1.25. Elite interruption is capped at 0.2s with 4s cooldown.
+SIGNAL_STATIC_NET_RADIUS_NAME,Wide screen
+SIGNAL_STATIC_NET_RADIUS_SHORT,+18 field radius
+SIGNAL_STATIC_NET_RADIUS_DESC,+18 field radius.
+SIGNAL_STATIC_NET_SURGE_NAME,Surge Current
+SIGNAL_STATIC_NET_SURGE_SHORT,Double tick damage · Slower ticks
+SIGNAL_STATIC_NET_SURGE_DESC,"Damage per tick ×2, with 1.25 seconds between ticks."
+SIGNAL_STATIC_NET_GAIN_NAME,Static gain
+SIGNAL_STATIC_NET_GAIN_SHORT,+1 damage per field tick
+SIGNAL_STATIC_NET_GAIN_DESC,Add 1 damage to each field tick. Up to eight enemies can be damaged per tick.
+SIGNAL_STATIC_NET_HUM_NAME,Low Hum
+SIGNAL_STATIC_NET_HUM_SHORT,Longer fields · Shorter interruption
+SIGNAL_STATIC_NET_HUM_DESC,Field duration +1.5s; interruption reduced to 0.15s. Slow ends 0.6s after leaving a field.
+SIGNAL_STATIC_NET_DEAD_NAME,Dead Air
+SIGNAL_STATIC_NET_DEAD_SHORT,Stronger slow · Interrupt enemy abilities
+SIGNAL_STATIC_NET_DEAD_DESC,"Slow strength +15 percentage points (60% normal cap, 25% elite cap). Interrupt abilities for 0.35s; reapplication cooldown is 2s, or 4s for elites. Resistant targets retain a 20% ability-speed reduction."
+SIGNAL_STATIC_NET_RATE_NAME,Fast refresh
+SIGNAL_STATIC_NET_RATE_SHORT,Fields deploy 0.25s sooner
+SIGNAL_STATIC_NET_RATE_DESC,Reduce field activation interval by 0.25s; the active field is replaced when the next one deploys.
+SIGNAL_STATIC_NET_CURRENT_NAME,Live Current
+SIGNAL_STATIC_NET_CURRENT_SHORT,50% more field damage · Smaller area
+SIGNAL_STATIC_NET_CURRENT_DESC,"Field damage ×1.5, radius ×0.75 and slow strength ×0.5. The field retains two interception charges."
+SIGNAL_STATIC_NET_NAME,Static Net
+SIGNAL_STATIC_NET_PREVIEW,Dead Air or Live Current. Every field deals damage; choose control or stronger damage.
+SIGNAL_WAVE_NAME,Standard encounter
+SIGNAL_WAVE_DESC,Defeat enemies to fill the signal meter and choose more firepower.
+SIGNAL_METER,Signal · %d / %d
+SIGNAL_READY,Signal boosted
+SIGNAL_HINT,Choose an upgrade or a new weapon
+SIGNAL_NEW,New · Rank 1
+SIGNAL_BASS_DRIVER_NEW_NAME,Bass Driver
+SIGNAL_BASS_DRIVER_NEW_SHORT,Area damage · Push and strip armor
+SIGNAL_BASS_DRIVER_NEW_DESC,"Add a rank-1 Bass Driver. Its pulses deal area damage, expose armor and push enemies back. Uses one support slot."
+SIGNAL_STATIC_NET_NEW_NAME,Static Net
+SIGNAL_STATIC_NET_NEW_SHORT,Damage field · Slow enemies
+SIGNAL_STATIC_NET_NEW_DESC,"Add a rank-1 Static Net. Fields deal 3 damage every 0.75s to up to eight enemies, slow movement and intercept two shots. Uses one support slot."
+SIGNAL_OVERDRIVE_NAME,Overdrive
+SIGNAL_OVERDRIVE_SHORT,+25% weapon damage for 20 seconds
+SIGNAL_OVERDRIVE_DESC,Your weapons are fully ranked. Increase their damage by 25% for 20 seconds. Repeated choices refresh the duration without stacking.
+SIGNAL_PAUSE,"Combat is paused.
+
+Kills fill the signal meter. Each full meter grants an upgrade or a new weapon.
+
+Continue restores the latest upgrade decision or wave checkpoint, including enemies and meter progress."
+SIGNAL_HELP,Reroll spends one token to redraw offers. Banish removes a tuning card for this run. New weapons and branch choices cannot be banished.
+SIGNAL_FULL,Signal full
+ACTIVE_WAVE,Wave %d / %d
+ACTIVE_BURST,Burst · Aim and release
+ACTIVE_WAIT,Burst · %ds
+ACTIVE_PAUSE,"Aim and release on a group to fire a burst. It also interrupts shooters and clears nearby shots.
+
+Drag to direct automatic fire. The Burst button fires at your current target.
+
+Kills fill Signal. Upgrades pause the fight. Continue restores the latest wave or upgrade checkpoint."
+ACTIVE_REPORT,Aimed bursts: %d · Damage: %.0f
+ACTIVE_REPORT_HINT,Burst damage is included in Pulse damage above.

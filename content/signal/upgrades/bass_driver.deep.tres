@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"bass_driver.deep"
+name_key = &"SIGNAL_BASS_DRIVER_DEEP_NAME"
+description_key = &"SIGNAL_BASS_DRIVER_DEEP_DESC"
+target_id = &"bass_driver"
+required_rank = 6
+stack_cap = 1
+prerequisite = &"bass_driver.wide"
+excludes = Array[StringName]([&"bass_driver.wide_cone"])
+stat = &"modifier"
+amount = 2.0

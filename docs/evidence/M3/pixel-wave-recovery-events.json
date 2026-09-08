@@ -1,0 +1,14 @@
+[
+  {
+    "actors": 0,
+    "event": "start",
+    "focus": false,
+    "hull": 100.0,
+    "instances": 1,
+    "paused": false,
+    "phase": 1,
+    "seconds": 12.6166666666669,
+    "shield": 50.0,
+    "wave": 2
+  }
+]

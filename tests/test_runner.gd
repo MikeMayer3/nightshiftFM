@@ -6,6 +6,14 @@ const BOOT_TEST: Script = preload("res://tests/integration/test_boot.gd")
 const MOBILE_TEST: Script = preload("res://tests/integration/test_mobile_probe.gd")
 const COMBAT_TEST: Script = preload("res://tests/unit/test_combat.gd")
 const COMBAT_SCREEN_TEST: Script = preload("res://tests/integration/test_combat_screen.gd")
+const M3_SCREEN_TEST: Script = preload("res://tests/integration/test_m3_screen.gd")
+const M4_SCREEN_TEST: Script = preload("res://tests/integration/test_m4_screen.gd")
+const SIGNAL_SCREEN_TEST: Script = preload("res://tests/integration/test_signal_screen.gd")
+const ACTIVE_SCREEN: Script = preload("res://tests/integration/test_active_screen.gd")
+const ACTIVE_TEST: Script = preload("res://tests/unit/test_active.gd")
+const SIGNAL_TEST: Script = preload("res://tests/unit/test_signal.gd")
+const M4_TEST: Script = preload("res://tests/unit/test_m4.gd")
+const M3_TEST: Script = preload("res://tests/unit/test_m3.gd")
 const BOOT: PackedScene = preload("res://scenes/boot/boot.tscn")
 var _finished: bool = false
 
@@ -13,7 +21,7 @@ func _initialize() -> void:
 	_run.call_deferred()
 
 func _run() -> void:
-	create_timer(15.0).timeout.connect(_timeout)
+	create_timer(45.0).timeout.connect(_timeout)
 	if "--quit-smoke" in OS.get_cmdline_user_args():
 		var boot: BootScreen = BOOT.instantiate() as BootScreen
 		root.add_child(boot)
@@ -34,6 +42,14 @@ func _run() -> void:
 	context.check(mobile_completed == true, "mobile probe suite completed")
 	context.check(COMBAT_TEST.new().run(context) == true, "combat unit suite completed")
 	context.check(await COMBAT_SCREEN_TEST.new().run(context, self) == true, "combat screen suite completed")
+	context.check(M3_TEST.new().run(context) == true, "M3 suite completed")
+	context.check(await M3_SCREEN_TEST.new().run(context, self) == true, "M3 screen suite completed")
+	context.check(M4_TEST.new().run(context) == true, "M4 suite completed")
+	context.check(await M4_SCREEN_TEST.new().run(context, self) == true, "M4 screen suite completed")
+	context.check(SIGNAL_TEST.new().run(context) == true, "signal suite completed")
+	context.check(await SIGNAL_SCREEN_TEST.new().run(context, self) == true, "signal screen suite completed")
+	context.check(ACTIVE_TEST.new().run(context) == true, "active combat suite completed")
+	context.check(await ACTIVE_SCREEN.new().run(context, self) == true, "active screen suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true
@@ -42,5 +58,5 @@ func _run() -> void:
 
 func _timeout() -> void:
 	if not _finished:
-		printerr("FAIL: test runner exceeded 15 seconds")
+		printerr("FAIL: test runner exceeded 45 seconds")
 		quit(1)

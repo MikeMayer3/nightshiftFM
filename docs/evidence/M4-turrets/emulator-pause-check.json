@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "unchanged": {
+    "paused": true,
+    "seconds": 278.46666666674207,
+    "support_timers": {
+      "arc_aerial": 0.16666666666666635,
+      "bass_driver": 0.8166666666666701,
+      "static_net": 3.500000000000001
+    },
+    "cooldown": 4.0000000000000036,
+    "kills": 246,
+    "hull": 100.0
+  }
+}

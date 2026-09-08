@@ -1,0 +1,38 @@
+{
+  "aimed": {
+    "wins": 59,
+    "runs": 60,
+    "mean_damage_taken": 48.416666666666664,
+    "loss_waves": {
+      "10": 1
+    },
+    "winning_seconds": [
+      608.666666666442,
+      651.38333333307
+    ]
+  },
+  "paced": {
+    "wins": 57,
+    "runs": 60,
+    "mean_damage_taken": 61.71666666666667,
+    "loss_waves": {
+      "10": 2,
+      "8": 1
+    },
+    "winning_seconds": [
+      610.149999999774,
+      657.516666666397
+    ]
+  },
+  "idle": {
+    "wins": 0,
+    "runs": 60,
+    "mean_damage_taken": 188.43333333333334,
+    "loss_waves": {
+      "3": 55,
+      "2": 4,
+      "4": 1
+    },
+    "winning_seconds": []
+  }
+}

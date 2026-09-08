@@ -1,8 +1,23 @@
 class_name UpgradeDefinition
 extends ContentDefinition
-## Identity/reference skeleton only; no exposed upgrade cards or effects in M0.
-
+## Immutable authored option. Effects modify only a reconstructed runtime track.
 @export var target_id: StringName = &""
+@export var required_rank: int = 0 # 0 = common ranks 2/4/5/7
+@export var prerequisite: StringName = &""
+@export var excludes: Array[StringName] = []
+@export var stack_cap: int = 3
+@export var stat: StringName = &"damage"
+@export var amount: float = 0.0
+@export var second_stat: StringName = &""
+@export var second_amount: float = 0.0
 
 func referenced_ids() -> Array[StringName]:
 	return [target_id]
+
+func validate() -> PackedStringArray:
+	var errors: PackedStringArray = super.validate()
+	if required_rank not in [0, 3, 6, 8] or stack_cap < 1 or stack_cap > 4:
+		errors.append("rank/stack_cap: invalid upgrade grammar")
+	if not is_finite(amount) or not is_finite(second_amount):
+		errors.append("effects: must be finite")
+	return errors

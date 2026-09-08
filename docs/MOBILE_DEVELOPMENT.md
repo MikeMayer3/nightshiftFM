@@ -1,3 +1,8 @@
+> Current playable export: **M4 support turrets, 0.4.3/code 7**, `builds/android/nightshift-m4.apk`.
+> See [M4_ACTIVE_COMBAT.md](M4_ACTIVE_COMBAT.md) and [M4_PLAYTEST.md](M4_PLAYTEST.md) and the current
+> [implementation status](IMPLEMENTATION_STATUS.md). M1/M2 commands and results
+> below are historical platform setup/evidence; iOS remains deferred.
+
 # Mobile export and lifecycle spike
 
 M0 was accepted by the owner before this work. M1 adds only a diagnostic screen,

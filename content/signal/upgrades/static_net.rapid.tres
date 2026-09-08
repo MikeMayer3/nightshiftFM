@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"static_net.rapid"
+name_key = &"SIGNAL_STATIC_NET_RAPID_NAME"
+description_key = &"SIGNAL_STATIC_NET_RAPID_DESC"
+target_id = &"static_net"
+required_rank = 6
+stack_cap = 1
+prerequisite = &"static_net.current"
+excludes = Array[StringName]([&"static_net.surge"])
+stat = &"modifier"
+amount = 1.0

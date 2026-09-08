@@ -2,6 +2,10 @@ class_name EnemyDefinition
 extends ContentDefinition
 
 enum PathKind { STRAIGHT, DIVE, CARRIER }
+@export var armor: float = 0.0
+@export var elite: bool = false
+@export var jam_immune: bool = false
+@export var displacement_immune: bool = false
 @export var path_kind: PathKind = PathKind.STRAIGHT
 @export var health: float = 16.0
 @export var speed: float = 65.0
@@ -18,6 +22,8 @@ func validate() -> PackedStringArray:
 		var value: float = get(field)
 		if not is_finite(value) or value <= 0.0:
 			errors.append(field + ": must be finite and positive")
+	if not is_finite(armor) or armor < 0 or armor > 1000:
+		errors.append("armor: outside supported bounds")
 	if path_kind not in PathKind.values():
 		errors.append("path_kind: unknown path")
 	if child_limit < 0 or child_limit > 4 or projectile_limit < 0 or projectile_limit > 4:

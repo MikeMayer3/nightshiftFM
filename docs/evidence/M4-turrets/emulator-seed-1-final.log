@@ -1,0 +1,81 @@
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+cat: files/qa_telemetry.json: No such file or directory
+ANDROID SURFACE [0, 156, 1280, 2784]
+{"seed": 1, "wave": 1, "seconds": 2.883333333333328, "hull": 100.0, "kills": 0, "bursts": 0, "choices": 0, "fps": 13.0, "wall_seconds": 7.281}
+RANDOM CHOICE 0: recruit.bass_driver
+RANDOM CHOICE 1: recruit.static_net
+{"seed": 1, "wave": 1, "seconds": 18.133333333333585, "hull": 100.0, "kills": 15, "bursts": 3, "choices": 2, "fps": 16.0, "wall_seconds": 23.551}
+RANDOM CHOICE 2: arc_aerial.gain
+{"seed": 1, "wave": 1, "seconds": 33.599999999999376, "hull": 100.0, "kills": 30, "bursts": 6, "choices": 3, "fps": 14.0, "wall_seconds": 39.426}
+{"seed": 1, "wave": 2, "seconds": 49.01666666666517, "hull": 100.0, "kills": 41, "bursts": 8, "choices": 3, "fps": 16.0, "wall_seconds": 54.951}
+RANDOM CHOICE 3: static_net.rate
+{"seed": 1, "wave": 2, "seconds": 64.13333333333098, "hull": 100.0, "kills": 55, "bursts": 11, "choices": 4, "fps": 17.0, "wall_seconds": 70.705}
+RANDOM CHOICE 4: bass_driver.rate
+{"seed": 1, "wave": 2, "seconds": 79.49999999999677, "hull": 100.0, "kills": 70, "bursts": 14, "choices": 5, "fps": 17.0, "wall_seconds": 86.56}
+RANDOM CHOICE 5: arc_aerial.storm
+{"seed": 1, "wave": 3, "seconds": 94.51666666666259, "hull": 100.0, "kills": 81, "bursts": 16, "choices": 6, "fps": 17.0, "wall_seconds": 102.04}
+{"seed": 1, "wave": 3, "seconds": 109.6333333333284, "hull": 100.0, "kills": 93, "bursts": 19, "choices": 6, "fps": 16.0, "wall_seconds": 117.128}
+RANDOM CHOICE 6: main.rate
+{"seed": 1, "wave": 3, "seconds": 124.94999999999419, "hull": 100.0, "kills": 108, "bursts": 22, "choices": 7, "fps": 16.0, "wall_seconds": 132.956}
+RANDOM CHOICE 7: bass_driver.compression
+{"seed": 1, "wave": 3, "seconds": 140.2166666666704, "hull": 100.0, "kills": 124, "bursts": 25, "choices": 8, "fps": 17.0, "wall_seconds": 148.874}
+{"seed": 1, "wave": 4, "seconds": 155.2500000000157, "hull": 100.0, "kills": 131, "bursts": 27, "choices": 8, "fps": 17.0, "wall_seconds": 163.839}
+RANDOM CHOICE 8: static_net.dead
+{"seed": 1, "wave": 4, "seconds": 170.40000000002775, "hull": 100.0, "kills": 149, "bursts": 30, "choices": 9, "fps": 16.0, "wall_seconds": 179.57}
+{"seed": 1, "wave": 4, "seconds": 185.40000000003968, "hull": 100.0, "kills": 160, "bursts": 32, "choices": 9, "fps": 16.0, "wall_seconds": 194.694}
+RANDOM CHOICE 9: static_net.gain
+{"seed": 1, "wave": 4, "seconds": 200.78333333338526, "hull": 100.0, "kills": 179, "bursts": 35, "choices": 10, "fps": 15.0, "wall_seconds": 210.524}
+RANDOM CHOICE 10: bass_driver.rate
+{"seed": 1, "wave": 4, "seconds": 215.90000000006395, "hull": 100.0, "kills": 195, "bursts": 38, "choices": 11, "fps": 18.0, "wall_seconds": 225.788}
+{"seed": 1, "wave": 5, "seconds": 231.050000000076, "hull": 100.0, "kills": 208, "bursts": 41, "choices": 11, "fps": 16.0, "wall_seconds": 241.384}
+RANDOM CHOICE 11: arc_aerial.gain
+{"seed": 1, "wave": 5, "seconds": 246.46666666675495, "hull": 100.0, "kills": 225, "bursts": 43, "choices": 12, "fps": 14.0, "wall_seconds": 257.009}
+RANDOM CHOICE 12: static_net.rate
+{"seed": 1, "wave": 5, "seconds": 261.66666666675735, "hull": 100.0, "kills": 245, "bursts": 46, "choices": 13, "fps": 17.0, "wall_seconds": 272.745}
+RANDOM CHOICE 13: static_net.blank
+{"seed": 1, "wave": 6, "seconds": 277.16666666674325, "hull": 100.0, "kills": 257, "bursts": 49, "choices": 14, "fps": 16.0, "wall_seconds": 288.886}
+RANDOM CHOICE 14: bass_driver.radius
+{"seed": 1, "wave": 6, "seconds": 292.36666666672943, "hull": 100.0, "kills": 272, "bursts": 51, "choices": 15, "fps": 17.0, "wall_seconds": 304.538}
+{"seed": 1, "wave": 6, "seconds": 307.4333333333824, "hull": 100.0, "kills": 289, "bursts": 54, "choices": 15, "fps": 17.0, "wall_seconds": 319.74}
+RANDOM CHOICE 15: bass_driver.direct
+{"seed": 1, "wave": 6, "seconds": 322.7166666667018, "hull": 100.0, "kills": 301, "bursts": 56, "choices": 16, "fps": 17.0, "wall_seconds": 335.445}
+RANDOM CHOICE 16: bass_driver.gain
+{"seed": 1, "wave": 7, "seconds": 338.25000000002103, "hull": 100.0, "kills": 314, "bursts": 59, "choices": 17, "fps": 16.0, "wall_seconds": 351.55}
+{"seed": 1, "wave": 7, "seconds": 353.8000000000069, "hull": 100.0, "kills": 330, "bursts": 62, "choices": 17, "fps": 15.0, "wall_seconds": 367.067}
+RANDOM CHOICE 17: bass_driver.crush
+{"seed": 1, "wave": 7, "seconds": 369.2333333333262, "hull": 100.0, "kills": 345, "bursts": 64, "choices": 18, "fps": 16.0, "wall_seconds": 382.652}
+RANDOM CHOICE 18: main.ricochet
+{"seed": 1, "wave": 7, "seconds": 384.71666666664544, "hull": 100.0, "kills": 359, "bursts": 67, "choices": 19, "fps": 16.0, "wall_seconds": 398.674}
+RANDOM CHOICE 19: static_net.radius
+{"seed": 1, "wave": 7, "seconds": 399.99999999996487, "hull": 100.0, "kills": 376, "bursts": 69, "choices": 20, "fps": 17.0, "wall_seconds": 414.307}
+{"seed": 1, "wave": 7, "seconds": 415.0166666666179, "hull": 100.0, "kills": 393, "bursts": 72, "choices": 20, "fps": 16.0, "wall_seconds": 429.442}
+RANDOM CHOICE 20: main.reach
+{"seed": 1, "wave": 8, "seconds": 430.1666666666041, "hull": 100.0, "kills": 410, "bursts": 75, "choices": 21, "fps": 15.0, "wall_seconds": 445.23}
+RANDOM CHOICE 21: arc_aerial.reach
+{"seed": 1, "wave": 8, "seconds": 445.19999999992376, "hull": 100.0, "kills": 425, "bursts": 77, "choices": 22, "fps": 17.0, "wall_seconds": 460.739}
+RANDOM CHOICE 22: arc_aerial.tight
+{"seed": 1, "wave": 8, "seconds": 460.7166666665763, "hull": 100.0, "kills": 439, "bursts": 80, "choices": 23, "fps": 15.0, "wall_seconds": 476.924}
+{"seed": 1, "wave": 8, "seconds": 476.23333333322887, "hull": 100.0, "kills": 449, "bursts": 82, "choices": 23, "fps": 16.0, "wall_seconds": 492.558}
+RANDOM CHOICE 23: static_net.zone
+{"seed": 1, "wave": 9, "seconds": 491.56666666654826, "hull": 100.0, "kills": 465, "bursts": 85, "choices": 24, "fps": 18.0, "wall_seconds": 508.346}
+{"seed": 1, "wave": 9, "seconds": 506.8499999998677, "hull": 100.0, "kills": 476, "bursts": 87, "choices": 24, "fps": 16.0, "wall_seconds": 523.516}
+RANDOM CHOICE 24: main.rate
+{"seed": 1, "wave": 9, "seconds": 521.949999999854, "hull": 100.0, "kills": 491, "bursts": 90, "choices": 25, "fps": 17.0, "wall_seconds": 538.793}
+RANDOM CHOICE 25: arc_aerial.gain
+{"seed": 1, "wave": 9, "seconds": 537.1499999998401, "hull": 100.0, "kills": 501, "bursts": 92, "choices": 26, "fps": 17.0, "wall_seconds": 554.488}
+{"seed": 1, "wave": 9, "seconds": 552.4666666664929, "hull": 100.0, "kills": 516, "bursts": 95, "choices": 26, "fps": 16.0, "wall_seconds": 569.795}
+RANDOM CHOICE 26: arc_aerial.storm_cap
+{"seed": 1, "wave": 10, "seconds": 567.5499999998125, "hull": 100.0, "kills": 527, "bursts": 97, "choices": 27, "fps": 16.0, "wall_seconds": 585.422}
+{"seed": 1, "wave": 10, "seconds": 583.0833333331317, "hull": 100.0, "kills": 538, "bursts": 100, "choices": 27, "fps": 15.0, "wall_seconds": 601.144}
+RANDOM CHOICE 27: main.long_route
+{"seed": 1, "wave": 10, "seconds": 598.183333333118, "hull": 100.0, "kills": 555, "bursts": 103, "choices": 28, "fps": 15.0, "wall_seconds": 616.87}
+RANDOM CHOICE 28: main.rate
+{"seed": 1, "wave": 10, "seconds": 613.7166666664372, "hull": 100.0, "kills": 572, "bursts": 105, "choices": 29, "fps": 14.0, "wall_seconds": 632.948}
+RANDOM CHOICE 29: main.capstone
+{"seed": 1, "wave": 10, "seconds": 629.2999999997563, "hull": 100.0, "kills": 585, "bursts": 108, "choices": 30, "fps": 16.0, "wall_seconds": 649.008}
+FINISHED {"bursts": 110, "choices": 30, "cooldown": 4.916666666666667, "coordinates": {"arena": "[P: (12.0, 224.0), S: (696.0, 1144.0)]", "canvas": "[X: (1.0, 0.0), Y: (0.0, 1.0), O: (12.0, 224.0)]", "origin": "(0, 0)", "safe": "[P: (0, 0), S: (1280, 2628)]", "stretch": "[X: (1.777778, 0.0), Y: (0.0, 1.778078), O: (0.0, 0.0)]", "viewport": "[P: (0.0, 0.0), S: (720.0, 1478.0)]", "window": "(1280, 2628)"}, "decisions": [{"bonus": false, "id": "recruit.bass_driver"}, {"bonus": false, "id": "recruit.static_net"}, {"bonus": false, "id": "arc_aerial.gain"}, {"bonus": false, "id": "static_net.rate"}, {"bonus": false, "id": "bass_driver.rate"}, {"bonus": false, "id": "arc_aerial.storm"}, {"bonus": false, "id": "main.rate"}, {"bonus": false, "id": "bass_driver.compression"}, {"bonus": false, "id": "static_net.dead"}, {"bonus": false, "id": "static_net.gain"}, {"bonus": false, "id": "bass_driver.rate"}, {"bonus": false, "id": "arc_aerial.gain"}, {"bonus": false, "id": "static_net.rate"}, {"bonus": false, "id": "static_net.blank"}, {"bonus": false, "id": "bass_driver.radius"}, {"bonus": false, "id": "bass_driver.direct"}, {"bonus": false, "id": "bass_driver.gain"}, {"bonus": false, "id": "bass_driver.crush"}, {"bonus": false, "id": "main.ricochet"}, {"bonus": false, "id": "static_net.radius"}, {"bonus": false, "id": "main.reach"}, {"bonus": false, "id": "arc_aerial.reach"}, {"bonus": false, "id": "arc_aerial.tight"}, {"bonus": false, "id": "static_net.zone"}, {"bonus": false, "id": "main.rate"}, {"bonus": false, "id": "arc_aerial.gain"}, {"bonus": false, "id": "arc_aerial.storm_cap"}, {"bonus": false, "id": "main.long_route"}, {"bonus": false, "id": "main.rate"}, {"bonus": false, "id": "main.capstone"}], "equipped": ["arc_aerial", "bass_driver", "static_net"], "finished": true, "fps": 15.0, "hull": 100.0, "kills": 588, "paused": false, "phase": 2, "save_failed": false, "seconds": 636.0499999997502, "seed": 1, "support_timers": {"arc_aerial": 0.8333333333333339, "bass_driver": 0.8000000000000034, "static_net": 0.8583333333333457}, "victory": true, "wave": 10, "wall_seconds": 656.068}

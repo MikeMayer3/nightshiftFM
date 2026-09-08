@@ -1,0 +1,36 @@
+{
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "avd": "Pixel_10_Pro",
+  "android": "17 / API 37",
+  "rendering": "software GLES Compatibility",
+  "source_manifest": "qa-source-manifest.json",
+  "normal_speed": true,
+  "godot_checks": 726,
+  "python_checks": 7,
+  "final_random_simulations": 180,
+  "emulator": {
+    "seed": 1,
+    "victory": true,
+    "wave": 10,
+    "hull": 100.0,
+    "kills": 588,
+    "choices": 30,
+    "bursts": 110,
+    "simulation_seconds": 636.0499999997502,
+    "wall_seconds": 656.068,
+    "fps_median": 16.0,
+    "random_choice_audit": {
+      "pass": true,
+      "count": 30,
+      "mismatches": []
+    }
+  },
+  "physical_device": "NOT RUN",
+  "human_acceptance": "NOT RUN",
+  "regular_emulator_install": {
+    "result": "PASS",
+    "package": "org.nightshiftfm.spike",
+    "version": "0.4.3",
+    "code": 7
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "profile": {
+    "completed": 0,
+    "next_run": 2,
+    "rewarded_runs": [],
+    "schema": 1,
+    "unlocked": [
+      "main",
+      "shield",
+      "arc_aerial"
+    ]
+  },
+  "run": {
+    "content": "m3.1",
+    "draft": {
+      "absences": {
+        "arc_aerial": 0,
+        "main": 0,
+        "shield": 0
+      },
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "arc_aerial.rate"
+        },
+        {
+          "bonus": false,
+          "id": "arc_aerial.storm"
+        },
+        {
+          "bonus": false,
+          "id": "shield.recovery"
+        },
+        {
+          "bonus": true,
+          "id": "arc_aerial.rate"
+        }
+      ],
+      "banished": [
+        "shield.reserve"
+      ],
+      "banishes": 0,
+      "bonus": true,
+      "bonus_count": 1,
+      "normal_count": 3,
+      "offers": [],
+      "rerolls": 1,
+      "screen_tracks": [],
+      "tracks": [
+        {
+          "choices": [],
+          "id": "main"
+        },
+        {
+          "choices": [
+            "shield.recovery"
+          ],
+          "id": "shield"
+        },
+        {
+          "choices": [
+            "arc_aerial.rate",
+            "arc_aerial.storm",
+            "arc_aerial.rate"
+          ],
+          "id": "arc_aerial"
+        }
+      ]
+    },
+    "engine": "4.7.2-stable (official)",
+    "last_cause": "COMBAT_NO_DAMAGE",
+    "last_kind": "COMBAT_BREACH_HIT",
+    "random": {
+      "combat": "-7882414249668845337",
+      "cosmetic": "-1775549775170884844",
+      "draft": "11318869779894583",
+      "seed": "1848544828",
+      "wave": "-7074021531574416964"
+    },
+    "recruitment_done": [
+      2
+    ],
+    "run_id": "run.1",
+    "schema": 1,
+    "shield": 50.0,
+    "values": {
+      "_serial": 6,
+      "ability_left": 0.0,
+      "ability_wait": 0.0,
+      "attack_serial": 18,
+      "breaches": 0,
+      "damage_taken": 0.0,
+      "elapsed": 12.6166666666669,
+      "event_serial": 42,
+      "hull": 100.0,
+      "intercepted": 0,
+      "kills": 6,
+      "phase": 1,
+      "phase_time": 0.0,
+      "recharge_time": 0.0,
+      "shot_time": 0.48,
+      "spawn_index": 0,
+      "spawn_time": 0.0,
+      "support_time": 0.766666666666667,
+      "wave": 2
+    }
+  },
+  "schema": 1
+}

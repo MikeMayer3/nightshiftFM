@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"arc_aerial.storm"
+name_key = &"SIGNAL_ARC_AERIAL_STORM_NAME"
+description_key = &"SIGNAL_ARC_AERIAL_STORM_DESC"
+target_id = &"arc_aerial"
+required_rank = 3
+stack_cap = 1
+prerequisite = &""
+excludes = Array[StringName]([&"arc_aerial.spear"])
+stat = &"mode"
+amount = 1.0

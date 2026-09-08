@@ -1,0 +1,5 @@
+{
+  "result": "PASS",
+  "check": "Physical info-button tap preserved all saved offers, counters, ranks and RNG",
+  "normal_count": 4
+}

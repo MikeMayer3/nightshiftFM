@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "normal_count": 4,
+  "steps": [
+    {
+      "action": "info",
+      "x": 945,
+      "y": 602,
+      "saved_envelope_unchanged": true
+    },
+    {
+      "action": "back",
+      "x": 540,
+      "y": 930,
+      "saved_envelope_unchanged": true
+    },
+    {
+      "action": "banish",
+      "x": 795,
+      "y": 1745,
+      "saved_envelope_unchanged": true
+    },
+    {
+      "action": "cancel",
+      "x": 795,
+      "y": 1745,
+      "saved_envelope_unchanged": true
+    }
+  ]
+}

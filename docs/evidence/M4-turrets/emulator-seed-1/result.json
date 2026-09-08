@@ -1,0 +1,81 @@
+{
+  "bursts": 35,
+  "choices": 13,
+  "cooldown": 0.833333333333347,
+  "decisions": [
+    {
+      "bonus": false,
+      "id": "recruit.bass_driver"
+    },
+    {
+      "bonus": false,
+      "id": "recruit.static_net"
+    },
+    {
+      "bonus": false,
+      "id": "arc_aerial.gain"
+    },
+    {
+      "bonus": false,
+      "id": "static_net.rate"
+    },
+    {
+      "bonus": false,
+      "id": "bass_driver.rate"
+    },
+    {
+      "bonus": false,
+      "id": "arc_aerial.storm"
+    },
+    {
+      "bonus": false,
+      "id": "main.rate"
+    },
+    {
+      "bonus": false,
+      "id": "bass_driver.compression"
+    },
+    {
+      "bonus": false,
+      "id": "static_net.dead"
+    },
+    {
+      "bonus": false,
+      "id": "static_net.gain"
+    },
+    {
+      "bonus": false,
+      "id": "bass_driver.rate"
+    },
+    {
+      "bonus": false,
+      "id": "arc_aerial.gain"
+    },
+    {
+      "bonus": false,
+      "id": "static_net.rate"
+    }
+  ],
+  "equipped": [
+    "arc_aerial",
+    "bass_driver",
+    "static_net"
+  ],
+  "finished": true,
+  "fps": 14.0,
+  "hull": 0.0,
+  "kills": 232,
+  "paused": false,
+  "phase": 3,
+  "save_failed": false,
+  "seconds": 288.9000000000659,
+  "seed": 1,
+  "support_timers": {
+    "arc_aerial": 1.0833333333333341,
+    "bass_driver": 0.5166666666666692,
+    "static_net": 1.4833333333333414
+  },
+  "victory": false,
+  "wave": 5,
+  "wall_seconds": 299.582
+}

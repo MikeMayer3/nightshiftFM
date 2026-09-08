@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"main.ricochet"
+name_key = &"M3_MAIN_RICOCHET_NAME"
+description_key = &"M3_MAIN_RICOCHET_DESC"
+target_id = &"main"
+required_rank = 3
+stack_cap = 1
+prerequisite = &""
+stat = &"targets"
+amount = 1.0
+second_stat = &"damage"
+second_amount = -2.0

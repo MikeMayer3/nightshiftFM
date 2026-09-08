@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=8 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/upgrades/main.gain.tres" id="2"]
+[ext_resource type="Resource" path="res://content/upgrades/main.rate.tres" id="3"]
+[ext_resource type="Resource" path="res://content/upgrades/main.reach.tres" id="4"]
+[ext_resource type="Resource" path="res://content/upgrades/main.ricochet.tres" id="5"]
+[ext_resource type="Resource" path="res://content/upgrades/main.long_route.tres" id="6"]
+[ext_resource type="Resource" path="res://content/upgrades/main.capstone.tres" id="7"]
+[resource]
+script = ExtResource("1")
+id = &"main"
+name_key = &"M3_MAIN_NAME"
+preview_key = &"M3_MAIN_PREVIEW"
+support = false
+baseline = {&"damage": 8.0, &"interval": 0.48, &"targets": 1.0, &"range": 200.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7")]

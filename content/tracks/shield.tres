@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=8 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.reserve.tres" id="2"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.recovery.tres" id="3"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.hold.tres" id="4"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.bastion.tres" id="5"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.live_coil.tres" id="6"]
+[ext_resource type="Resource" path="res://content/upgrades/shield.capstone.tres" id="7"]
+[resource]
+script = ExtResource("1")
+id = &"shield"
+name_key = &"M3_SHIELD_NAME"
+preview_key = &"M3_SHIELD_PREVIEW"
+support = false
+baseline = {&"capacity": 50.0, &"recharge": 3.0, &"duration": 2.5, &"cooldown": 12.0, &"brace_recharge": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7")]

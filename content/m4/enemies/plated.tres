@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m4.plated"
+name_key = &"M4_PLATED_NAME"
+description_key = &"M4_PLATED_DESC"
+path_kind = 2
+health = 70.0
+speed = 28.0
+radius = 27.0
+breach_damage = 22.0
+projectile_limit = 4
+ability_interval = 4.0
+armor = 55.0
+elite = false

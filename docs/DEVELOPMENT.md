@@ -1,7 +1,7 @@
 # Development and reproduction
 
 M0 is accepted. These foundation instructions still apply; see
-[M2_COMBAT.md](M2_COMBAT.md) for the current playable mission and
+[M4_ACTIVE_COMBAT.md](M4_ACTIVE_COMBAT.md) for the current playable mission and
 [MOBILE_DEVELOPMENT.md](MOBILE_DEVELOPMENT.md) for export setup and M1 probes.
 
 The project root is `nightshift_fm_codex_pack/`, beside its existing `AGENTS.md`.
@@ -89,7 +89,7 @@ echo "$?" # Must be 1 after the engine actually ran the intentional failure.
 ```
 
 `check_foundation.py` uses Python 3.9+ standard library only. It checks resource
-paths, localization coverage, the bounded nine-definition M2 fixture, and the
+paths, localization coverage, the bounded 78-resource M2/M3/M4 catalog, and the
 wrapper using an explicitly fake executable in a temporary directory. Its PASS
 does **not** establish Godot import, GDScript parsing, scene layout, or gameplay.
 
@@ -101,8 +101,7 @@ a 15-second watchdog. Also inspect logs for script/import errors: a bare process
 exit is not enough evidence of a clean Godot import or smoke run.
 
 The invalid `.tres` fixtures are expected to print useful ID/path/field errors;
-these are asserted by the suite and are not unexpected engine errors. Definition
-validation covers the implemented M0–M2 fields, not later upgrade/catalog rules.
+these are asserted by the suite and are not unexpected engine errors. Definition validation covers M0–M4 fields and exposed effects.
 `--quit-smoke` emits the actual Quit button signal and should terminate with 0;
 if Quit does nothing it exits 1. This is separate from the main suite because
 Quit terminates the test process. Button-signal tests do not certify mouse/touch
@@ -117,7 +116,7 @@ need to be deleted. GitHub handoff and fresh-clone evidence are recorded separat
 
 1. Launch `run`. Inspect the portrait 450 × 800 desktop window (720 × 1280 logical
    canvas). Confirm the title, geometric transmitter, and three menu buttons fit.
-2. Click Start: confirm the honest stand-by placeholder, then Back.
+2. Click New mission: play a wave and inspect all draft cards, then use Back to menu and Continue.
 3. Click Settings: toggle the decorative signal, return, and reopen Settings.
    Confirm the session-only preference remains and the radio cabinet stays visible.
 4. Try Escape from both pages, Tab/Shift-Tab and Enter/Space for navigation.
@@ -129,34 +128,23 @@ The portrait settings follow the official
 [ProjectSettings API](https://docs.godotengine.org/en/stable/classes/class_projectsettings.html).
 The fixed aspect is deliberate; safe-area probes and mobile input/export checks
 are M1 work. M0 reserves `pause` (P), `focus_target` (left mouse), `aim_override`
-(right mouse), and `shield_ability` (Space); these have no combat handlers yet.
+(right mouse), and `shield_ability` (Space); combat uses the pause, focus and shield actions.
 `menu_back` uses Escape; Godot's built-in UI actions handle focus and activation.
 
 ## Architecture boundary
 
-`scripts/core/definitions/` contains the nine requested Resource skeletons.
-`content/` has no production definitions. The four `.tres` files under tests are
-synthetic schema fixtures, not a populated weapon or mission catalog.
-Godot [Resources](https://docs.godotengine.org/en/stable/classes/class_resource.html)
-are shared/mutable objects: M0 imposes an explicit read-only ownership contract.
-Runtime code copies scalar baselines and IDs into `WeaponState`/`ShieldState`;
-it must never write back to loaded definitions. Tests cover that separation.
-M0 does not claim engine-enforced freezing of arbitrary Resource fields.
+`CombatSession` is the renderer-independent simulation. A plain session retains
+the M2 fixture for regression tests; the boot menu starts M4; existing M3 saves retain their original content.
+`DraftState`, `UpgradeTrack` and `RunRandom` own per-run progression state.
+`TrackDefinition` and `UpgradeDefinition` resources remain read-only. `MissionStore`
+validates and writes the profile/run envelope; `MissionProfile` owns persistent
+option IDs and the idempotent completion record. No permanent combat-stat field
+is stored in the profile. The earlier M0 `ProfileState` skeleton and M1 diagnostic
+store remain isolated from production mission saves.
 
-`RunState` and `ProfileState` are data shapes, not a mission/save implementation.
-Run collections are per-instance. Profile holds unlock and cosmetic IDs, with no
-permanent damage/rank fields. Weapon and shield state expose plain-data snapshots;
-validated loading, complete run/profile serialization, RNG state, migrations,
-checkpoint replay, reset orchestration, and rewards remain in later milestones.
-One main slot, one shield slot, five support slots, and the six family identities
-are declared in `GameRules`; no support recruitment/equip operation exists yet.
-
-There are no autoload services, combat actors, network calls, backend, native
-integrations, or purchase systems. M1 now adds isolated save/lifecycle probes;
-these do not implement mission saves or gameplay. Remaining future folders
-are kept by `.gitkeep`; adding empty service classes would imply functionality
-that M0 does not need. Definition-specific compatibility, branch validation,
-unlock graphs, and effect schemas must arrive alongside the behavior they validate.
+See [M3_UPGRADES.md](M3_UPGRADES.md) for save schemas, checkpoint replay,
+recruitment limits, RNG precision and the exact exposed branch scope. No backend,
+account service, native achievements or later-milestone arsenal was added.
 
 ## Dependencies and assets
 
@@ -167,3 +155,11 @@ The transmitter consists of original lines, arcs, circles, and a rectangle drawn
 by this project. No commercial music, copyrighted asset pack, account, credential,
 or Internet connection is required to run the imported foundation. Obtain engine
 license notices from the matching official distribution when packaging later.
+
+## M4 playtest slice
+
+Run `"$GODOT_BIN" --path . --script res://tests/visual_m4.gd` for isolated desktop
+rendering evidence. Add `-- --interactive` to leave its draft open for clicking.
+The expanded suite covers the three-family slice, branch behavior, elite status
+resistance, reports, physical-save-compatible checkpoints and two automated builds.
+Read [M4_PLAYTEST.md](M4_PLAYTEST.md) for the separate human acceptance gate.

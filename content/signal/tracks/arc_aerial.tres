@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=13 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.gain.tres" id="2"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.rate.tres" id="3"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.reach.tres" id="4"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.storm.tres" id="5"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.spear.tres" id="6"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.long_route.tres" id="7"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.tight.tres" id="8"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.needle.tres" id="9"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.strike.tres" id="10"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.storm_cap.tres" id="11"]
+[ext_resource type="Resource" path="res://content/signal/upgrades/arc_aerial.spear_cap.tres" id="12"]
+[resource]
+script = ExtResource("1")
+id = &"arc_aerial"
+name_key = &"SIGNAL_ARC_AERIAL_NAME"
+preview_key = &"SIGNAL_ARC_AERIAL_PREVIEW"
+support = true
+baseline = {&"damage": 6.0, &"interval": 1.3, &"range": 180.0, &"targets": 2.0, &"mode": 0.0, &"modifier": 0.0, &"capstone": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")]

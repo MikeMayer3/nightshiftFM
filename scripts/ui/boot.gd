@@ -3,6 +3,9 @@ extends Control
 
 enum Page { MENU, START_PLACEHOLDER, SETTINGS, MOBILE_CHECKS, COMBAT }
 const COMBAT_SCENE: PackedScene = preload("res://scenes/combat/combat.tscn")
+var save_path: String = "user://m3_mission.json"
+var continue_button: Button
+var _continuing: bool = false
 var combat: CombatScreen
 var current_page: Page = Page.MENU
 
@@ -22,6 +25,15 @@ func _ready() -> void:
 	(start_placeholder.get_node("Back") as Button).pressed.connect(show_page.bind(Page.MENU))
 	(settings.get_node("Back") as Button).pressed.connect(show_page.bind(Page.MENU))
 	(settings.get_node("ShowSignal") as CheckButton).toggled.connect(_set_signal_visible)
+	continue_button = Button.new()
+	continue_button.text = tr("M3_CONTINUE")
+	continue_button.custom_minimum_size.y = 84
+	continue_button.add_theme_font_size_override("font_size", 28)
+	menu.add_child(continue_button)
+	menu.move_child(continue_button, 1)
+	continue_button.pressed.connect(func() -> void:
+		_continuing = true
+		show_page(Page.COMBAT))
 	show_page(Page.MENU)
 
 func show_page(page: Page) -> void:
@@ -37,12 +49,20 @@ func show_page(page: Page) -> void:
 	probe.set_enabled(page == Page.MOBILE_CHECKS)
 	if page == Page.COMBAT:
 		combat = COMBAT_SCENE.instantiate() as CombatScreen
+		combat.m3_enabled = true
+		combat.m4_enabled = true
+		combat.signal_enabled = true
+		combat.active_enabled = true
+		combat.resume_existing = _continuing
+		combat.store = MissionStore.new(save_path)
+		_continuing = false
 		add_child(combat)
 		combat.back_requested.connect(show_page.bind(Page.MENU))
 	elif page != Page.MOBILE_CHECKS:
 		get_tree().paused = false
 	match page:
 		Page.MENU:
+			continue_button.visible = FileAccess.file_exists(save_path) or FileAccess.file_exists(save_path + ".bak") or FileAccess.file_exists(save_path + ".tmp")
 			(menu.get_node("Start") as Button).grab_focus()
 		Page.START_PLACEHOLDER:
 			(start_placeholder.get_node("Back") as Button).grab_focus()

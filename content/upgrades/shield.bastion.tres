@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"shield.bastion"
+name_key = &"M3_SHIELD_BASTION_NAME"
+description_key = &"M3_SHIELD_BASTION_DESC"
+target_id = &"shield"
+required_rank = 3
+stack_cap = 1
+prerequisite = &""
+stat = &"duration"
+amount = 2.0
+second_stat = &"cooldown"
+second_amount = 2.0

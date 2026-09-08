@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"active.wave_2"
+name_key = &"SIGNAL_WAVE_NAME"
+description_key = &"SIGNAL_WAVE_DESC"
+spawn_interval = 6.0
+enemy_ids = Array[StringName]([&"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.diver"])

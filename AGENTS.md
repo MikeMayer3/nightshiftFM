@@ -26,7 +26,7 @@ Generated attacks carry a root attack ID, source ID, generation depth, and eligi
 
 ## Saves and platform boundaries
 
-Save only validated IDs, numeric values, and explicit state. Use versioned saves, a temporary write plus recoverable backup, and migration tests. Run and reward commits must be idempotent. The crash-resume contract is wave-checkpoint replay, not exact arbitrary-frame restoration. Uncommitted partial-wave achievement progress must not be counted twice.
+Save only validated IDs, numeric values, and explicit state. Use versioned saves, a temporary write plus recoverable backup, and migration tests. Run and reward commits must be idempotent. The crash-resume contract is checkpoint replay, not exact arbitrary-frame restoration. The owner-directed M4 Signal revision adds mid-wave upgrade-decision checkpoints with actors and effects; legacy M3/M4 runs retain wave-checkpoint rules. Uncommitted partial-wave achievement progress must not be counted twice.
 
 Core play, local achievements, and local saves must work offline without authentication. Native achievements belong behind a platform interface with an honest unavailable/no-op implementation. Native service achievements are not cross-platform cloud saving. Do not commit signing keys, provisioning profiles, store credentials, or secrets. Do not publish or purchase anything without an explicit user request.
 

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=13 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.slow.tres" id="2"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.radius.tres" id="3"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.duration.tres" id="4"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.dead.tres" id="5"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.screen.tres" id="6"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.blank.tres" id="7"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.hum.tres" id="8"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.dense.tres" id="9"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.wide.tres" id="10"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.zone.tres" id="11"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/static_net.firewall.tres" id="12"]
+[resource]
+script = ExtResource("1")
+id = &"static_net"
+name_key = &"M4_STATIC_NET_NAME"
+preview_key = &"M4_STATIC_NET_PREVIEW"
+support = true
+baseline = {&"damage": 0.0, &"interval": 4.2, &"radius": 125.0, &"duration": 2.5, &"slow": 0.3, &"charges": 2.0, &"mode": 0.0, &"modifier": 0.0, &"capstone": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")]

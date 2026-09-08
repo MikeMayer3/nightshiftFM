@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/upgrade_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"static_net.wide"
+name_key = &"M4_STATIC_NET_WIDE_NAME"
+description_key = &"M4_STATIC_NET_WIDE_DESC"
+target_id = &"static_net"
+required_rank = 6
+stack_cap = 1
+prerequisite = &"static_net.screen"
+excludes = Array[StringName]([&"static_net.dense"])
+stat = &"modifier"
+amount = 2.0

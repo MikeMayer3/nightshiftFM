@@ -1,0 +1,90 @@
+{
+  "profile": {
+    "completed": 0,
+    "next_run": 9,
+    "rewarded_runs": [],
+    "schema": 1,
+    "unlocked": [
+      "main",
+      "shield",
+      "arc_aerial"
+    ]
+  },
+  "run": {
+    "content": "m3.1",
+    "draft": {
+      "absences": {
+        "arc_aerial": 0,
+        "main": 0,
+        "shield": 0
+      },
+      "accepted": [],
+      "banished": [],
+      "banishes": 1,
+      "bonus": false,
+      "bonus_count": 0,
+      "normal_count": 0,
+      "offers": [
+        "shield.recovery",
+        "arc_aerial.gain",
+        "main.reach"
+      ],
+      "rerolls": 2,
+      "screen_tracks": [
+        "shield",
+        "arc_aerial",
+        "main"
+      ],
+      "tracks": [
+        {
+          "choices": [],
+          "id": "main"
+        },
+        {
+          "choices": [],
+          "id": "shield"
+        },
+        {
+          "choices": [],
+          "id": "arc_aerial"
+        }
+      ]
+    },
+    "engine": "4.7.2-stable (official)",
+    "last_cause": "COMBAT_NO_DAMAGE",
+    "last_kind": "COMBAT_BREACH_HIT",
+    "random": {
+      "combat": "-6147302311807610765",
+      "cosmetic": "-2352822869954237024",
+      "draft": "287091606650114541",
+      "seed": "1789503816",
+      "wave": "-6392297157935620984"
+    },
+    "recruitment_done": [],
+    "run_id": "run.8",
+    "schema": 1,
+    "shield": 50.0,
+    "values": {
+      "_serial": 6,
+      "ability_left": 0.0,
+      "ability_wait": 0.0,
+      "attack_serial": 18,
+      "breaches": 0,
+      "damage_taken": 0.0,
+      "elapsed": 10.6000000000001,
+      "event_serial": 42,
+      "hull": 100.0,
+      "intercepted": 0,
+      "kills": 6,
+      "phase": 4,
+      "phase_time": 0.0,
+      "recharge_time": 0.0,
+      "shot_time": 0.48,
+      "spawn_index": 6,
+      "spawn_time": 1.11666666666667,
+      "support_time": 0.766666666666667,
+      "wave": 1
+    }
+  },
+  "schema": 1
+}

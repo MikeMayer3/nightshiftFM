@@ -1,5 +1,25 @@
 # Milestones and acceptance gates
 
+> **M4 support-turret revision:** Equipped Arc, Bass and Net appear as small
+> turrets with live cooldown bars. New runs receive slightly stronger earned
+> Burst scaling; old saves retain their rules. See [random-build and emulator
+> evidence](M4_SUPPORT_TURRETS.md).
+
+> **M4 active-play revision (2026-09-08):** Following feedback that the kill-meter
+> build was too passive, new missions add aimed Burst attacks and grouped enemy
+> threats. The battlefield expands into the space formerly used by bottom text.
+> See [active combat rules and evidence](M4_ACTIVE_COMBAT.md). Old saves retain
+> their original gameplay. This remains M4; later milestones have not started.
+
+> **Owner-directed M4 flow revision (2026-09-08):** New missions now use longer
+> waves and a kill-filled Signal meter. Each fill pauses the current fight for
+> one offensive upgrade or a new weapon. This supersedes the fixed 27-pick,
+> end-wave draft/recruitment schedule and defensive choice quotas for new runs.
+> Existing M3/M4 saves retain their original rules. Mid-wave upgrade checkpoints
+> preserve actors and effects; the radio-tuner art is deferred. See
+> [M4 Signal flow](M4_SIGNAL_FLOW.md) for the implemented rules and balance data.
+> Remaining later-milestone material below is a roadmap, not implemented scope.
+
 This roadmap deliberately separates technical proof, gameplay proof, and content production. Work on one requested milestone at a time. A generated scene or successful compilation is not evidence that a milestone's gameplay criteria passed.
 
 Every milestone ends with an updated `docs/IMPLEMENTATION_STATUS.md`: scope implemented, changed files, exact commands, PASS / FAIL / NOT RUN results, manual checks, known defects, and remaining acceptance conditions. Keep automated tests for earlier milestones running. Each milestone's prompt is: **“Implement M[number] only, using AGENTS.md and this milestone's acceptance criteria. Stop and report evidence.”**

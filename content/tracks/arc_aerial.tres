@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=8 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.gain.tres" id="2"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.rate.tres" id="3"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.reach.tres" id="4"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.storm.tres" id="5"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.long_route.tres" id="6"]
+[ext_resource type="Resource" path="res://content/upgrades/arc_aerial.capstone.tres" id="7"]
+[resource]
+script = ExtResource("1")
+id = &"arc_aerial"
+name_key = &"M3_ARC_AERIAL_NAME"
+preview_key = &"M3_ARC_AERIAL_PREVIEW"
+support = true
+baseline = {&"damage": 5.0, &"interval": 1.25, &"targets": 2.0, &"range": 170.0, &"branching": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7")]

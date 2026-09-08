@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TrackDefinition" load_steps=13 format=3]
+[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.gain.tres" id="2"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.radius.tres" id="3"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.rate.tres" id="4"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.wide.tres" id="5"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.compression.tres" id="6"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.wide_cone.tres" id="7"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.deep.tres" id="8"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.hard.tres" id="9"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.direct.tres" id="10"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.wall.tres" id="11"]
+[ext_resource type="Resource" path="res://content/m4/upgrades/bass_driver.crush.tres" id="12"]
+[resource]
+script = ExtResource("1")
+id = &"bass_driver"
+name_key = &"M4_BASS_DRIVER_NAME"
+preview_key = &"M4_BASS_DRIVER_PREVIEW"
+support = true
+baseline = {&"damage": 10.0, &"interval": 2.4, &"radius": 100.0, &"push": 25.0, &"exposure": 15.0, &"mode": 0.0, &"modifier": 0.0, &"capstone": 0.0}
+options = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")]

@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "input": "Clicked card body x104 y124 in Godot desktop window",
+  "normal_count_before": 0,
+  "normal_count_after": 1
+}

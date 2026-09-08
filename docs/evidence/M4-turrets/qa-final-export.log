@@ -1,0 +1,260 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (74 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   1% ] [90m[1mupdate_scripts_classes[22m | ActiveCombat[39m[0m
+[   2% ] [90m[1mupdate_scripts_classes[22m | CombatActor[39m[0m
+[   4% ] [90m[1mupdate_scripts_classes[22m | CombatArena[39m[0m
+[   5% ] [90m[1mupdate_scripts_classes[22m | CombatContent[39m[0m
+[   6% ] [90m[1mupdate_scripts_classes[22m | CombatEvent[39m[0m
+[   8% ] [90m[1mupdate_scripts_classes[22m | CombatScreen[39m[0m
+[   9% ] [90m[1mupdate_scripts_classes[22m | CombatSession[39m[0m
+[  10% ] [90m[1mupdate_scripts_classes[22m | ContributionReport[39m[0m
+[  12% ] [90m[1mupdate_scripts_classes[22m | SignalSupportCombat[39m[0m
+[  13% ] [90m[1mupdate_scripts_classes[22m | StatusState[39m[0m
+[  14% ] [90m[1mupdate_scripts_classes[22m | SupportCombat[39m[0m
+[  16% ] [90m[1mupdate_scripts_classes[22m | AchievementDefinition[39m[0m
+[  17% ] [90m[1mupdate_scripts_classes[22m | ContentDefinition[39m[0m
+[  18% ] [90m[1mupdate_scripts_classes[22m | EnemyDefinition[39m[0m
+[  20% ] [90m[1mupdate_scripts_classes[22m | MissionDefinition[39m[0m
+[  21% ] [90m[1mupdate_scripts_classes[22m | ModuleDefinition[39m[0m
+[  22% ] [90m[1mupdate_scripts_classes[22m | ShieldDefinition[39m[0m
+[  24% ] [90m[1mupdate_scripts_classes[22m | SynergyDefinition[39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | UpgradeDefinition[39m[0m
+[  26% ] [90m[1mupdate_scripts_classes[22m | WaveDefinition[39m[0m
+[  28% ] [90m[1mupdate_scripts_classes[22m | WeaponDefinition[39m[0m
+[  29% ] [90m[1mupdate_scripts_classes[22m | ProfileState[39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | RunState[39m[0m
+[  32% ] [90m[1mupdate_scripts_classes[22m | ShieldState[39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | WeaponState[39m[0m
+[  34% ] [90m[1mupdate_scripts_classes[22m | ContentValidator[39m[0m
+[  36% ] [90m[1mupdate_scripts_classes[22m | GameRules[39m[0m
+[  37% ] [90m[1mupdate_scripts_classes[22m | MobileProbe[39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | ProbeClock[39m[0m
+[  40% ] [90m[1mupdate_scripts_classes[22m | ProbeStore[39m[0m
+[  41% ] [90m[1mupdate_scripts_classes[22m | SafeArea[39m[0m
+[  42% ] [90m[1mupdate_scripts_classes[22m | ActiveContent[39m[0m
+[  44% ] [90m[1mupdate_scripts_classes[22m | DraftState[39m[0m
+[  45% ] [90m[1mupdate_scripts_classes[22m | M3Content[39m[0m
+[  46% ] [90m[1mupdate_scripts_classes[22m | M4Content[39m[0m
+[  48% ] [90m[1mupdate_scripts_classes[22m | RunRandom[39m[0m
+[  49% ] [90m[1mupdate_scripts_classes[22m | SignalContent[39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | SignalDraft[39m[0m
+[  52% ] [90m[1mupdate_scripts_classes[22m | SignalProgress[39m[0m
+[  53% ] [90m[1mupdate_scripts_classes[22m | TrackDefinition[39m[0m
+[  54% ] [90m[1mupdate_scripts_classes[22m | UpgradeTrack[39m[0m
+[  56% ] [90m[1mupdate_scripts_classes[22m | MissionProfile[39m[0m
+[  57% ] [90m[1mupdate_scripts_classes[22m | MissionStore[39m[0m
+[  58% ] [90m[1mupdate_scripts_classes[22m | SaveChecks[39m[0m
+[  60% ] [90m[1mupdate_scripts_classes[22m | SignalSnapshot[39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | BootScreen[39m[0m
+[  62% ] [90m[1mupdate_scripts_classes[22m | DraftPanel[39m[0m
+[  64% ] [90m[1mupdate_scripts_classes[22m | SafeMargin[39m[0m
+[  65% ] [90m[1mupdate_scripts_classes[22m | TransmitterArt[39m[0m
+[  66% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  68% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  70% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  72% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  73% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  74% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  76% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  77% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  78% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  80% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  81% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  82% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  84% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  85% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  86% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  88% ] [90m[1mupdate_scripts_classes[22m | TestContext[39m[0m
+[  89% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  90% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  92% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  93% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  94% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  96% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  97% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (8 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | arc.svg[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | bass.svg[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | net.svg[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | pulse.svg[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | repair.svg[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | shield.svg[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | icon.svg[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | ui_strings.csv[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (8 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | ui_strings.csv[39m[0m
+[  11% ] [90m[1mreimport[22m | ui_strings.csv[39m[0m
+[  22% ] [90m[1mreimport[22m | arc.svg[39m[0m
+[  33% ] [90m[1mreimport[22m | bass.svg[39m[0m
+[  44% ] [90m[1mreimport[22m | net.svg[39m[0m
+[  55% ] [90m[1mreimport[22m | pulse.svg[39m[0m
+[  66% ] [90m[1mreimport[22m | repair.svg[39m[0m
+[  77% ] [90m[1mreimport[22m | shield.svg[39m[0m
+[  88% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (8 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mexport[22m | Started Exporting for Android (105 steps)[39m[0m
+0 param: --xr_mode_regular
+1 param: --xr-mode
+2 param: off
+3 param: --background_color
+4 param: #000000
+[   0% ] [90m[1mexport[22m | Creating APK...[39m[0m
+ADDING: classes.dex
+ADDING: classes10.dex
+ADDING: classes11.dex
+ADDING: classes12.dex
+ADDING: classes13.dex
+ADDING: classes2.dex
+ADDING: classes3.dex
+ADDING: classes4.dex
+ADDING: classes5.dex
+ADDING: classes6.dex
+ADDING: classes7.dex
+ADDING: classes8.dex
+ADDING: classes9.dex
+ADDING: lib/arm64-v8a/libc++_shared.so
+ADDING: lib/arm64-v8a/libgodot_android.so
+Adding application metadata org.godotengine.rendering.method
+Adding application metadata org.godotengine.editor.version
+ADDING: AndroidManifest.xml
+ADDING: res/anim-v21/fragment_fast_out_extra_slow_in.xml
+ADDING: res/animator/fragment_close_enter.xml
+ADDING: res/animator/fragment_close_exit.xml
+ADDING: res/animator/fragment_fade_enter.xml
+ADDING: res/animator/fragment_fade_exit.xml
+ADDING: res/animator/fragment_open_enter.xml
+ADDING: res/animator/fragment_open_exit.xml
+ADDING: res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable-v21/notification_action_background.xml
+ADDING: res/drawable-v23/compat_splash_screen.xml
+ADDING: res/drawable-v23/compat_splash_screen_no_icon_background.xml
+ADDING: res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable/icon_background.xml
+ADDING: res/drawable/notification_bg.xml
+ADDING: res/drawable/notification_bg_low.xml
+ADDING: res/drawable/notification_icon_background.xml
+ADDING: res/drawable/notification_tile_bg.xml
+ADDING: res/drawable/splash_branding_image.webp
+ADDING: res/drawable/splash_icon.webp
+ADDING: res/layout-v21/notification_action.xml
+ADDING: res/layout-v21/notification_action_tombstone.xml
+ADDING: res/layout-v21/notification_template_custom_big.xml
+ADDING: res/layout-v21/notification_template_icon_group.xml
+ADDING: res/layout/custom_dialog.xml
+ADDING: res/layout/godot_app_layout.xml
+ADDING: res/layout/notification_template_part_chronometer.xml
+ADDING: res/layout/notification_template_part_time.xml
+ADDING: res/layout/remote_godot_fragment_layout.xml
+ADDING: res/layout/snackbar.xml
+ADDING: res/layout/splash_screen_view.xml
+ADDING: res/mipmap-anydpi-v26/icon.xml
+ADDING: res/mipmap-hdpi-v4/icon.webp
+ADDING: res/mipmap-hdpi-v4/icon_background.webp
+ADDING: res/mipmap-hdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-hdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-mdpi-v4/icon.webp
+ADDING: res/mipmap-mdpi-v4/icon_background.webp
+ADDING: res/mipmap-mdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-mdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xhdpi-v4/icon.webp
+ADDING: res/mipmap-xhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xxhdpi-v4/icon.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap/icon.webp
+ADDING: res/mipmap/icon_background.webp
+ADDING: res/mipmap/icon_foreground.webp
+ADDING: res/mipmap/icon_monochrome.webp
+ADDING: res/xml/godot_provider_paths.xml
+ADDING: resources.arsc
+ADDING: DebugProbesKt.bin
+ADDING: kotlin/annotation/annotation.kotlin_builtins
+ADDING: kotlin/collections/collections.kotlin_builtins
+ADDING: kotlin/concurrent/atomics/atomics.kotlin_builtins
+ADDING: kotlin/coroutines/coroutines.kotlin_builtins
+ADDING: kotlin/internal/internal.kotlin_builtins
+ADDING: kotlin/kotlin.kotlin_builtins
+ADDING: kotlin/ranges/ranges.kotlin_builtins
+ADDING: kotlin/reflect/reflect.kotlin_builtins
+[   0% ] [90m[1mexport[22m | Adding files...[39m[0m
+[  97% ] [90m[1mexport[22m | Aligning APK...[39m[0m
+[  98% ] [90m[1mexport[22m | Signing debug APK...[39m[0m
+Signing binary using:
+/Users/michaelmayer/Library/Android/sdk/build-tools/36.0.0/apksigner sign --verbose --ks <REDACTED> --ks-pass pass:<REDACTED> --ks-key-alias <REDACTED> /Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/nightshift-turret-qa-final.apk
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/Users/michaelmayer/Library/Android/sdk/build-tools/36.0.0/lib/apksigner.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Signed
+
+[  99% ] [90m[1mexport[22m | Verifying APK...[39m[0m
+[92m[ DONE ][39m [1mexport[22m
+[0m
+/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/nightshift-turret-qa-final.apk

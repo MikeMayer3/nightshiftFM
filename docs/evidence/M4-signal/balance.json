@@ -1,0 +1,2782 @@
+[
+	{
+		"choices": [
+			{
+				"id": "main.reach",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 24.6833333333332,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 43.7666666666655,
+				"wave": 2
+			},
+			{
+				"id": "main.gain",
+				"seconds": 65.8999999999975,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 93.8833333333293,
+				"wave": 3
+			},
+			{
+				"id": "main.rate",
+				"seconds": 120.949999999994,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 146.716666666676,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 163.116666666689,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 188.333333333375,
+				"wave": 5
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 210.283333333393,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 231.900000000077,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 252.683333333427,
+				"wave": 6
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 272.216666666748,
+				"wave": 6
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 293.383333333395,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 315.166666666709,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 336.816666666689,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 359.800000000001,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 377.999999999985,
+				"wave": 8
+			},
+			{
+				"id": "static_net.rapid",
+				"seconds": 404.766666666627,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 418.949999999948,
+				"wave": 9
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 439.766666666595,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 464.649999999906,
+				"wave": 10
+			},
+			{
+				"id": "static_net.live_cap",
+				"seconds": 483.783333333222,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 500.11666666654,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1975.07787390029,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1047.16216170926,
+				"exposure_bonus": 313.754760159196,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2382.5624961853,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 10310.0763056836,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 73.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1354.88365870688,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 32.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 39.3650000000007
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 295,
+		"seconds": 513.649999999862,
+		"seed": 11,
+		"style": "main",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "main.gain",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "main.gain",
+				"seconds": 43.8166666666655,
+				"wave": 2
+			},
+			{
+				"id": "main.reach",
+				"seconds": 65.5333333333309,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 92.2166666666627,
+				"wave": 3
+			},
+			{
+				"id": "main.rate",
+				"seconds": 120.716666666661,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 145.383333333341,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 165.716666666691,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 191.083333333378,
+				"wave": 5
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 209.533333333392,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 230.300000000075,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 252.81666666676,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 275.733333333411,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 293.983333333395,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 314.516666666709,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 336.350000000023,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 357.51666666667,
+				"wave": 8
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 382.066666666648,
+				"wave": 8
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 405.533333333293,
+				"wave": 9
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 426.266666666608,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 448.483333333254,
+				"wave": 9
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 472.199999999899,
+				"wave": 10
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 488.216666666551,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2355.68814215892,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 7.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 939.829748917747,
+				"exposure_bonus": 314.824491458362,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2068.47041702271,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 10415.4734686031,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 61.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 864.208640320253,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 27.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 42.0649999999906
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 288,
+		"seconds": 507.849999999867,
+		"seed": 42,
+		"style": "main",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "main.rate",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 24.6666666666665,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 43.7166666666655,
+				"wave": 2
+			},
+			{
+				"id": "main.gain",
+				"seconds": 66.2666666666642,
+				"wave": 2
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 92.5333333333294,
+				"wave": 3
+			},
+			{
+				"id": "main.gain",
+				"seconds": 121.199999999994,
+				"wave": 3
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 146.500000000009,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 166.483333333358,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 193.466666666713,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 212.400000000061,
+				"wave": 5
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 235.366666666746,
+				"wave": 6
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 256.250000000096,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 280.033333333407,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 297.483333333391,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 318.433333333372,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 339.866666666686,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 362.816666666665,
+				"wave": 8
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 386.116666666644,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 408.88333333329,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 430.799999999937,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 452.716666666584,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 476.966666666562,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 492.916666666547,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2224.94579434901,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 859.39937718196,
+				"exposure_bonus": 271.220900246709,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 1759.21249008179,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 10681.8651584973,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 71.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 808.989669971606,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 30.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 39.9241666666613
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 288,
+		"seconds": 514.183333333194,
+		"seed": 91,
+		"style": "main",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 24.6999999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 43.8166666666655,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 66.0166666666642,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 94.9999999999959,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 122.766666666661,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 149.116666666677,
+				"wave": 4
+			},
+			{
+				"id": "main.reach",
+				"seconds": 169.900000000027,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 184.783333333373,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 210.666666666726,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 228.866666666741,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 249.116666666757,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 266.23333333342,
+				"wave": 6
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 292.983333333396,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 309.950000000047,
+				"wave": 7
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 327.816666666697,
+				"wave": 7
+			},
+			{
+				"id": "main.rate",
+				"seconds": 349.183333333344,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 372.89999999999,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 393.366666666638,
+				"wave": 8
+			},
+			{
+				"id": "main.rate",
+				"seconds": 419.899999999947,
+				"wave": 9
+			},
+			{
+				"id": "static_net.surge",
+				"seconds": 434.949999999933,
+				"wave": 9
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 454.833333333248,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 482.716666666556,
+				"wave": 10
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 498.149999999876,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 514.716666666527,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4210.63542866048,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 14.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1595.15904494757,
+				"exposure_bonus": 758.97979919411,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2196.51666259766,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7474.48887330525,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 76.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1614.91665308667,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 39.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 41.6374999999955
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 308,
+		"seconds": 528.049999999848,
+		"seed": 11,
+		"style": "arc",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 24.6999999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 43.8166666666655,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 66.0166666666642,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.long_route",
+				"seconds": 94.4166666666626,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 122.933333333328,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 148.15000000001,
+				"wave": 4
+			},
+			{
+				"id": "main.reach",
+				"seconds": 168.93333333336,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 183.883333333372,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 210.183333333393,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 229.416666666741,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 249.550000000091,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 269.21666666675,
+				"wave": 6
+			},
+			{
+				"id": "main.gain",
+				"seconds": 294.350000000061,
+				"wave": 7
+			},
+			{
+				"id": "main.gain",
+				"seconds": 308.883333333381,
+				"wave": 7
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 328.950000000029,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 350.416666666677,
+				"wave": 7
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 373.899999999989,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 395.833333333302,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 426.79999999994,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 441.53333333326,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 462.033333333242,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 489.483333333217,
+				"wave": 10
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 505.549999999869,
+				"wave": 10
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 523.149999999853,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4035.25427547364,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 3.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1373.05570730345,
+				"exposure_bonus": 317.819150025602,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3698.64999771118,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 8720.65658613793,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 96.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 766.233431085046,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 36.0,
+				"interrupts": 78.0,
+				"push_distance": 0.0,
+				"slow_seconds": 75.0774999999946
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 308,
+		"seconds": 536.483333333174,
+		"seed": 42,
+		"style": "arc",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 24.6999999999999,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 43.8166666666655,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 66.0166666666642,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.tight",
+				"seconds": 94.8999999999959,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 125.349999999994,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.storm_cap",
+				"seconds": 153.466666666681,
+				"wave": 4
+			},
+			{
+				"id": "main.gain",
+				"seconds": 175.216666666698,
+				"wave": 4
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 192.716666666712,
+				"wave": 4
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 219.2833333334,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 241.883333333418,
+				"wave": 5
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 262.75000000009,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 282.500000000072,
+				"wave": 6
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 302.733333333387,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 324.683333333367,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 346.61666666668,
+				"wave": 7
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 375.999999999987,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 395.699999999969,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 423.36666666661,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 444.166666666591,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 460.433333333243,
+				"wave": 9
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 487.483333333219,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 503.983333333204,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 526.983333333183,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3431.89199199368,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 4.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1111.02740026998,
+				"exposure_bonus": 304.901585439649,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2539.62510681152,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 9357.12647954195,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 90.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 835.154128194389,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 28.0,
+				"interrupts": 120.0,
+				"push_distance": 0.0,
+				"slow_seconds": 87.2766666666514
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 298,
+		"seconds": 535.983333333175,
+		"seed": 91,
+		"style": "arc",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "main.reach",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 24.6833333333332,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 43.7666666666655,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 65.8333333333309,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 93.1833333333293,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 120.649999999994,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 145.416666666675,
+				"wave": 4
+			},
+			{
+				"id": "main.rate",
+				"seconds": 164.46666666669,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 186.933333333374,
+				"wave": 5
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 204.700000000055,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 225.933333333405,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 247.000000000089,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 267.550000000085,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 289.933333333398,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 309.466666666714,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 330.633333333361,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 356.416666666671,
+				"wave": 8
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 377.216666666652,
+				"wave": 8
+			},
+			{
+				"id": "main.rate",
+				"seconds": 410.216666666622,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 424.149999999943,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 442.633333333259,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 459.683333333244,
+				"wave": 9
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 488.166666666551,
+				"wave": 10
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 507.666666666534,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3374.46977517922,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 31.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2264.80119396732,
+				"exposure_bonus": 412.468668719414,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 6521.01416778564,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7833.03133218775,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 55.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 50.0,
+				"breaks": 1.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1135.5494861053,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 42.0,
+				"interrupts": 79.0,
+				"push_distance": 0.0,
+				"slow_seconds": 81.8799999999898
+			}
+		},
+		"damage_taken": 143.0,
+		"hull": 7.0,
+		"kills": 305,
+		"seconds": 544.1666666665,
+		"seed": 11,
+		"style": "bass",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 43.3333333333322,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 65.5333333333309,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 91.7666666666627,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 120.883333333328,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 143.166666666673,
+				"wave": 4
+			},
+			{
+				"id": "bass_driver.direct",
+				"seconds": 164.600000000023,
+				"wave": 4
+			},
+			{
+				"id": "main.reach",
+				"seconds": 188.683333333376,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 210.55000000006,
+				"wave": 5
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 234.100000000078,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 255.266666666762,
+				"wave": 6
+			},
+			{
+				"id": "main.reach",
+				"seconds": 278.600000000075,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 295.666666666726,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 317.316666666707,
+				"wave": 7
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 335.483333333357,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 358.650000000002,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 377.716666666652,
+				"wave": 8
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 401.083333333297,
+				"wave": 9
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 423.149999999944,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 445.16666666659,
+				"wave": 9
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 467.399999999904,
+				"wave": 10
+			},
+			{
+				"id": "main.rate",
+				"seconds": 487.999999999885,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2531.41388518778,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3917.2554470547,
+				"exposure_bonus": 1523.49586820165,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 1722.05001068115,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7198.71358578775,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 44.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 959.817081969768,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 28.0,
+				"interrupts": 53.0,
+				"push_distance": 0.0,
+				"slow_seconds": 65.80333333334
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 290,
+		"seconds": 507.116666666534,
+		"seed": 42,
+		"style": "bass",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 43.2666666666655,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 65.4666666666642,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 91.2499999999961,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 120.283333333328,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.hard",
+				"seconds": 142.416666666672,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 165.100000000024,
+				"wave": 4
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 189.650000000043,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 208.966666666725,
+				"wave": 5
+			},
+			{
+				"id": "main.rate",
+				"seconds": 230.783333333409,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 252.066666666759,
+				"wave": 6
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 268.783333333418,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 291.683333333397,
+				"wave": 7
+			},
+			{
+				"id": "main.gain",
+				"seconds": 312.666666666711,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 331.166666666694,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 356.166666666671,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 375.333333333321,
+				"wave": 8
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 394.883333333303,
+				"wave": 9
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 416.116666666617,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 435.833333333266,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 461.899999999909,
+				"wave": 10
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 483.449999999889,
+				"wave": 10
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 501.899999999872,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3212.46267747846,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 13.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3249.58978784801,
+				"exposure_bonus": 1544.56443219251,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 1994.73128890991,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7520.54171030075,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 50.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 704.605824372759,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 23.0,
+				"interrupts": 49.0,
+				"push_distance": 0.0,
+				"slow_seconds": 53.3533333333386
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 295,
+		"seconds": 512.049999999863,
+		"seed": 91,
+		"style": "bass",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "recruit.static_net",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 24.6999999999999,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 43.6666666666655,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 65.1999999999976,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 91.4833333333294,
+				"wave": 3
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 120.399999999994,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 144.366666666674,
+				"wave": 4
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 164.983333333357,
+				"wave": 4
+			},
+			{
+				"id": "static_net.blank",
+				"seconds": 186.116666666707,
+				"wave": 5
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 211.950000000061,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.storm",
+				"seconds": 235.516666666746,
+				"wave": 6
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 255.533333333429,
+				"wave": 6
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 283.483333333404,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 301.433333333388,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 318.983333333372,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 341.600000000018,
+				"wave": 7
+			},
+			{
+				"id": "main.gain",
+				"seconds": 373.316666666656,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 397.416666666634,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 420.933333333279,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 443.733333333258,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 465.683333333238,
+				"wave": 9
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 491.983333333215,
+				"wave": 10
+			},
+			{
+				"id": "main.reach",
+				"seconds": 512.516666666529,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2824.68656286365,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 6.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2045.95990504119,
+				"exposure_bonus": 405.064807056744,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 4781.77499389648,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7421.48936182093,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 65.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 97.6500000000003,
+				"breaks": 2.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2003.39728762277,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 33.0,
+				"interrupts": 228.0,
+				"push_distance": 0.0,
+				"slow_seconds": 148.847499999925
+			}
+		},
+		"damage_taken": 173.0,
+		"hull": 24.6500000000003,
+		"kills": 288,
+		"seconds": 541.28333333317,
+		"seed": 11,
+		"style": "net",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "main.gain",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 43.3333333333322,
+				"wave": 2
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 65.5333333333309,
+				"wave": 2
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 121.633333333328,
+				"wave": 3
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 146.500000000009,
+				"wave": 4
+			},
+			{
+				"id": "main.gain",
+				"seconds": 163.500000000022,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 187.916666666708,
+				"wave": 5
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 213.933333333396,
+				"wave": 5
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 236.15000000008,
+				"wave": 6
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 258.550000000094,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 282.400000000072,
+				"wave": 7
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 304.116666666719,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 327.483333333364,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 357.700000000003,
+				"wave": 8
+			},
+			{
+				"id": "main.reach",
+				"seconds": 375.93333333332,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 398.049999999967,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 420.53333333328,
+				"wave": 9
+			},
+			{
+				"id": "main.capstone",
+				"seconds": 442.649999999926,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 467.066666666571,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 488.933333333217,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2817.49375294628,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 1.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1276.4232269098,
+				"exposure_bonus": 674.596310102285,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2191.60352325439,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 8687.21061567448,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 30.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1618.07240446946,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 30.0,
+				"interrupts": 211.0,
+				"push_distance": 0.0,
+				"slow_seconds": 114.281666666623
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 277,
+		"seconds": 504.39999999987,
+		"seed": 42,
+		"style": "net",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 43.1666666666655,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 64.5666666666643,
+				"wave": 2
+			},
+			{
+				"id": "static_net.dead",
+				"seconds": 92.2666666666627,
+				"wave": 3
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 120.466666666661,
+				"wave": 3
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 144.03333333334,
+				"wave": 4
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 163.366666666689,
+				"wave": 4
+			},
+			{
+				"id": "static_net.hum",
+				"seconds": 189.633333333376,
+				"wave": 5
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 210.35000000006,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 234.366666666745,
+				"wave": 6
+			},
+			{
+				"id": "static_net.zone",
+				"seconds": 253.833333333427,
+				"wave": 6
+			},
+			{
+				"id": "main.rate",
+				"seconds": 274.616666666746,
+				"wave": 6
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 302.383333333387,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 322.633333333369,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 336.316666666689,
+				"wave": 7
+			},
+			{
+				"id": "main.gain",
+				"seconds": 367.366666666661,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 385.316666666645,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 412.016666666621,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 434.7166666666,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wide_cone",
+				"seconds": 456.083333333247,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 481.699999999891,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 502.699999999871,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.strike",
+				"seconds": 521.483333333188,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3324.69888992727,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 8.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2153.34385270644,
+				"exposure_bonus": 425.683233291241,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 5105.3821182251,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7324.78937019965,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 41.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1932.36788716659,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 55.0,
+				"interrupts": 359.0,
+				"push_distance": 0.0,
+				"slow_seconds": 237.599999999844
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 298,
+		"seconds": 544.733333333167,
+		"seed": 91,
+		"style": "net",
+		"victory": true
+	},
+	{
+		"choices": [
+			{
+				"id": "main.reach",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 24.6833333333332,
+				"wave": 1
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 43.7666666666655,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 65.8333333333309,
+				"wave": 2
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 93.2166666666627,
+				"wave": 3
+			},
+			{
+				"id": "main.rate",
+				"seconds": 121.083333333328,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 145.016666666674,
+				"wave": 4
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 166.116666666691,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 191.150000000044,
+				"wave": 5
+			},
+			{
+				"id": "main.rate",
+				"seconds": 208.216666666725,
+				"wave": 5
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 231.700000000077,
+				"wave": 6
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 253.816666666761,
+				"wave": 6
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 280.400000000074,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 302.150000000054,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 323.900000000034,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.hard",
+				"seconds": 349.116666666678,
+				"wave": 8
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 369.999999999992,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 391.633333333306,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 407.849999999958,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 428.149999999939,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.crush",
+				"seconds": 450.449999999919,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.strike",
+				"seconds": 474.116666666564,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3337.92220808566,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 13.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2025.14571528752,
+				"exposure_bonus": 848.151037073631,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2906.86292648315,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 6921.53276402889,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 29.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 57.8499999999997,
+				"breaks": 1.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1101.60667200962,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 49.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 41.7274999999991
+			}
+		},
+		"damage_taken": 183.0,
+		"hull": 0.0,
+		"kills": 277,
+		"seconds": 503.866666666537,
+		"seed": 11,
+		"style": "random",
+		"victory": false
+	},
+	{
+		"choices": [
+			{
+				"id": "main.gain",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 43.3333333333322,
+				"wave": 2
+			},
+			{
+				"id": "main.rate",
+				"seconds": 65.5333333333309,
+				"wave": 2
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 92.849999999996,
+				"wave": 3
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 121.516666666661,
+				"wave": 3
+			},
+			{
+				"id": "static_net.rate",
+				"seconds": 143.58333333334,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 165.983333333358,
+				"wave": 4
+			},
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 189.383333333376,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 207.216666666724,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 229.050000000074,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 252.016666666759,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.wide",
+				"seconds": 278.533333333409,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 297.200000000058,
+				"wave": 7
+			},
+			{
+				"id": "bass_driver.rate",
+				"seconds": 319.250000000038,
+				"wave": 7
+			},
+			{
+				"id": "arc_aerial.reach",
+				"seconds": 336.983333333356,
+				"wave": 7
+			},
+			{
+				"id": "main.reach",
+				"seconds": 361.949999999999,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 387.099999999977,
+				"wave": 8
+			},
+			{
+				"id": "bass_driver.deep",
+				"seconds": 410.999999999955,
+				"wave": 9
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 432.099999999936,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 454.866666666582,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.wall",
+				"seconds": 477.283333333228,
+				"wave": 10
+			},
+			{
+				"id": "main.gain",
+				"seconds": 503.583333333204,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 4322.33073732719,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 4.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1436.51311504142,
+				"exposure_bonus": 319.683416978846,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 3333.73337554932,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 7755.55601284333,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 55.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 87.7000000000003,
+				"breaks": 3.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 946.395291160453,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 33.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 80.035000000001
+			}
+		},
+		"damage_taken": 201.0,
+		"hull": 0.0,
+		"kills": 287,
+		"seconds": 529.43333333318,
+		"seed": 42,
+		"style": "random",
+		"victory": false
+	},
+	{
+		"choices": [
+			{
+				"id": "recruit.bass_driver",
+				"seconds": 10.5833333333334,
+				"wave": 1
+			},
+			{
+				"id": "main.rate",
+				"seconds": 24.2166666666666,
+				"wave": 1
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 43.2666666666655,
+				"wave": 2
+			},
+			{
+				"id": "recruit.static_net",
+				"seconds": 65.4666666666642,
+				"wave": 2
+			},
+			{
+				"id": "main.ricochet",
+				"seconds": 91.6999999999961,
+				"wave": 3
+			},
+			{
+				"id": "main.gain",
+				"seconds": 120.066666666661,
+				"wave": 3
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 143.466666666673,
+				"wave": 4
+			},
+			{
+				"id": "main.rate",
+				"seconds": 164.96666666669,
+				"wave": 4
+			},
+			{
+				"id": "arc_aerial.spear",
+				"seconds": 189.733333333376,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 211.950000000061,
+				"wave": 5
+			},
+			{
+				"id": "arc_aerial.rate",
+				"seconds": 233.383333333411,
+				"wave": 6
+			},
+			{
+				"id": "bass_driver.compression",
+				"seconds": 257.766666666761,
+				"wave": 6
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 280.083333333407,
+				"wave": 7
+			},
+			{
+				"id": "static_net.current",
+				"seconds": 306.766666666716,
+				"wave": 7
+			},
+			{
+				"id": "static_net.gain",
+				"seconds": 329.150000000029,
+				"wave": 7
+			},
+			{
+				"id": "static_net.radius",
+				"seconds": 354.350000000006,
+				"wave": 8
+			},
+			{
+				"id": "arc_aerial.needle",
+				"seconds": 373.099999999989,
+				"wave": 8
+			},
+			{
+				"id": "main.long_route",
+				"seconds": 396.166666666635,
+				"wave": 9
+			},
+			{
+				"id": "main.reach",
+				"seconds": 414.549999999952,
+				"wave": 9
+			},
+			{
+				"id": "bass_driver.radius",
+				"seconds": 434.8166666666,
+				"wave": 9
+			},
+			{
+				"id": "arc_aerial.gain",
+				"seconds": 461.099999999909,
+				"wave": 10
+			},
+			{
+				"id": "bass_driver.gain",
+				"seconds": 482.09999999989,
+				"wave": 10
+			},
+			{
+				"id": "arc_aerial.spear_cap",
+				"seconds": 499.366666666541,
+				"wave": 10
+			}
+		],
+		"contributions": {
+			"arc_aerial": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 3888.37932731407,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 4.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"bass_driver": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 2198.82625125226,
+				"exposure_bonus": 820.090965293081,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 2820.0,
+				"slow_seconds": 0.0
+			},
+			"main": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 6877.18132519379,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 36.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"shield": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 0.0,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 0.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 0.0
+			},
+			"static_net": {
+				"absorbed": 0.0,
+				"breaks": 0.0,
+				"damage": 1498.8130962399,
+				"exposure_bonus": 0.0,
+				"healing": 0.0,
+				"intercepts": 29.0,
+				"interrupts": 0.0,
+				"push_distance": 0.0,
+				"slow_seconds": 45.2099999999884
+			}
+		},
+		"damage_taken": 0.0,
+		"hull": 100.0,
+		"kills": 281,
+		"seconds": 509.166666666532,
+		"seed": 91,
+		"style": "random",
+		"victory": true
+	}
+]
