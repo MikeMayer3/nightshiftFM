@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "COMBAT_NO_DAMAGE",
+	"choices": 15,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "sweep",
+	"mission": 10,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 15,
+	"seconds": 487.999999999885,
+	"style": "static_net",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

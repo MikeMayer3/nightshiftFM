@@ -7,12 +7,14 @@ func _initialize() -> void: _run.call_deferred()
 func _run() -> void:
 	root.size = Vector2i(450, 800)
 	var session: CombatSession = CombatSession.new()
-	session.start_arsenal(42, &"run.1", ArsenalContent.DEFAULT)
+	session.start_campaign(42, &"run.1", ArsenalContent.DEFAULT, {"mission": 12, "cleared": 12, "modules": [], "mode": "campaign", "difficulty": 0, "contract": ""})
 	session.phase = CombatSession.Phase.COMBAT
 	session.actors.clear()
 	for index: int in 150:
 		var definitions: Array[EnemyDefinition] = [CombatContent.SWARMER, CombatContent.DIVER, CombatContent.CARRIER]
-		var actor: CombatActor = CombatActor.from_definition(definitions[index % 3], index + 1, Vector2(25 + (index % 15) * 42, 75 + (index / 15) * 48))
+		definitions.append_array(BroadcastContent.ENEMIES)
+		var actor: CombatActor = CombatActor.from_definition(definitions[index % definitions.size()], index + 1, Vector2(25 + (index % 15) * 42, 75 + (index / 15) * 48))
+		actor.ability_time = actor.ability_interval - .5
 		session.actors.append(actor)
 	for index: int in 400:
 		var actor: CombatActor = CombatActor.from_definition(CombatContent.SWARMER, 151 + index, Vector2(20 + (index % 25) * 24, 65 + (index / 25) * 33))
@@ -49,8 +51,8 @@ func _run() -> void:
 			"os": OS.get_name(), "processor": OS.get_processor_name(), "engine": Engine.get_version_info().string}
 		rows.append(row)
 		print(JSON.stringify(row))
-		root.get_texture().get_image().save_png("res://docs/evidence/M10/" + "stress-" + ("low" if low else "normal") + ".png")
-	FileAccess.open("res://docs/evidence/M10/render-stress.json", FileAccess.WRITE).store_string(JSON.stringify(rows, "\t"))
+		root.get_texture().get_image().save_png("res://docs/evidence/M8-M10/" + "stress-" + ("low" if low else "normal") + ".png")
+	FileAccess.open("res://docs/evidence/M8-M10/render-stress.json", FileAccess.WRITE).store_string(JSON.stringify(rows, "\t"))
 	arena.queue_free()
 	await process_frame
 	quit(0 if rows.all(func(row: Dictionary) -> bool: return row.remaining_actors == 550) else 1)

@@ -1,0 +1,8 @@
+{
+  "device": "emulator-5554",
+  "package": "org.nightshiftfm.broadcastqa",
+  "pid": "9946",
+  "background_cycles": 3,
+  "same_rewarded_runs_after_result_reload": true,
+  "runtime_errors": []
+}

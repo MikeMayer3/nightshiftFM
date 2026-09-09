@@ -1,6 +1,8 @@
 class_name CombatActor
 extends RefCounted
 ## Per-mission values copied from content; also used by the bounded ranged fixture.
+var role: EnemyDefinition.Role = EnemyDefinition.Role.BASIC
+var owner_id: int = 0
 var status: StatusState = StatusState.new()
 var armor: float = 0.0
 var elite: bool = false
@@ -34,6 +36,7 @@ var resolved: bool = false
 
 static func from_definition(definition: EnemyDefinition, number: int, at: Vector2) -> CombatActor:
 	var actor: CombatActor = CombatActor.new()
+	actor.role = definition.role
 	actor.armor = definition.armor
 	actor.elite = definition.elite
 	actor.jam_immune = definition.jam_immune
@@ -63,4 +66,6 @@ func advance(delta: float) -> void:
 	if path_kind == EnemyDefinition.PathKind.DIVE:
 		multiplier = 2.7 if age >= 2.0 else 0.55
 		position.x = clampf(origin_x + sin(age * 1.7) * 65.0, radius, 640.0 - radius)
+	if role in [EnemyDefinition.Role.MORTAR, EnemyDefinition.Role.CALLER, EnemyDefinition.Role.CORE, EnemyDefinition.Role.SILENCE, EnemyDefinition.Role.AERIAL] and position.y >= 170:
+		return
 	position.y += speed * multiplier * movement_delta

@@ -1,8 +1,8 @@
 keys,en
-BOOT_EYEBROW,OFFLINE • ACTIVE COMBAT PLAYTEST
+BOOT_EYEBROW,OFFLINE • STATION DEFENSE
 BOOT_TITLE,Nightshift FM
-BOOT_SUBTITLE,A little light on a haunted frequency.
-MENU_START,New mission · Standard
+BOOT_SUBTITLE,Keep the signal alive.
+MENU_START,New broadcast
 MENU_SETTINGS,Settings
 MENU_QUIT,Quit
 MENU_BACK,Back to menu
@@ -10,7 +10,7 @@ START_HEADING,Stand by for a signal
 START_BODY,The station is ready for its first broadcast. Combat is not available in this foundation preview.
 SETTINGS_SIGNAL,Show decorative signal
 SETTINGS_BODY,This display preference lasts until you close the preview.
-BOOT_FOOTER,Provisional theme • Original placeholder art
+BOOT_FOOTER,Original radio instruments • Modern rivals
 MENU_MOBILE_CHECKS,Mobile checks
 PROBE_TITLE,Mobile checks
 PROBE_BODY,"Tap to save a local checkpoint. Background and return: active time must freeze. This is a device test, not a mission."
@@ -1296,24 +1296,24 @@ M7_MISSION_2,Rooftops 2 · Carrier Traffic
 M7_MISSION_2_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
 M7_MISSION_3,Rooftops 3 · Crossed Wires
 M7_MISSION_3_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
-M7_MISSION_4,Rooftop Relays · 4
-M7_MISSION_4_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_5,Flooded Switchyard · 5
-M7_MISSION_5_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_6,Flooded Switchyard · 6
-M7_MISSION_6_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_7,Flooded Switchyard · 7
-M7_MISSION_7_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_8,Flooded Switchyard · 8
-M7_MISSION_8_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_9,Dead Band · 9
-M7_MISSION_9_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_10,Dead Band · 10
-M7_MISSION_10_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_11,Dead Band · 11
-M7_MISSION_11_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
-M7_MISSION_12,Dead Band · 12
-M7_MISSION_12_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_4,4 · The Playlist
+M7_MISSION_4_DESC,Protect the station through The Playlist.
+M7_MISSION_5,5 · Heavy Rotation
+M7_MISSION_5_DESC,Protect the station through Heavy Rotation.
+M7_MISSION_6,6 · Shared Connection
+M7_MISSION_6_DESC,Protect the station through Shared Connection.
+M7_MISSION_7,7 · Packet Storm
+M7_MISSION_7_DESC,Protect the station through Packet Storm.
+M7_MISSION_8,8 · Cloud Speaker
+M7_MISSION_8_DESC,Protect the station through Cloud Speaker.
+M7_MISSION_9,9 · Quiet Channels
+M7_MISSION_9_DESC,Protect the station through Quiet Channels.
+M7_MISSION_10,10 · Changing Faces
+M7_MISSION_10_DESC,Protect the station through Changing Faces.
+M7_MISSION_11,11 · Digital Crossfire
+M7_MISSION_11_DESC,Protect the station through Digital Crossfire.
+M7_MISSION_12,12 · The Noise Canceller
+M7_MISSION_12_DESC,Protect the station through The Noise Canceller.
 M7_CAMPAIGN,Campaign
 M7_PERSISTENCE,"Keep equipment unlocks, presets, discoveries, medals and cosmetic mastery. Every mission resets ranks, recruits, connections and temporary upgrades."
 M7_PROGRESS,%d / %d missions cleared
@@ -1512,7 +1512,7 @@ M9_ACH_ENDLESS_60_DESC,Complete wave 60 in Endless.
 M9_ACH_ENDLESS_THREE,Three-Channel Marathon
 M9_ACH_ENDLESS_THREE_DESC,Complete wave 20 in Endless with no more than three support families used at any time in that run.
 M9_ACHIEVEMENTS,Achievements
-M9_HINT,Cosmetic titles only. Progress is committed when an eligible mission ends in victory.
+M9_HINT,"Cosmetic rewards. Run goals commit on completion; discovery, reflection and Endless wave goals commit at cleared waves."
 M9_PENDING_ENDLESS,Pending: Endless mode.
 M9_PENDING_TELEMETRY,Pending: committed defensive-event tracking.
 M9_PENDING_CAMPAIGN,Pending: remaining campaign content and mode rules.
@@ -1527,7 +1527,7 @@ M9_NATIVE_UNAVAILABLE,Saved on this device. Native achievement sync is not avail
 M9_PRACTICE,"Editor, debug and prototype runs do not earn achievements."
 M9_REPORT_HISTORY,Station damage taken: %.1f · Peak supports: %d
 M9_REPORT_OUTPUT,Effective damage: %.1f · Intercepted bolts: %d
-M9_REPORT_HINT,Burst is included in main damage. Exposure assistance is reported separately and is not added to damage totals.
+M9_REPORT_HINT,Weapon and connection damage are counted once. Exposure assistance is shown separately.
 M9_RESULT_ELIGIBLE,This run records local achievements on victory.
 M9_RESULT_PRACTICE,Practice or legacy run: achievement rewards disabled.
 M10_SETTINGS,Radio & accessibility
@@ -1574,3 +1574,262 @@ Kills tune the radio toward your next upgrade. Use Shield when the station is in
 M10_TUNING,TUNING
 M10_TUNED,TUNED · CHOOSE UPGRADE
 M10_LOCKED,TUNED
+BROADCAST_ENEMY_PLATED,Rugged Player
+BROADCAST_ENEMY_PLATED_DESC,Armored music player. Exposure and penetration reduce its plating; concentrated fire also works.
+BROADCAST_ENEMY_CASTER,Sync Hub
+BROADCAST_ENEMY_CASTER_DESC,A sync hub protects nearby devices during a short link cycle. Focus or interrupt the hub; protection never makes targets immune.
+BROADCAST_ENEMY_JAMMER,Noise-Cancel Buds
+BROADCAST_ENEMY_JAMMER_DESC,Channels a brief mute on one support. Focus the marked earbuds or interrupt them; the main tower always keeps firing.
+BROADCAST_ENEMY_MIMIC,Smartwatch
+BROADCAST_ENEMY_MIMIC_DESC,Cycles between a visible guard and an open face. Mixed fire works in every state; concentrate attacks while open.
+BROADCAST_ENEMY_MORTAR,Streaming Dock
+BROADCAST_ENEMY_MORTAR_DESC,Stops high in the field and flashes before firing destructible data packets. Focus the dock or intercept the packets.
+BROADCAST_ENEMY_CALLER,The Playlist
+BROADCAST_ENEMY_CALLER_DESC,"Boss: a giant music player alternates escorts and flashing packet volleys. Clear escorts, focus the player and time your shield."
+BROADCAST_ENEMY_CORE,Cloud Speaker
+BROADCAST_ENEMY_CORE_DESC,Boss: destroy both satellite speakers to expose the cloud core. Ordinary tower attacks can target every satellite.
+BROADCAST_ENEMY_SILENCE,The Noise Canceller
+BROADCAST_ENEMY_SILENCE_DESC,"Boss: rotating open-face windows, one-support mute cycles and telegraphed volleys. Control effects slow its attack cycle without permanent stun."
+BROADCAST_ENEMY_AERIAL,Satellite Speaker
+BROADCAST_ENEMY_AERIAL_DESC,Cloud Speaker weak point. Both satellites take ordinary damage; destroy them to expose the core.
+BROADCAST_LOG_1,The first callers are still listening. The station stays on air.
+BROADCAST_LOG_2,"Portable playlists swarm the rooftops, but the microphone holds."
+BROADCAST_LOG_3,Wireless traffic crosses every lane. The tower finds a clear frequency.
+BROADCAST_M4_W1,The Playlist · Wave 1
+BROADCAST_M4_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W2,The Playlist · Wave 2
+BROADCAST_M4_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W3,The Playlist · Wave 3
+BROADCAST_M4_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W4,The Playlist · Wave 4
+BROADCAST_M4_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W5,The Playlist · Wave 5
+BROADCAST_M4_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W6,The Playlist · Wave 6
+BROADCAST_M4_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W7,The Playlist · Wave 7
+BROADCAST_M4_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W8,The Playlist · Wave 8
+BROADCAST_M4_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W9,The Playlist · Wave 9
+BROADCAST_M4_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M4_W10,The Playlist · Wave 10
+BROADCAST_M4_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_4,The Playlist falls silent. Our first region can hear us again.
+BROADCAST_M5_W1,Heavy Rotation · Wave 1
+BROADCAST_M5_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W2,Heavy Rotation · Wave 2
+BROADCAST_M5_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W3,Heavy Rotation · Wave 3
+BROADCAST_M5_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W4,Heavy Rotation · Wave 4
+BROADCAST_M5_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W5,Heavy Rotation · Wave 5
+BROADCAST_M5_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W6,Heavy Rotation · Wave 6
+BROADCAST_M5_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W7,Heavy Rotation · Wave 7
+BROADCAST_M5_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W8,Heavy Rotation · Wave 8
+BROADCAST_M5_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W9,Heavy Rotation · Wave 9
+BROADCAST_M5_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M5_W10,Heavy Rotation · Wave 10
+BROADCAST_M5_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_5,Rugged players resist the signal. Brass and valves answer with pressure.
+BROADCAST_M6_W1,Shared Connection · Wave 1
+BROADCAST_M6_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W2,Shared Connection · Wave 2
+BROADCAST_M6_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W3,Shared Connection · Wave 3
+BROADCAST_M6_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W4,Shared Connection · Wave 4
+BROADCAST_M6_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W5,Shared Connection · Wave 5
+BROADCAST_M6_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W6,Shared Connection · Wave 6
+BROADCAST_M6_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W7,Shared Connection · Wave 7
+BROADCAST_M6_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W8,Shared Connection · Wave 8
+BROADCAST_M6_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W9,Shared Connection · Wave 9
+BROADCAST_M6_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M6_W10,Shared Connection · Wave 10
+BROADCAST_M6_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_6,Sync hubs link the opposition. Breaking one link opens the whole group.
+BROADCAST_M7_W1,Packet Storm · Wave 1
+BROADCAST_M7_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W2,Packet Storm · Wave 2
+BROADCAST_M7_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W3,Packet Storm · Wave 3
+BROADCAST_M7_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W4,Packet Storm · Wave 4
+BROADCAST_M7_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W5,Packet Storm · Wave 5
+BROADCAST_M7_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W6,Packet Storm · Wave 6
+BROADCAST_M7_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W7,Packet Storm · Wave 7
+BROADCAST_M7_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W8,Packet Storm · Wave 8
+BROADCAST_M7_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W9,Packet Storm · Wave 9
+BROADCAST_M7_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M7_W10,Packet Storm · Wave 10
+BROADCAST_M7_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_7,Streaming docks fill the air with packets. Every intercepted shot buys time.
+BROADCAST_M8_W1,Cloud Speaker · Wave 1
+BROADCAST_M8_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W2,Cloud Speaker · Wave 2
+BROADCAST_M8_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W3,Cloud Speaker · Wave 3
+BROADCAST_M8_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W4,Cloud Speaker · Wave 4
+BROADCAST_M8_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W5,Cloud Speaker · Wave 5
+BROADCAST_M8_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W6,Cloud Speaker · Wave 6
+BROADCAST_M8_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W7,Cloud Speaker · Wave 7
+BROADCAST_M8_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W8,Cloud Speaker · Wave 8
+BROADCAST_M8_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W9,Cloud Speaker · Wave 9
+BROADCAST_M8_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M8_W10,Cloud Speaker · Wave 10
+BROADCAST_M8_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_8,The cloud core loses its satellites. Broadcast reaches the switchyard.
+BROADCAST_M9_W1,Quiet Channels · Wave 1
+BROADCAST_M9_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W2,Quiet Channels · Wave 2
+BROADCAST_M9_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W3,Quiet Channels · Wave 3
+BROADCAST_M9_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W4,Quiet Channels · Wave 4
+BROADCAST_M9_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W5,Quiet Channels · Wave 5
+BROADCAST_M9_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W6,Quiet Channels · Wave 6
+BROADCAST_M9_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W7,Quiet Channels · Wave 7
+BROADCAST_M9_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W8,Quiet Channels · Wave 8
+BROADCAST_M9_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W9,Quiet Channels · Wave 9
+BROADCAST_M9_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M9_W10,Quiet Channels · Wave 10
+BROADCAST_M9_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_9,Noise cancellation steals a channel at a time. The main tower keeps speaking.
+BROADCAST_M10_W1,Changing Faces · Wave 1
+BROADCAST_M10_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W2,Changing Faces · Wave 2
+BROADCAST_M10_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W3,Changing Faces · Wave 3
+BROADCAST_M10_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W4,Changing Faces · Wave 4
+BROADCAST_M10_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W5,Changing Faces · Wave 5
+BROADCAST_M10_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W6,Changing Faces · Wave 6
+BROADCAST_M10_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W7,Changing Faces · Wave 7
+BROADCAST_M10_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W8,Changing Faces · Wave 8
+BROADCAST_M10_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W9,Changing Faces · Wave 9
+BROADCAST_M10_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M10_W10,Changing Faces · Wave 10
+BROADCAST_M10_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_10,Watch faces shift their defenses. Mixed instruments find the opening.
+BROADCAST_M11_W1,Digital Crossfire · Wave 1
+BROADCAST_M11_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W2,Digital Crossfire · Wave 2
+BROADCAST_M11_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W3,Digital Crossfire · Wave 3
+BROADCAST_M11_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W4,Digital Crossfire · Wave 4
+BROADCAST_M11_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W5,Digital Crossfire · Wave 5
+BROADCAST_M11_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W6,Digital Crossfire · Wave 6
+BROADCAST_M11_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W7,Digital Crossfire · Wave 7
+BROADCAST_M11_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W8,Digital Crossfire · Wave 8
+BROADCAST_M11_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W9,Digital Crossfire · Wave 9
+BROADCAST_M11_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M11_W10,Digital Crossfire · Wave 10
+BROADCAST_M11_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_11,Every generation of device joins the attack. The station answers together.
+BROADCAST_M12_W1,The Noise Canceller · Wave 1
+BROADCAST_M12_W1_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W2,The Noise Canceller · Wave 2
+BROADCAST_M12_W2_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W3,The Noise Canceller · Wave 3
+BROADCAST_M12_W3_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W4,The Noise Canceller · Wave 4
+BROADCAST_M12_W4_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W5,The Noise Canceller · Wave 5
+BROADCAST_M12_W5_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W6,The Noise Canceller · Wave 6
+BROADCAST_M12_W6_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W7,The Noise Canceller · Wave 7
+BROADCAST_M12_W7_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W8,The Noise Canceller · Wave 8
+BROADCAST_M12_W8_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W9,The Noise Canceller · Wave 9
+BROADCAST_M12_W9_DESC,Watch device tells and focus priority targets.
+BROADCAST_M12_W10,The Noise Canceller · Wave 10
+BROADCAST_M12_W10_DESC,Watch device tells and focus priority targets.
+BROADCAST_LOG_12,The last cancellation field breaks. There is still room for live radio.
+BROADCAST_MODES,Broadcast modes
+BROADCAST_CAMPAIGN,Campaign
+BROADCAST_CONTRACT,Contracts
+BROADCAST_ENDLESS,Endless
+BROADCAST_STANDARD,Standard
+BROADCAST_HARD,Hard
+BROADCAST_OVERLOAD,Overload
+BROADCAST_UNLOCK,Clear mission %d to unlock.
+BROADCAST_ENDLESS_DESC,"Survive for a local best score. Early waves offer three upgrades; after wave 10, one per wave. Recruit before waves 2/4/6/8 and, if needed, 12/16. Maxed equipment gets repair or refill choices."
+BROADCAST_FINISH,End broadcast · bank cleared waves
+BROADCAST_ENDLESS_WAVE,Endless · Wave %d
+BROADCAST_ENEMY_CODEX,Devices & counters
+BROADCAST_LOGS,Station logs & medals
+BROADCAST_LOGS_EMPTY,Complete a mission to hear its station log.
+BROADCAST_SEEN,Encounter recorded
+BROADCAST_UNSEEN,Not encountered yet
+BROADCAST_REPAIR,Station repair
+BROADCAST_REPAIR_DESC,"Restore 12 Station Health, up to its current maximum."
+BROADCAST_REFILL,Shield refill
+BROADCAST_REFILL_DESC,"Restore 20 shield, up to its current capacity."
+BROADCAST_DECLINE,Keep this lineup
+BROADCAST_DECLINE_DESC,Skip recruitment and continue with your current instruments.
+BROADCAST_MEDAL_CLEAN_AIR,Clean air · no breaches
+BROADCAST_MEDAL_FAST_TRACK,Fast track · finish within 650 seconds
+BROADCAST_MEDAL_INTERCEPTOR,Interceptor · stop at least 10 packets
+BROADCAST_MEDAL_STEADY_SIGNAL,Steady signal · take no Station damage
+BROADCAST_CONTRACT_TWO_CHANNEL,Two-Channel Radio
+BROADCAST_CONTRACT_TWO_CHANNEL_DESC,At most two support instruments.
+BROADCAST_CONTRACT_BARE_ANTENNA,Bare Antenna
+BROADCAST_CONTRACT_BARE_ANTENNA_DESC,Main tower and shield only. No starting or recruited supports.
+BROADCAST_CONTRACT_FRAGILE_BROADCAST,Fragile Broadcast
+BROADCAST_CONTRACT_FRAGILE_BROADCAST_DESC,55% Station Health. Normal shield capacity.
+BROADCAST_CONTRACT_NO_REPEATS,No Repeats
+BROADCAST_CONTRACT_NO_REPEATS_DESC,Each tuning-card ID can be purchased once.
+BROADCAST_CONTRACT_OVERCROWDED_FREQUENCY,Overcrowded Frequency
+BROADCAST_CONTRACT_OVERCROWDED_FREQUENCY_DESC,More portable players arrive in faster groups.
+BROADCAST_CONTRACT_LONG_DISTANCE,Long Distance Call
+BROADCAST_CONTRACT_LONG_DISTANCE_DESC,Streaming docks replace a third of wave enemies.
+BROADCAST_PATCH_HINT,Choose a socket. Connect a ready pair. Go live.
+BROADCAST_DETAILS,Details +
+BROADCAST_HIDE_DETAILS,Details −
+BROADCAST_GUARDED,GUARDED
+BROADCAST_OPEN,OPEN
+BROADCAST_CHANNEL,TUNING
+BROADCAST_VOLLEY,PACKETS
+BROADCAST_MUTED,MUTED
+BROADCAST_ALL_CONNECTIONS,All connections
+BROADCAST_READY_CONNECTIONS,Ready connections
+BROADCAST_NO_CONNECTIONS,No connections ready. Go live or browse the recipes.

@@ -1,0 +1,18 @@
+{
+	"alive": 0,
+	"cause": "M2_DIVER_NAME",
+	"choices": 28,
+	"cleared": 10,
+	"contract": "no_repeats",
+	"finished": true,
+	"hull": 100.0,
+	"mission": 3,
+	"mode": "contract",
+	"reason": "",
+	"restores": 28,
+	"seconds": 574.566666666473,
+	"style": "static_net",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

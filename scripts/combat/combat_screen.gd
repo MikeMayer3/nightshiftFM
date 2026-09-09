@@ -2,6 +2,7 @@ class_name CombatScreen
 extends Control
 
 signal back_requested
+var broadcast_context: Dictionary = {}
 var campaign_enabled: bool = false
 var campaign_mission: int = 1
 var campaign_modules: Array[StringName] = []
@@ -29,6 +30,7 @@ var last_checkpoint: Dictionary = {}
 var save_failed: bool = false
 var recovery_required: bool = false
 var session: CombatSession = CombatSession.new()
+var finish_button: Button
 var manual_pause: bool = false
 var focused: bool = true
 var app_paused: bool = false
@@ -115,6 +117,13 @@ func _ready() -> void:
 	resume_button.pressed.connect(toggle_pause)
 	restart_button.pressed.connect(restart)
 	menu_button.pressed.connect(func() -> void: back_requested.emit())
+	if session.signal_progress is BroadcastProgress:
+		finish_button = Button.new()
+		finish_button.text = tr("BROADCAST_FINISH")
+		RadioUI.button(finish_button)
+		menu_button.get_parent().add_child(finish_button)
+		finish_button.pressed.connect(func() -> void:
+			if session.finish_endless(): back_requested.emit())
 	settings_button = Button.new()
 	settings_button.text = tr("M10_SETTINGS")
 	settings_button.custom_minimum_size.y = 76
@@ -245,7 +254,7 @@ func _finished(_victory: bool) -> void:
 func _refresh() -> void:
 	if not is_node_ready():
 		return
-	title.text = tr("ACTIVE_WAVE" if session.active_combat != null else "COMBAT_WAVE") % [maxi(1, session.wave), session.total_waves()]
+	title.text = tr("BROADCAST_ENDLESS_WAVE") % maxi(1, session.wave) if session.signal_progress is BroadcastProgress else tr("ACTIVE_WAVE" if session.active_combat != null else "COMBAT_WAVE") % [maxi(1, session.wave), session.total_waves()]
 	hull_bar.max_value = session.maximum_hull()
 	hull_bar.value = session.hull
 	shield_bar.max_value = session.run.shield.capacity
@@ -267,7 +276,7 @@ func _refresh() -> void:
 	if m3_enabled and session.draft != null:
 		($Safe/Column/Health as Label).text = tr("M3_HEALTH") % [session.hull, session.maximum_hull(), session.run.shield.current, session.run.shield.capacity]
 		($Safe/Column/AbilityHint as Label).text = tr("M3_ABILITY_HINT") % [session.shield_stat(&"duration", 2.5), session.shield_stat(&"cooldown", 12)]
-		($Safe/Column/Hint as Label).text = tr("M3_RANKS") % [session.run.main_weapon.rank, session.run.shield.rank, session.run.supports[0].rank]
+		($Safe/Column/Hint as Label).text = tr("M3_RANKS") % [session.run.main_weapon.rank, session.run.shield.rank, session.run.supports[0].rank if not session.run.supports.is_empty() else 0]
 		if session.supports != null:
 			($Safe/Column/Hint as Label).text = tr("M4_RANKS") % session.run.supports.size()
 			($Safe/Column/Legend as Label).text = tr("M4_LEGEND")
@@ -289,6 +298,9 @@ func _refresh() -> void:
 		return
 	overlay.visible = not report_open and (session.paused or session.is_finished())
 	if report_button != null: report_button.visible = session.supports != null and session.is_finished()
+	if finish_button != null:
+		finish_button.visible = not session.is_finished()
+		finish_button.disabled = session.achievement_run.cleared_waves == 0
 	resume_button.visible = not session.is_finished()
 	resume_button.disabled = not focused or app_paused
 	if session.is_finished():
@@ -300,6 +312,8 @@ func _refresh() -> void:
 		details.text = tr("SIGNAL_PAUSE" if session.signal_progress != null else ("M3_PAUSE_BODY" if m3_enabled else "COMBAT_PAUSE_BODY"))
 
 		if session.active_combat != null: details.text = tr("M10_RADIO_CONTROLS")
+		for id: StringName in profile.achievements.tracked:
+			details.text += "\n" + tr(AchievementCatalog.ALL[id].name_key) + "  " + str(profile.achievements.count(id)) + "/" + str(AchievementCatalog.ALL[id].threshold)
 
 func _report(event: String) -> void:
 	if OS.is_debug_build():
@@ -346,6 +360,7 @@ func _setup_m3() -> void:
 		if session.campaign != null:
 			campaign_mission = session.campaign.mission
 			campaign_modules = session.campaign.modules.duplicate()
+			broadcast_context = {"mode": session.campaign.mode, "difficulty": session.campaign.difficulty, "contract": session.campaign.contract} if session.campaign.expanded else {}
 		else: campaign_enabled = false
 		last_checkpoint = data.run.duplicate(true)
 		_refresh_decision()
@@ -358,7 +373,9 @@ func _start_m3() -> void:
 	profile.next_run += 1
 	if campaign_enabled:
 		profile.enable_m4()
-		session.start_campaign(int(Time.get_unix_time_from_system()) ^ Time.get_ticks_usec(), identity, loadout, {"mission": campaign_mission, "cleared": profile.campaign.cleared, "modules": Array(campaign_modules)})
+		var context: Dictionary = {"mission": campaign_mission, "cleared": profile.campaign.cleared, "modules": Array(campaign_modules)}
+		context.merge(broadcast_context)
+		session.start_campaign(int(Time.get_unix_time_from_system()) ^ Time.get_ticks_usec(), identity, loadout, context)
 	elif patchboard_enabled:
 		profile.enable_m4()
 		session.start_patchboard(int(Time.get_unix_time_from_system()) ^ Time.get_ticks_usec(), identity, loadout)
@@ -382,7 +399,9 @@ func _start_m3() -> void:
 
 func _save_checkpoint() -> void:
 	if session.draft == null: return
-	if session.phase == CombatSession.Phase.VICTORY: profile.commit_reward(session.run_id, session)
+	profile.broadcast.record(session)
+	profile.achievements.record_waves(session)
+	if session.phase == CombatSession.Phase.VICTORY or session.signal_progress is BroadcastProgress and session.phase == CombatSession.Phase.DEFEAT: profile.commit_reward(session.run_id, session)
 	if session.patchboard != null:
 		for id: StringName in session.patchboard.discovered():
 			if id not in profile.discovered: profile.discovered.append(id)

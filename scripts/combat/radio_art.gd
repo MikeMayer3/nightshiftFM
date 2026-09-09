@@ -6,6 +6,17 @@ const ENEMIES: Array = [
 	[preload("res://assets/art/radio/swarmer_2.svg"), preload("res://assets/art/radio/diver_2.svg"), preload("res://assets/art/radio/carrier_2.svg")],
 	[preload("res://assets/art/radio/swarmer_3.svg"), preload("res://assets/art/radio/diver_3.svg"), preload("res://assets/art/radio/carrier_3.svg")],
 ]
+const ROLES: Array[Texture2D] = [null,
+	preload("res://assets/art/radio/plated.svg"),
+	preload("res://assets/art/radio/caster.svg"),
+	preload("res://assets/art/radio/jammer.svg"),
+	preload("res://assets/art/radio/mimic.svg"),
+	preload("res://assets/art/radio/mortar.svg"),
+	preload("res://assets/art/radio/caller.svg"),
+	preload("res://assets/art/radio/core.svg"),
+	preload("res://assets/art/radio/silence.svg"),
+	preload("res://assets/art/radio/aerial.svg"),
+]
 const MAIN: Dictionary = {
 	"pulse": preload("res://assets/art/radio/pulse.svg"),
 	"sweep": preload("res://assets/art/radio/sweep.svg"),
@@ -18,7 +29,7 @@ static func era(session: CombatSession) -> int:
 	return clampi((session.campaign.mission - 1) / 4, 0, 2) if session.campaign != null else 0
 
 static func enemy(actor: CombatActor, era_index: int) -> Texture2D:
-	return ENEMIES[clampi(era_index, 0, 2)][int(actor.path_kind)]
+	return ROLES[actor.role] if actor.role > 0 else ENEMIES[clampi(era_index, 0, 2)][int(actor.path_kind)]
 
 static func main_texture(session: CombatSession) -> Texture2D:
 	var key: String = session.draft.loadout.main if session.draft is ArsenalDraft else "pulse"

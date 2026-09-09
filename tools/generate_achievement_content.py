@@ -24,11 +24,11 @@ for ident, category, name, condition in rows:
     key = 'M9_ACH_' + ident.upper()
     strings[key], strings[key+'_DESC'] = name.strip(), condition.strip()
     mastery = category.strip() == 'Weapon mastery'
-    available = ident in LIVE or mastery
+    available = True
     threshold = 3 if ident.endswith('_three_capstones') else THRESHOLDS.get(ident, 1)
     family = ident.split('_first_capstone')[0].split('_three_capstones')[0] if mastery else ''
     parameters = '{&"family": &"'+family+'"}' if family else '{}'
-    modes = ['contract'] if category.strip() == 'Contracts' else ['endless'] if category.strip() == 'Endless' else ['campaign','contract','endless'] if mastery else ['campaign']
+    modes = ['contract'] if category.strip() == 'Contracts' else ['endless'] if category.strip() == 'Endless' else ['campaign','contract','endless'] if mastery or ident in ['bouncer','know_enemy','boss_notebook'] else ['campaign']
     pending = 'M9_PENDING_ENDLESS' if category.strip() == 'Endless' else 'M9_PENDING_TELEMETRY' if ident in ['bouncer','hold_the_line'] else 'M9_PENDING_CAMPAIGN'
     progress_kind = 'set' if mastery or ident in ['sound_engineer','variety_show'] else 'flag' if threshold == 1 else 'counter'
     (folder/f'{ident}.tres').write_text(f'''[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
@@ -54,7 +54,7 @@ registry.append('}')
 (ROOT/'scripts/achievements').mkdir(parents=True, exist_ok=True)
 (ROOT/'scripts/achievements/achievement_catalog.gd').write_text('\n'.join(registry)+'\n')
 strings.update({
- 'M9_ACHIEVEMENTS':'Achievements', 'M9_HINT':'Cosmetic titles only. Progress is committed when an eligible mission ends in victory.',
+ 'M9_ACHIEVEMENTS':'Achievements', 'M9_HINT':'Cosmetic rewards. Run goals commit on completion; discovery, reflection and Endless wave goals commit at cleared waves.',
  'M9_PENDING_ENDLESS':'Pending: Endless mode.', 'M9_PENDING_TELEMETRY':'Pending: committed defensive-event tracking.',
  'M9_PENDING_CAMPAIGN':'Pending: remaining campaign content and mode rules.',
  'M9_PROGRESS':'%d / %d', 'M9_EARNED':'Earned', 'M9_TRACK':'Track goal', 'M9_UNTRACK':'Untrack goal',
@@ -63,7 +63,7 @@ strings.update({
  'M9_PRACTICE':'Editor, debug and prototype runs do not earn achievements.',
  'M9_REPORT_HISTORY':'Station damage taken: %.1f · Peak supports: %d',
  'M9_REPORT_OUTPUT':'Effective damage: %.1f · Intercepted bolts: %d',
- 'M9_REPORT_HINT':'Burst is included in main damage. Exposure assistance is reported separately and is not added to damage totals.',
+ 'M9_REPORT_HINT':'Weapon and connection damage are counted once. Exposure assistance is shown separately.',
  'M9_RESULT_ELIGIBLE':'This run records local achievements on victory.',
  'M9_RESULT_PRACTICE':'Practice or legacy run: achievement rewards disabled.',
 })
@@ -73,4 +73,4 @@ for key,value in strings.items():
     if key in indices: localized[indices[key]]=[key,value]
     else: localized.append([key,value])
 buf=io.StringIO();csv.writer(buf,lineterminator='\n').writerows(localized);p.write_text(buf.getvalue())
-print('Generated 48 definitions: 25 available, 23 explicitly pending.')
+print('Generated 48 available achievement definitions.')

@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"alive":0,"cause":"M2_DIVER_NAME","choices":85,"cleared":60,"contract":"","difficulty":0,"finished":true,"hull":81.1237499999997,"main":"pulse","mission":1,"mode":"endless","reason":"","restores":83,"seconds":3586.25000001805,"style":"bass_driver","valid":true,"victory":true,"wave":60}

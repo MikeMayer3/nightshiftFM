@@ -1,48 +1,31 @@
 # Nightshift FM — Codex development handoff
 
-Current build: **0.10.3 — defend the radio station.** Vintage studio instruments
-fight modern audio devices with distinct sound-wave attacks. The main tower stays
-centered below the raised shield boundary. A hunting radio needle, rotating knobs,
-compact header and bottom Station Health display leave more room for the field.
-New runs use automatic weapons, modules are available immediately, and upgrade
-sheets keep the paused battlefield visible. Setup uses illustrated equipment cards,
-optional details and a graphical twelve-station route.
-See [current revision and verification](docs/M10_MOBILE_POLISH.md).
+Current build: **0.10.4 — twelve stations, Contracts and Endless.** Defend
+radio with a centered transmission tower and six vintage instrument families
+against modern devices. All twelve ten-wave missions, eight regular enemy roles,
+three bosses, Hard/Overload and six Contracts are playable. All 48 local
+achievement conditions are evaluated; debug/editor play remains ineligible.
 
-Android debug output: `builds/android/nightshift-m10.apk` (0.10.3/code 15).
-M8/M9/M10 remain partial; full human and physical-performance acceptance are open.
+The M10 pass adds distinct device tells, rank hardware, regional scenery, original
+music and a compact patchboard. The approved tuning dial, rotating knobs, tall
+field and bottom Station Health layout remain intact. Select **New broadcast**,
+a mission and optionally **Broadcast modes**, then equipment and **Go live**.
+Modules are available immediately. Existing saves retain their original rules.
 
-**M9 has started with local achievements, tracked goals, cosmetic titles and
-report history.** The catalog has 48 entries: 25 evaluated conditions and 23
-explicitly pending. Endless is not implemented. M8's first three authored
-missions are available; its remaining content and human acceptance stay open.
-The title and haunted-radio theme are provisional; iOS remains deferred.
+Android debug artifact: `builds/android/nightshift-m10.apk` (0.10.4/code 16).
+Updated on the physical Pixel 10 Pro XL with existing saves preserved. Emulator
+playtests and automated checks passed; physical gameplay, iPhone and human
+acceptance remain open. No M11 release work.
+See [delivery and exact evidence](docs/M8_M10_DELIVERY.md) and
+[implementation status](docs/IMPLEMENTATION_STATUS.md).
 
-Open `project.godot` with Godot 4.7.2 standard, or follow the
-[development instructions](docs/DEVELOPMENT.md). Choose **New mission · Standard**,
-select a campaign mission, choose equipment and **Go live**. **Continue saved
-mission** restores an existing run. Missions 1–3 use distinct ten-wave encounters;
-missions 4–12 still explicitly identify their reused prototype battles.
-
-Read [M9 achievements and remaining scope](docs/M9_ACHIEVEMENTS.md),
-[M8 opening encounters and remaining scope](docs/M8_ENCOUNTERS.md),
-[M7 progression and verification](docs/M7_PROGRESSION.md),
-[M6 patchboard](docs/M6_PATCHBOARD.md), [M5 arsenal](docs/M5_ARSENAL.md),
-[implementation status](docs/IMPLEMENTATION_STATUS.md), and
-[mobile setup](docs/MOBILE_DEVELOPMENT.md). The previous M7 Android artifact is
-`builds/android/nightshift-m7.apk`, version 0.7.0/code 11. The new M10 artifact
-includes the current M8/M9 increments and the M10 presentation pass. Existing prototype saves continue with their original
-rules; New mission starts the campaign.
-
-This handoff includes the local M9 achievement and M10 presentation increments.
-Campaign → **Achievements** opens progress and goals. Editor/debug/prototype runs
-do not earn rewards; production native eligibility validation remains pending.
-Pixel installation and save-preservation evidence is recorded in the
-[current delivery notes](docs/M10_MOBILE_POLISH.md).
+Open `project.godot` in Godot 4.7.2 standard, or follow
+[development instructions](docs/DEVELOPMENT.md) and
+[mobile setup](docs/MOBILE_DEVELOPMENT.md).
 
 ## Project in one paragraph
 
-Create an offline-first, portrait Android/iOS fixed-turret roguelite defense game. The player is a haunted radio transmitter at the bottom of the arena; enemies fly in from the top. The player has one main weapon, one shield, and at most five support weapons chosen from six families. Every mission resets combat power. Permanent progress unlocks alternatives, missions, cosmetics, and achievements. Depth comes from branching weapon upgrades, selective specialization, target priorities, enemy composition, and two configurable synergy connections.
+Create an offline-first, portrait Android/iOS fixed-turret roguelite defense game. The player protects a radio station using its centered transmission tower and vintage instruments; modern audio devices attack from the top. The player has one main weapon, one shield, and at most five support weapons chosen from six families. Every mission resets combat power. Permanent progress unlocks alternatives, missions, cosmetics, and achievements. Depth comes from branching weapon upgrades, selective specialization, target priorities, enemy composition, and two configurable synergy connections.
 
 ## Clone and continue
 

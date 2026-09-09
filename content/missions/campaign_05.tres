@@ -6,5 +6,5 @@ id = &"campaign.05"
 name_key = &"M7_MISSION_5"
 description_key = &"M7_MISSION_5_DESC"
 campaign_index = 5
-prototype = true
-wave_ids = Array[StringName]([&"active.wave_1", &"active.wave_2", &"active.wave_3", &"active.wave_4", &"active.wave_5", &"active.wave_6", &"active.wave_7", &"active.wave_8_turrets", &"active.wave_9", &"active.wave_10"])
+prototype = false
+wave_ids = Array[StringName]([&"m8.full.m05.w01", &"m8.full.m05.w02", &"m8.full.m05.w03", &"m8.full.m05.w04", &"m8.full.m05.w05", &"m8.full.m05.w06", &"m8.full.m05.w07", &"m8.full.m05.w08", &"m8.full.m05.w09", &"m8.full.m05.w10"])

@@ -1,0 +1,28 @@
+Generated 12 modules and 12 prototype mission definitions.
+Generated three authored missions, 30 waves, and three family elites.
+Generated complete 12-mission registry, 90 new waves, five enemy roles, three bosses and targetable satellites.
+Generated 48 available achievement definitions.
+Generated 18 radio SVGs and four original audio cues.
+Expanded roster: nine device silhouettes; original 32-second station loop and two counterplay cues.
+{
+  "path": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m8-fresh-nk31nkgz/project",
+  "generator_changes": [],
+  "generators_idempotent": true,
+  "checks": [
+    {
+      "check": "import",
+      "exit": 0,
+      "runtime_errors": false
+    },
+    {
+      "check": "test",
+      "exit": 0,
+      "runtime_errors": false
+    },
+    {
+      "check": "smoke",
+      "exit": 0,
+      "runtime_errors": false
+    }
+  ]
+}

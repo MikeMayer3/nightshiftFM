@@ -5,6 +5,10 @@ const SHOT: AudioStream = preload("res://assets/audio/radio/transmit.wav")
 const HIT: AudioStream = preload("res://assets/audio/radio/hit.wav")
 const TUNE: AudioStream = preload("res://assets/audio/radio/tune.wav")
 const BED: AudioStream = preload("res://assets/audio/radio/station.wav")
+const WARNING: AudioStream = preload("res://assets/audio/radio/warning.wav")
+const SHIELD: AudioStream = preload("res://assets/audio/radio/shield.wav")
+var warning_wait: float = 0
+var shield_was_active: bool = false
 var effects: Array[AudioStreamPlayer] = []
 var music: AudioStreamPlayer
 var session: CombatSession
@@ -36,6 +40,12 @@ func _process(delta: float) -> void:
 	music.stream_paused = stopped
 	for player: AudioStreamPlayer in effects: player.stream_paused = stopped
 	if stopped: return
+	warning_wait = maxf(0, warning_wait - delta)
+	if BroadcastRules.expanded(session) and warning_wait <= 0 and session.actors.any(func(a: CombatActor) -> bool: return a.role >= EnemyDefinition.Role.CASTER and EncounterDirector.channel(a)):
+		cue(WARNING)
+		warning_wait = 2
+	if session.ability_left > 0 and not shield_was_active: cue(SHIELD)
+	shield_was_active = session.ability_left > 0
 	_shot_wait = maxf(0, _shot_wait - delta)
 	_haptic_wait = maxf(0, _haptic_wait - delta)
 	if RadioPreferences.current.enabled("music") and not music.playing: music.play()

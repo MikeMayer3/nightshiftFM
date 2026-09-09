@@ -104,3 +104,55 @@ sound('hit',[110,65],.20,.22)
 sound('tune',[392,784],.35,.16)
 sound('station',[130.8128,196,261.6256],8,.08,True)
 print('Generated 18 radio SVGs and four original audio cues.')
+
+# Expanded modern-device roster: shape, hardware and marks distinguish every role.
+save('plated', rect(22,8,84,112,'#646e7c',15,'#131d2b',5) + rect(32,22,64,51,'#1b3142',6) +
+     line('M44 43h40M44 54h25','#8edbd4',4) + dial(64,94,14,'#e4b974') +
+     ''.join(rect(x,y,12,18,'#d3ac74',2) for x in [17,99] for y in [18,85]))
+save('caster', rect(12,44,104,60,'#cad5df',12) + line('M25 46L17 15M103 46l8-31','#91d8ee',7) +
+     circle(64,72,18,'#213b50','#76c5e5',3) + line('M52 72h24M64 60v24','#a9edeb',4) +
+     ''.join(circle(x,94,3,'#64c6c2',width=0) for x in [28,39,50,78,89,100]) + line('M43 33Q64 12 85 33','#88cfe0',3))
+save('jammer', line('M19 67V53Q19 9 64 9t45 44v14','#b7accf',12) +
+     rect(9,53,27,56,'#2b304b',12,'#bfaccf',4) + rect(92,53,27,56,'#2b304b',12,'#bfaccf',4) +
+     line('M44 66l12-12v36l-12-12h-6V66M74 61l18 26M92 61L74 87','#e993b4',4))
+save('mimic', rect(47,0,34,128,'#3e485b',10) + rect(24,24,80,80,'#d1dce1',22) +
+     rect(31,31,66,66,'#192f43',17) + circle(106,56,5,'#efab75') +
+     line('M44 60h10l7-15 10 31 8-16h7','#80e1c7',4))
+save('mortar', rect(9,80,110,35,'#596d86',12) + rect(35,9,58,80,'#d8dce4',8) +
+     rect(41,16,46,63,'#253851',5) + line('M53 32l23 16-23 16Z','#f0ad86',4) +
+     circle(28,97,6,'#f0ad86') + grille(45,92,60,15,'#a9b6c6'))
+save('caller', rect(20,4,88,120,'#becde0',18,'#394e70',4) + rect(28,17,72,94,'#1c2c49',12) +
+     ''.join(circle(41,y,4,'#f6b690',width=0) + line(f'M52 {y}h33','#a8bdd8',4) for y in [37,55,73]) +
+     line('M56 86l15 9-15 9Z','#ee88b0',3) + rect(48,7,32,5,'#172b46',3))
+save('core', rect(20,21,88,102,'#2e4960',30,'#aeced7',4) +
+     ''.join(line(f'M{x} 64v39','#739cae',2) for x in range(33,103,9)) +
+     '<ellipse cx="64" cy="38" rx="36" ry="19" fill="#173147" stroke="#8ce3db" stroke-width="5"/>' +
+     line('M42 39q-6-12 6-13q7-18 19-5q18-3 19 10q8 13-11 14H50','#d3efea',3))
+save('silence', line('M15 68V53Q15 5 64 5t49 48v15','#96a8c0',14) +
+     rect(4,53,32,68,'#273647',12,'#d2dddf',4) + rect(92,53,32,68,'#273647',12,'#d2dddf',4) +
+     line('M15 64v42M113 64v42','#eda5ad',4) + line('M43 66l12-15v42L43 79M69 56l17 34M86 56L69 90','#eda5ad',5))
+save('aerial', circle(64,67,43,'#253c52','#9ed8dc',5) + circle(64,67,28,'#476980','#b7d6de',3) +
+     circle(64,67,12,'#c4e4e5') + line('M40 14Q64 0 88 14M46 25q18-11 36 0','#d7f2e9',4))
+
+# 16-bar / 32-second original instrumental loop at 120 BPM. Deterministic synthesis;
+# no commercial samples. Rounded organ chords, electric-piano melody, bass and brushes.
+def station_loop():
+    rate=22050; duration=32; samples=[]
+    roots=[48,53,57,55]; melody=[72,76,79,76,74,72,67,69,72,74,76,79,81,79,76,74]
+    freq=lambda note:440*2**((note-69)/12)
+    for i in range(rate*duration):
+        t=i/rate; bar=int(t/2); root=roots[(bar//2)%4]; beat=t%0.5; step=int(t/.5)
+        chord=sum(math.sin(math.tau*freq(root+n)*t) for n in [0,4,7,11])*.023
+        bass=math.sin(math.tau*freq(root-12+(7 if step%4==2 else 0))*beat)*math.exp(-beat*9)*.09
+        age=t%0.5; note=melody[step%16] + (0 if (bar//8)%2==0 else -12)
+        lead=(math.sin(math.tau*freq(note)*age)+.2*math.sin(math.tau*freq(note)*2*age))*math.exp(-age*7)*.065
+        kick=math.sin(math.tau*(55*beat+2*(1-math.exp(-beat*35))))*math.exp(-beat*22)*(.05 if step%2==0 else .018)
+        hat=math.sin(i*1.791)*math.sin(i*.371)*math.exp(-(t%.25)*100)*.018
+        envelope=min(1,t/.015,(duration-t)/.015)
+        samples.append(struct.pack('<h',int(32767*envelope*(chord+bass+lead+kick+hat))))
+    with wave.open(str(AUDIO/'station.wav'),'wb') as f:
+        f.setnchannels(1);f.setsampwidth(2);f.setframerate(rate);f.writeframes(b''.join(samples))
+station_loop()
+sound('warning',[220,440],.32,.12)
+sound('shield',[261.63,523.25],.25,.12)
+print('Expanded roster: nine device silhouettes; original 32-second station loop and two counterplay cues.')

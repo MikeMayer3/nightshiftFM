@@ -13,5 +13,5 @@ condition_parameters = {}
 eligible_modes = Array[StringName]([&"endless"])
 minimum_difficulty = 0
 reward_id = &"cosmetic.achievement.endless_40"
-available = false
-pending_key = &"M9_PENDING_ENDLESS"
+available = true
+pending_key = &""

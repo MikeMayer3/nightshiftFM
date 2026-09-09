@@ -87,7 +87,7 @@ func restore(data: Variant) -> bool:
 	if not data is Dictionary or data.size() != 12: return false
 	if not ArsenalContent.valid_loadout(data.get("loadout")) or data.loadout != loadout: return false
 	if data.get("bonus") != false or data.get("bonus_count") != 0: return false
-	if not SaveChecks.number(data.get("normal_count"), 0, 1000, true): return false
+	if not SaveChecks.number(data.get("normal_count"), 0, 1100, true): return false
 	if not data.get("accepted") is Array or data.accepted.size() != int(data.normal_count): return false
 	if not SaveChecks.number(data.get("rerolls"), 0, reroll_limit, true) or not SaveChecks.number(data.get("banishes"), 0, 1, true): return false
 	for key: String in ["offers", "banished", "screen_tracks"]:
@@ -99,11 +99,13 @@ func restore(data: Variant) -> bool:
 	banished.assign(data.banished)
 	for id: StringName in [&"main", &"shield", StringName(loadout.support)]: equip(id)
 	normal_count = 0
+	accepted.clear()
 	for record: Variant in data.accepted:
 		if not record is Dictionary or record.size() != 2 or record.get("bonus") != false or not record.get("id") is String: return false
 		# Overdrive is legal only once all normal offensive options are exhausted.
 		if record.id == String(OVERDRIVE) and pool() != [OVERDRIVE]: return false
 		if not _purchase(StringName(record.id)): return false
+		accepted.append(record.duplicate(true))
 		normal_count += 1
 	if not data.get("tracks") is Array or data.tracks.size() != tracks.size(): return false
 	for index: int in tracks.size():

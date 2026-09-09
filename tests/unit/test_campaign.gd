@@ -3,7 +3,7 @@ func run(t: TestContext) -> bool:
 	for id: StringName in CampaignContent.MODULES:
 		t.check(CampaignContent.MODULES[id].validate().is_empty(), "bounded module authored: " + String(id))
 	for mission: MissionDefinition in CampaignContent.MISSIONS:
-		t.check(mission.prototype == (mission.campaign_index > 3) and mission.wave_ids.size() == 10, "campaign separates authored opening encounters from remaining prototypes: " + String(mission.id))
+		t.check(not mission.prototype and mission.wave_ids.size() == 10, "campaign has twelve authored ten-wave missions: " + String(mission.id))
 	var profile: MissionProfile = MissionProfile.new()
 	for cleared: int in range(13):
 		var supports: Array = CampaignContent.options(cleared, "support")
@@ -51,6 +51,7 @@ func run(t: TestContext) -> bool:
 		var legacy: Dictionary = MissionProfile.new().to_data()
 		legacy.erase("campaign")
 		legacy.erase("achievements")
+		legacy.erase("broadcast")
 		legacy.schema = schema
 		if schema == 1: legacy.erase("discovered")
 		t.check(MissionProfile.new().restore(legacy), "legacy profile schema %d remains readable" % schema)

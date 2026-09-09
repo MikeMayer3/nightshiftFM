@@ -1,0 +1,104 @@
+--------- beginning of main
+I/libprocessgroup( 9946): Created cgroup /sys/fs/cgroup/apps/uid_10237/pid_9946
+I/Zygote  ( 9946): Process 9946 created for org.nightshiftfm.broadcastqa
+I/tfm.broadcastqa( 9946): Late-enabling -Xcheck:jni
+I/tfm.broadcastqa( 9946): Using generational CollectorTypeCMC GC.
+D/nativeloader( 9946): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+D/nativeloader( 9946): Configuring clns-9 for other apk /data/app/~~hrTk_YBJBp_ZMCZQPQ6K1Q==/org.nightshiftfm.broadcastqa-tbKA08I-Ku6cellspzRT-A==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~hrTk_YBJBp_ZMCZQPQ6K1Q==/org.nightshiftfm.broadcastqa-tbKA08I-Ku6cellspzRT-A==/lib/arm64:/data/app/~~hrTk_YBJBp_ZMCZQPQ6K1Q==/org.nightshiftfm.broadcastqa-tbKA08I-Ku6cellspzRT-A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/org.nightshiftfm.broadcastqa
+--------- beginning of system
+D/ActivityThread( 9946): Set OS env TMPDIR to /data/user/0/org.nightshiftfm.broadcastqa/cache
+V/GraphicsEnvironment( 9946): Currently set values for:
+V/GraphicsEnvironment( 9946):   angle_gl_driver_selection_pkgs=[]
+V/GraphicsEnvironment( 9946):   angle_gl_driver_selection_values=[]
+V/GraphicsEnvironment( 9946): org.nightshiftfm.broadcastqa is not listed in per-application setting
+V/GraphicsEnvironment( 9946): No special selections for ANGLE, returning default driver choice
+V/GraphicsEnvironment( 9946): Neither updatable production driver nor prerelease driver is supported.
+I/DisplayManager( 9946): Choreographer implicitly registered for the refresh rate.
+I/GFXSTREAM( 9946): [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+I/GFXSTREAM( 9946): [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+W/libc    ( 9946): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+D/CompatChangeReporter( 9946): Compat change id reported: 377864165; UID 10237; state: ENABLED
+W/HWUI    ( 9946): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/HWUI    ( 9946): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/GodotActivity( 9946): Project command line parameters: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/GodotActivity( 9946): Launch intent Intent { flg=0x10000000 xflg=0x5 cmp=org.nightshiftfm.broadcastqa/com.godot.game.GodotAppLauncher } with parameters []
+V/GodotActivity( 9946): Creating new Godot fragment instance.
+V/Godot   ( 9946): Initializing Godot plugin registry
+I/GodotPluginRegistry( 9946): Registering runtime plugin AndroidRuntime
+V/Godot   ( 9946): InitEngine with params: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/nativeloader( 9946): Load /data/app/~~hrTk_YBJBp_ZMCZQPQ6K1Q==/org.nightshiftfm.broadcastqa-tbKA08I-Ku6cellspzRT-A==/lib/arm64/libgodot_android.so using class loader ns clns-9 (caller=/data/app/~~hrTk_YBJBp_ZMCZQPQ6K1Q==/org.nightshiftfm.broadcastqa-tbKA08I-Ku6cellspzRT-A==/base.apk!classes7.dex): ok
+V/Godot   ( 9946): Godot native layer initialization completed: true
+V/Godot   ( 9946): Setting up native layer with params: [--xr-mode, off]
+V/Godot   ( 9946): Godot native layer setup completed
+V/Godot   ( 9946): OnInitRenderView: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+D/Godot   ( 9946): Render view should be transparent: false
+D/Godot   ( 9946): renderingDevice: opengl3 (ProjectSettings)
+D/Godot   ( 9946): 			renderer: gl_compatibility (ProjectSettings)
+V/Godot   ( 9946): OnStart: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+V/Godot   ( 9946): OnResume: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+W/HWUI    ( 9946): Unknown dataspace 0
+W/libc    ( 9946): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+D/WindowOnBackDispatcher( 9946): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@2110f30
+D/WindowOnBackDispatcher( 9946): setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@c5e312e
+D/WindowOnBackDispatcher( 9946): setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@c5e312e
+D/WindowOnBackDispatcher( 9946): setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@c5e312e
+D/VRI[GodotAppLauncher]( 9946): WindowInsets changed: 1280x2856 statusBars:[0,156,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,192,0,96]
+I/HWUI    ( 9946): Using FreeType backend (prop=Auto)
+I/Surface ( 9946): Creating surface for consumer unnamed-9946-0 with slotExpansion=1 for 64 slots
+I/Surface ( 9946): Creating surface for consumer VRI[GodotAppLauncher]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+I/Surface ( 9946): Creating surface for consumer unnamed-9946-1 with slotExpansion=1 for 64 slots
+I/Surface ( 9946): Creating surface for consumer 530b565 SurfaceView[org.nightshiftfm.broadcastqa/com.godot.game.GodotAppLauncher]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+W/libc    ( 9946): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+W/RegularContextFactory( 9946): creating OpenGL ES 3.0 context :
+I/godot   ( 9946): Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+E/godot   ( 9946): WARNING: Failed to load cached shader, recompiling.
+E/godot   ( 9946):    at: _load_from_cache (drivers/gles3/shader_gles3.cpp:615)
+I/godot   ( 9946): OpenGL API OpenGL ES 3.1 (OpenGL ES 3.1.0 (ANGLE 2.1.1 git hash: fbf66f49c7cc)) - Compatibility - Using Device: Google (Google Inc. (Google)) - Android Emulator OpenGL ES Translator (ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver-5.0.0))
+D/AudioSystem( 9946): onNewServiceWithAdapter: media.audio_flinger service obtained 0xb4007e6a2e0bbbe0
+D/AudioSystem( 9946): getService: IAudioFlingerService retrieved: 0xb4007e695e159680  IAudioFlinger cached: 0xb4007e6a2e0bbbe0
+D/tfm.broadcastqa( 9946): PlayerBase::PlayerBase()
+D/tfm.broadcastqa( 9946): TrackPlayerBase::TrackPlayerBase()
+I/libOpenSLES( 9946): Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+I/godot   ( 9946):
+I/tfm.broadcastqa( 9946): Compiler allocated 5599KB to compile void android.view.ViewRootImpl.performTraversals(long)
+E/BLASTBufferQueue( 9946): [530b565 SurfaceView[org.nightshiftfm.broadcastqa/com.godot.game.GodotAppLauncher]#1](f:0,a:0) rejecting buffer:active_size=1280x2628, requested_size=1280x2628 buffer{size=1280x2856 transform=0}
+D/InsetsController( 9946): hide(ime())
+I/ImeTracker( 9946): org.nightshiftfm.broadcastqa:4ee0f54f: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+V/Godot   ( 9946): OnGodotSetupCompleted
+I/godot   ( 9946): M1_PROBE {"active_seconds":0.0,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":0}
+V/Godot   ( 9946): OnGodotMainLoopStarted
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":13.0500000000002,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":15.0833333333337,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":20.1166666666668,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":25.1499999999999,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":30.1499999999996,"shield":65.0,"wave":1}
+D/AudioTrackShared( 9946): obtainBuffer: benign status 'Try again' (recheck)
+V/Godot   ( 9946): OnPause: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+V/Godot   ( 9946): OnResume: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+D/InsetsController( 9946): hide(ime())
+I/ImeTracker( 9946): org.nightshiftfm.broadcastqa:cc11c3f4: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+D/tfm.broadcastqa( 9946): PlayerBase::pause() from IPlayer
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+V/Godot   ( 9946): OnPause: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+V/Godot   ( 9946): OnResume: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+D/InsetsController( 9946): hide(ime())
+I/ImeTracker( 9946): org.nightshiftfm.broadcastqa:79ea6e0a: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+V/Godot   ( 9946): OnPause: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+D/tfm.broadcastqa( 9946): PlayerBase::pause() from IPlayer
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+D/tfm.broadcastqa( 9946): PlayerBase::pause() from IPlayer
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+V/Godot   ( 9946): OnResume: GodotFragment{857e81a} (3b691000-2e3f-4f50-b2ab-055a72fc6d77 id=0x7f07002c)
+D/InsetsController( 9946): hide(ime())
+I/ImeTracker( 9946): org.nightshiftfm.broadcastqa:d4fb6c75: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+D/InsetsController( 9946): hide(ime())
+I/ImeTracker( 9946): org.nightshiftfm.broadcastqa:59bd64ff: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}
+I/godot   ( 9946): M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":4,"seconds":32.2999999999995,"shield":65.0,"wave":1}

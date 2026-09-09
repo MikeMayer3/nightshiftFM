@@ -13,5 +13,5 @@ condition_parameters = {}
 eligible_modes = Array[StringName]([&"campaign"])
 minimum_difficulty = 0
 reward_id = &"cosmetic.achievement.still_on_air"
-available = false
-pending_key = &"M9_PENDING_CAMPAIGN"
+available = true
+pending_key = &""

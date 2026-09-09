@@ -29,6 +29,7 @@ func advance(session: CombatSession, delta: float) -> void:
 	for id: String in timers:
 		timers[id] = maxf(0, float(timers[id]) - delta)
 		var owned: UpgradeTrack = session.draft.track(StringName(id))
+		if BroadcastRules.expanded(session) and StringName(id) == EncounterDirector.jammed_support(session): continue
 		if owned == null or id == "echo_deck" or not session.auto_fire or session.target() == null or timers[id] > 0: continue
 		# Wait for capacity instead of creating and silently dropping a damaging attack.
 		if needles.size() > 112 or zones.size() > 20: continue
@@ -81,6 +82,7 @@ func fire_main(session: CombatSession, first: CombatActor) -> void:
 func _record_echo(session: CombatSession, packet: Dictionary) -> void:
 	var owned: UpgradeTrack = session.draft.track(&"echo_deck")
 	if owned == null or packet.source != "main": return
+	if BroadcastRules.expanded(session) and EncounterDirector.jammed_support(session) == &"echo_deck": return
 	var e: Dictionary = ArsenalStats.parameters(owned)
 	recordings.append(packet.duplicate(true))
 	if recordings.size() > 12: recordings.pop_front()

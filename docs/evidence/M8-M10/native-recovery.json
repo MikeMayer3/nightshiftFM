@@ -1,0 +1,55 @@
+[
+  {
+    "case": "combat process death",
+    "checkpoint_before": {
+      "_serial": 0,
+      "ability_left": 0.0,
+      "ability_wait": 0.0,
+      "attack_serial": 0,
+      "breaches": 0,
+      "damage_taken": 0.0,
+      "elapsed": 2.0166666666666644,
+      "event_serial": 0,
+      "hull": 100.0,
+      "intercepted": 0,
+      "kills": 0,
+      "phase": 1,
+      "phase_time": 0.0,
+      "recharge_time": 0.0,
+      "shot_time": 0.0,
+      "spawn_index": 0,
+      "spawn_time": 0.0,
+      "support_time": 0.0,
+      "wave": 1
+    },
+    "checkpoint_after": {
+      "_serial": 0,
+      "ability_left": 0.0,
+      "ability_wait": 0.0,
+      "attack_serial": 0,
+      "breaches": 0,
+      "damage_taken": 0.0,
+      "elapsed": 2.0166666666666644,
+      "event_serial": 0,
+      "hull": 100.0,
+      "intercepted": 0,
+      "kills": 0,
+      "phase": 1,
+      "phase_time": 0.0,
+      "recharge_time": 0.0,
+      "shot_time": 0.0,
+      "spawn_index": 0,
+      "spawn_time": 0.0,
+      "support_time": 0.0,
+      "wave": 1
+    },
+    "run_id_same": true,
+    "accepted_same": true
+  },
+  {
+    "case": "accepted choice process death",
+    "accepted_count": 1,
+    "accepted_same": true,
+    "run_id_same": true
+  }
+]

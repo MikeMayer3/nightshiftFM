@@ -1,3 +1,11 @@
+# Current continuation — 0.10.4
+
+See [M8–M10 implementation and verification](M8_M10_DELIVERY.md) for current
+scope. Twelve authored missions, Contracts, Endless and all 48 local conditions
+are implemented with a further radio presentation pass. Human and physical-device
+acceptance remain open. The sections below are historical delivery notes and
+their old pending-feature counts do not describe 0.10.4.
+
 # M9 started: local achievements and report history
 
 The owner authorized pushing the current source and starting M9 before M8 is

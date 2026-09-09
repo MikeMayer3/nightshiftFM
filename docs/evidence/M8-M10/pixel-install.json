@@ -1,0 +1,48 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "package": "org.nightshiftfm.spike",
+  "version": [
+    "versionCode=16 minSdk=24 targetSdk=36",
+    "versionName=0.10.4",
+    "lastUpdateTime=2026-09-09 14:30:30"
+  ],
+  "apk_sha256": "fe583c44ea1bbfb356dae65bb64a3d2f174513e4a3e28bb415ede67bfd083ddd",
+  "install": "Serving...\nAll files should be loaded. Notifying the device.\nPerforming Incremental Install\nSuccess\nInstall command complete in 2178 ms\n",
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 660\nWaitTime: 661\nComplete\n",
+  "pid": "7109",
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-0104-backup-20260909-143027",
+  "before": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "after_install": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "after_launch": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "save_byte_identical": true,
+  "runtime_errors": [],
+  "game_foreground": true,
+  "scope": "Physical package update, save hashes and launch; no human gameplay or thermal acceptance."
+}

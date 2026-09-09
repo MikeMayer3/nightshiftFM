@@ -24,6 +24,7 @@ func capstone(s: CombatSession, family: StringName, branch: int = 1) -> void:
 	s.apply_ranks()
 
 func fixture(id: StringName, positive: bool) -> AchievementProfile:
+	if id not in preload("res://tests/unit/test_broadcast_achievements.gd").LEGACY and AchievementCatalog.ALL[id].category != "Weapon mastery": return preload("res://tests/unit/test_broadcast_achievements.gd").fixture(id, positive)
 	var p: AchievementProfile = AchievementProfile.new()
 	var s: CombatSession = session()
 	s.achievement_run.eligible = true # Labeled evaluator fixture, never production provenance.
@@ -91,7 +92,7 @@ func run(t: TestContext) -> bool:
 			var corrupt: Dictionary = p.to_data()
 			corrupt.progress[String(id)] = definition.threshold
 			t.check(not p.restore(corrupt), "pending achievement cannot be injected by migration: " + String(id))
-	t.check(available == 25, "25 implemented conditions; 23 pending conditions remain honest")
+	t.check(available == 48, "all 48 conditions have positive and negative evaluator fixtures")
 	_history(t)
 	_profile(t)
 	_report(t)
@@ -171,6 +172,7 @@ func _profile(t: TestContext) -> void:
 		var legacy: Dictionary = p.to_data()
 		legacy.schema = schema
 		legacy.erase("achievements")
+		legacy.erase("broadcast")
 		if schema < 3: legacy.erase("campaign")
 		if schema < 2: legacy.erase("discovered")
 		var migrated: MissionProfile = MissionProfile.new()

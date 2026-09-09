@@ -3,6 +3,7 @@ extends PanelContainer
 signal selected(mission: int)
 signal changed
 signal back_requested
+var rules: Dictionary = {"mode": "campaign", "difficulty": 0, "contract": ""}
 var profile: MissionProfile
 var column: VBoxContainer
 var mission_name: Label
@@ -96,6 +97,7 @@ func show_home() -> void:
 	mission_name = label_text("", 28)
 	prototype_label = label_text(tr("M10_PROTOTYPE"), 22)
 	prototype_label.modulate = Color("efa968")
+	button(tr("BROADCAST_MODES") + " · " + tr("BROADCAST_" + String(rules.mode).to_upper()), show_modes)
 	launch_button = button(tr("M7_EQUIP"), func() -> void: selected.emit(selected_mission))
 	RadioUI.button(launch_button, true)
 	refresh_mission()
@@ -168,6 +170,7 @@ func show_codex() -> void:
 	clear()
 	label_text(tr("M7_CODEX"), 40)
 	label_text(tr("M7_CODEX_HINT"), 24)
+	button(tr("BROADCAST_ENEMY_CODEX"), show_enemies)
 	for id: StringName in PatchboardContent.RECIPES:
 		var recipe: SynergyDefinition = PatchboardContent.RECIPES[id]
 		label_text(tr(recipe.name_key) + " · " + tr("M6_DISCOVERED" if id in profile.discovered else "M7_UNDISCOVERED"), 30)
@@ -181,6 +184,13 @@ func show_codex() -> void:
 func show_records() -> void:
 	clear()
 	label_text(tr("M7_RECORDS"), 40)
+	button(tr("BROADCAST_LOGS"), show_logs)
+	for key: String in profile.broadcast.best_scores:
+		var parts: PackedStringArray = key.split(":")
+		var title: String = tr("BROADCAST_" + parts[0].to_upper())
+		if parts[0] == "campaign": title = tr(CampaignContent.MISSIONS[int(parts[1]) - 1].name_key)
+		elif parts[0] == "contract": title = tr("BROADCAST_CONTRACT_" + parts[1].to_upper())
+		label_text(title + " · " + tr(["BROADCAST_STANDARD", "BROADCAST_HARD", "BROADCAST_OVERLOAD"][int(parts[2])]) + "  " + str(profile.broadcast.best_scores[key]), 23)
 	label_text(tr("M7_MASTERY_HINT"), 24)
 	var choose: OptionButton = OptionButton.new()
 	choose.mouse_filter = Control.MOUSE_FILTER_PASS
@@ -211,4 +221,53 @@ func show_records() -> void:
 		for id: String in record.medals: medals.append(tr("M7_MEDAL_" + id.to_upper()))
 		label_text(" · ".join(medals), 24)
 		label_text(tr("M7_BEST") % [record.best_hull * 100, record.best_seconds], 23)
+	button(tr("MENU_BACK"), show_home)
+
+func show_modes() -> void:
+	clear()
+	label_text(tr("BROADCAST_MODES"), 36)
+	for mode: String in BroadcastRules.MODES:
+		var choice: Button = button(tr("BROADCAST_" + mode.to_upper()) + ("  ✓" if rules.mode == mode else ""), func() -> void:
+			rules.mode = mode
+			rules.contract = "two_channel" if mode == "contract" else ""
+			show_modes())
+		choice.set_meta("broadcast_mode", mode)
+		choice.disabled = profile.campaign.cleared < (4 if mode == "contract" else 12 if mode == "endless" else 0)
+		if choice.disabled: label_text(tr("BROADCAST_UNLOCK") % (4 if mode == "contract" else 12), 22)
+	for difficulty: int in 3:
+		var choice: Button = button(tr(["BROADCAST_STANDARD", "BROADCAST_HARD", "BROADCAST_OVERLOAD"][difficulty]) + ("  ✓" if rules.difficulty == difficulty else ""), func() -> void:
+			rules.difficulty = difficulty
+			show_modes())
+		choice.set_meta("broadcast_difficulty", difficulty)
+		choice.disabled = profile.campaign.cleared < (4 if difficulty == 1 else 12 if difficulty == 2 else 0)
+	if rules.mode == "contract":
+		for contract: String in BroadcastRules.CONTRACTS:
+			var choice: Button = button(tr("BROADCAST_CONTRACT_" + contract.to_upper()) + ("  ✓" if rules.contract == contract else ""), func() -> void:
+				rules.contract = contract
+				show_modes())
+			choice.set_meta("broadcast_contract", contract)
+			if rules.contract == contract: label_text(tr("BROADCAST_CONTRACT_" + contract.to_upper() + "_DESC"), 23)
+	elif rules.mode == "endless": label_text(tr("BROADCAST_ENDLESS_DESC"), 23)
+	button(tr("MENU_BACK"), show_home)
+
+func show_enemies() -> void:
+	clear()
+	label_text(tr("BROADCAST_ENEMY_CODEX"), 36)
+	var definitions: Array[EnemyDefinition] = [CombatContent.SWARMER, CombatContent.DIVER, CombatContent.CARRIER]
+	definitions.append_array(BroadcastContent.ENEMIES)
+	for definition: EnemyDefinition in definitions:
+		label_text(tr(definition.name_key), 28)
+		label_text(tr(definition.description_key), 23)
+		label_text(tr("BROADCAST_SEEN" if String(definition.id) in profile.broadcast.enemies else "BROADCAST_UNSEEN"), 21)
+	button(tr("MENU_BACK"), show_home)
+
+func show_logs() -> void:
+	clear()
+	label_text(tr("BROADCAST_LOGS"), 36)
+	for mission: int in range(1, profile.campaign.cleared + 1):
+		label_text(tr(CampaignContent.MISSIONS[mission - 1].name_key), 27)
+		label_text(tr("BROADCAST_LOG_" + str(mission)), 23)
+		var medal: String = BroadcastProfile.medal_key(mission)
+		label_text(tr("BROADCAST_MEDAL_" + medal.to_upper()) + ("  ✓" if profile.broadcast.medals.has(str(mission)) else ""), 23)
+	if profile.campaign.cleared == 0: label_text(tr("BROADCAST_LOGS_EMPTY"), 23)
 	button(tr("MENU_BACK"), show_home)

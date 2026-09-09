@@ -5,6 +5,7 @@ enum Page { MENU, START_PLACEHOLDER, SETTINGS, MOBILE_CHECKS, COMBAT, ARSENAL, C
 const COMBAT_SCENE: PackedScene = preload("res://scenes/combat/combat.tscn")
 var campaign_panel: CampaignPanel
 var mission_profile: MissionProfile = MissionProfile.new()
+var broadcast_context: Dictionary = {"mode": "campaign", "difficulty": 0, "contract": ""}
 var mission_index: int = 1
 var modules: Array[StringName] = []
 var picker: ArsenalPicker
@@ -85,17 +86,20 @@ func show_page(page: Page) -> void:
 		if not data.is_empty(): mission_profile.restore(data.profile)
 		campaign_panel = CampaignPanel.new()
 		campaign_panel.profile = mission_profile
+		campaign_panel.rules = broadcast_context.duplicate()
 		if returning_to_route: campaign_panel.selected_mission = mission_index
 		add_child(campaign_panel)
 		campaign_panel.back_requested.connect(show_page.bind(Page.MENU))
 		campaign_panel.changed.connect(_save_profile)
 		campaign_panel.selected.connect(func(mission: int) -> void:
 			mission_index = mission
+			broadcast_context = campaign_panel.rules.duplicate()
 			show_page(Page.ARSENAL))
 	if page == Page.ARSENAL:
 		picker = ArsenalPicker.new()
 		picker.campaign_profile = mission_profile.campaign
 		picker.mission_index = mission_index
+		picker.broadcast_context = broadcast_context.duplicate()
 		if CampaignContent.valid_selection(loadout, modules, mission_profile.campaign.cleared):
 			picker.selection = loadout.duplicate()
 			picker.modules = modules.duplicate()
@@ -120,6 +124,7 @@ func show_page(page: Page) -> void:
 		combat.patchboard_enabled = true
 		combat.campaign_enabled = true
 		combat.campaign_mission = mission_index
+		combat.broadcast_context = broadcast_context.duplicate()
 		combat.campaign_modules = modules.duplicate()
 		combat.loadout = loadout.duplicate()
 		combat.resume_existing = _continuing

@@ -27,7 +27,7 @@ class FoundationChecks(unittest.TestCase):
         for path in sorted(ROOT.rglob("*")):
             if path.suffix not in {".gd", ".tscn", ".tres", ".godot"}:
                 continue
-            if ".godot" in path.relative_to(ROOT).parts:
+            if any(part in {".godot", "builds"} for part in path.relative_to(ROOT).parts):
                 continue
             for reference in re.findall(r'res://([^"\s]+)', path.read_text()):
                 if reference == generated:
@@ -49,7 +49,7 @@ class FoundationChecks(unittest.TestCase):
                 self.assertIn(key, keys)
 
     def test_bounded_m4_content_and_no_release_credentials(self):
-        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 476)
+        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 575)
         self.assertEqual(len(list((ROOT / "content/upgrades").rglob("*.tres"))), 18)
         presets = (ROOT / "export_presets.cfg").read_text()
         self.assertIn('application/export_project_only=true', presets)

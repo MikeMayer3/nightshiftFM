@@ -116,6 +116,7 @@ func is_finished() -> bool:
 func activate_shield() -> bool:
 	if paused or is_finished() or is_deciding() or is_wiring() or ability_wait > 0.0:
 		return false
+	if achievement_run != null: achievement_run.activation_hits.clear()
 	if arsenal != null:
 		arsenal.shield_activate(self)
 		return true
@@ -140,7 +141,7 @@ func spawn_projectile(source: CombatActor) -> CombatActor:
 	actor.max_health = 8.0
 	actor.radius = 12.0
 	actor.speed = 100.0
-	actor.breach_damage = 15.0
+	actor.breach_damage = 15.0 * (BroadcastRules.damage_scale(campaign, wave) if BroadcastRules.expanded(self) else 1.0)
 	actor.projectile = true
 	attack_serial += 1
 	actor.root_attack_id = attack_serial
@@ -156,6 +157,9 @@ func target() -> CombatActor:
 		if actor.resolved or actor.health <= 0.0:
 			continue
 		var candidate: float = actor.position.distance_squared_to(focus_point) if focus_active else BREACH_Y - actor.position.y
+		if BroadcastRules.expanded(self) and not focus_active:
+			if actor.role == EnemyDefinition.Role.AERIAL: candidate -= 250
+			elif actor.role in [EnemyDefinition.Role.CASTER, EnemyDefinition.Role.JAMMER] and EncounterDirector.channel(actor): candidate -= 180
 		if candidate < score:
 			best = actor
 			score = candidate
@@ -166,6 +170,7 @@ func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main
 		return
 	if signal_progress != null and signal_progress.overdrive_left > 0: amount *= 1.25
 	if arsenal != null: amount *= 1 + arsenal.mark_strength(actor.serial)
+	if BroadcastRules.expanded(self): amount *= EncounterDirector.protection(self, actor)
 	var base_amount: float = amount
 	if supports != null and not actor.projectile:
 		amount *= 100.0 / (100.0 + maxf(0, actor.armor - penetration - actor.status.exposure))
@@ -185,19 +190,26 @@ func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main
 			_event(CombatEvent.Kind.INTERCEPT, source, root_id, actor.serial, 0.0)
 		else:
 			kills += 1
-			if signal_progress != null: signal_progress.earned += 1
+			if signal_progress != null and not signal_progress is BroadcastProgress: signal_progress.earned += 1
+			if achievement_run != null and EncounterDirector.boss(actor): achievement_run.wave_bosses.append(String(actor.definition_id))
 			_event(CombatEvent.Kind.KILL, source, root_id, actor.serial, 0.0)
 
 func hit_station(amount: float, cause: StringName, kind: StringName = &"COMBAT_BREACH_HIT", source_id: StringName = &"station", root_id: int = 0, target_id: int = 0) -> void:
 	if paused or is_finished() or is_deciding() or not is_finite(amount) or amount <= 0.0:
 		return
 	# Capacitor active: 75% damage reduction, still shield-first; never reflects.
+	var temporary_reserve: float = supports.overshield if supports != null else 0
 	var incoming: float = arsenal.before_station_hit(self, amount, kind == &"COMBAT_PROJECTILE_HIT", root_id) if arsenal != null else amount * (0.25 if ability_left > 0.0 else 1.0)
 	if supports != null:
 		var over_absorbed: float = minf(supports.overshield, incoming)
 		supports.overshield -= over_absorbed
 		incoming -= over_absorbed
 		supports.report.add(&"shield" if arsenal != null else &"arc_aerial", &"absorbed", over_absorbed)
+	if achievement_run != null and ability_left > 0 and target_id > 0:
+		var active_prevented: bool = (temporary_reserve > 0 and supports.overshield < temporary_reserve) or (arsenal != null and (draft as ArsenalDraft).loadout.shield == "feedback" and kind == &"COMBAT_PROJECTILE_HIT" and incoming == 0) or (arsenal == null and amount > incoming)
+		if active_prevented and target_id not in achievement_run.activation_hits: achievement_run.activation_hits.append(target_id)
+		achievement_run.best_activation = maxi(achievement_run.best_activation, achievement_run.activation_hits.size())
+		if kind == &"COMBAT_PROJECTILE_HIT" and arsenal != null and (draft as ArsenalDraft).loadout.shield == "feedback" and incoming == 0 and root_id not in achievement_run.wave_reflections: achievement_run.wave_reflections.append(root_id)
 	var previous_shield: float = run.shield.current
 	var absorbed: float = minf(run.shield.current, incoming)
 	run.shield.current -= absorbed
@@ -253,18 +265,22 @@ func _step(delta: float) -> void:
 	spawn_time = maxf(0.0, spawn_time - delta)
 	if spawn_index < definition.enemy_ids.size() and spawn_time <= 0.0:
 		var group_size: int = 5 if active_combat != null else 1
-		if EncounterContent.authored(self): group_size = definition.group_size
+		if EncounterContent.authored(self) or BroadcastRules.expanded(self): group_size = definition.group_size
 		var group: int = spawn_index / group_size
 		var center: float = random.rng("wave").randf_range(120, 520) if active_combat != null else 320.0
 		for member: int in mini(group_size, definition.enemy_ids.size() - spawn_index):
 			var spawn_x: float = random.rng("wave").randf_range(64.0, 576.0) if random != null else 64.0 + float((spawn_index * 173 + wave * 67) % 512)
 			if active_combat != null: spawn_x = center + (member - 2) * 38.0
-			if EncounterContent.authored(self): spawn_x = EncounterContent.spawn_x(definition, group, member, center)
+			if EncounterContent.authored(self) or BroadcastRules.expanded(self): spawn_x = EncounterContent.spawn_x(definition, group, member, center)
 			var spawned: CombatActor = spawn_enemy(enemy_definition(definition.enemy_ids[spawn_index]), spawn_x)
 			if draft != null:
 				spawned.health *= ActiveCombat.health_scale(wave) if active_combat != null else 1.0 + float(wave - 1) * (0.08 if supports != null else 0.22)
 				if active_combat != null and active_combat.automatic_radio: spawned.health *= ActiveCombat.AUTOMATIC_HEALTH_SCALE
+				if BroadcastRules.expanded(self):
+					spawned.health *= BroadcastRules.health_scale(campaign, wave)
+					spawned.breach_damage *= BroadcastRules.damage_scale(campaign, wave)
 				spawned.max_health = spawned.health
+			if achievement_run != null: achievement_run.encounter(spawned)
 			spawn_index += 1
 		spawn_time += definition.spawn_interval
 	# Resolve main-gun kills before movement/breach in the same fixed step.
@@ -292,6 +308,7 @@ func _step(delta: float) -> void:
 			continue
 		if supports != null and not actor.projectile:
 			supports.report.add(actor.status.slow_source, &"slow_seconds", actor.status.slow * minf(delta, actor.status.slow_left))
+		if BroadcastRules.expanded(self) and not actor.projectile: EncounterDirector.prepare(self, actor)
 		actor.advance(delta)
 		if actor.position.y >= BREACH_Y:
 			actor.resolved = true
@@ -307,6 +324,7 @@ func _step(delta: float) -> void:
 		actor.ability_time += delta * actor.status.ability_rate()
 		if actor.ability_time >= actor.ability_interval:
 			actor.ability_time -= actor.ability_interval
+			if BroadcastRules.expanded(self): EncounterDirector.ability(self, actor)
 			if actor.children_spawned < actor.child_limit:
 				# Reinforcements always enter through the top band, not mid-field.
 				spawn_enemy(CombatContent.enemy(actor.child_id), actor.position.x + float(actor.children_spawned - 1) * 48.0)
@@ -318,6 +336,8 @@ func _step(delta: float) -> void:
 	if signal_progress != null:
 		var cleared: bool = actors.is_empty() and spawn_index == definition.enemy_ids.size()
 		if cleared:
+			if achievement_run != null: achievement_run.complete_wave(self)
+			if signal_progress is BroadcastProgress: signal_progress.earned = BroadcastDraft.endless_credits(wave)
 			supports.clear_wave_effects()
 			if wave == total_waves():
 				_finish(true)
@@ -345,11 +365,12 @@ func _step(delta: float) -> void:
 func _finish(victory: bool) -> void:
 	if is_finished():
 		return
+	if patchboard != null: patchboard.awaiting = false
 	if supports != null: supports.clear_wave_effects()
 	phase = Phase.VICTORY if victory else Phase.DEFEAT
 	if achievement_run != null:
 		achievement_run.observe(self)
-		achievement_run.completed = victory
+		achievement_run.completed = victory or signal_progress is BroadcastProgress
 	actors.clear()
 	focus_active = false
 	_accumulator = 0.0
@@ -419,9 +440,17 @@ func start_campaign(seed_value: int, identity: StringName, loadout: Dictionary, 
 	if not start_patchboard(seed_value, identity, loadout): return false
 	campaign = selected
 	active_combat.automatic_radio = true
-	active_combat.content_version = EncounterContent.VERSION if EncounterWaves.MISSIONS.has(campaign.mission) else CampaignContent.VERSION
+	active_combat.content_version = BroadcastRules.VERSION if campaign.expanded else EncounterContent.VERSION if EncounterWaves.MISSIONS.has(campaign.mission) else CampaignContent.VERSION
+	if campaign.expanded:
+		var expanded_draft: BroadcastDraft = BroadcastDraft.new(ArsenalContent.tracks(loadout), random)
+		expanded_draft.context = campaign
+		expanded_draft.loadout = loadout.duplicate()
+		draft = expanded_draft
+		for id: StringName in [&"main", &"shield", StringName(loadout.support)]: draft.equip(id)
+		if campaign.mode == "endless": signal_progress = BroadcastProgress.new()
 	achievement_run = AchievementRun.new()
-	achievement_run.eligible = AchievementRun.production_build() and EncounterContent.authored(self)
+	achievement_run.expanded = campaign.expanded
+	achievement_run.eligible = AchievementRun.production_build() and (EncounterContent.authored(self) or campaign.expanded)
 	draft.catalog = draft.catalog.filter(func(definition: TrackDefinition) -> bool: return not definition.support or String(definition.id) in CampaignContent.options(campaign.cleared, "support"))
 	(draft as ArsenalDraft).reroll_limit = 2 + int(ModuleStats.coefficient(campaign.modules, &"rerolls"))
 	draft.rerolls = (draft as ArsenalDraft).reroll_limit
@@ -437,7 +466,7 @@ func module_ids() -> Array[StringName]:
 	return empty
 
 func maximum_hull() -> float:
-	return ModuleStats.maximum_hull(module_ids())
+	return ModuleStats.maximum_hull(module_ids()) * (.55 if BroadcastRules.expanded(self) and campaign.contract == "fragile_broadcast" else 1.0)
 
 func is_wiring() -> bool:
 	return patchboard != null and patchboard.awaiting and phase == Phase.INTERMISSION
@@ -454,12 +483,17 @@ func _open_signal_choice() -> void:
 	_accumulator = 0.0
 	focus_active = false
 	draft.begin()
+	if signal_progress is BroadcastProgress and draft.offers == [BroadcastDraft.DECLINE] and draft.support_count() == 5:
+		_choose_signal(BroadcastDraft.DECLINE)
+		return
 	checkpoint_changed.emit()
 
 func _choose_signal(id: StringName) -> bool:
 	if paused or phase != Phase.DRAFT or not signal_progress.ready() or not draft.choose(id): return false
 	signal_progress.consume()
 	if id == SignalDraft.OVERDRIVE: signal_progress.overdrive_left = 20.0
+	if id == DraftState.REPAIR: hull = minf(maximum_hull(), hull + 12)
+	if id == DraftState.REFILL: run.shield.current = minf(run.shield.capacity, run.shield.current + 20)
 	apply_ranks()
 	_accumulator = 0.0
 	if signal_progress.ready():
@@ -487,9 +521,10 @@ func swap_branch(id: StringName) -> bool:
 	return false
 
 func total_waves() -> int:
-	return 10 if draft != null else 3
+	return 1000 if BroadcastRules.expanded(self) and campaign.mode == "endless" else 10 if draft != null else 3
 
 func wave_definition() -> WaveDefinition:
+	if BroadcastRules.expanded(self): return BroadcastRules.wave_for(campaign, maxi(1, wave))
 	if EncounterContent.authored(self): return EncounterWaves.MISSIONS[campaign.mission][wave - 1]
 	if active_combat != null and active_combat.content_version in [ActiveCombat.VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION] and wave == 8: return ActiveContent.FIRST_ELITES
 	if active_combat != null: return ActiveContent.WAVES[wave - 1]
@@ -500,6 +535,7 @@ func wave_definition() -> WaveDefinition:
 	return CombatContent.waves()[mini(2, (wave - 1) / 3)]
 
 func enemy_definition(id: StringName) -> EnemyDefinition:
+	if BroadcastRules.expanded(self): return BroadcastContent.enemy(id)
 	if EncounterContent.authored(self): return EncounterContent.enemy(id)
 	return M4Content.enemy(id) if supports != null else CombatContent.enemy(id)
 
@@ -630,7 +666,7 @@ static func checkpoint_fields() -> Array[String]:
 		"kills", "breaches", "intercepted", "damage_taken", "_serial", "event_serial", "attack_serial"]
 
 func restore_checkpoint(data: Variant) -> bool:
-	if data is Dictionary and data.get("content") in [SignalContent.VERSION, ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]: return SignalSnapshot.restore(self, data)
+	if data is Dictionary and data.get("content") in [SignalContent.VERSION, ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION, BroadcastRules.VERSION]: return SignalSnapshot.restore(self, data)
 	if not data is Dictionary or data.get("schema") != 1: return false
 	var is_m4: bool = data.get("content") == M4Content.VERSION
 	if data.size() != (12 if is_m4 else 11): return false
@@ -683,4 +719,12 @@ func restore_checkpoint(data: Variant) -> bool:
 		for window: int in [2, 4, 6, 8]:
 			var required_wave: int = wave + 1 if phase == Phase.INTERMISSION else wave
 			if window <= required_wave and window not in recruitment_done: return false
+	return true
+
+func finish_endless() -> bool:
+	if not BroadcastRules.expanded(self) or campaign.mode != "endless" or is_finished() or achievement_run.cleared_waves == 0: return false
+	# Leaving commits only the last completed wave. Pending choices never count as clears.
+	draft.offers.clear()
+	draft.screen_tracks.clear()
+	_finish(true)
 	return true

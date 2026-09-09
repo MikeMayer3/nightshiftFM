@@ -1,0 +1,18 @@
+{
+	"alive": 0,
+	"cause": "M2_SWARMER_NAME",
+	"choices": 21,
+	"cleared": 10,
+	"contract": "bare_antenna",
+	"finished": true,
+	"hull": 100.0,
+	"mission": 1,
+	"mode": "contract",
+	"reason": "",
+	"restores": 21,
+	"seconds": 530.266666666513,
+	"style": "arc_aerial",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

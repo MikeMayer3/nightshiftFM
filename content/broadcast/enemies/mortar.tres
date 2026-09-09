@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.mortar"
+name_key = &"BROADCAST_ENEMY_MORTAR"
+description_key = &"BROADCAST_ENEMY_MORTAR_DESC"
+role = 5
+health = 55.0
+speed = 38.0
+armor = 0.0
+radius = 24.0
+breach_damage = 16.0
+elite = false
+ability_interval = 6.0

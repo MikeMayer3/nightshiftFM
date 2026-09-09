@@ -1,0 +1,56 @@
+--------- beginning of main
+I/Zygote  ( 7109): Process 7109 created for org.nightshiftfm.spike
+I/htshiftfm.spike( 7109): Late-enabling -Xcheck:jni
+I/htshiftfm.spike( 7109): Using generational CollectorTypeCMC GC.
+D/nativeloader( 7109): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+D/nativeloader( 7109): Configuring clns-9 for other apk /data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/lib/arm64:/data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/org.nightshiftfm.spike
+V/GraphicsEnvironment( 7109): Currently set values for:
+V/GraphicsEnvironment( 7109):   angle_gl_driver_selection_pkgs=[com.android.angle]
+V/GraphicsEnvironment( 7109):   angle_gl_driver_selection_values=[angle]
+V/GraphicsEnvironment( 7109): org.nightshiftfm.spike is not listed in per-application setting
+V/GraphicsEnvironment( 7109): No special selections for ANGLE, returning default driver choice
+V/GraphicsEnvironment( 7109): Neither updatable production driver nor prerelease driver is supported.
+D/DesktopExperienceFlags( 7109): Toggle override initialized to: false
+--------- beginning of system
+I/DisplayManager( 7109): Choreographer implicitly registered for the refresh rate.
+D/vulkan  ( 7109): searching for layers in '/data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/lib/arm64'
+D/vulkan  ( 7109): searching for layers in '/data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/base.apk!/lib/arm64-v8a'
+D/CompatChangeReporter( 7109): Compat change id reported: 377864165; UID 10457; state: ENABLED
+D/DesktopModeFlags( 7109): Toggle override initialized to: OVERRIDE_UNSET
+D/GodotActivity( 7109): Project command line parameters: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/GodotActivity( 7109): Launch intent Intent { flg=0x10000000 xflg=0x5 cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher } with parameters []
+V/GodotActivity( 7109): Creating new Godot fragment instance.
+V/Godot   ( 7109): Initializing Godot plugin registry
+I/GodotPluginRegistry( 7109): Registering runtime plugin AndroidRuntime
+V/Godot   ( 7109): InitEngine with params: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/nativeloader( 7109): Load /data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/lib/arm64/libgodot_android.so using class loader ns clns-9 (caller=/data/app/~~bB9z5Yhtc2hC6eBY_tFXfg==/org.nightshiftfm.spike-H3HCu7opqn5R7M_idnquTQ==/base.apk!classes7.dex): ok
+V/Godot   ( 7109): Godot native layer initialization completed: true
+V/Godot   ( 7109): Setting up native layer with params: [--xr-mode, off]
+V/Godot   ( 7109): Godot native layer setup completed
+V/Godot   ( 7109): OnInitRenderView: GodotFragment{73921fd} (ca3c2925-c7fc-4814-b8d3-c932894b09d7 id=0x7f07002c)
+D/Godot   ( 7109): Render view should be transparent: false
+D/Godot   ( 7109): renderingDevice: opengl3 (ProjectSettings)
+D/Godot   ( 7109): 			renderer: gl_compatibility (ProjectSettings)
+V/Godot   ( 7109): OnStart: GodotFragment{73921fd} (ca3c2925-c7fc-4814-b8d3-c932894b09d7 id=0x7f07002c)
+V/Godot   ( 7109): OnResume: GodotFragment{73921fd} (ca3c2925-c7fc-4814-b8d3-c932894b09d7 id=0x7f07002c)
+D/WindowOnBackDispatcher( 7109): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@294361
+D/WindowOnBackDispatcher( 7109): setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@cb31347
+D/VRI[GodotAppLauncher]( 7109): WindowInsets changed: 1080x2404 statusBars:[0,161,0,0] navigationBars:[0,0,0,117] mandatorySystemGestures:[0,190,0,117]
+I/HWUI    ( 7109): Using FreeType backend (prop=Auto)
+W/RegularContextFactory( 7109): creating OpenGL ES 3.0 context :
+W/libc    ( 7109): Access denied finding property "vendor.product.pvr.debug_level"
+I/godot   ( 7109): Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+I/godot   ( 7109): OpenGL API OpenGL ES 3.2 build 25.1@6794074 - Compatibility - Using Device: Imagination Technologies - PowerVR D-Series DXT-48-1536
+D/AudioSystem( 7109): onNewServiceWithAdapter: media.audio_flinger service obtained 0xb400007affd49060
+D/AudioSystem( 7109): getService: IAudioFlingerService retrieved: 0xb4000079afe08f30  IAudioFlinger cached: 0xb400007affd49060
+D/htshiftfm.spike( 7109): PlayerBase::PlayerBase()
+D/htshiftfm.spike( 7109): TrackPlayerBase::TrackPlayerBase()
+I/libOpenSLES( 7109): Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+I/godot   ( 7109):
+I/htshiftfm.spike( 7109): Compiler allocated 5116KB to compile void android.view.ViewRootImpl.performTraversals()
+E/BLASTBufferQueue( 7109): [d73ed12 SurfaceView[org.nightshiftfm.spike/com.godot.game.GodotAppLauncher]#1](f:0,a:0) rejecting buffer:active_size=1080x2126, requested_size=1080x2126 buffer{size=1080x2404 transform=0}
+D/InsetsController( 7109): hide(ime())
+I/ImeTracker( 7109): org.nightshiftfm.spike:511601cf: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+V/Godot   ( 7109): OnGodotSetupCompleted
+I/godot   ( 7109): M1_PROBE {"active_seconds":0.0,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":0}
+V/Godot   ( 7109): OnGodotMainLoopStarted

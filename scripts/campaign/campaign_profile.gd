@@ -22,7 +22,7 @@ func cosmetic_available(id: StringName) -> bool:
 	return id == &"default" or mastery.has(String(id)) and not mastery[String(id)].is_empty()
 
 func record_victory(session: CombatSession) -> void:
-	if session.campaign == null or session.phase != CombatSession.Phase.VICTORY or not can_play(session.campaign.mission): return
+	if session.campaign == null or session.campaign.mode != "campaign" or session.phase != CombatSession.Phase.VICTORY or not can_play(session.campaign.mission): return
 	var mission: int = session.campaign.mission
 	cleared = maxi(cleared, mission)
 	var key: String = String(CampaignContent.MISSIONS[mission - 1].id)

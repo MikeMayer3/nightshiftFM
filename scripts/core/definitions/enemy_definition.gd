@@ -2,6 +2,8 @@ class_name EnemyDefinition
 extends ContentDefinition
 
 enum PathKind { STRAIGHT, DIVE, CARRIER }
+enum Role { BASIC, ARMORED, CASTER, JAMMER, MIMIC, MORTAR, CALLER, CORE, SILENCE, AERIAL }
+@export var role: Role = Role.BASIC
 @export var armor: float = 0.0
 @export var elite: bool = false
 @export var jam_immune: bool = false
@@ -24,6 +26,7 @@ func validate() -> PackedStringArray:
 			errors.append(field + ": must be finite and positive")
 	if not is_finite(armor) or armor < 0 or armor > 1000:
 		errors.append("armor: outside supported bounds")
+	if role not in Role.values(): errors.append("role: unknown behavior")
 	if path_kind not in PathKind.values():
 		errors.append("path_kind: unknown path")
 	if child_limit < 0 or child_limit > 4 or projectile_limit < 0 or projectile_limit > 4:

@@ -32,6 +32,7 @@ def hashes():
 
 before = hashes()
 generators = ['generate_campaign_content.py', 'generate_encounter_content.py']
+generators.append('generate_broadcast_content.py')
 if milestone in ['M9', 'M10']: generators.append('generate_achievement_content.py')
 if milestone == 'M10': generators.append('generate_radio_art.py')
 for script in generators:
@@ -42,9 +43,11 @@ result = {'path': str(dest), 'generator_changes': changed, 'generators_idempoten
 for name, args in [('import', ['--import']), ('test', ['--script', 'res://tests/test_runner.gd']), ('smoke', ['--quit-after', '10'])]:
     with (evidence / f'fresh-{name}.txt').open('w') as output:
         done = subprocess.run([engine, '--headless', '--path', str(dest), *args], stdout=output, stderr=subprocess.STDOUT)
-    result['checks'].append({'check': name, 'exit': done.returncode})
+    log = (evidence / f'fresh-{name}.txt').read_text()
+    runtime_errors = any(marker in log for marker in ['SCRIPT ERROR:', 'ERROR:'])
+    result['checks'].append({'check': name, 'exit': done.returncode, 'runtime_errors': runtime_errors})
     if done.returncode:
         break
 (evidence / 'fresh.json').write_text(json.dumps(result, indent=2) + '\n')
 print(json.dumps(result, indent=2))
-raise SystemExit(0 if not changed and len(result['checks']) == 3 and all(x['exit'] == 0 for x in result['checks']) else 1)
+raise SystemExit(0 if not changed and len(result['checks']) == 3 and all(x['exit'] == 0 and not x['runtime_errors'] for x in result['checks']) else 1)

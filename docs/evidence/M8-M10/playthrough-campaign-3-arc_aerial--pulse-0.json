@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "M8_ELITE_DIVER",
+	"choices": 29,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "pulse",
+	"mission": 3,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 29,
+	"seconds": 569.89999999981,
+	"style": "arc_aerial",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

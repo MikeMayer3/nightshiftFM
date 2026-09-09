@@ -1,0 +1,18 @@
+{
+	"alive": 0,
+	"cause": "M2_CARRIER_NAME",
+	"choices": 4,
+	"cleared": 1,
+	"contract": "bare_antenna",
+	"finished": true,
+	"hull": 0.0,
+	"mission": 3,
+	"mode": "contract",
+	"reason": "",
+	"restores": 4,
+	"seconds": 93.0333333333293,
+	"style": "arc_aerial",
+	"valid": true,
+	"victory": false,
+	"wave": 2
+}

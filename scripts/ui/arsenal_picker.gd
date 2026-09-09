@@ -4,6 +4,7 @@ signal launched(loadout: Dictionary)
 signal campaign_launched(mission: int, loadout: Dictionary, modules: Array[StringName])
 signal settings_changed
 signal back_requested
+var broadcast_context: Dictionary = {}
 var campaign_profile: CampaignProfile
 var mission_index: int = 1
 var modules: Array[StringName] = []
@@ -30,6 +31,9 @@ func _ready() -> void:
 	layout.add_theme_constant_override("separation", 14)
 	safe.add_child(layout)
 	_label(layout, tr("M10_LOADOUT"), 38)
+	if not broadcast_context.is_empty():
+		_label(layout, tr("BROADCAST_" + String(broadcast_context.mode).to_upper()) + " · " + tr(["BROADCAST_STANDARD", "BROADCAST_HARD", "BROADCAST_OVERLOAD"][int(broadcast_context.difficulty)]), 23)
+		if broadcast_context.mode == "contract": _label(layout, tr("BROADCAST_CONTRACT_" + String(broadcast_context.contract).to_upper() + "_DESC"), 22)
 	var scroll: ScrollContainer = ScrollContainer.new()
 	scroll.follow_focus = true
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -45,6 +49,7 @@ func _ready() -> void:
 		var card: PanelContainer = PanelContainer.new()
 		card.add_theme_stylebox_override("panel", RadioUI.surface())
 		column.add_child(card)
+		if category == "support" and broadcast_context.get("contract") == "bare_antenna": card.hide()
 		var row: HBoxContainer = HBoxContainer.new()
 		row.add_theme_constant_override("separation", 14)
 		card.add_child(row)

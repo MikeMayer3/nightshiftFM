@@ -10,6 +10,8 @@ var launch_button: Button
 var scroll: ScrollContainer
 var catalog: VBoxContainer
 var hint: Label
+var show_unavailable: bool = false
+var expanded_details: Dictionary = {}
 var known: Array[StringName] = []
 
 func _ready() -> void:
@@ -59,7 +61,7 @@ func label(text: String, parent: Node, size: int) -> Label:
 func action(text: String, parent: Node, callback: Callable) -> Button:
 	var button: Button = Button.new()
 	button.text = text
-	button.custom_minimum_size.y = 76
+	button.custom_minimum_size.y = 64
 	button.mouse_filter = Control.MOUSE_FILTER_PASS
 	button.add_theme_font_size_override("font_size", 26)
 	parent.add_child(button)
@@ -81,7 +83,7 @@ func render() -> void:
 	for child: Node in catalog.get_children():
 		catalog.remove_child(child)
 		child.queue_free()
-	hint.text = tr("M6_TUTORIAL") if session.wave == 0 else tr("M6_INTERMISSION") % (session.wave + 1)
+	hint.text = tr("BROADCAST_PATCH_HINT") if session.wave == 0 else tr("M6_INTERMISSION") % (session.wave + 1)
 	for index: int in 2:
 		var id: StringName = session.patchboard.slots[index]
 		slot_buttons[index].text = tr("M6_SLOT") % [index + 1, tr(PatchboardContent.RECIPES[id].name_key) if id != &"" else tr("M6_EMPTY")]
@@ -89,7 +91,13 @@ func render() -> void:
 	var clear: Button = action(tr("M6_UNPLUG") % (selected_slot + 1), catalog, func() -> void:
 		if session.patchboard.rewire(session, selected_slot, &""): render())
 	clear.disabled = session.patchboard.slots[selected_slot] == &""
+	var browse: Button = action(tr("BROADCAST_READY_CONNECTIONS" if show_unavailable else "BROADCAST_ALL_CONNECTIONS"), catalog, func() -> void:
+		show_unavailable = not show_unavailable
+		render())
+	browse.custom_minimum_size.y = 48
 	var ids: Array = PatchboardContent.RECIPES.keys()
+	if not ids.any(func(id: StringName) -> bool: return PatchboardState.eligible(session, id)):
+		label(tr("BROADCAST_NO_CONNECTIONS"), catalog, 24)
 	ids.sort_custom(func(a: StringName, b: StringName) -> bool: return int(PatchboardState.eligible(session, a)) > int(PatchboardState.eligible(session, b)))
 	for id: StringName in ids:
 		var recipe: SynergyDefinition = PatchboardContent.RECIPES[id]
@@ -103,12 +111,19 @@ func render() -> void:
 		style.set_corner_radius_all(10)
 		card.add_theme_stylebox_override("panel", style)
 		catalog.add_child(card)
+		card.visible = show_unavailable or PatchboardState.eligible(session, id)
 		var body: VBoxContainer = VBoxContainer.new()
 		body.add_theme_constant_override("separation", 8)
 		card.add_child(body)
 		label(tr(recipe.name_key) + (" · " + tr("M6_DISCOVERED") if id in known else ""), body, 30)
 		label(requirements(recipe), body, 23).modulate = Color("a7bbc8")
-		label(tr(recipe.description_key), body, 24)
+		var detail: Label = label(tr(recipe.description_key), body, 24)
+		detail.visible = expanded_details.get(id, false)
+		var inspect: Button = action(tr("BROADCAST_HIDE_DETAILS" if detail.visible else "BROADCAST_DETAILS"), body, func() -> void:
+			expanded_details[id] = not expanded_details.get(id, false)
+			render())
+		inspect.custom_minimum_size.y = 48
+		inspect.add_theme_font_size_override("font_size", 22)
 		var active_slot: int = session.patchboard.slots.find(id)
 		var button: Button = action(tr("M6_CONNECTED") % (active_slot + 1) if active_slot >= 0 else tr("M6_CONNECT") % (selected_slot + 1), body, func() -> void:
 			if session.patchboard.rewire(session, selected_slot, id): render())

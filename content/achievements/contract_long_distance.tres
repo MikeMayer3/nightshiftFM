@@ -13,5 +13,5 @@ condition_parameters = {}
 eligible_modes = Array[StringName]([&"contract"])
 minimum_difficulty = 0
 reward_id = &"cosmetic.achievement.contract_long_distance"
-available = false
-pending_key = &"M9_PENDING_CAMPAIGN"
+available = true
+pending_key = &""

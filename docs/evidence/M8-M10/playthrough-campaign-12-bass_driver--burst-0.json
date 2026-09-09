@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "M2_DIVER_NAME",
+	"choices": 13,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "burst",
+	"mission": 12,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 13,
+	"seconds": 486.449999999886,
+	"style": "bass_driver",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

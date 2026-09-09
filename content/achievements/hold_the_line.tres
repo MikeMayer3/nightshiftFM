@@ -13,5 +13,5 @@ condition_parameters = {}
 eligible_modes = Array[StringName]([&"campaign"])
 minimum_difficulty = 0
 reward_id = &"cosmetic.achievement.hold_the_line"
-available = false
-pending_key = &"M9_PENDING_TELEMETRY"
+available = true
+pending_key = &""

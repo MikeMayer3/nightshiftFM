@@ -1,3 +1,11 @@
+# Current continuation — 0.10.4
+
+See [M8–M10 implementation and verification](M8_M10_DELIVERY.md) for current
+scope. Twelve authored missions, Contracts, Endless and all 48 local conditions
+are implemented with a further radio presentation pass. Human and physical-device
+acceptance remain open. The sections below are historical delivery notes and
+their old pending-feature counts do not describe 0.10.4.
+
 # M10 — Radio art and accessibility opening increment
 
 Started by owner request on 2026-09-09. This is a playable M10 increment, not full

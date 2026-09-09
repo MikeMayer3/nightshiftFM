@@ -1,5 +1,10 @@
 # Content catalog
 
+Current implementation: [0.10.4 delivery](M8_M10_DELIVERY.md). All 48 local
+achievement conditions, twelve missions and the expanded enemy roster are now
+implemented. The catalog below remains the design reference; runtime coefficients
+and generated resources provide the exact tested values.
+
 This is a design catalog for incremental implementation. It is not a claim that these assets or mechanics already exist. Numbers in tuning cards are initial configuration values for testing, not verified balance. Branch coefficients, cooldowns, durations, and target caps must be chosen explicitly in configuration and documented by M5; no upgrade is complete until it has a visible behavior, a valid tradeoff, and automated tests.
 
 ## 1. Support weapons and upgrade definitions

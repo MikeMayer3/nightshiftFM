@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.mimic"
+name_key = &"BROADCAST_ENEMY_MIMIC"
+description_key = &"BROADCAST_ENEMY_MIMIC_DESC"
+role = 4
+health = 48.0
+speed = 42.0
+armor = 20.0
+radius = 24.0
+breach_damage = 16.0
+elite = false
+ability_interval = 4.0

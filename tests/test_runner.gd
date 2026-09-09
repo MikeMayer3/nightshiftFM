@@ -70,6 +70,7 @@ func _run() -> void:
 	context.check(ENCOUNTER_TEST.new().run(context) == true, "M8 authored encounters suite completed")
 	context.check(ACHIEVEMENT_TEST.new().run(context) == true, "M9 achievement suite completed")
 	context.check(await RADIO_TEST.new().run(context, self) == true, "M10 presentation suite completed")
+	context.check(preload("res://tests/unit/test_broadcast.gd").new().run(context) == true, "expanded campaign and mode suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true

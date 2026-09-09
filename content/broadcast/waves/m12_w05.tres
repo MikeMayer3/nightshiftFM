@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.full.m12.w05"
+name_key = &"BROADCAST_M12_W5"
+description_key = &"BROADCAST_M12_W5_DESC"
+spawn_interval = 6.5
+group_size = 4
+formation = 1
+enemy_ids = Array[StringName]([&"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver", &"m8.jammer", &"m8.mimic", &"m8.mortar", &"m2.diver"])

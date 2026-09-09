@@ -1,5 +1,31 @@
 # Implementation status
 
+## Current delivery — M8–M10 continuation, 0.10.4 (2026-09-09)
+
+Implemented twelve authored missions, eight regular enemy roles, three bosses,
+Hard/Overload, six Contracts, medals, logs, device counters, Endless and all 48
+local achievement conditions. Expanded run rules and native/JSON saves are versioned.
+The M10 pass adds distinct modern-device art and behavior tells, rank hardware,
+regional scenery, original music/cues and a compact patchboard.
+
+PASS: fresh generators/import/smoke; **5,155 regressions**, **263 rendered UI
+checks**, **7 foundation checks**; **48 valid simulated runs** (46 wins, including
+all 36 Standard campaign cases); a 60-wave Endless simulation; Android debug
+export **0.10.4/code 16**. Native emulator mission 4 completed through actual taps.
+The isolated emulator update preserved its save and restored its completed result.
+No final engine/script errors. See [full scope, changed components, exact commands
+and evidence](M8_M10_DELIVERY.md).
+
+**Pixel delivery PASS:** 0.10.4/code 16 installed and launched on the Pixel 10
+Pro XL; both existing saves remained byte-identical across update and launch.
+The foreground menu was inspected, with no observed runtime errors. Source
+publication was authorized by the owner. Full human/physical-gameplay/thermal
+acceptance and iPhone checks remain open;
+this does not certify release readiness. No M11 work was performed.
+
+## Earlier delivery history
+
+
 
 ## Current delivery — approved battlefield 0.10.3 (2026-09-09)
 

@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "COMBAT_NO_DAMAGE",
+	"choices": 16,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "pulse",
+	"mission": 11,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 16,
+	"seconds": 498.183333333209,
+	"style": "arc_aerial",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

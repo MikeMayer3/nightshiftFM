@@ -130,6 +130,7 @@ func _draw() -> void:
 	var low: bool = RadioPreferences.current.enabled("low_effects")
 	var reduced: bool = RadioPreferences.current.enabled("reduced_flash")
 	draw_rect(Rect2(Vector2.ZERO, CombatSession.ARENA), RadioArt.BACKGROUNDS[era])
+	RadioEncounters.environment(self, era, low)
 	if not low:
 		for y: int in range(100, 610, 90):
 			draw_line(Vector2(24, y), Vector2(616, y), RadioArt.TRIMS[era].darkened(.65), 1)
@@ -210,8 +211,9 @@ func _draw() -> void:
 			if actor.path_kind == EnemyDefinition.PathKind.CARRIER:
 				for n: int in actor.child_limit - actor.children_spawned:
 					draw_rect(Rect2(p + Vector2(-16 + n * 12, actor.radius + 3), Vector2(8, 5)), color)
+		RadioEncounters.actor(self, actor)
 		if session.supports != null:
-			if actor.elite:
+			if actor.elite and not EncounterDirector.boss(actor):
 				draw_arc(p, actor.radius + 4, PI, TAU, 16, Color("ffdc86"), 5)
 				draw_string(font, p + Vector2(-24, -actor.radius - 18), tr("M4_ELITE_TAG"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("ffdc86"))
 			if actor.projectiles_fired < actor.projectile_limit and actor.ability_interval - actor.ability_time < 0.9:
@@ -238,6 +240,7 @@ func _draw() -> void:
 	var direction: Vector2 = (aimed.position - base).normalized() if aimed != null else Vector2.UP
 	draw_set_transform(arena_offset() + base * arena_stretch(), 0, Vector2.ONE * arena_scale())
 	draw_texture_rect(RadioArt.main_texture(session), Rect2(-48, -64, 96, 96), false)
+	if session.draft != null: RadioEncounters.hardware(self, session.draft.track(&"main"), cyan, true)
 
 	draw_set_transform(arena_offset(), 0, arena_stretch())
 	if session.run.shield.current > 0 or session.ability_left > 0:
@@ -291,6 +294,10 @@ func _draw_support_turrets(aimed: CombatActor) -> void:
 		draw_set_transform(arena_offset() + p * arena_stretch(), 0, Vector2.ONE * arena_scale())
 		var direction: Vector2 = ((aimed.position - p) * arena_stretch()).normalized() if aimed != null else Vector2.UP
 		draw_texture_rect(DraftPanel.ICONS[id], Rect2(-34, -43, 68, 68), false)
+		RadioEncounters.hardware(self, session.draft.track(id), tint)
+		if BroadcastRules.expanded(session) and EncounterDirector.jammed_support(session) == id:
+			draw_line(Vector2(-25, -35), Vector2(25, 15), Color.WHITE, 4)
+			draw_string(ThemeDB.fallback_font, Vector2(-36, -49), tr("BROADCAST_MUTED"), HORIZONTAL_ALIGNMENT_CENTER, 72, 14, Color.WHITE)
 		draw_rect(Rect2(-26, 27, 52, 7), Color("334958"))
 		draw_rect(Rect2(-26, 27, 52 * fraction, 7), tint)
 		if fraction >= 1:

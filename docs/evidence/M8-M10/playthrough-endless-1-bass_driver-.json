@@ -1,0 +1,18 @@
+{
+	"alive": 0,
+	"cause": "M2_DIVER_NAME",
+	"choices": 85,
+	"cleared": 60,
+	"contract": "",
+	"finished": true,
+	"hull": 81.0699999999998,
+	"mission": 1,
+	"mode": "endless",
+	"reason": "",
+	"restores": 83,
+	"seconds": 3651.00000001888,
+	"style": "bass_driver",
+	"valid": true,
+	"victory": true,
+	"wave": 60
+}

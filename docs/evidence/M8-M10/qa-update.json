@@ -1,0 +1,8 @@
+{
+  "package": "org.nightshiftfm.broadcastqa",
+  "device": "emulator-5554",
+  "install": "Serving...\nPerforming Incremental Install\nSuccess\nInstall command complete in 1890 ms\n",
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.broadcastqa/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.broadcastqa/com.godot.game.GodotApp\nTotalTime: 2276\nWaitTime: 2287\nComplete\n",
+  "save_byte_identical": true,
+  "sha256": "919de71cab50664d7924ba8122259165b8614ebdc61d94a7dda625cd691e04a5"
+}

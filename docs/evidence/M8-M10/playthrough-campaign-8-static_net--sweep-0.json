@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "BROADCAST_ENEMY_PLATED",
+	"choices": 14,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "sweep",
+	"mission": 8,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 14,
+	"seconds": 516.316666666526,
+	"style": "static_net",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

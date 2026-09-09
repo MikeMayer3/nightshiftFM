@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "COMBAT_PROJECTILE",
+	"choices": 7,
+	"cleared": 5,
+	"contract": "",
+	"difficulty": 2,
+	"finished": true,
+	"hull": 0.0,
+	"main": "sweep",
+	"mission": 8,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 7,
+	"seconds": 343.266666666683,
+	"style": "static_net",
+	"valid": true,
+	"victory": false,
+	"wave": 6
+}
