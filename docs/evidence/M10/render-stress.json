@@ -1,0 +1,34 @@
+[
+	{
+		"enemies": 150,
+		"engine": "4.7.2-stable (official)",
+		"frames": 300,
+		"low_effects": false,
+		"median_ms": 6.685,
+		"os": "macOS",
+		"p95_ms": 13.551,
+		"processor": "Apple M2 Pro",
+		"projectiles": 400,
+		"pulses": 12,
+		"remaining_actors": 550,
+		"scope": "desktop render-only fixture, 120 warmup frames then 300 measured frames; no physical-device acceptance",
+		"static_bytes_end": 47811211.0,
+		"static_bytes_start": 47803699.0
+	},
+	{
+		"enemies": 150,
+		"engine": "4.7.2-stable (official)",
+		"frames": 300,
+		"low_effects": true,
+		"median_ms": 7.162,
+		"os": "macOS",
+		"p95_ms": 13.304,
+		"processor": "Apple M2 Pro",
+		"projectiles": 400,
+		"pulses": 12,
+		"remaining_actors": 550,
+		"scope": "desktop render-only fixture, 120 warmup frames then 300 measured frames; no physical-device acceptance",
+		"static_bytes_end": 47813291.0,
+		"static_bytes_start": 47805779.0
+	}
+]

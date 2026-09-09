@@ -1,6 +1,7 @@
 class_name TransmitterArt
 extends Control
-## Original static geometric placeholder; no external assets, audio, RNG, or combat.
+## Original radio-console art; no gameplay RNG or combat state.
+const RADIO: Texture2D = preload("res://assets/art/radio/pulse.svg")
 
 var show_signal: bool = true
 
@@ -13,12 +14,7 @@ func _draw() -> void:
 	if show_signal:
 		for radius: float in [45.0, 72.0, 99.0]:
 			draw_arc(center, radius, PI * 1.12, PI * 1.88, 32, mint, 3.0, true)
-	draw_line(center, center + Vector2(0, 66), mint, 6.0, true)
-	draw_circle(center, 8.0, mint)
-	draw_style_box(_cabinet_style(), Rect2(center + Vector2(-110, 66), Vector2(220, 70)))
-	for index: int in 6:
-		draw_line(center + Vector2(-85 + index * 12, 86), center + Vector2(-85 + index * 12, 116), mint, 3.0)
-	draw_circle(center + Vector2(72, 101), 17.0, Color(0.97, 0.69, 0.4))
+	draw_texture_rect(RADIO, Rect2(Vector2(size.x * .5 - 110, 25), Vector2(220, 220)), false)
 
 func _cabinet_style() -> StyleBoxFlat:
 	var style: StyleBoxFlat = StyleBoxFlat.new()

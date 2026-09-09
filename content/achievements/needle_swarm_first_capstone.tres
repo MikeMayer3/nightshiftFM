@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"needle_swarm_first_capstone"
+name_key = &"M9_ACH_NEEDLE_SWARM_FIRST_CAPSTONE"
+description_key = &"M9_ACH_NEEDLE_SWARM_FIRST_CAPSTONE_DESC"
+category = "Weapon mastery"
+progress_kind = &"set"
+threshold = 1
+condition_id = &"needle_swarm_first_capstone"
+condition_parameters = {&"family": &"needle_swarm"}
+eligible_modes = Array[StringName]([&"campaign", &"contract", &"endless"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.needle_swarm_first_capstone"
+available = true
+pending_key = &""

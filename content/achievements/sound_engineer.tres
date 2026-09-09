@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"sound_engineer"
+name_key = &"M9_ACH_SOUND_ENGINEER"
+description_key = &"M9_ACH_SOUND_ENGINEER_DESC"
+category = "Builds"
+progress_kind = &"set"
+threshold = 8
+condition_id = &"sound_engineer"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.sound_engineer"
+available = true
+pending_key = &""

@@ -14,6 +14,7 @@ var continue_button: Button
 var _continuing: bool = false
 var combat: CombatScreen
 var current_page: Page = Page.MENU
+var settings_panel: RadioSettingsPanel
 
 @onready var menu: VBoxContainer = $Margin/Column/Menu
 @onready var start_placeholder: VBoxContainer = $Margin/Column/StartPlaceholder
@@ -22,6 +23,7 @@ var current_page: Page = Page.MENU
 @onready var probe: MobileProbe = $MobileProbe
 
 func _ready() -> void:
+	get_window().go_back_requested.connect(_system_back)
 	# Literal localization keys also remain visible to the editor's string extractor.
 	(menu.get_node("Start") as Button).pressed.connect(show_page.bind(Page.CAMPAIGN))
 	(menu.get_node("Settings") as Button).pressed.connect(show_page.bind(Page.SETTINGS))
@@ -29,8 +31,13 @@ func _ready() -> void:
 	(menu.get_node("MobileChecks") as Button).pressed.connect(show_page.bind(Page.MOBILE_CHECKS))
 	probe.back_requested.connect(show_page.bind(Page.MENU))
 	(start_placeholder.get_node("Back") as Button).pressed.connect(show_page.bind(Page.MENU))
-	(settings.get_node("Back") as Button).pressed.connect(show_page.bind(Page.MENU))
-	(settings.get_node("ShowSignal") as CheckButton).toggled.connect(_set_signal_visible)
+	settings.queue_free()
+	settings_panel = RadioSettingsPanel.new()
+	add_child(settings_panel)
+	settings = settings_panel.column
+	settings_panel.back_requested.connect(show_page.bind(Page.MENU))
+	RadioPreferences.current.changed.connect(func() -> void: _set_signal_visible(RadioPreferences.current.enabled("show_signal")))
+	_set_signal_visible(RadioPreferences.current.enabled("show_signal"))
 	continue_button = Button.new()
 	continue_button.text = tr("M3_CONTINUE")
 	continue_button.custom_minimum_size.y = 84
@@ -40,14 +47,19 @@ func _ready() -> void:
 	continue_button.pressed.connect(func() -> void:
 		_continuing = true
 		show_page(Page.COMBAT))
+	for child: Node in menu.get_children():
+		if child is Button: RadioUI.button(child, child.name == "Start")
 	show_page(Page.MENU)
 
 func show_page(page: Page) -> void:
+	var returning_to_route: bool = current_page == Page.ARSENAL and page == Page.CAMPAIGN
 	if campaign_panel != null:
 		remove_child(campaign_panel)
 		campaign_panel.queue_free()
 		campaign_panel = null
 	if picker != null:
+		loadout = picker.selection.duplicate()
+		modules = picker.modules.duplicate()
 		remove_child(picker)
 		picker.queue_free()
 		picker = null
@@ -59,7 +71,8 @@ func show_page(page: Page) -> void:
 	menu.visible = page == Page.MENU
 	start_placeholder.visible = page == Page.START_PLACEHOLDER
 	settings.visible = page == Page.SETTINGS
-	($Margin as MarginContainer).visible = page not in [Page.MOBILE_CHECKS, Page.COMBAT, Page.ARSENAL, Page.CAMPAIGN]
+	settings_panel.visible = page == Page.SETTINGS
+	($Margin as MarginContainer).visible = page not in [Page.SETTINGS, Page.MOBILE_CHECKS, Page.COMBAT, Page.ARSENAL, Page.CAMPAIGN]
 	probe.set_enabled(page == Page.MOBILE_CHECKS)
 	if page == Page.CAMPAIGN:
 		var saved: MissionStore = MissionStore.new(save_path)
@@ -72,6 +85,7 @@ func show_page(page: Page) -> void:
 		if not data.is_empty(): mission_profile.restore(data.profile)
 		campaign_panel = CampaignPanel.new()
 		campaign_panel.profile = mission_profile
+		if returning_to_route: campaign_panel.selected_mission = mission_index
 		add_child(campaign_panel)
 		campaign_panel.back_requested.connect(show_page.bind(Page.MENU))
 		campaign_panel.changed.connect(_save_profile)
@@ -82,6 +96,9 @@ func show_page(page: Page) -> void:
 		picker = ArsenalPicker.new()
 		picker.campaign_profile = mission_profile.campaign
 		picker.mission_index = mission_index
+		if CampaignContent.valid_selection(loadout, modules, mission_profile.campaign.cleared):
+			picker.selection = loadout.duplicate()
+			picker.modules = modules.duplicate()
 		add_child(picker)
 		picker.back_requested.connect(show_page.bind(Page.CAMPAIGN))
 		picker.settings_changed.connect(_save_profile)
@@ -121,16 +138,27 @@ func show_page(page: Page) -> void:
 		Page.START_PLACEHOLDER:
 			(start_placeholder.get_node("Back") as Button).grab_focus()
 		Page.SETTINGS:
-			(settings.get_node("ShowSignal") as CheckButton).grab_focus()
+			settings_panel.toggles.reduced_flash.grab_focus()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("menu_back") and current_page not in [Page.MENU, Page.COMBAT]:
-		show_page(Page.MENU)
+		_system_back()
 		get_viewport().set_input_as_handled()
 
 func _set_signal_visible(enabled: bool) -> void:
 	transmitter.show_signal = enabled
 	transmitter.queue_redraw()
+
+func _system_back() -> void:
+	if current_page == Page.COMBAT and combat != null:
+		if combat.settings_panel != null:
+			combat.settings_panel.back_requested.emit()
+		elif not combat.manual_pause:
+			combat.toggle_pause()
+	elif current_page == Page.MENU:
+		_quit()
+	else:
+		show_page(Page.CAMPAIGN if current_page == Page.ARSENAL else Page.MENU)
 
 func _quit() -> void:
 	get_tree().quit(0)
@@ -140,7 +168,9 @@ func _save_profile() -> void:
 	var data: Dictionary = store.load_save()
 	var result: Error = store.error
 	if result == OK: result = store.save(mission_profile, data.get("run") if data.get("run") != null else {})
-	if campaign_panel != null and is_instance_valid(campaign_panel.notice): campaign_panel.notice.text = tr("M7_SAVED" if result == OK else "M3_SAVE_ERROR")
+	if campaign_panel != null and is_instance_valid(campaign_panel.notice):
+		campaign_panel.notice.text = tr("M7_SAVED" if result == OK else "M3_SAVE_ERROR")
+		campaign_panel.notice.show()
 	if picker != null and picker.preview != null:
 		picker.refresh_preview()
-		picker.preview.text += "\n" + tr("M7_SAVED" if result == OK else "M3_SAVE_ERROR")
+		picker.notice.text = tr("M7_SAVED" if result == OK else "M3_SAVE_ERROR")

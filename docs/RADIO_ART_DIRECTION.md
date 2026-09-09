@@ -1,0 +1,60 @@
+# Radio station art direction
+
+Owner revision, 2026-09-09: defend a radio station with its transmission tower
+and vintage studio equipment. The opposition is newer audio technology making
+broadcast radio irrelevant. This replaces the earlier possessed-radio enemy
+and old-to-new enemy cabinet direction.
+
+## The station
+
+The main weapon is a lattice radio tower. The three existing chassis use AM,
+FM and shortwave display names. The tower always stays centered. Supporting equipment uses distinct deck slots,
+with even spacing at the five-support limit. The shield boundary sits above every
+instrument silhouette and protective arc. Wood, brass, warm meter lights, cloth speaker
+cones, tape reels and analog controls identify the defenders.
+
+| Stable family ID | Display name / equipment | Attack identity |
+| --- | --- | --- |
+| `arc_aerial` | Valve Microphone | Oscillating violet chain waves |
+| `bass_driver` | Studio Monitor | Broad amber pressure-wave fronts |
+| `static_net` | Mixing Desk | Cyan interference lattice |
+| `echo_deck` | Tape Deck | Paired magenta tape-loop echoes |
+| `needle_swarm` | Turntable | Golden musical-note projectiles |
+| `reverb_well` | Spring Reverb | Green expanding spiral reverberation |
+
+AM uses traveling wave crests; FM uses intertwined continuous waveforms;
+shortwave uses separated packet fronts. Colors supplement different shapes.
+Earned kills narrow the needle search around a fixed orange 100 FM target. The
+needle overshoots and stops short while the old-radio knobs rotate; an earned
+upgrade locks them to the station. Overflow still carries into the next upgrade.
+These animations use no gameplay RNG and freeze while paused. Incoming signals
+combine tick marks and the waveform in one compact strip. Station Health and
+shield sit below the field; the small Pause control keeps the header short.
+
+## The opposition
+
+The three implemented movement roles keep their mechanics and stable IDs.
+Pocket digital music players are swarmers, paired wireless earbuds are divers,
+and smart speakers are carriers. Pale polymer, dark screens, cool status lights
+and digital packet projectiles distinguish them from the station.
+
+Three material/light variants exist for the current roles. Region labels are
+Pocket Players, Wireless Audio and Smart Devices. These are presentation themes;
+missions 4–12 remain explicitly marked prototype encounters.
+
+Future roles and bosses should extend this modern-audio opposition, but they
+are not implemented by this revision. Do not imply that a new sprite adds an
+enemy mechanic. Existing elite, aiming, armor, health and status tells remain.
+
+## Implementation and acceptance
+
+Original deterministic SVGs come from `tools/generate_radio_art.py`. The same
+assets appear in setup, upgrade cards, and combat. Attacks are drawn by the real
+combat arena using bounded waveform geometry. Low effects reduces waveform
+sampling; reduced flashes softens transient alpha. Neither option removes actors
+or changes hit detection. Sound loops, artwork and behavior still need human
+approval; automated screenshots are visual evidence, not that approval.
+
+Current screenshots and the nine-attack gallery are in `docs/evidence/M10/`.
+The milestone remains partial; no additional enemy roles, bosses or release
+acceptance are claimed.

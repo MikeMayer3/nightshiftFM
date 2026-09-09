@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"night_ledger"
 name_key = &"M7_MODULE_NIGHT_LEDGER"
 description_key = &"M7_MODULE_NIGHT_LEDGER_DESC"
-unlock_mission = 11
+unlock_mission = 0
 effects = {&"rerolls": 1.0, &"main_damage": -0.1}

@@ -25,13 +25,13 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 		await tree.process_frame
 		t.check(not boot.continue_button.visible, "profile-only saves do not advertise a nonexistent run")
 		boot.show_page(BootScreen.Page.CAMPAIGN)
-		t.check(boot.campaign_panel.briefing.text == TranslationServer.translate(CampaignContent.MISSIONS[mini(cleared, 11)].description_key), "selected mission shows its own encounter briefing")
+		t.check(boot.campaign_panel.mission_name.text == TranslationServer.translate(CampaignContent.MISSIONS[mini(cleared, 11)].name_key), "selected tile displays its mission name")
 		if cleared >= 3:
-			boot.campaign_panel.mission_selector.item_selected.emit(0)
-			t.check("Burst" in boot.campaign_panel.briefing.text and "Prototype" not in boot.campaign_panel.briefing.text, "selection updates authored opening briefing")
-			boot.campaign_panel.mission_selector.item_selected.emit(mini(cleared, 11))
+			boot.campaign_panel.station_buttons[0].pressed.emit()
+			t.check(boot.campaign_panel.mission_name.text == TranslationServer.translate(CampaignContent.MISSIONS[0].name_key), "tile selection updates the mission name")
+			boot.campaign_panel.station_buttons[mini(cleared, 11)].pressed.emit()
 		for index: int in 12:
-			t.check(boot.campaign_panel.mission_selector.is_item_disabled(index) == (index > cleared), "campaign locks unavailable mission %d at clear %d" % [index + 1, cleared])
+			t.check(boot.campaign_panel.station_buttons[index].disabled == (index > cleared), "campaign locks unavailable mission %d at clear %d" % [index + 1, cleared])
 		boot.campaign_panel.launch_button.pressed.emit()
 		var picker: ArsenalPicker = boot.picker
 		t.check(picker.selectors[2].item_count == CampaignContent.options(cleared, "support").size(), "picker exposes only progressively unlocked support choices")
@@ -49,6 +49,16 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 			t.check(picker.load_preset(0) and picker.modules == [&"hot_tubes", &"heavy_battery"], "preset restores module selection and controls")
 			var disk: MissionProfile = MissionProfile.new()
 			t.check(disk.restore(store.load_save().profile) and disk.campaign.presets[0].modules.size() == 2, "preset UI signal persists to atomic storage")
+		# Returning from setup preserves the selected mission and working loadout.
+		var chosen: Dictionary = picker.selection.duplicate()
+		var fitted_modules: Array[StringName] = picker.modules.duplicate()
+		var chosen_mission: int = picker.mission_index
+		picker.back_requested.emit()
+		t.check(boot.campaign_panel.selected_mission == chosen_mission, "setup Back preserves selected station")
+		boot.campaign_panel.launch_button.pressed.emit()
+		picker = boot.picker
+		t.check(picker.selection == chosen and picker.modules == fitted_modules, "setup Back preserves equipment and fitted modules")
+		t.check(not picker.details_body.visible and not picker.modules_body.visible and not picker.presets_body.visible, "setup opens with optional information collapsed")
 		picker.launch_button.pressed.emit()
 		boot.combat.set_process(false)
 		t.check(not boot.combat.save_failed and boot.combat.session.campaign != null, "campaign UI launches a valid saved run")

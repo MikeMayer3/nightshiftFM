@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"variety_show"
+name_key = &"M9_ACH_VARIETY_SHOW"
+description_key = &"M9_ACH_VARIETY_SHOW_DESC"
+category = "Builds"
+progress_kind = &"set"
+threshold = 6
+condition_id = &"variety_show"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.variety_show"
+available = true
+pending_key = &""

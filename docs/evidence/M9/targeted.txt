@@ -1,0 +1,176 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: all 48 approved achievement identities exist
+PASS: valid unique cosmetic reward: first_broadcast
+PASS: positive evaluator fixture: first_broadcast
+PASS: negative evaluator fixture: first_broadcast
+PASS: valid unique cosmetic reward: local_legend
+PASS: pending content cannot award or track: local_legend
+PASS: pending achievement cannot be injected by migration: local_legend
+PASS: valid unique cosmetic reward: deep_signal
+PASS: pending content cannot award or track: deep_signal
+PASS: pending achievement cannot be injected by migration: deep_signal
+PASS: valid unique cosmetic reward: still_on_air
+PASS: pending content cannot award or track: still_on_air
+PASS: pending achievement cannot be injected by migration: still_on_air
+PASS: valid unique cosmetic reward: full_schedule
+PASS: pending content cannot award or track: full_schedule
+PASS: pending achievement cannot be injected by migration: full_schedule
+PASS: valid unique cosmetic reward: overtime
+PASS: pending content cannot award or track: overtime
+PASS: pending achievement cannot be injected by migration: overtime
+PASS: valid unique cosmetic reward: new_dials
+PASS: pending content cannot award or track: new_dials
+PASS: pending achievement cannot be injected by migration: new_dials
+PASS: valid unique cosmetic reward: backup_plans
+PASS: pending content cannot award or track: backup_plans
+PASS: pending achievement cannot be injected by migration: backup_plans
+PASS: valid unique cosmetic reward: arc_aerial_first_capstone
+PASS: positive evaluator fixture: arc_aerial_first_capstone
+PASS: negative evaluator fixture: arc_aerial_first_capstone
+PASS: valid unique cosmetic reward: arc_aerial_three_capstones
+PASS: positive evaluator fixture: arc_aerial_three_capstones
+PASS: negative evaluator fixture: arc_aerial_three_capstones
+PASS: valid unique cosmetic reward: echo_deck_first_capstone
+PASS: positive evaluator fixture: echo_deck_first_capstone
+PASS: negative evaluator fixture: echo_deck_first_capstone
+PASS: valid unique cosmetic reward: echo_deck_three_capstones
+PASS: positive evaluator fixture: echo_deck_three_capstones
+PASS: negative evaluator fixture: echo_deck_three_capstones
+PASS: valid unique cosmetic reward: bass_driver_first_capstone
+PASS: positive evaluator fixture: bass_driver_first_capstone
+PASS: negative evaluator fixture: bass_driver_first_capstone
+PASS: valid unique cosmetic reward: bass_driver_three_capstones
+PASS: positive evaluator fixture: bass_driver_three_capstones
+PASS: negative evaluator fixture: bass_driver_three_capstones
+PASS: valid unique cosmetic reward: needle_swarm_first_capstone
+PASS: positive evaluator fixture: needle_swarm_first_capstone
+PASS: negative evaluator fixture: needle_swarm_first_capstone
+PASS: valid unique cosmetic reward: needle_swarm_three_capstones
+PASS: positive evaluator fixture: needle_swarm_three_capstones
+PASS: negative evaluator fixture: needle_swarm_three_capstones
+PASS: valid unique cosmetic reward: reverb_well_first_capstone
+PASS: positive evaluator fixture: reverb_well_first_capstone
+PASS: negative evaluator fixture: reverb_well_first_capstone
+PASS: valid unique cosmetic reward: reverb_well_three_capstones
+PASS: positive evaluator fixture: reverb_well_three_capstones
+PASS: negative evaluator fixture: reverb_well_three_capstones
+PASS: valid unique cosmetic reward: static_net_first_capstone
+PASS: positive evaluator fixture: static_net_first_capstone
+PASS: negative evaluator fixture: static_net_first_capstone
+PASS: valid unique cosmetic reward: static_net_three_capstones
+PASS: positive evaluator fixture: static_net_three_capstones
+PASS: negative evaluator fixture: static_net_three_capstones
+PASS: valid unique cosmetic reward: patch_cable
+PASS: positive evaluator fixture: patch_cable
+PASS: negative evaluator fixture: patch_cable
+PASS: valid unique cosmetic reward: sound_engineer
+PASS: positive evaluator fixture: sound_engineer
+PASS: negative evaluator fixture: sound_engineer
+PASS: valid unique cosmetic reward: stereo
+PASS: positive evaluator fixture: stereo
+PASS: negative evaluator fixture: stereo
+PASS: valid unique cosmetic reward: minimalist
+PASS: positive evaluator fixture: minimalist
+PASS: negative evaluator fixture: minimalist
+PASS: valid unique cosmetic reward: all_hands
+PASS: positive evaluator fixture: all_hands
+PASS: negative evaluator fixture: all_hands
+PASS: valid unique cosmetic reward: soloist_duet
+PASS: positive evaluator fixture: soloist_duet
+PASS: negative evaluator fixture: soloist_duet
+PASS: valid unique cosmetic reward: variety_show
+PASS: positive evaluator fixture: variety_show
+PASS: negative evaluator fixture: variety_show
+PASS: valid unique cosmetic reward: deep_focus
+PASS: positive evaluator fixture: deep_focus
+PASS: negative evaluator fixture: deep_focus
+PASS: valid unique cosmetic reward: no_scratches
+PASS: positive evaluator fixture: no_scratches
+PASS: negative evaluator fixture: no_scratches
+PASS: valid unique cosmetic reward: unbroken
+PASS: positive evaluator fixture: unbroken
+PASS: negative evaluator fixture: unbroken
+PASS: valid unique cosmetic reward: bouncer
+PASS: pending content cannot award or track: bouncer
+PASS: pending achievement cannot be injected by migration: bouncer
+PASS: valid unique cosmetic reward: second_wind
+PASS: positive evaluator fixture: second_wind
+PASS: negative evaluator fixture: second_wind
+PASS: valid unique cosmetic reward: close_call
+PASS: positive evaluator fixture: close_call
+PASS: negative evaluator fixture: close_call
+PASS: valid unique cosmetic reward: hold_the_line
+PASS: pending content cannot award or track: hold_the_line
+PASS: pending achievement cannot be injected by migration: hold_the_line
+PASS: valid unique cosmetic reward: contract_two_channel
+PASS: pending content cannot award or track: contract_two_channel
+PASS: pending achievement cannot be injected by migration: contract_two_channel
+PASS: valid unique cosmetic reward: contract_bare_antenna
+PASS: pending content cannot award or track: contract_bare_antenna
+PASS: pending achievement cannot be injected by migration: contract_bare_antenna
+PASS: valid unique cosmetic reward: contract_fragile_broadcast
+PASS: pending content cannot award or track: contract_fragile_broadcast
+PASS: pending achievement cannot be injected by migration: contract_fragile_broadcast
+PASS: valid unique cosmetic reward: contract_no_repeats
+PASS: pending content cannot award or track: contract_no_repeats
+PASS: pending achievement cannot be injected by migration: contract_no_repeats
+PASS: valid unique cosmetic reward: contract_overcrowded_frequency
+PASS: pending content cannot award or track: contract_overcrowded_frequency
+PASS: pending achievement cannot be injected by migration: contract_overcrowded_frequency
+PASS: valid unique cosmetic reward: contract_long_distance
+PASS: pending content cannot award or track: contract_long_distance
+PASS: pending achievement cannot be injected by migration: contract_long_distance
+PASS: valid unique cosmetic reward: know_enemy
+PASS: pending content cannot award or track: know_enemy
+PASS: pending achievement cannot be injected by migration: know_enemy
+PASS: valid unique cosmetic reward: boss_notebook
+PASS: pending content cannot award or track: boss_notebook
+PASS: pending achievement cannot be injected by migration: boss_notebook
+PASS: valid unique cosmetic reward: blueprint_collector
+PASS: pending content cannot award or track: blueprint_collector
+PASS: pending achievement cannot be injected by migration: blueprint_collector
+PASS: valid unique cosmetic reward: signal_archive
+PASS: pending content cannot award or track: signal_archive
+PASS: pending achievement cannot be injected by migration: signal_archive
+PASS: valid unique cosmetic reward: endless_20
+PASS: pending content cannot award or track: endless_20
+PASS: pending achievement cannot be injected by migration: endless_20
+PASS: valid unique cosmetic reward: endless_40
+PASS: pending content cannot award or track: endless_40
+PASS: pending achievement cannot be injected by migration: endless_40
+PASS: valid unique cosmetic reward: endless_60
+PASS: pending content cannot award or track: endless_60
+PASS: pending achievement cannot be injected by migration: endless_60
+PASS: valid unique cosmetic reward: endless_three
+PASS: pending content cannot award or track: endless_three
+PASS: pending achievement cannot be injected by migration: endless_three
+PASS: 25 implemented conditions; 23 pending conditions remain honest
+PASS: editor/debug campaign launch is ineligible by default
+PASS: shield-first hit records only hull overflow and a true break
+PASS: full recovery survives a same-step follow-up hit; healing never erases hull damage
+PASS: checkpoint round-trip preserves peak support and damage history
+PASS: rollback restores history without counting discarded partial-wave damage
+PASS: legacy run continues without inventing achievement history
+PASS: peak support count cannot be lower than equipped inventory
+PASS: negative damage history rejected
+PASS: unfinished checkpoint cannot claim completed achievement provenance
+PASS: defeat never awards victory achievements
+PASS: prototype mission cannot qualify even with an eligible flag
+PASS: achievement and cosmetic reward commit once with mission reward
+PASS: only earned cosmetic titles may be equipped
+PASS: track one of three distinct goals
+PASS: track one of three distinct goals
+PASS: track one of three distinct goals
+PASS: fourth goal rejected
+PASS: earned progress, rewards, title and tracked goals survive provided-save migration
+PASS: atomic envelope persists run and achievement rewards together
+PASS: legacy profile migrates without retroactive achievement rewards: 1
+PASS: legacy profile migrates without retroactive achievement rewards: 2
+PASS: legacy profile migrates without retroactive achievement rewards: 3
+PASS: duplicate capstone IDs cannot masquerade as distinct mastery
+PASS: repeating one capstone never advances distinct-branch mastery
+PASS: damage counts main, echo and recipe once; Burst and assistance are not added twice
+PASS: native adapter explicitly unavailable while local achievements work offline
+PASS: M9 suite completed
+RESULT: 173 checks; 0 failures

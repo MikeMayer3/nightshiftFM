@@ -18,6 +18,7 @@ const TRANSMITTER: Vector2 = Vector2(320, 684)
 const HULL_MAX: float = 100.0
 const STEP: float = 1.0 / 60.0
 var campaign: CampaignRun
+var achievement_run: AchievementRun
 var patchboard: PatchboardState
 var arsenal: ArsenalCombat
 var active_combat: ActiveCombat
@@ -60,6 +61,7 @@ func _init() -> void:
 	restart()
 
 func restart() -> void:
+	achievement_run = null
 	campaign = null
 	patchboard = null
 	arsenal = null
@@ -204,6 +206,9 @@ func hit_station(amount: float, cause: StringName, kind: StringName = &"COMBAT_B
 		if previous_shield > 0 and run.shield.current == 0:
 			supports.report.add(&"shield", &"breaks", 1)
 			_event(CombatEvent.Kind.SHIELD_BREAK, &"shield", root_id, target_id, absorbed)
+	if achievement_run != null:
+		achievement_run.hull_damage += minf(hull, incoming - absorbed)
+		if previous_shield > 0 and run.shield.current == 0: achievement_run.broken = true
 	hull = maxf(0.0, hull - (incoming - absorbed))
 	recharge_time = CombatContent.SHIELD.recharge_delay
 	var broke: bool = previous_shield > 0 and run.shield.current == 0
@@ -233,6 +238,7 @@ func _step(delta: float) -> void:
 	if ability_left > 0.0:
 		if supports != null: supports.heal(self, shield_stat(&"brace_recharge", 0.0) * delta, &"shield")
 		else: run.shield.current = minf(run.shield.capacity, run.shield.current + shield_stat(&"brace_recharge", 0.0) * delta)
+	if achievement_run != null: achievement_run.observe(self)
 	if phase == Phase.INTERMISSION:
 		phase_time = maxf(0.0, phase_time - delta)
 		if phase_time <= 0.0:
@@ -257,6 +263,7 @@ func _step(delta: float) -> void:
 			var spawned: CombatActor = spawn_enemy(enemy_definition(definition.enemy_ids[spawn_index]), spawn_x)
 			if draft != null:
 				spawned.health *= ActiveCombat.health_scale(wave) if active_combat != null else 1.0 + float(wave - 1) * (0.08 if supports != null else 0.22)
+				if active_combat != null and active_combat.automatic_radio: spawned.health *= ActiveCombat.AUTOMATIC_HEALTH_SCALE
 				spawned.max_health = spawned.health
 			spawn_index += 1
 		spawn_time += definition.spawn_interval
@@ -340,6 +347,9 @@ func _finish(victory: bool) -> void:
 		return
 	if supports != null: supports.clear_wave_effects()
 	phase = Phase.VICTORY if victory else Phase.DEFEAT
+	if achievement_run != null:
+		achievement_run.observe(self)
+		achievement_run.completed = victory
 	actors.clear()
 	focus_active = false
 	_accumulator = 0.0
@@ -408,7 +418,10 @@ func start_campaign(seed_value: int, identity: StringName, loadout: Dictionary, 
 	if not selected.restore(context) or not CampaignContent.valid_selection(loadout, selected.modules, selected.cleared): return false
 	if not start_patchboard(seed_value, identity, loadout): return false
 	campaign = selected
+	active_combat.automatic_radio = true
 	active_combat.content_version = EncounterContent.VERSION if EncounterWaves.MISSIONS.has(campaign.mission) else CampaignContent.VERSION
+	achievement_run = AchievementRun.new()
+	achievement_run.eligible = AchievementRun.production_build() and EncounterContent.authored(self)
 	draft.catalog = draft.catalog.filter(func(definition: TrackDefinition) -> bool: return not definition.support or String(definition.id) in CampaignContent.options(campaign.cleared, "support"))
 	(draft as ArsenalDraft).reroll_limit = 2 + int(ModuleStats.coefficient(campaign.modules, &"rerolls"))
 	draft.rerolls = (draft as ArsenalDraft).reroll_limit
@@ -514,6 +527,7 @@ func apply_ranks() -> void:
 			support.rank = owned.rank()
 			support.damage = float(owned.stats.get(&"damage", 0.0))
 			run.supports.append(support)
+	if achievement_run != null: achievement_run.observe(self)
 
 func choose_upgrade(id: StringName) -> bool:
 	if signal_progress != null: return _choose_signal(id)
@@ -589,6 +603,8 @@ func _fire_track(owned: UpgradeTrack, first: CombatActor) -> void:
 					origin = endpoint
 
 func _event(kind: CombatEvent.Kind, source: StringName, root_id: int, target_id: int, amount: float, can_echo: bool = true) -> void:
+	# A support can refill the shield and an enemy can hit it in the same step.
+	if achievement_run != null and kind == CombatEvent.Kind.SHIELD_HEAL: achievement_run.observe(self)
 	event_serial += 1
 	var event: CombatEvent = CombatEvent.new(event_serial, root_id, source, kind, target_id, amount)
 	if source == &"main" and can_echo and (arsenal == null or kind == CombatEvent.Kind.ATTACK): event.eligible_triggers |= CombatEvent.CAN_ECHO

@@ -44,6 +44,10 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	boot._unhandled_input(back)
 	context.check(boot.menu.visible, "menu_back action returns to menu")
 	context.check((boot.menu.get_node("Quit") as Button).pressed.is_connected(boot._quit), "Quit signal is connected")
+	boot.show_page(BootScreen.Page.SETTINGS)
+	tree.root.go_back_requested.emit()
+	context.check(boot.current_page == BootScreen.Page.MENU, "Android system Back returns from settings without exiting")
+	context.check(not tree.quit_on_go_back, "Android automatic quit is disabled for in-app Back routing")
 	boot.queue_free()
 	await tree.process_frame
 	return true

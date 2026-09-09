@@ -1,0 +1,208 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: M10 settings open via viewport click
+PASS: M10 viewport toggles apply preferences
+PASS: M10 large-text settings have no horizontal overflow
+PASS: Compact settings (360, 640) no horizontal overflow []
+PASS: Full controls guide opens from settings
+PASS: Controls guide (360, 640) no horizontal overflow []
+PASS: Route (360, 640) no horizontal overflow []
+PASS: Equipment (360, 640) no horizontal overflow []
+PASS: Setup footer (360, 640) fits horizontally
+PASS: Setup footer (360, 640) fits vertically
+PASS: Full stats open with actual shield capacity
+PASS: Expanded stats (360, 640) no horizontal overflow []
+PASS: Expanded setup footer (360, 640) fits horizontally
+PASS: Expanded setup footer (360, 640) fits vertically
+PASS: Presets (360, 640) no horizontal overflow []
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":65.0,"wave":1}
+PASS: Manual cooldown attack is absent
+PASS: M10 Shield (360, 640) fits horizontally
+PASS: M10 Shield (360, 640) fits vertically
+PASS: M10 arena (360, 640) fits horizontally
+PASS: M10 arena (360, 640) fits vertically
+PASS: Hull and shield are below the battlefield
+PASS: M10 five-support visual fixture
+M2_COMBAT {"actors":5,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 pause click freezes combat
+PASS: M10 settings open from pause menu
+PASS: M10 settings preserve paused clock
+PASS: M10 Resume (360, 640) fits horizontally
+PASS: M10 Resume (360, 640) fits vertically
+M2_COMBAT {"actors":5,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 explicit Resume returns to combat
+PASS: Automatic combat earns an upgrade choice
+PASS: Upgrade sheet leaves the playing field visible
+PASS: Compact upgrade (360, 640) no horizontal overflow []
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade sheet freezes the battle behind it
+PASS: Upgrade details (360, 640) no horizontal overflow []
+PASS: Compact upgrade card accepts a choice through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: Completed route (360, 640) no horizontal overflow []
+PASS: Station tile selects replay mission
+PASS: Two module slots enforce cap through actual clicks
+PASS: All modules (360, 640) no horizontal overflow []
+PASS: Module browsing footer (360, 640) fits horizontally
+PASS: Module browsing footer (360, 640) fits vertically
+PASS: Closing module drawer preserves fitted modules
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: M10 settings open via viewport click
+PASS: M10 viewport toggles apply preferences
+PASS: M10 large-text settings have no horizontal overflow
+PASS: Compact settings (450, 950) no horizontal overflow []
+PASS: Full controls guide opens from settings
+PASS: Controls guide (450, 950) no horizontal overflow []
+PASS: Route (450, 950) no horizontal overflow []
+PASS: Equipment (450, 950) no horizontal overflow []
+PASS: Setup footer (450, 950) fits horizontally
+PASS: Setup footer (450, 950) fits vertically
+PASS: Full stats open with actual shield capacity
+PASS: Expanded stats (450, 950) no horizontal overflow []
+PASS: Expanded setup footer (450, 950) fits horizontally
+PASS: Expanded setup footer (450, 950) fits vertically
+PASS: Presets (450, 950) no horizontal overflow []
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":65.0,"wave":1}
+PASS: Manual cooldown attack is absent
+PASS: M10 Shield (450, 950) fits horizontally
+PASS: M10 Shield (450, 950) fits vertically
+PASS: M10 arena (450, 950) fits horizontally
+PASS: M10 arena (450, 950) fits vertically
+PASS: Hull and shield are below the battlefield
+PASS: M10 five-support visual fixture
+M2_COMBAT {"actors":5,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 pause click freezes combat
+PASS: M10 settings open from pause menu
+PASS: M10 settings preserve paused clock
+PASS: M10 Resume (450, 950) fits horizontally
+PASS: M10 Resume (450, 950) fits vertically
+M2_COMBAT {"actors":5,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 explicit Resume returns to combat
+PASS: Automatic combat earns an upgrade choice
+PASS: Upgrade sheet leaves the playing field visible
+PASS: Compact upgrade (450, 950) no horizontal overflow []
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade sheet freezes the battle behind it
+PASS: Upgrade details (450, 950) no horizontal overflow []
+PASS: Compact upgrade card accepts a choice through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: Completed route (450, 950) no horizontal overflow []
+PASS: Station tile selects replay mission
+PASS: Two module slots enforce cap through actual clicks
+PASS: All modules (450, 950) no horizontal overflow []
+PASS: Module browsing footer (450, 950) fits horizontally
+PASS: Module browsing footer (450, 950) fits vertically
+PASS: Closing module drawer preserves fitted modules
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: M10 settings open via viewport click
+PASS: M10 viewport toggles apply preferences
+PASS: M10 large-text settings have no horizontal overflow
+PASS: Compact settings (768, 1024) no horizontal overflow []
+PASS: Full controls guide opens from settings
+PASS: Controls guide (768, 1024) no horizontal overflow []
+PASS: Route (768, 1024) no horizontal overflow []
+PASS: Equipment (768, 1024) no horizontal overflow []
+PASS: Setup footer (768, 1024) fits horizontally
+PASS: Setup footer (768, 1024) fits vertically
+PASS: Full stats open with actual shield capacity
+PASS: Expanded stats (768, 1024) no horizontal overflow []
+PASS: Expanded setup footer (768, 1024) fits horizontally
+PASS: Expanded setup footer (768, 1024) fits vertically
+PASS: Presets (768, 1024) no horizontal overflow []
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":65.0,"wave":1}
+PASS: Manual cooldown attack is absent
+PASS: M10 Shield (768, 1024) fits horizontally
+PASS: M10 Shield (768, 1024) fits vertically
+PASS: M10 arena (768, 1024) fits horizontally
+PASS: M10 arena (768, 1024) fits vertically
+PASS: Hull and shield are below the battlefield
+PASS: M10 five-support visual fixture
+M2_COMBAT {"actors":5,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 pause click freezes combat
+PASS: M10 settings open from pause menu
+PASS: M10 settings preserve paused clock
+PASS: M10 Resume (768, 1024) fits horizontally
+PASS: M10 Resume (768, 1024) fits vertically
+M2_COMBAT {"actors":5,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 explicit Resume returns to combat
+PASS: Automatic combat earns an upgrade choice
+PASS: Upgrade sheet leaves the playing field visible
+PASS: Compact upgrade (768, 1024) no horizontal overflow []
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade sheet freezes the battle behind it
+PASS: Upgrade details (768, 1024) no horizontal overflow []
+PASS: Compact upgrade card accepts a choice through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: Completed route (768, 1024) no horizontal overflow []
+PASS: Station tile selects replay mission
+PASS: Two module slots enforce cap through actual clicks
+PASS: All modules (768, 1024) no horizontal overflow []
+PASS: Module browsing footer (768, 1024) fits horizontally
+PASS: Module browsing footer (768, 1024) fits vertically
+PASS: Closing module drawer preserves fitted modules
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: M10 settings open via viewport click
+PASS: M10 viewport toggles apply preferences
+PASS: M10 large-text settings have no horizontal overflow
+PASS: Compact settings (1024, 768) no horizontal overflow []
+PASS: Full controls guide opens from settings
+PASS: Controls guide (1024, 768) no horizontal overflow []
+PASS: Route (1024, 768) no horizontal overflow []
+PASS: Equipment (1024, 768) no horizontal overflow []
+PASS: Setup footer (1024, 768) fits horizontally
+PASS: Setup footer (1024, 768) fits vertically
+PASS: Full stats open with actual shield capacity
+PASS: Expanded stats (1024, 768) no horizontal overflow []
+PASS: Expanded setup footer (1024, 768) fits horizontally
+PASS: Expanded setup footer (1024, 768) fits vertically
+PASS: Presets (1024, 768) no horizontal overflow []
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":65.0,"wave":1}
+PASS: Manual cooldown attack is absent
+PASS: M10 Shield (1024, 768) fits horizontally
+PASS: M10 Shield (1024, 768) fits vertically
+PASS: M10 arena (1024, 768) fits horizontally
+PASS: M10 arena (1024, 768) fits vertically
+PASS: Hull and shield are below the battlefield
+PASS: M10 five-support visual fixture
+M2_COMBAT {"actors":5,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 pause click freezes combat
+PASS: M10 settings open from pause menu
+PASS: M10 settings preserve paused clock
+PASS: M10 Resume (1024, 768) fits horizontally
+PASS: M10 Resume (1024, 768) fits vertically
+M2_COMBAT {"actors":5,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.5,"shield":65.0,"wave":1}
+PASS: M10 explicit Resume returns to combat
+PASS: Automatic combat earns an upgrade choice
+PASS: Upgrade sheet leaves the playing field visible
+PASS: Compact upgrade (1024, 768) no horizontal overflow []
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade text remains inside its card
+PASS: Upgrade sheet freezes the battle behind it
+PASS: Upgrade details (1024, 768) no horizontal overflow []
+PASS: Compact upgrade card accepts a choice through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: Completed route (1024, 768) no horizontal overflow []
+PASS: Station tile selects replay mission
+PASS: Two module slots enforce cap through actual clicks
+PASS: All modules (1024, 768) no horizontal overflow []
+PASS: Module browsing footer (1024, 768) fits horizontally
+PASS: Module browsing footer (1024, 768) fits vertically
+PASS: Closing module drawer preserves fitted modules
+RESULT: 176 M10 visual checks; 0 failures

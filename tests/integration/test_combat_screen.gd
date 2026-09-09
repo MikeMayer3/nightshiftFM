@@ -31,7 +31,7 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	var pointer: InputEventMouseButton = InputEventMouseButton.new()
 	pointer.button_index = MOUSE_BUTTON_LEFT
 	pointer.pressed = true
-	pointer.position = screen.arena.arena_offset() + Vector2(100,200) * screen.arena.arena_scale()
+	pointer.position = screen.arena.arena_offset() + Vector2(100,200) * screen.arena.arena_stretch()
 	screen.arena._gui_input(pointer)
 	context.check(screen.session.focus_active and screen.session.focus_point.is_equal_approx(Vector2(100,200)), "pointer maps visible arena to fixed combat coordinates")
 	pointer.pressed = false

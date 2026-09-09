@@ -1,5 +1,140 @@
 # Implementation status
 
+
+## Current delivery — approved battlefield 0.10.3 (2026-09-09)
+
+The approved radio mockup is implemented: fixed orange tuning target, hunting
+needle and rotating knobs, compact incoming waveform/ticks and Pause header,
+taller field, bottom Station Health, centered main tower, separated support slots,
+and a raised shield boundary aligned with simulated breaches. Full deck spacing
+is even. Deferred upgrade-sheet callbacks safely handle scene removal.
+
+PASS: 4,574 regressions in a fresh source copy, reproducible generators (zero
+changes), import/startup smoke, 200 rendered UI checks at four viewport sizes,
+seven foundation checks, and Android debug export 0.10.3/code 15. Final engine
+and visual logs contain no engine/script errors. This includes the preceding M9
+achievement and M10 station-polish changes in the working tree.
+
+PASS: Pixel 10 Pro XL updated in place with `adb install -r`, version 0.10.3/code
+15 verified, launch succeeded and the process is running. Both existing mission
+save files were backed up and byte-identical before installation, after installation,
+and after launch. No runtime script/fatal errors were observed. The game was not
+foreground at capture time, so visible physical UI/gameplay checks for this build
+are NOT RUN; rendered desktop screenshots are separate evidence. See
+`docs/evidence/M10/pixel-approved-install.json` and `pixel-approved-runtime.txt`.
+
+Changed files, exact commands, evidence and remaining gates are in
+[M10 delivery notes](M10_MOBILE_POLISH.md#approved-battlefield-revision--0103).
+The entries below are historical evidence for earlier revisions. M8/M9/M10 remain
+partial; no new milestone or human acceptance is inferred from this update.
+
+
+Current local build: **0.10.2, radio station revision**. Mission tiles plus name
+label; no briefing/dropdown; all modules at mission 1; automatic-only new runs;
+analog tuning dial and moving incoming waveform; bottom health; compact upgrade
+sheets; equal equipment spacing; vintage studio tools versus modern audio devices;
+nine distinct sound-wave attacks. PASS: 4,564 clean-copy regressions, 176 viewport
+checks, reproducible generators, 27 no-Burst simulations (25 wins / 2 losses),
+and Android export. Installed on Pixel 10 Pro XL; save hashes preserved across
+update/launch and native menu/combat screenshots inspected. See [scope and evidence](M10_MOBILE_POLISH.md). M10 remains
+partial; older records below describe prior revisions.
+
+
+Latest M10 setup polish (0.10.1): illustrated loadout cards; optional stats,
+modules and presets; fixed Go live footer; graphical twelve-station campaign;
+compact settings and pause instructions; navigation preserves equipment and
+mission choice. PASS: 4,559 regressions, 152 viewport-input/layout checks across
+four sizes with large text, seven foundation checks and Android export. Installed
+on Pixel 10 Pro XL with both existing mission saves verified unchanged; physical
+visible UI/gameplay NOT RUN because the app was not foreground. See
+[M10 revision details](M10_MOBILE_POLISH.md). M10 remains an opening increment.
+
+
+## M10 installed on physical Pixel (2026-09-09)
+
+At the owner's request, updated the Pixel 10 Pro XL from M7 0.7.0/code 11
+to M10 0.10.0/code 12 using `adb install -r`. Both existing mission save files
+were backed up locally and remained byte-identical before install, after install,
+and after launch. The verified APK matches its recorded source/build manifest.
+Android reported a successful launch and a running app process; the phone was
+locked, so visible menu/gameplay acceptance was NOT RUN. No script errors or
+fatal exceptions appeared in the captured launch log. Evidence:
+`docs/evidence/M10/pixel-install.json`. No commit or GitHub push was performed.
+
+## M10 started — radio hardware and accessibility (2026-09-09)
+
+The owner authorized starting M10. A playable opening increment adds original
+radio turrets and enemy art, era palettes, saved accessibility controls, paused
+settings, bounded synthesized audio, and opt-in Android haptics. All six support
+families and three main transmitters have artwork; the three current enemy
+movement roles have valve/transistor/digital variants. Later enemy roles/bosses
+and human/device acceptance remain open. M8 and M9 remain partial.
+
+Regression: **PASS — 4,540 checks, zero failures**. Targeted M10 checks: **PASS —
+39**. Desktop input/layout: **PASS — 68 checks** at small/tall phone and tablet
+sizes. Foundation: **PASS — seven tests**. Desktop render-only stress keeps
+150 enemies plus 400 projectiles, with p95 9.850/9.728 ms normal/low effects on
+Apple M2 Pro; this is not physical-phone or live-fight performance evidence.
+
+Changed areas: `scripts/ui/{radio_preferences,radio_settings_panel,boot,
+safe_margin,transmitter_art,draft_panel}.gd`, `scripts/combat/{radio_art,
+radio_audio,combat_arena,combat_screen}.gd`, `assets/art/radio/`,
+`assets/audio/radio/`, localization, project/export config, generation/fresh-copy
+tools, M10 tests and this documentation. Existing M9 local work is preserved.
+
+See [M10 exact commands, evidence and remaining gates](M10_MOBILE_POLISH.md),
+`docs/evidence/M10/fresh.json`, and native emulator evidence. APK:
+`builds/android/nightshift-m10.apk`, version 0.10.0/code 12. Physical-device
+performance, haptic feel, final art/audio approval and human balance: **NOT RUN**.
+No commit, push, physical-phone install or publication was performed. M11 has
+not started.
+
+## Radio art brief updated (2026-09-09)
+
+The owner requested radio-themed enemies and turrets spanning old school to new
+school. `docs/RADIO_ART_DIRECTION.md` now defines three era palettes, six support
+designs, three main-transmitter identities, eight enemy silhouettes and three boss
+concepts. `docs/GAME_DESIGN.md` and M10 in `docs/MILESTONES.md` reference this brief.
+
+This is a documentation change. Runtime graphics, combat and save data are
+unchanged; M10 implementation has not started. Documentation diff/relative links:
+PASS. Engine, asset, mobile and human visual acceptance checks: NOT RUN for this
+brief. Existing M8/M9 completion boundaries below still apply.
+
+## Current source pushed; M9 achievement increment started (2026-09-08)
+
+The owner authorized pushing the current work and starting M9. Private GitHub
+`MikeMayer3/nightshiftFM`, `main`, is synchronized at
+`668d7e01a29e88d732399417cd0f1a415980d1c4` for the M6/M7/M8 opening work.
+M9 changes are subsequent local work. M8 is still partial; its remaining gates
+are not waived or marked passed by starting M9.
+
+**Implemented:** all 48 immutable achievement catalog entries; 25 evaluated
+conditions, 23 explicitly pending; local progress and up to three tracked goals;
+unique cosmetic titles; checkpointed hull-damage/support/break/recovery history;
+atomic idempotent reward integration; migration from old profiles/runs; honest
+unavailable native adapter; report totals that avoid counting assistance twice.
+See [M9 contracts, changed files, exact commands and remaining scope](M9_ACHIEVEMENTS.md).
+
+| Check | Result |
+|---|---|
+| Pinned import and desktop smoke | PASS |
+| Full regression | PASS — 4,499 checks, zero failures |
+| Targeted achievement checks | PASS — 173 checks; all 25 active conditions have positive/negative fixtures |
+| Foundation | PASS — seven checks |
+| Full-run synthetic eligibility fixtures | PASS — three victories and 74 decision restore-and-continue checkpoints |
+| Actual viewport input/layout | PASS — 36 checks, three sizes including 360×640 |
+| Clean-copy generation/import/regression/smoke | PASS — identical generated content; 4,499 checks, zero failures |
+| Production release-build eligibility / mobile / human acceptance | NOT RUN |
+| Endless and remaining 23 conditions | NOT IMPLEMENTED |
+
+Editor/debug/prototype runs do not earn achievements. The simulation injects
+eligible provenance only in isolated QA sessions; its rewards are not player or
+production-build evidence. Existing debug APK and phone installation are
+unchanged. No M9 commit or push was performed. M10 has not started.
+
+---
+
 ## M8 started — three authored opening missions (2026-09-08)
 
 **Outcome: the first M8 playable increment is implemented and desktop-verified.**

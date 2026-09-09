@@ -1,0 +1,24 @@
+{
+  "device": "temporary read-only Nightshift_M6_Group AVD",
+  "serial": "emulator-5582",
+  "android": "17",
+  "viewport": "1080x2400",
+  "version": "0.10.0",
+  "version_code": 12,
+  "package": "org.nightshiftfm.spike",
+  "checks": {
+    "final_apk_install_launch": "PASS",
+    "native_settings_taps_and_persistence": "PASS",
+    "preferences_restored_after_force_stop_and_update": "PASS; file plus visible switches",
+    "android_back_from_settings_returns_menu": "PASS; android-back-menu.png",
+    "native_opening_combat_and_back_to_pause": "PASS; screenshot and runtime log",
+    "godot_script_errors_or_android_crashes": "none observed"
+  },
+  "limits": [
+    "Emulator only; no physical phone installed",
+    "No human visual/audio/haptic approval",
+    "No 20-minute thermal/memory soak",
+    "No complete native mission balance claim",
+    "Force-stop verification covers presentation settings, not every required mission checkpoint phase"
+  ]
+}

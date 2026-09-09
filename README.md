@@ -1,8 +1,21 @@
 # Nightshift FM — Codex development handoff
 
-**M8 has started: the first three Rooftop Relays missions now have authored
-encounters, formations, briefings and family elites.** M7 progression remains
-available. Human progression/pacing acceptance remains open.
+Current build: **0.10.3 — defend the radio station.** Vintage studio instruments
+fight modern audio devices with distinct sound-wave attacks. The main tower stays
+centered below the raised shield boundary. A hunting radio needle, rotating knobs,
+compact header and bottom Station Health display leave more room for the field.
+New runs use automatic weapons, modules are available immediately, and upgrade
+sheets keep the paused battlefield visible. Setup uses illustrated equipment cards,
+optional details and a graphical twelve-station route.
+See [current revision and verification](docs/M10_MOBILE_POLISH.md).
+
+Android debug output: `builds/android/nightshift-m10.apk` (0.10.3/code 15).
+M8/M9/M10 remain partial; full human and physical-performance acceptance are open.
+
+**M9 has started with local achievements, tracked goals, cosmetic titles and
+report history.** The catalog has 48 entries: 25 evaluated conditions and 23
+explicitly pending. Endless is not implemented. M8's first three authored
+missions are available; its remaining content and human acceptance stay open.
 The title and haunted-radio theme are provisional; iOS remains deferred.
 
 Open `project.godot` with Godot 4.7.2 standard, or follow the
@@ -11,15 +24,21 @@ select a campaign mission, choose equipment and **Go live**. **Continue saved
 mission** restores an existing run. Missions 1–3 use distinct ten-wave encounters;
 missions 4–12 still explicitly identify their reused prototype battles.
 
-Read [M8 opening encounters and remaining scope](docs/M8_ENCOUNTERS.md),
+Read [M9 achievements and remaining scope](docs/M9_ACHIEVEMENTS.md),
+[M8 opening encounters and remaining scope](docs/M8_ENCOUNTERS.md),
 [M7 progression and verification](docs/M7_PROGRESSION.md),
 [M6 patchboard](docs/M6_PATCHBOARD.md), [M5 arsenal](docs/M5_ARSENAL.md),
 [implementation status](docs/IMPLEMENTATION_STATUS.md), and
-[mobile setup](docs/MOBILE_DEVELOPMENT.md). The local Android debug build is
-`builds/android/nightshift-m7.apk`, version 0.7.0/code 11; it does not contain this
-M8 source increment. Existing prototype saves
-Continue with their original rules; New mission starts the campaign. Source and
-APKs from this local milestone have not been published. Radio-tuner art comes later.
+[mobile setup](docs/MOBILE_DEVELOPMENT.md). The previous M7 Android artifact is
+`builds/android/nightshift-m7.apk`, version 0.7.0/code 11. The new M10 artifact
+includes the current M8/M9 increments and the M10 presentation pass. Existing prototype saves continue with their original
+rules; New mission starts the campaign.
+
+This handoff includes the local M9 achievement and M10 presentation increments.
+Campaign → **Achievements** opens progress and goals. Editor/debug/prototype runs
+do not earn rewards; production native eligibility validation remains pending.
+Pixel installation and save-preservation evidence is recorded in the
+[current delivery notes](docs/M10_MOBILE_POLISH.md).
 
 ## Project in one paragraph
 
@@ -38,9 +57,9 @@ commands, to import with Godot 4.7.2 standard before running tests or the game.
 Generated `.godot/` caches, APKs/builds, credentials, and local saves are excluded.
 GitHub synchronizes source and evidence; it does not synchronize device saves.
 
-M7 implementation is ready for progression playtesting. Read
-`docs/IMPLEMENTATION_STATUS.md` before continuing. Stop at M7; M8 requires another
-owner request. `prompts/START_HERE.md` preserves the original M0 prompt as history.
+Read `docs/IMPLEMENTATION_STATUS.md` before continuing. M10 is the current
+owner-requested milestone; stop and report its evidence before starting M11.
+`prompts/START_HERE.md` preserves the original M0 prompt as history.
 
 | File | Purpose |
 |---|---|

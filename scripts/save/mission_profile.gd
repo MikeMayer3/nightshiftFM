@@ -2,6 +2,7 @@ class_name MissionProfile
 extends RefCounted
 ## M3 reward is a local completion record only. No permanent combat power.
 var campaign: CampaignProfile = CampaignProfile.new()
+var achievements: AchievementProfile = AchievementProfile.new()
 var unlocked: Array[StringName] = [&"main", &"shield", &"arc_aerial"]
 var next_run: int = 1
 var rewarded_runs: Array[StringName] = []
@@ -17,14 +18,15 @@ func commit_reward(run_id: StringName, session: CombatSession = null) -> void:
 	rewarded_runs.append(run_id)
 	completed += 1
 	if session != null: campaign.record_victory(session)
+	if session != null: achievements.record_victory(session)
 
 func to_data() -> Dictionary:
-	return {"schema": 3, "campaign": campaign.to_data(), "discovered": Array(discovered), "unlocked": Array(unlocked), "next_run": next_run,
+	return {"schema": 4, "achievements": achievements.to_data(), "campaign": campaign.to_data(), "discovered": Array(discovered), "unlocked": Array(unlocked), "next_run": next_run,
 		"rewarded_runs": Array(rewarded_runs), "completed": completed}
 
 func restore(data: Variant) -> bool:
-	if not data is Dictionary or not SaveChecks.number(data.get("schema"), 1, 3, true): return false
-	if data.size() != (7 if data.schema == 3 else 6 if data.schema == 2 else 5): return false
+	if not data is Dictionary or not SaveChecks.number(data.get("schema"), 1, 4, true): return false
+	if data.size() != (8 if data.schema == 4 else 7 if data.schema == 3 else 6 if data.schema == 2 else 5): return false
 	if data.schema >= 2:
 		if not SaveChecks.ids(data.get("discovered"), 8) or not SaveChecks.unique(data.discovered): return false
 		for id: String in data.discovered:
@@ -39,7 +41,10 @@ func restore(data: Variant) -> bool:
 		if not id.begins_with("run.") or not id.trim_prefix("run.").is_valid_int(): return false
 		if int(id.trim_prefix("run.")) < 1 or int(id.trim_prefix("run.")) >= int(data.next_run): return false
 	var progression: CampaignProfile = CampaignProfile.new()
-	if data.schema == 3 and not progression.restore(data.get("campaign")): return false
+	if data.schema >= 3 and not progression.restore(data.get("campaign")): return false
+	var goals: AchievementProfile = AchievementProfile.new()
+	if data.schema == 4 and not goals.restore(data.get("achievements")): return false
+	achievements = goals
 	campaign = progression
 	discovered.assign(data.get("discovered", []))
 	unlocked.assign(data.unlocked)

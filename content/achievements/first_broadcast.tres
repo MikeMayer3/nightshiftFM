@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"first_broadcast"
+name_key = &"M9_ACH_FIRST_BROADCAST"
+description_key = &"M9_ACH_FIRST_BROADCAST_DESC"
+category = "Progression"
+progress_kind = &"flag"
+threshold = 1
+condition_id = &"first_broadcast"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.first_broadcast"
+available = true
+pending_key = &""

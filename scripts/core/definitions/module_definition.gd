@@ -1,13 +1,13 @@
 class_name ModuleDefinition
 extends ContentDefinition
 ## Immutable, bounded pre-mission sidegrades.
-@export var unlock_mission: int = 4
+@export var unlock_mission: int = 0
 @export var effects: Dictionary = {}
 const KEYS: Array[StringName] = [&"attack_rate", &"recharge", &"reach", &"hull", &"capacity", &"cooldown", &"damage", &"delay", &"support_rate", &"radius", &"direct_damage", &"force", &"speed", &"charged", &"rerolls", &"main_damage", &"main_crit"]
 
 func validate() -> PackedStringArray:
 	var errors: PackedStringArray = super.validate()
-	if unlock_mission < 4 or unlock_mission > 12: errors.append("unlock_mission: expected 4–12")
+	if unlock_mission < 0 or unlock_mission > 12: errors.append("unlock_mission: expected 0–12")
 	if effects.size() != 2: errors.append("effects: exactly one benefit and one cost required")
 	var benefits: int = 0
 	var costs: int = 0

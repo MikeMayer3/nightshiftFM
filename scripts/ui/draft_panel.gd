@@ -14,14 +14,14 @@ var banish_mode: bool = false
 var banish_button: Button
 var heading: Label
 const ICONS: Dictionary = {
-	&"echo_deck": preload("res://assets/art/equipment/echo.svg"),
-	&"needle_swarm": preload("res://assets/art/equipment/needle.svg"),
-	&"reverb_well": preload("res://assets/art/equipment/reverb.svg"),
-	&"main": preload("res://assets/art/equipment/pulse.svg"),
+	&"echo_deck": preload("res://assets/art/radio/echo.svg"),
+	&"needle_swarm": preload("res://assets/art/radio/needle.svg"),
+	&"reverb_well": preload("res://assets/art/radio/reverb.svg"),
+	&"main": preload("res://assets/art/radio/pulse.svg"),
 	&"shield": preload("res://assets/art/equipment/shield.svg"),
-	&"arc_aerial": preload("res://assets/art/equipment/arc.svg"),
-	&"bass_driver": preload("res://assets/art/equipment/bass.svg"),
-	&"static_net": preload("res://assets/art/equipment/net.svg"),
+	&"arc_aerial": preload("res://assets/art/radio/arc.svg"),
+	&"bass_driver": preload("res://assets/art/radio/bass.svg"),
+	&"static_net": preload("res://assets/art/radio/net.svg"),
 	&"repair": preload("res://assets/art/equipment/repair.svg"),
 }
 const ACCENTS: Dictionary = {
@@ -36,10 +36,13 @@ const ACCENTS: Dictionary = {
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var style: StyleBoxFlat = StyleBoxFlat.new()
-	style.bg_color = Color("0b1824")
+	style.bg_color = Color(0.04, 0.09, 0.13, 0.96)
+	style.set_corner_radius_all(18)
+	style.set_border_width_all(2)
+	style.border_color = Color("62908d")
 	add_theme_stylebox_override("panel", style)
 	var safe: SafeMargin = SafeMargin.new()
-	safe.base_margins = Vector4(28, 20, 28, 20)
+	safe.base_margins = Vector4(16, 14, 16, 14)
 	add_child(safe)
 	var scroll: ScrollContainer = ScrollContainer.new()
 	scroll.follow_focus = true
@@ -48,8 +51,21 @@ func _ready() -> void:
 	column = VBoxContainer.new()
 	column.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	column.add_theme_constant_override("separation", 16)
+	column.add_theme_constant_override("separation", 10)
+	_fit_sheet.call_deferred()
 	scroll.add_child(column)
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_RESIZED and is_inside_tree(): _fit_sheet.call_deferred()
+
+func _fit_sheet() -> void:
+	if not is_inside_tree(): return
+	var viewport_size: Vector2 = get_viewport_rect().size
+	var sheet_width: float = minf(640, viewport_size.x - 40)
+	var sheet_height: float = minf(840, viewport_size.y * 0.68)
+	set_anchors_preset(Control.PRESET_TOP_LEFT)
+	position = Vector2((viewport_size.x - sheet_width) * 0.5, (viewport_size.y - sheet_height) * 0.5)
+	size = Vector2(sheet_width, sheet_height)
 
 func _clear() -> void:
 	(column.get_parent() as ScrollContainer).set_deferred("scroll_vertical", 0)
@@ -83,11 +99,11 @@ func show_draft(session: CombatSession) -> void:
 	_clear()
 	show()
 	var draft: DraftState = session.draft
-	heading = label_text(tr("M3_BANISH_TITLE") if banish_mode else tr("M3_BONUS" if draft.bonus else "M3_DRAFT"), column, 42)
+	heading = label_text(tr("M3_BANISH_TITLE") if banish_mode else tr("M3_BONUS" if draft.bonus else "M3_DRAFT"), column, 32)
 	if session.signal_progress != null and not banish_mode: heading.text = tr("SIGNAL_READY")
 	var hint: Label = label_text(tr("M3_BANISH_HINT") if banish_mode else tr("M3_PICK_HINT") % session.wave, column, 25)
 	if session.signal_progress != null and not banish_mode: hint.text = tr("SIGNAL_HINT")
-	hint.modulate = Color("a7bbc8")
+	hint.hide()
 	for id: StringName in draft.offers:
 		_add_card(session, id)
 	var actions: HBoxContainer = HBoxContainer.new()
@@ -102,13 +118,14 @@ func show_draft(session: CombatSession) -> void:
 	banish_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	banish_button.disabled = not banish_mode and (draft.banishes == 0 or not draft.offers.any(func(id: StringName) -> bool: return _can_banish(draft, id)))
 	var help_button: Button = button_text(tr("M3_HELP"), column, func() -> void: pass)
-	help_button.custom_minimum_size.y = 52
+	help_button.custom_minimum_size.y = 64
+	help_button.set_meta("radio_touch_minimum", 64)
 	help_button.add_theme_font_size_override("font_size", 23)
 	var help_text: Label = label_text(tr("SIGNAL_HELP" if session.signal_progress != null else "M3_HELP_BODY"), column, 25)
 	help_text.hide()
 	help_button.pressed.connect(func() -> void: help_text.visible = not help_text.visible)
 	var menu: Button = button_text(tr("MENU_BACK"), column, func() -> void: back_requested.emit())
-	menu.custom_minimum_size.y = 64
+	menu.hide()
 
 func _can_banish(draft: DraftState, id: StringName) -> bool:
 	var option: UpgradeDefinition = draft.card(id)
@@ -129,7 +146,7 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 			banished.emit(id)
 		else:
 			selected.emit(id))
-	card.custom_minimum_size.y = 252
+	card.custom_minimum_size.y = 176
 	card.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	card.disabled = banish_mode and not _can_banish(draft, id)
 	cards.append(card)
@@ -159,8 +176,8 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	inset.add_child(row)
 	var icon: TextureRect = TextureRect.new()
 	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	icon.texture = ICONS[identity]
-	icon.custom_minimum_size = Vector2(96, 96)
+	icon.texture = RadioArt.main_texture(session) if identity == &"main" else ICONS[identity]
+	icon.custom_minimum_size = Vector2(74, 74)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	row.add_child(icon)
@@ -173,14 +190,14 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	var header: HBoxContainer = HBoxContainer.new()
 	header.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	body.add_child(header)
-	var caption: Label = label_text(tr("M3_" + String(identity).to_upper() + "_SHORT_NAME") if option != null else tr("M3_STATION"), header, 22)
+	var caption: Label = label_text(tr("M3_" + String(identity).to_upper() + "_SHORT_NAME") if option != null else tr("M3_STATION"), header, 19)
 	if session.arsenal != null and identity in [&"main", &"shield"]:
 		caption.text = tr(draft.track(identity).definition.name_key)
 	caption.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	caption.modulate = accent
 	if option != null and id != SignalDraft.OVERDRIVE:
 		var owned: UpgradeTrack = draft.track(option.target_id)
-		var rank: Label = label_text(tr("SIGNAL_NEW") if owned == null else tr("M3_RANK_SHORT") % [owned.rank(), owned.rank() + 1], header, 22)
+		var rank: Label = label_text(tr("SIGNAL_NEW") if owned == null else tr("M3_RANK_SHORT") % [owned.rank(), owned.rank() + 1], header, 19)
 		rank.autowrap_mode = TextServer.AUTOWRAP_OFF
 		rank.modulate = Color("bdcbd4")
 	var info: Button = button_text("i", header, func() -> void: _show_details(session, id))
@@ -190,15 +207,18 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	info.add_theme_color_override("font_color", accent)
 	info.mouse_filter = Control.MOUSE_FILTER_STOP
 	info_buttons.append(info)
-	label_text(tr(option.name_key) if option != null else tr("M3_REPAIR_SHORT" if id == DraftState.REPAIR else "M3_REFILL_SHORT"), body, 32)
-	label_text(tr(String(option.name_key).trim_suffix("_NAME") + "_SHORT") if option != null else tr("M3_REPAIR_EFFECT" if id == DraftState.REPAIR else "M3_REFILL_EFFECT"), body, 26)
+	label_text(tr(option.name_key) if option != null else tr("M3_REPAIR_SHORT" if id == DraftState.REPAIR else "M3_REFILL_SHORT"), body, 23)
+	label_text(tr(String(option.name_key).trim_suffix("_NAME") + "_SHORT") if option != null else tr("M3_REPAIR_EFFECT" if id == DraftState.REPAIR else "M3_REFILL_EFFECT"), body, 23)
+	inset.minimum_size_changed.connect(func() -> void:
+		card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y))
+	card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y)
 	if card.disabled: inset.modulate = Color("697783")
 
 func _show_details(session: CombatSession, id: StringName) -> void:
 	if session.signal_progress != null and (SignalDraft.is_new(id) or id == SignalDraft.OVERDRIVE):
 		_clear()
 		var option: UpgradeDefinition = session.draft.card(id)
-		label_text(tr(option.name_key), column, 42)
+		label_text(tr(option.name_key), column, 32)
 		label_text(tr(option.description_key), column, 28)
 		button_text(tr("M3_BACK_DRAFT"), column, func() -> void: show_draft(session))
 		return
@@ -209,7 +229,7 @@ func _show_details(session: CombatSession, id: StringName) -> void:
 	var option: UpgradeDefinition = session.draft.card(id)
 	if option != null:
 		var owned: UpgradeTrack = session.draft.track(option.target_id)
-		label_text(tr(option.name_key), column, 42)
+		label_text(tr(option.name_key), column, 32)
 		label_text(tr("M3_CARD_RANK") % [tr(owned.definition.name_key), owned.rank(), owned.rank() + 1], column, 27)
 		label_text(tr(option.description_key), column, 28)
 		var requirement: String = tr("M3_COMMON") if option.required_rank == 0 else tr("M3_REQUIRED") % owned.rank()
@@ -229,7 +249,7 @@ func show_recruit(session: CombatSession) -> void:
 	_clear()
 	show()
 	banish_mode = false
-	label_text(tr("M3_RECRUIT_TITLE"), column, 42)
+	label_text(tr("M3_RECRUIT_TITLE"), column, 32)
 	var icon: TextureRect = TextureRect.new()
 	icon.texture = ICONS[&"arc_aerial"]
 	icon.custom_minimum_size = Vector2(160, 160)
@@ -253,7 +273,7 @@ func _show_m4_recruit(session: CombatSession) -> void:
 	_clear()
 	show()
 	banish_mode = false
-	label_text(tr("M4_RECRUIT"), column, 42)
+	label_text(tr("M4_RECRUIT"), column, 32)
 	label_text(tr("M4_RECRUIT_HINT"), column, 26)
 	for definition: TrackDefinition in session.draft.catalog:
 		if not definition.support or session.draft.track(definition.id) != null or session.draft.support_count() >= GameRules.MAX_SUPPORTS: continue
@@ -270,8 +290,13 @@ func _show_m4_recruit(session: CombatSession) -> void:
 func show_report(session: CombatSession, back: Callable) -> void:
 	_clear()
 	show()
-	label_text(tr("M4_REPORT"), column, 42)
+	label_text(tr("M4_REPORT"), column, 32)
 	label_text(tr("M4_REPORT_HINT"), column, 24)
+	if session.achievement_run != null:
+		label_text(tr("M9_REPORT_HISTORY") % [session.achievement_run.hull_damage, session.achievement_run.max_supports], column, 25)
+		label_text(tr("M9_RESULT_ELIGIBLE" if session.achievement_run.eligible else "M9_RESULT_PRACTICE"), column, 23)
+		label_text(tr("M9_REPORT_OUTPUT") % [PostRunAnalysis.effective_damage(session), session.intercepted], column, 25)
+		label_text(tr("M9_REPORT_HINT"), column, 23)
 	for owned: UpgradeTrack in session.draft.tracks:
 		var values: Dictionary = session.supports.report.totals[String(owned.definition.id)]
 		label_text(tr(owned.definition.name_key), column, 30)

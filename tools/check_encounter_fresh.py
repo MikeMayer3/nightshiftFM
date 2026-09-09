@@ -7,10 +7,14 @@ import os
 import shutil
 import subprocess
 import tempfile
+import argparse
 
 root = Path(__file__).resolve().parents[1]
 engine = os.environ['GODOT_BIN']
-evidence = root / 'docs/evidence/M8'
+parser = argparse.ArgumentParser()
+parser.add_argument('--milestone', choices=['M8', 'M9', 'M10'], default='M8')
+milestone = parser.parse_args().milestone
+evidence = root / 'docs/evidence' / milestone
 evidence.mkdir(parents=True, exist_ok=True)
 dest = Path(tempfile.mkdtemp(prefix='nightshift-m8-fresh-')) / 'project'
 shutil.copytree(root, dest, ignore=shutil.ignore_patterns('.git', '.godot', 'builds', 'evidence', '__pycache__'))
@@ -19,13 +23,18 @@ shutil.copytree(root, dest, ignore=shutil.ignore_patterns('.git', '.godot', 'bui
 for directory in (root / 'docs/evidence').rglob('*'):
     if directory.is_dir():
         (dest / directory.relative_to(root)).mkdir(parents=True, exist_ok=True)
-files = [*dest.glob('content/**/*.tres'), dest / 'assets/ui_strings.csv', *dest.glob('scripts/campaign/*.gd')]
+files = [*dest.glob('content/**/*.tres'), dest / 'assets/ui_strings.csv', *dest.glob('scripts/campaign/*.gd'), *dest.glob('scripts/achievements/*.gd')]
+if milestone == 'M10':
+    files += [*dest.glob('assets/art/radio/*.svg'), *dest.glob('assets/audio/radio/*.wav')]
 
 def hashes():
     return {str(p.relative_to(dest)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 before = hashes()
-for script in ['generate_campaign_content.py', 'generate_encounter_content.py']:
+generators = ['generate_campaign_content.py', 'generate_encounter_content.py']
+if milestone in ['M9', 'M10']: generators.append('generate_achievement_content.py')
+if milestone == 'M10': generators.append('generate_radio_art.py')
+for script in generators:
     subprocess.run(['python3', str(dest / 'tools' / script)], cwd=dest, check=True)
 after = hashes()
 changed = [key for key in before if before[key] != after[key]]

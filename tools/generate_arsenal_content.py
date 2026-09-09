@@ -8,39 +8,39 @@ def branch(name, effects, a, b, cap, cap_effects):
     return name, effects, [a, b], cap, cap_effects
 B = branch
 TRACKS = {
-'arc_aerial': ('Arc Aerial', 'Chains and armor piercing', dict(damage=6, interval=1.3, targets=2, reach=180, duration=3, elite_bonus=0), [
+'arc_aerial': ('Valve Microphone', 'Chains and armor piercing', dict(damage=6, interval=1.3, targets=2, reach=180, duration=3, elite_bonus=0), [
  B('Storm',dict(targets=2,damage_bonus=-.2),('Long Route',dict(reach=120,cadence=-.15)),('Tight Circuit',dict(reach=-70,damage_bonus=.35)),'Broadcast Storm',dict(targets=2)),
  B('Lightning Spear',dict(targets=-1,damage_bonus=1,penetration=35),('Needle Arc',dict(penetration=30,width=-10)),('Capacitor Strike',dict(damage_bonus=1,cadence=-.3)),'Thunder Needle',dict(pierce=2)),
  B('Shield Tap',dict(targets=-1,damage_bonus=-.4,healing=3),('Quick Charge',dict(cadence=.4,healing=-1)),('Reserve Charge',dict(reserve=1,healing=2)),'Closed Circuit',dict(overheal=1))]),
-'echo_deck': ('Echo Deck', 'Replays main attacks', dict(damage=0,interval=1,echo_damage=.8,attacks=3,delay=.6,copies=1,reach=170,crit=0), [
+'echo_deck': ('Tape Deck', 'Replays main attacks', dict(damage=0,interval=1,echo_damage=.8,attacks=3,delay=.6,copies=1,reach=170,crit=0), [
  B('Rapid Repeat',dict(attacks=-1,echo_damage=-.1),('Double Tap',dict(copies=1,echo_damage=-.1)),('Staccato',dict(attacks=-1,reach=-60)),'Loop Pedal',dict(copies=1)),
  B('Layered Recording',dict(attacks=1,copies=1,delay=.5),('Long Side',dict(copies=1,attacks=1)),('Hot Master',dict(echo_damage=.3,delay=.3)),'Master Tape',dict(copies=1,priority=1)),
  B('Ghost Chorus',dict(distinct=1,reach=100),('Wide Chorus',dict(reach=150,echo_damage=-.1)),('Lead Singer',dict(priority=1,echo_damage=.15,reach=-50)),'Phantom Broadcast',dict(copies=2))]),
-'bass_driver': ('Bass Driver', 'Area damage and armor exposure', dict(damage=10,interval=2.4,radius=100,push=20,exposure=20,duration=3), [
+'bass_driver': ('Studio Monitor', 'Area damage and armor exposure', dict(damage=10,interval=2.4,radius=100,push=20,exposure=20,duration=3), [
  B('Wideband',dict(radius=40,damage_bonus=-.2),('Wide Cone',dict(radius=35,push=-10)),('Deep Cone',dict(radius=-20,push=35)),'Wall of Sound',dict(pulses=2)),
  B('Compression',dict(radius=-30,damage_bonus=.8,exposure=15),('Hard Clip',dict(exposure=25,cadence=-.2)),('Direct Injection',dict(elite_bonus=.5,push=-15)),'Crushing Note',dict(damage_bonus=.6)),
  B('Aftershock',dict(pulses=2,damage_bonus=-.3),('Ringing Floor',dict(duration=2,damage_bonus=-.15)),('Double Thump',dict(pulses=1,duration=-1)),'Seismic Chorus',dict(pulses=2))]),
-'needle_swarm': ('Needle Swarm', 'Traveling projectiles and marks', dict(damage=6,interval=2.4,pierce=1,steering=3,projectiles=4,duration=3,reach=700,speed=500), [
+'needle_swarm': ('Turntable', 'Traveling projectiles and marks', dict(damage=6,interval=2.4,pierce=1,steering=3,projectiles=4,duration=3,reach=700,speed=500), [
  B('Piercing Needles',dict(pierce=2,steering=-3),('Long Groove',dict(pierce=2,falloff=.15)),('Hard Cut',dict(damage_bonus=.6,pierce=-1)),'Record Cutter',dict(pierce=3)),
  B('Homing Swarm',dict(steering=4,pierce=-1),('Wide Seek',dict(reach=200,speed=-120)),('Close Pursuit',dict(steering=4,speed=100,duration=-.5)),'Needle Hurricane',dict(projectiles=3)),
  B('Marking Pins',dict(mark=.2,damage_bonus=-.2),('Spotlight',dict(mark=.15,projectiles=-1)),('Full Set',dict(projectiles=2,mark=-.05)),'Perfect Groove',dict(mark=.15,priority=1))]),
-'reverb_well': ('Reverb Well', 'Pull fields and release bursts', dict(damage=3,interval=5,duration=3,radius=100,pull=32,targets=6), [
+'reverb_well': ('Spring Reverb', 'Pull fields and release bursts', dict(damage=3,interval=5,duration=3,radius=100,pull=32,targets=6), [
  B('Trap Room',dict(radius=35,duration=1,pull=-10),('Long Hall',dict(duration=2,pull=-8)),('Narrow Door',dict(pull=25,radius=-40)),'Dead Room',dict(slow=.2)),
  B('Pressure Well',dict(radius=-20,pull=35),('Hard Walls',dict(pull=30,duration=-1)),('Heavy Air',dict(exposure=25,damage_bonus=-.3)),'Implosion',dict(terminal=8)),
  B('Orbit Chamber',dict(orbit=1,pull=-10),('Slow Orbit',dict(duration=2,targets=-2)),('Fast Orbit',dict(duration=-1,terminal=5)),'Slingshot',dict(release=60))]),
-'static_net': ('Static Net', 'Slows, intercepts and live damage', dict(damage=3,interval=5,duration=3,radius=110,slow=.3,charges=2,residual=.6), [
+'static_net': ('Mixing Desk', 'Slows, intercepts and live damage', dict(damage=3,interval=5,duration=3,radius=110,slow=.3,charges=2,residual=.6), [
  B('Dead Air',dict(jam=.4,slow=.1),('Blank Channel',dict(jam=.5,cadence=-.2)),('Low Hum',dict(duration=2,jam=-.2)),'Dead Zone',dict(radius=30,duration=1)),
  B('Interference',dict(charges=2,slow=-.15),('Dense Weave',dict(charges=3,radius=-35)),('Wide Mesh',dict(radius=65,charges=-1)),'Firewall',dict(charges=4)),
  B('Live Current',dict(damage_bonus=1,slow=-.15),('Rapid Static',dict(tick_rate=.5,damage_bonus=-.25)),('High Voltage',dict(damage_bonus=1,tick_rate=-.3)),'Live Wire',dict(damage_bonus=1,duration=1))]),
-'pulse': ('Pulse Spindle', 'Balanced precision shots', dict(damage=12,interval=.6,reach=600,width=22,penetration=0,projectiles=1), [
+'pulse': ('AM Tower', 'Balanced precision shots', dict(damage=12,interval=.6,reach=600,width=22,penetration=0,projectiles=1), [
  B('Penetrator',dict(penetration=30,pierce=1),('Long Needle',dict(pierce=1,damage_bonus=-.15)),('Hard Point',dict(penetration=35,damage_bonus=.15)),'Throughline',dict(pierce=2)),
  B('Ricochet',dict(bounce=1,reach=-50),('Wide Bounce',dict(bounce=1,damage_bonus=-.2)),('Heavy Bounce',dict(damage_bonus=.35,cadence=-.15)),'Pinball Signal',dict(bounce=2)),
  B('Charge Shot',dict(damage_bonus=1.4,cadence=-.45,width=10),('Fast Charge',dict(cadence=.2,damage_bonus=-.3)),('Full Charge',dict(damage_bonus=1,penetration=25)),'Final Charge',dict(pierce=2,width=15))]),
-'sweep': ('Sweep Laser', 'Sweeps through aligned enemies', dict(damage=4,interval=.22,reach=600,width=18,penetration=10,projectiles=1), [
+'sweep': ('FM Tower', 'Sweeps through aligned enemies', dict(damage=4,interval=.22,reach=600,width=18,penetration=10,projectiles=1), [
  B('Focused Beam',dict(damage_bonus=.4,width=-6),('Fine Focus',dict(penetration=35,width=-4)),('Hot Focus',dict(damage_bonus=.5,cadence=-.2)),'Burn Through',dict(penetration=50)),
  B('Fan Sweep',dict(width=38,damage_bonus=-.3),('Broad Fan',dict(width=35,damage_bonus=-.15)),('Tight Fan',dict(width=-15,damage_bonus=.4)),'Full Spectrum',dict(width=45)),
  B('Pulse Beam',dict(damage_bonus=1,cadence=-.4),('Fast Pulse',dict(cadence=.2,damage_bonus=-.2)),('Heavy Pulse',dict(damage_bonus=.8,penetration=20)),'Resonant Beam',dict(damage_bonus=.5,width=20))]),
-'burst': ('Burst Rack', 'Close-range volleys', dict(damage=6,interval=.95,reach=500,width=90,penetration=0,projectiles=4), [
+'burst': ('Shortwave Tower', 'Close-range volleys', dict(damage=6,interval=.95,reach=500,width=90,penetration=0,projectiles=4), [
  B('Wide Scatter',dict(width=60,projectiles=2,damage_bonus=-.2),('Full Spread',dict(width=50,projectiles=1)),('Heavy Pellets',dict(damage_bonus=.4,projectiles=-1)),'Scatterstorm',dict(projectiles=3)),
  B('Converging Volley',dict(width=-55,damage_bonus=.3),('Tight Group',dict(width=-15,penetration=25)),('Heavy Group',dict(damage_bonus=.4,cadence=-.2)),'Focal Volley',dict(projectiles=2)),
  B('Stagger Burst',dict(stagger=1,cadence=.2),('Quick Stagger',dict(cadence=.25,damage_bonus=-.15)),('Long Stagger',dict(projectiles=2,cadence=-.15)),'Rolling Thunder',dict(projectiles=2))]),

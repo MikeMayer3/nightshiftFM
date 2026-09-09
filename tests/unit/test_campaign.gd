@@ -24,7 +24,7 @@ func run(t: TestContext) -> bool:
 	t.check(not invalid.start_campaign(11, &"run.1", ArsenalContent.DEFAULT, {"mission": 2, "cleared": 0, "modules": []}), "locked mission rejected at runtime")
 	for ids: Array in [["hot_tubes", "hot_tubes"], ["unknown"], ["hot_tubes", "heavy_battery", "long_mast"]]:
 		t.check(not CampaignContent.valid_modules(ids), "duplicate, removed, or excessive active modules rejected")
-	t.check(not CampaignContent.valid_modules(["hot_tubes"], 3), "modules unavailable before mission 4 clear")
+	t.check(CampaignContent.valid_modules(["hot_tubes"], 0) and CampaignContent.options(0, "modules").size() == 12, "all twelve module sidegrades available before the first mission")
 	# Reward fixtures target the commit boundary; they are not simulated victories.
 	for mission: int in range(1, 13):
 		var s: CombatSession = CombatSession.new()
@@ -50,6 +50,7 @@ func run(t: TestContext) -> bool:
 	for schema: int in [1, 2]:
 		var legacy: Dictionary = MissionProfile.new().to_data()
 		legacy.erase("campaign")
+		legacy.erase("achievements")
 		legacy.schema = schema
 		if schema == 1: legacy.erase("discovered")
 		t.check(MissionProfile.new().restore(legacy), "legacy profile schema %d remains readable" % schema)

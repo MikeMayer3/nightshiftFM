@@ -1,0 +1,5 @@
+--------- beginning of main
+09-09 11:43:30.369  5865  5943 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+09-09 11:43:30.458  5865  5943 I godot   : OpenGL API OpenGL ES 3.2 build 25.1@6794074 - Compatibility - Using Device: Imagination Technologies - PowerVR D-Series DXT-48-1536
+09-09 11:43:30.471  5865  5943 I godot   :
+09-09 11:43:31.097  5865  5943 I godot   : M1_PROBE {"active_seconds":0.0,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":0}

@@ -39,7 +39,7 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 	resumed.draft_panel.show_draft(resumed.session)
 	var correct_caption: bool = false
 	for node: Node in resumed.draft_panel.find_children("*", "Label", true, false):
-		if (node as Label).text == "Sweep Laser": correct_caption = true
+		if (node as Label).text == TranslationServer.translate(ArsenalContent.DEFINITIONS["sweep"].name_key): correct_caption = true
 	t.check(correct_caption, "draft caption names the selected main chassis")
 	resumed.queue_free()
 	await tree.process_frame

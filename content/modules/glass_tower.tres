@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"glass_tower"
 name_key = &"M7_MODULE_GLASS_TOWER"
 description_key = &"M7_MODULE_GLASS_TOWER_DESC"
-unlock_mission = 12
+unlock_mission = 0
 effects = {&"main_crit": 0.1, &"hull": -0.15}

@@ -43,6 +43,7 @@ func _run() -> void:
 			await capture("equipment-%d-%dx%d" % [cleared,size.x,size.y])
 			width_check(boot.picker, "equipment %d %s" % [cleared,size])
 			if cleared >= 4:
+				await click(boot.picker.modules_body.get_parent().get_child(boot.picker.modules_body.get_index() - 1))
 				await click(boot.picker.module_buttons.hot_tubes)
 				await click(boot.picker.module_buttons.heavy_battery)
 				checks.check(boot.picker.modules.size() == 2, "viewport clicks select two modules")

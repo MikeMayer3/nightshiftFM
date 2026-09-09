@@ -1,0 +1,49 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: achievement catalog has no horizontal overflow at (360, 640)
+PASS: pending achievement has no action; available achievement can be tracked
+PASS: viewport click tracks first_broadcast
+PASS: viewport click tracks arc_aerial_first_capstone
+PASS: viewport click tracks arc_aerial_three_capstones
+PASS: fourth track action visibly disabled
+PASS: three tracked goals persisted from actual UI clicks
+PASS: untracking frees a goal slot
+PASS: earned fixture title selected through viewport input
+PASS: cosmetic title persists in atomic profile
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: cosmetic title cannot alter starting combat power
+PASS: post-run report opens through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: achievement catalog has no horizontal overflow at (450, 800)
+PASS: pending achievement has no action; available achievement can be tracked
+PASS: viewport click tracks first_broadcast
+PASS: viewport click tracks arc_aerial_first_capstone
+PASS: viewport click tracks arc_aerial_three_capstones
+PASS: fourth track action visibly disabled
+PASS: three tracked goals persisted from actual UI clicks
+PASS: untracking frees a goal slot
+PASS: earned fixture title selected through viewport input
+PASS: cosmetic title persists in atomic profile
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: cosmetic title cannot alter starting combat power
+PASS: post-run report opens through viewport input
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":2,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: achievement catalog has no horizontal overflow at (450, 950)
+PASS: pending achievement has no action; available achievement can be tracked
+PASS: viewport click tracks first_broadcast
+PASS: viewport click tracks arc_aerial_first_capstone
+PASS: viewport click tracks arc_aerial_three_capstones
+PASS: fourth track action visibly disabled
+PASS: three tracked goals persisted from actual UI clicks
+PASS: untracking frees a goal slot
+PASS: earned fixture title selected through viewport input
+PASS: cosmetic title persists in atomic profile
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: cosmetic title cannot alter starting combat power
+PASS: post-run report opens through viewport input
+RESULT: 36 visual checks; 0 failures

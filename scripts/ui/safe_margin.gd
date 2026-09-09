@@ -6,6 +6,7 @@ signal safe_area_changed
 @export var base_margins: Vector4 = Vector4(56, 70, 56, 70)
 @export var show_boundary: bool = false
 var canvas_safe_rect: Rect2
+var _applied_margins: Vector4 = Vector4(-1, -1, -1, -1)
 
 func _process(_delta: float) -> void:
 	var canvas: Rect2 = Rect2(Vector2.ZERO, get_viewport_rect().size)
@@ -13,9 +14,10 @@ func _process(_delta: float) -> void:
 	if OS.has_feature("android") or OS.has_feature("ios"):
 		safe = SafeArea.to_canvas(Rect2(DisplayServer.get_display_safe_area()),
 			get_viewport().get_screen_transform(), canvas)
-	if safe == canvas_safe_rect:
+	if safe == canvas_safe_rect and base_margins == _applied_margins:
 		return
 	canvas_safe_rect = safe
+	_applied_margins = base_margins
 	add_theme_constant_override("margin_left", int(ceil(base_margins.x + safe.position.x)))
 	add_theme_constant_override("margin_top", int(ceil(base_margins.y + safe.position.y)))
 	add_theme_constant_override("margin_right", int(ceil(base_margins.z + canvas.end.x - safe.end.x)))

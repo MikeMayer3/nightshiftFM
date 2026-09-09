@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"hot_tubes"
 name_key = &"M7_MODULE_HOT_TUBES"
 description_key = &"M7_MODULE_HOT_TUBES_DESC"
-unlock_mission = 4
+unlock_mission = 0
 effects = {&"attack_rate": 0.15, &"recharge": -0.2}

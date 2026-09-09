@@ -1,18 +1,17 @@
 class_name CombatArena
 extends Control
 ## Presentation and pointer mapping only. Simulation coordinates never depend on aspect ratio.
+const SHIELD_LINE_Y: float = 610.0
 var station_color: Color = Color("76dbca")
 var session: CombatSession
 var shot_end: Vector2
 var shot_flash: float = 0.0
+var waveform_time: float = 0.0
 var hit_flash: float = 0.0
 var pulses: Array[Dictionary] = []
 var chains: Array[Dictionary] = []
 var _mouse_held: bool = false
 var _touch_index: int = -1
-var _aim_button: Button
-var _button_dragged: bool = false
-var _block_button_click: bool = false
 const SUPPORT_POSITIONS: Dictionary = {
 	&"arc_aerial": Vector2(195, 682),
 	&"bass_driver": Vector2(445, 682),
@@ -26,8 +25,15 @@ func _ready() -> void:
 func arena_scale() -> float:
 	return minf(size.x / CombatSession.ARENA.x, size.y / CombatSession.ARENA.y)
 
-func arena_stretch() -> Vector2:
+func deck_stretch() -> Vector2:
 	return size / CombatSession.ARENA if session != null and session.signal_progress != null else Vector2.ONE * arena_scale()
+
+func arena_stretch() -> Vector2:
+	# Map the simulation breach boundary to the raised visible shield line.
+	return deck_stretch() * Vector2(1, SHIELD_LINE_Y / CombatSession.BREACH_Y)
+
+func _deck_to_field(point: Vector2) -> Vector2:
+	return point * Vector2(1, CombatSession.BREACH_Y / SHIELD_LINE_Y)
 
 func arena_offset() -> Vector2:
 	if session != null and session.signal_progress != null: return Vector2.ZERO
@@ -57,11 +63,6 @@ func _gui_input(event: InputEvent) -> void:
 		accept_event()
 
 func clear_pointer() -> void:
-	if _aim_button != null:
-		_block_button_click = true
-		_unblock_button.call_deferred()
-	_aim_button = null
-	_button_dragged = false
 	_mouse_held = false
 	_touch_index = -1
 	if session != null:
@@ -78,46 +79,19 @@ func _input(event: InputEvent) -> void:
 		if not event.canceled:
 			_finish_pointer(event.position)
 		clear_pointer()
-	elif event is InputEventMouseMotion and event.device != InputEvent.DEVICE_ID_EMULATION and _mouse_held and _aim_button != null:
+	elif event is InputEventMouseMotion and event.device != InputEvent.DEVICE_ID_EMULATION and _mouse_held:
 		if _can_aim(): _move_pointer(event.position)
 		else: clear_pointer()
 	elif event is InputEventMouseButton and event.device != InputEvent.DEVICE_ID_EMULATION and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and _mouse_held:
 		_finish_pointer(event.position)
 		clear_pointer()
 
-func button_input(event: InputEvent, button: Button) -> void:
-	if button.disabled or not _can_aim() or session.active_combat == null or _touch_index != -1 or _mouse_held:
-		return
-	if event is InputEventScreenTouch and event.pressed and not event.canceled:
-		_touch_index = event.index
-	elif event is InputEventMouseButton and event.device != InputEvent.DEVICE_ID_EMULATION and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		_mouse_held = true
-	else:
-		return
-	_aim_button = button
-	_button_dragged = false
-	_block_button_click = false
-
-func button_click_handled() -> bool:
-	# Button's emulated mouse release can arrive before or after native touch UP.
-	return _aim_button != null or _block_button_click
-
-func _unblock_button() -> void:
-	_block_button_click = false
-
 func _move_pointer(position: Vector2) -> void:
 	var local: Vector2 = get_global_transform_with_canvas().affine_inverse() * position
 	session.focus_point = (local - arena_offset()) / arena_stretch()
-	if _aim_button != null:
-		_button_dragged = _button_dragged or not _contains_pointer(_aim_button, position)
-		session.focus_active = Rect2(Vector2.ZERO, size).has_point(local)
-
-func _finish_pointer(position: Vector2) -> void:
-	if _aim_button != null and not _button_dragged and _contains_pointer(_aim_button, position) and _can_aim():
-		var target: CombatActor = session.target()
-		if target != null: session.active_combat.burst(session, target.position)
-	else:
-		_release_at(position)
+func _finish_pointer(_position: Vector2) -> void:
+	# Releasing focus returns to automatic targeting; there is no cooldown attack.
+	pass
 
 func _contains_pointer(control: Control, position: Vector2) -> bool:
 	return Rect2(Vector2.ZERO, control.size).has_point(control.get_global_transform_with_canvas().affine_inverse() * position)
@@ -125,15 +99,9 @@ func _contains_pointer(control: Control, position: Vector2) -> bool:
 func _can_aim() -> bool:
 	return session != null and is_visible_in_tree() and not session.paused and not session.is_finished() and not session.is_deciding() and not session.is_wiring()
 
-func _release_at(position: Vector2) -> void:
-	if not _can_aim() or session.active_combat == null:
-		return
-	var local: Vector2 = get_global_transform_with_canvas().affine_inverse() * position
-	if Rect2(Vector2.ZERO, size).has_point(local):
-		session.active_combat.burst(session, (local - arena_offset()) / arena_stretch())
-
 func _process(delta: float) -> void:
-	if session != null and not session.paused:
+	if session != null and not session.paused and not session.is_deciding() and not session.is_wiring():
+		waveform_time += delta
 		for id: StringName in support_flashes:
 			support_flashes[id] = maxf(0, float(support_flashes[id]) - delta)
 		shot_flash = maxf(0.0, shot_flash - delta)
@@ -147,7 +115,7 @@ func _process(delta: float) -> void:
 
 func show_shot(at: Vector2) -> void:
 	shot_end = at
-	shot_flash = 0.10
+	shot_flash = 0.22
 
 func show_hit(_amount: float) -> void:
 	hit_flash = 0.22
@@ -155,50 +123,68 @@ func show_hit(_amount: float) -> void:
 func _draw() -> void:
 	if session == null:
 		return
-	draw_set_transform(arena_offset(), 0.0, arena_stretch())
+	draw_set_transform(arena_offset(), 0.0, deck_stretch())
 	var cyan: Color = Color("76dbca")
 	var muted: Color = Color("657f91")
-	draw_rect(Rect2(Vector2.ZERO, CombatSession.ARENA), Color("0b1824"))
-	for x: int in range(0, 641, 64):
-		draw_line(Vector2(x, 0), Vector2(x, 640), Color("142c3b"))
-	for y: int in range(0, 641, 64):
-		draw_line(Vector2(0, y), Vector2(640, y), Color("142c3b"))
-	draw_rect(CombatSession.SPAWN_BAND, Color("223b47"))
+	var era: int = RadioArt.era(session)
+	var low: bool = RadioPreferences.current.enabled("low_effects")
+	var reduced: bool = RadioPreferences.current.enabled("reduced_flash")
+	draw_rect(Rect2(Vector2.ZERO, CombatSession.ARENA), RadioArt.BACKGROUNDS[era])
+	if not low:
+		for y: int in range(100, 610, 90):
+			draw_line(Vector2(24, y), Vector2(616, y), RadioArt.TRIMS[era].darkened(.65), 1)
+	draw_rect(Rect2(0, SHIELD_LINE_Y, 640, 720 - SHIELD_LINE_Y), Color("15242c"))
+	draw_line(Vector2(0, SHIELD_LINE_Y + 5), Vector2(640, SHIELD_LINE_Y + 5), RadioArt.TRIMS[era], 3)
 	var font: Font = ThemeDB.fallback_font
-	draw_string(font, Vector2(40, 25), tr("COMBAT_SPAWN"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, muted)
-	draw_line(Vector2(0, 640), Vector2(640, 640), Color("f78279") if hit_flash > 0 else Color("c08d70"), 4.0)
-	if session.signal_progress == null:
-		draw_string(font, Vector2(12, 665), tr("COMBAT_BREACH"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, muted)
+	draw_string(font, Vector2(16, 25), tr("COMBAT_SPAWN"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, muted)
+	for x: int in range(225, 611, 16):
+		var reach: float = 10 if x % 3 == 0 else 6
+		draw_line(Vector2(x, 20 - reach), Vector2(x, 20 + reach), RadioArt.TRIMS[era], 1)
+	_sound_path(Vector2(225, 20), Vector2(610, 20), Color("88c9bf"), 9, 44, waveform_time * 5, 2)
+	draw_line(Vector2(0, SHIELD_LINE_Y), Vector2(640, SHIELD_LINE_Y), Color("f78279") if hit_flash > 0 and not reduced else Color("efb178"), 4)
+	draw_set_transform(arena_offset(), 0, arena_stretch())
 	if session.supports != null:
 		var field: Dictionary = session.supports.field
 		if not field.is_empty():
 			var center: Vector2 = field.position
 			var radius: float = float(field.radius)
-			draw_circle(center, radius, Color(0.3, 0.8, 0.9, 0.12))
-			draw_arc(center, radius, 0, TAU, 48, Color("7ad8ee"), 3)
-			for offset: int in [-60, 0, 60]:
-				draw_line(center + Vector2(offset, -radius * 0.7), center + Vector2(offset, radius * 0.7), Color(0.3, 0.8, 0.9, 0.35), 2)
+			_net_pattern(center, radius, Color("7ad8ee"))
 			draw_string(font, center + Vector2(-32, 0), str(field.charges), HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("7ad8ee"))
 		for shock: Dictionary in session.supports.shocks:
-			draw_line(Vector2(float(shock.x) - float(shock.width), float(shock.y)), Vector2(float(shock.x) + float(shock.width), float(shock.y)), Color("efa968"), 7)
+			_sound_path(Vector2(float(shock.x) - float(shock.width), float(shock.y)), Vector2(float(shock.x) + float(shock.width), float(shock.y)), Color("efa968"), 12, 55, waveform_time * 4, 5)
 	if session.arsenal != null:
 		for needle: Dictionary in session.arsenal.needles:
 			var at: Vector2 = Vector2(needle.x, needle.y)
-			draw_line(at, at - Vector2(needle.dx, needle.dy) * 14, DraftPanel.ACCENTS[&"needle_swarm"], 4)
+			draw_circle(at, 5, DraftPanel.ACCENTS[&"needle_swarm"])
+			draw_line(at + Vector2(4, 0), at + Vector2(4, -19), DraftPanel.ACCENTS[&"needle_swarm"], 3)
+			draw_arc(at + Vector2(6, -16), 6, -PI * .5, PI * .5, 8, DraftPanel.ACCENTS[&"needle_swarm"], 3)
 		for zone: Dictionary in session.arsenal.zones:
 			var tint: Color = DraftPanel.ACCENTS[StringName(zone.source)]
-			tint.a = .13
-			draw_circle(Vector2(zone.x, zone.y), float(zone.p.radius), tint)
-			tint.a = .7
-			draw_arc(Vector2(zone.x, zone.y), float(zone.p.radius), session.elapsed, session.elapsed + TAU * .8, 32, tint, 2)
+			if zone.source == "static_net": _net_pattern(Vector2(zone.x, zone.y), float(zone.p.radius), tint)
+			elif zone.source == "reverb_well": _spiral(Vector2(zone.x, zone.y), float(zone.p.radius), tint, waveform_time)
+			else:
+				for ring: int in 3: draw_arc(Vector2(zone.x, zone.y), float(zone.p.radius) * (0.4 + ring * .3), 0, TAU, 24, Color(tint, 0.5), 2)
 	for pulse: Dictionary in pulses:
-		var points: PackedVector2Array = []
-		for index: int in 49:
-			var angle: float = TAU * index / 48.0
-			points.append(pulse.center + Vector2(cos(angle), sin(angle)) * pulse.radius)
-		var pulse_color: Color = DraftPanel.ACCENTS.get(pulse.source, Color("efa968"))
-		pulse_color.a = float(pulse.left) / 0.35
-		draw_polyline(points, pulse_color, 4)
+		var tint: Color = DraftPanel.ACCENTS.get(pulse.source, Color("efa968"))
+		tint.a = .45 if reduced else clampf(float(pulse.left) / .55, .15, .8)
+		var age: float = 1 - float(pulse.left) / .55
+		match String(pulse.source):
+			"static_net": _net_pattern(pulse.center, pulse.radius.x, tint)
+			"reverb_well": _spiral(pulse.center, pulse.radius.x, tint, age * 3)
+			"bass_driver":
+				for ring: int in 3:
+					draw_arc(pulse.center + Vector2(0, pulse.radius.y * .6), pulse.radius.x * (.35 + ring * .25 + age * .15), PI * 1.12, PI * 1.88, 24, tint, 5 - ring)
+			"echo_deck":
+				for side: int in [-1, 1]:
+					var center: Vector2 = pulse.center + Vector2(side * pulse.radius.x * .28, 0)
+					draw_arc(center, pulse.radius.x * (.35 + age * .4), 0, TAU, 28, tint, 3)
+					_sound_path(center - Vector2(24, 0), center + Vector2(24, 0), tint, 8, 16, age * 4, 2)
+			"needle_swarm":
+				for ray: int in 5:
+					var direction: Vector2 = Vector2.from_angle(-PI + ray * PI / 4)
+					draw_line(pulse.center + direction * 12, pulse.center + direction * (25 + age * 20), tint, 2)
+			_:
+				_sound_path(pulse.center - Vector2(pulse.radius.x, 0), pulse.center + Vector2(pulse.radius.x, 0), tint, 12, 40, age * 5, 3)
 	var aimed: CombatActor = session.target()
 	for actor: CombatActor in session.actors:
 		var p: Vector2 = actor.position
@@ -209,22 +195,21 @@ func _draw() -> void:
 		var color: Color = Color("efa968")
 		if actor.projectile:
 			color = Color("f78279")
-			draw_circle(p, actor.radius, color, false, 3.0)
-			draw_line(p + Vector2(0, -20), p + Vector2(0, -5), color, 3.0)
+			draw_rect(Rect2(p - Vector2(4, 6), Vector2(8, 12)), color)
+			for bit: int in 3:
+				draw_rect(Rect2(p + Vector2(-3, -14 - bit * 8), Vector2(6, 4)), Color(color, .65 - bit * .15))
 		elif actor.path_kind == EnemyDefinition.PathKind.DIVE:
 			color = Color("f78279")
-			draw_colored_polygon(PackedVector2Array([p + Vector2(-22,-18), p + Vector2(22,-18), p + Vector2(0,24)]), color)
 			if actor.age < 2.0:
 				draw_line(p + Vector2(0, 30), p + Vector2(0, 80), color, 2.0)
 		elif actor.path_kind == EnemyDefinition.PathKind.CARRIER:
 			color = Color("b1a1ed")
-			draw_rect(Rect2(p - Vector2(29,24), Vector2(58,48)), color, false, 4.0)
-			for n: int in actor.child_limit - actor.children_spawned:
-				draw_circle(p + Vector2(float(n - 1) * 15, 0), 4.0, color)
-		else:
-			draw_circle(p, actor.radius, color)
-			draw_circle(p + Vector2(-5,-3), 3.0, Color("0b1824"))
-			draw_circle(p + Vector2(5,-3), 3.0, Color("0b1824"))
+		if not actor.projectile:
+			var extent: float = actor.radius * 2.8
+			draw_texture_rect(RadioArt.enemy(actor, era), Rect2(p - Vector2.ONE * extent * .5, Vector2.ONE * extent), false)
+			if actor.path_kind == EnemyDefinition.PathKind.CARRIER:
+				for n: int in actor.child_limit - actor.children_spawned:
+					draw_rect(Rect2(p + Vector2(-16 + n * 12, actor.radius + 3), Vector2(8, 5)), color)
 		if session.supports != null:
 			if actor.elite:
 				draw_arc(p, actor.radius + 4, PI, TAU, 16, Color("ffdc86"), 5)
@@ -247,22 +232,37 @@ func _draw() -> void:
 	draw_set_transform(arena_offset(), 0.0, arena_stretch())
 	if session.focus_active:
 		draw_circle(session.focus_point, 12.0, cyan, false, 2.0)
-		if session.active_combat != null:
-			draw_arc(session.focus_point, session.active_combat.radius_for(session), 0, TAU, 48, cyan if session.active_combat.cooldown == 0 else muted, 2.0)
-	var base: Vector2 = CombatSession.TRANSMITTER
+
+	var base: Vector2 = tower_position()
 	cyan = station_color
-	draw_rect(Rect2(base - Vector2(30, 12), Vector2(60, 28)), cyan, false, 3.0)
 	var direction: Vector2 = (aimed.position - base).normalized() if aimed != null else Vector2.UP
-	draw_line(base, base + direction * 46.0, cyan, 7.0)
+	draw_set_transform(arena_offset() + base * arena_stretch(), 0, Vector2.ONE * arena_scale())
+	draw_texture_rect(RadioArt.main_texture(session), Rect2(-48, -64, 96, 96), false)
+
+	draw_set_transform(arena_offset(), 0, arena_stretch())
 	if session.run.shield.current > 0 or session.ability_left > 0:
 		draw_arc(base, 50.0, PI, TAU, 32, cyan, 5.0 if session.ability_left > 0 else 2.0)
 	if session.supports != null and session.supports.overshield > 0:
 		draw_arc(base, 59, PI, TAU, 32, Color("bba5f4"), 5)
 	for chain: Dictionary in chains:
-		draw_polyline(chain.points, chain.get("color", Color("b1a1ed") if chain.support else cyan), 4.0)
-	if shot_flash > 0:
-		draw_line(base + direction * 46.0, shot_end, cyan, 3.0)
-		draw_circle(shot_end, 8.0, cyan, false, 2.0)
+		var tint: Color = chain.get("color", Color("c4aff5") if chain.support else cyan)
+		for index: int in chain.points.size() - 1:
+			_sound_path(chain.points[index], chain.points[index + 1], tint, 8 if chain.support else 4, 28, waveform_time * 12, 3)
+	if shot_flash > 0.0:
+		var chassis: String = session.draft.loadout.main if session.draft is ArsenalDraft else "pulse"
+		var source: Vector2 = base + Vector2(0, -58)
+		match chassis:
+			"sweep":
+				_sound_path(source, shot_end, Color("98eee0"), 10, 65, waveform_time * 16, 3)
+				_sound_path(source, shot_end, Color("4b998e"), -10, 65, waveform_time * 16, 2)
+			"burst":
+				for packet: int in 3:
+					var at: Vector2 = source.lerp(shot_end, clampf(1 - shot_flash / .22 + packet * .18, 0, 1))
+					draw_arc(at, 12 + packet * 4, direction.angle() - .8, direction.angle() + .8, 12, Color("f4c786"), 4)
+			_:
+				var at: Vector2 = source.lerp(shot_end, 1 - shot_flash / .22)
+				for ring: int in 3:
+					draw_arc(at, 9 + ring * 8, direction.angle() - 1, direction.angle() + 1, 16, Color(cyan, .9 - ring * .2), 3)
 	_draw_support_turrets(aimed)
 
 func equipped_supports() -> Array[StringName]:
@@ -273,9 +273,14 @@ func equipped_supports() -> Array[StringName]:
 	return result
 
 func support_position(id: StringName) -> Vector2:
-	if session.arsenal == null: return SUPPORT_POSITIONS[id]
-	var slots: Array[float] = [155, 435, 55, 555, 235]
-	return Vector2(slots[equipped_supports().find(id)], 682)
+	# Paired slots reserve the middle; a full deck uses consecutive 90-unit slots.
+	var supports: Array[StringName] = equipped_supports()
+	var slots: Array[float] = [140, 500, 50, 410 if supports.size() == 5 else 590, 230]
+	var index: int = supports.find(id)
+	return _deck_to_field(Vector2(slots[maxi(0, index)], 682))
+
+func tower_position() -> Vector2:
+	return _deck_to_field(Vector2(320, 684))
 
 func _draw_support_turrets(aimed: CombatActor) -> void:
 	for id: StringName in equipped_supports():
@@ -285,20 +290,20 @@ func _draw_support_turrets(aimed: CombatActor) -> void:
 		# Position follows the expanded field; the miniature and its bar stay undistorted.
 		draw_set_transform(arena_offset() + p * arena_stretch(), 0, Vector2.ONE * arena_scale())
 		var direction: Vector2 = ((aimed.position - p) * arena_stretch()).normalized() if aimed != null else Vector2.UP
-		draw_line(Vector2.ZERO, direction * 31, tint, 5)
-		draw_rect(Rect2(-26, -17, 52, 39), Color("203747"))
-		draw_rect(Rect2(-26, -17, 52, 39), tint.darkened(0.35), false, 2)
-		draw_texture_rect(DraftPanel.ICONS[id], Rect2(-18, -16, 36, 36), false)
+		draw_texture_rect(DraftPanel.ICONS[id], Rect2(-34, -43, 68, 68), false)
 		draw_rect(Rect2(-26, 27, 52, 7), Color("334958"))
 		draw_rect(Rect2(-26, 27, 52 * fraction, 7), tint)
 		if fraction >= 1:
 			# A full bar and lit muzzle mean ready, including while waiting for a target.
 			draw_circle(direction * 31, 4, tint.lightened(0.3))
-		if float(support_flashes.get(id, 0)) > 0:
+		if float(support_flashes.get(id, 0)) > 0 and not RadioPreferences.current.enabled("reduced_flash"):
 			draw_circle(direction * 33, 9, tint.lightened(0.5), false, 3)
 	draw_set_transform(arena_offset(), 0, arena_stretch())
 
 func show_chain(points: PackedVector2Array, support: bool) -> void:
+	if not support and points.size() > 0 and points[0].is_equal_approx(CombatSession.TRANSMITTER):
+		points = points.duplicate()
+		points[0] = tower_position()
 	if support and &"arc_aerial" in equipped_supports() and points.size() > 0 and points[0].is_equal_approx(CombatSession.TRANSMITTER):
 		points = points.duplicate()
 		points[0] = support_position(&"arc_aerial")
@@ -308,5 +313,32 @@ func show_chain(points: PackedVector2Array, support: bool) -> void:
 func show_support(source: StringName, center: Vector2, radius: Vector2) -> void:
 	if source in equipped_supports():
 		support_flashes[source] = 0.35
-		chains.append({"points": PackedVector2Array([support_position(source), center]), "support": true, "left": 0.12, "color": DraftPanel.ACCENTS[source]})
-	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.35})
+		if source == &"echo_deck": chains.append({"points": PackedVector2Array([support_position(source), center]), "support": true, "left": 0.22, "color": DraftPanel.ACCENTS[source]})
+	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.55})
+
+func _sound_path(start: Vector2, end: Vector2, tint: Color, amplitude: float, wavelength: float, phase: float, width: float) -> void:
+	var axis: Vector2 = end - start
+	var normal: Vector2 = axis.normalized().orthogonal()
+	var count: int = clampi(int(axis.length() / 6), 8, 80)
+	if RadioPreferences.current.enabled("low_effects"): count = mini(count, 24)
+	var points: PackedVector2Array = []
+	for index: int in count + 1:
+		var t: float = float(index) / count
+		points.append(start + axis * t + normal * sin(t * axis.length() / maxf(wavelength, axis.length() / count * 4) * TAU - phase) * amplitude * sin(t * PI))
+	draw_polyline(points, tint, width, true)
+
+func _net_pattern(center: Vector2, radius: float, tint: Color) -> void:
+	var diamond: PackedVector2Array = PackedVector2Array([center + Vector2(0, -radius), center + Vector2(radius, 0), center + Vector2(0, radius), center + Vector2(-radius, 0), center + Vector2(0, -radius)])
+	draw_polyline(diamond, Color(tint, .6), 2, true)
+	for band: int in [-2, -1, 0, 1, 2]:
+		var y: float = radius * band / 3.0
+		var reach: float = radius - absf(y)
+		_sound_path(center + Vector2(-reach, y), center + Vector2(reach, y), Color(tint, .4), 4, 40, waveform_time * 3, 2)
+
+func _spiral(center: Vector2, radius: float, tint: Color, phase: float) -> void:
+	for arm: int in 3:
+		var points: PackedVector2Array = []
+		for index: int in 33:
+			var t: float = float(index) / 32
+			points.append(center + Vector2.from_angle(t * TAU + phase + arm * TAU / 3) * radius * t)
+		draw_polyline(points, Color(tint, .55), 2, true)

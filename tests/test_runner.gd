@@ -4,6 +4,8 @@ extends SceneTree
 const CAMPAIGN_SCREEN: Script = preload("res://tests/integration/test_campaign_screen.gd")
 const CAMPAIGN_TEST: Script = preload("res://tests/unit/test_campaign.gd")
 const ENCOUNTER_TEST: Script = preload("res://tests/unit/test_encounters.gd")
+const ACHIEVEMENT_TEST: Script = preload("res://tests/unit/test_achievements.gd")
+const RADIO_TEST: Script = preload("res://tests/unit/test_radio_presentation.gd")
 const PATCHBOARD_SCREEN: Script = preload("res://tests/integration/test_patchboard_screen.gd")
 const PATCHBOARD_TEST: Script = preload("res://tests/unit/test_patchboard.gd")
 const ARSENAL_SCREEN: Script = preload("res://tests/integration/test_arsenal_screen.gd")
@@ -66,6 +68,8 @@ func _run() -> void:
 	context.check(await CAMPAIGN_SCREEN.new().run(context, self) == true, "M7 campaign screens suite completed")
 	context.check(CAMPAIGN_TEST.new().run(context) == true, "M7 campaign suite completed")
 	context.check(ENCOUNTER_TEST.new().run(context) == true, "M8 authored encounters suite completed")
+	context.check(ACHIEVEMENT_TEST.new().run(context) == true, "M9 achievement suite completed")
+	context.check(await RADIO_TEST.new().run(context, self) == true, "M10 presentation suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true

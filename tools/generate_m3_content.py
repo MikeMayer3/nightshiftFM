@@ -18,7 +18,7 @@ TRACKS = {
  ('bastion','Bastion','duration',2,3,'cooldown',2,''),
  ('live_coil','Live coil','brace_recharge',6,6,'recharge',-0.5,'bastion'),
  ('capstone','Night reserve','capacity',30,8,'cooldown',-4,'live_coil')]),
- 'arc_aerial': ('Arc Aerial',True,{'damage':5.0,'interval':1.25,'targets':2.0,'range':170.0,'branching':0.0},[
+ 'arc_aerial': ('Valve Microphone',True,{'damage':5.0,'interval':1.25,'targets':2.0,'range':170.0,'branching':0.0},[
  ('gain','Coil gain','damage',0.75,0,'',0,''),
  ('rate','Fast oscillator','interval',-0.1,0,'',0,''),
  ('reach','Antenna reach','range',34,0,'',0,''),

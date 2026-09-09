@@ -28,7 +28,7 @@ script = ExtResource("1")
 id = &"{ident}"
 name_key = &"{key}"
 description_key = &"{key}_DESC"
-unlock_mission = {unlock}
+unlock_mission = 0
 effects = {{{values}}}
 ''')
 wave_ids=[]

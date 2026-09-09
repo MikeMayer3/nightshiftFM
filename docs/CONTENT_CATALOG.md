@@ -7,7 +7,7 @@ This is a design catalog for incremental implementation. It is not a claim that 
 Each family has six basic tuning cards plus three specialization definitions, six specialization-specific modifier definitions, and three capstone definitions: 18 per family, 108 across six families. The six basic tuning cards are options for ranks 2, 4, 5, and 7; a player takes only four of those tuning selections in a fully ranked track. Rank 3 chooses the specialization, rank 6 chooses one of its two modifiers, and rank 8 grants its matching capstone. Tuning caps prevent invalid or excessive values.
 
 Use IDs derived from the family and stable card keys; do not derive persisted IDs from the display names. Display all numerical and behavior changes before accepting a choice. A card that modifies an unsupported stat is invalid, not silently ignored.
-### Arc Aerial (`arc_aerial`)
+### Valve Microphone (`arc_aerial`)
 
 Chain damage, charge application, and optional shield support.
 
@@ -19,7 +19,7 @@ Chain damage, charge application, and optional shield support.
 | Lightning Spear | Trade chain targets for concentrated armor-penetrating strikes. | Needle Arc: more armor penetration, narrower target acquisition cone. | Capacitor Strike: slower attacks with stronger first hits. | Thunder Needle: a heavy piercing strike through a short aligned group. |
 | Shield Tap | Trade damage for capped shield restoration on eligible direct hits. | Quick Charge: smaller, more frequent restoration. | Reserve Charge: accumulate a bounded reservoir, release on the next shield ability. | Closed Circuit: a brief overshield from a full reservoir; no self-triggered restoration. |
 
-### Echo Deck (`echo_deck`)
+### Tape Deck (`echo_deck`)
 
 Records eligible main-weapon attacks and replays weaker copies; never records its own echoes.
 
@@ -31,7 +31,7 @@ Records eligible main-weapon attacks and replays weaker copies; never records it
 | Layered Recording | Store a short bounded sequence before replaying it as a burst. | Long Side: more stored attacks, slower release. | Hot Master: fewer stored attacks, more damage. | Master Tape: release the bounded recorded burst toward a priority target. |
 | Ghost Chorus | Echoes search for targets other than the original victim. | Wide Chorus: broader search, reduced per-copy damage. | Lead Singer: prefer marked or elite targets, fewer alternate targets. | Phantom Broadcast: a fan of echoes across a capped number of distinct targets. |
 
-### Bass Driver (`bass_driver`)
+### Studio Monitor (`bass_driver`)
 
 Area damage, knockback, and armor exposure.
 
@@ -43,7 +43,7 @@ Area damage, knockback, and armor exposure.
 | Compression | Narrow heavy pulses with greater exposure and less coverage. | Hard Clip: stronger armor reduction, slower cadence. | Direct Injection: more boss damage, weaker knockback. | Crushing Note: concentrated armor-breaking pulse; no instant boss deletion. |
 | Aftershock | Leave a short-lived secondary pulse zone. | Ringing Floor: longer zone duration, weaker ticks. | Double Thump: an earlier second pulse, shorter zone duration. | Seismic Chorus: a capped sequence of aftershocks at the impact area. |
 
-### Needle Swarm (`needle_swarm`)
+### Turntable (`needle_swarm`)
 
 Stylus projectiles for penetration, pursuit, and marking priority targets.
 
@@ -55,7 +55,7 @@ Stylus projectiles for penetration, pursuit, and marking priority targets.
 | Homing Needles | Sharper pursuit, less penetration. | Wide Seek: larger search radius, slower projectile travel. | Close Pursuit: faster turning near targets, shorter lifetime. | Needle Hurricane: a capped homing volley; no unlimited orbiting projectiles. |
 | Marking Needles | Reduced direct damage but stronger support for focused fire. | Spotlight: stronger Marked bonus, fewer marked targets. | Full Set: mark more targets, weaker bonus per target. | Perfect Groove: a bounded vulnerability window on the priority marked target. |
 
-### Reverb Well (`reverb_well`)
+### Spring Reverb (`reverb_well`)
 
 Pulls a bounded group into a zone, with small baseline damage and control value.
 
@@ -67,7 +67,7 @@ Pulls a bounded group into a zone, with small baseline damage and control value.
 | Pressure Well | Smaller area with stronger damage against grouped enemies. | Hard Walls: more tick damage, shorter duration. | Heavy Air: stronger pull/exposure, lower tick damage. | Implosion: a capped terminal burst based on trapped-target count. |
 | Orbit Chamber | Enemies arc around the well before release. | Slow Orbit: greater control, fewer affected enemies. | Fast Orbit: stronger exit displacement, shorter hold. | Slingshot: a bounded release impulse, not physics collision damage between enemies. |
 
-### Static Net (`static_net`)
+### Mixing Desk (`static_net`)
 
 A slowing field with a small baseline projectile-interception budget.
 
@@ -106,14 +106,14 @@ Two connections can be active. Each recipe needs two equipped endpoints and any 
 
 | ID / recipe | Endpoints | Explicit payoff and safety rule |
 |---|---|---|
-| `ball_lightning` / Ball Lightning | Arc Aerial + Reverb Well | A threshold of direct arc hits on trapped Charged enemies produces one capped discharge; shared internal cooldown and generated-hit exclusion prevent recursion. |
-| `dead_zone` / Dead Zone | Static Net + Bass Driver | A direct bass hit on an enemy slowed by the connected net adds a brief Jammed effect; boss interruption cooldown still applies. |
-| `b_side` / B-Side | Needle Swarm + Echo Deck | Echoes prioritize marked targets; targeting must adapt correctly to projectile, volley, and beam attacks. |
-| `live_wire` / Live Wire | Arc Aerial + Static Net | Connected net ticks apply bounded Charged stacks at a fixed maximum rate; the application itself is not an extra arc attack. |
-| `pressure_drop` / Pressure Drop | Bass Driver + Reverb Well | Bass attacks hitting the active well gain a capped grouping bonus; count eligible targets once per attack. |
-| `double_drop` / Double Drop | Echo Deck + Bass Driver | Every third eligible direct bass activation produces one weaker repeat; that repeat never advances the trigger counter. |
-| `needle_thread` / Needle Thread | Main weapon + Needle Swarm | Main attacks against marked targets receive one compatible penetration benefit; a beam instead uses an explicitly defined small damage benefit. |
-| `feedback_loop` / Feedback Loop | Shield + Arc Aerial | A shield break emits one arc retaliation pulse with a long internal cooldown; it cannot restore the same shield or trigger another break pulse. |
+| `ball_lightning` / Ball Lightning | Valve Microphone + Spring Reverb | A threshold of direct arc hits on trapped Charged enemies produces one capped discharge; shared internal cooldown and generated-hit exclusion prevent recursion. |
+| `dead_zone` / Dead Zone | Mixing Desk + Studio Monitor | A direct bass hit on an enemy slowed by the connected net adds a brief Jammed effect; boss interruption cooldown still applies. |
+| `b_side` / B-Side | Turntable + Tape Deck | Echoes prioritize marked targets; targeting must adapt correctly to projectile, volley, and beam attacks. |
+| `live_wire` / Live Wire | Valve Microphone + Mixing Desk | Connected net ticks apply bounded Charged stacks at a fixed maximum rate; the application itself is not an extra arc attack. |
+| `pressure_drop` / Pressure Drop | Studio Monitor + Spring Reverb | Bass attacks hitting the active well gain a capped grouping bonus; count eligible targets once per attack. |
+| `double_drop` / Double Drop | Tape Deck + Studio Monitor | Every third eligible direct bass activation produces one weaker repeat; that repeat never advances the trigger counter. |
+| `needle_thread` / Needle Thread | Main weapon + Turntable | Main attacks against marked targets receive one compatible penetration benefit; a beam instead uses an explicitly defined small damage benefit. |
+| `feedback_loop` / Feedback Loop | Shield + Valve Microphone | A shield break emits one arc retaliation pulse with a long internal cooldown; it cannot restore the same shield or trigger another break pulse. |
 
 ## 4. Twelve station modules
 
@@ -175,18 +175,18 @@ All rewards are cosmetics, cosmetic collection progress, or titles; no achieveme
 | `overtime` | Progression | Overtime | Complete any regional finale on Overload. |
 | `new_dials` | Progression | New Dials | Unlock all three main-weapon chassis. |
 | `backup_plans` | Progression | Backup Plans | Unlock all three shield chassis. |
-| `arc_aerial_first_capstone` | Weapon mastery | Arc Aerial: Turn It Up | Reach a rank-8 capstone with Arc Aerial in an eligible completed run. |
-| `arc_aerial_three_capstones` | Weapon mastery | Arc Aerial: Full Range | Record all three distinct rank-8 specialization capstones for Arc Aerial across eligible completed runs. |
-| `echo_deck_first_capstone` | Weapon mastery | Echo Deck: Turn It Up | Reach a rank-8 capstone with Echo Deck in an eligible completed run. |
-| `echo_deck_three_capstones` | Weapon mastery | Echo Deck: Full Range | Record all three distinct rank-8 specialization capstones for Echo Deck across eligible completed runs. |
-| `bass_driver_first_capstone` | Weapon mastery | Bass Driver: Turn It Up | Reach a rank-8 capstone with Bass Driver in an eligible completed run. |
-| `bass_driver_three_capstones` | Weapon mastery | Bass Driver: Full Range | Record all three distinct rank-8 specialization capstones for Bass Driver across eligible completed runs. |
-| `needle_swarm_first_capstone` | Weapon mastery | Needle Swarm: Turn It Up | Reach a rank-8 capstone with Needle Swarm in an eligible completed run. |
-| `needle_swarm_three_capstones` | Weapon mastery | Needle Swarm: Full Range | Record all three distinct rank-8 specialization capstones for Needle Swarm across eligible completed runs. |
-| `reverb_well_first_capstone` | Weapon mastery | Reverb Well: Turn It Up | Reach a rank-8 capstone with Reverb Well in an eligible completed run. |
-| `reverb_well_three_capstones` | Weapon mastery | Reverb Well: Full Range | Record all three distinct rank-8 specialization capstones for Reverb Well across eligible completed runs. |
-| `static_net_first_capstone` | Weapon mastery | Static Net: Turn It Up | Reach a rank-8 capstone with Static Net in an eligible completed run. |
-| `static_net_three_capstones` | Weapon mastery | Static Net: Full Range | Record all three distinct rank-8 specialization capstones for Static Net across eligible completed runs. |
+| `arc_aerial_first_capstone` | Weapon mastery | Valve Microphone: Turn It Up | Reach a rank-8 capstone with Valve Microphone in an eligible completed run. |
+| `arc_aerial_three_capstones` | Weapon mastery | Valve Microphone: Full Range | Record all three distinct rank-8 specialization capstones for Valve Microphone across eligible completed runs. |
+| `echo_deck_first_capstone` | Weapon mastery | Tape Deck: Turn It Up | Reach a rank-8 capstone with Tape Deck in an eligible completed run. |
+| `echo_deck_three_capstones` | Weapon mastery | Tape Deck: Full Range | Record all three distinct rank-8 specialization capstones for Tape Deck across eligible completed runs. |
+| `bass_driver_first_capstone` | Weapon mastery | Studio Monitor: Turn It Up | Reach a rank-8 capstone with Studio Monitor in an eligible completed run. |
+| `bass_driver_three_capstones` | Weapon mastery | Studio Monitor: Full Range | Record all three distinct rank-8 specialization capstones for Studio Monitor across eligible completed runs. |
+| `needle_swarm_first_capstone` | Weapon mastery | Turntable: Turn It Up | Reach a rank-8 capstone with Turntable in an eligible completed run. |
+| `needle_swarm_three_capstones` | Weapon mastery | Turntable: Full Range | Record all three distinct rank-8 specialization capstones for Turntable across eligible completed runs. |
+| `reverb_well_first_capstone` | Weapon mastery | Spring Reverb: Turn It Up | Reach a rank-8 capstone with Spring Reverb in an eligible completed run. |
+| `reverb_well_three_capstones` | Weapon mastery | Spring Reverb: Full Range | Record all three distinct rank-8 specialization capstones for Spring Reverb across eligible completed runs. |
+| `static_net_first_capstone` | Weapon mastery | Mixing Desk: Turn It Up | Reach a rank-8 capstone with Mixing Desk in an eligible completed run. |
+| `static_net_three_capstones` | Weapon mastery | Mixing Desk: Full Range | Record all three distinct rank-8 specialization capstones for Mixing Desk across eligible completed runs. |
 | `patch_cable` | Builds | Patch Cable | Trigger at least one connected synergy and win the mission. |
 | `sound_engineer` | Builds | Sound Engineer | Trigger each of the eight distinct connection recipes in at least one completed eligible run. |
 | `stereo` | Builds | Stereo | Win with both active connections each having triggered at least ten times in that mission. |

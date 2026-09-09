@@ -1,5 +1,16 @@
 # Milestones and acceptance gates
 
+> **Current: M10 started by owner request (2026-09-09).** The opening increment
+> replaces current combat placeholders with radio-machine art and adds saved
+> accessibility/audio settings. See [M10 implementation and evidence](M10_MOBILE_POLISH.md).
+> M10 remains in progress; M8/M9's outstanding scope and human/device gates remain open.
+
+> **Current: M9 started by owner request (2026-09-08).** The M6/M7/M8 opening
+> source was pushed at `668d7e0`. The first M9 increment adds the achievement
+> catalog, 25 evaluated conditions, progress/tracked goals, cosmetic titles and
+> report history. See [M9 scope and checks](M9_ACHIEVEMENTS.md). Endless and 23
+> conditions remain pending. M8 remains partial as described below.
+
 > **Current: M8 started (2026-09-08).** Missions 1–3 now have distinct authored
 > encounters, formations, briefings and family elites. See [M8 opening increment](M8_ENCOUNTERS.md).
 > Bosses, later regions, the five additional base enemy families, difficulty
@@ -151,7 +162,7 @@ Endless wave 20/40/60 triggers are tested using controlled fixtures and separate
 
 **Dependencies:** M9 plus available M1 physical-device exports.
 
-**Build:** approved original art, distinct silhouettes, readable hit feedback, sound/music, optional haptics, reduced-flash/shake options, low-effects mode, left/right-handed controls, scalable UI text, and final safe-area layouts. Profile and optimize measured bottlenecks. Add localization-ready strings even if release is English-only.
+**Build:** approved original art following the owner's [old-school-to-new-school radio direction](RADIO_ART_DIRECTION.md): radio-hardware turrets and possessed radio-machine enemies, with valve, transistor/tape and digital broadcast eras across the regions. Give all six supports and eight enemy roles distinct hardware silhouettes and attack tells, with matching equipment icons and boss designs. Add readable hit feedback, sound/music, optional haptics, reduced-flash/shake options, low-effects mode, left/right-handed controls, scalable UI text, and final safe-area layouts. Profile and optimize measured bottlenecks. Add localization-ready strings even if release is English-only.
 
 **Acceptance:** normal gameplay and upgrade decisions are usable without sound; statuses are not color-only; all interactive elements work on the smallest supported screen and representative tall/notched/tablet layouts. Every frame-critical effect has a low-effects presentation alternative without changing combat rules. Maintain a named device/OS results matrix.
 

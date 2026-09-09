@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"close_call"
+name_key = &"M9_ACH_CLOSE_CALL"
+description_key = &"M9_ACH_CLOSE_CALL_DESC"
+category = "Defense"
+progress_kind = &"flag"
+threshold = 1
+condition_id = &"close_call"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.close_call"
+available = true
+pending_key = &""

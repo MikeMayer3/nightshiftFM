@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"endless_40"
+name_key = &"M9_ACH_ENDLESS_40"
+description_key = &"M9_ACH_ENDLESS_40_DESC"
+category = "Endless"
+progress_kind = &"counter"
+threshold = 40
+condition_id = &"endless_40"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"endless"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.endless_40"
+available = false
+pending_key = &"M9_PENDING_ENDLESS"

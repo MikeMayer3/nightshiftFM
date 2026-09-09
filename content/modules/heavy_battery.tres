@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"heavy_battery"
 name_key = &"M7_MODULE_HEAVY_BATTERY"
 description_key = &"M7_MODULE_HEAVY_BATTERY_DESC"
-unlock_mission = 4
+unlock_mission = 0
 effects = {&"capacity": 0.25, &"recharge": -0.2}

@@ -10,9 +10,12 @@ var patchboard_panel: PatchboardPanel
 var arsenal_enabled: bool = false
 var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
 var shield_button: Button
+var settings_panel: RadioSettingsPanel
+var settings_button: Button
+var radio_audio: RadioAudio
 var active_enabled: bool = false
 var signal_enabled: bool = false
-var signal_bar: ProgressBar
+var signal_bar: RadioDial
 var signal_label: Label
 var m4_enabled: bool = false
 var report_open: bool = false
@@ -57,15 +60,9 @@ func _ready() -> void:
 		$Safe/Column.add_child(meter)
 		$Safe/Column.move_child(meter, arena.get_index())
 		signal_label = Label.new()
-		signal_label.add_theme_font_size_override("font_size", 24)
+		signal_label.hide()
 		meter.add_child(signal_label)
-		signal_bar = ProgressBar.new()
-		signal_bar.custom_minimum_size.y = 16
-		signal_bar.show_percentage = false
-		var fill: StyleBoxFlat = StyleBoxFlat.new()
-		fill.bg_color = Color("bba5f4")
-		fill.set_corner_radius_all(4)
-		signal_bar.add_theme_stylebox_override("fill", fill)
+		signal_bar = RadioDial.new()
 		meter.add_child(signal_bar)
 		draft_panel = DraftPanel.new()
 		add_child(draft_panel)
@@ -92,8 +89,20 @@ func _ready() -> void:
 		shield_button = Button.new()
 		shield_button.custom_minimum_size = Vector2(180, 76)
 		shield_button.add_theme_font_size_override("font_size", 26)
+		RadioUI.button(shield_button)
 		actions.add_child(shield_button)
 		shield_button.pressed.connect(func() -> void: session.activate_shield())
+	ability_button.visible = session.active_combat == null
+	if session.active_combat == null: ability_button.pressed.connect(use_shield)
+	pause_button.text = "Ⅱ"
+	pause_button.tooltip_text = tr("COMBAT_PAUSE")
+	pause_button.set_meta("radio_touch_minimum", 48)
+	pause_button.custom_minimum_size = Vector2(48, 48)
+	pause_button.add_theme_font_size_override("font_size", 20)
+	title.add_theme_font_size_override("font_size", 28)
+	($Safe/Column as VBoxContainer).add_theme_constant_override("separation", 6)
+	for node: Node in [$Safe/Column/Health, $Safe/Column/Bars]:
+		$Safe/Column.move_child(node, $Safe/Column.get_child_count() - 1)
 	arena.session = session
 	if profile.campaign.cosmetic != &"default": arena.station_color = DraftPanel.ACCENTS[profile.campaign.cosmetic]
 	session.fired.connect(arena.show_shot)
@@ -104,11 +113,26 @@ func _ready() -> void:
 	session.wave_started.connect(func(_number: int) -> void: _report("wave"))
 	pause_button.pressed.connect(toggle_pause)
 	resume_button.pressed.connect(toggle_pause)
-	ability_button.gui_input.connect(func(event: InputEvent) -> void: arena.button_input(event, ability_button))
-	ability_button.pressed.connect(func() -> void:
-		if not arena.button_click_handled(): use_shield())
 	restart_button.pressed.connect(restart)
 	menu_button.pressed.connect(func() -> void: back_requested.emit())
+	settings_button = Button.new()
+	settings_button.text = tr("M10_SETTINGS")
+	settings_button.custom_minimum_size.y = 76
+	settings_button.add_theme_font_size_override("font_size", 26)
+	for state: String in ["normal", "hover", "focus", "pressed"]:
+		settings_button.add_theme_stylebox_override(state, menu_button.get_theme_stylebox(state))
+	menu_button.get_parent().add_child(settings_button)
+	menu_button.get_parent().move_child(settings_button, menu_button.get_index())
+	settings_button.pressed.connect(_open_settings)
+	RadioPreferences.current.changed.connect(_apply_presentation)
+	_apply_presentation()
+	RadioUI.button(resume_button, true)
+	radio_audio = RadioAudio.new()
+	radio_audio.session = session
+	add_child(radio_audio)
+	session.fired.connect(radio_audio.shot)
+	session.station_hit.connect(radio_audio.hit)
+	session.wave_started.connect(radio_audio.wave_started)
 	report_button = Button.new()
 	report_button.text = tr("M4_REPORT")
 	report_button.custom_minimum_size.y = 76
@@ -135,18 +159,34 @@ func _process(delta: float) -> void:
 			_report("tick")
 
 func toggle_pause() -> void:
+	if settings_panel != null: return
 	if session.is_finished():
 		return
 	manual_pause = not manual_pause
 	_sync_pause()
 	_report("manual_pause" if manual_pause else "manual_resume")
 
+func _open_settings() -> void:
+	if settings_panel != null: return
+	manual_pause = true
+	_sync_pause()
+	arena.clear_pointer()
+	settings_panel = RadioSettingsPanel.new()
+	add_child(settings_panel)
+	settings_panel.back_requested.connect(func() -> void:
+		remove_child(settings_panel)
+		settings_panel.queue_free()
+		settings_panel = null
+		# Returning to the pause menu never resumes a run unexpectedly.
+		_refresh())
+
+func _apply_presentation() -> void:
+	if shield_button != null:
+		var actions: Node = shield_button.get_parent()
+		actions.move_child(ability_button, 0 if RadioPreferences.current.enabled("left_handed") else 1)
+	arena.queue_redraw()
+
 func use_shield() -> void:
-	if session.active_combat != null:
-		var target: CombatActor = session.target()
-		if target != null: session.active_combat.burst(session, session.focus_point if session.focus_active else target.position)
-		_refresh()
-		return
 	if session.activate_shield():
 		_report("shield")
 	_refresh()
@@ -189,6 +229,7 @@ func _sync_pause() -> void:
 	_refresh()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if settings_panel != null: return
 	if event.is_action_pressed("pause") or event.is_action_pressed("menu_back"):
 		toggle_pause()
 		get_viewport().set_input_as_handled()
@@ -236,6 +277,8 @@ func _refresh() -> void:
 			if session.signal_progress != null:
 				signal_bar.max_value = session.signal_progress.threshold()
 				signal_bar.value = session.signal_progress.progress()
+				signal_bar.running = not session.paused and not session.is_finished() and not session.is_deciding() and not session.is_wiring()
+				signal_bar.queue_redraw()
 				signal_label.text = tr("SIGNAL_METER") % [session.signal_progress.progress(), session.signal_progress.threshold()]
 				if session.signal_progress.ready(): signal_label.text = tr("SIGNAL_FULL")
 		draft_panel.visible = report_open or (session.is_deciding() and not session.paused)
@@ -256,7 +299,7 @@ func _refresh() -> void:
 		overlay_title.text = tr("COMBAT_PAUSED")
 		details.text = tr("SIGNAL_PAUSE" if session.signal_progress != null else ("M3_PAUSE_BODY" if m3_enabled else "COMBAT_PAUSE_BODY"))
 
-		if session.active_combat != null: details.text = tr("ACTIVE_PAUSE")
+		if session.active_combat != null: details.text = tr("M10_RADIO_CONTROLS")
 
 func _report(event: String) -> void:
 	if OS.is_debug_build():
@@ -298,6 +341,7 @@ func _setup_m3() -> void:
 	if not data.is_empty(): profile.restore(data.profile)
 	if resume_existing and not data.is_empty() and data.run != null:
 		session.restore_checkpoint(data.run)
+		if session.achievement_run != null and not AchievementRun.production_build(): session.achievement_run.eligible = false
 		if session.draft is ArsenalDraft: loadout = (session.draft as ArsenalDraft).loadout.duplicate()
 		if session.campaign != null:
 			campaign_mission = session.campaign.mission

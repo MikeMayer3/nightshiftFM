@@ -1,0 +1,4 @@
+--------- beginning of main
+09-09 10:45:56.751 26843 26899 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+09-09 10:45:57.426 26843 26899 I godot   : OpenGL API OpenGL ES 3.2 build 25.1@6794074 - Compatibility - Using Device: Imagination Technologies - PowerVR D-Series DXT-48-1536
+09-09 10:45:57.454 26843 26899 I godot   :

@@ -1,0 +1,19 @@
+{
+  "path": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m8-fresh-fv0hb384/project",
+  "generator_changes": [],
+  "generators_idempotent": true,
+  "checks": [
+    {
+      "check": "import",
+      "exit": 0
+    },
+    {
+      "check": "test",
+      "exit": 0
+    },
+    {
+      "check": "smoke",
+      "exit": 0
+    }
+  ]
+}

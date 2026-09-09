@@ -1,0 +1,377 @@
+{
+	"method": "Synthetic eligibility fixture in editor; headless fixed-step combat, legal offers; restore and continue each decision checkpoint. Not human playtesting.",
+	"passed": true,
+	"runs": [
+		{
+			"achievement_rewards": [
+				"cosmetic.achievement.first_broadcast",
+				"cosmetic.achievement.arc_aerial_first_capstone",
+				"cosmetic.achievement.no_scratches",
+				"cosmetic.achievement.unbroken"
+			],
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 478.5499999998934,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"achievement_rewards": [
+				"cosmetic.achievement.first_broadcast",
+				"cosmetic.achievement.arc_aerial_first_capstone",
+				"cosmetic.achievement.no_scratches",
+				"cosmetic.achievement.unbroken"
+			],
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.b2m2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 469,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 530.4499999998462,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"achievement_rewards": [
+				"cosmetic.achievement.first_broadcast",
+				"cosmetic.achievement.arc_aerial_first_capstone",
+				"cosmetic.achievement.patch_cable",
+				"cosmetic.achievement.stereo",
+				"cosmetic.achievement.no_scratches",
+				"cosmetic.achievement.unbroken"
+			],
+			"breaches": 2,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.echo_deck.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b2m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 557,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 560.6666666664854,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		}
+	],
+	"valid": true
+}

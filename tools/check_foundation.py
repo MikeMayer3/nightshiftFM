@@ -49,7 +49,7 @@ class FoundationChecks(unittest.TestCase):
                 self.assertIn(key, keys)
 
     def test_bounded_m4_content_and_no_release_credentials(self):
-        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 428)
+        self.assertEqual(len(list((ROOT / "content").rglob("*.tres"))), 476)
         self.assertEqual(len(list((ROOT / "content/upgrades").rglob("*.tres"))), 18)
         presets = (ROOT / "export_presets.cfg").read_text()
         self.assertIn('application/export_project_only=true', presets)

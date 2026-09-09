@@ -1,0 +1,44 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "version": "0.10.3",
+  "version_code": 15,
+  "package": "org.nightshiftfm.spike",
+  "apk_sha256": "e28699cf6d396000b1971b35fd960771ed7cb4f9d435c882e1e4360c953d51cd",
+  "install": "PASS; adb install -r",
+  "launch": "PASS; Status ok and process running",
+  "save_preservation": "PASS; both save files byte-identical before install, after install, and after launch",
+  "before": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "after_install": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "after_launch": {
+    "m3_mission.json": {
+      "sha256": "7b416a9f6023fd728f5a6328d92e76d4288e8aa7aae5d4b9a7e4189930146b56",
+      "bytes": 5202
+    },
+    "m3_mission.json.bak": {
+      "sha256": "f0321f93b2f9d80249036c57ac104f72ca8c9af48359fd136ad1bf345270a4e1",
+      "bytes": 5078
+    }
+  },
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-m10-backup-20260909-120706",
+  "runtime_script_or_fatal_errors_observed": false,
+  "game_foreground": false,
+  "scope": "Installation and process launch only; foreground screenshot is inspected separately. No gameplay, haptic, audio, thermal or human acceptance claim."
+}

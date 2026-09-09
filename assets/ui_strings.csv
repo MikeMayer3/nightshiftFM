@@ -31,7 +31,7 @@ PROBE_SAVE_ERROR,Save failed. The checkpoint was not committed.
 PROBE_LOAD_ERROR,Checkpoint is invalid. No data was loaded.
 PROBE_SAFE_INFO,Green border: safe canvas area %s. Controls must stay inside it. Native achievements are unavailable in this spike.
 COMBAT_WAVE,Nightshift / Wave %d of %d
-COMBAT_HEALTH,Hull %.0f / %.0f                  Shield %.0f / %.0f
+COMBAT_HEALTH,Station Health %.0f / %.0f   ·   Shield %.0f / %.0f
 COMBAT_PAUSE,Pause
 COMBAT_RESUME,Resume
 COMBAT_RESTART,Restart mission
@@ -58,7 +58,7 @@ COMBAT_RESULTS,"Wave %d / 3 · %.1f seconds
 Threats stopped: %d
 Shots intercepted: %d
 Enemies breached: %d
-Hull remaining: %.0f / %.0f
+Station Health remaining: %.0f / %.0f
 
 %s"
 COMBAT_NO_DAMAGE,No damage
@@ -114,7 +114,7 @@ M3_SHIELD_LIVE_COIL_NAME,Live coil
 M3_SHIELD_LIVE_COIL_DESC,"+6 shield per second while braced, even during hit delay; -0.5 shield per second after hit delay."
 M3_SHIELD_CAPSTONE_NAME,Night reserve
 M3_SHIELD_CAPSTONE_DESC,+30 shield capacity (no instant refill); -4 brace cooldown seconds.
-M3_ARC_AERIAL_NAME,Arc Aerial
+M3_ARC_AERIAL_NAME,Valve Microphone
 M3_ARC_AERIAL_PREVIEW,Rank 3: Storm Network → Rank 6: Long Route → Rank 8: Broadcast Storm.
 M3_ARC_AERIAL_GAIN_NAME,Coil gain
 M3_ARC_AERIAL_GAIN_DESC,+0.75 damage per hit.
@@ -144,18 +144,18 @@ M3_REROLL_HINT,Reroll spends one shared token and redraws options on these track
 M3_REPAIR,Repair hull · Restore up to 10 hull. No rank increase.
 M3_REFILL,Refill shield · Restore up to 15 shield. No rank increase.
 M3_RECRUIT_TITLE,Support bonus
-M3_RECRUIT_BODY,Arc Aerial is your only available support. Take an extra upgrade for it.
-M3_DECLINE,Upgrade Arc Aerial
+M3_RECRUIT_BODY,Valve Microphone is your only available support. Take an extra upgrade for it.
+M3_DECLINE,Upgrade Valve Microphone
 M3_RECOVERY_TITLE,Checkpoint recovery
 M3_RETRY,Retry checkpoint
 M3_FRESH,Discard this mission · Start fresh
 M3_CORRUPT,"No compatible checkpoint could be recovered from the save, temporary file or backup. Retry after restoring a valid file, or start fresh. Starting fresh also resets an unrecoverable local profile."
 M3_SAVE_ERROR,The checkpoint could not be written. Combat is paused. Retry saving to keep this choice; returning to the menu loads the last durable checkpoint.
-M3_HEALTH,Hull %.0f / %.0f         Shield %.0f / %.0f
+M3_HEALTH,Station Health %.0f / %.0f   ·   Shield %.0f / %.0f
 M3_ABILITY_HINT,75%% less damage for %.1fs · %.1fs cooldown
 M3_PAUSE_BODY,"The mission is frozen.
 
-Hold and drag to focus; release for auto-aim. Purple chains are Arc Aerial.
+Hold and drag to focus; release for auto-aim. Purple chains are Valve Microphone.
 
 Closing the app replays the current wave from its start. Upgrade screens resume with the same cards. Use Continue from the menu."
 M3_RESULTS,"Wave %d / 10 · %.1f seconds
@@ -163,7 +163,7 @@ M3_RESULTS,"Wave %d / 10 · %.1f seconds
 Threats stopped: %d
 Shots intercepted: %d
 Enemies breached: %d
-Hull remaining: %.0f / %.0f
+Station Health remaining: %.0f / %.0f
 
 %s
 
@@ -209,7 +209,7 @@ M3_SHIELD_SHORT_NAME,Shield
 M3_SUPPORT_CAP_NOTE,Arc is fully upgraded. Take a repair or refill instead.
 M3_STATION,Station
 M3_RECOVERY_CHOICE,Choose a recovery
-M4_ARC_AERIAL_NAME,Arc Aerial
+M4_ARC_AERIAL_NAME,Valve Microphone
 M4_ARC_AERIAL_PREVIEW,Storm Network / Shield Tap. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
 M4_ARC_AERIAL_GAIN_NAME,Coil gain
 M4_ARC_AERIAL_GAIN_SHORT,+1 damage per hit
@@ -244,7 +244,7 @@ M4_ARC_AERIAL_STORM_CAP_DESC,Branching arcs · Hit +2 targets.
 M4_ARC_AERIAL_TAP_CAP_NAME,Closed Circuit
 M4_ARC_AERIAL_TAP_CAP_SHORT,Full reservoir grants a brief overshield
 M4_ARC_AERIAL_TAP_CAP_DESC,"When brace consumes a full 12-point reservoir, grant 10 overshield for 4s. It absorbs before ordinary shield and cannot refill itself. Quick Charge also fills the reservoir on direct hits."
-M4_BASS_DRIVER_NAME,Bass Driver
+M4_BASS_DRIVER_NAME,Studio Monitor
 M4_BASS_DRIVER_PREVIEW,Wideband / Compression. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
 M4_BASS_DRIVER_GAIN_NAME,Heavy cone
 M4_BASS_DRIVER_GAIN_SHORT,+1.5 pulse damage
@@ -279,7 +279,7 @@ M4_BASS_DRIVER_WALL_DESC,"Replace the local pulse with a shockwave traveling up 
 M4_BASS_DRIVER_CRUSH_NAME,Crushing Note
 M4_BASS_DRIVER_CRUSH_SHORT,Heavier pulses · Strip +20 armor
 M4_BASS_DRIVER_CRUSH_DESC,Pulse damage ×1.5 and exposure +20. Up to eight targets; armor floor zero. No percentage-health execution.
-M4_STATIC_NET_NAME,Static Net
+M4_STATIC_NET_NAME,Mixing Desk
 M4_STATIC_NET_PREVIEW,Dead Air / Interference Screen. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
 M4_STATIC_NET_SLOW_NAME,Thick static
 M4_STATIC_NET_SLOW_SHORT,+5% slow strength · 60% maximum
@@ -378,7 +378,7 @@ SIGNAL_ARC_AERIAL_REACH_DESC,+36 chain range.
 SIGNAL_ARC_AERIAL_LONG_ROUTE_NAME,Long Route
 SIGNAL_ARC_AERIAL_LONG_ROUTE_SHORT,+120 chain range · 20% slower attacks
 SIGNAL_ARC_AERIAL_LONG_ROUTE_DESC,+120 chain range · 20% slower attacks.
-SIGNAL_ARC_AERIAL_NAME,Arc Aerial
+SIGNAL_ARC_AERIAL_NAME,Valve Microphone
 SIGNAL_ARC_AERIAL_PREVIEW,Storm Network or Lightning Spear. Choose a modifier at rank 6 and a capstone at rank 8.
 SIGNAL_BASS_DRIVER_GAIN_NAME,Heavy cone
 SIGNAL_BASS_DRIVER_GAIN_SHORT,+1.5 pulse damage
@@ -413,7 +413,7 @@ SIGNAL_BASS_DRIVER_DIRECT_DESC,50% more elite damage · Half knockback.
 SIGNAL_BASS_DRIVER_HARD_NAME,Hard Clip
 SIGNAL_BASS_DRIVER_HARD_SHORT,Strip more armor · 25% slower pulses
 SIGNAL_BASS_DRIVER_HARD_DESC,Add 25 armor reduction to exposure. Pulse interval ×1.25; armor floor remains zero.
-SIGNAL_BASS_DRIVER_NAME,Bass Driver
+SIGNAL_BASS_DRIVER_NAME,Studio Monitor
 SIGNAL_BASS_DRIVER_PREVIEW,Wideband / Compression. Rank 3: choose a path. Rank 6: choose its modifier. Rank 8: matching capstone.
 SIGNAL_STATIC_NET_ZONE_NAME,Dead Zone
 SIGNAL_STATIC_NET_ZONE_SHORT,Long disruption · Elites resist repeat jams
@@ -448,7 +448,7 @@ SIGNAL_STATIC_NET_RATE_DESC,Reduce field activation interval by 0.25s; the activ
 SIGNAL_STATIC_NET_CURRENT_NAME,Live Current
 SIGNAL_STATIC_NET_CURRENT_SHORT,50% more field damage · Smaller area
 SIGNAL_STATIC_NET_CURRENT_DESC,"Field damage ×1.5, radius ×0.75 and slow strength ×0.5. The field retains two interception charges."
-SIGNAL_STATIC_NET_NAME,Static Net
+SIGNAL_STATIC_NET_NAME,Mixing Desk
 SIGNAL_STATIC_NET_PREVIEW,Dead Air or Live Current. Every field deals damage; choose control or stronger damage.
 SIGNAL_WAVE_NAME,Standard encounter
 SIGNAL_WAVE_DESC,Defeat enemies to fill the signal meter and choose more firepower.
@@ -591,10 +591,10 @@ M5_ARC_AERIAL_B3M2_DESC,"Store shield restoration, +2 shield per discharge."
 M5_ARC_AERIAL_B3CAP_NAME,Closed Circuit
 M5_ARC_AERIAL_B3CAP_SHORT,Overflow becomes overshield
 M5_ARC_AERIAL_B3CAP_DESC,Overflow becomes overshield.
-M5_ARC_AERIAL_NAME,Arc Aerial
+M5_ARC_AERIAL_NAME,Valve Microphone
 M5_ARC_AERIAL_PREVIEW,Chains and armor piercing
-M3_ARC_AERIAL_SHORT_NAME,Arc Aerial
-SIGNAL_ARC_AERIAL_NEW_NAME,Arc Aerial
+M3_ARC_AERIAL_SHORT_NAME,Valve Microphone
+SIGNAL_ARC_AERIAL_NEW_NAME,Valve Microphone
 SIGNAL_ARC_AERIAL_NEW_SHORT,Chains and armor piercing
 SIGNAL_ARC_AERIAL_NEW_DESC,Chains and armor piercing. Starts at rank 1.
 M5_ECHO_DECK_T0_NAME,Replay Gain
@@ -651,10 +651,10 @@ M5_ECHO_DECK_B3M2_DESC,"Prioritize elites and marked targets, +15% replay damage
 M5_ECHO_DECK_B3CAP_NAME,Phantom Broadcast
 M5_ECHO_DECK_B3CAP_SHORT,+2 replays
 M5_ECHO_DECK_B3CAP_DESC,+2 replays.
-M5_ECHO_DECK_NAME,Echo Deck
+M5_ECHO_DECK_NAME,Tape Deck
 M5_ECHO_DECK_PREVIEW,Replays main attacks
-M3_ECHO_DECK_SHORT_NAME,Echo Deck
-SIGNAL_ECHO_DECK_NEW_NAME,Echo Deck
+M3_ECHO_DECK_SHORT_NAME,Tape Deck
+SIGNAL_ECHO_DECK_NEW_NAME,Tape Deck
 SIGNAL_ECHO_DECK_NEW_SHORT,Replays main attacks
 SIGNAL_ECHO_DECK_NEW_DESC,Replays main attacks. Starts at rank 1.
 M5_BASS_DRIVER_T0_NAME,Gain
@@ -711,10 +711,10 @@ M5_BASS_DRIVER_B3M2_DESC,"+1 pulses, -1s duration."
 M5_BASS_DRIVER_B3CAP_NAME,Seismic Chorus
 M5_BASS_DRIVER_B3CAP_SHORT,+2 pulses
 M5_BASS_DRIVER_B3CAP_DESC,+2 pulses.
-M5_BASS_DRIVER_NAME,Bass Driver
+M5_BASS_DRIVER_NAME,Studio Monitor
 M5_BASS_DRIVER_PREVIEW,Area damage and armor exposure
-M3_BASS_DRIVER_SHORT_NAME,Bass Driver
-SIGNAL_BASS_DRIVER_NEW_NAME,Bass Driver
+M3_BASS_DRIVER_SHORT_NAME,Studio Monitor
+SIGNAL_BASS_DRIVER_NEW_NAME,Studio Monitor
 SIGNAL_BASS_DRIVER_NEW_SHORT,Area damage and armor exposure
 SIGNAL_BASS_DRIVER_NEW_DESC,Area damage and armor exposure. Starts at rank 1.
 M5_NEEDLE_SWARM_T0_NAME,Gain
@@ -771,10 +771,10 @@ M5_NEEDLE_SWARM_B3M2_DESC,"+2 projectiles, -5% mark strength."
 M5_NEEDLE_SWARM_B3CAP_NAME,Perfect Groove
 M5_NEEDLE_SWARM_B3CAP_SHORT,"+15% mark strength, prioritize elites and marked targets"
 M5_NEEDLE_SWARM_B3CAP_DESC,"+15% mark strength, prioritize elites and marked targets."
-M5_NEEDLE_SWARM_NAME,Needle Swarm
+M5_NEEDLE_SWARM_NAME,Turntable
 M5_NEEDLE_SWARM_PREVIEW,Traveling projectiles and marks
-M3_NEEDLE_SWARM_SHORT_NAME,Needle Swarm
-SIGNAL_NEEDLE_SWARM_NEW_NAME,Needle Swarm
+M3_NEEDLE_SWARM_SHORT_NAME,Turntable
+SIGNAL_NEEDLE_SWARM_NEW_NAME,Turntable
 SIGNAL_NEEDLE_SWARM_NEW_SHORT,Traveling projectiles and marks
 SIGNAL_NEEDLE_SWARM_NEW_DESC,Traveling projectiles and marks. Starts at rank 1.
 M5_REVERB_WELL_T0_NAME,Long Well
@@ -831,10 +831,10 @@ M5_REVERB_WELL_B3M2_DESC,"-1s duration, burst when the well ends."
 M5_REVERB_WELL_B3CAP_NAME,Slingshot
 M5_REVERB_WELL_B3CAP_SHORT,Launch enemies back on release
 M5_REVERB_WELL_B3CAP_DESC,Launch enemies back on release.
-M5_REVERB_WELL_NAME,Reverb Well
+M5_REVERB_WELL_NAME,Spring Reverb
 M5_REVERB_WELL_PREVIEW,Pull fields and release bursts
-M3_REVERB_WELL_SHORT_NAME,Reverb Well
-SIGNAL_REVERB_WELL_NEW_NAME,Reverb Well
+M3_REVERB_WELL_SHORT_NAME,Spring Reverb
+SIGNAL_REVERB_WELL_NEW_NAME,Spring Reverb
 SIGNAL_REVERB_WELL_NEW_SHORT,Pull fields and release bursts
 SIGNAL_REVERB_WELL_NEW_DESC,Pull fields and release bursts. Starts at rank 1.
 M5_STATIC_NET_T0_NAME,Deep Slow
@@ -891,10 +891,10 @@ M5_STATIC_NET_B3M2_DESC,"+100% base damage, -30% tick speed."
 M5_STATIC_NET_B3CAP_NAME,Live Wire
 M5_STATIC_NET_B3CAP_SHORT,"+100% base damage, +1s duration"
 M5_STATIC_NET_B3CAP_DESC,"+100% base damage, +1s duration."
-M5_STATIC_NET_NAME,Static Net
+M5_STATIC_NET_NAME,Mixing Desk
 M5_STATIC_NET_PREVIEW,"Slows, intercepts and live damage"
-M3_STATIC_NET_SHORT_NAME,Static Net
-SIGNAL_STATIC_NET_NEW_NAME,Static Net
+M3_STATIC_NET_SHORT_NAME,Mixing Desk
+SIGNAL_STATIC_NET_NEW_NAME,Mixing Desk
 SIGNAL_STATIC_NET_NEW_SHORT,"Slows, intercepts and live damage"
 SIGNAL_STATIC_NET_NEW_DESC,"Slows, intercepts and live damage. Starts at rank 1."
 M5_PULSE_T0_NAME,Gain
@@ -951,7 +951,7 @@ M5_PULSE_B3M2_DESC,"+100% base damage, +25 armor penetration."
 M5_PULSE_B3CAP_NAME,Final Charge
 M5_PULSE_B3CAP_SHORT,"+2 pierce, +15 width"
 M5_PULSE_B3CAP_DESC,"+2 pierce, +15 width."
-M5_PULSE_NAME,Pulse Spindle
+M5_PULSE_NAME,AM Tower
 M5_PULSE_PREVIEW,Balanced precision shots
 M5_SWEEP_T0_NAME,Gain
 M5_SWEEP_T0_SHORT,+15% base damage
@@ -1007,7 +1007,7 @@ M5_SWEEP_B3M2_DESC,"+80% base damage, +20 armor penetration."
 M5_SWEEP_B3CAP_NAME,Resonant Beam
 M5_SWEEP_B3CAP_SHORT,"+50% base damage, +20 width"
 M5_SWEEP_B3CAP_DESC,"+50% base damage, +20 width."
-M5_SWEEP_NAME,Sweep Laser
+M5_SWEEP_NAME,FM Tower
 M5_SWEEP_PREVIEW,Sweeps through aligned enemies
 M5_BURST_T0_NAME,Gain
 M5_BURST_T0_SHORT,+15% base damage
@@ -1063,7 +1063,7 @@ M5_BURST_B3M2_DESC,"+2 projectiles, -15% attack speed."
 M5_BURST_B3CAP_NAME,Rolling Thunder
 M5_BURST_B3CAP_SHORT,+2 projectiles
 M5_BURST_B3CAP_DESC,+2 projectiles.
-M5_BURST_NAME,Burst Rack
+M5_BURST_NAME,Shortwave Tower
 M5_BURST_PREVIEW,Close-range volleys
 M5_CAPACITOR_T0_NAME,Capacity
 M5_CAPACITOR_T0_SHORT,+10 capacity
@@ -1324,9 +1324,9 @@ M7_CODEX,Recipe codex
 M7_RECORDS,Medals & mastery
 M7_PRESET_MIGRATION,An older preset was adjusted to the available equipment. Review it before launching.
 M7_UNLOCK_1,Clear mission 1 to open mission 2. Ranks reset for each mission.
-M7_UNLOCK_2,Clear mission 2 for Echo Deck and patchboard connections.
-M7_UNLOCK_3,Clear mission 3 for Reverb Well and the Relay shield.
-M7_UNLOCK_4,"Clear mission 4 for Needle Swarm, Sweep and your first two modules."
+M7_UNLOCK_2,Clear mission 2 for Tape Deck and patchboard connections.
+M7_UNLOCK_3,Clear mission 3 for Spring Reverb and the Relay shield.
+M7_UNLOCK_4,"Clear mission 4 for Turntable, Sweep and your first two modules."
 M7_UNLOCK_LATER,First clears open more missions and equipment. Module rewards begin after mission 4.
 M7_CODEX_HINT,Discover a recipe by triggering it during a mission. Connections unlock after mission 2 and still require the listed equipment.
 M7_UNDISCOVERED,Not triggered yet
@@ -1415,3 +1415,162 @@ M8_M3_W9,Crossed Wires · Wave 9
 M8_M3_W9_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
 M8_M3_W10,Crossed Wires · Wave 10
 M8_M3_W10_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M9_ACH_FIRST_BROADCAST,First Broadcast
+M9_ACH_FIRST_BROADCAST_DESC,Complete any Campaign mission.
+M9_ACH_LOCAL_LEGEND,Local Legend
+M9_ACH_LOCAL_LEGEND_DESC,Complete all four Rooftop Relays missions on Standard or higher.
+M9_ACH_DEEP_SIGNAL,Deep Signal
+M9_ACH_DEEP_SIGNAL_DESC,Complete all four Flooded Switchyard missions on Standard or higher.
+M9_ACH_STILL_ON_AIR,Still on Air
+M9_ACH_STILL_ON_AIR_DESC,Complete all four Dead Band missions on Standard or higher.
+M9_ACH_FULL_SCHEDULE,Full Schedule
+M9_ACH_FULL_SCHEDULE_DESC,Complete all twelve Campaign missions on Hard or higher.
+M9_ACH_OVERTIME,Overtime
+M9_ACH_OVERTIME_DESC,Complete any regional finale on Overload.
+M9_ACH_NEW_DIALS,New Dials
+M9_ACH_NEW_DIALS_DESC,Unlock all three main-weapon chassis.
+M9_ACH_BACKUP_PLANS,Backup Plans
+M9_ACH_BACKUP_PLANS_DESC,Unlock all three shield chassis.
+M9_ACH_ARC_AERIAL_FIRST_CAPSTONE,Valve Microphone: Turn It Up
+M9_ACH_ARC_AERIAL_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Valve Microphone in an eligible completed run.
+M9_ACH_ARC_AERIAL_THREE_CAPSTONES,Valve Microphone: Full Range
+M9_ACH_ARC_AERIAL_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Valve Microphone across eligible completed runs.
+M9_ACH_ECHO_DECK_FIRST_CAPSTONE,Tape Deck: Turn It Up
+M9_ACH_ECHO_DECK_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Tape Deck in an eligible completed run.
+M9_ACH_ECHO_DECK_THREE_CAPSTONES,Tape Deck: Full Range
+M9_ACH_ECHO_DECK_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Tape Deck across eligible completed runs.
+M9_ACH_BASS_DRIVER_FIRST_CAPSTONE,Studio Monitor: Turn It Up
+M9_ACH_BASS_DRIVER_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Studio Monitor in an eligible completed run.
+M9_ACH_BASS_DRIVER_THREE_CAPSTONES,Studio Monitor: Full Range
+M9_ACH_BASS_DRIVER_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Studio Monitor across eligible completed runs.
+M9_ACH_NEEDLE_SWARM_FIRST_CAPSTONE,Turntable: Turn It Up
+M9_ACH_NEEDLE_SWARM_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Turntable in an eligible completed run.
+M9_ACH_NEEDLE_SWARM_THREE_CAPSTONES,Turntable: Full Range
+M9_ACH_NEEDLE_SWARM_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Turntable across eligible completed runs.
+M9_ACH_REVERB_WELL_FIRST_CAPSTONE,Spring Reverb: Turn It Up
+M9_ACH_REVERB_WELL_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Spring Reverb in an eligible completed run.
+M9_ACH_REVERB_WELL_THREE_CAPSTONES,Spring Reverb: Full Range
+M9_ACH_REVERB_WELL_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Spring Reverb across eligible completed runs.
+M9_ACH_STATIC_NET_FIRST_CAPSTONE,Mixing Desk: Turn It Up
+M9_ACH_STATIC_NET_FIRST_CAPSTONE_DESC,Reach a rank-8 capstone with Mixing Desk in an eligible completed run.
+M9_ACH_STATIC_NET_THREE_CAPSTONES,Mixing Desk: Full Range
+M9_ACH_STATIC_NET_THREE_CAPSTONES_DESC,Record all three distinct rank-8 specialization capstones for Mixing Desk across eligible completed runs.
+M9_ACH_PATCH_CABLE,Patch Cable
+M9_ACH_PATCH_CABLE_DESC,Trigger at least one connected synergy and win the mission.
+M9_ACH_SOUND_ENGINEER,Sound Engineer
+M9_ACH_SOUND_ENGINEER_DESC,Trigger each of the eight distinct connection recipes in at least one completed eligible run.
+M9_ACH_STEREO,Stereo
+M9_ACH_STEREO_DESC,Win with both active connections each having triggered at least ten times in that mission.
+M9_ACH_MINIMALIST,Minimalist
+M9_ACH_MINIMALIST_DESC,Win a Campaign mission with maximum simultaneous support count no greater than two throughout the run.
+M9_ACH_ALL_HANDS,All Hands on Deck
+M9_ACH_ALL_HANDS_DESC,"Win with five distinct support families, each recording damage, effective shield gain, interception, or nonzero enemy control contribution."
+M9_ACH_SOLOIST_DUET,Power Duet
+M9_ACH_SOLOIST_DUET_DESC,Win with two support weapons at rank 8; do not count the main gun or shield.
+M9_ACH_VARIETY_SHOW,Variety Show
+M9_ACH_VARIETY_SHOW_DESC,Win at least one Campaign mission with each of the six support families equipped.
+M9_ACH_DEEP_FOCUS,Deep Focus
+M9_ACH_DEEP_FOCUS_DESC,Win with both the main weapon and shield at rank 8.
+M9_ACH_NO_SCRATCHES,No Scratches
+M9_ACH_NO_SCRATCHES_DESC,Win with cumulative hull damage taken equal to zero; healing never erases damage history.
+M9_ACH_UNBROKEN,Unbroken
+M9_ACH_UNBROKEN_DESC,Win with zero shield-break events.
+M9_ACH_BOUNCER,Bouncer
+M9_ACH_BOUNCER_DESC,Reflect 100 eligible enemy projectiles across committed waves; count each original projectile once.
+M9_ACH_SECOND_WIND,Second Wind
+M9_ACH_SECOND_WIND_DESC,"In one mission, recover from a true shield break to full current maximum shield, then win."
+M9_ACH_CLOSE_CALL,Close Call
+M9_ACH_CLOSE_CALL_DESC,Win while current hull is greater than zero and no more than 10% of its current maximum.
+M9_ACH_HOLD_THE_LINE,Hold the Line
+M9_ACH_HOLD_THE_LINE_DESC,Win a mission after a single activation of a shield ability mitigates or reflects at least three distinct incoming attacks.
+M9_ACH_CONTRACT_TWO_CHANNEL,Two-Channel Radio
+M9_ACH_CONTRACT_TWO_CHANNEL_DESC,Complete the Two-Channel Radio Contract under its declared restrictions.
+M9_ACH_CONTRACT_BARE_ANTENNA,Bare Antenna
+M9_ACH_CONTRACT_BARE_ANTENNA_DESC,Complete the Bare Antenna Contract under its declared restrictions.
+M9_ACH_CONTRACT_FRAGILE_BROADCAST,Fragile Broadcast
+M9_ACH_CONTRACT_FRAGILE_BROADCAST_DESC,Complete the Fragile Broadcast Contract under its declared restrictions.
+M9_ACH_CONTRACT_NO_REPEATS,No Repeats
+M9_ACH_CONTRACT_NO_REPEATS_DESC,Complete the No Repeats Contract under its declared restrictions.
+M9_ACH_CONTRACT_OVERCROWDED_FREQUENCY,Overcrowded Frequency
+M9_ACH_CONTRACT_OVERCROWDED_FREQUENCY_DESC,Complete the Overcrowded Frequency Contract under its declared restrictions.
+M9_ACH_CONTRACT_LONG_DISTANCE,Long Distance Call
+M9_ACH_CONTRACT_LONG_DISTANCE_DESC,Complete the Long Distance Call Contract under its declared restrictions.
+M9_ACH_KNOW_ENEMY,Know Your Interference
+M9_ACH_KNOW_ENEMY_DESC,Encounter all eight base enemy families in committed eligible waves; variants do not create additional families.
+M9_ACH_BOSS_NOTEBOOK,Boss Notebook
+M9_ACH_BOSS_NOTEBOOK_DESC,Defeat each of the three regional bosses at least once.
+M9_ACH_BLUEPRINT_COLLECTOR,Blueprint Collector
+M9_ACH_BLUEPRINT_COLLECTOR_DESC,Unlock all twelve station modules.
+M9_ACH_SIGNAL_ARCHIVE,Signal Archive
+M9_ACH_SIGNAL_ARCHIVE_DESC,"Collect all twelve mission log entries, each awarded on that mission’s first completion."
+M9_ACH_ENDLESS_20,Twenty Past Midnight
+M9_ACH_ENDLESS_20_DESC,Complete wave 20 in Endless.
+M9_ACH_ENDLESS_40,Late Shift
+M9_ACH_ENDLESS_40_DESC,Complete wave 40 in Endless.
+M9_ACH_ENDLESS_60,Never Off Air
+M9_ACH_ENDLESS_60_DESC,Complete wave 60 in Endless.
+M9_ACH_ENDLESS_THREE,Three-Channel Marathon
+M9_ACH_ENDLESS_THREE_DESC,Complete wave 20 in Endless with no more than three support families used at any time in that run.
+M9_ACHIEVEMENTS,Achievements
+M9_HINT,Cosmetic titles only. Progress is committed when an eligible mission ends in victory.
+M9_PENDING_ENDLESS,Pending: Endless mode.
+M9_PENDING_TELEMETRY,Pending: committed defensive-event tracking.
+M9_PENDING_CAMPAIGN,Pending: remaining campaign content and mode rules.
+M9_PROGRESS,%d / %d
+M9_EARNED,Earned
+M9_TRACK,Track goal
+M9_UNTRACK,Untrack goal
+M9_TRACKED,Tracked goals · up to three
+M9_USE_TITLE,Use cosmetic title
+M9_ACTIVE_TITLE,Active title: %s
+M9_NATIVE_UNAVAILABLE,Saved on this device. Native achievement sync is not available yet.
+M9_PRACTICE,"Editor, debug and prototype runs do not earn achievements."
+M9_REPORT_HISTORY,Station damage taken: %.1f · Peak supports: %d
+M9_REPORT_OUTPUT,Effective damage: %.1f · Intercepted bolts: %d
+M9_REPORT_HINT,Burst is included in main damage. Exposure assistance is reported separately and is not added to damage totals.
+M9_RESULT_ELIGIBLE,This run records local achievements on victory.
+M9_RESULT_PRACTICE,Practice or legacy run: achievement rewards disabled.
+M10_SETTINGS,Radio & accessibility
+M10_SETTINGS_HINT,Tune the broadcast to suit you. Changes apply immediately. Combat stays paused while this panel is open.
+M10_REDUCED_FLASH,Reduced flashes
+M10_LOW_EFFECTS,Low effects
+M10_LEFT_HANDED,Burst on the left
+M10_LARGE_TEXT,Larger text · 115%
+M10_HAPTICS,Hit vibration
+M10_SOUND,Sound effects
+M10_MUSIC,Ambient radio music
+M10_SHOW_SIGNAL,Menu signal decoration
+M10_ON,On
+M10_OFF,Off
+M10_SAVED,Preferences saved on this device.
+M10_SAVE_ERROR,Could not save preferences. They still apply until you close the game.
+M10_STATUS_GUIDE,Read the signals: dots = Charged; lower arc = Slowed; slash = Exposed; X = Jammed; gold ring = Marked. A forward line warns of a dive or incoming shot. Low effects keeps these cues. Screen shake is always off.
+M10_LOADOUT,Your broadcast
+M10_STATS,Full equipment stats
+M10_MODULES,Modules · optional
+M10_MODULE_COUNT,Modules · %d / 2
+M10_STATS_STRIP,STATION %d     SHIELD %d     HIT %d
+M10_PRESET_LOADED,Preset loaded
+M10_PRESET_EMPTY,No available loadout in this slot
+M10_ROUTE,Choose your frequency
+M10_VALVE,01 / POCKET PLAYERS
+M10_TRANSISTOR,02 / WIRELESS AUDIO
+M10_DIGITAL,03 / SMART DEVICES
+M10_BRIEFING,Mission briefing
+M10_CODEX,Codex
+M10_AWARDS,Awards
+M10_RECORDS,Records
+M10_BACK,Back
+M10_CONTROLS,Controls & symbols
+M10_PAUSE_BRIEF,"Auto-fire handles the targets.
+Tap Burst · drag to aim.
+
+Controls & symbols are in Settings."
+M10_PROTOTYPE,Prototype encounter
+M10_RADIO_CONTROLS,"Your tower and studio equipment fire automatically.
+Hold a target to focus fire; release to return to auto-targeting.
+
+Kills tune the radio toward your next upgrade. Use Shield when the station is in danger."
+M10_TUNING,TUNING
+M10_TUNED,TUNED · CHOOSE UPGRADE
+M10_LOCKED,TUNED

@@ -208,6 +208,7 @@ func _saves(t: TestContext) -> void:
 	var old: Dictionary = profile.to_data()
 	old.erase("discovered")
 	old.erase("campaign")
+	old.erase("achievements")
 	old.schema = 1
 	t.check(profile.restore(old) and profile.discovered.is_empty(), "schema-1 profile migrates with no invented discoveries")
 	profile.discovered.append(&"feedback_loop")

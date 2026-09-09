@@ -28,8 +28,8 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	event.position = screen.arena.get_global_transform_with_canvas() * (world * screen.arena.arena_stretch())
 	screen.arena._input(event)
 	screen._refresh()
-	context.check(screen.session.active_combat.uses == 1 and screen.session.kills == 5 and not screen.session.focus_active, "aim-and-release fires one burst at the displayed formation")
-	context.check(screen.ability_button.disabled and screen.ability_button.text.contains("5"), "burst button displays real recharge time")
+	context.check(screen.session.active_combat.uses == 0 and not screen.session.focus_active, "release ends targeting without a cooldown attack")
+	context.check(not screen.ability_button.visible, "cooldown attack button is removed")
 	screen.session.advance(6)
 	event.pressed = true
 	event.position = world * screen.arena.arena_stretch()
@@ -37,21 +37,27 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	event.pressed = false
 	event.position = Vector2(-20,-20)
 	screen.arena._input(event)
-	context.check(screen.session.active_combat.uses == 1 and not screen.session.focus_active, "release outside battlefield cancels instead of firing")
+	context.check(screen.session.active_combat.uses == 0 and not screen.session.focus_active, "release outside battlefield cancels instead of firing")
 	screen.ability_button.pressed.emit()
 	screen.session.advance(CombatSession.STEP)
-	context.check(screen.session.active_combat.uses == 2, "accessible Burst button fires at current automatic target")
+	context.check(screen.session.active_combat.uses == 0, "removed button has no remaining Burst signal handler")
 	var saved: Dictionary = screen.store.load_save()
 	var restored: CombatSession = CombatSession.new()
 	context.check(saved.run.content == ActiveCombat.VERSION and restored.restore_checkpoint(saved.run), "real atomic store validates active mission checkpoint")
 	screen.toggle_pause()
-	context.check(screen.details.text == screen.tr("ACTIVE_PAUSE"), "instructions are available in pause instead of beneath the battlefield")
+	context.check(screen.details.text == screen.tr("M10_RADIO_CONTROLS"), "pause shows concise controls instead of a wall of instructions")
+	screen._open_settings()
+	var has_guide: bool = false
+	for label: Node in screen.settings_panel.find_children("*", "Label", true, false):
+		if label.text == screen.tr("M10_RADIO_CONTROLS"): has_guide = true
+	context.check(has_guide, "automatic combat instructions remain available in the optional settings guide")
+	screen.settings_panel.back_requested.emit()
 	screen.session.draft.equip(&"bass_driver")
 	screen.session.draft.equip(&"static_net")
 	context.check(screen.arena.equipped_supports().size() == 3, "recruited Bass and Net add their own mini turrets")
 	var original: PackedVector2Array = PackedVector2Array([CombatSession.TRANSMITTER, Vector2(320, 150)])
 	screen.arena.show_chain(original, true)
-	context.check(screen.arena.chains.back().points[0] == CombatArena.SUPPORT_POSITIONS[&"arc_aerial"] and original[0] == CombatSession.TRANSMITTER, "Arc fires visually from its support turret without changing attack data")
+	context.check(screen.arena.chains.back().points[0] == screen.arena.support_position(&"arc_aerial") and original[0] == CombatSession.TRANSMITTER, "Arc fires visually from its support turret without changing attack data")
 	var old_session: CombatSession = CombatSession.new()
 	old_session.start_m3(42, &"run.1")
 	screen.arena.session = old_session

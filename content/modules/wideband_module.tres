@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"wideband_module"
 name_key = &"M7_MODULE_WIDEBAND_MODULE"
 description_key = &"M7_MODULE_WIDEBAND_MODULE_DESC"
-unlock_mission = 7
+unlock_mission = 0
 effects = {&"radius": 0.2, &"direct_damage": -0.15}

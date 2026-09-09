@@ -25,6 +25,9 @@ static func capture(session: CombatSession) -> Dictionary:
 	if session.active_combat != null: result["active"] = session.active_combat.to_data()
 	if session.patchboard != null: result["patchboard"] = session.patchboard.to_data()
 	if session.campaign != null: result["campaign"] = session.campaign.to_data()
+	if session.achievement_run != null:
+		result.schema = 3
+		result["achievements"] = session.achievement_run.to_data()
 	return result
 
 static func _point(value: Variant) -> bool:
@@ -34,7 +37,9 @@ static func restore(session: CombatSession, data: Dictionary) -> bool:
 	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]
 	var is_campaign: bool = data.get("content") in [CampaignContent.VERSION, EncounterContent.VERSION]
 	var is_patchboard: bool = data.get("content") in [PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]
-	if data.size() != (18 if is_campaign else 17 if is_patchboard else 16 if is_active else 15) or data.get("schema") != 2 or data.get("engine") != Engine.get_version_info().string: return false
+	var has_history: bool = data.get("schema") == 3
+	if has_history and not is_campaign: return false
+	if data.size() != (18 if is_campaign else 17 if is_patchboard else 16 if is_active else 15) + int(has_history) or not SaveChecks.number(data.get("schema"), 2, 3, true) or data.get("engine") != Engine.get_version_info().string: return false
 	if not data.get("run_id") is String or not data.run_id.begins_with("run.") or not data.run_id.trim_prefix("run.").is_valid_int(): return false
 	if not RunRandom.valid(data.get("random")) or not data.get("values") is Dictionary: return false
 	if data.values.size() != CombatSession.checkpoint_fields().size(): return false
@@ -90,6 +95,15 @@ static func restore(session: CombatSession, data: Dictionary) -> bool:
 	elif session.spawn_index > session.wave_definition().enemy_ids.size(): return false
 	if session.phase in [CombatSession.Phase.INTERMISSION, CombatSession.Phase.VICTORY, CombatSession.Phase.DEFEAT]:
 		if not session.actors.is_empty() or not session.supports.field.is_empty() or not session.supports.shocks.is_empty(): return false
+	# Never invent history for a legacy run, including one that has already healed.
+	session.achievement_run = null
+	if has_history:
+		var history: AchievementRun = AchievementRun.new()
+		if not history.restore(data.get("achievements")): return false
+		if history.max_supports < session.draft.support_count(): return false
+		if history.completed and session.phase != CombatSession.Phase.VICTORY: return false
+		if history.eligible and not EncounterContent.authored(session): return false
+		session.achievement_run = history
 	return true
 
 static func _actors(session: CombatSession, items: Variant) -> bool:

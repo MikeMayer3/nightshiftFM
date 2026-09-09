@@ -4,7 +4,9 @@ extends RefCounted
 const VERSION: String = "m4.active.2"
 const LEGACY_VERSION: String = "m4.active.1"
 const COOLDOWN: float = 5.0
+const AUTOMATIC_HEALTH_SCALE: float = 0.7
 const RADIUS: float = 110.0
+var automatic_radio: bool = false
 var cooldown: float = 0.0
 var uses: int = 0
 var damage: float = 0.0
@@ -20,6 +22,7 @@ func radius_for(session: CombatSession) -> float:
 	return ModuleStats.area_radius(session.module_ids(), RADIUS)
 
 func burst(session: CombatSession, at: Vector2) -> bool:
+	if automatic_radio: return false
 	if session.paused or session.phase != CombatSession.Phase.COMBAT or cooldown > 0: return false
 	if not at.is_finite() or not Rect2(Vector2.ZERO, CombatSession.ARENA).has_point(at): return false
 	# A released drag outside the battlefield cannot fire, and empty ground costs nothing.
@@ -44,10 +47,14 @@ func burst(session: CombatSession, at: Vector2) -> bool:
 	return true
 
 func to_data() -> Dictionary:
-	return {"cooldown": cooldown, "uses": uses, "damage": damage}
+	var result: Dictionary = {"cooldown": cooldown, "uses": uses, "damage": damage}
+	if automatic_radio: result["automatic_radio"] = true
+	return result
 
 func restore(data: Variant) -> bool:
-	if not data is Dictionary or data.size() != 3: return false
+	if not data is Dictionary or data.size() not in [3, 4]: return false
+	if data.size() == 4 and (not data.get("automatic_radio") is bool or data.get("automatic_radio") != true): return false
+	automatic_radio = data.get("automatic_radio", false)
 	if not SaveChecks.number(data.get("cooldown"), 0, COOLDOWN) or not SaveChecks.number(data.get("uses"), 0, 100000, true) or not SaveChecks.number(data.get("damage"), 0, 100000000): return false
 	cooldown = float(data.cooldown)
 	uses = int(data.uses)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"stereo"
+name_key = &"M9_ACH_STEREO"
+description_key = &"M9_ACH_STEREO_DESC"
+category = "Builds"
+progress_kind = &"flag"
+threshold = 1
+condition_id = &"stereo"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.stereo"
+available = true
+pending_key = &""

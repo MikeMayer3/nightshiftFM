@@ -1,5 +1,24 @@
 # Game design and implementation specification
 
+> **Owner radio-station revision (2026-09-09, 0.10.3):** Current campaign runs
+> use automatic tower/support attacks without the manual Burst cooldown action.
+> Holding a target focuses fire; releasing returns to automatic targeting. Shield
+> remains available. All twelve module sidegrades are available from mission 1,
+> with at most two fitted. Mission tiles select a plain mission-name label; there
+> is no duplicate dropdown or mission briefing. Kills advance an analog radio
+> dial with a hunting needle and rotating knobs; incoming signals combine ticks
+> and a waveform. Station Health is below the taller field; Pause is compact.
+> The tower stays centered and the shield boundary clears all instruments.
+> Compact upgrade sheets retain the battlefield behind them. Defenders are
+> vintage studio instruments and a radio tower; enemies are modern music players,
+> earbuds and smart speakers. This supersedes earlier Burst, module-unlock and
+> possessed-radio art instructions below. See [current art direction](RADIO_ART_DIRECTION.md).
+
+
+> **M9 opening increment:** Local achievement progress, tracked goals, cosmetic
+> titles and run history are implemented for 25 conditions; 23 catalog entries
+> and Endless remain pending. M8 is still partial. See [M9 contracts](M9_ACHIEVEMENTS.md).
+
 > **Current implementation:** M7 progression is implemented and M8 has started
 > with three authored Rooftop Relays missions. See [M8 scope and evidence](M8_ENCOUNTERS.md).
 > The older revision notes below are historical; the full M8 catalog remains a roadmap.
@@ -26,6 +45,11 @@
 > [M4 Signal flow](M4_SIGNAL_FLOW.md) for the implemented rules and balance data.
 > Remaining later-milestone material below is a roadmap, not implemented scope.
 
+> **M10 opening increment (2026-09-09):** The current three enemy movement
+> families and all six support turrets now use original radio-hardware artwork.
+> Saved presentation settings and optional audio are implemented. See
+> [M10 scope and remaining acceptance](M10_MOBILE_POLISH.md).
+
 ## 1. Design decisions and theme alternatives
 
 The requested game is best scoped as a **fixed-turret roguelite defense shooter**, rather than a path-building tower defense game. There are no mazes, tower placement grids, or moving player avatar. The interesting decisions are targeting, timed defense, equipment selection, and upgrades.
@@ -41,7 +65,7 @@ These are proposed creative directions, not claims that nobody has used a simila
 | **Museum of Unfinished Inventions** | A restoration apparatus under siege | Escaped prototypes, patent sketches, broken automata | Spring guns, magnetic tools, folding machines | Temporarily combine two incomplete inventions into a new effect |
 | **Abyssal Relay** | A living signal beacon on the seabed | Drifting abyssal predators and parasitic colonies | Sonar pulses, pressure jets, bioluminescent lures, shell shields | Light attracts enemies into controlled kill zones |
 
-Recommendation: use **Nightshift FM** for the worked implementation. The radio vocabulary naturally supports weapon transformations and synergy connections. Dreamstitch is the strongest alternative for a more handmade visual style. Avoid making any of these merely a reskin of standard missiles and lasers.
+**Owner-selected visual direction (2026-09-09):** use radio hardware for both turrets and enemies, spanning old-school valve sets, transistor/FM and tape-era equipment, and modern digital receivers and broadcast transmitters. Enemies are possessed radio machines; turret shapes and attack mechanisms come from aerials, speakers, reels, tuning hardware and dishes. The alternative themes above remain historical proposals. See [Radio art direction](RADIO_ART_DIRECTION.md) for family designs and the campaign's era progression.
 
 Names are placeholders. Perform storefront and name-clearance checks before committing to public branding.
 
@@ -222,6 +246,8 @@ Apple Game Center and Google Play Games Services provide native achievement syst
 ## 11. Art, accessibility, release, and scope gates
 
 Use original placeholder art until the gray-box is fun. Final art should make six weapon silhouettes and eight enemy roles immediately distinguishable. Use bounded flashes, optional screen shake and haptics, readable type, icons plus text for statuses, separate music/effects controls, and settings that work with sound off. Do not use commercial radio songs without appropriate rights.
+
+Follow [Radio art direction](RADIO_ART_DIRECTION.md) for enemy, turret and boss assets. Old-to-new radio eras guide materials and silhouettes across the three regions; they do not introduce permanent power tiers or change family identities. M10's opening pass replaces current turret/enemy placeholders; final human art approval and later enemy/boss assets remain open.
 
 Recommended first-release business model: paid full download with no advertising, energy timers, gacha, or paid combat power. This is a scope preference, not a revenue prediction. Do not add purchase SDKs to the prototype.
 

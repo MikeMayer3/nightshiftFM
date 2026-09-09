@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 strings={}
 tracks={
-'arc_aerial':('Arc Aerial',{'damage':6.0,'interval':1.3,'range':180.0,'targets':2.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
+'arc_aerial':('Valve Microphone',{'damage':6.0,'interval':1.3,'range':180.0,'targets':2.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
 ('gain','Coil gain',0,'','damage',1.0,'','+1 damage per hit'),
 ('rate','Fast oscillator',0,'','interval',-0.1,'','Fire faster · −0.1s between arcs'),
 ('reach','Antenna reach',0,'','range',36.0,'','+36 chain range'),
@@ -17,7 +17,7 @@ tracks={
 ('reserve','Reserve Charge',6,'tap','modifier',2,'quick','Store shield energy · Release on brace'),
 ('storm_cap','Broadcast Storm',8,'storm','capstone',1,'','Branching arcs · Hit +2 targets'),
 ('tap_cap','Closed Circuit',8,'tap','capstone',1,'','Full reservoir grants a brief overshield')]),
-'bass_driver':('Bass Driver',{'damage':10.0,'interval':2.4,'radius':100.0,'push':25.0,'exposure':15.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
+'bass_driver':('Studio Monitor',{'damage':10.0,'interval':2.4,'radius':100.0,'push':25.0,'exposure':15.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
 ('gain','Heavy cone',0,'','damage',1.5,'','+1.5 pulse damage'),
 ('radius','Big cabinet',0,'','radius',15.0,'','+15 pulse radius'),
 ('rate','Quick beat',0,'','interval',-0.15,'','Fire faster · −0.15s between pulses'),
@@ -29,7 +29,7 @@ tracks={
 ('direct','Direct Injection',6,'compression','modifier',2,'hard','50% more elite damage · Half knockback'),
 ('wall','Wall of Sound',8,'wide','capstone',1,'','Send a broad shockwave up the arena'),
 ('crush','Crushing Note',8,'compression','capstone',1,'','Heavier pulses · Strip +20 armor')]),
-'static_net':('Static Net',{'damage':0.0,'interval':4.2,'radius':125.0,'duration':2.5,'slow':0.3,'charges':2.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
+'static_net':('Mixing Desk',{'damage':0.0,'interval':4.2,'radius':125.0,'duration':2.5,'slow':0.3,'charges':2.0,'mode':0.0,'modifier':0.0,'capstone':0.0},[
 ('slow','Thick static',0,'','slow',0.05,'','+5% slow strength · 60% maximum'),
 ('radius','Wide screen',0,'','radius',18.0,'','+18 field radius'),
 ('duration','Long broadcast',0,'','duration',0.5,'','Fields last +0.5 seconds'),

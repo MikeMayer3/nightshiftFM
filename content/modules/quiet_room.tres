@@ -5,5 +5,5 @@ script = ExtResource("1")
 id = &"quiet_room"
 name_key = &"M7_MODULE_QUIET_ROOM"
 description_key = &"M7_MODULE_QUIET_ROOM_DESC"
-unlock_mission = 6
+unlock_mission = 0
 effects = {&"recharge": 0.25, &"support_rate": -0.1}

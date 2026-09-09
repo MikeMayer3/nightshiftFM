@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"contract_fragile_broadcast"
+name_key = &"M9_ACH_CONTRACT_FRAGILE_BROADCAST"
+description_key = &"M9_ACH_CONTRACT_FRAGILE_BROADCAST_DESC"
+category = "Contracts"
+progress_kind = &"flag"
+threshold = 1
+condition_id = &"contract_fragile_broadcast"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"contract"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.contract_fragile_broadcast"
+available = false
+pending_key = &"M9_PENDING_CAMPAIGN"

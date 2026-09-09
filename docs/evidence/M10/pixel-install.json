@@ -1,0 +1,44 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "version": "0.10.0",
+  "version_code": 12,
+  "package": "org.nightshiftfm.spike",
+  "apk_sha256": "38093f7d25a95d95fe164d9030b6ecd3378c59927bb8e635d9c0cf10520c1d64",
+  "install": "PASS; adb install -r",
+  "launch": "PASS; Status ok and process running",
+  "save_preservation": "PASS; both save files byte-identical before install, after install, and after launch",
+  "before": {
+    "m3_mission.json": {
+      "sha256": "7919251f6bcfcebcf01aae46e119a0a423d924e0aca0a8d13d629d1774288183",
+      "bytes": 6794
+    },
+    "m3_mission.json.bak": {
+      "sha256": "772b7f5d88203353aa1852489412f076c741de335fee45c6adb85a08ffb6ba35",
+      "bytes": 8951
+    }
+  },
+  "after_install": {
+    "m3_mission.json": {
+      "sha256": "7919251f6bcfcebcf01aae46e119a0a423d924e0aca0a8d13d629d1774288183",
+      "bytes": 6794
+    },
+    "m3_mission.json.bak": {
+      "sha256": "772b7f5d88203353aa1852489412f076c741de335fee45c6adb85a08ffb6ba35",
+      "bytes": 8951
+    }
+  },
+  "after_launch": {
+    "m3_mission.json": {
+      "sha256": "7919251f6bcfcebcf01aae46e119a0a423d924e0aca0a8d13d629d1774288183",
+      "bytes": 6794
+    },
+    "m3_mission.json.bak": {
+      "sha256": "772b7f5d88203353aa1852489412f076c741de335fee45c6adb85a08ffb6ba35",
+      "bytes": 8951
+    }
+  },
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-m10-backup-20260909-104550",
+  "runtime_script_or_fatal_errors_observed": false,
+  "scope": "Physical install and successful Android launch request/process only. Visible game UI, combat, haptic/audio and sustained performance unverified because the phone was locked.",
+  "visible_menu": "NOT RUN; phone remained locked"
+}

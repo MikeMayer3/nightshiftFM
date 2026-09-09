@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"static_net_three_capstones"
+name_key = &"M9_ACH_STATIC_NET_THREE_CAPSTONES"
+description_key = &"M9_ACH_STATIC_NET_THREE_CAPSTONES_DESC"
+category = "Weapon mastery"
+progress_kind = &"set"
+threshold = 3
+condition_id = &"static_net_three_capstones"
+condition_parameters = {&"family": &"static_net"}
+eligible_modes = Array[StringName]([&"campaign", &"contract", &"endless"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.static_net_three_capstones"
+available = true
+pending_key = &""

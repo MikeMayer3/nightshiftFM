@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/achievement_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"blueprint_collector"
+name_key = &"M9_ACH_BLUEPRINT_COLLECTOR"
+description_key = &"M9_ACH_BLUEPRINT_COLLECTOR_DESC"
+category = "Discovery"
+progress_kind = &"counter"
+threshold = 12
+condition_id = &"blueprint_collector"
+condition_parameters = {}
+eligible_modes = Array[StringName]([&"campaign"])
+minimum_difficulty = 0
+reward_id = &"cosmetic.achievement.blueprint_collector"
+available = false
+pending_key = &"M9_PENDING_CAMPAIGN"

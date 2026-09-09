@@ -1,0 +1,64 @@
+{
+  "scope": "M9 started; local achievement increment only. M8 remains partial.",
+  "pushed_source": {
+    "repository": "MikeMayer3/nightshiftFM",
+    "visibility": "private",
+    "branch": "main",
+    "commit": "668d7e01a29e88d732399417cd0f1a415980d1c4",
+    "head_matches_remote": true
+  },
+  "m9_publication": "Not committed or pushed",
+  "catalog": {
+    "definitions": 48,
+    "implemented_conditions": 25,
+    "pending": 23
+  },
+  "regression": {
+    "checks": 4499,
+    "failures": 0
+  },
+  "targeted": {
+    "checks": 173,
+    "failures": 0
+  },
+  "visual": {
+    "checks": 36,
+    "failures": 0,
+    "sizes": [
+      "360x640",
+      "450x800",
+      "450x950"
+    ]
+  },
+  "foundation": {
+    "checks": 7,
+    "failures": 0
+  },
+  "simulation": {
+    "runs": 3,
+    "victories": 3,
+    "decision_restores": 74,
+    "eligibility": "Synthetic fixture, not production player progress"
+  },
+  "fresh": {
+    "path": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m8-fresh-fv0hb384/project",
+    "generator_changes": [],
+    "generators_idempotent": true,
+    "checks": [
+      {
+        "check": "import",
+        "exit": 0
+      },
+      {
+        "check": "test",
+        "exit": 0
+      },
+      {
+        "check": "smoke",
+        "exit": 0
+      }
+    ]
+  },
+  "endless": "NOT IMPLEMENTED",
+  "production_eligibility_mobile_and_human": "NOT RUN"
+}
