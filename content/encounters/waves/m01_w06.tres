@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.m01.w06"
+name_key = &"M8_M1_W6"
+description_key = &"M8_M1_W6_DESC"
+spawn_interval = 5.8
+group_size = 5
+formation = 1
+enemy_ids = Array[StringName]([&"m8.elite_swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer", &"m2.swarmer"])

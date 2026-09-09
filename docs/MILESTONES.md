@@ -1,5 +1,12 @@
 # Milestones and acceptance gates
 
+> **Current: M8 started (2026-09-08).** Missions 1–3 now have distinct authored
+> encounters, formations, briefings and family elites. See [M8 opening increment](M8_ENCOUNTERS.md).
+> Bosses, later regions, the five additional base enemy families, difficulty
+> modes, Contracts, expanded codex/logs and mission-specific medals remain open.
+> M7 human progression/pacing acceptance remains open.
+> Older revision notes below are historical.
+
 > **M4 support-turret revision:** Equipped Arc, Bass and Net appear as small
 > turrets with live cooldown bars. New runs receive slightly stronger earned
 > Burst scaling; old saves retain their rules. See [random-build and emulator

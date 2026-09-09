@@ -1,6 +1,11 @@
 extends SceneTree
 ## No plugins. Explicit suites, counters, and process exit codes, even in release mode.
 
+const CAMPAIGN_SCREEN: Script = preload("res://tests/integration/test_campaign_screen.gd")
+const CAMPAIGN_TEST: Script = preload("res://tests/unit/test_campaign.gd")
+const ENCOUNTER_TEST: Script = preload("res://tests/unit/test_encounters.gd")
+const PATCHBOARD_SCREEN: Script = preload("res://tests/integration/test_patchboard_screen.gd")
+const PATCHBOARD_TEST: Script = preload("res://tests/unit/test_patchboard.gd")
 const ARSENAL_SCREEN: Script = preload("res://tests/integration/test_arsenal_screen.gd")
 const ARSENAL_TEST: Script = preload("res://tests/unit/test_arsenal.gd")
 const FOUNDATIONS: Script = preload("res://tests/unit/test_foundations.gd")
@@ -12,6 +17,7 @@ const M3_SCREEN_TEST: Script = preload("res://tests/integration/test_m3_screen.g
 const M4_SCREEN_TEST: Script = preload("res://tests/integration/test_m4_screen.gd")
 const SIGNAL_SCREEN_TEST: Script = preload("res://tests/integration/test_signal_screen.gd")
 const ACTIVE_SCREEN: Script = preload("res://tests/integration/test_active_screen.gd")
+const TOUCH_AIM: Script = preload("res://tests/integration/test_touch_aim.gd")
 const ACTIVE_TEST: Script = preload("res://tests/unit/test_active.gd")
 const SIGNAL_TEST: Script = preload("res://tests/unit/test_signal.gd")
 const M4_TEST: Script = preload("res://tests/unit/test_m4.gd")
@@ -52,8 +58,14 @@ func _run() -> void:
 	context.check(await SIGNAL_SCREEN_TEST.new().run(context, self) == true, "signal screen suite completed")
 	context.check(ACTIVE_TEST.new().run(context) == true, "active combat suite completed")
 	context.check(await ACTIVE_SCREEN.new().run(context, self) == true, "active screen suite completed")
+	context.check(await TOUCH_AIM.new().run(context, self) == true, "native touch aiming suite completed")
 	context.check(await ARSENAL_SCREEN.new().run(context, self) == true, "M5 screen suite completed")
 	context.check(ARSENAL_TEST.new().run(context) == true, "M5 arsenal suite completed")
+	context.check(await PATCHBOARD_SCREEN.new().run(context, self) == true, "M6 screen suite completed")
+	context.check(PATCHBOARD_TEST.new().run(context) == true, "M6 patchboard suite completed")
+	context.check(await CAMPAIGN_SCREEN.new().run(context, self) == true, "M7 campaign screens suite completed")
+	context.check(CAMPAIGN_TEST.new().run(context) == true, "M7 campaign suite completed")
+	context.check(ENCOUNTER_TEST.new().run(context) == true, "M8 authored encounters suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true

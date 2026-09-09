@@ -1,0 +1,10 @@
+{
+  "nightshift-m6.apk": {
+    "sha256": "4befc15e45b0936b76f5c4fcad221fd973640d317c11b12685f2a863c592153f",
+    "bytes": 29307043
+  },
+  "nightshift-m6-qa.apk": {
+    "sha256": "72d17a0deecce2a9d7d5e12bd30d13fad0067c86e2361ecc3154bbd1df105328",
+    "bytes": 29224715
+  }
+}

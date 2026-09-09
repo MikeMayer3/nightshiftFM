@@ -20,6 +20,7 @@
 [ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.sweep.b3cap.tres" id="19"]
 [resource]
 script = ExtResource("1")
+attack_kind = &"area"
 id = &"main"
 name_key = &"M5_SWEEP_NAME"
 preview_key = &"M5_SWEEP_PREVIEW"

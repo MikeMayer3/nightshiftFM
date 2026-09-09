@@ -1,0 +1,165 @@
+--------- beginning of main
+09-08 15:08:07.118 12449 12512 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+09-08 15:08:07.172 12449 12512 E godot   : WARNING: Failed to load cached shader, recompiling.
+09-08 15:08:07.172 12449 12512 E godot   :    at: _load_from_cache (drivers/gles3/shader_gles3.cpp:615)
+09-08 15:08:09.033 12449 12512 I godot   : OpenGL API OpenGL ES 3.0 (4.1 Metal - 90.5) - Compatibility - Using Device: Google (Apple) - Android Emulator OpenGL ES Translator (Apple M2 Pro)
+09-08 15:08:09.039 12449 12512 I godot   : 
+09-08 15:08:09.442 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+09-08 15:08:09.534 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":50.0,"wave":0}
+09-08 15:08:09.946 12541 12541 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+09-08 15:08:09.949 12541 12541 I AndroidRuntime: Using default boot image
+09-08 15:08:09.949 12541 12541 I AndroidRuntime: Leaving lock profiling enabled
+09-08 15:08:10.016 12541 12541 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+09-08 15:08:11.040 12541 12541 D AndroidRuntime: Shutting down VM
+09-08 15:08:14.405 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":2.01666666666666,"shield":50.0,"wave":1}
+09-08 15:08:17.406 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":5.01666666666665,"shield":50.0,"wave":1}
+09-08 15:08:22.889 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":10.0000000000001,"shield":50.0,"wave":1}
+09-08 15:08:28.374 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":15.0000000000003,"shield":50.0,"wave":1}
+09-08 15:08:33.372 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":20.0000000000001,"shield":50.0,"wave":1}
+09-08 15:08:38.389 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":25.0166666666665,"shield":50.0,"wave":1}
+09-08 15:08:43.389 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":30.0166666666662,"shield":50.0,"wave":1}
+09-08 15:08:48.872 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":35.016666666666,"shield":50.0,"wave":1}
+09-08 15:08:53.873 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":40.0166666666657,"shield":50.0,"wave":1}
+09-08 15:08:59.372 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":45.0166666666654,"shield":50.0,"wave":1}
+09-08 15:09:00.927 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":46.5499999999986,"shield":50.0,"wave":2}
+09-08 15:09:04.388 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":50.0166666666651,"shield":50.0,"wave":2}
+09-08 15:09:09.888 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":55.0166666666648,"shield":50.0,"wave":2}
+09-08 15:09:14.889 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":60.0166666666645,"shield":50.0,"wave":2}
+09-08 15:09:19.888 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":65.0166666666643,"shield":50.0,"wave":2}
+09-08 15:09:25.389 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":70.016666666664,"shield":50.0,"wave":2}
+09-08 15:09:30.388 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":75.0166666666637,"shield":50.0,"wave":2}
+09-08 15:09:35.390 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":80.0166666666634,"shield":50.0,"wave":2}
+09-08 15:09:40.394 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":85.0166666666631,"shield":50.0,"wave":2}
+09-08 15:09:47.377 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":90.0166666666628,"shield":50.0,"wave":2}
+09-08 15:09:48.372 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":91.0166666666628,"shield":50.0,"wave":3}
+09-08 15:09:52.874 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":95.0166666666626,"shield":50.0,"wave":3}
+09-08 15:09:57.872 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":100.016666666662,"shield":50.0,"wave":3}
+09-08 15:10:02.906 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":105.016666666662,"shield":50.0,"wave":3}
+09-08 15:10:07.906 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":110.016666666662,"shield":50.0,"wave":3}
+09-08 15:10:12.906 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":115.016666666661,"shield":50.0,"wave":3}
+09-08 15:10:18.422 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":120.016666666661,"shield":50.0,"wave":3}
+09-08 15:10:23.422 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":125.016666666661,"shield":50.0,"wave":3}
+09-08 15:10:28.427 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":130.016666666662,"shield":50.0,"wave":3}
+09-08 15:10:33.535 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":135.033333333333,"shield":50.0,"wave":3}
+09-08 15:10:38.554 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":140.000000000004,"shield":50.0,"wave":3}
+09-08 15:10:44.283 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":145.000000000008,"shield":50.0,"wave":3}
+09-08 15:10:49.332 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":150.016666666678,"shield":50.0,"wave":3}
+09-08 15:10:55.038 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":155.000000000015,"shield":50.0,"wave":3}
+09-08 15:10:55.994 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":155.966666666683,"shield":50.0,"wave":4}
+09-08 15:11:00.214 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":160.016666666686,"shield":50.0,"wave":4}
+09-08 15:11:05.200 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":165.01666666669,"shield":50.0,"wave":4}
+09-08 15:11:10.221 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":170.016666666694,"shield":50.0,"wave":4}
+09-08 15:11:15.980 12449 12512 I godot   : M2_COMBAT {"actors":12,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":175.000000000031,"shield":50.0,"wave":4}
+09-08 15:11:21.043 12449 12512 I godot   : M2_COMBAT {"actors":13,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":180.050000000035,"shield":50.0,"wave":4}
+09-08 15:11:26.049 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":185.033333333373,"shield":50.0,"wave":4}
+09-08 15:11:31.099 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":190.000000000043,"shield":50.0,"wave":4}
+09-08 15:11:36.783 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":195.033333333381,"shield":50.0,"wave":4}
+09-08 15:11:41.788 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":200.000000000051,"shield":50.0,"wave":4}
+09-08 15:11:46.880 12449 12512 I godot   : M2_COMBAT {"actors":14,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":205.016666666722,"shield":35.0,"wave":4}
+09-08 15:11:52.867 12449 12512 I godot   : M2_COMBAT {"actors":11,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":210.016666666726,"shield":25.8666666666666,"wave":4}
+09-08 15:11:57.949 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":215.01666666673,"shield":50.0,"wave":4}
+09-08 15:12:02.965 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":220.000000000067,"shield":50.0,"wave":4}
+09-08 15:12:07.964 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":225.000000000071,"shield":50.0,"wave":4}
+09-08 15:12:14.910 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":229.050000000074,"shield":50.0,"wave":5}
+09-08 15:12:15.864 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":230.000000000075,"shield":50.0,"wave":5}
+09-08 15:12:20.865 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":235.000000000079,"shield":50.0,"wave":5}
+09-08 15:12:26.427 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":240.01666666675,"shield":50.0,"wave":5}
+09-08 15:12:31.511 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":245.016666666754,"shield":50.0,"wave":5}
+09-08 15:12:36.501 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":250.016666666758,"shield":50.0,"wave":5}
+09-08 15:12:41.532 12449 12512 I godot   : M2_COMBAT {"actors":12,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":255.033333333428,"shield":50.0,"wave":5}
+09-08 15:12:46.980 12449 12512 I godot   : M2_COMBAT {"actors":17,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":260.016666666759,"shield":50.0,"wave":5}
+09-08 15:12:52.060 12449 12512 I godot   : M2_COMBAT {"actors":11,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":265.100000000088,"shield":30.0,"wave":5}
+09-08 15:12:57.038 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":270.033333333416,"shield":47.7333333333333,"wave":5}
+09-08 15:13:02.698 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":275.000000000079,"shield":50.0,"wave":5}
+09-08 15:13:07.734 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":280.033333333407,"shield":50.0,"wave":5}
+09-08 15:13:12.682 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":285.000000000069,"shield":50.0,"wave":5}
+09-08 15:13:18.625 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":290.000000000065,"shield":50.0,"wave":5}
+09-08 15:13:20.030 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":291.433333333397,"shield":50.0,"wave":6}
+09-08 15:13:24.348 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":295.016666666727,"shield":50.0,"wave":6}
+09-08 15:13:29.340 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":300.016666666722,"shield":50.0,"wave":6}
+09-08 15:13:34.347 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":305.033333333385,"shield":50.0,"wave":6}
+09-08 15:13:39.321 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":310.016666666713,"shield":50.0,"wave":6}
+09-08 15:13:45.017 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":315.000000000042,"shield":50.0,"wave":6}
+09-08 15:13:50.034 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":320.000000000038,"shield":50.0,"wave":6}
+09-08 15:13:55.042 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":325.000000000033,"shield":50.0,"wave":6}
+09-08 15:14:00.023 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":330.000000000029,"shield":50.0,"wave":6}
+09-08 15:14:05.027 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":335.000000000024,"shield":50.0,"wave":6}
+09-08 15:14:10.673 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":340.000000000019,"shield":50.0,"wave":6}
+09-08 15:14:15.690 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":345.000000000015,"shield":50.0,"wave":6}
+09-08 15:14:20.690 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":350.00000000001,"shield":50.0,"wave":6}
+09-08 15:14:25.691 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":355.000000000006,"shield":50.0,"wave":6}
+09-08 15:14:30.992 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":360.000000000001,"shield":50.0,"wave":6}
+09-08 15:14:33.651 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":362.083333333333,"shield":50.0,"wave":7}
+09-08 15:14:36.545 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":365.016666666663,"shield":50.0,"wave":7}
+09-08 15:14:41.546 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":370.016666666659,"shield":50.0,"wave":7}
+09-08 15:14:46.548 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":375.016666666654,"shield":50.0,"wave":7}
+09-08 15:14:51.550 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":380.01666666665,"shield":50.0,"wave":7}
+09-08 15:14:57.129 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":385.016666666645,"shield":50.0,"wave":7}
+09-08 15:15:02.194 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":390.016666666641,"shield":50.0,"wave":7}
+09-08 15:15:07.190 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":395.016666666636,"shield":50.0,"wave":7}
+09-08 15:15:12.188 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":400.016666666632,"shield":50.0,"wave":7}
+09-08 15:15:17.762 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":405.016666666627,"shield":50.0,"wave":7}
+09-08 15:15:22.768 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":410.016666666622,"shield":50.0,"wave":7}
+09-08 15:15:27.777 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":415.016666666618,"shield":50.0,"wave":7}
+09-08 15:15:32.763 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":420.016666666613,"shield":50.0,"wave":7}
+09-08 15:15:37.772 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":425.016666666609,"shield":50.0,"wave":7}
+09-08 15:15:43.376 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":430.016666666604,"shield":50.0,"wave":7}
+09-08 15:15:48.379 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":435.0166666666,"shield":50.0,"wave":7}
+09-08 15:15:53.364 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":440.016666666595,"shield":50.0,"wave":7}
+09-08 15:15:58.381 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":445.016666666591,"shield":50.0,"wave":7}
+09-08 15:16:03.611 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":449.533333333253,"shield":50.0,"wave":8}
+09-08 15:16:04.106 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":450.016666666586,"shield":50.0,"wave":8}
+09-08 15:16:09.074 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":455.016666666582,"shield":50.0,"wave":8}
+09-08 15:16:14.663 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":460.033333333244,"shield":50.0,"wave":8}
+09-08 15:16:19.701 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":465.016666666572,"shield":50.0,"wave":8}
+09-08 15:16:24.704 12449 12512 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":470.016666666568,"shield":50.0,"wave":8}
+09-08 15:16:29.701 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":475.016666666563,"shield":50.0,"wave":8}
+09-08 15:16:34.710 12449 12512 I godot   : M2_COMBAT {"actors":16,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":480.016666666559,"shield":50.0,"wave":8}
+09-08 15:16:40.296 12449 12512 I godot   : M2_COMBAT {"actors":13,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":485.016666666554,"shield":50.0,"wave":8}
+09-08 15:16:45.291 12449 12512 I godot   : M2_COMBAT {"actors":15,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":490.01666666655,"shield":39.3333333333333,"wave":8}
+09-08 15:16:50.312 12449 12512 I godot   : M2_COMBAT {"actors":15,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":495.016666666545,"shield":35.3333333333332,"wave":8}
+09-08 15:16:55.303 12449 12512 I godot   : M2_COMBAT {"actors":14,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":500.033333333207,"shield":30.0,"wave":8}
+09-08 15:17:00.306 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":505.016666666536,"shield":27.5333333333333,"wave":8}
+09-08 15:17:05.314 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":510.016666666531,"shield":0.0,"wave":8}
+09-08 15:17:11.211 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":514.966666666527,"shield":38.6666666666666,"wave":9}
+09-08 15:17:11.259 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":515.016666666527,"shield":39.0666666666666,"wave":9}
+09-08 15:17:16.257 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":520.016666666522,"shield":50.0,"wave":9}
+09-08 15:17:21.241 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":525.016666666518,"shield":50.0,"wave":9}
+09-08 15:17:26.258 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":530.016666666513,"shield":50.0,"wave":9}
+09-08 15:17:31.265 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":535.016666666509,"shield":50.0,"wave":9}
+09-08 15:17:36.874 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":540.016666666504,"shield":50.0,"wave":9}
+09-08 15:17:41.857 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":545.0166666665,"shield":50.0,"wave":9}
+09-08 15:17:46.856 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":550.016666666495,"shield":50.0,"wave":9}
+09-08 15:17:51.856 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":555.016666666491,"shield":50.0,"wave":9}
+09-08 15:17:57.373 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":560.016666666486,"shield":50.0,"wave":9}
+09-08 15:18:02.373 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":565.016666666481,"shield":50.0,"wave":9}
+09-08 15:18:07.373 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":570.016666666477,"shield":50.0,"wave":9}
+09-08 15:18:12.373 12449 12512 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":575.016666666472,"shield":50.0,"wave":9}
+09-08 15:18:17.357 12449 12512 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":580.016666666468,"shield":50.0,"wave":9}
+09-08 15:18:22.690 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":585.016666666463,"shield":50.0,"wave":9}
+09-08 15:18:27.690 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":590.016666666459,"shield":50.0,"wave":9}
+09-08 15:18:32.690 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":595.016666666454,"shield":50.0,"wave":9}
+09-08 15:18:37.690 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":600.01666666645,"shield":50.0,"wave":9}
+09-08 15:18:42.590 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":604.499999999779,"shield":50.0,"wave":10}
+09-08 15:18:43.106 12449 12512 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":605.016666666445,"shield":50.0,"wave":10}
+09-08 15:18:48.607 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":610.016666666441,"shield":50.0,"wave":10}
+09-08 15:18:53.607 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":615.016666666436,"shield":50.0,"wave":10}
+09-08 15:18:58.607 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":620.016666666431,"shield":50.0,"wave":10}
+09-08 15:19:03.607 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":625.016666666427,"shield":50.0,"wave":10}
+09-08 15:19:08.606 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":630.016666666422,"shield":50.0,"wave":10}
+09-08 15:19:13.974 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":635.016666666418,"shield":50.0,"wave":10}
+09-08 15:19:18.974 12449 12512 I godot   : M2_COMBAT {"actors":6,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":640.016666666413,"shield":50.0,"wave":10}
+09-08 15:19:23.987 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":645.016666666409,"shield":50.0,"wave":10}
+09-08 15:19:28.973 12449 12512 I godot   : M2_COMBAT {"actors":8,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":650.016666666404,"shield":50.0,"wave":10}
+09-08 15:19:34.223 12449 12512 I godot   : M2_COMBAT {"actors":9,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":655.0166666664,"shield":50.0,"wave":10}
+09-08 15:19:39.223 12449 12512 I godot   : M2_COMBAT {"actors":14,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":660.016666666395,"shield":50.0,"wave":10}
+09-08 15:19:44.207 12449 12512 I godot   : M2_COMBAT {"actors":10,"event":"tick","focus":false,"hull":73.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":665.016666666391,"shield":0.0,"wave":10}
+09-08 15:19:49.225 12449 12512 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":13.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":670.016666666386,"shield":0.0,"wave":10}
+09-08 15:19:54.224 12449 12512 I godot   : M2_COMBAT {"actors":2,"event":"tick","focus":false,"hull":13.8666666666666,"instances":1,"paused":false,"phase":1,"seconds":675.016666666381,"shield":34.5333333333333,"wave":10}
+09-08 15:19:56.177 12449 12512 I godot   : M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":13.8666666666666,"instances":1,"paused":false,"phase":2,"seconds":676.96666666638,"shield":50.0,"wave":10}
+09-08 15:20:47.750 16617 16703 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+09-08 15:20:47.892 16617 16703 E godot   : WARNING: Failed to load cached shader, recompiling.
+09-08 15:20:47.893 16617 16703 E godot   :    at: _load_from_cache (drivers/gles3/shader_gles3.cpp:615)
+09-08 15:20:50.076 16617 16703 I godot   : OpenGL API OpenGL ES 3.0 (4.1 Metal - 90.5) - Compatibility - Using Device: Google (Apple) - Android Emulator OpenGL ES Translator (Apple M2 Pro)
+09-08 15:20:50.092 16617 16703 I godot   : 
+09-08 15:20:51.003 16617 16703 I godot   : M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":158.616666666685,"shield":50.0,"wave":3}

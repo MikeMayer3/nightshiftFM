@@ -1,5 +1,221 @@
 # Implementation status
 
+## M8 started — three authored opening missions (2026-09-08)
+
+**Outcome: the first M8 playable increment is implemented and desktop-verified.**
+The owner requested the next milestone be started. New missions 1–3 now use
+30 authored waves, four formation layouts, distinct family sequencing/tempo,
+three family elites introduced before their finales, and mission briefings.
+Missions 4–12 retain their explicit prototype labels. M8 is not complete.
+See [M8 encounter contracts, commands, changed components and remaining scope](M8_ENCOUNTERS.md).
+
+| Check | Result |
+|---|---|
+| Pinned Godot import and desktop smoke | PASS |
+| Full regression including earlier milestones | PASS — 4,326 checks, zero failures |
+| Foundation | PASS — seven checks |
+| Opening mission playthrough matrix | PASS — 27/27 victories; three missions, three starting-support preferences, three seeds |
+| Real decision restore-and-continue | PASS — 662 checkpoints; rewards and atomic saves validated |
+| Desktop viewport input/layout | PASS — 36 checks at 360×640, 450×800, 450×950 |
+| Clean-copy generation/import/regression/smoke | PASS — identical generated content; 4,326 checks, zero failures |
+| M8 mobile export/emulator/physical-device checks | NOT RUN |
+| Human progression, challenge and pacing acceptance | NOT RUN |
+| Remaining M8 and M9 | M8 OPEN; M9 NOT STARTED |
+
+New opening runs use `m8.encounters.1`; restored M7 runs keep `m7.1` and their
+original encounters. Profile schemas, saved player progress and permanent combat
+baselines remain compatible. Source changes preserve the existing local M6/M7
+work on `main`. Changed files include the encounter generator/data/registry,
+WaveDefinition, CombatSession, SignalSnapshot, CampaignPanel, localized strings,
+generator preservation, unit/integration/playthrough/visual checks and docs.
+
+Simulation evidence is deliberately limited: 25/27 runs ended at full hull,
+minimum 65.08 hull, 477.68–574.97 simulated seconds. These policies recruit
+multiple supports while favoring the named family; they do not establish all
+campaign archetypes or human pacing acceptance. Art remains original placeholders.
+
+Evidence: `docs/evidence/M8/`, including complete playthrough decisions and
+checkpoint counts, regression/foundation/import/smoke logs and viewport images.
+The existing Android APK remains M7; no M8 build was installed on the phone.
+No commit, push or publication was performed.
+
+---
+
+## M7 implemented and emulator-verified (2026-09-08)
+
+**Outcome: playable M7 is ready for owner progression playtesting.** The owner
+requested the remaining M6 emulator gate and authorized M7 if satisfactory.
+That gate passed; M7 now implements campaign selection, first-clear equipment
+unlocks, two slots for twelve tradeoff modules, three loadout presets, cosmetic
+mastery, recipe codex, medals and best mission records. M8 has not started.
+
+The twelve campaign entries are explicitly labeled reused prototype battles;
+M8 will supply mission-specific encounters. New missions reset to the chosen
+chassis/module baseline. Saves migrate old profiles and preserve legacy runs.
+See [M7 progression](M7_PROGRESSION.md) for contracts, the exact unlock schedule,
+changed components and reproduction commands.
+
+| Check | Result |
+|---|---|
+| Pinned import and desktop smoke | PASS |
+| Regression | PASS — 4,140 checks, zero failures |
+| Foundation | PASS — seven tests |
+| Module coverage | PASS — all 66 active module-pair round trips; 1,782 rank-8 stat-envelope checks |
+| First four mission simulations | PASS — four victories, 120 decision checkpoint restores, exact unlocks and atomic saves |
+| Desktop input/layout | PASS — 33 checks at 360×640, 450×800 and 450×950 |
+| Normal-speed Android starter build | PASS — wave 10 victory, 100 hull, 632.43 simulated seconds / 653.81 wall seconds, median 60 FPS, all 30 choices audited |
+| Native progression commit | PASS — first clear, three medals and Arc mastery color saved once |
+| Native module/preset/recovery UI | PASS — seven checks using actual taps/swipes and labeled progress fixtures |
+| Android 0.7.0/code 11 export, install and menu launch | PASS — isolated emulator; regular package |
+| Human first-four-mission teaching/pacing gate | NOT RUN |
+| M7 on physical Pixel | NOT RUN — existing 0.6.1 installation and player saves untouched |
+| M8 | NOT STARTED |
+
+The first native campaign attempt used a two-support charge/control policy and
+lost at wave 4. It saved defeat without granting progress. This result is retained,
+not counted as a victory. A second attempt recruited all three opening families
+and completed the mission. Human balance investigation remains appropriate;
+these two attempts do not establish that every opening build is equally viable.
+
+Native checks found no Godot script errors or Android fatal exceptions. Android
+signing emits the SDK's Java native-access deprecation warning; APK verification
+succeeds. QA full-run and UI APK source manifests record their exact revisions:
+the full run preceded final preset-scroll and hull-caption refinements, which
+were covered by subsequent UI/regression checks and the final regular APK build.
+QA progress fixtures are not evidence of earned native twelve-mission completion.
+
+Key additions: `scripts/campaign/`, `scripts/ui/campaign_panel.gd`, campaign and
+module Resources, `tools/generate_campaign_content.py`, campaign unit/screen
+checks, `tests/campaign_playthrough.gd`, `tests/visual_campaign.gd` and native QA
+observers/drivers. Existing Boot/ArsenalPicker, combat stat derivation, result/HUD
+captions, patchboard damage derivation and profile/run validation were extended.
+Presets now copy selections independently; continued snapshots retain module
+limits and spent rerolls. UI scrolling and preset persistence were exercised on
+Android, not inferred solely from button signals.
+
+Artifacts: `builds/android/nightshift-m7.apk`,
+`docs/evidence/M7/summary.json`, native result/saves/screenshots, source manifests,
+and final import/regression/foundation/smoke/visual text logs. No commit, push or
+release publication was performed. The development branch remains `main` with
+local M6/M7 changes.
+
+---
+
+## M6 emulator gate passed; M7 authorized (2026-09-08)
+
+The owner authorized emulator validation of remaining M6 checks and proceeding
+to M7 if satisfactory. All three normal-speed Android builds won: charge/control
+(13.87 hull), group/repeats (100 hull), marked/replays (100 hull). Both recipes
+triggered in each build; all 88 upgrade selections matched their intended policy.
+Median emulator FPS: 55 / 60 / 60; peak pending effects: 3 / 8 / 20.
+Native intermission force-stop recovery restored an identical checkpoint. Seven
+unplug/reconnect/duplicate/cooldown checks passed. Regression: 1,938 / 0 failures.
+No observed Godot script errors or Android fatal exceptions. Evidence:
+`docs/evidence/M6-emulator/summary.json` and the per-run logs/screenshots.
+
+This satisfies the owner-authorized emulator gate. It does not certify human
+fun/pacing or sustained physical-phone performance. The owner separately
+confirmed the Burst gesture works on their Pixel. M7 results are recorded above.
+
+
+## M6 touch correction — 0.6.1 (2026-09-08)
+
+**PASS:** Installed Android 0.6.1/code 10 on the connected Pixel 10 Pro XL.
+Dragging from **Burst** now acquires battlefield aim and fires at release;
+tapping retains automatic targeting. The previous button was tap-only despite
+its label. Native touch/drag events now have explicit finger ownership and
+cancellation, with emulated mouse duplicates excluded from arena gestures.
+
+Changed: CombatArena, CombatScreen, localized Burst label/help, Android version,
+`tests/integration/test_touch_aim.gd`, the test runner, `tests/touch_playtest.gd`,
+`tools/build_emulator_playtest.py --touch`, and `tools/check_android_touch.py`.
+No combat coefficients or saved-content versions changed.
+
+- PASS: pinned import, **1,938 regression checks / 0 failures**, seven foundation checks and desktop smoke.
+- PASS: physical Pixel ADB gestures reproduce the old button-origin failure and verify the fixed button-origin and battlefield-origin paths (ring tracks selected group, one Burst, five fixture kills, aim cleared).
+- PASS: regular APK export/signature and `adb install -r`; both existing JSON save files validate and have identical SHA-256 hashes before update, after update and after menu launch.
+- NOT RUN: human usability acceptance and a full physical-phone mission for this correction.
+
+Exact commands, QA fixture limits, exploratory coordinate correction, artifacts
+and install hashes: [M6 touch fix](M6_TOUCH_FIX.md) and `docs/evidence/M6-touch/`.
+The original 0.6.0 report below remains historical; its “phone untouched” statement
+applies to the earlier milestone implementation checks, before the requested installs.
+
+---
+
+## Original M6 implementation report (0.6.0)
+
+Evidence revision: **M6 — patchboard synergies**
+Date: **2026-09-08** (America/Chicago)
+Requested milestone: **Next milestone after M5: M6 only**, authorized by the owner.
+Outcome: **Playable M6 implemented; human acceptance remains NOT RUN.**
+
+See [M6 patchboard](M6_PATCHBOARD.md) for exact recipe coefficients, controls,
+save contracts, reproduction commands and evidence limits. M7 has not started.
+The earlier M4/M5 human gates remain recorded as unverified.
+
+| Scope | Implementation |
+|---|---|
+| Connections | Two distinct recipes, shared endpoints allowed, no support-slot consumption |
+| Eight recipes | Ball Lightning, Dead Zone, B-Side, Live Wire, Pressure Drop, Double Drop, Needle Thread and Feedback Loop |
+| Intermissions | Interactive wiring tutorial before wave 1; ready recipes first, all prerequisites visible; player-confirmed next wave; no rewiring inside a Signal upgrade |
+| Bounded effects | Recipe cooldowns, finite target caps, direct-execution hooks, generated source/root/depth/flags, elite interruption resistance and fallback |
+| Discovery and report | First-trigger discovery; effective generated damage, assisted weapon damage, granted jam duration, interrupt and intercept counts |
+| Saves | New `m6.1` runs; schema-2 profile discovery with schema-1 migration; slots, hold, counters, cooldowns and report saved with actors/effects/RNG; older run rules retained |
+| Android | Debug 0.6.0/code 9; separate QA package with identical runtime and ordinary boot scene |
+
+Primary files: `content/synergies/`, `tools/generate_patchboard_content.py`,
+`scripts/patchboard/{patchboard_content,patchboard_state}.gd`,
+`scripts/ui/patchboard_panel.gd`, and integrations in CombatSession,
+ArsenalCombat, CombatScreen, SignalSnapshot, MissionProfile, DraftPanel and
+BootScreen. The SynergyDefinition skeleton now validates bounded recipe data.
+Localization, project/export metadata, documentation and foundation count updated.
+Tests: `tests/unit/test_patchboard.gd`, `tests/integration/test_patchboard_screen.gd`,
+`tests/{visual_patchboard,patchboard_stress,patchboard_balance}.gd` and the runner.
+`tools/build_patchboard_playtest.py` creates the isolated emulator export.
+
+Commands run from this checkout with
+`GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot`; Android commands also use
+`JAVA_HOME=/Applications/Android Studio.app/Contents/jbr/Contents/Home` and
+`ANDROID_HOME=/Users/michaelmayer/Library/Android/sdk`.
+
+| Check | Command / evidence | Result |
+|---|---|---|
+| Pinned import | `sh tools/godot.sh import` | PASS — 4.7.2.stable.official.ed1daf0bf |
+| Full regression | `sh tools/godot.sh test` | PASS — **1,922 checks, 0 failures** |
+| Foundation | `python3 tools/check_foundation.py` | PASS — 7 checks; 371 immutable resources |
+| Clean source | Temporary source copy with no `.godot` cache; import, same regression, foundation and smoke | PASS — import, 1,922 regression checks, 7 foundation checks and smoke; `fresh-checks.json` |
+| Desktop UI | `$GODOT_BIN --path . --script res://tests/visual_patchboard.gd` | PASS — 9 checks; actual viewport clicks; 360×640, 450×800, 450×950; no horizontal overflow |
+| Combined stress | `$GODOT_BIN --headless --path . --script res://tests/patchboard_stress.gd` | PASS — all 28 recipe pairs; 150 enemies + 400 projectiles initially per fixture; ten simulated seconds each; peak 11 pending effects; max 12 recipe damage hits per root |
+| Build reachability | `$GODOT_BIN --headless --path . --script res://tests/patchboard_balance.gd` | PASS — 9 complete simulations, 9 victories; three recipe combinations × three mains; both intended recipes triggered; valid results checkpoints |
+| Regular Android export | `sh tools/godot.sh android-debug` | PASS — `builds/android/nightshift-m6.apk` |
+| Isolated Android export | `python3 tools/build_patchboard_playtest.py --output builds/android/nightshift-m6-qa.apk` | PASS — 533 runtime files match current source; only Android package and app label differ |
+| APK signatures | `$ANDROID_HOME/build-tools/36.1.0/apksigner verify` on both APKs | PASS — existing Java native-access warning only |
+| Native emulator | `adb -s emulator-5554 install -r builds/android/nightshift-m6-qa.apk`, launch `org.nightshiftfm.patchboardqa/com.godot.game.GodotAppLauncher`, actual touch input and force-stop/relaunch | PASS — wiring, duplicate prevention, unplug/reconnect, Go live, wiring recovery, real combat to Signal choice, identical recovered offers, one accepted choice and retained connection; zero observed Godot script/fatal Android errors |
+| Human acceptance / final art | Three different connection builds and intermission pacing | NOT RUN |
+| Physical phone / iOS M6 | Device playability and sustained performance | NOT RUN |
+| Full Android M6 mission | Emulator check covers early combat and recovery | NOT RUN; full missions above are headless simulations |
+
+Evidence is under `docs/evidence/M6/`. Automated build-policy wins are not human
+fun or difficulty validation. The CPU stress uses stationary high-health targets;
+it is not a phone FPS claim. The QA package is installed on the emulator and left
+at its menu. The regular emulator app and physical phone apps/saves were untouched.
+
+Two defects found during implementation were corrected: numeric JSON profile
+schema validation rejected floating-point schema values, and the old lifecycle
+test's 80ms timer could expire on the deliberately skipped first resume frame.
+The migration now validates integral numeric schemas; the lifecycle test observes
+four actual process frames. Regression covers these paths. Available recipes were
+moved above unavailable ones after desktop inspection so the first tutorial
+connection is immediately visible.
+
+No commit, push, store upload or publication was performed. Stop after M6.
+
+---
+
+# Historical M5 implementation report
+
+
 Evidence revision: **M5 — six-family arsenal**
 Date: **2026-09-08** (America/Chicago)
 Requested milestone: **M5 only**, explicitly authorized by the owner.

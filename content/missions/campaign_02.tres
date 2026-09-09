@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"campaign.02"
+name_key = &"M7_MISSION_2"
+description_key = &"M7_MISSION_2_DESC"
+campaign_index = 2
+prototype = false
+wave_ids = Array[StringName]([&"m8.m02.w01", &"m8.m02.w02", &"m8.m02.w03", &"m8.m02.w04", &"m8.m02.w05", &"m8.m02.w06", &"m8.m02.w07", &"m8.m02.w08", &"m8.m02.w09", &"m8.m02.w10"])

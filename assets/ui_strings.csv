@@ -31,7 +31,7 @@ PROBE_SAVE_ERROR,Save failed. The checkpoint was not committed.
 PROBE_LOAD_ERROR,Checkpoint is invalid. No data was loaded.
 PROBE_SAFE_INFO,Green border: safe canvas area %s. Controls must stay inside it. Native achievements are unavailable in this spike.
 COMBAT_WAVE,Nightshift / Wave %d of %d
-COMBAT_HEALTH,Hull %.0f / 100                  Shield %.0f / 50
+COMBAT_HEALTH,Hull %.0f / %.0f                  Shield %.0f / %.0f
 COMBAT_PAUSE,Pause
 COMBAT_RESUME,Resume
 COMBAT_RESTART,Restart mission
@@ -58,7 +58,7 @@ COMBAT_RESULTS,"Wave %d / 3 · %.1f seconds
 Threats stopped: %d
 Shots intercepted: %d
 Enemies breached: %d
-Hull remaining: %.0f / 100
+Hull remaining: %.0f / %.0f
 
 %s"
 COMBAT_NO_DAMAGE,No damage
@@ -151,7 +151,7 @@ M3_RETRY,Retry checkpoint
 M3_FRESH,Discard this mission · Start fresh
 M3_CORRUPT,"No compatible checkpoint could be recovered from the save, temporary file or backup. Retry after restoring a valid file, or start fresh. Starting fresh also resets an unrecoverable local profile."
 M3_SAVE_ERROR,The checkpoint could not be written. Combat is paused. Retry saving to keep this choice; returning to the menu loads the last durable checkpoint.
-M3_HEALTH,Hull %.0f / 100         Shield %.0f / %.0f
+M3_HEALTH,Hull %.0f / %.0f         Shield %.0f / %.0f
 M3_ABILITY_HINT,75%% less damage for %.1fs · %.1fs cooldown
 M3_PAUSE_BODY,"The mission is frozen.
 
@@ -163,7 +163,7 @@ M3_RESULTS,"Wave %d / 10 · %.1f seconds
 Threats stopped: %d
 Shots intercepted: %d
 Enemies breached: %d
-Hull remaining: %.0f / 100
+Hull remaining: %.0f / %.0f
 
 %s
 
@@ -467,11 +467,11 @@ Continue restores the latest upgrade decision or wave checkpoint, including enem
 SIGNAL_HELP,Reroll spends one token to redraw offers. Banish removes a tuning card for this run. New weapons and branch choices cannot be banished.
 SIGNAL_FULL,Signal full
 ACTIVE_WAVE,Wave %d / %d
-ACTIVE_BURST,Burst · Aim and release
+ACTIVE_BURST,Burst · Tap or drag
 ACTIVE_WAIT,Burst · %ds
-ACTIVE_PAUSE,"Aim and release on a group to fire a burst. It also interrupts shooters and clears nearby shots.
+ACTIVE_PAUSE,"Tap Burst to hit the automatic target. Drag from Burst onto a group and release to aim your shot. Drag back off the battlefield to cancel.
 
-Drag to direct automatic fire. The Burst button fires at your current target.
+You can also aim directly on the battlefield. Bursts interrupt shooters and clear nearby shots.
 
 Kills fill Signal. Upgrades pause the fight. Continue restores the latest wave or upgrade checkpoint."
 ACTIVE_REPORT,Aimed bursts: %d · Damage: %.0f
@@ -1233,3 +1233,185 @@ M5_FEEDBACK_B3CAP_SHORT,+60% retaliation charge
 M5_FEEDBACK_B3CAP_DESC,+60% retaliation charge.
 M5_FEEDBACK_NAME,Feedback
 M5_FEEDBACK_PREVIEW,Retaliation / projectile reflection
+M6_BALL_LIGHTNING_NAME,Ball Lightning
+M6_BALL_LIGHTNING_DESC,Three direct Arc hits on Charged enemies inside a Well discharge 18 damage to up to 6 enemies. 1.5s cooldown.
+M6_DEAD_ZONE_NAME,Dead Zone
+M6_DEAD_ZONE_DESC,Bass hits on Net-slowed enemies jam up to 6 targets for 0.45s. 0.5s pulse cooldown; elites resist interruption.
+M6_B_SIDE_NAME,B-Side
+M6_B_SIDE_DESC,"Echo replays prefer marked enemies within replay reach. Works with precision shots, volleys and beams."
+M6_LIVE_WIRE_NAME,Live Wire
+M6_LIVE_WIRE_DESC,Net ticks charge up to 6 enemies once per second. Maximum 3 Charged stacks; creates no Arc attack.
+M6_PRESSURE_DROP_NAME,Pressure Drop
+M6_PRESSURE_DROP_DESC,"Each Bass activation gains 8% extra damage per enemy in its overlap with a Well, up to 6. Each enemy counts once. 0.8s cooldown."
+M6_DOUBLE_DROP_NAME,Double Drop
+M6_DOUBLE_DROP_DESC,Every third direct Bass activation adds a 40% damage repeat to up to 6 targets. 0.8s cooldown; repeats cannot repeat.
+M6_NEEDLE_THREAD_NAME,Needle Thread
+M6_NEEDLE_THREAD_DESC,A main shot aimed at a mark pierces one extra target; a volley gains 20 armor penetration; a beam gains 10% damage. Echoes do not inherit this bonus.
+M6_FEEDBACK_LOOP_NAME,Feedback Loop
+M6_FEEDBACK_LOOP_DESC,"A shield break emits 28 damage in a 320-radius pulse, up to 8 targets. 12s cooldown. The pulse never restores shield or triggers retaliation."
+M6_TITLE,Patchboard
+M6_TUTORIAL,"Tap a slot, then connect a ready recipe below. Wire up to two; shared weapons are allowed. Start the wave when ready."
+M6_INTERMISSION,"Wave %d next. Rewire your two connections, then go live."
+M6_LAUNCH,Go live →
+M6_SLOT,%d · %s
+M6_EMPTY,Empty
+M6_UNPLUG,Unplug slot %d
+M6_DISCOVERED,Discovered
+M6_CONNECT,Connect to slot %d
+M6_CONNECTED,Connected · slot %d
+M6_MISSING,not equipped
+M6_MARK_REQUIRED,Marking Pins branch required
+M6_SLOW_REQUIRED,Net slow required
+M6_REPORT_TITLE,Connection output
+M6_REPORT_HINT,Assisted damage is already counted under its weapon. Jam seconds show granted interruption; resistant enemies also get a brief ability slowdown.
+M6_REPORT_ROW,"%d triggers · %.0f damage · %.0f assisted
+%.1fs jam · %d interrupts · %d intercepts"
+M7_MODULE_HOT_TUBES,Hot Tubes
+M7_MODULE_HOT_TUBES_DESC,+15% auto-attack rate; −20% shield recharge.
+M7_MODULE_LONG_MAST,Long Mast
+M7_MODULE_LONG_MAST_DESC,+20% targeting range; −10% maximum hull.
+M7_MODULE_HEAVY_BATTERY,Heavy Battery
+M7_MODULE_HEAVY_BATTERY_DESC,+25% shield capacity; −20% shield recharge.
+M7_MODULE_FAST_FUSE,Fast Fuse
+M7_MODULE_FAST_FUSE_DESC,−15% shield-ability cooldown; −15% shield capacity.
+M7_MODULE_SIGNAL_BOOSTER,Signal Booster
+M7_MODULE_SIGNAL_BOOSTER_DESC,+15% additive attack damage; +1 second shield recharge delay.
+M7_MODULE_QUIET_ROOM,Quiet Room
+M7_MODULE_QUIET_ROOM_DESC,+25% shield recharge; −10% support activation rate.
+M7_MODULE_WIDEBAND_MODULE,Wideband Module
+M7_MODULE_WIDEBAND_MODULE_DESC,+20% area radius; −15% direct attack damage.
+M7_MODULE_NARROWBAND_MODULE,Narrowband Module
+M7_MODULE_NARROWBAND_MODULE_DESC,+20% direct attack damage; −15% area radius.
+M7_MODULE_COUNTERWEIGHT,Counterweight
+M7_MODULE_COUNTERWEIGHT_DESC,+25% push and pull force; −10% projectile travel speed.
+M7_MODULE_THIN_WIRE,Thin Wire
+M7_MODULE_THIN_WIRE_DESC,+30% Charged duration; −10% shield capacity.
+M7_MODULE_NIGHT_LEDGER,Night Ledger
+M7_MODULE_NIGHT_LEDGER_DESC,+1 run reroll; −10% main attack damage.
+M7_MODULE_GLASS_TOWER,Glass Tower
+M7_MODULE_GLASS_TOWER_DESC,+10 percentage points main critical chance; −15% maximum hull.
+M7_MISSION_1,Rooftops 1 · First Transmission
+M7_MISSION_1_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M7_MISSION_2,Rooftops 2 · Carrier Traffic
+M7_MISSION_2_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M7_MISSION_3,Rooftops 3 · Crossed Wires
+M7_MISSION_3_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M7_MISSION_4,Rooftop Relays · 4
+M7_MISSION_4_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_5,Flooded Switchyard · 5
+M7_MISSION_5_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_6,Flooded Switchyard · 6
+M7_MISSION_6_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_7,Flooded Switchyard · 7
+M7_MISSION_7_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_8,Flooded Switchyard · 8
+M7_MISSION_8_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_9,Dead Band · 9
+M7_MISSION_9_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_10,Dead Band · 10
+M7_MISSION_10_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_11,Dead Band · 11
+M7_MISSION_11_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_MISSION_12,Dead Band · 12
+M7_MISSION_12_DESC,Prototype battle: reuses the current ten-wave encounter. Authored campaign battles arrive in M8.
+M7_CAMPAIGN,Campaign
+M7_PERSISTENCE,"Keep equipment unlocks, presets, discoveries, medals and cosmetic mastery. Every mission resets ranks, recruits, connections and temporary upgrades."
+M7_PROGRESS,%d / %d missions cleared
+M7_PROTOTYPE,Prototype campaign · These missions currently reuse the ten-wave battle. New encounters are still in development.
+M7_NEXT_UNLOCK,Next: %s
+M7_EQUIP,Choose equipment →
+M7_CODEX,Recipe codex
+M7_RECORDS,Medals & mastery
+M7_PRESET_MIGRATION,An older preset was adjusted to the available equipment. Review it before launching.
+M7_UNLOCK_1,Clear mission 1 to open mission 2. Ranks reset for each mission.
+M7_UNLOCK_2,Clear mission 2 for Echo Deck and patchboard connections.
+M7_UNLOCK_3,Clear mission 3 for Reverb Well and the Relay shield.
+M7_UNLOCK_4,"Clear mission 4 for Needle Swarm, Sweep and your first two modules."
+M7_UNLOCK_LATER,First clears open more missions and equipment. Module rewards begin after mission 4.
+M7_CODEX_HINT,Discover a recipe by triggering it during a mission. Connections unlock after mission 2 and still require the listed equipment.
+M7_UNDISCOVERED,Not triggered yet
+M7_MASTERY_HINT,A completed mission with a rank-8 support unlocks its station color. Complete all three distinct capstones to earn its Full Range title. These rewards change no combat stats.
+M7_DEFAULT_SKIN,Default station color
+M7_MASTERY_COUNT,%d / 3 capstones
+M7_MASTER_TITLE,%s · Full Range
+M7_MEDAL_CLEAR,Clear
+M7_MEDAL_NO_BREACH,No breaches
+M7_MEDAL_INTACT_HULL,Intact hull
+M7_BEST,Best hull: %.0f%% · Fastest clear: %.1fs
+M7_MODULE_SLOTS,Modules · %d / %d
+M7_MODULE_LOCKED,Your two module slots open after mission 4. Modules trade one strength for a weakness.
+M7_PREVIEW,"Starting hull %.0f · Shield %.1f
+Recharge %.2f/s after %.1fs · Shield ability %.1fs
+Main damage %.2f · Interval %.2fs · Range %.0f · Crit %.0f%%
+Run rerolls %d"
+M7_PRESETS,Loadout presets
+M7_SAVE_PRESET,Save %d
+M7_LOAD_PRESET,Load %d
+M7_SAVED,Saved on this device.
+M7_BURST_PREVIEW,Aimed Burst: %.2f damage · %.0f radius
+M8_ELITE_SWARMER,Elite Swarmer
+M8_ELITE_SWARMER_DESC,"Gold-ring veteran: more health, familiar attack tells and counters."
+M8_ELITE_CARRIER,Elite Carrier
+M8_ELITE_CARRIER_DESC,"Gold-ring veteran: more health, familiar attack tells and counters."
+M8_ELITE_DIVER,Elite Diver
+M8_ELITE_DIVER_DESC,"Gold-ring veteran: more health, familiar attack tells and counters."
+M8_M1_W1,First Transmission · Wave 1
+M8_M1_W1_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W2,First Transmission · Wave 2
+M8_M1_W2_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W3,First Transmission · Wave 3
+M8_M1_W3_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W4,First Transmission · Wave 4
+M8_M1_W4_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W5,First Transmission · Wave 5
+M8_M1_W5_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W6,First Transmission · Wave 6
+M8_M1_W6_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W7,First Transmission · Wave 7
+M8_M1_W7_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W8,First Transmission · Wave 8
+M8_M1_W8_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W9,First Transmission · Wave 9
+M8_M1_W9_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M1_W10,First Transmission · Wave 10
+M8_M1_W10_DESC,Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.
+M8_M2_W1,Carrier Traffic · Wave 1
+M8_M2_W1_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W2,Carrier Traffic · Wave 2
+M8_M2_W2_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W3,Carrier Traffic · Wave 3
+M8_M2_W3_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W4,Carrier Traffic · Wave 4
+M8_M2_W4_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W5,Carrier Traffic · Wave 5
+M8_M2_W5_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W6,Carrier Traffic · Wave 6
+M8_M2_W6_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W7,Carrier Traffic · Wave 7
+M8_M2_W7_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W8,Carrier Traffic · Wave 8
+M8_M2_W8_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W9,Carrier Traffic · Wave 9
+M8_M2_W9_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M2_W10,Carrier Traffic · Wave 10
+M8_M2_W10_DESC,Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.
+M8_M3_W1,Crossed Wires · Wave 1
+M8_M3_W1_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W2,Crossed Wires · Wave 2
+M8_M3_W2_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W3,Crossed Wires · Wave 3
+M8_M3_W3_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W4,Crossed Wires · Wave 4
+M8_M3_W4_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W5,Crossed Wires · Wave 5
+M8_M3_W5_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W6,Crossed Wires · Wave 6
+M8_M3_W6_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W7,Crossed Wires · Wave 7
+M8_M3_W7_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W8,Crossed Wires · Wave 8
+M8_M3_W8_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W9,Crossed Wires · Wave 9
+M8_M3_W9_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."
+M8_M3_W10,Crossed Wires · Wave 10
+M8_M3_W10_DESC,"Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6."

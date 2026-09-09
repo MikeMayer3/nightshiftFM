@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SynergyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/synergy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"dead_zone"
+name_key = &"M6_DEAD_ZONE_NAME"
+description_key = &"M6_DEAD_ZONE_DESC"
+endpoint_ids = Array[StringName]([&"static_net", &"bass_driver"])
+capability = &"slowed"
+cooldown = 0.5
+target_cap = 6
+threshold = 1
+damage = 0
+radius = 120
+duration = 0.45
+coefficient = 0

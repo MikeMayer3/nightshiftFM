@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.elite_carrier"
+name_key = &"M8_ELITE_CARRIER"
+description_key = &"M8_ELITE_CARRIER_DESC"
+elite = true
+health = 115.0
+speed = 26.0
+radius = 34.0
+breach_damage = 36.0
+path_kind = 2
+child_id = &"m2.swarmer"
+child_limit = 3
+projectile_limit = 3
+ability_interval = 3.0

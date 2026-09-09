@@ -1,0 +1,41 @@
+[
+  {
+    "check": "import",
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "import"
+    ],
+    "exit_code": 0,
+    "passed": true
+  },
+  {
+    "check": "regression",
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "test"
+    ],
+    "exit_code": 0,
+    "passed": true
+  },
+  {
+    "check": "foundation",
+    "command": [
+      "python3",
+      "tools/check_foundation.py"
+    ],
+    "exit_code": 0,
+    "passed": true
+  },
+  {
+    "check": "smoke",
+    "command": [
+      "sh",
+      "tools/godot.sh",
+      "smoke"
+    ],
+    "exit_code": 0,
+    "passed": true
+  }
+]

@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":478.549999999893,"seed":11,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":469,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":530.449999999846,"seed":11,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":2,"cause":"M8_ELITE_DIVER","choices":28,"hull":100.0,"kills":557,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":560.666666666485,"seed":11,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":482.966666666556,"seed":42,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":480,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":534.383333333176,"seed":42,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":15,"cause":"M2_DIVER_NAME","choices":28,"hull":99.8,"kills":558,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":574.966666666472,"seed":42,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":488.883333333217,"seed":91,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":471,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":532.299999999845,"seed":91,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":26,"cause":"M2_SWARMER_NAME","choices":28,"hull":65.0766666666668,"kills":552,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":573.033333333141,"seed":91,"style":"arc_aerial","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":477.683333333228,"seed":11,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":435,"mission":2,"profile_cleared":2,"restores":22,"saved":true,"seconds":521.949999999854,"seed":11,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":27,"hull":100.0,"kills":543,"mission":3,"profile_cleared":3,"restores":27,"saved":true,"seconds":557.533333333155,"seed":11,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":7,"cause":"M2_SWARMER_NAME","choices":22,"hull":100.0,"kills":418,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":493.54999999988,"seed":42,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":465,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":527.166666666516,"seed":42,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":4,"cause":"M2_SWARMER_NAME","choices":28,"hull":100.0,"kills":554,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":568.849999999811,"seed":42,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":2,"cause":"M2_SWARMER_NAME","choices":22,"hull":100.0,"kills":423,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":491.983333333215,"seed":91,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":474,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":536.866666666507,"seed":91,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":4,"cause":"M8_ELITE_DIVER","choices":28,"hull":100.0,"kills":562,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":568.149999999812,"seed":91,"style":"bass_driver","victory":true,"wave":10}
+{"breaches":3,"cause":"M2_SWARMER_NAME","choices":22,"hull":100.0,"kills":422,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":493.116666666547,"seed":11,"style":"static_net","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":24,"hull":100.0,"kills":474,"mission":2,"profile_cleared":2,"restores":24,"saved":true,"seconds":531.133333333179,"seed":11,"style":"static_net","victory":true,"wave":10}
+{"breaches":8,"cause":"M8_ELITE_DIVER","choices":28,"hull":100.0,"kills":554,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":562.88333333315,"seed":11,"style":"static_net","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":487.366666666552,"seed":42,"style":"static_net","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":25,"hull":100.0,"kills":481,"mission":2,"profile_cleared":2,"restores":25,"saved":true,"seconds":540.466666666504,"seed":42,"style":"static_net","victory":true,"wave":10}
+{"breaches":5,"cause":"M8_ELITE_DIVER","choices":27,"hull":100.0,"kills":541,"mission":3,"profile_cleared":3,"restores":27,"saved":true,"seconds":558.883333333154,"seed":42,"style":"static_net","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":22,"hull":100.0,"kills":425,"mission":1,"profile_cleared":1,"restores":22,"saved":true,"seconds":484.649999999888,"seed":91,"style":"static_net","victory":true,"wave":10}
+{"breaches":0,"cause":"COMBAT_NO_DAMAGE","choices":23,"hull":100.0,"kills":455,"mission":2,"profile_cleared":2,"restores":23,"saved":true,"seconds":528.933333333181,"seed":91,"style":"static_net","victory":true,"wave":10}
+{"breaches":2,"cause":"M8_ELITE_DIVER","choices":28,"hull":100.0,"kills":549,"mission":3,"profile_cleared":3,"restores":28,"saved":true,"seconds":559.14999999982,"seed":91,"style":"static_net","victory":true,"wave":10}
+RESULT: 27 victories / 27 runs; valid=true

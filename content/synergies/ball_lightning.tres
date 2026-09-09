@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SynergyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/synergy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"ball_lightning"
+name_key = &"M6_BALL_LIGHTNING_NAME"
+description_key = &"M6_BALL_LIGHTNING_DESC"
+endpoint_ids = Array[StringName]([&"arc_aerial", &"reverb_well"])
+capability = &""
+cooldown = 1.5
+target_cap = 6
+threshold = 3
+damage = 18
+radius = 120
+duration = 0
+coefficient = 0

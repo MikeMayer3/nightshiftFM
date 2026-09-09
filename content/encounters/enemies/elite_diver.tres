@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/enemy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.elite_diver"
+name_key = &"M8_ELITE_DIVER"
+description_key = &"M8_ELITE_DIVER_DESC"
+elite = true
+health = 52.0
+speed = 43.0
+radius = 26.0
+breach_damage = 26.0
+path_kind = 1

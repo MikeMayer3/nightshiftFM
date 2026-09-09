@@ -3,15 +3,15 @@ extends RefCounted
 ## Explicit numeric-only effect envelopes. No object or callable deserialization.
 const SCALARS: Dictionary = {"restore_wait": 2, "reservoir": 20, "overshield": 40, "overshield_left": 10, "echo_count": 10000, "shield_charge": 80, "emergency_wait": 30, "peak_pending": 256}
 const BOUNDS: Dictionary = {
-	"damage": [0, 200], "interval": [.08, 20], "crit": [0, .5], "reach": [40, 1000], "width": [4, 250], "targets": [1, 12], "pierce": [0, 10], "penetration": [0, 200], "duration": [.5, 10], "mode": [0, 3], "modifier": [0, 2], "capstone": [0, 1],
-	"radius": [20, 400], "pull": [0, 150], "push": [0, 100], "speed": [100, 1000], "steering": [0, 20], "residual": [.1, 2], "slow": [0, .6], "charges": [0, 12], "pulses": [0, 8], "exposure": [0, 100], "jam": [0, 1], "projectiles": [1, 12], "copy_index": [0, 11], "retarget": [40, 1000]
+	"damage": [0, 300], "interval": [.08, 20], "crit": [0, .5], "reach": [40, 1000], "width": [4, 250], "targets": [1, 12], "pierce": [0, 10], "penetration": [0, 200], "duration": [.5, 10], "mode": [0, 3], "modifier": [0, 2], "capstone": [0, 1],
+	"radius": [20, 400], "pull": [0, 200], "push": [0, 125], "speed": [100, 1000], "steering": [0, 20], "residual": [.1, 2], "slow": [0, .6], "charges": [0, 12], "pulses": [0, 8], "exposure": [0, 100], "jam": [0, 1], "projectiles": [1, 12], "copy_index": [0, 11], "retarget": [40, 1000]
 }
 const PARAMS: Array[String] = ["damage", "interval", "damage_bonus", "cadence", "crit", "reach", "width", "targets", "pierce", "penetration", "duration", "mode", "modifier", "capstone", "m5_marker", "elite_bonus", "healing", "reserve", "overheal", "echo_damage", "attacks", "delay", "copies", "priority", "distinct", "copy_index", "retarget", "radius", "push", "exposure", "pulses", "steering", "projectiles", "speed", "falloff", "mark", "pull", "slow", "orbit", "terminal", "release", "charges", "residual", "jam", "tick_rate", "bounce", "stagger"]
 
 static func valid(data: Variant) -> bool:
 	if not data is Dictionary or data.size() != 15: return false
 	for key: String in SCALARS:
-		if not SaveChecks.number(data.get(key), 0, SCALARS[key], key in ["echo_count", "peak_pending"]): return false
+		if not SaveChecks.number(data.get(key), 0, SCALARS[key], key == "peak_pending"): return false
 	if not data.get("timers") is Dictionary or data.timers.size() != 6: return false
 	for id: StringName in ArsenalContent.FAMILIES:
 		if not SaveChecks.number(data.timers.get(String(id)), 0, 20): return false
@@ -57,7 +57,7 @@ static func parameters(p: Variant) -> bool:
 		if p.has(key) and not SaveChecks.number(p[key], BOUNDS[key][0], BOUNDS[key][1], key in ["targets", "pierce", "mode", "modifier", "capstone", "charges", "pulses", "projectiles", "copy_index"]): return false
 	for key: String in ["damage", "interval", "crit", "reach", "width", "targets", "pierce", "penetration", "duration", "mode"]:
 		if not p.has(key) or float(p[key]) < 0: return false
-	if p.interval < .08 or p.interval > 20 or p.damage > 200 or p.duration > 10 or p.targets > 12 or p.pierce > 10: return false
+	if p.interval < .08 or p.interval > 20 or p.damage > 300 or p.duration > 10 or p.targets > 12 or p.pierce > 10: return false
 	if p.has("projectiles") and not SaveChecks.number(p.projectiles, 1, 12, true): return false
 	return true
 

@@ -1,5 +1,11 @@
 # Game design and implementation specification
 
+> **Current implementation:** M7 progression is implemented and M8 has started
+> with three authored Rooftop Relays missions. See [M8 scope and evidence](M8_ENCOUNTERS.md).
+> The older revision notes below are historical; the full M8 catalog remains a roadmap.
+
+> M6 implementation note: the prototype now exposes eight patchboard recipes immediately, with two slots and player-confirmed intermissions. The campaign unlock is deferred to progression. See [M6 contracts](M6_PATCHBOARD.md); human acceptance is still unverified.
+
 > **M4 support-turret revision:** Equipped Arc, Bass and Net appear as small
 > turrets with live cooldown bars. New runs receive slightly stronger earned
 > Burst scaling; old saves retain their rules. See [random-build and emulator

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WaveDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/wave_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"m8.m02.w06"
+name_key = &"M8_M2_W6"
+description_key = &"M8_M2_W6_DESC"
+spawn_interval = 6.4
+group_size = 5
+formation = 3
+enemy_ids = Array[StringName]([&"m8.elite_carrier", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver", &"m2.swarmer", &"m2.swarmer", &"m2.carrier", &"m2.swarmer", &"m2.diver"])

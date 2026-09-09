@@ -1,15 +1,25 @@
 # Nightshift FM — Codex development handoff
 
-**M5 adds the complete six-family arsenal, three mains and three shields.**
-M0 is accepted; iOS is deferred at the owner's request. The M4 human fun gate remains open: three testers, two phone attempts each. The title and haunted-radio theme are provisional.
+**M8 has started: the first three Rooftop Relays missions now have authored
+encounters, formations, briefings and family elites.** M7 progression remains
+available. Human progression/pacing acceptance remains open.
+The title and haunted-radio theme are provisional; iOS remains deferred.
 
-Open `project.godot` in Godot 4.7.2 standard, or follow the
-[development instructions](docs/DEVELOPMENT.md). Select **New mission · Standard**
-then choose your equipment and **Go live**, or **Continue saved mission**. Read [M5 arsenal and verification](docs/M5_ARSENAL.md), [support turrets and random-build tests](docs/M4_SUPPORT_TURRETS.md), [current controls and balance](docs/M4_ACTIVE_COMBAT.md), [kill-meter flow](docs/M4_SIGNAL_FLOW.md), [M4 mechanics](docs/M4_SLICE.md), [phone playtest](docs/M4_PLAYTEST.md),
-[implementation evidence](docs/IMPLEMENTATION_STATUS.md), and
-[mobile setup](docs/MOBILE_DEVELOPMENT.md). The Android debug export is
-`builds/android/nightshift-m5.apk`; download the installable APK from the
-[M4 0.4.3 playtest release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.4.3). That published release is M4.5. The current local M5 build is Android 0.5.0/code 8. Existing M3/M4/Signal saves Continue with their original rules; choose New mission to play the new flow. Radio-tuner art comes later.
+Open `project.godot` with Godot 4.7.2 standard, or follow the
+[development instructions](docs/DEVELOPMENT.md). Choose **New mission · Standard**,
+select a campaign mission, choose equipment and **Go live**. **Continue saved
+mission** restores an existing run. Missions 1–3 use distinct ten-wave encounters;
+missions 4–12 still explicitly identify their reused prototype battles.
+
+Read [M8 opening encounters and remaining scope](docs/M8_ENCOUNTERS.md),
+[M7 progression and verification](docs/M7_PROGRESSION.md),
+[M6 patchboard](docs/M6_PATCHBOARD.md), [M5 arsenal](docs/M5_ARSENAL.md),
+[implementation status](docs/IMPLEMENTATION_STATUS.md), and
+[mobile setup](docs/MOBILE_DEVELOPMENT.md). The local Android debug build is
+`builds/android/nightshift-m7.apk`, version 0.7.0/code 11; it does not contain this
+M8 source increment. Existing prototype saves
+Continue with their original rules; New mission starts the campaign. Source and
+APKs from this local milestone have not been published. Radio-tuner art comes later.
 
 ## Project in one paragraph
 
@@ -28,10 +38,9 @@ commands, to import with Godot 4.7.2 standard before running tests or the game.
 Generated `.godot/` caches, APKs/builds, credentials, and local saves are excluded.
 GitHub synchronizes source and evidence; it does not synchronize device saves.
 
-M5 implementation is ready for owner playtesting; human acceptance is still required. Read
-`docs/IMPLEMENTATION_STATUS.md` before continuing and request one milestone at a
-time. `prompts/START_HERE.md` preserves the original M0 prompt as history; do not
-restart the foundation or begin M6 without owner authorization. The owner explicitly authorized M5; earlier human gates remain recorded as unverified.
+M7 implementation is ready for progression playtesting. Read
+`docs/IMPLEMENTATION_STATUS.md` before continuing. Stop at M7; M8 requires another
+owner request. `prompts/START_HERE.md` preserves the original M0 prompt as history.
 
 | File | Purpose |
 |---|---|

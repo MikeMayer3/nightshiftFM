@@ -1,0 +1,85 @@
+{
+  "actors": [
+    {
+      "health": 26.0,
+      "pixel": [
+        335.286682128906,
+        509.663116455078
+      ],
+      "position": [
+        194.505249023438,
+        76.9166793823242
+      ],
+      "resolved": false
+    },
+    {
+      "health": 26.0,
+      "pixel": [
+        397.274169921875,
+        509.663116455078
+      ],
+      "position": [
+        232.505249023438,
+        76.9166793823242
+      ],
+      "resolved": false
+    },
+    {
+      "health": 32.0,
+      "pixel": [
+        459.261688232422,
+        509.663116455078
+      ],
+      "position": [
+        270.505249023438,
+        76.9166793823242
+      ],
+      "resolved": false
+    },
+    {
+      "health": 32.0,
+      "pixel": [
+        521.249145507812,
+        509.663116455078
+      ],
+      "position": [
+        308.505249023438,
+        76.9166793823242
+      ],
+      "resolved": false
+    },
+    {
+      "health": 32.0,
+      "pixel": [
+        583.236694335938,
+        509.663116455078
+      ],
+      "position": [
+        346.505249023438,
+        76.9166793823242
+      ],
+      "resolved": false
+    }
+  ],
+  "arena": "[P: (12.0, 224.0), S: (696.0, 1083.0)]",
+  "center": [
+    540.0,
+    1148.52014160156
+  ],
+  "cooldown": 0.0,
+  "events": [
+    "Left Mouse Button",
+    "Screen touched at ((348.0, 434.5117)) with 0 touch points",
+    "Mouse motion at position ((294.0, 8.611938)) with velocity ((-84.00054, -662.515))",
+    "Screen dragged with 0 touch points at position ((294.0, 8.611938)) with velocity of ((-84.00054, -662.515))"
+  ],
+  "focus": true,
+  "kills": 0,
+  "paused": false,
+  "phase": 1,
+  "point": [
+    270.344848632812,
+    5.72538805007935
+  ],
+  "uses": 0
+}

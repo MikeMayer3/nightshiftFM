@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"hot_tubes"
+name_key = &"M7_MODULE_HOT_TUBES"
+description_key = &"M7_MODULE_HOT_TUBES_DESC"
+unlock_mission = 4
+effects = {&"attack_rate": 0.15, &"recharge": -0.2}

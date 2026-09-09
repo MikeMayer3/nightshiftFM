@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"glass_tower"
+name_key = &"M7_MODULE_GLASS_TOWER"
+description_key = &"M7_MODULE_GLASS_TOWER_DESC"
+unlock_mission = 12
+effects = {&"main_crit": 0.1, &"hull": -0.15}

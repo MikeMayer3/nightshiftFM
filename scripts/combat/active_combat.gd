@@ -16,23 +16,26 @@ func burst_damage(choices: int) -> float:
 static func health_scale(wave: int) -> float:
 	return 2.0 + (wave - 1) * 0.12
 
+func radius_for(session: CombatSession) -> float:
+	return ModuleStats.area_radius(session.module_ids(), RADIUS)
+
 func burst(session: CombatSession, at: Vector2) -> bool:
 	if session.paused or session.phase != CombatSession.Phase.COMBAT or cooldown > 0: return false
 	if not at.is_finite() or not Rect2(Vector2.ZERO, CombatSession.ARENA).has_point(at): return false
 	# A released drag outside the battlefield cannot fire, and empty ground costs nothing.
-	var targets: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return not a.resolved and a.position.distance_to(at) <= RADIUS)
+	var targets: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return not a.resolved and a.position.distance_to(at) <= radius_for(session))
 	if targets.is_empty(): return false
 	cooldown = COOLDOWN
 	uses += 1
 	session.attack_serial += 1
 	var root: int = session.attack_serial
 	session._event(CombatEvent.Kind.ATTACK, &"main", root, 0, 0, session.arsenal == null)
-	session.support_effect.emit(&"main", at, Vector2.ONE * RADIUS)
+	session.support_effect.emit(&"main", at, Vector2.ONE * radius_for(session))
 	var hit: int = 0
 	for actor: CombatActor in targets:
 		var before: float = actor.health
 		# Earned choices scale the burst equally for every offensive build.
-		session.damage_actor(actor, burst_damage(session.signal_progress.choices), &"main", root, 55.0)
+		session.damage_actor(actor, burst_damage(session.signal_progress.choices) * ModuleStats.damage_multiplier(session.module_ids(), &"main"), &"main", root, 55.0)
 		if not actor.projectile: damage += before - actor.health
 		if not actor.projectile and not actor.resolved: actor.status.jam(0.6, actor.elite, actor.jam_immune)
 		hit += 1

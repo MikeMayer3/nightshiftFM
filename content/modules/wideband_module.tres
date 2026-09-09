@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"wideband_module"
+name_key = &"M7_MODULE_WIDEBAND_MODULE"
+description_key = &"M7_MODULE_WIDEBAND_MODULE_DESC"
+unlock_mission = 7
+effects = {&"radius": 0.2, &"direct_damage": -0.15}

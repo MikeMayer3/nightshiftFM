@@ -1,0 +1,76 @@
+{
+	"method": "Headless fixed-step simulation; real choices and first-clear commits, accelerated wall clock; not human pacing evidence",
+	"passed": true,
+	"runs": [
+		{
+			"checkpoint_checks": 30,
+			"choices": 30,
+			"hull": 100.0,
+			"mission": 1,
+			"profile_cleared": 1,
+			"saved": true,
+			"seconds": 633.999999999752,
+			"unlocked_supports": [
+				"arc_aerial",
+				"bass_driver",
+				"static_net"
+			],
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"checkpoint_checks": 30,
+			"choices": 30,
+			"hull": 100.0,
+			"mission": 2,
+			"profile_cleared": 2,
+			"saved": true,
+			"seconds": 633.999999999752,
+			"unlocked_supports": [
+				"arc_aerial",
+				"bass_driver",
+				"static_net",
+				"echo_deck"
+			],
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"checkpoint_checks": 30,
+			"choices": 30,
+			"hull": 100.0,
+			"mission": 3,
+			"profile_cleared": 3,
+			"saved": true,
+			"seconds": 631.3999999997544,
+			"unlocked_supports": [
+				"arc_aerial",
+				"bass_driver",
+				"static_net",
+				"echo_deck",
+				"reverb_well"
+			],
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"checkpoint_checks": 30,
+			"choices": 30,
+			"hull": 100.0,
+			"mission": 4,
+			"profile_cleared": 4,
+			"saved": true,
+			"seconds": 638.8999999997476,
+			"unlocked_supports": [
+				"arc_aerial",
+				"bass_driver",
+				"static_net",
+				"echo_deck",
+				"reverb_well",
+				"needle_swarm"
+			],
+			"victory": true,
+			"wave": 10
+		}
+	]
+}

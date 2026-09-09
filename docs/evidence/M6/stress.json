@@ -1,0 +1,425 @@
+{
+	"fixtures": [
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"dead_zone"
+			],
+			"cpu_ms": 468.394,
+			"events": 1054,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 2,
+			"recipe_damage_hits": 12,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"b_side"
+			],
+			"cpu_ms": 417.311,
+			"events": 352,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 8,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"live_wire"
+			],
+			"cpu_ms": 403.428,
+			"events": 507,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 2,
+			"recipe_damage_hits": 12,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"pressure_drop"
+			],
+			"cpu_ms": 376.617,
+			"events": 930,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 1,
+			"recipe_damage_hits": 16,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"double_drop"
+			],
+			"cpu_ms": 346.637,
+			"events": 333,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 2,
+			"peak_pending": 5,
+			"recipe_damage_hits": 2,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"needle_thread"
+			],
+			"cpu_ms": 422.204,
+			"events": 429,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 4,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"ball_lightning",
+				"feedback_loop"
+			],
+			"cpu_ms": 336.431,
+			"events": 909,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 1,
+			"recipe_damage_hits": 14,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"b_side"
+			],
+			"cpu_ms": 480.7,
+			"events": 648,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 8,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"live_wire"
+			],
+			"cpu_ms": 386.29,
+			"events": 1032,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 1,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"pressure_drop"
+			],
+			"cpu_ms": 440.802,
+			"events": 405,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 5,
+			"peak_pending": 2,
+			"recipe_damage_hits": 8,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"double_drop"
+			],
+			"cpu_ms": 371.054,
+			"events": 617,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 5,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"needle_thread"
+			],
+			"cpu_ms": 504.807,
+			"events": 1032,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 4,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"dead_zone",
+				"feedback_loop"
+			],
+			"cpu_ms": 336.03,
+			"events": 399,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 1,
+			"recipe_damage_hits": 8,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"b_side",
+				"live_wire"
+			],
+			"cpu_ms": 432.148,
+			"events": 494,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 8,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"b_side",
+				"pressure_drop"
+			],
+			"cpu_ms": 494.22,
+			"events": 556,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 8,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"b_side",
+				"double_drop"
+			],
+			"cpu_ms": 483.503,
+			"events": 1437,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 11,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"b_side",
+				"needle_thread"
+			],
+			"cpu_ms": 331.848,
+			"events": 342,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 7,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"b_side",
+				"feedback_loop"
+			],
+			"cpu_ms": 359.499,
+			"events": 482,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 7,
+			"recipe_damage_hits": 8,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"live_wire",
+				"pressure_drop"
+			],
+			"cpu_ms": 481.028,
+			"events": 1078,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 2,
+			"recipe_damage_hits": 12,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"live_wire",
+				"double_drop"
+			],
+			"cpu_ms": 340.539,
+			"events": 478,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 5,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"live_wire",
+				"needle_thread"
+			],
+			"cpu_ms": 432.725,
+			"events": 517,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 0,
+			"peak_pending": 4,
+			"recipe_damage_hits": 0,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"live_wire",
+				"feedback_loop"
+			],
+			"cpu_ms": 336.963,
+			"events": 986,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 1,
+			"recipe_damage_hits": 8,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"pressure_drop",
+				"double_drop"
+			],
+			"cpu_ms": 379.361,
+			"events": 527,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 12,
+			"peak_pending": 5,
+			"recipe_damage_hits": 12,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"pressure_drop",
+				"needle_thread"
+			],
+			"cpu_ms": 500.772,
+			"events": 962,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 4,
+			"recipe_damage_hits": 11,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"pressure_drop",
+				"feedback_loop"
+			],
+			"cpu_ms": 347.325,
+			"events": 297,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 1,
+			"recipe_damage_hits": 19,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"double_drop",
+				"needle_thread"
+			],
+			"cpu_ms": 378.977,
+			"events": 361,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 6,
+			"peak_pending": 7,
+			"recipe_damage_hits": 6,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"double_drop",
+				"feedback_loop"
+			],
+			"cpu_ms": 281.158,
+			"events": 492,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 4,
+			"recipe_damage_hits": 14,
+			"simulated_seconds": 10
+		},
+		{
+			"bad_generation": false,
+			"connections": [
+				"needle_thread",
+				"feedback_loop"
+			],
+			"cpu_ms": 376.736,
+			"events": 870,
+			"initial_enemies": 150,
+			"initial_projectiles": 400,
+			"max_recipe_hits_per_root": 8,
+			"peak_pending": 3,
+			"recipe_damage_hits": 8,
+			"simulated_seconds": 10
+		}
+	],
+	"passed": true
+}

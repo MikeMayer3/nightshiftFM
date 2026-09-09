@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "wave": 3,
+  "slots": [
+    "pressure_drop",
+    "double_drop"
+  ],
+  "restored_slots": [
+    "pressure_drop",
+    "double_drop"
+  ],
+  "method": "Native force-stop and in-place QA observer update, then production checkpoint restoration before driver resumes"
+}

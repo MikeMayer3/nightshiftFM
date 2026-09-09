@@ -110,7 +110,7 @@ def run():
   ext=''.join('[ext_resource type="Resource" path="res://content/arsenal/upgrades/'+id+'.tres" id="'+str(i+2)+'"]\n' for i,id in enumerate(ids))
   defaults=dict(damage=0,interval=1,damage_bonus=0,cadence=0,crit=0,reach=180,width=24,targets=1,pierce=0,penetration=0,duration=3,mode=0,modifier=0,capstone=0)
   defaults.update(baseline)
-  (base/'tracks'/(chassis+'.tres')).write_text('[gd_resource type="Resource" script_class="TrackDefinition" load_steps=20 format=3]\n[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]\n'+ext+'[resource]\nscript = ExtResource("1")\nid = &"'+target+'"\nname_key = &"'+prefix+'_NAME"\npreview_key = &"'+prefix+'_PREVIEW"\nsupport = '+('true' if target not in ['main','shield'] else 'false')+'\nbaseline = '+val(defaults)+'\noptions = ['+', '.join('ExtResource("'+str(i+2)+'")' for i in range(18))+']\n')
+  (base/'tracks'/(chassis+'.tres')).write_text('[gd_resource type="Resource" script_class="TrackDefinition" load_steps=20 format=3]\n[ext_resource type="Script" path="res://scripts/progression/track_definition.gd" id="1"]\n'+ext+'[resource]\nscript = ExtResource("1")\nid = &"'+target+'"\nname_key = &"'+prefix+'_NAME"\npreview_key = &"'+prefix+'_PREVIEW"\nsupport = '+('true' if target not in ['main','shield'] else 'false')+'\nattack_kind = &\"'+('area' if chassis in ['sweep','bass_driver','static_net','reverb_well'] else 'direct')+'\"\nbaseline = '+val(defaults)+'\noptions = ['+', '.join('ExtResource("'+str(i+2)+'")' for i in range(18))+']\n')
   if target not in ['main','shield']:
    label('M3_'+target.upper()+'_SHORT_NAME',name)
    for suffix,text in [('NAME',name),('SHORT',role),('DESC',role+'. Starts at rank 1.')]: label('SIGNAL_'+target.upper()+'_NEW_'+suffix,text)

@@ -3,6 +3,7 @@ extends RefCounted
 var definition: TrackDefinition
 var choices: Array[StringName] = []
 var stats: Dictionary = {}
+var modules: Array[StringName] = []
 
 func _init(content: TrackDefinition) -> void:
 	definition = content
@@ -45,6 +46,7 @@ func accept(id: StringName, banished: Array[StringName]) -> bool:
 func _changes_parameters(card: UpgradeDefinition) -> bool:
 	var prospective: UpgradeTrack = UpgradeTrack.new(definition)
 	prospective.stats = stats.duplicate(true)
+	prospective.modules = modules.duplicate()
 	for key: StringName in card.effects: prospective.stats[key] = float(stats.get(key, 0)) + float(card.effects[key])
 	var before: Dictionary = ArsenalStats.parameters(self)
 	var after: Dictionary = ArsenalStats.parameters(prospective)

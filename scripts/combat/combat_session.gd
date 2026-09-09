@@ -17,6 +17,8 @@ const BREACH_Y: float = 640.0
 const TRANSMITTER: Vector2 = Vector2(320, 684)
 const HULL_MAX: float = 100.0
 const STEP: float = 1.0 / 60.0
+var campaign: CampaignRun
+var patchboard: PatchboardState
 var arsenal: ArsenalCombat
 var active_combat: ActiveCombat
 var signal_progress: SignalProgress
@@ -58,6 +60,8 @@ func _init() -> void:
 	restart()
 
 func restart() -> void:
+	campaign = null
+	patchboard = null
 	arsenal = null
 	active_combat = null
 	signal_progress = null
@@ -97,10 +101,10 @@ func restart() -> void:
 	_accumulator = 0.0
 
 func advance(delta: float) -> void:
-	if paused or is_finished() or is_deciding() or not is_finite(delta) or delta <= 0.0:
+	if paused or is_finished() or is_deciding() or is_wiring() or not is_finite(delta) or delta <= 0.0:
 		return
 	_accumulator += delta
-	while _accumulator >= STEP and not is_finished() and not is_deciding() and not paused:
+	while _accumulator >= STEP and not is_finished() and not is_deciding() and not is_wiring() and not paused:
 		_accumulator -= STEP
 		_step(STEP)
 
@@ -108,7 +112,7 @@ func is_finished() -> bool:
 	return phase == Phase.VICTORY or phase == Phase.DEFEAT
 
 func activate_shield() -> bool:
-	if paused or is_finished() or is_deciding() or ability_wait > 0.0:
+	if paused or is_finished() or is_deciding() or is_wiring() or ability_wait > 0.0:
 		return false
 	if arsenal != null:
 		arsenal.shield_activate(self)
@@ -167,12 +171,14 @@ func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main
 		if actor.status.exposure > 0: supports.report.add(actor.status.exposure_source if arsenal != null else &"bass_driver", &"exposure_bonus", minf(actor.health, amount) - unexposed)
 	var effective: float = minf(actor.health, amount)
 	if supports != null and not actor.projectile: supports.report.add(source, &"damage", effective)
+	if patchboard != null and not actor.projectile: patchboard.add(source, "damage", effective)
 	actor.health = maxf(0.0, actor.health - amount)
 	_event(CombatEvent.Kind.DAMAGE, source, root_id, actor.serial, effective)
 	if actor.health == 0.0:
 		actor.resolved = true
 		if actor.projectile:
 			intercepted += 1
+			if patchboard != null: patchboard.add(source, "intercepts", 1)
 			if supports != null: supports.report.add(source, &"intercepts", 1)
 			_event(CombatEvent.Kind.INTERCEPT, source, root_id, actor.serial, 0.0)
 		else:
@@ -200,7 +206,9 @@ func hit_station(amount: float, cause: StringName, kind: StringName = &"COMBAT_B
 			_event(CombatEvent.Kind.SHIELD_BREAK, &"shield", root_id, target_id, absorbed)
 	hull = maxf(0.0, hull - (incoming - absorbed))
 	recharge_time = CombatContent.SHIELD.recharge_delay
-	if arsenal != null: arsenal.after_station_hit(self, previous_shield > 0 and run.shield.current == 0)
+	var broke: bool = previous_shield > 0 and run.shield.current == 0
+	if arsenal != null: arsenal.after_station_hit(self, broke)
+	if patchboard != null and broke: patchboard.shield_break(self, root_id)
 	damage_taken += incoming
 	last_cause = cause
 	last_kind = kind
@@ -211,6 +219,7 @@ func hit_station(amount: float, cause: StringName, kind: StringName = &"COMBAT_B
 
 func _step(delta: float) -> void:
 	elapsed += delta
+	if patchboard != null: patchboard.advance(delta)
 	if active_combat != null: active_combat.cooldown = maxf(0, active_combat.cooldown - delta)
 	if signal_progress != null: signal_progress.overdrive_left = maxf(0, signal_progress.overdrive_left - delta)
 	if supports != null: supports.tick_passive(delta)
@@ -238,11 +247,14 @@ func _step(delta: float) -> void:
 	spawn_time = maxf(0.0, spawn_time - delta)
 	if spawn_index < definition.enemy_ids.size() and spawn_time <= 0.0:
 		var group_size: int = 5 if active_combat != null else 1
+		if EncounterContent.authored(self): group_size = definition.group_size
+		var group: int = spawn_index / group_size
 		var center: float = random.rng("wave").randf_range(120, 520) if active_combat != null else 320.0
 		for member: int in mini(group_size, definition.enemy_ids.size() - spawn_index):
 			var spawn_x: float = random.rng("wave").randf_range(64.0, 576.0) if random != null else 64.0 + float((spawn_index * 173 + wave * 67) % 512)
 			if active_combat != null: spawn_x = center + (member - 2) * 38.0
-			var spawned: CombatActor = spawn_enemy(M4Content.enemy(definition.enemy_ids[spawn_index]) if supports != null else CombatContent.enemy(definition.enemy_ids[spawn_index]), spawn_x)
+			if EncounterContent.authored(self): spawn_x = EncounterContent.spawn_x(definition, group, member, center)
+			var spawned: CombatActor = spawn_enemy(enemy_definition(definition.enemy_ids[spawn_index]), spawn_x)
 			if draft != null:
 				spawned.health *= ActiveCombat.health_scale(wave) if active_combat != null else 1.0 + float(wave - 1) * (0.08 if supports != null else 0.22)
 				spawned.max_health = spawned.health
@@ -305,6 +317,7 @@ func _step(delta: float) -> void:
 				return
 			phase = Phase.INTERMISSION
 			phase_time = 2.0
+			if patchboard != null: patchboard.awaiting = campaign == null or campaign.cleared >= 2
 		if signal_progress.ready(): _open_signal_choice()
 		elif cleared: checkpoint_changed.emit()
 		return
@@ -384,6 +397,45 @@ func start_arsenal(seed_value: int, identity: StringName, loadout: Dictionary = 
 	run.shield.current = run.shield.capacity
 	return true
 
+func start_patchboard(seed_value: int, identity: StringName, loadout: Dictionary = ArsenalContent.DEFAULT) -> bool:
+	if not start_arsenal(seed_value, identity, loadout): return false
+	active_combat.content_version = PatchboardContent.VERSION
+	patchboard = PatchboardState.new()
+	return true
+
+func start_campaign(seed_value: int, identity: StringName, loadout: Dictionary, context: Dictionary) -> bool:
+	var selected: CampaignRun = CampaignRun.new()
+	if not selected.restore(context) or not CampaignContent.valid_selection(loadout, selected.modules, selected.cleared): return false
+	if not start_patchboard(seed_value, identity, loadout): return false
+	campaign = selected
+	active_combat.content_version = EncounterContent.VERSION if EncounterWaves.MISSIONS.has(campaign.mission) else CampaignContent.VERSION
+	draft.catalog = draft.catalog.filter(func(definition: TrackDefinition) -> bool: return not definition.support or String(definition.id) in CampaignContent.options(campaign.cleared, "support"))
+	(draft as ArsenalDraft).reroll_limit = 2 + int(ModuleStats.coefficient(campaign.modules, &"rerolls"))
+	draft.rerolls = (draft as ArsenalDraft).reroll_limit
+	patchboard.awaiting = campaign.cleared >= 2
+	apply_ranks()
+	hull = maximum_hull()
+	run.shield.current = run.shield.capacity
+	return true
+
+func module_ids() -> Array[StringName]:
+	if campaign != null: return campaign.modules
+	var empty: Array[StringName] = []
+	return empty
+
+func maximum_hull() -> float:
+	return ModuleStats.maximum_hull(module_ids())
+
+func is_wiring() -> bool:
+	return patchboard != null and patchboard.awaiting and phase == Phase.INTERMISSION
+
+func launch_wave() -> bool:
+	if paused or not is_wiring(): return false
+	patchboard.awaiting = false
+	_accumulator = 0
+	checkpoint_changed.emit()
+	return true
+
 func _open_signal_choice() -> void:
 	phase = Phase.DRAFT
 	_accumulator = 0.0
@@ -425,13 +477,18 @@ func total_waves() -> int:
 	return 10 if draft != null else 3
 
 func wave_definition() -> WaveDefinition:
-	if active_combat != null and active_combat.content_version in [ActiveCombat.VERSION, ArsenalContent.VERSION] and wave == 8: return ActiveContent.FIRST_ELITES
+	if EncounterContent.authored(self): return EncounterWaves.MISSIONS[campaign.mission][wave - 1]
+	if active_combat != null and active_combat.content_version in [ActiveCombat.VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION] and wave == 8: return ActiveContent.FIRST_ELITES
 	if active_combat != null: return ActiveContent.WAVES[wave - 1]
 	if signal_progress != null: return SignalContent.WAVES[wave - 1]
 	if supports != null: return M4Content.WAVES[wave - 1]
 	if draft == null: return CombatContent.waves()[wave - 1]
 	# M3 schedule reuses authored M2 patterns; full mission content is deferred.
 	return CombatContent.waves()[mini(2, (wave - 1) / 3)]
+
+func enemy_definition(id: StringName) -> EnemyDefinition:
+	if EncounterContent.authored(self): return EncounterContent.enemy(id)
+	return M4Content.enemy(id) if supports != null else CombatContent.enemy(id)
 
 func is_deciding() -> bool:
 	return phase in [Phase.DRAFT, Phase.RECRUIT]
@@ -441,6 +498,8 @@ func shield_stat(key: StringName, fallback: float) -> float:
 	return float(draft.track(&"shield").stats.get(key, fallback)) if draft != null else fallback
 
 func apply_ranks() -> void:
+	if campaign != null:
+		for owned: UpgradeTrack in draft.tracks: owned.modules = campaign.modules.duplicate()
 	var main: UpgradeTrack = draft.track(&"main")
 	run.main_weapon.rank = main.rank()
 	run.main_weapon.damage = float(main.stats[&"damage"])
@@ -533,7 +592,7 @@ func _event(kind: CombatEvent.Kind, source: StringName, root_id: int, target_id:
 	event_serial += 1
 	var event: CombatEvent = CombatEvent.new(event_serial, root_id, source, kind, target_id, amount)
 	if source == &"main" and can_echo and (arsenal == null or kind == CombatEvent.Kind.ATTACK): event.eligible_triggers |= CombatEvent.CAN_ECHO
-	if arsenal != null and source in [&"echo_deck", &"shield"]:
+	if arsenal != null and (source in [&"echo_deck", &"shield"] or PatchboardContent.RECIPES.has(source)):
 		event.generation_depth = 1
 		event.eligible_triggers = 0
 	combat_event.emit(event)
@@ -555,7 +614,7 @@ static func checkpoint_fields() -> Array[String]:
 		"kills", "breaches", "intercepted", "damage_taken", "_serial", "event_serial", "attack_serial"]
 
 func restore_checkpoint(data: Variant) -> bool:
-	if data is Dictionary and data.get("content") in [SignalContent.VERSION, ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION]: return SignalSnapshot.restore(self, data)
+	if data is Dictionary and data.get("content") in [SignalContent.VERSION, ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]: return SignalSnapshot.restore(self, data)
 	if not data is Dictionary or data.get("schema") != 1: return false
 	var is_m4: bool = data.get("content") == M4Content.VERSION
 	if data.size() != (12 if is_m4 else 11): return false

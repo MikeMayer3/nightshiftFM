@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"night_ledger"
+name_key = &"M7_MODULE_NIGHT_LEDGER"
+description_key = &"M7_MODULE_NIGHT_LEDGER_DESC"
+unlock_mission = 11
+effects = {&"rerolls": 1.0, &"main_damage": -0.1}

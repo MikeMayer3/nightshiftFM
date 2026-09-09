@@ -23,14 +23,18 @@ static func capture(session: CombatSession) -> Dictionary:
 		"slice": session.supports.to_data(), "actors": actors, "field": field, "shocks": session.supports.shocks.duplicate(true)}
 
 	if session.active_combat != null: result["active"] = session.active_combat.to_data()
+	if session.patchboard != null: result["patchboard"] = session.patchboard.to_data()
+	if session.campaign != null: result["campaign"] = session.campaign.to_data()
 	return result
 
 static func _point(value: Variant) -> bool:
 	return value is Array and value.size() == 2 and SaveChecks.number(value[0], 0, 640) and SaveChecks.number(value[1], 0, 720)
 
 static func restore(session: CombatSession, data: Dictionary) -> bool:
-	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION]
-	if data.size() != (16 if is_active else 15) or data.get("schema") != 2 or data.get("engine") != Engine.get_version_info().string: return false
+	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]
+	var is_campaign: bool = data.get("content") in [CampaignContent.VERSION, EncounterContent.VERSION]
+	var is_patchboard: bool = data.get("content") in [PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]
+	if data.size() != (18 if is_campaign else 17 if is_patchboard else 16 if is_active else 15) or data.get("schema") != 2 or data.get("engine") != Engine.get_version_info().string: return false
 	if not data.get("run_id") is String or not data.run_id.begins_with("run.") or not data.run_id.trim_prefix("run.").is_valid_int(): return false
 	if not RunRandom.valid(data.get("random")) or not data.get("values") is Dictionary: return false
 	if data.values.size() != CombatSession.checkpoint_fields().size(): return false
@@ -39,27 +43,38 @@ static func restore(session: CombatSession, data: Dictionary) -> bool:
 	for key: String in ["phase", "wave", "spawn_index", "kills", "breaches", "intercepted", "_serial", "event_serial", "attack_serial"]:
 		if not SaveChecks.number(data.values[key], 0, 10000000, true): return false
 	if int(data.values.phase) not in [0, 1, 2, 3, 4] or data.values.wave > 10 or data.values.hull > 100: return false
-	if data.get("last_cause") not in ["COMBAT_NO_DAMAGE", "M2_SWARMER_NAME", "M2_DIVER_NAME", "M2_CARRIER_NAME", "COMBAT_PROJECTILE", "M4_PLATED_NAME", "M4_ELITE_NAME"]: return false
+	var causes: Array[String] = ["COMBAT_NO_DAMAGE", "M2_SWARMER_NAME", "M2_DIVER_NAME", "M2_CARRIER_NAME", "COMBAT_PROJECTILE", "M4_PLATED_NAME", "M4_ELITE_NAME"]
+	if data.get("content") == EncounterContent.VERSION:
+		for definition: EnemyDefinition in EncounterContent.ELITES: causes.append(String(definition.name_key))
+	if data.get("last_cause") not in causes: return false
 	if data.get("last_kind") not in ["COMBAT_BREACH_HIT", "COMBAT_PROJECTILE_HIT"]: return false
-	if data.get("content") == ArsenalContent.VERSION:
+	if data.get("content") in [ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION]:
 		if not data.get("draft") is Dictionary or not ArsenalContent.valid_loadout(data.draft.get("loadout")): return false
-		session.start_arsenal(int(data.random.seed), StringName(data.run_id), data.draft.loadout)
+		if is_campaign:
+			if not data.get("campaign") is Dictionary or not session.start_campaign(int(data.random.seed), StringName(data.run_id), data.draft.loadout, data.campaign): return false
+		elif is_patchboard: session.start_patchboard(int(data.random.seed), StringName(data.run_id), data.draft.loadout)
+		else: session.start_arsenal(int(data.random.seed), StringName(data.run_id), data.draft.loadout)
 	elif is_active: session.start_active(int(data.random.seed), StringName(data.run_id))
 	else: session.start_signal(int(data.random.seed), StringName(data.run_id))
 	if is_active: session.active_combat.content_version = data.content
+	if data.get("content") == EncounterContent.VERSION and not EncounterContent.authored(session): return false
 	if is_active and not session.active_combat.restore(data.get("active")): return false
 	if not session.signal_progress.restore(data.get("signal")) or not session.draft.restore(data.get("draft")): return false
 	if session.signal_progress.earned != int(data.values.kills) or session.signal_progress.choices != session.draft.normal_count: return false
 	if not session.supports.restore(data.get("slice")): return false
 	session.random.restore(data.random)
 	session.apply_ranks()
+	if float(data.values.hull) > session.maximum_hull(): return false
 	if not SaveChecks.number(data.get("shield"), 0, session.run.shield.capacity): return false
 	for key: String in CombatSession.checkpoint_fields(): session.set(key, data.values[key])
 	session.run.shield.current = float(data.shield)
 	session.last_cause = StringName(data.last_cause)
 	session.last_kind = StringName(data.last_kind)
+	if is_patchboard and not session.patchboard.restore(session, data.get("patchboard")): return false
 	if not _actors(session, data.get("actors")) or not _effects(session, data): return false
 	if session.arsenal != null and not ArsenalRuntime.references(session): return false
+	if is_patchboard and session.patchboard.awaiting and session.phase == CombatSession.Phase.DRAFT:
+		if not session.actors.is_empty() or session.spawn_index != session.wave_definition().enemy_ids.size(): return false
 	if session.phase == CombatSession.Phase.DRAFT:
 		if session.draft.offers.is_empty() or not session.signal_progress.ready() or session.wave < 1: return false
 	elif not session.draft.offers.is_empty(): return false
@@ -84,7 +99,7 @@ static func _actors(session: CombatSession, items: Variant) -> bool:
 		if not item is Dictionary or item.size() != ACTOR_FIELDS.size() + 4 or not _point(item.get("position")): return false
 		if not item.get("id") is String or not item.get("source") is String: return false
 		var projectile: bool = item.id == "m2.projectile"
-		var definition: EnemyDefinition = M4Content.enemy(&"m2.swarmer" if projectile else StringName(item.id))
+		var definition: EnemyDefinition = session.enemy_definition(&"m2.swarmer" if projectile else StringName(item.id))
 		if definition == null: return false
 		var actor: CombatActor = CombatActor.from_definition(definition, 0, Vector2(float(item.position[0]), float(item.position[1])))
 		if projectile:
@@ -100,7 +115,7 @@ static func _actors(session: CombatSession, items: Variant) -> bool:
 		if actor.serial < 1 or actor.serial > session._serial or actor.serial in seen: return false
 		if actor.health <= 0 or actor.health > actor.max_health or actor.max_health > (8.0 if projectile else definition.health * (ActiveCombat.health_scale(10) if session.active_combat != null else 1.72)) + 0.001: return false
 		if actor.origin_x > 640 or actor.children_spawned > actor.child_limit or actor.projectiles_fired > actor.projectile_limit or actor.root_attack_id > session.attack_serial: return false
-		if projectile and M4Content.enemy(StringName(item.source)) == null: return false
+		if projectile and session.enemy_definition(StringName(item.source)) == null: return false
 		actor.source_id = StringName(item.source)
 		var status: Variant = item.get("status")
 		if not status is Dictionary or status.size() != STATUS_LIMITS.size() + 1 + (1 if session.arsenal != null and status.has("exposure_source") else 0) or status.get("source") not in (["static_net", "bass_driver", "reverb_well"] if session.arsenal != null else ["static_net", "bass_driver"]): return false

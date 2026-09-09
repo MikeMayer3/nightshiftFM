@@ -1,0 +1,50 @@
+{
+  "scope": "M8 opening increment only; missions 1-3 authored, full M8 incomplete",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "regression": {
+    "checks": 4326,
+    "failures": 0
+  },
+  "foundation": {
+    "checks": 7,
+    "failures": 0
+  },
+  "visual": {
+    "checks": 36,
+    "failures": 0,
+    "sizes": [
+      "360x640",
+      "450x800",
+      "450x950"
+    ]
+  },
+  "playthrough": {
+    "runs": 27,
+    "victories": 27,
+    "decision_restores": 662,
+    "lowest_hull": 65.07666666666678,
+    "full_hull_runs": 25
+  },
+  "fresh": {
+    "path": "/var/folders/cy/lx2m7tpd07vb9z_vxtj0ckxw0000gn/T/nightshift-m8-fresh-e5id7ulv/project",
+    "generator_changes": [],
+    "generators_idempotent": true,
+    "checks": [
+      {
+        "check": "import",
+        "exit": 0
+      },
+      {
+        "check": "test",
+        "exit": 0
+      },
+      {
+        "check": "smoke",
+        "exit": 0
+      }
+    ]
+  },
+  "human_acceptance": "NOT RUN",
+  "mobile": "NOT RUN; existing build unchanged",
+  "next": "Mission 4: The Dead Caller"
+}

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"narrowband_module"
+name_key = &"M7_MODULE_NARROWBAND_MODULE"
+description_key = &"M7_MODULE_NARROWBAND_MODULE_DESC"
+unlock_mission = 8
+effects = {&"direct_damage": 0.2, &"radius": -0.15}

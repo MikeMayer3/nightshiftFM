@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "check": "profile-only save hides Continue"
+    },
+    {
+      "passed": true,
+      "check": "new campaign hides locked modules"
+    },
+    {
+      "passed": true,
+      "check": "native module toggles enforce two slots"
+    },
+    {
+      "passed": true,
+      "check": "current selection can change after preset save"
+    },
+    {
+      "passed": true,
+      "check": "preset retains independent module choices"
+    },
+    {
+      "passed": true,
+      "check": "native launch applies selected module baseline and saves"
+    },
+    {
+      "passed": true,
+      "check": "force-stop Continue preserves the complete intermission save"
+    }
+  ],
+  "limits": "Isolated QA package; zero/12-clear profile fixtures, not earned native campaign clears"
+}

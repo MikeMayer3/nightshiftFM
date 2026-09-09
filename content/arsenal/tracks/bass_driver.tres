@@ -20,6 +20,7 @@
 [ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.bass_driver.b3cap.tres" id="19"]
 [resource]
 script = ExtResource("1")
+attack_kind = &"area"
 id = &"bass_driver"
 name_key = &"M5_BASS_DRIVER_NAME"
 preview_key = &"M5_BASS_DRIVER_PREVIEW"

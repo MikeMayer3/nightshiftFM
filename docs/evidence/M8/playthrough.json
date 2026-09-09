@@ -1,0 +1,3141 @@
+{
+	"method": "Headless fixed-step combat, legal offers, earned unlocks; restore and continue each decision checkpoint. Not human playtesting.",
+	"passed": true,
+	"runs": [
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 478.5499999998934,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.b2m2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 469,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 530.4499999998462,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 2,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.echo_deck.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b2m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 557,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 560.6666666664854,
+			"seed": 11,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 482.96666666655614,
+			"seed": 42,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t4",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 480,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 534.383333333176,
+			"seed": 42,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 15,
+			"cause": "M2_DIVER_NAME",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b3",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b3m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.echo_deck.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.b3cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.echo_deck.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 10
+				}
+			],
+			"hull": 99.8,
+			"kills": 558,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 574.9666666664724,
+			"seed": 42,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.b2m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.b2cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b3m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 488.8833333332174,
+			"seed": 91,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 1
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b2m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.b2cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b3m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 471,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 532.2999999998445,
+			"seed": 91,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 26,
+			"cause": "M2_SWARMER_NAME",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.echo_deck.t4",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.b3",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b2m1",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.echo_deck.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.b2cap",
+					"wave": 10
+				},
+				{
+					"id": "m5.echo_deck.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 65.07666666666678,
+			"kills": 552,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 573.033333333141,
+			"seed": 91,
+			"style": "arc_aerial",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b1m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b1cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 477.6833333332277,
+			"seed": 11,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.b1m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b2m2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b1cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b2cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 435,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 22,
+			"saved": true,
+			"seconds": 521.949999999854,
+			"seed": 11,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 27,
+			"decisions": [
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.echo_deck.t4",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b1m2",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b1cap",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b3m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 9
+				},
+				{
+					"id": "m5.echo_deck.b1",
+					"wave": 10
+				},
+				{
+					"id": "m5.echo_deck.t3",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 543,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 27,
+			"saved": true,
+			"seconds": 557.533333333155,
+			"seed": 11,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 7,
+			"cause": "M2_SWARMER_NAME",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b2m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b2cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 418,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 493.54999999987984,
+			"seed": 42,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b2m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b2cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 465,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 527.1666666665159,
+			"seed": 42,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 4,
+			"cause": "M2_SWARMER_NAME",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.echo_deck.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b3m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.bass_driver.b2m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.t3",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.b2cap",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 554,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 568.8499999998113,
+			"seed": 42,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 2,
+			"cause": "M2_SWARMER_NAME",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b1m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.b1cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 423,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 491.98333333321455,
+			"seed": 91,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.b1m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.b1cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.b1m1",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 474,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 536.8666666665071,
+			"seed": 91,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 4,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.static_net",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t4",
+					"wave": 2
+				},
+				{
+					"id": "m5.capacitor.t4",
+					"wave": 3
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.b2m2",
+					"wave": 4
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.echo_deck.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.bass_driver.b2cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.echo_deck.b2",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 10
+				},
+				{
+					"id": "m5.echo_deck.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 562,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 568.1499999998119,
+			"seed": 91,
+			"style": "bass_driver",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 3,
+			"cause": "M2_SWARMER_NAME",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.b2m2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.b2cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 422,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 493.1166666665469,
+			"seed": 11,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 24,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.b2m2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.b2cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.b1m1",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 474,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 24,
+			"saved": true,
+			"seconds": 531.1333333331789,
+			"seed": 11,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 8,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 2
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t4",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.b3m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.t4",
+					"wave": 5
+				},
+				{
+					"id": "m5.bass_driver.b2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t4",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 7
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3m1",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.t2",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.b2m1",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.t2",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 554,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 562.8833333331501,
+			"seed": 11,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.b2m1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b2cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b3m2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 487.3666666665521,
+			"seed": 42,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 25,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.b2m1",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.capacitor.b3",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b2cap",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b3m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t4",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t1",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 481,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 25,
+			"saved": true,
+			"seconds": 540.4666666665038,
+			"seed": 42,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 5,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 27,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 3
+				},
+				{
+					"id": "m5.arc_aerial.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.arc_aerial.b1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 4
+				},
+				{
+					"id": "m5.capacitor.t2",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.b3m2",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.b3cap",
+					"wave": 6
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 7
+				},
+				{
+					"id": "m5.echo_deck.t5",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.b3",
+					"wave": 8
+				},
+				{
+					"id": "m5.bass_driver.b1",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 10
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.echo_deck.t2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 541,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 27,
+			"saved": true,
+			"seconds": 558.8833333331538,
+			"seed": 42,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 22,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.b3m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b3m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.bass_driver.b3",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 425,
+			"mission": 1,
+			"profile_cleared": 1,
+			"restores": 22,
+			"saved": true,
+			"seconds": 484.64999999988794,
+			"seed": 91,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 0,
+			"cause": "COMBAT_NO_DAMAGE",
+			"choices": 23,
+			"decisions": [
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 1
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b3",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t3",
+					"wave": 3
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b3",
+					"wave": 5
+				},
+				{
+					"id": "m5.static_net.t0",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t0",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.b3m1",
+					"wave": 6
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 6
+				},
+				{
+					"id": "m5.static_net.t2",
+					"wave": 7
+				},
+				{
+					"id": "m5.pulse.b3m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b3cap",
+					"wave": 8
+				},
+				{
+					"id": "m5.arc_aerial.t2",
+					"wave": 9
+				},
+				{
+					"id": "m5.capacitor.t5",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t0",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.b3",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.b2",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 455,
+			"mission": 2,
+			"profile_cleared": 2,
+			"restores": 23,
+			"saved": true,
+			"seconds": 528.933333333181,
+			"seed": 91,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 2,
+			"cause": "M8_ELITE_DIVER",
+			"choices": 28,
+			"decisions": [
+				{
+					"id": "recruit.echo_deck",
+					"wave": 1
+				},
+				{
+					"id": "recruit.bass_driver",
+					"wave": 1
+				},
+				{
+					"id": "recruit.arc_aerial",
+					"wave": 1
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.b1",
+					"wave": 2
+				},
+				{
+					"id": "m5.static_net.b2",
+					"wave": 2
+				},
+				{
+					"id": "m5.pulse.t1",
+					"wave": 3
+				},
+				{
+					"id": "m5.static_net.t4",
+					"wave": 4
+				},
+				{
+					"id": "m5.static_net.t1",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.t2",
+					"wave": 4
+				},
+				{
+					"id": "m5.capacitor.t3",
+					"wave": 4
+				},
+				{
+					"id": "m5.pulse.b1m2",
+					"wave": 5
+				},
+				{
+					"id": "m5.arc_aerial.t5",
+					"wave": 5
+				},
+				{
+					"id": "m5.pulse.t3",
+					"wave": 6
+				},
+				{
+					"id": "m5.capacitor.b2",
+					"wave": 6
+				},
+				{
+					"id": "m5.echo_deck.t1",
+					"wave": 6
+				},
+				{
+					"id": "m5.echo_deck.b1",
+					"wave": 7
+				},
+				{
+					"id": "m5.static_net.b2m2",
+					"wave": 7
+				},
+				{
+					"id": "m5.capacitor.t1",
+					"wave": 8
+				},
+				{
+					"id": "m5.static_net.t5",
+					"wave": 8
+				},
+				{
+					"id": "m5.echo_deck.t3",
+					"wave": 8
+				},
+				{
+					"id": "m5.pulse.b1cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.static_net.b2cap",
+					"wave": 9
+				},
+				{
+					"id": "m5.bass_driver.t3",
+					"wave": 9
+				},
+				{
+					"id": "m5.echo_deck.t0",
+					"wave": 10
+				},
+				{
+					"id": "m5.arc_aerial.b3",
+					"wave": 10
+				},
+				{
+					"id": "m5.capacitor.t0",
+					"wave": 10
+				}
+			],
+			"hull": 100.0,
+			"kills": 549,
+			"mission": 3,
+			"profile_cleared": 3,
+			"restores": 28,
+			"saved": true,
+			"seconds": 559.1499999998201,
+			"seed": 91,
+			"style": "static_net",
+			"victory": true,
+			"wave": 10
+		}
+	],
+	"valid": true
+}

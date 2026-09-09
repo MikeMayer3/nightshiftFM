@@ -1,6 +1,7 @@
 class_name CombatArena
 extends Control
 ## Presentation and pointer mapping only. Simulation coordinates never depend on aspect ratio.
+var station_color: Color = Color("76dbca")
 var session: CombatSession
 var shot_end: Vector2
 var shot_flash: float = 0.0
@@ -8,6 +9,10 @@ var hit_flash: float = 0.0
 var pulses: Array[Dictionary] = []
 var chains: Array[Dictionary] = []
 var _mouse_held: bool = false
+var _touch_index: int = -1
+var _aim_button: Button
+var _button_dragged: bool = false
+var _block_button_click: bool = false
 const SUPPORT_POSITIONS: Dictionary = {
 	&"arc_aerial": Vector2(195, 682),
 	&"bass_driver": Vector2(445, 682),
@@ -29,9 +34,19 @@ func arena_offset() -> Vector2:
 	return (size - CombatSession.ARENA * arena_scale()) * 0.5
 
 func _gui_input(event: InputEvent) -> void:
-	if session == null or session.paused or session.is_finished() or session.is_deciding():
+	if not _can_aim():
 		return
-	# Godot's enabled touch-to-mouse bridge uses this same path on Android.
+	# Acquire only through GUI hit testing so HUD and modal touches cannot aim.
+	if event is InputEventScreenTouch:
+		if event.pressed and not event.canceled and _touch_index == -1 and not _mouse_held:
+			_touch_index = event.index
+			session.focus_active = true
+			session.focus_point = (event.position - arena_offset()) / arena_stretch()
+			accept_event()
+		return
+	# Native touch owns its gesture; the bridge remains enabled for UI buttons.
+	if event.device == InputEvent.DEVICE_ID_EMULATION or _touch_index != -1:
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		_mouse_held = event.pressed
 		session.focus_active = event.pressed
@@ -42,18 +57,80 @@ func _gui_input(event: InputEvent) -> void:
 		accept_event()
 
 func clear_pointer() -> void:
+	if _aim_button != null:
+		_block_button_click = true
+		_unblock_button.call_deferred()
+	_aim_button = null
+	_button_dragged = false
 	_mouse_held = false
+	_touch_index = -1
 	if session != null:
 		session.focus_active = false
 
 func _input(event: InputEvent) -> void:
-	# Release outside the arena must not leave a stuck override.
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-		if _mouse_held and session != null and session.active_combat != null:
-			var local: Vector2 = get_global_transform_with_canvas().affine_inverse() * event.position
-			if Rect2(Vector2.ZERO, size).has_point(local):
-				session.active_combat.burst(session, (local - arena_offset()) / arena_stretch())
+	# Track the owning finger even outside the Control, including OS cancellation.
+	if event is InputEventScreenDrag and event.index == _touch_index:
+		if _can_aim():
+			_move_pointer(event.position)
+		else:
+			clear_pointer()
+	elif event is InputEventScreenTouch and event.index == _touch_index and (not event.pressed or event.canceled):
+		if not event.canceled:
+			_finish_pointer(event.position)
 		clear_pointer()
+	elif event is InputEventMouseMotion and event.device != InputEvent.DEVICE_ID_EMULATION and _mouse_held and _aim_button != null:
+		if _can_aim(): _move_pointer(event.position)
+		else: clear_pointer()
+	elif event is InputEventMouseButton and event.device != InputEvent.DEVICE_ID_EMULATION and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and _mouse_held:
+		_finish_pointer(event.position)
+		clear_pointer()
+
+func button_input(event: InputEvent, button: Button) -> void:
+	if button.disabled or not _can_aim() or session.active_combat == null or _touch_index != -1 or _mouse_held:
+		return
+	if event is InputEventScreenTouch and event.pressed and not event.canceled:
+		_touch_index = event.index
+	elif event is InputEventMouseButton and event.device != InputEvent.DEVICE_ID_EMULATION and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		_mouse_held = true
+	else:
+		return
+	_aim_button = button
+	_button_dragged = false
+	_block_button_click = false
+
+func button_click_handled() -> bool:
+	# Button's emulated mouse release can arrive before or after native touch UP.
+	return _aim_button != null or _block_button_click
+
+func _unblock_button() -> void:
+	_block_button_click = false
+
+func _move_pointer(position: Vector2) -> void:
+	var local: Vector2 = get_global_transform_with_canvas().affine_inverse() * position
+	session.focus_point = (local - arena_offset()) / arena_stretch()
+	if _aim_button != null:
+		_button_dragged = _button_dragged or not _contains_pointer(_aim_button, position)
+		session.focus_active = Rect2(Vector2.ZERO, size).has_point(local)
+
+func _finish_pointer(position: Vector2) -> void:
+	if _aim_button != null and not _button_dragged and _contains_pointer(_aim_button, position) and _can_aim():
+		var target: CombatActor = session.target()
+		if target != null: session.active_combat.burst(session, target.position)
+	else:
+		_release_at(position)
+
+func _contains_pointer(control: Control, position: Vector2) -> bool:
+	return Rect2(Vector2.ZERO, control.size).has_point(control.get_global_transform_with_canvas().affine_inverse() * position)
+
+func _can_aim() -> bool:
+	return session != null and is_visible_in_tree() and not session.paused and not session.is_finished() and not session.is_deciding() and not session.is_wiring()
+
+func _release_at(position: Vector2) -> void:
+	if not _can_aim() or session.active_combat == null:
+		return
+	var local: Vector2 = get_global_transform_with_canvas().affine_inverse() * position
+	if Rect2(Vector2.ZERO, size).has_point(local):
+		session.active_combat.burst(session, (local - arena_offset()) / arena_stretch())
 
 func _process(delta: float) -> void:
 	if session != null and not session.paused:
@@ -171,8 +248,9 @@ func _draw() -> void:
 	if session.focus_active:
 		draw_circle(session.focus_point, 12.0, cyan, false, 2.0)
 		if session.active_combat != null:
-			draw_arc(session.focus_point, ActiveCombat.RADIUS, 0, TAU, 48, cyan if session.active_combat.cooldown == 0 else muted, 2.0)
+			draw_arc(session.focus_point, session.active_combat.radius_for(session), 0, TAU, 48, cyan if session.active_combat.cooldown == 0 else muted, 2.0)
 	var base: Vector2 = CombatSession.TRANSMITTER
+	cyan = station_color
 	draw_rect(Rect2(base - Vector2(30, 12), Vector2(60, 28)), cyan, false, 3.0)
 	var direction: Vector2 = (aimed.position - base).normalized() if aimed != null else Vector2.UP
 	draw_line(base, base + direction * 46.0, cyan, 7.0)

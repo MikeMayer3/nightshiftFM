@@ -15,6 +15,8 @@ static func valid(data: Variant) -> bool:
 	if data.get("run") == null: return true
 	var session: CombatSession = CombatSession.new()
 	if not session.restore_checkpoint(data.get("run")): return false
+	if session.campaign != null:
+		if session.campaign.cleared > profile.campaign.cleared or not profile.campaign.can_play(session.campaign.mission): return false
 	var number: int = int(String(session.run_id).trim_prefix("run."))
 	return number > 0 and number < profile.next_run and (session.phase != CombatSession.Phase.VICTORY or session.run_id in profile.rewarded_runs)
 

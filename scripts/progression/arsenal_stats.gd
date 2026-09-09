@@ -3,6 +3,7 @@ extends RefCounted
 ## Derived, bounded parameters shared by combat and comparison previews.
 static func parameters(owned: UpgradeTrack) -> Dictionary:
 	var result: Dictionary = owned.stats.duplicate(true)
+	ModuleStats.modify(owned, result)
 	result.damage = float(result.damage) * maxf(.1, 1 + float(result.damage_bonus))
 	result.interval = maxf(.08, float(result.interval) / maxf(.3, 1 + float(result.cadence)))
 	result.crit = clampf(float(result.crit), 0, .5)

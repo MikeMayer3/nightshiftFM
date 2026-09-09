@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/module_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"thin_wire"
+name_key = &"M7_MODULE_THIN_WIRE"
+description_key = &"M7_MODULE_THIN_WIRE_DESC"
+unlock_mission = 10
+effects = {&"charged": 0.3, &"capacity": -0.1}

@@ -2,6 +2,7 @@ class_name ArsenalDraft
 extends SignalDraft
 ## Offensive choices and acquisitions share one earned pick; no shield quota or wave schedule.
 
+var reroll_limit: int = 2
 var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
 
 func to_data() -> Dictionary:
@@ -88,7 +89,7 @@ func restore(data: Variant) -> bool:
 	if data.get("bonus") != false or data.get("bonus_count") != 0: return false
 	if not SaveChecks.number(data.get("normal_count"), 0, 1000, true): return false
 	if not data.get("accepted") is Array or data.accepted.size() != int(data.normal_count): return false
-	if not SaveChecks.number(data.get("rerolls"), 0, 2, true) or not SaveChecks.number(data.get("banishes"), 0, 1, true): return false
+	if not SaveChecks.number(data.get("rerolls"), 0, reroll_limit, true) or not SaveChecks.number(data.get("banishes"), 0, 1, true): return false
 	for key: String in ["offers", "banished", "screen_tracks"]:
 		if not SaveChecks.ids(data.get(key), 3) or not SaveChecks.unique(data[key]): return false
 	if data.banished.size() + int(data.banishes) != 1: return false

@@ -14,7 +14,9 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	for action: StringName in [&"menu_back", &"pause", &"focus_target", &"aim_override", &"shield_ability"]:
 		context.check(InputMap.has_action(action), "declared input action: %s" % action)
 	(boot.menu.get_node("Start") as Button).pressed.emit()
-	context.check(boot.picker != null, "Start opens arsenal selector")
+	context.check(boot.campaign_panel != null, "Start opens campaign selection")
+	boot.campaign_panel.launch_button.pressed.emit()
+	context.check(boot.picker != null, "Campaign opens equipment selector")
 	boot.picker.launch_button.pressed.emit()
 	context.check(boot.combat != null and not boot.menu.visible, "Start signal opens combat")
 	context.check(boot.combat.session.signal_progress != null, "New mission uses kill-meter flow")

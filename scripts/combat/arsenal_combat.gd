@@ -7,7 +7,7 @@ var recordings: Array[Dictionary] = []
 var needles: Array[Dictionary] = []
 var zones: Array[Dictionary] = []
 var marks: Array[Dictionary] = []
-var echo_count: int = 0
+var echo_count: float = 0.0
 var shield_charge: float = 0
 var emergency_wait: float = 0
 var peak_pending: int = 0
@@ -84,10 +84,10 @@ func _record_echo(session: CombatSession, packet: Dictionary) -> void:
 	var e: Dictionary = ArsenalStats.parameters(owned)
 	recordings.append(packet.duplicate(true))
 	if recordings.size() > 12: recordings.pop_front()
-	echo_count += 1
+	echo_count += 1 + ModuleStats.coefficient(session.module_ids(), &"support_rate")
 	if echo_count < int(e.attacks): return
 	if packets.size() > 112: return # pending replay remains ready, no recursive work generation
-	echo_count = 0
+	echo_count = maxf(0, echo_count - float(e.attacks)) if session.campaign != null else 0.0
 	for index: int in int(e.copies):
 		var copy: Dictionary = recordings[maxi(0, recordings.size() - int(e.copies)) + index % mini(recordings.size(), int(e.copies))].duplicate(true) if int(e.mode) == 2 else packet.duplicate(true)
 		copy.source = "echo_deck"
@@ -111,7 +111,9 @@ func _tick_packets(session: CombatSession, delta: float) -> void:
 		_resolve_packet(session, packet)
 
 func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
-	var p: Dictionary = packet.p
+	# Per-resolution tuning cannot leak into an echo recording or shared packet.
+	var p: Dictionary = packet.p.duplicate(true)
+	var assisted: StringName = &""
 	var first: CombatActor = actor_by_id(session, int(packet.target))
 	var center: Vector2 = Vector2(float(packet.x), float(packet.y))
 	if packet.source == "echo_deck":
@@ -120,7 +122,18 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 		if p.get(&"priority", 0) > 0: candidates.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return priority(a) > priority(b))
 		if not candidates.is_empty(): first = candidates[int(p.copy_index) % candidates.size()] if p.get(&"distinct", 0) > 0 else candidates[0]
 		else: first = null
+		if session.patchboard != null and session.patchboard.connected(session, &"b_side"):
+			var marked: Array[CombatActor] = candidates.filter(func(a: CombatActor) -> bool: return mark_strength(a.serial) > 0)
+			if not marked.is_empty() and session.patchboard.activate(session, &"b_side"):
+				first = marked[int(p.copy_index) % marked.size()]
+				assisted = &"b_side"
 	if first == null: return
+	if packet.source == "main" and session.patchboard != null and mark_strength(first.serial) > 0 and session.patchboard.activate(session, &"needle_thread"):
+		var recipe: SynergyDefinition = PatchboardContent.RECIPES[&"needle_thread"]
+		if packet.kind == "sweep": p.damage *= 1 + recipe.coefficient
+		elif packet.kind == "burst": p.penetration += recipe.damage
+		else: p.pierce = mini(11, int(p.pierce) + 1)
+		assisted = &"needle_thread"
 	var source: StringName = StringName(packet.source)
 	var root: int = int(packet.root)
 	var direction: Vector2 = (first.position - CombatSession.TRANSMITTER).normalized()
@@ -131,7 +144,9 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 			if targets.is_empty(): break
 			var victim: CombatActor = targets[index % targets.size()]
 			session.chain_fired.emit(PackedVector2Array([CombatSession.TRANSMITTER, victim.position]), false)
+			var before: float = victim.health
 			hit(session, victim, p, source, root)
+			if assisted != &"" and not victim.projectile: session.patchboard.add(assisted, "assisted_damage", before - victim.health)
 	else:
 		var limit: int = 12 if packet.kind == "sweep" else 1 + int(p.pierce)
 		var ordered: Array[CombatActor] = session.actors.duplicate()
@@ -149,7 +164,9 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 			bounces -= 1
 		for actor: CombatActor in targets:
 			session.chain_fired.emit(PackedVector2Array([CombatSession.TRANSMITTER, actor.position]), false)
+			var before: float = actor.health
 			hit(session, actor, p, source, root)
+			if assisted != &"" and not actor.projectile: session.patchboard.add(assisted, "assisted_damage", before - actor.health)
 	if source == &"echo_deck": session.support_effect.emit(source, first.position, Vector2(30, 30))
 
 func priority(actor: CombatActor) -> float:
@@ -183,6 +200,7 @@ func _arc(session: CombatSession, first: CombatActor, p: Dictionary, root: int) 
 		session.chain_fired.emit(PackedVector2Array([origin, actor.position]), true)
 		origin = actor.position
 		hit(session, actor, p, &"arc_aerial", root, float(p.damage) * (1 + actor.status.charged * .05))
+		if session.patchboard != null: session.patchboard.arc_hit(session, actor, root)
 		actor.status.charge()
 		actor.status.charge_left = p.duration
 	if p.get(&"healing", 0) > 0 and restore_wait <= 0:
@@ -245,6 +263,7 @@ func _deploy(session: CombatSession, at: Vector2, source: StringName, p: Diction
 	var count: int = 1 + int(p.get(&"pulses", 0)) if source == &"bass_driver" else 0
 	zones.append({"source": String(source), "x": at.x, "y": at.y, "root": root, "left": float(p.duration), "tick": 0.0, "remaining": count, "charges": int(p.get(&"charges", 0)), "p": p.duplicate(true)})
 	session.support_effect.emit(source, at, Vector2.ONE * float(p.radius))
+	if source == &"bass_driver" and session.patchboard != null: session.patchboard.bass_activation(session, at, p, root)
 
 func _tick_zones(session: CombatSession, delta: float) -> void:
 	for zone: Dictionary in zones:
@@ -254,6 +273,9 @@ func _tick_zones(session: CombatSession, delta: float) -> void:
 		zone.left = maxf(0, float(zone.left) - delta)
 		zone.tick = maxf(0, float(zone.tick) - delta)
 		var targets: Array[CombatActor] = nearby(session, center, float(p.radius), int(p.targets) if source == &"reverb_well" else 12)
+		if zone.tick == 0 and session.patchboard != null:
+			if source == &"static_net": session.patchboard.net_tick(session, targets, center, int(zone.root))
+			elif source == &"bass_driver": session.patchboard.bass_pulse(session, targets, int(zone.root))
 		for actor: CombatActor in targets:
 			if actor.projectile:
 				if source == &"static_net" and int(zone.charges) > 0:
@@ -342,6 +364,8 @@ func after_station_hit(session: CombatSession, broke: bool) -> void:
 		emergency_wait = float(p.cooldown)
 
 func retaliate(session: CombatSession, damage: float, radius: float, incoming_root: int = 0) -> void:
+	damage *= ModuleStats.damage_multiplier(session.module_ids(), &"shield")
+	radius = ModuleStats.area_radius(session.module_ids(), radius)
 	var root: int = incoming_root if incoming_root > 0 else _root(session, &"shield", 0)
 	if incoming_root > 0: session._event(CombatEvent.Kind.ATTACK, &"shield", root, 0, 0)
 	for actor: CombatActor in nearby(session, CombatSession.TRANSMITTER, radius, 8):
@@ -356,7 +380,7 @@ func clear_wave_effects() -> void:
 	needles.clear()
 	zones.clear()
 	marks.clear()
-	echo_count = 0
+	echo_count = 0.0
 
 func to_data() -> Dictionary:
 	return {"timers": timers.duplicate(), "report": report.totals.duplicate(true), "restore_wait": restore_wait, "reservoir": reservoir, "overshield": overshield, "overshield_left": overshield_left,

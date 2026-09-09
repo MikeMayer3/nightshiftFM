@@ -1,0 +1,15 @@
+{
+  "gesture": [
+    [
+      400,
+      2200
+    ],
+    [
+      459,
+      670
+    ]
+  ],
+  "coordinates": "Physical screenshot positions, including Android status bar",
+  "reproduced": true,
+  "uses": 0
+}

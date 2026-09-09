@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SynergyDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/core/definitions/synergy_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"pressure_drop"
+name_key = &"M6_PRESSURE_DROP_NAME"
+description_key = &"M6_PRESSURE_DROP_DESC"
+endpoint_ids = Array[StringName]([&"bass_driver", &"reverb_well"])
+capability = &""
+cooldown = 0.8
+target_cap = 6
+threshold = 1
+damage = 0
+radius = 120
+duration = 0
+coefficient = 0.08

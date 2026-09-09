@@ -1,0 +1,10 @@
+{
+  "serial": "57261FDCQ00593",
+  "checks": {
+    "down_activates_aim": true,
+    "drag_tracks_target": false,
+    "release_fires_once": true,
+    "release_clears_aim": true
+  },
+  "expected_broken": true
+}

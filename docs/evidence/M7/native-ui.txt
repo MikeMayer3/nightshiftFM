@@ -1,0 +1,7 @@
+PASS profile-only save hides Continue
+PASS new campaign hides locked modules
+PASS native module toggles enforce two slots
+PASS current selection can change after preset save
+PASS preset retains independent module choices
+PASS native launch applies selected module baseline and saves
+PASS force-stop Continue preserves the complete intermission save

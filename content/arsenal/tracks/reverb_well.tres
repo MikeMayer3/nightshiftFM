@@ -20,6 +20,7 @@
 [ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.reverb_well.b3cap.tres" id="19"]
 [resource]
 script = ExtResource("1")
+attack_kind = &"area"
 id = &"reverb_well"
 name_key = &"M5_REVERB_WELL_NAME"
 preview_key = &"M5_REVERB_WELL_PREVIEW"

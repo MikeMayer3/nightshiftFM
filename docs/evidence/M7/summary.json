@@ -1,0 +1,189 @@
+{
+  "regression": {
+    "checks": 4140,
+    "failures": 0
+  },
+  "foundation": {
+    "tests": 7,
+    "failures": 0
+  },
+  "desktop_visual": {
+    "checks": 33,
+    "failures": 0,
+    "sizes": [
+      "360x640",
+      "450x800",
+      "450x950"
+    ]
+  },
+  "first_four_simulation": {
+    "method": "Headless fixed-step simulation; real choices and first-clear commits, accelerated wall clock; not human pacing evidence",
+    "passed": true,
+    "runs": [
+      {
+        "checkpoint_checks": 30,
+        "choices": 30,
+        "hull": 100.0,
+        "mission": 1,
+        "profile_cleared": 1,
+        "saved": true,
+        "seconds": 633.999999999752,
+        "unlocked_supports": [
+          "arc_aerial",
+          "bass_driver",
+          "static_net"
+        ],
+        "victory": true,
+        "wave": 10
+      },
+      {
+        "checkpoint_checks": 30,
+        "choices": 30,
+        "hull": 100.0,
+        "mission": 2,
+        "profile_cleared": 2,
+        "saved": true,
+        "seconds": 633.999999999752,
+        "unlocked_supports": [
+          "arc_aerial",
+          "bass_driver",
+          "static_net",
+          "echo_deck"
+        ],
+        "victory": true,
+        "wave": 10
+      },
+      {
+        "checkpoint_checks": 30,
+        "choices": 30,
+        "hull": 100.0,
+        "mission": 3,
+        "profile_cleared": 3,
+        "saved": true,
+        "seconds": 631.3999999997544,
+        "unlocked_supports": [
+          "arc_aerial",
+          "bass_driver",
+          "static_net",
+          "echo_deck",
+          "reverb_well"
+        ],
+        "victory": true,
+        "wave": 10
+      },
+      {
+        "checkpoint_checks": 30,
+        "choices": 30,
+        "hull": 100.0,
+        "mission": 4,
+        "profile_cleared": 4,
+        "saved": true,
+        "seconds": 638.8999999997476,
+        "unlocked_supports": [
+          "arc_aerial",
+          "bass_driver",
+          "static_net",
+          "echo_deck",
+          "reverb_well",
+          "needle_swarm"
+        ],
+        "victory": true,
+        "wave": 10
+      }
+    ]
+  },
+  "native_starter": {
+    "victory": true,
+    "wave": 10,
+    "hull": 100.0,
+    "seconds": 632.4333333330868,
+    "wall_seconds": 653.813,
+    "median_fps": 60.0,
+    "choices": 30,
+    "choice_audit": {
+      "pass": true,
+      "count": 30,
+      "mismatches": []
+    },
+    "campaign": {
+      "cleared": 1,
+      "cosmetic": "default",
+      "mastery": {
+        "arc_aerial": [
+          "m5.arc_aerial.b1cap"
+        ]
+      },
+      "presets": [
+        {},
+        {},
+        {}
+      ],
+      "records": {
+        "campaign.01": {
+          "best_hull": 1.0,
+          "best_seconds": 632.4333333330868,
+          "medals": [
+            "clear",
+            "no_breach",
+            "intact_hull"
+          ],
+          "wins": 1
+        }
+      },
+      "schema": 1
+    }
+  },
+  "native_two_support_attempt": {
+    "victory": false,
+    "wave": 4,
+    "hull": 0.0,
+    "profile_cleared": 0,
+    "choices": 9,
+    "save_failed": false
+  },
+  "native_ui": {
+    "passed": true,
+    "checks": [
+      {
+        "passed": true,
+        "check": "profile-only save hides Continue"
+      },
+      {
+        "passed": true,
+        "check": "new campaign hides locked modules"
+      },
+      {
+        "passed": true,
+        "check": "native module toggles enforce two slots"
+      },
+      {
+        "passed": true,
+        "check": "current selection can change after preset save"
+      },
+      {
+        "passed": true,
+        "check": "preset retains independent module choices"
+      },
+      {
+        "passed": true,
+        "check": "native launch applies selected module baseline and saves"
+      },
+      {
+        "passed": true,
+        "check": "force-stop Continue preserves the complete intermission save"
+      }
+    ],
+    "limits": "Isolated QA package; zero/12-clear profile fixtures, not earned native campaign clears"
+  },
+  "apk": {
+    "path": "builds/android/nightshift-m7.apk",
+    "version": "0.7.0",
+    "code": 11,
+    "sha256": "af9c2cad4c6b41c00a25511ef996d44489891883d0053d872aa2571b18b16563",
+    "emulator_install": "PASS",
+    "regular_menu_launch": "PASS"
+  },
+  "human_progression_gate": "NOT RUN",
+  "physical_pixel_m7": "NOT RUN; existing 0.6.1 installation unchanged",
+  "m8": "NOT STARTED"
+}

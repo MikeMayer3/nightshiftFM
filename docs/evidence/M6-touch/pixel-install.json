@@ -1,0 +1,25 @@
+{
+  "package": "org.nightshiftfm.spike",
+  "device": "Pixel 10 Pro XL",
+  "install": "Serving...\nPerforming Incremental Install\nSuccess\nInstall command complete in 2093 ms",
+  "versions": [
+    "versionCode=10 minSdk=24 targetSdk=36",
+    "versionName=0.6.1",
+    "lastUpdateTime=2026-09-08 15:00:34",
+    "firstInstallTime=2026-09-08 14:27:45"
+  ],
+  "apk_sha256": "1bf8a7e959cc20c384b2afb8c069c159896b909da01bdbb79ba51801e60996bf",
+  "before": {
+    "m3_mission.json": "270cd302aad4b7dca8e0b3be85e7a6a6e9fa13bfb36aab640d82389372709adf",
+    "m3_mission.json.bak": "8ceec9463280a233ea444e97c4e13bfd51f5358af04d6906234e343878cd228e"
+  },
+  "after_install": {
+    "m3_mission.json": "270cd302aad4b7dca8e0b3be85e7a6a6e9fa13bfb36aab640d82389372709adf",
+    "m3_mission.json.bak": "8ceec9463280a233ea444e97c4e13bfd51f5358af04d6906234e343878cd228e"
+  },
+  "after_menu_launch": {
+    "m3_mission.json": "270cd302aad4b7dca8e0b3be85e7a6a6e9fa13bfb36aab640d82389372709adf",
+    "m3_mission.json.bak": "8ceec9463280a233ea444e97c4e13bfd51f5358af04d6906234e343878cd228e"
+  },
+  "save_preserved": true
+}

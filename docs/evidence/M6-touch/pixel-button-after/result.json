@@ -1,0 +1,27 @@
+{
+  "serial": "57261FDCQ00593",
+  "surface_bounds": [
+    0,
+    161,
+    1080,
+    2287
+  ],
+  "gesture": [
+    [
+      402.0,
+      2202.98022460938
+    ],
+    [
+      261.854248046875,
+      670.663116455078
+    ]
+  ],
+  "checks": {
+    "down_state_correct": true,
+    "drag_tracks_target": true,
+    "release_fires_once": true,
+    "release_clears_aim": true
+  },
+  "from_button": true,
+  "expected_broken": false
+}

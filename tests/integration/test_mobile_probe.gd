@@ -35,7 +35,9 @@ func run(context: TestContext, tree: SceneTree) -> bool:
 	tree.root.add_child(probe)
 	probe.set_enabled(true)
 	context.check(probe.taps == 5, "new probe instance restores saved taps")
-	await tree.create_timer(0.08).timeout
+	# A slow first frame can exhaust a wall timer while the resume guard skips it.
+	# Observe multiple actual process frames before asserting progress.
+	for frame: int in 4: await tree.process_frame
 	context.check(probe.clock.active_seconds > 4.5, "actual process node advances while active")
 	for cycle: int in 20:
 		probe.notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)

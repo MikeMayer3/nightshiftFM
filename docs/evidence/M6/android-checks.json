@@ -1,0 +1,23 @@
+{
+  "package": "org.nightshiftfm.patchboardqa",
+  "device": "emulator-5554",
+  "screen": "Physical size: 1280x2856",
+  "android_version": "17",
+  "scope": "actual native emulator touches; human acceptance and physical phone checks not run",
+  "passed": [
+    "launch and equipment selector",
+    "two-slot patchboard with prerequisites",
+    "connect Feedback Loop and commit slot",
+    "duplicate connection disabled",
+    "unplug and reconnect via touches",
+    "wiring force-stop and Continue with same connection",
+    "Go live and wave-start checkpoint",
+    "mid-wave Signal draft reached through real combat",
+    "force-stop and Continue with identical visible offers",
+    "accept one recovered offer once and retain connection"
+  ],
+  "script_errors": 0,
+  "fatal_errors": 0,
+  "regular_app_untouched": true,
+  "physical_phone_untouched": true
+}

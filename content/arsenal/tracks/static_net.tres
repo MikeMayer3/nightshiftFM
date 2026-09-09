@@ -20,6 +20,7 @@
 [ext_resource type="Resource" path="res://content/arsenal/upgrades/m5.static_net.b3cap.tres" id="19"]
 [resource]
 script = ExtResource("1")
+attack_kind = &"area"
 id = &"static_net"
 name_key = &"M5_STATIC_NET_NAME"
 preview_key = &"M5_STATIC_NET_PREVIEW"

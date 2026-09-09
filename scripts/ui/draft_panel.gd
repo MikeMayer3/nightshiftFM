@@ -25,6 +25,8 @@ const ICONS: Dictionary = {
 	&"repair": preload("res://assets/art/equipment/repair.svg"),
 }
 const ACCENTS: Dictionary = {
+	&"ball_lightning": Color("cab0ff"), &"dead_zone": Color("72badb"), &"b_side": Color("ed93ca"), &"live_wire": Color("d0eb86"),
+	&"pressure_drop": Color("8bddb0"), &"double_drop": Color("ffa16c"), &"needle_thread": Color("f3d57b"), &"feedback_loop": Color("f07eaa"),
 	&"echo_deck": Color("ed93ca"), &"needle_swarm": Color("f3d57b"), &"reverb_well": Color("8bddb0"),
 	&"main": Color("76dbca"), &"shield": Color("efa968"),
 	&"bass_driver": Color("efa968"), &"static_net": Color("7ad8ee"),
@@ -281,6 +283,13 @@ func show_report(session: CombatSession, back: Callable) -> void:
 	if session.active_combat != null:
 		label_text(tr("ACTIVE_REPORT") % [session.active_combat.uses, session.active_combat.damage], column, 25)
 		label_text(tr("ACTIVE_REPORT_HINT"), column, 23)
+	if session.patchboard != null:
+		label_text(tr("M6_REPORT_TITLE"), column, 34)
+		label_text(tr("M6_REPORT_HINT"), column, 23)
+		for id: StringName in session.patchboard.discovered():
+			var row: Dictionary = session.patchboard.totals[String(id)]
+			label_text(tr(PatchboardContent.RECIPES[id].name_key), column, 30)
+			label_text(tr("M6_REPORT_ROW") % [row.triggers, row.damage, row.assisted_damage, row.control_seconds, row.interrupts, row.intercepts], column, 24)
 	button_text(tr("M4_BACK_RESULTS"), column, back)
 
 func _show_m4_details(session: CombatSession, id: StringName) -> void:

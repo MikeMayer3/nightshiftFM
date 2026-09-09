@@ -20,6 +20,8 @@ parser.add_argument('--seed', type=int, required=True)
 parser.add_argument('--main', choices=['pulse','sweep','burst'], default='pulse')
 parser.add_argument('--shield', choices=['capacitor','relay','feedback'], default='capacitor')
 parser.add_argument('--support', choices=['arc_aerial','bass_driver','static_net','echo_deck','needle_swarm','reverb_well'], default='arc_aerial')
+parser.add_argument('--campaign', action='store_true')
+parser.add_argument('--build', choices=['charge_control','group_repeats','marked_replays'])
 parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args()
 package = 'org.nightshiftfm.turretqa'
@@ -33,7 +35,11 @@ def screenshot(name):
 
 adb('shell', 'am', 'force-stop', package)
 # Only the dedicated QA package is written; player saves are never accessed.
-adb('shell', 'run-as', package, 'sh', '-c', f"'mkdir -p files; echo {args.seed} > files/qa_seed.txt; rm -f files/qa_telemetry.json files/qa_mission.json files/qa_mission.json.bak files/qa_mission.json.tmp'")
+adb('shell', 'run-as', package, 'sh', '-c', f"'mkdir -p files; echo {args.seed} > files/qa_seed.txt; rm -f files/qa_resume files/qa_campaign files/qa_build.txt files/qa_telemetry.json files/qa_mission.json files/qa_mission.json.bak files/qa_mission.json.tmp'")
+if args.campaign:
+    adb('shell', 'run-as', package, 'touch', 'files/qa_campaign')
+if args.build:
+    subprocess.run([args.adb, '-s', args.serial, 'shell', 'run-as', package, 'sh', '-c', "'cat > files/qa_build.txt'"], input=args.build, text=True, check=True)
 loadout = json.dumps({'main': args.main, 'shield': args.shield, 'support': args.support}, separators=(',', ':'))
 subprocess.run([args.adb, '-s', args.serial, 'shell', 'run-as', package, 'sh', '-c', "'cat > files/qa_loadout.json'"], input=loadout, text=True, check=True)
 adb('shell', 'am', 'start', '-n', package + '/com.godot.game.GodotAppLauncher')
@@ -87,9 +93,9 @@ with (args.output / 'telemetry.jsonl').open('w') as log:
             mismatches = [{'index': i, 'accepted': decision['id'], 'random': random_choices.get(i)}
                           for i, decision in enumerate(row['decisions'])
                           if decision['id'] != random_choices.get(i)]
-            row['random_choice_audit'] = {'pass': not mismatches, 'count': len(row['decisions']), 'mismatches': mismatches}
+            row['build_policy' if args.build else 'random_choice_audit'] = {'pass': not mismatches, 'count': len(row['decisions']), 'mismatches': mismatches}
             (args.output / 'result.json').write_text(json.dumps(row, indent=2))
-            if mismatches:
+            if mismatches and not args.build:
                 raise RuntimeError('A stale tap selected an unaudited upgrade; this is not a valid uniform-random sample')
             print('FINISHED ' + json.dumps(row), flush=True)
             break
@@ -101,8 +107,12 @@ with (args.output / 'telemetry.jsonl').open('w') as log:
                 x += surface_origin[0]
                 y += surface_origin[1]
                 if action == 'upgrade':
-                    print(f"RANDOM CHOICE {row['choices']}: {row['offers'][row['index']]}", flush=True)
-                adb('shell', 'input', 'tap', str(x), str(y))
+                    print(f"SELECT CHOICE {row['choices']}: {row['offers'][row['index']]}", flush=True)
+                if action == 'scroll':
+                    ex, ey = (round(v) for v in row['end'])
+                    adb('shell', 'input', 'swipe', str(x), str(y), str(ex + surface_origin[0]), str(ey + surface_origin[1]), '250')
+                else:
+                    adb('shell', 'input', 'tap', str(x), str(y))
                 last_action = key
                 last_action_time = time.monotonic()
     else:
