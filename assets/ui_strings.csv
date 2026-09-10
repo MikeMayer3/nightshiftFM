@@ -204,6 +204,7 @@ M3_BANISH_HINT,Remove a common upgrade for this mission.
 M3_CANCEL_BANISH,Cancel
 M3_BACK_DRAFT,Back to upgrades
 M3_HELP,What do these do?
+M3_HELP_SHORT,Help
 M3_HELP_BODY,"Reroll spends 1 token to redraw these cards. Required options may stay.
 
 Banish spends 1 token to remove a common upgrade for this mission. Branch upgrades are protected."

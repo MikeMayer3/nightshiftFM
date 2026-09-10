@@ -1,0 +1,10 @@
+{
+  "device_kind": "Android emulator",
+  "package": "org.nightshiftfm.spike",
+  "version": [
+    "versionCode=25 minSdk=24 targetSdk=36",
+    "versionName=0.10.13"
+  ],
+  "running": true,
+  "runtime_errors": []
+}

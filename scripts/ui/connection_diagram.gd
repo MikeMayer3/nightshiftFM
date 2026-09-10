@@ -33,7 +33,7 @@ func configure(session: CombatSession, row: Dictionary, compact: bool = false) -
 			strip.add_child(image)
 		var text: Label = Label.new()
 		text.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		text.text = tr(recipe.name_key) + "\n" + tr(row.status_key)
+		text.text = tr(recipe.name_key) + " · " + tr(row.status_key)
 		if row.warning_key != &"": text.text += "\n" + tr(row.warning_key)
 		text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL

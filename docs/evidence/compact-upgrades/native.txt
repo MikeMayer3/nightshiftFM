@@ -1,0 +1,514 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: actual Tuned threshold supplies three choices
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+PASS: info tap opens full details without choosing
+PASS: Back restores the compact choices
+PASS: third whole-card tap selects the correct upgrade once
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: entire choice card visible without scrolling
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: upgrade label keeps all text visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: info keeps a 72-unit touch target
+PASS: info target is visible
+PASS: three choices and actions fit without vertical scroll
+PASS: compact choices have no horizontal overflow
+PASS: compact layout does not change gameplay or checkpoint
+RESULT: 510 compact upgrade checks; 0 failures

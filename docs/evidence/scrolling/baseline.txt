@@ -1,0 +1,63 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+PASS: mouse drag starts on Label
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts on TextureRect
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts on ProgressBar
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts on PanelContainer
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts on Button
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts on OptionButton
+PASS: scroll release never activates buttons or selector
+PASS: mouse drag starts in outer page margin
+PASS: touch drag starts on Label
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts on TextureRect
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts on ProgressBar
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts on PanelContainer
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts on Button
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts on OptionButton
+PASS: scroll release never activates buttons or selector
+PASS: touch drag starts in outer page margin
+PASS: normal mouse tap fires once
+PASS: normal native touch tap fires once
+PASS: small tap movement stays a click
+PASS: disabled button still permits scrolling
+PASS: selector still opens on an ordinary tap
+PASS: vertical fader keeps its gesture and does not scroll
+PASS: second finger cannot steal scroll ownership
+PASS: emulated mouse does not double native scrolling
+PASS: Android cancellation clears gesture and momentum
+PASS: hiding a page cancels active scroll
+PASS: covering modal prevents underlying page scroll
+PASS: scroll gesture suite completes
+FAIL: campaign/show_home mouse drag at (0.01, 0.5) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.99, 0.5) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.5, 0.01) (MarginContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.5, 0.99) (MarginContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.25, 0.3) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.75, 0.3) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.25, 0.55) (Button) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.75, 0.55) (Button) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.25, 0.8) (Button) scrolls 0/130
+FAIL: campaign/show_home mouse drag at (0.75, 0.8) (Button) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.01, 0.5) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.99, 0.5) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.5, 0.01) (MarginContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.5, 0.99) (MarginContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.25, 0.3) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.75, 0.3) (PanelContainer) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.25, 0.55) (Button) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.75, 0.55) (Button) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.25, 0.8) (Button) scrolls 0/130
+FAIL: campaign/show_home touch drag at (0.75, 0.8) (Button) scrolls 0/130
+PASS: production page sweep completes
+RESULT: 59 scrolling checks; 20 failures

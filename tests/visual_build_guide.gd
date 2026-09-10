@@ -35,7 +35,7 @@ func run() -> void:
 		checks.check(selected_ids==[&"m5.needle_swarm.b3"],"pointer on diagram selects its owning upgrade card")
 		checks.check(panel.cards.size()==3,"three choices remain available")
 		for card: Button in panel.cards:
-			checks.check(card.size.x<=panel.size.x and card.custom_minimum_size.y>=176,"card stays inside scroll sheet width")
+			checks.check(card.size.x<=panel.size.x and card.custom_minimum_size.y>=148,"card stays inside scroll sheet width")
 		var snapshot: Dictionary=s.to_checkpoint()
 		click_at(panel.info_buttons[0].get_global_rect().get_center())
 		RadioPreferences.current.apply_fonts(panel)

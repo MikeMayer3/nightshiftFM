@@ -1,5 +1,46 @@
 # Nightshift FM — next chat handoff
 
+## Current: 0.10.13 delivery (2026-09-10)
+
+The scrolling and compact-upgrade fixes are included in this delivery commit.
+Physical Pixel **0.10.13/code 25** installed and visibly launched; all six existing
+save/settings files remained byte-identical through install and launch, with no
+runtime errors. APK SHA-256: `0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346`.
+APK contents were checked to exclude local backups and test/build directories.
+Prior native, regression and Android input results remain documented in the linked evidence.
+GitHub upload verification will be recorded after publication. Earlier local-only
+and disconnected-phone notes below are historical and superseded by this entry.
+
+## Historical: compact upgrade cards (2026-09-10)
+
+The working tree also contains the compact Tuned upgrade picker, version
+**0.10.13/code 25**, local and uncommitted. PASS: 510 native layout/input checks,
+6,125 regressions, 22 Android emulator checks and eight foundation checks.
+The physical Pixel disconnected; its last verified installed build is still
+**0.10.12/code 24**. The new APK is ready under ignored
+`builds/android/nightshift-fm-0.10.13-android-arm64-debug.apk`.
+
+[Compact picker scope and evidence](docs/COMPACT_UPGRADES.md) also records a
+packaging correction: exports now exclude local backup/build folders. Use this
+clean APK for future sharing; earlier APK assets have not been replaced.
+GitHub remains unchanged. The following scrolling entry is the prior checkpoint.
+
+## Historical: scrolling correction (2026-09-10)
+
+The scrolling fix is implemented locally on top of `e4a5610`; it is **uncommitted
+and unpushed**. Physical Pixel delivery is **0.10.12/code 24**, with the visible
+menu verified and all six save/settings files byte-identical through update and
+launch. PASS: 6,125 regressions, 826 native scrolling checks, seven foundation
+checks, 66 physical-device swipes and four physical control checks.
+
+See [SCROLLING_FIX.md](docs/SCROLLING_FIX.md) for exact scope and evidence.
+APK: ignored `builds/android/nightshift-m10.apk`; SHA-256:
+`9917ed408e09f603f89dfe7faae69c4104054afe5d08d090322a510e90633bd6`.
+The GitHub v0.10.11 release remains the previous build. The temporary QA app was
+removed. No store submission or extended human usability acceptance is claimed.
+
+## Previous P6 handoff (historical)
+
 Updated 2026-09-10 after **P6 visible progression goals** and physical Pixel update.
 P5 and P6 are included in the consolidated commit accompanying this handoff.
 The previous commit was `3759501` (P1–P4). Use `git log -1`, `git status --short`

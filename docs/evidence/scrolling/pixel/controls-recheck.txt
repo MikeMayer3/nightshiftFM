@@ -1,0 +1,5 @@
+PASS: draft tap/drag control detail_open
+PASS: settings tap/drag control toggled
+PASS: equipment tap/drag control popup
+PASS: mixer tap/drag control level
+RESULT: 70 Android OS swipe checks; 0 failures

@@ -61,6 +61,7 @@ func _run() -> void:
 	context.check(ACTIVE_TEST.new().run(context) == true, "active combat suite completed")
 	context.check(await ACTIVE_SCREEN.new().run(context, self) == true, "active screen suite completed")
 	context.check(await TOUCH_AIM.new().run(context, self) == true, "native touch aiming suite completed")
+	context.check(await preload("res://tests/integration/test_page_scroll.gd").new().run(context, self) == true, "page scrolling suite completed")
 	context.check(await ARSENAL_SCREEN.new().run(context, self) == true, "M5 screen suite completed")
 	context.check(ARSENAL_TEST.new().run(context) == true, "M5 arsenal suite completed")
 	context.check(await PATCHBOARD_SCREEN.new().run(context, self) == true, "M6 screen suite completed")

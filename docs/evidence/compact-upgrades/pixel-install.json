@@ -1,0 +1,110 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "package": "org.nightshiftfm.spike",
+  "version_before": [
+    "versionCode=24 minSdk=24 targetSdk=36",
+    "versionName=0.10.12"
+  ],
+  "before": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 16984,
+      "sha256": "d0de9c008aa4a781dd4b73b95a6e082f67388b2bfe19f2d75e875fd5d2a9d3ed"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 17014,
+      "sha256": "cac79e85fca104f6629e6145c7e1ed6f3245f620a0e3a1e8fa600d611df0d022"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 202,
+      "sha256": "0a5ec634a3bfc31dd23b79c85c084292ef5a00fc2a98ef884d06261b138deb1d"
+    }
+  },
+  "apk_sha256": "0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346",
+  "install": "Performing Streamed Install\nSuccess\n",
+  "after_install": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 16984,
+      "sha256": "d0de9c008aa4a781dd4b73b95a6e082f67388b2bfe19f2d75e875fd5d2a9d3ed"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 17014,
+      "sha256": "cac79e85fca104f6629e6145c7e1ed6f3245f620a0e3a1e8fa600d611df0d022"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 202,
+      "sha256": "0a5ec634a3bfc31dd23b79c85c084292ef5a00fc2a98ef884d06261b138deb1d"
+    }
+  },
+  "install_preserved_files": true,
+  "version_after": [
+    "versionCode=25 minSdk=24 targetSdk=36",
+    "versionName=0.10.13"
+  ],
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 541\nWaitTime: 544\nComplete\n",
+  "pid": "8232",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 16984,
+      "sha256": "d0de9c008aa4a781dd4b73b95a6e082f67388b2bfe19f2d75e875fd5d2a9d3ed"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 17014,
+      "sha256": "cac79e85fca104f6629e6145c7e1ed6f3245f620a0e3a1e8fa600d611df0d022"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 202,
+      "sha256": "0a5ec634a3bfc31dd23b79c85c084292ef5a00fc2a98ef884d06261b138deb1d"
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "window_state": [
+    "mCurrentFocus=Window{e2c0eb2 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher}",
+    "mShowingDream=false mDreamingLockscreen=false"
+  ],
+  "locked": false,
+  "foreground": [
+    "topResumedActivity=ActivityRecord{119677844 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6146}",
+    "Resumed: ActivityRecord{119677844 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6146}",
+    "ResumedActivity: ActivityRecord{119677844 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6146}"
+  ],
+  "visual_launch_verified": true,
+  "visual_launch_note": "Inspected physical screenshot: regular Nightshift FM menu is visible with New broadcast, Continue saved mission and Settings.",
+  "scope": "Physical in-place 0.10.13 compact-upgrade and scrolling update; launch/save preservation check. Prior compact UI checks were desktop and Android emulator; human usability is not certified."
+}

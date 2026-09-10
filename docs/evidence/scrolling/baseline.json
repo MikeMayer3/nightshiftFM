@@ -1,0 +1,13 @@
+{
+	"checks": 59,
+	"failures": 20,
+	"pages": [
+		{
+			"failures": 20,
+			"max_scroll": 251.0,
+			"page": "campaign/show_home",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		}
+	]
+}

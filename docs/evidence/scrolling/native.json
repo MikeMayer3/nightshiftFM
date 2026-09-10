@@ -1,0 +1,272 @@
+{
+	"checks": 826,
+	"failures": 0,
+	"pages": [
+		{
+			"failures": 0,
+			"max_scroll": 251.0,
+			"page": "campaign/show_home",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 2846.0,
+			"page": "campaign/show_rewards",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 18180.0,
+			"page": "campaign/show_achievements",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1482.0,
+			"page": "campaign/show_codex",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1853.0,
+			"page": "campaign/show_records",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 0.0,
+			"page": "campaign/show_modes",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1802.0,
+			"page": "campaign/show_enemies",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1463.0,
+			"page": "campaign/show_logs",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 2010.0,
+			"page": "equipment/modules",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 495.0,
+			"page": "settings/help",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 321.0,
+			"page": "draft/choices",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 851.0,
+			"page": "draft/details",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 891.0,
+			"page": "draft/report",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 496.0,
+			"page": "draft/recruit",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 900.0,
+			"page": "draft/recovery",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 3908.0,
+			"page": "patchboard/connections",
+			"positions": 20,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 14.0,
+			"page": "mixer/faders",
+			"positions": 18,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 4306.0,
+			"page": "mixer/connections",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1279.0,
+			"page": "results/rewards",
+			"positions": 22,
+			"viewport": "(360, 640)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 0.0,
+			"page": "campaign/show_home",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 2526.0,
+			"page": "campaign/show_rewards",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 17860.0,
+			"page": "campaign/show_achievements",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1162.0,
+			"page": "campaign/show_codex",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1533.0,
+			"page": "campaign/show_records",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 0.0,
+			"page": "campaign/show_modes",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1482.0,
+			"page": "campaign/show_enemies",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1143.0,
+			"page": "campaign/show_logs",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1690.0,
+			"page": "equipment/modules",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 175.0,
+			"page": "settings/help",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 321.0,
+			"page": "draft/choices",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 851.0,
+			"page": "draft/details",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 891.0,
+			"page": "draft/report",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 496.0,
+			"page": "draft/recruit",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 900.0,
+			"page": "draft/recovery",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 3588.0,
+			"page": "patchboard/connections",
+			"positions": 20,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 14.0,
+			"page": "mixer/faders",
+			"positions": 18,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 4306.0,
+			"page": "mixer/connections",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		},
+		{
+			"failures": 0,
+			"max_scroll": 1067.0,
+			"page": "results/rewards",
+			"positions": 22,
+			"viewport": "(450, 1000)"
+		}
+	]
+}

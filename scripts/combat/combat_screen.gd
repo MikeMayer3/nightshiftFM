@@ -229,6 +229,7 @@ func _ready() -> void:
 		scroll.follow_focus = true
 		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 		layout.add_child(scroll)
+		PageScroll.attach(overlay, scroll, true)
 		result_column.reparent(scroll)
 		result_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		result_goals = VBoxContainer.new()

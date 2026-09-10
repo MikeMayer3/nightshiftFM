@@ -22,6 +22,14 @@ class FoundationChecks(unittest.TestCase):
         self.assertIsNone(latest_event_after([event], "os_pause", 19))
         self.assertIsNone(latest_event_after([], "ready", 0))
 
+    def test_export_excludes_local_work(self):
+        presets = (ROOT / "export_presets.cfg").read_text()
+        filters = re.findall(r'^exclude_filter="([^"]*)"', presets, re.MULTILINE)
+        self.assertEqual(len(filters), 2)
+        for value in filters:
+            for directory in ["builds", "dist", "tests", "docs", "tools", "prompts"]:
+                self.assertIn(directory + "/*", value.split(","), "Local work must not enter exported packages")
+
     def test_resource_paths_exist(self):
         generated = "assets/ui_strings.en.translation"
         for path in sorted(ROOT.rglob("*")):

@@ -48,10 +48,11 @@ func _ready() -> void:
 	scroll.follow_focus = true
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	safe.add_child(scroll)
+	PageScroll.attach(self, scroll, true)
 	column = VBoxContainer.new()
 	column.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	column.add_theme_constant_override("separation", 10)
+	column.add_theme_constant_override("separation", 8)
 	_fit_sheet.call_deferred()
 	scroll.add_child(column)
 
@@ -117,7 +118,9 @@ func show_draft(session: CombatSession) -> void:
 		show_draft(session))
 	banish_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	banish_button.disabled = not banish_mode and (draft.banishes == 0 or not draft.offers.any(func(id: StringName) -> bool: return _can_banish(draft, id)))
-	var help_button: Button = button_text(tr("M3_HELP"), column, func() -> void: pass)
+	var help_button: Button = button_text(tr("M3_HELP_SHORT"), actions, func() -> void: pass)
+	help_button.tooltip_text = tr("M3_HELP")
+	help_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	help_button.custom_minimum_size.y = 64
 	help_button.set_meta("radio_touch_minimum", 64)
 	help_button.add_theme_font_size_override("font_size", 23)
@@ -146,7 +149,7 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 			banished.emit(id)
 		else:
 			selected.emit(id))
-	card.custom_minimum_size.y = 176
+	card.custom_minimum_size.y = 148
 	card.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	card.disabled = banish_mode and not _can_banish(draft, id)
 	cards.append(card)
@@ -169,15 +172,20 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	inset.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	card.add_child(inset)
 	inset.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	for side: String in ["left", "right", "top", "bottom"]: inset.add_theme_constant_override("margin_" + side, 18)
+	for side: String in ["left", "right"]: inset.add_theme_constant_override("margin_" + side, 12)
+	for side: String in ["top", "bottom"]: inset.add_theme_constant_override("margin_" + side, 10)
+	var contents: VBoxContainer = VBoxContainer.new()
+	contents.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	contents.add_theme_constant_override("separation", 4)
+	inset.add_child(contents)
 	var row: HBoxContainer = HBoxContainer.new()
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	row.add_theme_constant_override("separation", 18)
-	inset.add_child(row)
+	row.add_theme_constant_override("separation", 10)
+	contents.add_child(row)
 	var icon: TextureRect = TextureRect.new()
 	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	icon.texture = RadioArt.main_texture(session) if identity == &"main" else ICONS[identity]
-	icon.custom_minimum_size = Vector2(92, 92)
+	icon.custom_minimum_size = Vector2(64, 64)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	row.add_child(icon)
@@ -185,7 +193,7 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	body.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	body.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	body.add_theme_constant_override("separation", 6)
+	body.add_theme_constant_override("separation", 4)
 	row.add_child(body)
 	var header: HBoxContainer = HBoxContainer.new()
 	header.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -201,8 +209,10 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 		var rank: Label = label_text(tr("SIGNAL_NEW") if owned == null else tr("M3_RANK_SHORT") % [owned.rank(), owned.rank() + 1], header, 19)
 		rank.autowrap_mode = TextServer.AUTOWRAP_OFF
 		rank.modulate = Color("bdcbd4")
-	var info: Button = button_text("i", header, func() -> void: _show_details(session, id))
-	info.custom_minimum_size = Vector2(88, 88)
+	var info: Button = button_text("i", row, func() -> void: _show_details(session, id))
+	info.custom_minimum_size = Vector2(72, 72)
+	info.set_meta("radio_touch_minimum", 72)
+	info.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	info.tooltip_text = tr("M3_INFO")
 	info.flat = true
 	info.add_theme_color_override("font_color", accent)
@@ -213,11 +223,11 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	var suggestions: Array[Dictionary] = BuildGuide.suggestions(session, id)
 	if not suggestions.is_empty():
 		var diagram: ConnectionDiagram = ConnectionDiagram.new()
-		body.add_child(diagram)
+		contents.add_child(diagram)
 		diagram.configure(session, suggestions[0], true)
 	inset.minimum_size_changed.connect(func() -> void:
-		card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y))
-	card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y)
+		card.custom_minimum_size.y = maxf(148, inset.get_combined_minimum_size().y))
+	card.custom_minimum_size.y = maxf(148, inset.get_combined_minimum_size().y)
 	if card.disabled: inset.modulate = Color("697783")
 
 func _show_details(session: CombatSession, id: StringName) -> void:

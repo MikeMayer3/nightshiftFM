@@ -1,0 +1,73 @@
+{
+  "scope": "Android emulator OS taps in isolated QA package; real Tuned threshold and synthetic branch fixture.",
+  "checks": 22,
+  "failures": 0,
+  "cases": [
+    {
+      "case": "branch/new instrument fixture",
+      "text": "normal",
+      "card_heights": [
+        194.0,
+        159.0,
+        159.0
+      ],
+      "checks": {
+        "three_choices": true,
+        "all_choices_visible": true,
+        "no_scroll_needed": true,
+        "details_open_without_purchase": true,
+        "back_restores_three_choices": true
+      }
+    },
+    {
+      "case": "branch/new instrument fixture",
+      "text": "large",
+      "card_heights": [
+        210.0,
+        171.0,
+        171.0
+      ],
+      "checks": {
+        "three_choices": true,
+        "all_choices_visible": true,
+        "no_scroll_needed": true,
+        "details_open_without_purchase": true,
+        "back_restores_three_choices": true
+      }
+    },
+    {
+      "case": "actual Tuned threshold",
+      "text": "normal",
+      "card_heights": [
+        159.0,
+        159.0,
+        159.0
+      ],
+      "checks": {
+        "three_choices": true,
+        "all_choices_visible": true,
+        "no_scroll_needed": true,
+        "details_open_without_purchase": true,
+        "back_restores_three_choices": true,
+        "third_card_resolves_real_tuned_choice": true
+      }
+    },
+    {
+      "case": "actual Tuned threshold",
+      "text": "large",
+      "card_heights": [
+        210.0,
+        171.0,
+        171.0
+      ],
+      "checks": {
+        "three_choices": true,
+        "all_choices_visible": true,
+        "no_scroll_needed": true,
+        "details_open_without_purchase": true,
+        "back_restores_three_choices": true,
+        "third_card_resolves_real_tuned_choice": true
+      }
+    }
+  ]
+}

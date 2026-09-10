@@ -1,5 +1,39 @@
 # Nightshift FM — resume here
 
+## 0.10.13 delivery (2026-09-10)
+
+The scrolling and compact-upgrade fixes are included in this delivery commit.
+Physical Pixel **0.10.13/code 25** installed and visibly launched; all six existing
+save/settings files remained byte-identical through install and launch, with no
+runtime errors. APK SHA-256: `0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346`.
+APK contents were checked to exclude local backups and test/build directories.
+Prior native, regression and Android input results remain documented below.
+GitHub upload verification will be recorded after publication. Earlier local-only
+and disconnected-phone notes below are historical and superseded by this entry.
+
+## Compact Tuned upgrade cards — 0.10.13 (2026-09-10)
+
+Compacted card padding, art, information-button placement and connection hints;
+Help now shares the Reroll/Banish row. All three choices/actions fit without scroll
+in the tested normal/large-text layouts. PASS: 510 native layout/input checks,
+6,125 regressions, 22 Android emulator checks, eight foundation checks and export.
+The APK also excludes local backup/build folders after an export inspection found
+they were being bundled. [Details and evidence](COMPACT_UPGRADES.md).
+**Local/uncommitted**. APK is 0.10.13/code 25; the disconnected physical Pixel's
+last verified build remains 0.10.12/code 24. This update is not installed on it.
+
+## Scrolling correction — 0.10.12 (2026-09-10)
+
+Implemented full-page mouse/native-touch dragging across every scroll screen,
+including text, art, cards, margins and the app area outside centered sheets.
+Taps, selectors and mixer faders remain usable. PASS: 6,125 regressions, 826
+native desktop checks, seven foundation checks, 66 physical Pixel swipes and four
+physical control checks. Android **0.10.12/code 24** installed and visibly launched;
+all six existing save/settings files remained byte-identical, with clean logs.
+[Scope, commands, evidence and test-fixture correction](SCROLLING_FIX.md).
+Changes are **local and uncommitted**; the existing GitHub release is unchanged.
+Human extended usability testing remains NOT RUN. Earlier entries are historical.
+
 Git handoff: see [`handoff.md`](../handoff.md) for the consolidated commit scope
 and current resume instructions. Earlier local/uncommitted statements below are
 historical checkpoints superseded by that handoff.

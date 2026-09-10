@@ -1,0 +1,1163 @@
+{
+  "device_kind": "physical Android device",
+  "surface_bounds": [
+    0,
+    161,
+    1080,
+    2287
+  ],
+  "expected_broken": false,
+  "controls_rechecked_with_paused_fixture": true,
+  "rows": [
+    {
+      "page": "route",
+      "area": "margin",
+      "before": 0,
+      "after": 76,
+      "max_scroll": 76.0,
+      "expected_min": 76.0,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "route",
+      "area": "text",
+      "before": 0,
+      "after": 76,
+      "max_scroll": 76.0,
+      "expected_min": 76.0,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "route",
+      "area": "card",
+      "before": 0,
+      "after": 76,
+      "max_scroll": 76.0,
+      "expected_min": 76.0,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "hardware",
+      "area": "margin",
+      "before": 0,
+      "after": 159,
+      "max_scroll": 2709.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "hardware",
+      "area": "text",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 2709.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "hardware",
+      "area": "card",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 2709.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "achievements",
+      "area": "margin",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 18043.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "achievements",
+      "area": "text",
+      "before": 0,
+      "after": 162,
+      "max_scroll": 18043.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "achievements",
+      "area": "card",
+      "before": 0,
+      "after": 169,
+      "max_scroll": 18043.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "codex",
+      "area": "margin",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 1345.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "codex",
+      "area": "text",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 1345.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "codex",
+      "area": "card",
+      "before": 0,
+      "after": 159,
+      "max_scroll": 1345.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "records",
+      "area": "margin",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "records",
+      "area": "text",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "records",
+      "area": "card",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "modes",
+      "area": "margin",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "modes",
+      "area": "text",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "modes",
+      "area": "card",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "enemies",
+      "area": "margin",
+      "before": 0,
+      "after": 178,
+      "max_scroll": 1665.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "enemies",
+      "area": "text",
+      "before": 0,
+      "after": 157,
+      "max_scroll": 1665.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "enemies",
+      "area": "card",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 1665.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "logs",
+      "area": "margin",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "logs",
+      "area": "text",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "logs",
+      "area": "card",
+      "before": 0,
+      "after": 0,
+      "max_scroll": 0.0,
+      "expected_min": 0,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "equipment",
+      "area": "margin",
+      "before": 0,
+      "after": 161,
+      "max_scroll": 1873.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "equipment",
+      "area": "text",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 1873.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "equipment",
+      "area": "card",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 1873.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "settings",
+      "area": "margin",
+      "before": 0,
+      "after": 168,
+      "max_scroll": 358.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "settings",
+      "area": "text",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 358.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "settings",
+      "area": "card",
+      "before": 0,
+      "after": 160,
+      "max_scroll": 358.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "draft",
+      "area": "margin",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 321.0,
+      "expected_min": 100,
+      "start": [
+        79,
+        1224
+      ],
+      "end": [
+        79,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "draft",
+      "area": "text",
+      "before": 0,
+      "after": 162,
+      "max_scroll": 321.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        695
+      ],
+      "end": [
+        540,
+        485
+      ],
+      "pass": true
+    },
+    {
+      "page": "draft",
+      "area": "card",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 321.0,
+      "expected_min": 100,
+      "start": [
+        300,
+        1287
+      ],
+      "end": [
+        300,
+        1077
+      ],
+      "pass": true
+    },
+    {
+      "page": "draft",
+      "area": "outside",
+      "before": 0,
+      "after": 166,
+      "max_scroll": 321.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "details",
+      "area": "margin",
+      "before": 0,
+      "after": 161,
+      "max_scroll": 851.0,
+      "expected_min": 100,
+      "start": [
+        79,
+        1224
+      ],
+      "end": [
+        79,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "details",
+      "area": "text",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 851.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        695
+      ],
+      "end": [
+        540,
+        485
+      ],
+      "pass": true
+    },
+    {
+      "page": "details",
+      "area": "card",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 851.0,
+      "expected_min": 100,
+      "start": [
+        300,
+        1287
+      ],
+      "end": [
+        300,
+        1077
+      ],
+      "pass": true
+    },
+    {
+      "page": "details",
+      "area": "outside",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 851.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "report",
+      "area": "margin",
+      "before": 0,
+      "after": 156,
+      "max_scroll": 891.0,
+      "expected_min": 100,
+      "start": [
+        79,
+        1224
+      ],
+      "end": [
+        79,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "report",
+      "area": "text",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 891.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        695
+      ],
+      "end": [
+        540,
+        485
+      ],
+      "pass": true
+    },
+    {
+      "page": "report",
+      "area": "card",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 891.0,
+      "expected_min": 100,
+      "start": [
+        300,
+        1287
+      ],
+      "end": [
+        300,
+        1077
+      ],
+      "pass": true
+    },
+    {
+      "page": "report",
+      "area": "outside",
+      "before": 0,
+      "after": 168,
+      "max_scroll": 891.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "recruit",
+      "area": "margin",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 496.0,
+      "expected_min": 100,
+      "start": [
+        79,
+        1224
+      ],
+      "end": [
+        79,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "recruit",
+      "area": "text",
+      "before": 0,
+      "after": 161,
+      "max_scroll": 496.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        695
+      ],
+      "end": [
+        540,
+        485
+      ],
+      "pass": true
+    },
+    {
+      "page": "recruit",
+      "area": "card",
+      "before": 0,
+      "after": 167,
+      "max_scroll": 496.0,
+      "expected_min": 100,
+      "start": [
+        300,
+        1287
+      ],
+      "end": [
+        300,
+        1077
+      ],
+      "pass": true
+    },
+    {
+      "page": "recruit",
+      "area": "outside",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 496.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "recovery",
+      "area": "margin",
+      "before": 0,
+      "after": 160,
+      "max_scroll": 900.0,
+      "expected_min": 100,
+      "start": [
+        79,
+        1224
+      ],
+      "end": [
+        79,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "recovery",
+      "area": "text",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 900.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        695
+      ],
+      "end": [
+        540,
+        485
+      ],
+      "pass": true
+    },
+    {
+      "page": "recovery",
+      "area": "card",
+      "before": 0,
+      "after": 158,
+      "max_scroll": 900.0,
+      "expected_min": 100,
+      "start": [
+        300,
+        1287
+      ],
+      "end": [
+        300,
+        1077
+      ],
+      "pass": true
+    },
+    {
+      "page": "recovery",
+      "area": "outside",
+      "before": 0,
+      "after": 164,
+      "max_scroll": 900.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "patchboard",
+      "area": "margin",
+      "before": 0,
+      "after": 167,
+      "max_scroll": 3771.0,
+      "expected_min": 100,
+      "start": [
+        22,
+        1224
+      ],
+      "end": [
+        22,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "patchboard",
+      "area": "text",
+      "before": 0,
+      "after": 157,
+      "max_scroll": 3771.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        331
+      ],
+      "end": [
+        540,
+        121
+      ],
+      "pass": true
+    },
+    {
+      "page": "patchboard",
+      "area": "card",
+      "before": 0,
+      "after": 169,
+      "max_scroll": 3771.0,
+      "expected_min": 100,
+      "start": [
+        270,
+        1330
+      ],
+      "end": [
+        270,
+        1120
+      ],
+      "pass": true
+    },
+    {
+      "page": "patchboard",
+      "area": "outside",
+      "before": 0,
+      "after": 160,
+      "max_scroll": 3771.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer",
+      "area": "margin",
+      "before": 0,
+      "after": 14,
+      "max_scroll": 14.0,
+      "expected_min": 14.0,
+      "start": [
+        63,
+        1224
+      ],
+      "end": [
+        63,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer",
+      "area": "text",
+      "before": 0,
+      "after": 14,
+      "max_scroll": 14.0,
+      "expected_min": 14.0,
+      "start": [
+        540,
+        619
+      ],
+      "end": [
+        540,
+        409
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer",
+      "area": "card",
+      "before": 0,
+      "after": 14,
+      "max_scroll": 14.0,
+      "expected_min": 14.0,
+      "start": [
+        292,
+        1296
+      ],
+      "end": [
+        292,
+        1086
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer",
+      "area": "outside",
+      "before": 0,
+      "after": 14,
+      "max_scroll": 14.0,
+      "expected_min": 14.0,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer-connections",
+      "area": "margin",
+      "before": 0,
+      "after": 165,
+      "max_scroll": 4306.0,
+      "expected_min": 100,
+      "start": [
+        63,
+        1224
+      ],
+      "end": [
+        63,
+        1014
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer-connections",
+      "area": "text",
+      "before": 0,
+      "after": 162,
+      "max_scroll": 4306.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        619
+      ],
+      "end": [
+        540,
+        409
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer-connections",
+      "area": "card",
+      "before": 0,
+      "after": 167,
+      "max_scroll": 4306.0,
+      "expected_min": 100,
+      "start": [
+        292,
+        1296
+      ],
+      "end": [
+        292,
+        1086
+      ],
+      "pass": true
+    },
+    {
+      "page": "mixer-connections",
+      "area": "outside",
+      "before": 0,
+      "after": 156,
+      "max_scroll": 4306.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "results",
+      "area": "margin",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 1188.0,
+      "expected_min": 100,
+      "start": [
+        84,
+        1245
+      ],
+      "end": [
+        84,
+        1035
+      ],
+      "pass": true
+    },
+    {
+      "page": "results",
+      "area": "text",
+      "before": 0,
+      "after": 166,
+      "max_scroll": 1188.0,
+      "expected_min": 100,
+      "start": [
+        540,
+        656
+      ],
+      "end": [
+        540,
+        446
+      ],
+      "pass": true
+    },
+    {
+      "page": "results",
+      "area": "card",
+      "before": 0,
+      "after": 163,
+      "max_scroll": 1188.0,
+      "expected_min": 100,
+      "start": [
+        302,
+        1315
+      ],
+      "end": [
+        302,
+        1105
+      ],
+      "pass": true
+    },
+    {
+      "page": "results",
+      "area": "outside",
+      "before": 0,
+      "after": 155,
+      "max_scroll": 1188.0,
+      "expected_min": 100,
+      "start": [
+        30,
+        401
+      ],
+      "end": [
+        30,
+        191
+      ],
+      "pass": true
+    },
+    {
+      "page": "draft",
+      "action": "detail_open",
+      "before": false,
+      "after": true,
+      "pass": true
+    },
+    {
+      "page": "settings",
+      "action": "toggled",
+      "before": true,
+      "after": false,
+      "pass": true
+    },
+    {
+      "page": "equipment",
+      "action": "popup",
+      "before": false,
+      "after": true,
+      "pass": true
+    },
+    {
+      "page": "mixer",
+      "action": "level",
+      "before": 0,
+      "after": 4,
+      "pass": true
+    }
+  ]
+}
