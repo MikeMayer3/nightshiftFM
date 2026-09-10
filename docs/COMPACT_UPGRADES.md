@@ -69,6 +69,6 @@ change and should be replaced with a clean build before further sharing.
 
 Download: [GitHub 0.10.13 release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.13)
 (requires sign-in to this private repository). The older 0.10.11 APK and checksum
-remain pending explicit approval for removal.
+were removed with explicit approval; their absence was verified.
 Local: ignored `builds/android/nightshift-fm-0.10.13-android-arm64-debug.apk`.
 The version, size and SHA-256 are in `evidence/compact-upgrades/package.json`.

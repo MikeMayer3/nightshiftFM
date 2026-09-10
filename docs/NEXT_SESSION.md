@@ -13,8 +13,9 @@ Prior native, regression and Android input results remain documented below.
 contains the clean APK, anonymized construction summary and checksums. A complete
 authenticated APK download matches the installed SHA-256. The repository is private;
 sign in to GitHub to download. Fresh staged-source import and 6,125 regressions passed.
-The older 0.10.11 APK and checksum remain in place; their removal awaits explicit
-approval because the old export included local backup files. Use 0.10.13 for sharing.
+The older 0.10.11 APK and checksum were removed with explicit approval; their
+absence was verified. The source tag and construction summary remain available.
+Use 0.10.13 for sharing.
 Earlier local-only and disconnected-phone notes below are historical and superseded
 by this entry.
 
