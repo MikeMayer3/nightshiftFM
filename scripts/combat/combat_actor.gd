@@ -58,7 +58,7 @@ static func from_definition(definition: EnemyDefinition, number: int, at: Vector
 	actor.ability_interval = definition.ability_interval
 	return actor
 
-func advance(delta: float) -> void:
+func advance(delta: float, hold_y: float = 170.0) -> void:
 	status.advance(delta)
 	var movement_delta: float = delta * (1.0 - status.slow)
 	age += movement_delta
@@ -66,6 +66,6 @@ func advance(delta: float) -> void:
 	if path_kind == EnemyDefinition.PathKind.DIVE:
 		multiplier = 2.7 if age >= 2.0 else 0.55
 		position.x = clampf(origin_x + sin(age * 1.7) * 65.0, radius, 640.0 - radius)
-	if role in [EnemyDefinition.Role.MORTAR, EnemyDefinition.Role.CALLER, EnemyDefinition.Role.CORE, EnemyDefinition.Role.SILENCE, EnemyDefinition.Role.AERIAL] and position.y >= 170:
+	if role in [EnemyDefinition.Role.MORTAR, EnemyDefinition.Role.CALLER, EnemyDefinition.Role.CORE, EnemyDefinition.Role.SILENCE, EnemyDefinition.Role.AERIAL] and position.y >= hold_y:
 		return
 	position.y += speed * multiplier * movement_delta

@@ -120,18 +120,17 @@ func add_campaign_controls(column: VBoxContainer) -> void:
 	modules_body = RadioUI.fold(column, tr("M10_MODULES"))
 	var module_toggle: Button = modules_body.get_parent().get_child(modules_body.get_index() - 1)
 	module_toggle.toggled.connect(func(_open: bool) -> void: refresh_preview())
-	module_heading = _label(modules_body, tr("M7_MODULE_SLOTS") % [modules.size(), 2], 26)
+	var grid: GridContainer = GridContainer.new()
+	grid.columns = 2
+	grid.add_theme_constant_override("h_separation", 12)
+	grid.add_theme_constant_override("v_separation", 12)
+	modules_body.add_child(grid)
 	for id: String in CampaignContent.options(campaign_profile.cleared, "modules"):
-		var definition: ModuleDefinition = CampaignContent.MODULES[StringName(id)]
-		var button: CheckButton = CheckButton.new()
-		button.text = tr(definition.name_key)
+		var button: ModuleCard = ModuleCard.new()
+		button.configure(StringName(id))
 		button.button_pressed = StringName(id) in modules
-		button.custom_minimum_size.y = 76
-		button.add_theme_font_size_override("font_size", 27)
-		button.mouse_filter = Control.MOUSE_FILTER_PASS
-		modules_body.add_child(button)
+		grid.add_child(button)
 		module_buttons[id] = button
-		_label(modules_body, tr(definition.description_key), 24)
 		button.toggled.connect(func(enabled: bool) -> void:
 			if enabled and modules.size() >= 2:
 				button.set_pressed_no_signal(false)
@@ -188,11 +187,11 @@ func refresh_preview() -> void:
 	if modules_body != null:
 		var toggle: Button = modules_body.get_parent().get_child(modules_body.get_index() - 1)
 		toggle.text = ("−  " if modules_body.visible else "+  ") + tr("M10_MODULE_COUNT") % modules.size()
-	preview.text = tr("M7_MODULE_SLOTS") % [modules.size(), 2] + "\n" + tr("M7_PREVIEW") % [ModuleStats.maximum_hull(modules), defense.capacity, defense.recharge, defense.delay, defense.cooldown, attack.damage, attack.interval, attack.reach, attack.crit * 100, 2 + int(ModuleStats.coefficient(modules, &"rerolls"))]
+	preview.text = tr("M7_MODULE_SLOTS") % [modules.size(), 2] + "\n" + tr("M7_PREVIEW") % [ModuleStats.maximum_hull(modules), defense.capacity, defense.recharge, defense.delay, defense.cooldown, attack.damage, attack.interval, RadioBalance.station_reach(main, selection.main), attack.crit * 100, 2 + int(ModuleStats.coefficient(modules, &"rerolls"))]
 
 	var support: UpgradeTrack = UpgradeTrack.new(ArsenalContent.DEFINITIONS[selection.support])
 	support.modules = modules.duplicate()
 	var params: Dictionary = ArsenalStats.parameters(support)
-	preview.text += "\n" + tr(support.definition.name_key)
+	preview.text += "\n" + tr(support.definition.name_key) + "\n" + tr("RADIO_STATION_REACH") % RadioBalance.station_reach(support, selection.main)
 	for key: StringName in [&"damage", &"interval", &"reach", &"radius", &"push", &"pull", &"speed", &"duration"]:
 		if params.has(key): preview.text += "\n" + tr("M5_STAT_" + String(key).to_upper()) + ": %.2f" % float(params[key])

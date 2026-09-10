@@ -152,8 +152,10 @@ func render() -> void:
 		var body: VBoxContainer = VBoxContainer.new()
 		body.add_theme_constant_override("separation", 8)
 		card.add_child(body)
-		label(tr(recipe.name_key) + (" · " + tr("M6_DISCOVERED") if id in known else ""), body, 30)
-		label(requirements(recipe), body, 23).modulate = Color("a7bbc8")
+		var diagram: ConnectionDiagram = ConnectionDiagram.new()
+		body.add_child(diagram)
+		diagram.configure(session, BuildGuide.state(session, id))
+		if id in known: label(tr("M6_DISCOVERED"), body, 20)
 		var detail: Label = label(tr(recipe.description_key), body, 24)
 		detail.visible = expanded_details.get(id, false)
 		var inspect: Button = action(tr("BROADCAST_HIDE_DETAILS" if detail.visible else "BROADCAST_DETAILS"), body, func() -> void:

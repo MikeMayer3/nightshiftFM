@@ -50,6 +50,30 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 		for actor: CombatActor in b.actors:
 			t.check(RadioArt.enemy(actor, era_index) != null, "M10 role texture exists for era %d" % era_index)
 	arena.queue_free()
+	var effects: CombatArena = CombatArena.new()
+	effects.session = b
+	tree.root.add_child(effects)
+	effects.set_process(false)
+	effects.show_chain(PackedVector2Array([Vector2(320,680), Vector2(320,300)]), false)
+	effects.show_support(&"bass_driver", Vector2(320,300), Vector2(90,90))
+	var actor: CombatActor = b.spawn_enemy(CombatContent.SWARMER, 320)
+	var event: CombatEvent = CombatEvent.new(1, 1, &"main", CombatEvent.Kind.KILL, actor.serial, 1)
+	for index: int in 40: effects.show_event(event)
+	t.check(effects.fragments.size() == 32, "kill fragments remain bounded during dense fights")
+	var visual_before: Array = [effects.chains.duplicate(true), effects.pulses.duplicate(true), effects.fragments.duplicate(true), effects.waveform_time]
+	var phase_before: CombatSession.Phase = b.phase
+	for stopped_phase: CombatSession.Phase in [CombatSession.Phase.COMBAT, CombatSession.Phase.DRAFT, CombatSession.Phase.RECRUIT]:
+		b.phase = stopped_phase
+		b.paused = stopped_phase == CombatSession.Phase.COMBAT
+		effects._process(.5)
+		t.check(visual_before == [effects.chains, effects.pulses, effects.fragments, effects.waveform_time], "pause and upgrade choices freeze every transient combat effect")
+	b.paused = false; b.phase = CombatSession.Phase.COMBAT
+	var snapshot: Dictionary = SignalSnapshot.capture(b)
+	effects._process(.6)
+	t.check(effects.chains.is_empty() and effects.pulses.is_empty() and effects.fragments.is_empty(), "combat effects expire after play resumes")
+	t.check(SignalSnapshot.capture(b) == snapshot, "visual fragments and animation never mutate gameplay or RNG")
+	b.phase = phase_before
+	effects.queue_free()
 	var screen: CombatScreen = COMBAT.instantiate()
 	screen.m3_enabled = true
 	screen.arsenal_enabled = true
@@ -58,11 +82,13 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 	tree.root.add_child(screen)
 	await tree.process_frame
 	screen.set_process(false)
+	t.check(screen.session.chain_fired.is_connected(screen.radio_audio.chain), "actual arsenal attacks reach the bounded shot audio cue")
+	t.check(screen.session.combat_event.is_connected(screen.arena.show_event), "actual kills reach the visual fragment effect")
 	t.check(not screen.ability_button.visible, "M10 cooldown attack removed from the combat UI")
 	var radio: CombatSession = CombatSession.new()
 	radio.start_campaign(42, &"run.1", ArsenalContent.DEFAULT, {"mission": 1, "cleared": 0, "modules": ["hot_tubes", "heavy_battery"]})
 	radio.advance(2.4)
-	t.check(radio.active_combat.automatic_radio and not radio.active_combat.burst(radio, radio.target().position), "new campaign uses automatic combat and rejects Burst calls")
+	t.check(radio.active_combat.automatic_radio and not radio.active_combat.burst(radio, Vector2(320, 300)), "new campaign uses automatic combat and rejects Burst calls")
 	var copy: CombatSession = CombatSession.new()
 	t.check(copy.restore_checkpoint(JSON.parse_string(JSON.stringify(radio.to_checkpoint()))) and copy.active_combat.automatic_radio, "automatic combat rules survive a JSON checkpoint")
 	var legacy_data: Dictionary = radio.to_checkpoint()

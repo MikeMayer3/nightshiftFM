@@ -1,0 +1,48 @@
+--------- beginning of system
+09-10 11:47:37.568 13133 13133 D InsetsController: hide(ime())
+09-10 11:47:37.568 13133 13133 I ImeTracker: org.nightshiftfm.p3qa:2dc34b9b: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+--------- beginning of main
+09-10 12:05:53.115 13133 13178 I godot   : P3_SOAK {"actors":3,"coach":"","fps":60.0,"frames":64562,"kind":"live","p95_ms":16.6666666666667,"runs":4,"save_failed":false,"static_bytes":79406422.0,"wall_seconds":1080.2,"wave":1}
+09-10 12:05:54.448 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":10.0000000000001,"shield":65.0,"wave":1}
+09-10 12:05:59.467 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":15.0000000000003,"shield":65.0,"wave":1}
+09-10 12:06:04.471 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":20.0000000000001,"shield":65.0,"wave":1}
+09-10 12:06:08.202 13133 13155 I ghtshiftfm.p3qa: Explicit concurrent mark compact GC freed 2680KB AllocSpace bytes, 1(20KB) LOS objects, 99% free, 2401KB/256MB, paused 86us,1.575ms total 12.825ms
+09-10 12:06:09.486 13133 13178 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":25.0166666666665,"shield":65.0,"wave":1}
+09-10 12:06:14.490 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":30.0166666666662,"shield":65.0,"wave":1}
+09-10 12:06:19.489 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":35.016666666666,"shield":65.0,"wave":1}
+09-10 12:06:23.124 13133 13178 I godot   : P3_SOAK {"actors":1,"coach":"","fps":60.0,"frames":66360,"kind":"live","p95_ms":16.6666666666667,"runs":4,"save_failed":false,"static_bytes":79352364.0,"wall_seconds":1110.205,"wave":1}
+09-10 12:06:24.488 13133 13178 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":40.0166666666657,"shield":65.0,"wave":1}
+09-10 12:06:26.296 13133 13178 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":41.8166666666656,"shield":65.0,"wave":2}
+09-10 12:06:29.489 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":45.0166666666654,"shield":65.0,"wave":2}
+09-10 12:06:34.492 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":50.0166666666651,"shield":65.0,"wave":2}
+09-10 12:06:39.491 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":55.0166666666648,"shield":65.0,"wave":2}
+09-10 12:06:44.491 13133 13178 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":60.0166666666645,"shield":65.0,"wave":2}
+09-10 12:06:49.509 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":65.0166666666643,"shield":65.0,"wave":2}
+09-10 12:06:53.120 13133 13178 I godot   : P3_SOAK {"actors":4,"coach":"","fps":61.0,"frames":68159,"kind":"live","p95_ms":16.6666666666667,"runs":4,"save_failed":false,"static_bytes":79368400.0,"wall_seconds":1140.206,"wave":2}
+09-10 12:06:54.510 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":70.016666666664,"shield":65.0,"wave":2}
+09-10 12:06:59.510 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":75.0166666666637,"shield":65.0,"wave":2}
+09-10 12:07:04.510 13133 13178 I godot   : M2_COMBAT {"actors":1,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":80.0166666666634,"shield":65.0,"wave":2}
+09-10 12:07:08.020 13133 13178 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":83.5166666666632,"shield":65.0,"wave":3}
+09-10 12:07:09.628 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":85.0166666666631,"shield":65.0,"wave":3}
+09-10 12:07:10.081 13133 13155 I ghtshiftfm.p3qa: Explicit concurrent mark compact GC freed 1688KB AllocSpace bytes, 1(20KB) LOS objects, 99% free, 2401KB/256MB, paused 118us,1.837ms total 12.759ms
+09-10 12:07:14.611 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":90.0166666666628,"shield":65.0,"wave":3}
+09-10 12:07:19.611 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":95.0166666666626,"shield":65.0,"wave":3}
+09-10 12:07:23.128 13133 13178 I godot   : P3_SOAK {"actors":7,"coach":"","fps":60.0,"frames":69945,"kind":"live","p95_ms":16.6666666666667,"runs":4,"save_failed":false,"static_bytes":79372864.0,"wall_seconds":1170.212,"wave":3}
+09-10 12:07:24.630 13133 13178 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":100.016666666662,"shield":65.0,"wave":3}
+09-10 12:07:29.631 13133 13178 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":105.016666666662,"shield":65.0,"wave":3}
+09-10 12:07:34.630 13133 13178 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":110.016666666662,"shield":65.0,"wave":3}
+09-10 12:07:39.630 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":115.016666666661,"shield":65.0,"wave":3}
+09-10 12:07:44.633 13133 13178 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":120.016666666661,"shield":65.0,"wave":3}
+09-10 12:07:49.634 13133 13178 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":125.016666666661,"shield":65.0,"wave":3}
+09-10 12:07:53.132 13133 13178 I godot   : P3_SOAK {"actors":3,"coach":"","fps":58.0,"frames":71742,"kind":"live","p95_ms":16.6666666666667,"runs":4,"save_failed":false,"static_bytes":79378582.0,"wall_seconds":1200.215,"wave":3}
+09-10 12:07:54.633 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":130.016666666662,"shield":65.0,"wave":3}
+09-10 12:07:57.444 13133 13178 I godot   : M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":132.816666666665,"shield":65.0,"wave":4}
+09-10 12:07:59.636 13133 13178 I godot   : M2_COMBAT {"actors":4,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":135.016666666666,"shield":65.0,"wave":4}
+09-10 12:08:04.618 13133 13178 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":140.000000000004,"shield":65.0,"wave":4}
+09-10 12:08:09.619 13133 13178 I godot   : M2_COMBAT {"actors":3,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":145.000000000008,"shield":65.0,"wave":4}
+09-10 12:08:12.502 13133 13152 I ghtshiftfm.p3qa: Explicit concurrent mark compact GC freed 1984KB AllocSpace bytes, 1(20KB) LOS objects, 99% free, 2401KB/256MB, paused 77us,1.318ms total 14.492ms
+09-10 12:08:14.621 13133 13178 I godot   : M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":150.000000000012,"shield":65.0,"wave":4}
+09-10 12:08:19.620 13133 13178 I godot   : M2_COMBAT {"actors":7,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":155.000000000015,"shield":65.0,"wave":4}
+09-10 12:08:22.918 13133 13178 I godot   : M2_COMBAT {"actors":0,"event":"restart","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+09-10 12:08:22.928 13133 13178 I godot   : M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+09-10 12:09:15.713 13133 13155 I ghtshiftfm.p3qa: Explicit concurrent mark compact GC freed 1656KB AllocSpace bytes, 1(20KB) LOS objects, 99% free, 2401KB/256MB, paused 74us,1.585ms total 14.476ms

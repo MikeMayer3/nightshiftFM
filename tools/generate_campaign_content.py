@@ -5,7 +5,7 @@ import csv,io,re
 ROOT=Path(__file__).resolve().parents[1]
 MODULES=[
 ('hot_tubes','Hot Tubes',4,{'attack_rate':.15,'recharge':-.20},'+15% auto-attack rate; −20% shield recharge.'),
-('long_mast','Long Mast',5,{'reach':.20,'hull':-.10},'+20% targeting range; −10% maximum hull.'),
+('long_mast','Long Mast',5,{'reach':.20,'hull':-.10},'+20% targeting range within the entry limit; −10% maximum hull.'),
 ('heavy_battery','Heavy Battery',4,{'capacity':.25,'recharge':-.20},'+25% shield capacity; −20% shield recharge.'),
 ('fast_fuse','Fast Fuse',5,{'cooldown':-.15,'capacity':-.15},'−15% shield-ability cooldown; −15% shield capacity.'),
 ('signal_booster','Signal Booster',6,{'damage':.15,'delay':1.0},'+15% additive attack damage; +1 second shield recharge delay.'),

@@ -82,7 +82,7 @@ func restart() -> void:
 	hull = HULL_MAX
 	wave = 0
 	elapsed = 0.0
-	phase_time = 2.0
+	phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 	phase = Phase.INTERMISSION
 	spawn_time = 0.0
 	spawn_index = 0
@@ -128,7 +128,7 @@ func activate_shield() -> bool:
 func spawn_enemy(definition: EnemyDefinition, x: float) -> CombatActor:
 	_serial += 1
 	var actor: CombatActor = CombatActor.from_definition(definition, _serial,
-		Vector2(clampf(x, SPAWN_BAND.position.x, SPAWN_BAND.end.x), SPAWN_BAND.position.y + 20.0))
+		Vector2(clampf(x, SPAWN_BAND.position.x, SPAWN_BAND.end.x), RadioBalance.SPAWN_Y if RadioBalance.enabled(self) else SPAWN_BAND.position.y + 20.0))
 	actors.append(actor)
 	return actor
 
@@ -150,11 +150,12 @@ func spawn_projectile(source: CombatActor) -> CombatActor:
 	actors.append(actor)
 	return actor
 
-func target() -> CombatActor:
+func target(source: StringName = &"") -> CombatActor:
 	var best: CombatActor
 	var score: float = INF
+	var reach: float = RadioBalance.reach(self, source) if source != &"" and RadioBalance.enabled(self) else INF
 	for actor: CombatActor in actors:
-		if actor.resolved or actor.health <= 0.0:
+		if not RadioBalance.entered(self, actor) or actor.position.distance_squared_to(TRANSMITTER) > reach * reach:
 			continue
 		var candidate: float = actor.position.distance_squared_to(focus_point) if focus_active else BREACH_Y - actor.position.y
 		if BroadcastRules.expanded(self) and not focus_active:
@@ -166,7 +167,7 @@ func target() -> CombatActor:
 	return best
 
 func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main", root_id: int = 0, penetration: float = 0.0) -> void:
-	if paused or is_finished() or is_deciding() or actor.resolved or amount <= 0.0 or not is_finite(amount):
+	if not RadioBalance.can_hit(self, actor, source) or paused or is_finished() or is_deciding() or actor.resolved or amount <= 0.0 or not is_finite(amount):
 		return
 	if signal_progress != null and signal_progress.overdrive_left > 0: amount *= 1.25
 	if arsenal != null: amount *= 1 + arsenal.mark_strength(actor.serial)
@@ -219,7 +220,10 @@ func hit_station(amount: float, cause: StringName, kind: StringName = &"COMBAT_B
 			supports.report.add(&"shield", &"breaks", 1)
 			_event(CombatEvent.Kind.SHIELD_BREAK, &"shield", root_id, target_id, absorbed)
 	if achievement_run != null:
-		achievement_run.hull_damage += minf(hull, incoming - absorbed)
+		var hull_lost: float = minf(hull, incoming - absorbed)
+		achievement_run.hull_damage += hull_lost
+		var category: String = "breach" if kind == &"COMBAT_BREACH_HIT" else "projectile" if kind == &"COMBAT_PROJECTILE_HIT" else "other"
+		achievement_run.loss_history[category] += hull_lost
 		if previous_shield > 0 and run.shield.current == 0: achievement_run.broken = true
 	hull = maxf(0.0, hull - (incoming - absorbed))
 	recharge_time = CombatContent.SHIELD.recharge_delay
@@ -252,7 +256,7 @@ func _step(delta: float) -> void:
 		else: run.shield.current = minf(run.shield.capacity, run.shield.current + shield_stat(&"brace_recharge", 0.0) * delta)
 	if achievement_run != null: achievement_run.observe(self)
 	if phase == Phase.INTERMISSION:
-		phase_time = maxf(0.0, phase_time - delta)
+		phase_time = 0.0 if RadioBalance.enabled(self) else maxf(0.0, phase_time - delta)
 		if phase_time <= 0.0:
 			wave += 1
 			phase = Phase.COMBAT
@@ -275,7 +279,7 @@ func _step(delta: float) -> void:
 			var spawned: CombatActor = spawn_enemy(enemy_definition(definition.enemy_ids[spawn_index]), spawn_x)
 			if draft != null:
 				spawned.health *= ActiveCombat.health_scale(wave) if active_combat != null else 1.0 + float(wave - 1) * (0.08 if supports != null else 0.22)
-				if active_combat != null and active_combat.automatic_radio: spawned.health *= ActiveCombat.AUTOMATIC_HEALTH_SCALE
+				if active_combat != null and active_combat.automatic_radio: spawned.health *= RadioBalance.health_scale(wave)
 				if BroadcastRules.expanded(self):
 					spawned.health *= BroadcastRules.health_scale(campaign, wave)
 					spawned.breach_damage *= BroadcastRules.damage_scale(campaign, wave)
@@ -285,7 +289,7 @@ func _step(delta: float) -> void:
 		spawn_time += definition.spawn_interval
 	# Resolve main-gun kills before movement/breach in the same fixed step.
 	shot_time = maxf(0.0, shot_time - delta)
-	var aimed: CombatActor = target()
+	var aimed: CombatActor = target(&"main")
 	if auto_fire and shot_time == 0.0 and aimed != null:
 		if draft == null:
 			fired.emit(aimed.position)
@@ -309,7 +313,7 @@ func _step(delta: float) -> void:
 		if supports != null and not actor.projectile:
 			supports.report.add(actor.status.slow_source, &"slow_seconds", actor.status.slow * minf(delta, actor.status.slow_left))
 		if BroadcastRules.expanded(self) and not actor.projectile: EncounterDirector.prepare(self, actor)
-		actor.advance(delta)
+		actor.advance(delta, 300.0 if RadioBalance.enabled(self) else 170.0)
 		if actor.position.y >= BREACH_Y:
 			actor.resolved = true
 			if not actor.projectile:
@@ -321,6 +325,7 @@ func _step(delta: float) -> void:
 			if is_finished():
 				return
 			continue
+		if not RadioBalance.entered(self, actor): continue
 		actor.ability_time += delta * actor.status.ability_rate()
 		if actor.ability_time >= actor.ability_interval:
 			actor.ability_time -= actor.ability_interval
@@ -343,7 +348,7 @@ func _step(delta: float) -> void:
 				_finish(true)
 				return
 			phase = Phase.INTERMISSION
-			phase_time = 2.0
+			phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 			if patchboard != null: patchboard.awaiting = not BroadcastRules.expanded(self) and (campaign == null or campaign.cleared >= 2)
 		if signal_progress.ready(): _open_signal_choice()
 		elif cleared: checkpoint_changed.emit()
@@ -360,7 +365,7 @@ func _step(delta: float) -> void:
 			checkpoint_changed.emit()
 		else:
 			phase = Phase.INTERMISSION
-			phase_time = 2.0
+			phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 
 func _finish(victory: bool) -> void:
 	if is_finished():
@@ -503,7 +508,7 @@ func _choose_signal(id: StringName) -> bool:
 		phase = Phase.COMBAT
 		if actors.is_empty() and spawn_index == wave_definition().enemy_ids.size():
 			phase = Phase.INTERMISSION
-			phase_time = 2.0
+			phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 		checkpoint_changed.emit()
 	return true
 
@@ -580,7 +585,7 @@ func choose_upgrade(id: StringName) -> bool:
 		phase = Phase.RECRUIT
 	else:
 		phase = Phase.INTERMISSION
-		phase_time = 2.0
+		phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 	checkpoint_changed.emit()
 	return true
 
@@ -594,7 +599,7 @@ func recruit(id: StringName, unlocked: Array[StringName]) -> bool:
 	else:
 		apply_ranks()
 		phase = Phase.INTERMISSION
-		phase_time = 2.0
+		phase_time = 0.0 if RadioBalance.enabled(self) else 2.0
 	checkpoint_changed.emit()
 	return true
 

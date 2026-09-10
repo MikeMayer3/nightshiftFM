@@ -34,7 +34,8 @@ func advance(session: CombatSession, delta: float) -> void:
 		# Wait for capacity instead of creating and silently dropping a damaging attack.
 		if needles.size() > 112 or zones.size() > 20: continue
 		var p: Dictionary = ArsenalStats.parameters(owned)
-		var first: CombatActor = session.target()
+		var first: CombatActor = session.target(StringName(id))
+		if first == null: continue
 		var root: int = _root(session, StringName(id), first.serial)
 		if id == "arc_aerial": _arc(session, first, p, root)
 		elif id == "needle_swarm": _needles(session, first, p, root)
@@ -49,7 +50,7 @@ func advance(session: CombatSession, delta: float) -> void:
 
 static func actor_by_id(session: CombatSession, serial: int) -> CombatActor:
 	for actor: CombatActor in session.actors:
-		if actor.serial == serial and not actor.resolved: return actor
+		if actor.serial == serial and RadioBalance.entered(session, actor): return actor
 	return null
 
 func mark_strength(serial: int) -> float:
@@ -66,7 +67,7 @@ func hit(session: CombatSession, actor: CombatActor, p: Dictionary, source: Stri
 func fire_main(session: CombatSession, first: CombatActor) -> void:
 	var p: Dictionary = ArsenalStats.parameters(session.draft.track(&"main"))
 	var chassis: String = (session.draft as ArsenalDraft).loadout.main
-	if first.position.distance_to(CombatSession.TRANSMITTER) > float(p.reach): return
+	if not RadioBalance.can_hit(session, first, &"main") or first.position.distance_to(CombatSession.TRANSMITTER) > float(p.reach): return
 	var root: int = _root(session, &"main", first.serial)
 	var packet: Dictionary = {"source": "main", "kind": chassis, "root": root, "target": first.serial, "x": first.position.x, "y": first.position.y, "left": 0.0, "p": p.duplicate(true)}
 	if chassis == "burst" and p.get(&"stagger", 0) > 0:
@@ -119,7 +120,7 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 	var first: CombatActor = actor_by_id(session, int(packet.target))
 	var center: Vector2 = Vector2(float(packet.x), float(packet.y))
 	if packet.source == "echo_deck":
-		var candidates: Array[CombatActor] = nearby(session, center, float(p.retarget), 12)
+		var candidates: Array[CombatActor] = nearby(session, center, float(p.retarget), 12).filter(func(a: CombatActor) -> bool: return RadioBalance.can_hit(session, a, &"echo_deck"))
 		if p.get(&"distinct", 0) > 0 and candidates.size() > 1: candidates = candidates.filter(func(a: CombatActor) -> bool: return a.serial != int(packet.target))
 		if p.get(&"priority", 0) > 0: candidates.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return priority(a) > priority(b))
 		if not candidates.is_empty(): first = candidates[int(p.copy_index) % candidates.size()] if p.get(&"distinct", 0) > 0 else candidates[0]
@@ -129,7 +130,7 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 			if not marked.is_empty() and session.patchboard.activate(session, &"b_side"):
 				first = marked[int(p.copy_index) % marked.size()]
 				assisted = &"b_side"
-	if first == null: return
+	if first == null or not RadioBalance.can_hit(session, first, StringName(packet.source)): return
 	if packet.source == "main" and session.patchboard != null and mark_strength(first.serial) > 0 and session.patchboard.activate(session, &"needle_thread"):
 		var recipe: SynergyDefinition = PatchboardContent.RECIPES[&"needle_thread"]
 		if packet.kind == "sweep": p.damage *= 1 + recipe.coefficient
@@ -141,7 +142,7 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 	var direction: Vector2 = (first.position - CombatSession.TRANSMITTER).normalized()
 	var targets: Array[CombatActor] = [first]
 	if packet.kind == "burst":
-		targets = nearby(session, first.position, float(p.width), 12)
+		targets = nearby(session, first.position, float(p.width), 12).filter(func(a: CombatActor) -> bool: return RadioBalance.can_hit(session, a, source))
 		for index: int in int(p.projectiles):
 			if targets.is_empty(): break
 			var victim: CombatActor = targets[index % targets.size()]
@@ -156,12 +157,12 @@ func _resolve_packet(session: CombatSession, packet: Dictionary) -> void:
 		for actor: CombatActor in ordered:
 			if targets.size() >= limit: break
 			var offset: Vector2 = actor.position - CombatSession.TRANSMITTER
-			if actor == first or actor.resolved or offset.length() > float(p.reach): continue
+			if actor == first or not RadioBalance.can_hit(session, actor, StringName(packet.source)) or offset.length() > float(p.reach): continue
 			if offset.dot(direction) > 0 and absf(offset.cross(direction)) <= float(p.width): targets.append(actor)
 		var bounces: int = int(p.get(&"bounce", 0))
 		for actor: CombatActor in nearby(session, first.position, minf(300, float(p.reach)), 12):
 			if bounces <= 0: break
-			if actor in targets: continue
+			if actor in targets or not RadioBalance.can_hit(session, actor, StringName(packet.source)): continue
 			targets.append(actor)
 			bounces -= 1
 		for actor: CombatActor in targets:
@@ -175,7 +176,7 @@ func priority(actor: CombatActor) -> float:
 	return (1000 if actor.elite else 0) + mark_strength(actor.serial) * 1000 + actor.position.y
 
 static func nearby(session: CombatSession, center: Vector2, radius: float, limit: int) -> Array[CombatActor]:
-	var result: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return not a.resolved and a.position.distance_to(center) <= radius)
+	var result: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return RadioBalance.entered(session, a) and a.position.distance_to(center) <= radius)
 	result.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return a.position.distance_squared_to(center) < b.position.distance_squared_to(center))
 	if result.size() > limit: result.resize(limit)
 	return result
@@ -187,7 +188,7 @@ func _arc(session: CombatSession, first: CombatActor, p: Dictionary, root: int) 
 		var choices: Array[CombatActor] = nearby(session, last.position, float(p.reach), 12)
 		last = null
 		for actor: CombatActor in choices:
-			if actor not in targets:
+			if actor not in targets and RadioBalance.can_hit(session, actor, &"arc_aerial"):
 				last = actor
 				break
 		if last == null: break
@@ -196,7 +197,7 @@ func _arc(session: CombatSession, first: CombatActor, p: Dictionary, root: int) 
 		var direction: Vector2 = (first.position - CombatSession.TRANSMITTER).normalized()
 		for actor: CombatActor in nearby(session, first.position, float(p.reach), 12):
 			if targets.size() >= 1 + int(p.pierce): break
-			if actor not in targets and absf((actor.position - first.position).cross(direction)) < float(p.width): targets.append(actor)
+			if actor not in targets and RadioBalance.can_hit(session, actor, &"arc_aerial") and absf((actor.position - first.position).cross(direction)) < float(p.width): targets.append(actor)
 	var origin: Vector2 = CombatSession.TRANSMITTER
 	for actor: CombatActor in targets:
 		session.chain_fired.emit(PackedVector2Array([origin, actor.position]), true)
@@ -214,7 +215,8 @@ func _arc(session: CombatSession, first: CombatActor, p: Dictionary, root: int) 
 			overshield_left = 4
 
 func _needles(session: CombatSession, first: CombatActor, p: Dictionary, root: int) -> void:
-	var targets: Array[CombatActor] = nearby(session, first.position, float(p.reach), 12)
+	var targets: Array[CombatActor] = nearby(session, first.position, float(p.reach), 12).filter(func(a: CombatActor) -> bool: return RadioBalance.can_hit(session, a, &"needle_swarm"))
+	if targets.is_empty(): return
 	if p.get(&"priority", 0) > 0: targets.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return priority(a) > priority(b))
 	for index: int in int(p.projectiles):
 		var target: CombatActor = targets[index % targets.size()]
@@ -245,7 +247,7 @@ func _tick_needles(session: CombatSession, delta: float) -> void:
 		needle.x = clampf(end.x, 0, 640)
 		needle.y = clampf(end.y, 0, 720)
 		for actor: CombatActor in session.actors:
-			if actor.resolved or actor.serial in needle.hits: continue
+			if not RadioBalance.can_hit(session, actor, &"needle_swarm") or actor.serial in needle.hits: continue
 			if actor.position.distance_to(Geometry2D.get_closest_point_to_segment(actor.position, start, end)) > actor.radius + 4: continue
 			var amount: float = float(p.damage) * maxf(.25, 1 - needle.hits.size() * float(p.get(&"falloff", 0)))
 			hit(session, actor, p, &"needle_swarm", int(needle.root), amount)
@@ -256,7 +258,7 @@ func _tick_needles(session: CombatSession, delta: float) -> void:
 			if needle.hits.size() >= 1 + int(p.pierce):
 				needle.left = 0
 				break
-		if not Rect2(Vector2.ZERO, CombatSession.ARENA).has_point(end): needle.left = 0
+		if not Rect2(Vector2.ZERO, CombatSession.ARENA).has_point(end) or (RadioBalance.enabled(session) and end.y < RadioBalance.ENTRY_Y): needle.left = 0
 	needles = needles.filter(func(n: Dictionary) -> bool: return n.left > 0)
 
 func _deploy(session: CombatSession, at: Vector2, source: StringName, p: Dictionary, root: int) -> void:
@@ -274,7 +276,7 @@ func _tick_zones(session: CombatSession, delta: float) -> void:
 		var center: Vector2 = Vector2(zone.x, zone.y)
 		zone.left = maxf(0, float(zone.left) - delta)
 		zone.tick = maxf(0, float(zone.tick) - delta)
-		var targets: Array[CombatActor] = nearby(session, center, float(p.radius), int(p.targets) if source == &"reverb_well" else 12)
+		var targets: Array[CombatActor] = nearby(session, center, float(p.radius), int(p.targets) if source == &"reverb_well" else 12).filter(func(a: CombatActor) -> bool: return RadioBalance.can_hit(session, a, source))
 		if zone.tick == 0 and session.patchboard != null:
 			if source == &"static_net": session.patchboard.net_tick(session, targets, center, int(zone.root))
 			elif source == &"bass_driver": session.patchboard.bass_pulse(session, targets, int(zone.root))
@@ -303,7 +305,7 @@ func _tick_zones(session: CombatSession, delta: float) -> void:
 					actor.status.exposure_left = p.duration
 				if source == &"bass_driver":
 					if not actor.displacement_immune:
-						var distance: float = minf(actor.position.y - 32, float(p.push) * (.25 if actor.elite else 1))
+						var distance: float = minf(actor.position.y - (RadioBalance.ENTRY_Y + actor.radius if RadioBalance.enabled(session) else 32), float(p.push) * (.25 if actor.elite else 1))
 						actor.position.y -= maxf(0, distance)
 						report.add(source, &"push_distance", distance)
 					else: actor.status.apply_slow(.15, actor.elite, source)
@@ -319,7 +321,7 @@ func _tick_zones(session: CombatSession, delta: float) -> void:
 				if actor.projectile or actor.resolved: continue
 				if p.get(&"terminal", 0) > 0: hit(session, actor, p, source, int(zone.root), float(p.terminal) * mini(8, targets.size()))
 				if p.get(&"release", 0) > 0 and not actor.displacement_immune:
-					var move: float = minf(actor.position.y - 32, float(p.release) * (.25 if actor.elite else 1))
+					var move: float = minf(actor.position.y - (RadioBalance.ENTRY_Y + actor.radius if RadioBalance.enabled(session) else 32), float(p.release) * (.25 if actor.elite else 1))
 					actor.position.y -= maxf(0, move)
 					report.add(source, &"push_distance", move)
 	zones = zones.filter(func(z: Dictionary) -> bool: return z.left > 0)

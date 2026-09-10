@@ -1,0 +1,68 @@
+{
+	"checks": 14,
+	"failures": 0,
+	"scenarios": [
+		{
+			"bonus_damage": 0.0,
+			"build": "bass",
+			"overlap": false,
+			"targets": 1
+		},
+		{
+			"bonus_damage": 0.8,
+			"build": "bass",
+			"overlap": true,
+			"targets": 1
+		},
+		{
+			"bonus_damage": 0.0,
+			"build": "bass",
+			"overlap": false,
+			"targets": 6
+		},
+		{
+			"bonus_damage": 28.8,
+			"build": "bass",
+			"overlap": true,
+			"targets": 6
+		},
+		{
+			"added_control_seconds": 0.0,
+			"already_jammed": false,
+			"bonus_damage": 0.0,
+			"build": "control",
+			"slowed": false
+		},
+		{
+			"added_control_seconds": 0.0,
+			"already_jammed": true,
+			"bonus_damage": 0.0,
+			"build": "control",
+			"slowed": false
+		},
+		{
+			"added_control_seconds": 2.7,
+			"already_jammed": false,
+			"bonus_damage": 0.0,
+			"build": "control",
+			"slowed": true
+		},
+		{
+			"added_control_seconds": 0.0,
+			"already_jammed": true,
+			"bonus_damage": 0.0,
+			"build": "control",
+			"slowed": true
+		},
+		{
+			"build": "precision",
+			"marked": false,
+			"targets_hit": 1
+		},
+		{
+			"build": "precision",
+			"marked": true,
+			"targets_hit": 2
+		}
+	]
+}

@@ -1,0 +1,2911 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m6 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m6 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m12 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+coherent m12 d2 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m6 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m6 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m12 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+weak m12 d2 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m6 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m6 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m12 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+mixed m12 d2 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m6 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m6 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m12 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_shield m12 d2 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m6 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m6 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m12 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: legal mix
+PASS: legal mix
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_focus m12 d2 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m1 d0 seed11 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m1 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m6 d0 seed11 connected=true win=true hull=71.3
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m6 d0 seed42 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m12 d0 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: legal connection
+PASS: legal connection
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m12 d0 seed42 connected=true win=true hull=100.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m12 d2 seed11 connected=true win=false hull=0.0
+PASS: valid comparison campaign
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: preview matches actual accepted build
+PASS: preview does not change choices, RNG or saves
+PASS: offered upgrade accepted
+PASS: preview matches actual accepted build
+PASS: comparison finished
+PASS: finished report restores
+PASS: finished explanation survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: finished damage breakdown survives restore
+PASS: health loss reconciles without double counting
+no_mixer m12 d2 seed42 connected=true win=false hull=0.0
+RESULT: 48 runs; 2860 checks; 0 failures

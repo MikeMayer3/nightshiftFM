@@ -10,8 +10,12 @@ var patchboard_enabled: bool = false
 var patchboard_panel: PatchboardPanel
 var mixer_open: bool = false
 var mixer_button: Button
+var pause_mixer_button: Button
 var arsenal_enabled: bool = false
 var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
+var broadcast: RadioBroadcast = RadioBroadcast.new()
+var broadcast_strip: BroadcastStrip
+var coach: CombatCoach
 var shield_button: Button
 var settings_panel: RadioSettingsPanel
 var settings_button: Button
@@ -43,6 +47,14 @@ var _last_log_second: int = -1
 @onready var status: Label = $Safe/Column/Status
 @onready var hull_bar: ProgressBar = $Safe/Column/Bars/Hull
 @onready var shield_bar: ProgressBar = $Safe/Column/Bars/Shield
+var hull_caption: Label
+var shield_caption: Label
+var boost_duration_bar: ProgressBar
+var boost_style: StyleBoxFlat
+var idle_shield_style: StyleBox
+var idle_button_style: StyleBox
+var idle_button_text: Color
+var boost_visible: bool = false
 @onready var pause_button: Button = $Safe/Column/Header/Pause
 @onready var ability_button: Button = $Safe/Column/Ability
 @onready var overlay: PanelContainer = $Overlay
@@ -56,6 +68,10 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("m2_combat")
 	_style_controls()
+	hull_caption = _bar_caption(hull_bar)
+	shield_caption = _bar_caption(shield_bar)
+	_setup_boost_meter()
+	$Safe/Column/Health.hide()
 	($Safe as SafeMargin).base_margins = Vector4(12, 12, 12, 12)
 	for path: String in ["Legend", "Hint", "AbilityHint"]: $Safe/Column.get_node(path).hide()
 	if m3_enabled:
@@ -70,11 +86,14 @@ func _ready() -> void:
 		meter.add_child(signal_bar)
 		draft_panel = DraftPanel.new()
 		add_child(draft_panel)
-		draft_panel.selected.connect(func(id: StringName) -> void: session.choose_upgrade(id))
+		draft_panel.selected.connect(_choose_upgrade)
 		draft_panel.banished.connect(func(id: StringName) -> void: session.banish_card(id))
 		draft_panel.rerolled.connect(func() -> void: session.reroll_draft())
-		draft_panel.recruited.connect(func(id: StringName) -> void: session.recruit(id, profile.unlocked))
-		draft_panel.branch_swapped.connect(func(id: StringName) -> void: session.swap_branch(id))
+		draft_panel.recruited.connect(func(id: StringName) -> void:
+			if session.recruit(id, profile.unlocked): arena.feedback.upgrade(id))
+		draft_panel.branch_swapped.connect(func(id: StringName) -> void:
+			var card: UpgradeDefinition = session.draft.card(id)
+			if session.swap_branch(id) and card != null: arena.feedback.upgrade(card.target_id))
 		draft_panel.declined.connect(func() -> void: session.recruit(&"", profile.unlocked))
 		draft_panel.back_requested.connect(func() -> void: back_requested.emit())
 		session.checkpoint_changed.connect(_save_checkpoint)
@@ -95,8 +114,10 @@ func _ready() -> void:
 		shield_button.custom_minimum_size = Vector2(180, 76)
 		shield_button.add_theme_font_size_override("font_size", 26)
 		RadioUI.button(shield_button)
+		idle_button_style = shield_button.get_theme_stylebox("disabled")
+		idle_button_text = shield_button.get_theme_color("font_disabled_color")
 		actions.add_child(shield_button)
-		shield_button.pressed.connect(func() -> void: session.activate_shield())
+		shield_button.pressed.connect(use_shield)
 	if session.patchboard != null and session.patchboard.mixer != null:
 		mixer_button = Button.new()
 		mixer_button.text = tr("MIXER_BUTTON")
@@ -106,6 +127,10 @@ func _ready() -> void:
 		RadioUI.button(mixer_button)
 		shield_button.get_parent().add_child(mixer_button)
 		mixer_button.pressed.connect(open_mixer)
+	if RadioBalance.enabled(session):
+		coach = CombatCoach.new()
+		$Safe/Column.add_child(coach)
+		$Safe/Column.move_child(coach, shield_button.get_parent().get_index())
 	ability_button.visible = session.active_combat == null
 	if session.active_combat == null: ability_button.pressed.connect(use_shield)
 	pause_button.text = "Ⅱ"
@@ -117,14 +142,23 @@ func _ready() -> void:
 	($Safe/Column as VBoxContainer).add_theme_constant_override("separation", 6)
 	for node: Node in [$Safe/Column/Health, $Safe/Column/Bars]:
 		$Safe/Column.move_child(node, $Safe/Column.get_child_count() - 1)
+	broadcast.attach(session, resume_existing)
+	if RadioBroadcast.enabled(session):
+		broadcast_strip = BroadcastStrip.new()
+		broadcast_strip.state = broadcast
+		$Safe/Column.add_child(broadcast_strip)
+		$Safe/Column.move_child(broadcast_strip, arena.get_index())
+	arena.broadcast = broadcast
 	arena.session = session
 	if profile.campaign.cosmetic != &"default": arena.station_color = DraftPanel.ACCENTS[profile.campaign.cosmetic]
+	session.combat_event.connect(arena.show_event)
 	session.fired.connect(arena.show_shot)
 	session.chain_fired.connect(arena.show_chain)
 	session.support_effect.connect(arena.show_support)
 	session.station_hit.connect(arena.show_hit)
 	session.finished.connect(_finished)
 	session.wave_started.connect(func(_number: int) -> void: _report("wave"))
+	session.wave_started.connect(arena.feedback.announce)
 	pause_button.pressed.connect(toggle_pause)
 	resume_button.pressed.connect(toggle_pause)
 	restart_button.pressed.connect(restart)
@@ -138,13 +172,13 @@ func _ready() -> void:
 			if session.finish_endless(): back_requested.emit())
 	if mixer_button != null:
 		var pause_mix: Button = Button.new()
+		pause_mixer_button = pause_mix
 		pause_mix.text = tr("MIXER_BUTTON")
 		pause_mix.custom_minimum_size.y = 76
 		pause_mix.add_theme_font_size_override("font_size", 26)
 		RadioUI.button(pause_mix)
 		menu_button.get_parent().add_child(pause_mix)
 		pause_mix.pressed.connect(open_mixer)
-		pause_mix.visibility_changed.connect(func() -> void: pause_mix.disabled = session.is_finished())
 	settings_button = Button.new()
 	settings_button.text = tr("M10_SETTINGS")
 	settings_button.custom_minimum_size.y = 76
@@ -160,18 +194,22 @@ func _ready() -> void:
 	radio_audio = RadioAudio.new()
 	radio_audio.session = session
 	add_child(radio_audio)
+	broadcast.cue_started.connect(radio_audio.broadcast_cue)
 	session.fired.connect(radio_audio.shot)
+	session.chain_fired.connect(radio_audio.chain)
 	session.station_hit.connect(radio_audio.hit)
 	session.wave_started.connect(radio_audio.wave_started)
 	report_button = Button.new()
 	report_button.text = tr("M4_REPORT")
 	report_button.custom_minimum_size.y = 76
 	report_button.add_theme_font_size_override("font_size", 26)
+	RadioUI.button(report_button)
 	restart_button.get_parent().add_child(report_button)
 	restart_button.get_parent().move_child(report_button, restart_button.get_index())
 	report_button.pressed.connect(func() -> void:
 		report_open = true
-		draft_panel.show_report(session, func() -> void: report_open = false; _refresh()))
+		draft_panel.show_report(session, func() -> void: report_open = false; _refresh())
+		_refresh())
 	# The M1 probe owns SceneTree pause only while its page is open.
 	get_tree().paused = false
 	_refresh()
@@ -182,11 +220,17 @@ func _process(delta: float) -> void:
 		_skip_frame = false
 	else:
 		session.advance(delta)
+	broadcast.update(session)
 	_refresh()
 	if OS.is_debug_build() and int(session.elapsed) != _last_log_second:
 		_last_log_second = int(session.elapsed)
 		if _last_log_second % 5 == 0:
 			_report("tick")
+
+func _choose_upgrade(id: StringName) -> void:
+	var card: UpgradeDefinition = session.draft.card(id)
+	var target: StringName = card.target_id if card != null else (&"shield" if id == DraftState.REFILL else &"repair")
+	if session.choose_upgrade(id): arena.feedback.upgrade(target)
 
 func open_mixer() -> void:
 	if session.is_finished() or save_failed or recovery_required or settings_panel != null: return
@@ -232,11 +276,17 @@ func _open_settings() -> void:
 func _apply_presentation() -> void:
 	if shield_button != null:
 		var actions: Node = shield_button.get_parent()
-		actions.move_child(ability_button, 0 if RadioPreferences.current.enabled("left_handed") else 1)
+		if RadioBalance.enabled(session):
+			actions.move_child(shield_button, 0 if RadioPreferences.current.enabled("left_handed") else actions.get_child_count() - 1)
+		else:
+			actions.move_child(ability_button, 0 if RadioPreferences.current.enabled("left_handed") else 1)
 	arena.queue_redraw()
 
 func use_shield() -> void:
 	if session.activate_shield():
+		if coach != null:
+			RadioPreferences.current.remember_coach("shield")
+			coach.current_hint = ""
 		_report("shield")
 	_refresh()
 
@@ -253,6 +303,10 @@ func restart() -> void:
 	arena.hit_flash = 0.0
 	arena.chains.clear()
 	arena.pulses.clear()
+	arena.fragments.clear()
+	arena.feedback.reset()
+	broadcast.attach(session)
+	if radio_audio != null: radio_audio.broadcast_player.stop()
 	_last_log_second = -1
 	_sync_pause()
 	_refresh()
@@ -293,6 +347,8 @@ func _finished(_victory: bool) -> void:
 	_report("results")
 
 func _refresh() -> void:
+	if broadcast_strip != null: broadcast_strip.refresh(session)
+	if coach != null: coach.refresh(session)
 	if not is_node_ready():
 		return
 	title.text = tr("BROADCAST_ENDLESS_WAVE") % maxi(1, session.wave) if session.signal_progress is BroadcastProgress else tr("ACTIVE_WAVE" if session.active_combat != null else "COMBAT_WAVE") % [maxi(1, session.wave), session.total_waves()]
@@ -300,11 +356,13 @@ func _refresh() -> void:
 	hull_bar.value = session.hull
 	shield_bar.max_value = session.run.shield.capacity
 	shield_bar.value = session.run.shield.current
-	($Safe/Column/Health as Label).text = tr("COMBAT_HEALTH") % [session.hull, session.maximum_hull(), session.run.shield.current, session.run.shield.capacity]
+	hull_caption.text = tr("POLISH_HEALTH_BAR") % [session.hull, session.maximum_hull()]
+	shield_caption.text = tr("POLISH_SHIELD_BAR") % [session.run.shield.current, session.run.shield.capacity]
+	_refresh_boost_meter()
 	status.visible = session.phase == CombatSession.Phase.INTERMISSION
 	status.text = tr("COMBAT_FOCUS" if session.focus_active else "COMBAT_AUTO")
 	if session.phase == CombatSession.Phase.INTERMISSION:
-		status.text = tr("COMBAT_NEXT_WAVE") % [session.wave + 1, ceili(session.phase_time)]
+		status.text = tr("COMBAT_WAVE") % [session.wave + 1, session.total_waves()] if RadioBalance.enabled(session) else tr("COMBAT_NEXT_WAVE") % [session.wave + 1, ceili(session.phase_time)]
 	ability_button.text = tr("COMBAT_ABILITY_ACTIVE") if session.ability_left > 0 else (tr("COMBAT_ABILITY_WAIT") % ceili(session.ability_wait) if session.ability_wait > 0 else tr("COMBAT_ABILITY"))
 	ability_button.disabled = session.paused or session.is_finished() or session.is_deciding() or session.ability_wait > 0
 	if session.active_combat != null:
@@ -313,9 +371,11 @@ func _refresh() -> void:
 	if shield_button != null:
 		shield_button.visible = session.arsenal != null
 		shield_button.text = tr("M5_SHIELD_WAIT") % ceili(session.ability_wait) if session.ability_wait > 0 else tr("M5_SHIELD_READY")
+		if session.draft is ArsenalDraft and session.draft.loadout.shield == "capacitor":
+			shield_button.text = tr("POLISH_BOOST_WAIT") % ceili(session.ability_wait) if session.ability_wait > 0 else tr("POLISH_BOOST_READY")
+			if boost_visible: shield_button.text = tr("POLISH_BOOST_ACTIVE") % ceili(RadioShieldVisual.seconds_left(session))
 		shield_button.disabled = session.paused or session.is_finished() or session.is_deciding() or session.ability_wait > 0
 	if m3_enabled and session.draft != null:
-		($Safe/Column/Health as Label).text = tr("M3_HEALTH") % [session.hull, session.maximum_hull(), session.run.shield.current, session.run.shield.capacity]
 		($Safe/Column/AbilityHint as Label).text = tr("M3_ABILITY_HINT") % [session.shield_stat(&"duration", 2.5), session.shield_stat(&"cooldown", 12)]
 		($Safe/Column/Hint as Label).text = tr("M3_RANKS") % [session.run.main_weapon.rank, session.run.shield.rank, session.run.supports[0].rank if not session.run.supports.is_empty() else 0]
 		if session.supports != null:
@@ -342,6 +402,7 @@ func _refresh() -> void:
 		return
 	overlay.visible = not mixer_open and not report_open and (session.paused or session.is_finished())
 	if report_button != null: report_button.visible = session.supports != null and session.is_finished()
+	if pause_mixer_button != null: pause_mixer_button.visible = not session.is_finished()
 	if finish_button != null:
 		finish_button.visible = not session.is_finished()
 		finish_button.disabled = session.achievement_run.cleared_waves == 0
@@ -351,6 +412,9 @@ func _refresh() -> void:
 		overlay_title.text = tr("COMBAT_VICTORY" if session.phase == CombatSession.Phase.VICTORY else "COMBAT_DEFEAT")
 		var cause: String = tr("COMBAT_CLEAN") if session.damage_taken == 0 else tr("COMBAT_CAUSE") % [tr(session.last_cause), tr(session.last_kind)]
 		details.text = tr("M3_RESULTS" if m3_enabled else "COMBAT_RESULTS") % [session.wave, session.elapsed, session.kills, session.intercepted, session.breaches, session.hull, session.maximum_hull(), cause]
+		if BroadcastRules.expanded(session):
+			details.text = tr(PostRunAnalysis.loss_key(session)) + "\n\n" + tr("P2_RESULT_STATS") % [session.wave, session.kills, session.breaches] + "\n" + tr("POLISH_HEALTH_BAR") % [session.hull, session.maximum_hull()]
+			restart_button.text = tr("P2_RETRY")
 	else:
 		overlay_title.text = tr("COMBAT_PAUSED")
 		details.text = tr("SIGNAL_PAUSE" if session.signal_progress != null else ("M3_PAUSE_BODY" if m3_enabled else "COMBAT_PAUSE_BODY"))
@@ -384,10 +448,65 @@ func _style_controls() -> void:
 		button.add_theme_stylebox_override("focus", hover)
 		button.add_theme_stylebox_override("pressed", hover)
 	for bar: ProgressBar in [hull_bar, shield_bar]:
+		bar.custom_minimum_size.y = 76
+		var background: StyleBoxFlat = StyleBoxFlat.new()
+		background.bg_color = Color("152837")
+		background.border_color = Color("48616e")
+		background.set_border_width_all(2)
+		background.set_corner_radius_all(8)
+		bar.add_theme_stylebox_override("background", background)
 		var fill: StyleBoxFlat = StyleBoxFlat.new()
-		fill.bg_color = Color("efa968") if bar == hull_bar else Color("76dbca")
-		fill.set_corner_radius_all(4)
+		fill.bg_color = Color("9b623d") if bar == hull_bar else Color("286f69")
+		fill.set_corner_radius_all(8)
 		bar.add_theme_stylebox_override("fill", fill)
+
+func _bar_caption(bar: ProgressBar) -> Label:
+	var label: Label = Label.new()
+	label.name = "Caption"
+	label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	label.add_theme_font_size_override("font_size", 23)
+	label.add_theme_color_override("font_color", Color("fff1da"))
+	label.add_theme_color_override("font_outline_color", Color("14232c"))
+	label.add_theme_constant_override("outline_size", 3)
+	bar.add_child(label)
+	return label
+
+func _setup_boost_meter() -> void:
+	idle_shield_style = shield_bar.get_theme_stylebox("background")
+	boost_style = RadioUI.surface("29213c","c4aff5")
+	boost_style.set_border_width_all(2)
+	boost_duration_bar = ProgressBar.new()
+	boost_duration_bar.name = "BoostDuration"
+	boost_duration_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	boost_duration_bar.show_percentage = false
+	boost_duration_bar.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	boost_duration_bar.offset_top = -6
+	boost_duration_bar.offset_left = 3; boost_duration_bar.offset_right = -3; boost_duration_bar.offset_bottom = -2
+	var fill: StyleBoxFlat = StyleBoxFlat.new(); fill.bg_color = Color("c4aff5")
+	boost_duration_bar.add_theme_stylebox_override("fill",fill)
+	var background: StyleBoxFlat = StyleBoxFlat.new(); background.bg_color = Color("44345b")
+	boost_duration_bar.add_theme_stylebox_override("background",background)
+	shield_bar.add_child(boost_duration_bar)
+	boost_duration_bar.hide()
+
+func _refresh_boost_meter() -> void:
+	var amount: float = RadioShieldVisual.reserve(session)
+	var active: bool = amount > 0
+	if active != boost_visible:
+		shield_bar.add_theme_stylebox_override("background",boost_style if active else idle_shield_style)
+	if shield_button != null and bool(shield_button.get_meta("boost_style",false)) != active:
+		shield_button.add_theme_stylebox_override("disabled",boost_style if active else idle_button_style)
+		shield_button.add_theme_color_override("font_disabled_color",Color("eee4ff") if active else idle_button_text)
+		shield_button.set_meta("boost_style",active)
+	boost_visible = active
+	boost_duration_bar.visible = active
+	if active:
+		shield_caption.text += "\n" + tr("POLISH_BOOST_AMOUNT") % ceili(amount)
+		boost_duration_bar.max_value = maxf(RadioShieldVisual.seconds_left(session),session.shield_stat(&"duration",3))
+		boost_duration_bar.value = RadioShieldVisual.seconds_left(session)
 
 func _setup_m3() -> void:
 	var data: Dictionary = store.load_save()

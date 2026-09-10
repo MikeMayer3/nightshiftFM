@@ -7,6 +7,12 @@ const TUNE: AudioStream = preload("res://assets/audio/radio/tune.wav")
 const BED: AudioStream = preload("res://assets/audio/radio/station.wav")
 const WARNING: AudioStream = preload("res://assets/audio/radio/warning.wav")
 const SHIELD: AudioStream = preload("res://assets/audio/radio/shield.wav")
+const STINGS: Dictionary = {
+	"station": preload("res://assets/audio/radio/sign_on.wav"),
+	"caller": preload("res://assets/audio/radio/line_open.wav"),
+	"warning": preload("res://assets/audio/radio/ridge_alert.wav"),
+}
+var broadcast_player: AudioStreamPlayer
 var warning_wait: float = 0
 var shield_was_active: bool = false
 var effects: Array[AudioStreamPlayer] = []
@@ -20,6 +26,8 @@ func _ready() -> void:
 		var player: AudioStreamPlayer = AudioStreamPlayer.new()
 		add_child(player)
 		effects.append(player)
+	broadcast_player = AudioStreamPlayer.new()
+	add_child(broadcast_player)
 	music = AudioStreamPlayer.new()
 	music.stream = BED
 	add_child(music)
@@ -34,9 +42,12 @@ func _process(delta: float) -> void:
 	if DisplayServer.get_name() == "headless": return
 	if session.is_finished():
 		music.stop()
+		broadcast_player.stop()
 		for player: AudioStreamPlayer in effects: player.stop()
 		return
 	var stopped: bool = session.paused or session.is_deciding() or session.is_wiring() or session.is_finished()
+	broadcast_player.stream_paused = stopped
+	music.volume_db = -6.0 if broadcast_player.playing else 0.0
 	music.stream_paused = stopped
 	for player: AudioStreamPlayer in effects: player.stream_paused = stopped
 	if stopped: return
@@ -51,6 +62,9 @@ func _process(delta: float) -> void:
 	if RadioPreferences.current.enabled("music") and not music.playing: music.play()
 
 func _exit_tree() -> void:
+	if is_instance_valid(broadcast_player):
+		broadcast_player.stop()
+		broadcast_player.stream = null
 	# Release paused playback too, including rapid menu/restart transitions.
 	if is_instance_valid(music):
 		music.stop()
@@ -63,11 +77,13 @@ func _exit_tree() -> void:
 func _preferences_changed() -> void:
 	if not RadioPreferences.current.enabled("music"): music.stop()
 	if not RadioPreferences.current.enabled("sound"):
+		broadcast_player.stop()
 		for player: AudioStreamPlayer in effects: player.stop()
 
 func cue(stream: AudioStream) -> void:
 	if DisplayServer.get_name() == "headless": return
 	if not RadioPreferences.current.enabled("sound") or session == null or session.paused: return
+	if broadcast_player.playing and stream in [TUNE, WARNING]: return
 	for player: AudioStreamPlayer in effects:
 		if not player.playing:
 			player.stream = stream
@@ -85,5 +101,20 @@ func hit(_amount: float) -> void:
 		Input.vibrate_handheld(35)
 		_haptic_wait = .3
 
-func wave_started(_wave: int) -> void:
+func wave_started(number: int) -> void:
+	if RadioBroadcast.enabled(session) and number in [1, 4, 7]: return
 	cue(TUNE)
+
+func chain(points: PackedVector2Array, support: bool) -> void:
+	if not support and not points.is_empty(): shot(points[-1])
+
+func broadcast_cue(kind: String) -> void:
+	if DisplayServer.get_name() == "headless" or not STINGS.has(kind): return
+	if not RadioPreferences.current.enabled("sound") or session == null or session.paused or session.is_deciding() or session.is_wiring() or session.is_finished(): return
+	for player: AudioStreamPlayer in effects:
+		if player.stream in [TUNE, WARNING]: player.stop()
+	# One dedicated voice: boss priority replaces, rather than overlaps, a sting.
+	broadcast_player.stop()
+	broadcast_player.stream_paused = false
+	broadcast_player.stream = STINGS[kind]
+	broadcast_player.play()

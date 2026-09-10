@@ -91,7 +91,7 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 	styled.combat.profile.campaign = profile_at(12).campaign
 	styled.combat.campaign_modules = [&"long_mast"]
 	styled.combat.restart()
-	t.check("90 / 90" in (styled.combat.get_node("Safe/Column/Health") as Label).text, "combat HUD uses module-adjusted maximum hull")
+	t.check("90 / 90" in styled.combat.hull_caption.text, "combat HUD uses module-adjusted maximum hull")
 	styled.combat.session.phase = CombatSession.Phase.DEFEAT
 	styled.combat.session.hull = 0
 	styled.combat._refresh()

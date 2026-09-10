@@ -24,7 +24,6 @@ func _ready() -> void:
 	scroll.add_child(column)
 	label("M10_SETTINGS", 36)
 	for key: String in RadioPreferences.current.DEFAULTS:
-		if key == "left_handed": continue
 		var toggle: CheckButton = CheckButton.new()
 		toggle.name = "ShowSignal" if key == "show_signal" else key
 		toggle.custom_minimum_size.y = 88
@@ -44,6 +43,14 @@ func _ready() -> void:
 		instructions.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		instructions.add_theme_font_size_override("font_size", 24)
 		guide.add_child(instructions)
+	var replay: Button = Button.new()
+	replay.name = "ReplayHints"
+	replay.text = tr("P3_REPLAY")
+	RadioUI.button(replay)
+	guide.add_child(replay)
+	replay.pressed.connect(func() -> void:
+		RadioPreferences.current.replay_coaching()
+		notice.text = tr("P3_REPLAY_READY" if RadioPreferences.current.save_error == OK else "M10_SAVE_ERROR"))
 	notice = label("M10_SAVED", 23)
 	var back: Button = Button.new()
 	back.name = "Back"

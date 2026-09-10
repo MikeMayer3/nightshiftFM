@@ -1,0 +1,26 @@
+{
+	"checks": 88,
+	"failures": 0,
+	"runs": [
+		{
+			"breaches": 0,
+			"drafts": 22,
+			"hull": 100.0,
+			"seconds": 524.049999999852,
+			"seed": 1790232016,
+			"support": "static_net",
+			"victory": true,
+			"wave": 10
+		},
+		{
+			"breaches": 47,
+			"drafts": 20,
+			"hull": 59.686666666667,
+			"seconds": 541.983333333169,
+			"seed": 1751357612,
+			"support": "bass_driver",
+			"victory": true,
+			"wave": 10
+		}
+	]
+}

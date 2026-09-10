@@ -193,6 +193,7 @@ func _report(t: TestContext) -> void:
 	var s: CombatSession = session()
 	var target: CombatActor = s.spawn_enemy(CombatContent.CARRIER, 320)
 	target.health = 1000
+	target.position.y = 400
 	s.damage_actor(target, 40, &"main")
 	s.damage_actor(target, 30, &"echo_deck")
 	s.damage_actor(target, 20, &"ball_lightning")

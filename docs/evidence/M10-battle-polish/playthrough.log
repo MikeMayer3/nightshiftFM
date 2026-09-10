@@ -1,0 +1,119 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":5,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.3,"shield":65.0,"wave":1}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":45.833333333332,"shield":65.0,"wave":2}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":92.1666666666627,"shield":65.0,"wave":3}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":143.566666666673,"shield":65.0,"wave":4}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":191.900000000045,"shield":65.0,"wave":5}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":239.550000000083,"shield":65.0,"wave":6}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":293.550000000062,"shield":65.0,"wave":7}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":347.850000000012,"shield":65.0,"wave":8}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":402.683333333296,"shield":75.0,"wave":9}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":463.816666666573,"shield":75.0,"wave":10}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":524.049999999852,"shield":75.0,"wave":10}
+PASS: rendered mission reaches a real result
+PASS: result returns to splash menu
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":46.1999999999987,"shield":65.0,"wave":2}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":92.0499999999961,"shield":65.0,"wave":3}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":144.516666666674,"shield":65.0,"wave":4}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":193.58333333338,"shield":65.0,"wave":5}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":243.033333333419,"shield":65.0,"wave":6}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":298.83333333339,"shield":65.0,"wave":7}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":355.050000000006,"shield":65.0,"wave":8}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":413.533333333286,"shield":54.56,"wave":9}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":59.686666666667,"instances":1,"paused":false,"phase":1,"seconds":477.699999999894,"shield":15.0,"wave":10}
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":59.686666666667,"instances":1,"paused":false,"phase":2,"seconds":541.983333333169,"shield":20.3966666666668,"wave":10}
+PASS: rendered mission reaches a real result
+PASS: result returns to splash menu
+RESULT: 88 rendered playthrough checks; 0 failures; [{"breaches":0,"drafts":22,"hull":100.0,"seconds":524.049999999852,"seed":1790232016,"support":"static_net","victory":true,"wave":10},{"breaches":47,"drafts":20,"hull":59.686666666667,"seconds":541.983333333169,"seed":1751357612,"support":"bass_driver","victory":true,"wave":10}]

@@ -1,0 +1,17 @@
+[
+  {
+    "case": "active Home and foreground",
+    "pass": true,
+    "background_elapsed_first": 11.600000000000156,
+    "background_elapsed_second": 11.600000000000156,
+    "resumed_elapsed": 13.600000000000255,
+    "scope": "accelerated emulator driver, holding command applied after resume"
+  },
+  {
+    "case": "emulated battery saver",
+    "pass": true,
+    "low_power": "1",
+    "elapsed": 3.1999999999999935,
+    "scope": "emulator unplug simulation, not physical battery drain"
+  }
+]

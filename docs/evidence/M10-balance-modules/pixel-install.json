@@ -1,0 +1,102 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-0106-backup-20260909-214700",
+  "version_before": [
+    "versionCode=17 minSdk=24 targetSdk=36",
+    "versionName=0.10.5"
+  ],
+  "before": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "16a7e30a01c8485773b6e1d28a279c039f5a84c4823456ecd3ee09fb83e28312",
+      "bytes": 5971
+    },
+    "m3_mission.json.bak": {
+      "sha256": "8bfd13f4d18cb22407fe7576821971157478918182bcbef6d26d13e612f11669",
+      "bytes": 5956
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "apk_sha256": "d78e39d32ad7fff13b0da27b2750c0b1cb4a8cb20afc51ae6a227684b436479b",
+  "install": "Serving...\nAll files should be loaded. Notifying the device.\nPerforming Incremental Install\nSuccess\nInstall command complete in 2397 ms\n",
+  "after_install": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "16a7e30a01c8485773b6e1d28a279c039f5a84c4823456ecd3ee09fb83e28312",
+      "bytes": 5971
+    },
+    "m3_mission.json.bak": {
+      "sha256": "8bfd13f4d18cb22407fe7576821971157478918182bcbef6d26d13e612f11669",
+      "bytes": 5956
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "install_preserved_files": true,
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: UNKNOWN (0)\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nWaitTime: 3023\nComplete\n",
+  "version_after": [
+    "versionCode=18 minSdk=24 targetSdk=36",
+    "versionName=0.10.6",
+    "lastUpdateTime=2026-09-09 21:47:16"
+  ],
+  "pid": "22694",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "16a7e30a01c8485773b6e1d28a279c039f5a84c4823456ecd3ee09fb83e28312",
+      "bytes": 5971
+    },
+    "m3_mission.json.bak": {
+      "sha256": "8bfd13f4d18cb22407fe7576821971157478918182bcbef6d26d13e612f11669",
+      "bytes": 5956
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "foreground": [],
+  "scope": "Physical Pixel package update and launch; save/settings preservation verified by hashes. Human balance acceptance not run."
+}

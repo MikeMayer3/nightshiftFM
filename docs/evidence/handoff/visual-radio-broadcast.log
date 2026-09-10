@@ -1,0 +1,110 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":1}
+PASS: new campaign opens with authored caption while muted
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+M2_COMBAT {"actors":5,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":1}
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: warning and contextual shield help can coexist
+PASS: caption sits entirely outside enemy field
+PASS: caption never covers action controls
+PASS: large-text controls and meaningful battlefield fit at all tested sizes
+M2_COMBAT {"actors":1,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real pause button freezes broadcast timing
+M2_COMBAT {"actors":1,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real resume button retains remaining caption time
+PASS: Mixer freezes broadcasts beneath its modal
+PASS: upgrade choices render above broadcast and combat
+PASS: original sting starts and ducks station music
+PASS: routine tuning cue cannot overlap broadcast sting
+PASS: boss sting replaces ambient sting using one voice
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS background pauses sting
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS foreground resumes sting
+PASS: mute immediately stops sting
+PASS: unmute does not replay a consumed sting
+PASS: results stop sting
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":1}
+PASS: new campaign opens with authored caption while muted
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: warning and contextual shield help can coexist
+PASS: caption sits entirely outside enemy field
+PASS: caption never covers action controls
+PASS: large-text controls and meaningful battlefield fit at all tested sizes
+M2_COMBAT {"actors":1,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real pause button freezes broadcast timing
+M2_COMBAT {"actors":1,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real resume button retains remaining caption time
+PASS: Mixer freezes broadcasts beneath its modal
+PASS: upgrade choices render above broadcast and combat
+PASS: original sting starts and ducks station music
+PASS: routine tuning cue cannot overlap broadcast sting
+PASS: boss sting replaces ambient sting using one voice
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS background pauses sting
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS foreground resumes sting
+PASS: mute immediately stops sting
+PASS: unmute does not replay a consumed sting
+PASS: results stop sting
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":5,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":1}
+PASS: new campaign opens with authored caption while muted
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: caption changes never move or shrink the battlefield
+PASS: large captions fit without clipping
+PASS: warning and contextual shield help can coexist
+PASS: caption sits entirely outside enemy field
+PASS: caption never covers action controls
+PASS: large-text controls and meaningful battlefield fit at all tested sizes
+M2_COMBAT {"actors":1,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real pause button freezes broadcast timing
+M2_COMBAT {"actors":1,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: real resume button retains remaining caption time
+PASS: Mixer freezes broadcasts beneath its modal
+PASS: upgrade choices render above broadcast and combat
+PASS: original sting starts and ducks station music
+PASS: routine tuning cue cannot overlap broadcast sting
+PASS: boss sting replaces ambient sting using one voice
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS background pauses sting
+M2_COMBAT {"actors":1,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":10}
+PASS: OS foreground resumes sting
+PASS: mute immediately stops sting
+PASS: unmute does not replay a consumed sting
+PASS: results stop sting
+RESULT: 81 P4 native UI/audio checks; 0 failures

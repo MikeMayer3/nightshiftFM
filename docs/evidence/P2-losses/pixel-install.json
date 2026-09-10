@@ -1,0 +1,105 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "version_before": [
+    "versionCode=18 minSdk=24 targetSdk=36",
+    "versionName=0.10.6"
+  ],
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-0107-backup-20260910-105517",
+  "before": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "4d28a34e42d64c40428a85c2c8d60bcefebd09af9b488ee5d54dce16884fe645",
+      "bytes": 7405
+    },
+    "m3_mission.json.bak": {
+      "sha256": "359a5e789eca871b8a089f4c25e81180d803295d7d551861e5105049a8e6b91e",
+      "bytes": 16770
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "apk_sha256": "9fc44486411643876f1bf833eb3cb40d4a344a7c1ffa581eaef50d1f8bfba6b8",
+  "install": "Serving...\nAll files should be loaded. Notifying the device.\nPerforming Incremental Install\nSuccess\nInstall command complete in 1994 ms\n",
+  "after_install": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "4d28a34e42d64c40428a85c2c8d60bcefebd09af9b488ee5d54dce16884fe645",
+      "bytes": 7405
+    },
+    "m3_mission.json.bak": {
+      "sha256": "359a5e789eca871b8a089f4c25e81180d803295d7d551861e5105049a8e6b91e",
+      "bytes": 16770
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "install_preserved_files": true,
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 592\nWaitTime: 595\nComplete\n",
+  "version_after": [
+    "versionCode=19 minSdk=24 targetSdk=36",
+    "versionName=0.10.7"
+  ],
+  "pid": "3499",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "4d28a34e42d64c40428a85c2c8d60bcefebd09af9b488ee5d54dce16884fe645",
+      "bytes": 7405
+    },
+    "m3_mission.json.bak": {
+      "sha256": "359a5e789eca871b8a089f4c25e81180d803295d7d551861e5105049a8e6b91e",
+      "bytes": 16770
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "foreground": [
+    "topResumedActivity=ActivityRecord{71426670 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6126}",
+    "Resumed: ActivityRecord{71426670 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6126}",
+    "ResumedActivity: ActivityRecord{71426670 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6126}"
+  ],
+  "scope": "Physical Pixel package update and launch; save/settings preservation checked by hashes. Human loss comprehension and balance acceptance not run."
+}

@@ -1,0 +1,43 @@
+--------- beginning of main
+I/libprocessgroup(22694): Created cgroup /sys/fs/cgroup/apps/uid_10457/pid_22694
+I/Zygote  (22694): Process 22694 created for org.nightshiftfm.spike
+I/htshiftfm.spike(22694): Late-enabling -Xcheck:jni
+I/htshiftfm.spike(22694): Using generational CollectorTypeCMC GC.
+D/nativeloader(22694): Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+D/nativeloader(22694): Configuring clns-9 for other apk /data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/lib/arm64:/data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/org.nightshiftfm.spike
+V/GraphicsEnvironment(22694): Currently set values for:
+V/GraphicsEnvironment(22694):   angle_gl_driver_selection_pkgs=[com.android.angle]
+V/GraphicsEnvironment(22694):   angle_gl_driver_selection_values=[angle]
+V/GraphicsEnvironment(22694): org.nightshiftfm.spike is not listed in per-application setting
+V/GraphicsEnvironment(22694): No special selections for ANGLE, returning default driver choice
+V/GraphicsEnvironment(22694): Neither updatable production driver nor prerelease driver is supported.
+D/DesktopExperienceFlags(22694): Toggle override initialized to: false
+--------- beginning of system
+I/DisplayManager(22694): Choreographer implicitly registered for the refresh rate.
+D/vulkan  (22694): searching for layers in '/data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/lib/arm64'
+D/vulkan  (22694): searching for layers in '/data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/base.apk!/lib/arm64-v8a'
+W/RenderThread(22694): type=1400 audit(0.0:6622): avc:  denied  { read } for  name="uevent" dev="sysfs" ino=32841 scontext=u:r:untrusted_app_34:s0:c201,c257,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0 bug=b/487491690 app=org.nightshiftfm.spike
+D/CompatChangeReporter(22694): Compat change id reported: 377864165; UID 10457; state: ENABLED
+D/GodotActivity(22694): Project command line parameters: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/GodotActivity(22694): Launch intent Intent { flg=0x10000000 xflg=0x5 cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher } with parameters []
+V/GodotActivity(22694): Creating new Godot fragment instance.
+V/Godot   (22694): Initializing Godot plugin registry
+I/GodotPluginRegistry(22694): Registering runtime plugin AndroidRuntime
+V/Godot   (22694): InitEngine with params: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+D/nativeloader(22694): Load /data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/lib/arm64/libgodot_android.so using class loader ns clns-9 (caller=/data/app/~~lIlh-ltnWxLy1h4wuZRSow==/org.nightshiftfm.spike-WW1cOicJS_rCHNmFm_fubg==/base.apk!classes7.dex): ok
+V/Godot   (22694): Godot native layer initialization completed: true
+V/Godot   (22694): Setting up native layer with params: [--xr-mode, off]
+V/Godot   (22694): Godot native layer setup completed
+V/Godot   (22694): OnInitRenderView: GodotFragment{df4f932} (92b645df-a0c8-4304-a0b8-7589e7ff14ed id=0x7f07002c)
+D/Godot   (22694): Render view should be transparent: false
+D/Godot   (22694): renderingDevice: opengl3 (ProjectSettings)
+D/Godot   (22694): 			renderer: gl_compatibility (ProjectSettings)
+V/Godot   (22694): OnStart: GodotFragment{df4f932} (92b645df-a0c8-4304-a0b8-7589e7ff14ed id=0x7f07002c)
+V/Godot   (22694): OnResume: GodotFragment{df4f932} (92b645df-a0c8-4304-a0b8-7589e7ff14ed id=0x7f07002c)
+V/Godot   (22694): OnPause: GodotFragment{df4f932} (92b645df-a0c8-4304-a0b8-7589e7ff14ed id=0x7f07002c)
+V/Godot   (22694): OnStop: GodotFragment{df4f932} (92b645df-a0c8-4304-a0b8-7589e7ff14ed id=0x7f07002c)
+D/WindowOnBackDispatcher(22694): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bab9d95
+D/WindowOnBackDispatcher(22694): setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@c555a9b
+D/VRI[GodotAppLauncher](22694): WindowInsets changed: 1080x2404 statusBars:[0,161,0,0] mandatorySystemGestures:[0,190,0,117]
+I/HWUI    (22694): Using FreeType backend (prop=Auto)
+I/htshiftfm.spike(22694): Compiler allocated 5298KB to compile void android.view.ViewRootImpl.performTraversals(long)

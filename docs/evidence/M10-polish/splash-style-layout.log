@@ -1,0 +1,115 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@15
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@14
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: splash gives direct menu access
+PASS: diagnostics are absent from the player title screen
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@15
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@14
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: splash does not cover other pages
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: results hide the unavailable mixer action
+PASS: results report button uses the radio style
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@102
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@101
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: splash gives direct menu access
+PASS: diagnostics are absent from the player title screen
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@102
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@101
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: splash does not cover other pages
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: results hide the unavailable mixer action
+PASS: results report button uses the radio style
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@189
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@188
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: splash gives direct menu access
+PASS: diagnostics are absent from the player title screen
+PASS: horizontal fit: Boot
+PASS: horizontal fit: @Control@189
+PASS: horizontal fit: Margin
+PASS: horizontal fit: Column
+PASS: horizontal fit: Eyebrow
+PASS: horizontal fit: Title
+PASS: horizontal fit: Subtitle
+PASS: horizontal fit: Spacer
+PASS: horizontal fit: Menu
+PASS: horizontal fit: Start
+PASS: horizontal fit: @Button@188
+PASS: horizontal fit: Settings
+PASS: horizontal fit: Quit
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: large-font title actions remain inside viewport
+PASS: splash does not cover other pages
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: results hide the unavailable mixer action
+PASS: results report button uses the radio style
+RESULT: 105 polish rendered checks; 0 failures

@@ -1,0 +1,55 @@
+--------- beginning of main
+09-10 12:40:14.311 25841 25841 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10457/pid_25841
+09-10 12:40:14.316 25841 25841 I Zygote  : Process 25841 created for org.nightshiftfm.spike
+09-10 12:40:14.316 25841 25841 I htshiftfm.spike: Late-enabling -Xcheck:jni
+09-10 12:40:14.332 25841 25841 I htshiftfm.spike: Using generational CollectorTypeCMC GC.
+09-10 12:40:14.343 25841 25841 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+09-10 12:40:14.410 25841 25841 D nativeloader: Configuring clns-9 for other apk /data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/lib/arm64:/data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/org.nightshiftfm.spike
+09-10 12:40:14.418 25841 25841 V GraphicsEnvironment: Currently set values for:
+09-10 12:40:14.418 25841 25841 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+09-10 12:40:14.418 25841 25841 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+09-10 12:40:14.418 25841 25841 V GraphicsEnvironment: org.nightshiftfm.spike is not listed in per-application setting
+09-10 12:40:14.419 25841 25841 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+09-10 12:40:14.419 25841 25841 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+09-10 12:40:14.424 25841 25841 D DesktopExperienceFlags: Toggle override initialized to: false
+--------- beginning of system
+09-10 12:40:14.438 25841 25864 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+09-10 12:40:14.441 25841 25864 D vulkan  : searching for layers in '/data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/lib/arm64'
+09-10 12:40:14.442 25841 25864 D vulkan  : searching for layers in '/data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/base.apk!/lib/arm64-v8a'
+09-10 12:40:14.441 25841 25841 W RenderThread: type=1400 audit(0.0:15567): avc:  denied  { read } for  name="uevent" dev="sysfs" ino=32841 scontext=u:r:untrusted_app_34:s0:c201,c257,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0 bug=b/487491690 app=org.nightshiftfm.spike
+09-10 12:40:14.473 25841 25841 D CompatChangeReporter: Compat change id reported: 377864165; UID 10457; state: ENABLED
+09-10 12:40:14.490 25841 25841 D GodotActivity: Project command line parameters: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+09-10 12:40:14.492 25841 25841 D GodotActivity: Launch intent Intent { flg=0x10000000 xflg=0x5 cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher } with parameters []
+09-10 12:40:14.504 25841 25841 V GodotActivity: Creating new Godot fragment instance.
+09-10 12:40:14.518 25841 25841 V Godot   : Initializing Godot plugin registry
+09-10 12:40:14.527 25841 25841 I GodotPluginRegistry: Registering runtime plugin AndroidRuntime
+09-10 12:40:14.528 25841 25841 V Godot   : InitEngine with params: [--xr_mode_regular, --xr-mode, off, --background_color, #000000]
+09-10 12:40:14.562 25841 25841 D nativeloader: Load /data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/lib/arm64/libgodot_android.so using class loader ns clns-9 (caller=/data/app/~~WZ5LLVOSZqqWFjXmEuL1QQ==/org.nightshiftfm.spike-1pXkt8LLErsyeB24hW8X0A==/base.apk!classes7.dex): ok
+09-10 12:40:14.565 25841 25841 V Godot   : Godot native layer initialization completed: true
+09-10 12:40:14.566 25841 25841 V Godot   : Setting up native layer with params: [--xr-mode, off]
+09-10 12:40:14.665 25841 25841 V Godot   : Godot native layer setup completed
+09-10 12:40:14.666 25841 25841 V Godot   : OnInitRenderView: GodotFragment{df4f932} (5315945b-a561-47c9-af1c-b41177b83910 id=0x7f07002c)
+09-10 12:40:14.722 25841 25841 D Godot   : Render view should be transparent: false
+09-10 12:40:14.722 25841 25841 D Godot   : renderingDevice: opengl3 (ProjectSettings)
+09-10 12:40:14.722 25841 25841 D Godot   : 			renderer: gl_compatibility (ProjectSettings)
+09-10 12:40:14.749 25841 25841 V Godot   : OnStart: GodotFragment{df4f932} (5315945b-a561-47c9-af1c-b41177b83910 id=0x7f07002c)
+09-10 12:40:14.762 25841 25841 V Godot   : OnResume: GodotFragment{df4f932} (5315945b-a561-47c9-af1c-b41177b83910 id=0x7f07002c)
+09-10 12:40:14.798 25841 25841 V Godot   : OnPause: GodotFragment{df4f932} (5315945b-a561-47c9-af1c-b41177b83910 id=0x7f07002c)
+09-10 12:40:14.816 25841 25841 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@c094fdd
+09-10 12:40:14.816 25841 25841 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@192ca23
+09-10 12:40:14.820 25841 25841 D VRI[GodotAppLauncher]: WindowInsets changed: 1080x2404 statusBars:[0,161,0,0] ime:[0,0,0,869] mandatorySystemGestures:[0,190,0,117]
+09-10 12:40:14.823 25841 25841 I HWUI    : Using FreeType backend (prop=Auto)
+09-10 12:40:14.834 25841 25841 I Surface : Creating surface for consumer unnamed-25841-0 with slotExpansion=1 for 64 slots
+09-10 12:40:14.835 25841 25841 I Surface : Creating surface for consumer VRI[GodotAppLauncher]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+09-10 12:40:14.841 25841 25841 I Surface : Creating surface for consumer unnamed-25841-1 with slotExpansion=1 for 64 slots
+09-10 12:40:14.842 25841 25841 I Surface : Creating surface for consumer 355c69e SurfaceView[org.nightshiftfm.spike/com.godot.game.GodotAppLauncher]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+09-10 12:40:14.879 25841 25885 W RegularContextFactory: creating OpenGL ES 3.0 context :
+09-10 12:40:14.902 25841 25841 V Godot   : OnStop: GodotFragment{df4f932} (5315945b-a561-47c9-af1c-b41177b83910 id=0x7f07002c)
+09-10 12:40:14.905 25841 25885 E BufferQueueProducer: [355c69e SurfaceView[org.nightshiftfm.spike/com.godot.game.GodotAppLauncher]#1(BLAST Consumer)1](id:64f100000001,api:0,p:-1,c:25841) query: BufferQueue has been abandoned
+09-10 12:40:14.905 25841 25885 W libc    : Access denied finding property "vendor.product.pvr.debug_level"
+09-10 12:40:14.905 25841 25885 E BufferQueueProducer: [355c69e SurfaceView[org.nightshiftfm.spike/com.godot.game.GodotAppLauncher]#1(BLAST Consumer)1](id:64f100000001,api:0,p:-1,c:25841) query: BufferQueue has been abandoned
+09-10 12:40:14.905 25841 25885 E BufferQueueProducer: [355c69e SurfaceView[org.nightshiftfm.spike/com.godot.game.GodotAppLauncher]#1(BLAST Consumer)1](id:64f100000001,api:0,p:-1,c:25841) dequeueBuffer: BufferQueue has been abandoned
+09-10 12:40:14.905 25841 25885 E libEGL  : eglMakeCurrentImpl:1100 error 3009 (EGL_BAD_MATCH)
+09-10 12:40:14.906 25841 25885 W EGLHelper: eglMakeCurrent failed: EGL_BAD_MATCH
+09-10 12:40:14.906 25841 25885 W GLSurfaceView: Warning, !readyToDraw() but waiting for draw finished! Early reporting draw finished.
+09-10 12:40:16.309 25841 25851 I htshiftfm.spike: Compiler allocated 5295KB to compile void android.view.ViewRootImpl.performTraversals(long)

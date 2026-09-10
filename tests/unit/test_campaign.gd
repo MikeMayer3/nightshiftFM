@@ -74,7 +74,7 @@ func _modules(t: TestContext) -> void:
 	var mast: CombatSession = session([&"long_mast"])
 	for s: CombatSession in [baseline, mast]:
 		s.phase = CombatSession.Phase.COMBAT
-		s.spawn_enemy(CombatContent.SWARMER, 320).position = Vector2(320, 50)
+		s.spawn_enemy(CombatContent.SWARMER, 320).position = Vector2(320, 120)
 		s.arsenal.fire_main(s, s.actors[0])
 	t.check(baseline.actors[0].health == baseline.actors[0].max_health and mast.actors[0].health < mast.actors[0].max_health and mast.hull == 90, "Long Mast hits beyond ordinary acquisition range at a hull cost")
 	var battery: CombatSession = session([&"heavy_battery"])

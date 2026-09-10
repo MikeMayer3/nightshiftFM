@@ -1,0 +1,40 @@
+extends RefCounted
+
+func run(t: TestContext) -> bool:
+	var s: CombatSession = CombatSession.new()
+	t.check(s.start_campaign(42,&"run.1",{"main":"pulse","shield":"capacitor","support":"needle_swarm"},{"mission":1,"cleared":12,"modules":[],"mode":"campaign","difficulty":0,"contract":""}),"guide fixture starts")
+	var before: Dictionary = s.to_checkpoint()
+	var locked: Dictionary = BuildGuide.state(s,&"needle_thread")
+	t.check(not locked.ready and locked.missing.is_empty() and locked.status_key==&"P1_NEEDS_MARK","owned gear without Marking Pins is not ready")
+	var copied: Array[UpgradeTrack] = BuildGuide.preview_tracks(s,&"m5.needle_swarm.t0")
+	t.check(BuildGuide.track_in(copied,&"needle_swarm").rank()==2,"tuning projection increments only the copy")
+	t.check(s.to_checkpoint()==before,"projection leaves runtime and RNG untouched")
+	var needle: UpgradeTrack = s.draft.track(&"needle_swarm")
+	t.check(needle.accept(&"m5.needle_swarm.t0",[]),"prepare legal rank two")
+	var projected: Dictionary = BuildGuide.state(s,&"needle_thread",&"m5.needle_swarm.b3")
+	t.check(projected.ready and not projected.before and projected.status_key==&"P1_READY_AFTER","marking branch advertises readiness after choice")
+	t.check(not BuildGuide.state(s,&"needle_thread",&"m5.needle_swarm.b1").ready,"piercing branch cannot advertise marks")
+	t.check(needle.accept(&"m5.needle_swarm.b3",[]) and PatchboardState.eligible(s,&"needle_thread"),"accepted marking branch agrees with projection")
+	t.check(BuildGuide.state(s,&"needle_thread").status_key==&"P1_READY","ready is not connected automatically")
+	s.paused=true
+	t.check(s.patchboard.rewire(s,0,&"needle_thread"),"connect through actual paused mixer")
+	t.check(BuildGuide.state(s,&"needle_thread").status_key==&"P1_CONNECTED","connected state follows slots")
+	var recruit: Dictionary = BuildGuide.state(s,&"b_side",&"recruit.echo_deck")
+	t.check(recruit.ready and s.draft.track(&"echo_deck")==null,"recruitment projects missing endpoint without equipping it")
+	var saved: Dictionary = s.to_checkpoint()
+	for choice: StringName in s.draft.pool():
+		for row: Dictionary in BuildGuide.suggestions(s,choice):
+			t.check(row.ready == PatchboardState.eligible_tracks(row.tracks,row.id),"all pool hints share runtime eligibility")
+	t.check(s.to_checkpoint()==saved,"browsing entire pool does not change save or RNG")
+	t.check(BuildGuide.suggestions(s,SignalDraft.OVERDRIVE).is_empty(),"consumables do not claim new connections")
+	t.check(not PatchboardState.eligible_tracks(s.draft.tracks,&"unknown"),"unknown recipe fails closed")
+	for id: StringName in [&"bass_driver",&"static_net",&"arc_aerial",&"reverb_well"]: s.draft.equip(id)
+	t.check(s.draft.support_count()==5 and BuildGuide.track_in(BuildGuide.preview_tracks(s,&"recruit.echo_deck"),&"echo_deck")==null,"preview respects five-support cap")
+	var net: UpgradeTrack = s.draft.track(&"static_net")
+	t.check(net.accept(&"m5.static_net.t0",[]) and net.accept(&"m5.static_net.b1",[]),"legal Dead Air branch")
+	s.apply_ranks()
+	t.check(s.patchboard.mixer.adjust(s,2,4),"control fader modifies existing jam")
+	t.check(BuildGuide.state(s,&"dead_zone").warning_key==&"P1_JAM_OVERLAP","derived stronger Net jam warns about redundant Bass jam")
+	t.check(s.patchboard.mixer.adjust(s,2,0),"reset fader")
+	t.check(BuildGuide.state(s,&"dead_zone").warning_key==&"","warning follows actual mixed duration rather than branch name")
+	return true

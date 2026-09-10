@@ -41,6 +41,7 @@ func run(t: TestContext) -> bool:
 	core.phase = CombatSession.Phase.COMBAT; core.wave = 8
 	var boss: CombatActor = core.spawn_enemy(BroadcastContent.enemy(&"m8.core"), 320)
 	EncounterDirector.prepare(core, boss)
+	for actor: CombatActor in core.actors: actor.position.y = 300
 	t.check(EncounterDirector.satellites(core, boss).size() == 2 and core.target().role == EnemyDefinition.Role.AERIAL, "core spawns two ordinary-targetable weak points")
 	for part: CombatActor in EncounterDirector.satellites(core, boss): core.damage_actor(part, 10000)
 	t.check(EncounterDirector.exposed(core, boss) and EncounterDirector.protection(core, boss) == 1, "destroying both satellites exposes core")

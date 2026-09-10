@@ -1,4 +1,12 @@
 keys,en
+POLISH_BOOST_READY,Shield Boost
+POLISH_BOOST_WAIT,Boost %ds
+POLISH_BOOST_ACTIVE,BOOSTED · %ds
+POLISH_BOOST_AMOUNT,+%d TEMP SHIELD
+POLISH_HEALTH_BAR,Health %d / %d
+POLISH_SHIELD_BAR,Shield %d / %d
+POLISH_ON_AIR,ON AIR · WAVE %d
+POLISH_CRITICAL,STATION CRITICAL
 BOOT_EYEBROW,OFFLINE • STATION DEFENSE
 BOOT_TITLE,Nightshift FM
 BOOT_SUBTITLE,Keep the signal alive.
@@ -1269,7 +1277,7 @@ M6_REPORT_ROW,"%d triggers · %.0f damage · %.0f assisted
 M7_MODULE_HOT_TUBES,Hot Tubes
 M7_MODULE_HOT_TUBES_DESC,+15% auto-attack rate; −20% shield recharge.
 M7_MODULE_LONG_MAST,Long Mast
-M7_MODULE_LONG_MAST_DESC,+20% targeting range; −10% maximum hull.
+M7_MODULE_LONG_MAST_DESC,+20% targeting range within the entry limit; −10% maximum hull.
 M7_MODULE_HEAVY_BATTERY,Heavy Battery
 M7_MODULE_HEAVY_BATTERY_DESC,+25% shield capacity; −20% shield recharge.
 M7_MODULE_FAST_FUSE,Fast Fuse
@@ -1534,7 +1542,7 @@ M10_SETTINGS,Radio & accessibility
 M10_SETTINGS_HINT,Tune the broadcast to suit you. Changes apply immediately. Combat stays paused while this panel is open.
 M10_REDUCED_FLASH,Reduced flashes
 M10_LOW_EFFECTS,Low effects
-M10_LEFT_HANDED,Burst on the left
+M10_LEFT_HANDED,Action button on the left
 M10_LARGE_TEXT,Larger text · 115%
 M10_HAPTICS,Hit vibration
 M10_SOUND,Sound effects
@@ -1561,7 +1569,7 @@ M10_CODEX,Codex
 M10_AWARDS,Awards
 M10_RECORDS,Records
 M10_BACK,Back
-M10_CONTROLS,Controls & symbols
+M10_CONTROLS,Help & controls
 M10_PAUSE_BRIEF,"Auto-fire handles the targets.
 Tap Burst · drag to aim.
 
@@ -1855,3 +1863,94 @@ MIXER_DETAIL_0,Boost direct weapon hits. Echoes keep the recorded mix.
 MIXER_DETAIL_1,Boost area weapon damage and radius or beam width.
 MIXER_DETAIL_2,Strengthen existing slows and jams plus push and pull. Does not add control to weapons without it.
 MIXER_FADERS,Back to faders
+MODULE_HOT_TUBES_GAIN,+15% fire rate
+MODULE_HOT_TUBES_COST,−20% recharge
+MODULE_LONG_MAST_GAIN,Up to +20% range
+MODULE_LONG_MAST_COST,−10% hull
+MODULE_HEAVY_BATTERY_GAIN,+25% shield
+MODULE_HEAVY_BATTERY_COST,−20% recharge
+MODULE_FAST_FUSE_GAIN,15% faster ability
+MODULE_FAST_FUSE_COST,−15% shield
+MODULE_SIGNAL_BOOSTER_GAIN,+15% damage
+MODULE_SIGNAL_BOOSTER_COST,+1s recharge delay
+MODULE_QUIET_ROOM_GAIN,+25% recharge
+MODULE_QUIET_ROOM_COST,−10% support rate
+MODULE_WIDEBAND_MODULE_GAIN,+20% area
+MODULE_WIDEBAND_MODULE_COST,−15% direct damage
+MODULE_NARROWBAND_MODULE_GAIN,+20% direct damage
+MODULE_NARROWBAND_MODULE_COST,−15% area
+MODULE_COUNTERWEIGHT_GAIN,+25% push / pull
+MODULE_COUNTERWEIGHT_COST,−10% shot speed
+MODULE_THIN_WIRE_GAIN,+30% Charged time
+MODULE_THIN_WIRE_COST,−10% shield
+MODULE_NIGHT_LEDGER_GAIN,+1 reroll
+MODULE_NIGHT_LEDGER_COST,−10% tower damage
+MODULE_GLASS_TOWER_GAIN,+10% tower crit
+MODULE_GLASS_TOWER_COST,−15% hull
+RADIO_STATION_REACH,Station reach: %.0f
+SPLASH_EYEBROW,TRANSMITTING AFTER DARK
+POLISH_NEW_SUPPORT,NEW INSTRUMENT
+P1_OWNED,Fitted
+P1_NEED,Need gear
+P1_AFTER,This pick
+P1_MISSING_GEAR,Add the missing instrument
+P1_NEEDS_MARK,Needs Marking Pins · rank 3
+P1_NEEDS_SLOW,Needs a slowing Net branch
+P1_CONNECTED,Connected · conditional effect
+P1_READY,Ready · connect in Mixer
+P1_READY_AFTER,Unlocks · connect in Mixer
+P1_BREAKS_CONNECTION,This pick disables the connection
+P1_BALL_LIGHTNING_USE,Charged crowds inside a Well → Arc discharge
+P1_BALL_LIGHTNING_TRADE,Needs three direct Arc hits in the field; scattered enemies escape the combo.
+P1_DEAD_ZONE_USE,Net slow → Bass hit → brief jam
+P1_DEAD_ZONE_TRADE,Hold enemies in the overlap. Elites resist interruption; no extra damage.
+P1_B_SIDE_USE,Marking Pins → Echo replays seek marks
+P1_B_SIDE_TRADE,Needs marked targets within replay reach. Does not create extra replays.
+P1_LIVE_WIRE_USE,Net ticks → Charged enemies for Arc
+P1_LIVE_WIRE_TRADE,Adds charge rather than another Arc attack. Enemies must stay in the field.
+P1_PRESSURE_DROP_USE,Well gathers enemies → stronger Bass pulse
+P1_PRESSURE_DROP_TRADE,Bonus grows with the crowd in the overlap; weak against isolated targets.
+P1_DOUBLE_DROP_USE,Every third Bass activation → damage repeat
+P1_DOUBLE_DROP_TRADE,Needs time to build up. Repeats cannot trigger more repeats.
+P1_NEEDLE_THREAD_USE,Marking Pins → focused main-weapon bonus
+P1_NEEDLE_THREAD_TRADE,Hold focus on a marked enemy. Bonus depends on transmitter; no Echo bonus.
+P1_FEEDBACK_LOOP_USE,Shield breaks → emergency damage pulse
+P1_FEEDBACK_LOOP_TRADE,Needs a true shield break and cooldown. Does not repair your shield.
+P1_JAM_OVERLAP,Net already jams this long; overlap adds little
+P2_SURVIVED,Broadcast complete. Here is how your equipment performed.
+P2_LOSS_UNKNOWN,Station lost. The full damage breakdown is unavailable for this run.
+P2_LOSS_BREACH,Breaches caused most health loss. Try slowing enemies and focusing those nearest the station.
+P2_LOSS_PROJECTILE,Projectiles caused most health loss. Try focusing ranged enemies and timing your shield for incoming shots.
+P2_LOSS_MIXED,Damage came from several sources. Try protecting the station when threats overlap.
+P2_RESULT_STATS,Wave %d  •  %d defeated  •  %d breaches
+P2_RETRY,Retry broadcast
+P2_HEALTH_LOST,Health lost after shields
+P2_PARTIAL_HISTORY,Recorded health loss since update (partial)
+P2_BREACH,Breaches
+P2_PROJECTILE,Projectiles
+P2_OTHER,Other damage
+P2_DAMAGE,Damage
+P3_DISMISS,Dismiss hint
+P3_REPLAY,Replay combat hints
+P3_REPLAY_READY,Hints will appear again when you return to combat.
+P3_SHIELD_CAPACITOR,Enemies are closing in. Tap Shield Boost for a temporary reserve.
+P3_SHIELD_RELAY,Enemies are closing in. Tap Shield to restart recharge.
+P3_SHIELD_FEEDBACK,Shots incoming? Tap Shield to reflect them briefly.
+P3_BOOST,Violet shield = extra absorption. The thin bar shows time remaining.
+P3_MIXER,New gear in the mix. Open Mixer to shift power and connect matching gear.
+P4_IDLE,NIGHTSHIFT FM · Keeping the mountain company.
+P4_APPROACH,CALLER APPROACH
+P4_M1_W1,CONTROL · Nightshift is on the air. Keep the ridge in sight.
+P4_M1_W4,LINE 4 · My radio is warm. It isn’t plugged in.
+P4_M1_W7,CONTROL · Emergency band is quiet. Too quiet. Stay on air.
+P4_M2_W1,CONTROL · Back on the ridge. Let’s see who’s listening.
+P4_M2_W4,LINE 4 · Someone out there is humming our station tune.
+P4_M2_W7,CONTROL · Movement on the slope. Keep the signal clear.
+P4_M3_W1,CONTROL · Another night. Another light in the window.
+P4_M3_W4,LINE 4 · The mountain just answered me.
+P4_M3_W7,CONTROL · Emergency notice: keep your receivers off the ridge.
+P4_M4_W1,CONTROL · All lines are open. Don’t leave the tower alone.
+P4_M4_W4,LINE 4 · There’s a voice under every station now.
+P4_M4_W7,CONTROL · Emergency band: an unknown signal is closing in.
+P4_CALLER_WARNING,CONTROL · The Caller is approaching. Watch the ridge.
+P4_CALLER_ARRIVED,THE CALLER · We found your frequency.

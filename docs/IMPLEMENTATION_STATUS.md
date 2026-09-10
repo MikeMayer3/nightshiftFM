@@ -1,6 +1,286 @@
 # Implementation status
 
-## Current revision — studio mixer (Pixel 0.10.5)
+Git handoff: see [`handoff.md`](../handoff.md) for the consolidated commit scope
+and current resume instructions. Earlier local/uncommitted statements below are
+historical checkpoints superseded by that handoff.
+
+## P4 — radio personality and boss anticipation (2026-09-10)
+
+Implemented in the first campaign region: captioned station/caller/emergency
+lines, three original synthesized stings, and an actual-spawn-timed Caller warning
+inside Incoming Signals. Captions stay outside combat, freeze at interruptions,
+and avoid current-wave replay on Continue. Wide header lettering stays undistorted.
+No combat values, RNG, roster, or save fields changed.
+
+PASS: 5,687 regressions; 81 native layout/audio checks; 5 real save/Continue/Restart
+checks; 8 complete campaigns / 622 checks; import, 7 foundation checks, smoke,
+diff check, and Android debug export **0.10.9/code 21**. Exact commands, changed
+components, audio provenance, evidence, and known tool warnings are documented in
+[P4_RADIO_PERSONALITY.md](P4_RADIO_PERSONALITY.md).
+
+P4 physical Pixel 10 Pro XL install/launch: **PASS**, **0.10.9/code 21**. Six prior
+save/settings JSON and backup files are byte-identical after installation and
+launch; package, resumed activity, process and clean runtime log verified. Phone
+was locked; visible game UI verification is NOT RUN. Human
+listening/tone/gameplay acceptance: **NOT RUN**. Source remains local, uncommitted
+and unpushed. P5 has not started.
+
+
+## Additions roadmap P3 — onboarding and Pixel reliability (2026-09-10)
+
+Implemented contextual illustrated shield/boost/Mixer hints outside the fight,
+persistent once-only display, dismiss controls and Help replay. Exposed handedness
+and fixed it to move the visible shield button in automatic broadcasts. Existing
+presentation files migrate without resetting their options. Combat values and
+checkpoint/reward contracts are unchanged. The owner reported positive testing
+of P2; that is recorded separately from unfamiliar-player onboarding acceptance.
+[Scope, commands, device matrix and evidence](P3_ONBOARDING_RELIABILITY.md).
+
+PASS: Godot 4.7.2 import, **5,659 regressions / 0 failures**, **54 native coaching
+input/layout checks**, **10 native fresh-flow checks**, **6 native audio lifecycle
+checks**, seven foundation checks, startup smoke and Android export. Large text,
+muted play, low effects, both handedness positions and 360×640 / 450×1000 /
+1024×768 layouts were exercised. Existing synthetic notch mapping tests passed.
+
+PASS: **ten emulator cases** covering combat/draft/accepted-choice/result process
+death, repeated defeat and earned-victory results, active Home/resume and emulated
+battery saver. Choices and earned rewards restore without duplication. Emulator
+power settings were restored. Accelerated QA runs are not human pacing evidence.
+
+PASS: physical **Pixel 10 Pro XL / Android 17** stress and twenty-minute soak
+(after thirty-second warm-up). Rendering p95: **19.078 ms normal / 19.179 ms low**;
+normal authored play sampled **58–61 FPS**, engine-delta p95 **16.667 ms**.
+Comparable cleanup static memory grew **4.75%** (threshold 10%). Battery temperature
+**30.0–32.2°C**, thermal status **0**, no save or captured runtime errors. USB
+charging was active; unplugged battery drain is NOT RUN. Two complete mission-12
+victories occurred. QA app identity is separate and its measurements are scoped.
+
+PASS: player package `org.nightshiftfm.spike` updated on the Pixel from
+**0.10.7/code 19 to 0.10.8/code 20**, launched in foreground, and all six existing
+save/settings files retained their hashes after install and launch. Temporary
+physical QA package removed after collecting evidence. APK:
+`builds/android/nightshift-m10.apk`, SHA-256 `b96aa1c691735649f3030f12283ae3d8bf99ad720308c98c6bb99e10923b7eb4`.
+
+NOT RUN: unfamiliar-player comprehension, physical iOS/tablet/other Android
+hardware, human audio/haptic quality, release signing and store submission.
+No commit/push requested or performed. Source remains local. **P4 is next** and
+has not been started. Earlier device/thermal notes below are historical and are
+superseded only for the explicitly tested P3 Pixel scope.
+
+## Additions roadmap P2 — loss feedback and Pixel delivery (2026-09-10)
+
+Implemented evidence-based defeat explanations, health-loss bars and illustrated
+contribution bars in the existing report, top-of-report Back, and immediate Retry.
+Effective health damage is tracked after mitigation/shields with overkill clipped;
+legacy saved runs keep an explicit incomplete-history fallback. No combat values
+changed. [Scope, comparisons, commands and limitations](P2_LOSS_FEEDBACK.md).
+
+PASS: Godot import; **5,644 regression checks / 0 failures**; **48 legal campaign
+comparisons / 2,860 checks / 0 failures**, 630 JSON decision restores and final
+victory/defeat report restores; **27 native rendered/input checks** across three
+sizes with large text; seven foundation checks; startup smoke; Android export.
+The comparison produced 34 victories and 14 defeats. Full-unlock fixed policies
+are not estimates of fresh-player success; broader balance remains a human gate.
+
+PASS: physical **Pixel 10 Pro XL**, `org.nightshiftfm.spike`, updated from **0.10.6
+(code 18) to 0.10.7 (code 19)** using `adb -s 57261FDCQ00593 install -r`.
+Existing mission save validated against P2 before installation. All six existing
+save/settings files matched their pre-install SHA-256 hashes both after install
+and after launch. App process and foreground activity verified; no script/parse/
+fatal errors in the captured process log. The update includes prior local splash,
+combat effects, meter/shield presentation and P1 build guidance. Evidence:
+[evidence/P2-losses/pixel-install.json](evidence/P2-losses/pixel-install.json).
+
+APK: `builds/android/nightshift-m10.apk` (ignored local build), SHA-256
+`9fc44486411643876f1bf833eb3cb40d4a344a7c1ffa581eaef50d1f8bfba6b8`.
+
+NOT RUN: human loss comprehension/balance acceptance, production signing/store
+submission. No commit or push requested or performed. P3 is next and remains
+unstarted. Older entries below are historical and their local/not-installed notes
+are superseded by this delivery for the included work.
+
+## Additions roadmap P1 — graphical build guidance (2026-09-10)
+
+Implemented the first P1 increment: compact illustrated connection hints on
+upgrade cards, full equipment diagrams with prerequisites/activation/tradeoffs
+in information views and the Mixer connection catalogue, and a derived warning
+for redundant Net/Bass jam. Previews use copied tracks and the same eligibility
+function as combat. New-gear, missing-branch, ready-after-pick, ready and connected
+states are distinct; no connection is installed automatically. Back and branch
+comparison controls remain ahead of the longer details.
+
+Changed `BuildGuide` and `ConnectionDiagram` components; shared eligibility in
+`PatchboardState`; `DraftPanel` and `PatchboardPanel`; localized strings/imported
+translation; guide tests/runner and three evidence drivers. No combat values,
+content IDs or save schema were changed. Earlier local work is preserved.
+See [build routes, limits, commands and evidence](P1_BUILD_GUIDANCE.md).
+
+PASS: pinned Godot import, **5,613 regression checks / 0 failures**, startup smoke,
+**7 foundation checks**, **42 rendered/input checks** at 360×640, 450×950 and
+1024×768 with large text, **14 controlled mechanism checks**, `git diff --check`.
+Rendered input includes pointer selection through a diagram, the actual info
+button and connection button signals; it is desktop evidence, not phone touch.
+
+PASS: **48 legal campaign comparisons / 2,004 checks / 0 failures**, including
+**452 JSON upgrade-decision restores** and comparison of projected eligibility
+against actual accepted choices. All three fixed archetypes had wins and losses.
+Total victories: 14/48. Connected policies won bass 2/8, control 1/8, precision
+4/8; unconnected policies had the same win counts. These policies favor precision
+in this small sample and do not establish universal dominance or balanced human
+win rates. Mechanism fixtures independently confirmed Bass density scaling,
+conditional Net/Bass jam and marked Pulse piercing. P2 should investigate weak
+early build cases and control redundancy before making numerical adjustments.
+
+Final logs, JSON results and captures: `docs/evidence/P1-builds/`.
+Commands: `GODOT_BIN=/Applications/Godot.app/Contents/MacOS/Godot sh tools/godot.sh
+{import|test|smoke}` (run each separately), `python3 tools/check_foundation.py`,
+and the individual Godot scripts listed in `P1_BUILD_GUIDANCE.md`.
+The rendered test's formatted screenshot path was separated from its directory
+to comply with the foundation resource-reference check; generated filenames are
+unchanged. Test-fixture setup corrections are documented in the P1 report.
+
+NOT RUN: human build-distinctness/comprehension, physical-phone input and broader
+balance acceptance. This is a guidance and verification increment using existing
+build behaviors, not a claimed numerical rebalance. P2 remains unstarted.
+Local only; no APK export/install, commit or push in this task.
+
+## Additions roadmap P0 — playtest kit ready (2026-09-10)
+
+Started the roadmap with its first work package. Delivered
+[`playtesting/P0_GUIDE.md`](playtesting/P0_GUIDE.md), a participant session/feedback
+template, and header-only observation/findings CSVs. The guide covers candidate
+artifact identity, three initial observed sessions followed by 7–12 fresh players,
+neutral facilitation, unprompted versus guided behavior, actual checkpoint
+expectations, optional device checks, and issue triage by severity and eligible
+participant frequency. Roadmap execution log and next-session handoff updated.
+
+Inspected current source at `main` / `80e514f0821d1a44fb6710d769ae8a0e99c73910`
+plus existing uncommitted changes, menu/Continue code, control strings and the
+version declarations. The kit explicitly distinguishes the older documented
+0.10.6/code-18 phone artifact from later local polish under the same version.
+An actual candidate artifact hash and install check are required before sessions.
+
+PASS: `git diff --check`; a Python document check resolved local Markdown links,
+checked balanced prompt fences, validated CSVs as header-only with 13/17 unique
+columns, and checked required identity/evidence/triage fields and handoff links.
+No game behavior changed; game import/tests/smoke were NOT RUN for this document
+package, and no older test total is claimed as newly executed evidence.
+
+P0 status: **preparation READY; artifact preflight and HUMAN EVIDENCE NOT RUN**.
+Recruitment, participant sessions and human acceptance remain open. No artifact
+was exported/installed and no outreach was sent. P1–P7/G1–G3 were not started.
+Changes remain local and uncommitted. P1/P2 can use existing owner feedback while
+human sessions are arranged; the kit is not a dependency requiring invented data.
+
+## Planning only — additions and launch roadmap (2026-09-10)
+
+Recorded the owner's requested feature/publicity suggestions in
+[ADDITIONS_ROADMAP.md](ADDITIONS_ROADMAP.md): eleven proposed work packages,
+single-task prompt, dependencies, acceptance criteria and official references.
+Linked it from `NEXT_SESSION.md` and `MILESTONES.md`. All packages remain proposed;
+no gameplay, store configuration or delivery change was made by this task.
+
+PASS: `git diff --check`; document checks for eleven unique task sections,
+roadmap links, referenced document paths and balanced prompt fences. Game tests
+NOT RUN for this documentation-only change. Source remains local and uncommitted.
+
+## Current local revision — visible shield boost
+
+Added a violet temporary-shield dome and reserve number, an in-meter bonus line
+and duration strip, and a `Shield Boost` / `BOOSTED` button state. All indicators
+follow actual reserve absorption and expiry. Bars use a steady 76-pixel logical
+height to fit two lines. [Details and commands](SHIELD_BOOST_VISUAL.md).
+
+PASS: 5,561 regression / 60 rendered shield checks, seven foundation checks,
+import and smoke. Tested real activation, absorption, expiry, pause and checkpoint
+restore at phone/desktop sizes. Local only; not installed or pushed.
+
+## Current local revision — live-population waveform and health/shield meters
+
+The waveform now grows in amplitude and shortens in period as living enemies
+accumulate, returning to flat at zero. Projectiles and dead/resolved actors do not
+count. Taller health/shield bars contain their own centered live labels; the
+external combined text line is hidden. See [commands and evidence](COMBAT_METERS.md).
+
+PASS: 5,561 regression checks, 63 large-text rendered meter checks, import, startup
+smoke and seven foundation checks. Local only; not installed or pushed.
+
+## Current local revision — battlefield scenery and feedback
+
+Implemented all five owner-approved recommendations: mountain/pine battlefield
+art matching the revised splash, a health-reactive studio beneath the tower,
+sprite-only hit reactions and moving net weaves, clearer near-breach/critical
+warnings, brief wave announcements without countdowns, and highlights on the
+actual upgraded instruments. No balance, targeting, progression or save changes.
+
+PASS: 5,555 regression checks; 15 dense rendered checks at phone/desktop sizes;
+88 complete rendered-playthrough checks across two ten-wave runs and 42 legal
+upgrades; seven foundation checks, import and startup smoke. Zero failures or
+script errors. [Scope, exact commands and evidence](BATTLEFIELD_POLISH.md).
+
+NOT RUN: physical-phone/human approval of these additions. All subsequent polish
+remains local, uncommitted and unpushed; the installed 0.10.6 build still predates it.
+
+## Current local revision — station splash and combat polish
+
+Owner feedback revision: splash is now a flat illustrated redraw matching the
+game hardware, retaining the earlier composition and mood. Asset import, startup
+smoke and 105 rendered checks passed; phone-size screenshots reviewed. Prompt is
+in `assets/art/splash/REDRAW_PROMPT.md`. Still local and not installed on the phone.
+
+Implemented the owner-requested illustrated station/tower/mountain title screen,
+circular net mesh, bass pressure waves, distinct main attacks, kill fragments,
+actual arsenal sound wiring, frozen decision effects, clearer upgrade cards and
+cleaner results actions. No further gameplay or progression rebalance in this pass.
+
+PASS: 5,537 regression checks, 104 rendered layout checks, 47 complete rendered
+playthrough checks, seven foundation checks, import and startup smoke. Two legal
+mission-1 runs reached wave-10 victory: net at 100 hull, bass at 63.3 hull with 28
+breaches. Direct desktop UI inspection also covered setup, Continue, upgrade
+choices, pause and return to title. Automated runs are not human acceptance.
+
+Details, changed components, commands, asset provenance and limits:
+[`PRESENTATION_POLISH.md`](PRESENTATION_POLISH.md).
+NOT RUN: new physical-phone/art/listening approval. This subsequent polish is
+local, uncommitted, unpushed and not installed; the Pixel still has the earlier
+0.10.6 balance/module build described below.
+
+## Current revision — continuous waves, range, balance and graphical modules (Pixel 0.10.6)
+
+Owner request implemented on top of `80e514f` / delivered Pixel 0.10.5. Automatic
+broadcasts have no timed wave countdown. Enemies enter offscreen through a
+protected Incoming Signals approach; all damage paths obey the boundary, weapon
+station ranges are bounded, and stationary enemies descend into reach. Enemy
+health ramps from 80% to 100% of the existing wave scaling instead of a flat 70%.
+Twelve original SVG module graphics replace text-heavy CheckButtons with whole
+selectable cards and concise benefit/cost labels.
+
+Changed components: `RadioBalance`, combat session/actor/arsenal/arena/screen,
+connection target queries, actor-coordinate save validation, `ModuleCard`, setup
+picker, module-art generator, localization and affected/new regression fixtures.
+Implementation details, exact commands, tuning and evidence boundaries:
+[`RADIO_BALANCE.md`](RADIO_BALANCE.md).
+
+PASS: 152 rendered/input checks at 360×640 and 450×950, seven foundation checks,
+import and startup smoke, and deterministic regeneration of 12 distinct SVGs.
+Same-seed balance comparison: 48/60 victories before, 36/60 after; all 60 final
+runs terminated. Separate equipped builds: 17/18 victories, 254 successful JSON
+upgrade-checkpoint restores. Human win rates are not inferred from these probes.
+**PASS: 5,529 regression checks; 0 failures.**
+
+PASS: Android debug export and in-place Pixel 10 Pro XL update to **0.10.6 /
+version code 18**, using Godot 4.7.2 and `adb -s 57261FDCQ00593 install -r
+builds/android/nightshift-m10.apk`. Package version and running process verified;
+no script/crash errors in launch logs. Six JSON files were backed up and remained
+byte-identical after installation; mission saves and presentation settings also
+matched after launch. Evidence: `docs/evidence/M10-balance-modules/pixel-install.json`.
+The signing tool emitted Java native-access deprecation warnings but signed and
+verified the APK successfully. Backup and APK remain under ignored `builds/`.
+
+NOT RUN: human balance/playtesting and art approval. Source remains uncommitted
+and unpushed. No new milestone completion or store release is claimed.
+
+## Previous delivery — studio mixer (Pixel 0.10.5)
 
 Owner request: replace the primary patchboard with an always-available sound desk.
 New broadcasts now have three vertical faders (Direct, AOE, Control), four stops

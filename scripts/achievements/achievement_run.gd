@@ -13,6 +13,8 @@ var activation_hits: Array[int] = []
 var best_activation: int = 0
 var eligible: bool = false
 var hull_damage: float = 0.0
+# Optional versioned extension: older checkpoints have no source history.
+var loss_history: Dictionary = {"version": 1, "complete": true, "breach": 0.0, "projectile": 0.0, "other": 0.0}
 var max_supports: int = 0
 var broken: bool = false
 var recovered: bool = false
@@ -29,7 +31,7 @@ func observe(session: CombatSession) -> void:
 func to_data() -> Dictionary:
 	var data: Dictionary = {"eligible": eligible, "hull_damage": hull_damage, "max_supports": max_supports, "broken": broken, "recovered": recovered, "completed": completed}
 	if expanded:
-		data["broadcast"] = {"cleared_waves": cleared_waves, "seen": seen.duplicate(), "wave_seen": wave_seen.duplicate(), "bosses": bosses.duplicate(), "wave_bosses": wave_bosses.duplicate(), "reflected": reflected, "wave_reflections": wave_reflections.duplicate(), "activation_hits": activation_hits.duplicate(), "best_activation": best_activation}
+		data["broadcast"] = {"cleared_waves": cleared_waves, "seen": seen.duplicate(), "wave_seen": wave_seen.duplicate(), "bosses": bosses.duplicate(), "wave_bosses": wave_bosses.duplicate(), "reflected": reflected, "wave_reflections": wave_reflections.duplicate(), "activation_hits": activation_hits.duplicate(), "best_activation": best_activation, "loss_history": loss_history.duplicate(true)}
 	return data
 
 func restore(data: Variant) -> bool:
@@ -41,7 +43,8 @@ func restore(data: Variant) -> bool:
 	expanded = data.size() == 7
 	if expanded:
 		var b: Variant = data.get("broadcast")
-		if not b is Dictionary or b.size() != 9: return false
+		if not b is Dictionary or b.size() not in [9, 10]: return false
+		if (b.size() == 10) != b.has("loss_history"): return false
 		for key: String in ["cleared_waves", "reflected", "best_activation"]:
 			if not SaveChecks.number(b.get(key), 0, 100000, true): return false
 		for key: String in ["seen", "wave_seen", "bosses", "wave_bosses"]:
@@ -52,6 +55,17 @@ func restore(data: Variant) -> bool:
 			if not b.get(key) is Array or b[key].size() > 1000 or not SaveChecks.unique(b[key]): return false
 			for id: Variant in b[key]:
 				if not SaveChecks.number(id, 1, 10000000, true): return false
+		if b.has("loss_history"):
+			var loss: Variant = b.loss_history
+			if not loss is Dictionary or loss.size() != 5 or loss.get("version") != 1 or not loss.get("complete") is bool: return false
+			var recorded: float = 0.0
+			for key: String in ["breach", "projectile", "other"]:
+				if not SaveChecks.number(loss.get(key), 0, 10000000): return false
+				recorded += float(loss[key])
+			if recorded > float(data.hull_damage) + .001: return false
+			loss_history = {"version": 1, "complete": loss.complete, "breach": float(loss.breach), "projectile": float(loss.projectile), "other": float(loss.other)}
+		else:
+			loss_history = {"version": 1, "complete": false, "breach": 0.0, "projectile": 0.0, "other": 0.0}
 		cleared_waves = int(b.cleared_waves)
 		reflected = int(b.reflected)
 		best_activation = int(b.best_activation)

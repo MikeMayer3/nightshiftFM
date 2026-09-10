@@ -1,0 +1,106 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "version_before": [
+    "versionCode=20 minSdk=24 targetSdk=36",
+    "versionName=0.10.8"
+  ],
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-0109-backup-20260910-124008",
+  "before": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "fcde15e198f6d76cb23e4a99c6515e6e369797c6ac0bf0cdd575c2d92cedcd3b",
+      "bytes": 6482
+    },
+    "m3_mission.json.bak": {
+      "sha256": "236544c24e74d99d48fd5fd42b98023ff92baf4a58d5e7b843ccf398cdd94025",
+      "bytes": 6483
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "apk_sha256": "b31ee2214d7c47895605eafe091637393137129a61289de9547dc663bb4da5b7",
+  "install": "Serving...\nAll files should be loaded. Notifying the device.\nPerforming Incremental Install\nSuccess\nInstall command complete in 2581 ms\n",
+  "after_install": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "fcde15e198f6d76cb23e4a99c6515e6e369797c6ac0bf0cdd575c2d92cedcd3b",
+      "bytes": 6482
+    },
+    "m3_mission.json.bak": {
+      "sha256": "236544c24e74d99d48fd5fd42b98023ff92baf4a58d5e7b843ccf398cdd94025",
+      "bytes": 6483
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "install_preserved_files": true,
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 634\nWaitTime: 635\nComplete\n",
+  "version_after": [
+    "versionCode=21 minSdk=24 targetSdk=36",
+    "versionName=0.10.9"
+  ],
+  "pid": "25841",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf",
+      "bytes": 55
+    },
+    "m1_probe.json.bak": {
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e",
+      "bytes": 55
+    },
+    "m3_mission.json": {
+      "sha256": "fcde15e198f6d76cb23e4a99c6515e6e369797c6ac0bf0cdd575c2d92cedcd3b",
+      "bytes": 6482
+    },
+    "m3_mission.json.bak": {
+      "sha256": "236544c24e74d99d48fd5fd42b98023ff92baf4a58d5e7b843ccf398cdd94025",
+      "bytes": 6483
+    },
+    "presentation_v1.json": {
+      "sha256": "f7295b06409341a0f0c86a18bd002e257410d0938fa4fd0c8dc734cb36ab2034",
+      "bytes": 165
+    },
+    "presentation_v1.json.bak": {
+      "sha256": "324efe4dab720584c8fb9a194973c07e2d5d5a5e1621f368943f0ee689ec8775",
+      "bytes": 166
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "foreground": [
+    "Resumed: ActivityRecord{209886901 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6129}",
+    "ResumedActivity: ActivityRecord{209886901 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6129}"
+  ],
+  "scope": "Physical Pixel package update and process launch verified; six save/settings files byte-identical. Locked phone prevents visible game UI verification. Human P4 gameplay, listening and tone approval not run.",
+  "visual_launch_verified": false,
+  "visual_launch_note": "Phone lock screen was visible. App process and resumed activity were verified; visible game UI was not verified. Screenshot kept only with the ignored local backup, not repository evidence."
+}

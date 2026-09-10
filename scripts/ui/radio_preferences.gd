@@ -6,6 +6,8 @@ static var current: RadioPreferences
 const DEFAULTS: Dictionary = {"reduced_flash": false, "low_effects": false,
 	"left_handed": false, "large_text": false, "haptics": false,
 	"sound": true, "music": true, "show_signal": true}
+const COACH_IDS: Array[String] = ["shield", "boost", "mixer"]
+var coach_seen: Array[String] = []
 var values: Dictionary = DEFAULTS.duplicate()
 var path: String = "user://presentation_v1.json"
 var save_error: Error = OK
@@ -38,7 +40,13 @@ func set_option(key: String, value: bool) -> void:
 	changed.emit()
 
 static func valid(data: Variant) -> bool:
-	if not data is Dictionary or data.size() != 2 or data.get("schema") != 1: return false
+	if not data is Dictionary or data.size() not in [2, 3] or data.get("schema") != 1: return false
+	if data.size() == 3:
+		if not data.get("coaching") is Array or data.coaching.size() > COACH_IDS.size(): return false
+		var seen: Array[String] = []
+		for id: Variant in data.coaching:
+			if not id is String or id not in COACH_IDS or id in seen: return false
+			seen.append(id)
 	var options: Variant = data.get("options")
 	if not options is Dictionary or options.size() != DEFAULTS.size(): return false
 	for key: String in DEFAULTS:
@@ -56,11 +64,12 @@ func load_preferences() -> void:
 	var data: Dictionary = read_preferences(path)
 	if data.is_empty(): data = read_preferences(path + ".bak")
 	values = data.options.duplicate() if not data.is_empty() else DEFAULTS.duplicate()
+	coach_seen.assign(data.get("coaching", []))
 
 func save_preferences() -> Error:
 	var file: FileAccess = FileAccess.open(path + ".tmp", FileAccess.WRITE)
 	if file == null: return FileAccess.get_open_error()
-	file.store_string(JSON.stringify({"schema": 1, "options": values}))
+	file.store_string(JSON.stringify({"schema": 1, "options": values, "coaching": coach_seen}))
 	file.flush()
 	var error: Error = file.get_error()
 	file.close()
@@ -91,3 +100,13 @@ func apply_fonts(node: Node) -> void:
 		if control is BaseButton:
 			control.custom_minimum_size.y = maxf(float(control.get_meta("radio_touch_minimum", 88)), control.custom_minimum_size.y)
 	for child: Node in node.get_children(): apply_fonts(child)
+
+func remember_coach(id: String) -> void:
+	if id not in COACH_IDS or id in coach_seen: return
+	coach_seen.append(id)
+	save_error = save_preferences()
+
+func replay_coaching() -> void:
+	coach_seen.clear()
+	save_error = save_preferences()
+	changed.emit()

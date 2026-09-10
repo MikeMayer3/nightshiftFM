@@ -1,0 +1,329 @@
+{
+  "runs": [
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 4,
+      "policy": "random",
+      "restores": 17,
+      "seconds": 520.683333333189,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 5,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 4,
+      "policy": "random",
+      "restores": 18,
+      "seconds": 530.916666666513,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 4,
+      "policy": "recruit_first",
+      "restores": 18,
+      "seconds": 528.649999999848,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 4,
+      "policy": "recruit_first",
+      "restores": 17,
+      "seconds": 519.816666666523,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 4,
+      "policy": "tower_first",
+      "restores": 16,
+      "seconds": 505.216666666536,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 4,
+      "policy": "tower_first",
+      "restores": 14,
+      "seconds": 487.416666666552,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 8,
+      "policy": "random",
+      "restores": 14,
+      "seconds": 525.699999999851,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 15,
+      "equipped": true,
+      "finished": true,
+      "hull": 0.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 8,
+      "policy": "random",
+      "restores": 6,
+      "seconds": 311.566666666712,
+      "seed": 42,
+      "victory": false,
+      "wave": 5
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 8,
+      "policy": "recruit_first",
+      "restores": 14,
+      "seconds": 548.066666666497,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 8,
+      "policy": "recruit_first",
+      "restores": 14,
+      "seconds": 538.799999999839,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 8,
+      "policy": "tower_first",
+      "restores": 14,
+      "seconds": 506.399999999868,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 8,
+      "policy": "tower_first",
+      "restores": 14,
+      "seconds": 493.783333333213,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 12,
+      "policy": "random",
+      "restores": 13,
+      "seconds": 501.033333333206,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 5,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "pulse",
+        "shield": "capacitor",
+        "support": "arc_aerial"
+      },
+      "mission": 12,
+      "policy": "random",
+      "restores": 13,
+      "seconds": 547.433333333164,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 12,
+      "policy": "recruit_first",
+      "restores": 13,
+      "seconds": 513.216666666529,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "sweep",
+        "shield": "relay",
+        "support": "bass_driver"
+      },
+      "mission": 12,
+      "policy": "recruit_first",
+      "restores": 13,
+      "seconds": 511.299999999864,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 12,
+      "policy": "tower_first",
+      "restores": 13,
+      "seconds": 478.949999999893,
+      "seed": 11,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "breaches": 0,
+      "equipped": true,
+      "finished": true,
+      "hull": 100.0,
+      "loadout": {
+        "main": "burst",
+        "shield": "feedback",
+        "support": "needle_swarm"
+      },
+      "mission": 12,
+      "policy": "tower_first",
+      "restores": 13,
+      "seconds": 465.799999999905,
+      "seed": 42,
+      "victory": true,
+      "wave": 10
+    }
+  ],
+  "valid": true
+}

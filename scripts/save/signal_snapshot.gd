@@ -31,8 +31,8 @@ static func capture(session: CombatSession) -> Dictionary:
 		result["achievements"] = session.achievement_run.to_data()
 	return result
 
-static func _point(value: Variant) -> bool:
-	return value is Array and value.size() == 2 and SaveChecks.number(value[0], 0, 640) and SaveChecks.number(value[1], 0, 720)
+static func _point(value: Variant, minimum_y: float = 0) -> bool:
+	return value is Array and value.size() == 2 and SaveChecks.number(value[0], 0, 640) and SaveChecks.number(value[1], minimum_y, 720)
 
 static func restore(session: CombatSession, data: Dictionary) -> bool:
 	var is_active: bool = data.get("content") in [ActiveCombat.VERSION, ActiveCombat.LEGACY_VERSION, ArsenalContent.VERSION, PatchboardContent.VERSION, CampaignContent.VERSION, EncounterContent.VERSION, BroadcastRules.VERSION]
@@ -118,7 +118,7 @@ static func _actors(session: CombatSession, items: Variant) -> bool:
 	if not items is Array or items.size() > 256: return false
 	var seen: Array[int] = []
 	for item: Variant in items:
-		if not item is Dictionary or item.size() != ACTOR_FIELDS.size() + 4 + int(BroadcastRules.expanded(session)) or not _point(item.get("position")): return false
+		if not item is Dictionary or item.size() != ACTOR_FIELDS.size() + 4 + int(BroadcastRules.expanded(session)) or not _point(item.get("position"), RadioBalance.SPAWN_Y if RadioBalance.enabled(session) else 0): return false
 		if not item.get("id") is String or not item.get("source") is String: return false
 		var projectile: bool = item.id == "m2.projectile"
 		var definition: EnemyDefinition = session.enemy_definition(&"m2.swarmer" if projectile else StringName(item.id))

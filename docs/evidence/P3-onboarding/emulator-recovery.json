@@ -1,0 +1,536 @@
+[
+  {
+    "case": "combat",
+    "before": {
+      "accepted": [],
+      "action": "hold",
+      "choices": 0,
+      "command_id": 2,
+      "completed": 0,
+      "elapsed": 3.016666666666661,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [],
+      "paused": false,
+      "phase": 1,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "after": {
+      "accepted": [],
+      "action": "hold",
+      "choices": 0,
+      "command_id": 2,
+      "completed": 0,
+      "elapsed": 0.01666666666666666,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [],
+      "paused": false,
+      "phase": 1,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "saved_phase": 1,
+    "saved_elapsed": 0.016666666666666666,
+    "pass": true
+  },
+  {
+    "case": "draft",
+    "before": {
+      "accepted": [],
+      "action": "hold",
+      "choices": 0,
+      "command_id": 4,
+      "completed": 0,
+      "elapsed": 12.550000000000203,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield"
+      ],
+      "paused": false,
+      "phase": 4,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "after": {
+      "accepted": [],
+      "action": "hold",
+      "choices": 0,
+      "command_id": 4,
+      "completed": 0,
+      "elapsed": 12.550000000000203,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield"
+      ],
+      "paused": false,
+      "phase": 4,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "saved_phase": 4,
+    "saved_elapsed": 12.550000000000203,
+    "pass": true
+  },
+  {
+    "case": "accepted choice",
+    "before": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        }
+      ],
+      "action": "hold",
+      "choices": 1,
+      "command_id": 6,
+      "completed": 0,
+      "elapsed": 12.550000000000203,
+      "engine": "4.7.2-stable (official)",
+      "hint": "mixer",
+      "hint_seen": [
+        "shield",
+        "mixer"
+      ],
+      "paused": false,
+      "phase": 1,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "after": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        }
+      ],
+      "action": "hold",
+      "choices": 1,
+      "command_id": 6,
+      "completed": 0,
+      "elapsed": 12.550000000000203,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield",
+        "mixer"
+      ],
+      "paused": false,
+      "phase": 1,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "saved_phase": 1,
+    "saved_elapsed": 12.550000000000203,
+    "pass": true
+  },
+  {
+    "case": "results",
+    "before": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        },
+        {
+          "bonus": false,
+          "id": "recruit.static_net"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.b2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.static_net.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t4"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t3"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        }
+      ],
+      "action": "hold",
+      "choices": 18,
+      "command_id": 8,
+      "completed": 0,
+      "elapsed": 470.66666666656727,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield",
+        "mixer",
+        "boost"
+      ],
+      "paused": false,
+      "phase": 3,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "after": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        },
+        {
+          "bonus": false,
+          "id": "recruit.static_net"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.b2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.static_net.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t4"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t3"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        }
+      ],
+      "action": "hold",
+      "choices": 18,
+      "command_id": 8,
+      "completed": 0,
+      "elapsed": 470.66666666656727,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield",
+        "mixer",
+        "boost"
+      ],
+      "paused": false,
+      "phase": 3,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "saved_phase": 3,
+    "saved_elapsed": 470.66666666656727,
+    "pass": true
+  },
+  {
+    "case": "results again",
+    "before": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        },
+        {
+          "bonus": false,
+          "id": "recruit.static_net"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.b2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.static_net.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t4"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t3"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        }
+      ],
+      "action": "hold",
+      "choices": 18,
+      "command_id": 9,
+      "completed": 0,
+      "elapsed": 470.66666666656727,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield",
+        "mixer",
+        "boost"
+      ],
+      "paused": false,
+      "phase": 3,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "after": {
+      "accepted": [
+        {
+          "bonus": false,
+          "id": "recruit.bass_driver"
+        },
+        {
+          "bonus": false,
+          "id": "recruit.static_net"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.b2"
+        },
+        {
+          "bonus": false,
+          "id": "m5.static_net.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.pulse.t4"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.b1"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        },
+        {
+          "bonus": false,
+          "id": "m5.capacitor.t0"
+        },
+        {
+          "bonus": false,
+          "id": "m5.bass_driver.t3"
+        },
+        {
+          "bonus": false,
+          "id": "m5.arc_aerial.t5"
+        }
+      ],
+      "action": "hold",
+      "choices": 18,
+      "command_id": 9,
+      "completed": 0,
+      "elapsed": 470.66666666656727,
+      "engine": "4.7.2-stable (official)",
+      "hint": "",
+      "hint_seen": [
+        "shield",
+        "mixer",
+        "boost"
+      ],
+      "paused": false,
+      "phase": 3,
+      "recovery_required": false,
+      "rewarded": [],
+      "run_id": "run.1",
+      "save_failed": false
+    },
+    "saved_phase": 3,
+    "saved_elapsed": 470.66666666656727,
+    "pass": true
+  },
+  {
+    "case": "home foreground results",
+    "pass": true,
+    "before_rewards": [],
+    "after_rewards": []
+  }
+]

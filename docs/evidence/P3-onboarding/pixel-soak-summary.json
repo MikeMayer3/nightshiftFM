@@ -1,0 +1,57 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "android": "17",
+  "qa_apk_sha256": "ea1bd27fd4236dcbf60884fefede2550033f4017bc5fe3a7828924348a11f29f",
+  "completed": true,
+  "minimum_post_warmup_seconds": 1200,
+  "warmup_seconds": 30,
+  "render_stress": [
+    {
+      "enemies": 150,
+      "frames": 300,
+      "kind": "render_stress",
+      "low_effects": false,
+      "median_ms": 16.655,
+      "p95_ms": 19.078,
+      "projectiles": 400
+    },
+    {
+      "enemies": 150,
+      "frames": 300,
+      "kind": "render_stress",
+      "low_effects": true,
+      "median_ms": 16.638,
+      "p95_ms": 19.179,
+      "projectiles": 400
+    }
+  ],
+  "live_engine_delta_p95_ms_max": 16.6666666666667,
+  "sampled_fps_min": 58.0,
+  "sampled_fps_max": 61.0,
+  "warm_cleanup_static_bytes": 73660640.0,
+  "end_cleanup_static_bytes": 77159706.0,
+  "static_growth_percent": 4.7502519663147105,
+  "battery_temperature_c_min": 30.0,
+  "battery_temperature_c_max": 32.2,
+  "android_thermal_status_max": 0,
+  "save_errors": 0,
+  "completed_runs": [
+    {
+      "kind": "result",
+      "seconds": 534.099999999843,
+      "victory": true,
+      "wave": 10
+    },
+    {
+      "kind": "result",
+      "seconds": 506.833333333201,
+      "victory": true,
+      "wave": 10
+    }
+  ],
+  "battery_drain": "NOT RUN: USB powered throughout",
+  "memory_scope": "Equivalent fresh-run cleanup states; static allocator includes growing QA sample buffers, not only game allocations",
+  "normal_frame_target_pass": true,
+  "low_effects_stress_target_pass": true,
+  "cleanup_memory_target_pass": true
+}

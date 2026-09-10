@@ -1,5 +1,11 @@
 # Milestones and acceptance gates
 
+> **Optional additions roadmap (2026-09-10):**
+> [ADDITIONS_ROADMAP.md](ADDITIONS_ROADMAP.md) contains proposed P0–P7 gameplay
+> and G1–G3 launch work packages with copyable prompts. These supplement M10/M11;
+> they do not renumber milestones or authorize automatic implementation. A future
+> owner request may select one package by ID. Its bounded scope is the work to do.
+
 > **Current local build: 0.10.4 (2026-09-09).** The authorized M8/M9 continuation
 > implements all twelve missions, expanded roles/bosses, difficulties, Contracts,
 > Endless and all 48 local achievement conditions, followed by the M10 polish

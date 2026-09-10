@@ -18,11 +18,17 @@ func _init() -> void:
 
 static func eligible(session: CombatSession, id: StringName) -> bool:
 	if session.arsenal == null or not PatchboardContent.RECIPES.has(id): return false
+	return eligible_tracks(session.draft.tracks, id)
+
+static func eligible_tracks(tracks: Array[UpgradeTrack], id: StringName) -> bool:
+	if not PatchboardContent.RECIPES.has(id): return false
 	var recipe: SynergyDefinition = PatchboardContent.RECIPES[id]
+	var owned: Dictionary = {}
+	for track: UpgradeTrack in tracks: owned[track.definition.id] = track
 	for endpoint: StringName in recipe.endpoint_ids:
-		if session.draft.track(endpoint) == null: return false
-	if recipe.capability == &"marked" and float(ArsenalStats.parameters(session.draft.track(&"needle_swarm")).get(&"mark", 0)) <= 0: return false
-	if recipe.capability == &"slowed" and float(ArsenalStats.parameters(session.draft.track(&"static_net")).get(&"slow", 0)) <= 0: return false
+		if not owned.has(endpoint): return false
+	if recipe.capability == &"marked" and float(ArsenalStats.parameters(owned[&"needle_swarm"]).get(&"mark", 0)) <= 0: return false
+	if recipe.capability == &"slowed" and float(ArsenalStats.parameters(owned[&"static_net"]).get(&"slow", 0)) <= 0: return false
 	return true
 
 func connected(session: CombatSession, id: StringName) -> bool:
@@ -62,7 +68,7 @@ func discovered() -> Array[StringName]:
 	return result
 
 static func enemies(session: CombatSession, center: Vector2, radius: float, limit: int) -> Array[CombatActor]:
-	var actors: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return not a.resolved and not a.projectile and a.position.distance_to(center) <= radius)
+	var actors: Array[CombatActor] = session.actors.filter(func(a: CombatActor) -> bool: return RadioBalance.entered(session, a) and not a.projectile and a.position.distance_to(center) <= radius)
 	actors.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return a.position.distance_squared_to(center) < b.position.distance_squared_to(center))
 	if actors.size() > limit: actors.resize(limit)
 	return actors

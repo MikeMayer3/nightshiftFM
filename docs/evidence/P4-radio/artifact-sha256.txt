@@ -1,0 +1,4 @@
+b31ee2214d7c47895605eafe091637393137129a61289de9547dc663bb4da5b7  builds/android/nightshift-m10.apk
+f2b1be98b1d1717b8edc57589b562f59a0e78c8d4715849832ff0accff34faf6  assets/audio/radio/sign_on.wav
+651fb8c58ea61089b630d04fe5b113d7a22d702c2cc34101e2aac968bba29f67  assets/audio/radio/line_open.wav
+06c2ce8db6c2625888bb079a6b1eb633ff44fe9251c4da351fbf8cddc0aba783  assets/audio/radio/ridge_alert.wav

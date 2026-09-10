@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-10",
+  "branch": "main",
+  "base_commit": "80e514f0821d1a44fb6710d769ae8a0e99c73910",
+  "scope": "Accumulated radio combat/art polish and P0 preparation/P1-P4; root handoff; preserve prior native visual test under original name.",
+  "checks": {
+    "local_import": "PASS",
+    "local_regression": {
+      "checks": 5687,
+      "failures": 0
+    },
+    "native_p4": {
+      "checks": 81,
+      "failures": 0
+    },
+    "foundation": {
+      "checks": 7,
+      "failures": 0
+    },
+    "smoke": "PASS",
+    "clean_staged_export_import": "PASS",
+    "clean_staged_export_regression": {
+      "checks": 5687,
+      "failures": 0
+    },
+    "staged_whitespace": "PASS"
+  },
+  "delivery": "P4 0.10.9/code21 installed previously; game source unchanged by handoff test-file separation.",
+  "excluded": "Ignored APKs/builds, private saves, credential files, and P4 lock-screen screenshot.",
+  "limitations": "Clean staged export is an index-only file export, not a fresh remote clone. Human P4 gameplay/listening and visible P4 phone UI remain unverified."
+}

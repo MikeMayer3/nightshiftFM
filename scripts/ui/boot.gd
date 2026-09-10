@@ -15,6 +15,7 @@ var continue_button: Button
 var _continuing: bool = false
 var combat: CombatScreen
 var current_page: Page = Page.MENU
+var splash: SplashArt
 var settings_panel: RadioSettingsPanel
 
 @onready var menu: VBoxContainer = $Margin/Column/Menu
@@ -50,7 +51,35 @@ func _ready() -> void:
 		show_page(Page.COMBAT))
 	for child: Node in menu.get_children():
 		if child is Button: RadioUI.button(child, child.name == "Start")
+	_setup_splash()
 	show_page(Page.MENU)
+
+func _setup_splash() -> void:
+	splash = SplashArt.new()
+	splash.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(splash)
+	move_child(splash, 0)
+	($Margin as SafeMargin).base_margins = Vector4(48, 48, 48, 32)
+	var column: VBoxContainer = $Margin/Column
+	column.add_theme_constant_override("separation", 10)
+	($Margin/Column/Eyebrow as Label).text = tr("SPLASH_EYEBROW")
+	($Margin/Column/Eyebrow as Label).add_theme_font_size_override("font_size", 20)
+	($Margin/Column/Title as Label).add_theme_font_size_override("font_size", 66)
+	($Margin/Column/Title as Label).add_theme_color_override("font_color", Color("f1dec0"))
+	transmitter.hide()
+	column.move_child($Margin/Column/Spacer, menu.get_index())
+	($Margin/Column/Footer as Label).hide()
+	(menu.get_node("MobileChecks") as Button).hide()
+	(menu.get_node("Quit") as Button).visible = not OS.has_feature("android") and not OS.has_feature("ios")
+	menu.add_theme_constant_override("separation", 10)
+	for child: Node in menu.get_children():
+		if child is Button:
+			child.custom_minimum_size.y = 64 if child.name in ["Settings", "Quit"] else 76
+			child.add_theme_font_size_override("font_size", 25)
+			if child.name in ["Settings", "Quit"]:
+				var secondary: StyleBoxFlat = RadioUI.surface("0c1c28", "34474e")
+				secondary.bg_color.a = .84
+				child.add_theme_stylebox_override("normal", secondary)
 
 func show_page(page: Page) -> void:
 	var returning_to_route: bool = current_page == Page.ARSENAL and page == Page.CAMPAIGN
@@ -69,6 +98,7 @@ func show_page(page: Page) -> void:
 		combat.queue_free()
 		combat = null
 	current_page = page
+	if splash != null: splash.visible = page == Page.MENU
 	menu.visible = page == Page.MENU
 	start_placeholder.visible = page == Page.START_PLACEHOLDER
 	settings.visible = page == Page.SETTINGS

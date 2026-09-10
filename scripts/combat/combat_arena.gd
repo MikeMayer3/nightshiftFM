@@ -10,6 +10,9 @@ var waveform_time: float = 0.0
 var hit_flash: float = 0.0
 var pulses: Array[Dictionary] = []
 var chains: Array[Dictionary] = []
+var fragments: Array[Dictionary] = []
+var broadcast: RadioBroadcast
+var feedback: RadioFeedback = RadioFeedback.new()
 var _mouse_held: bool = false
 var _touch_index: int = -1
 const SUPPORT_POSITIONS: Dictionary = {
@@ -101,17 +104,28 @@ func _can_aim() -> bool:
 
 func _process(delta: float) -> void:
 	if session != null and not session.paused and not session.is_deciding() and not session.is_wiring():
+		feedback.advance(delta)
 		waveform_time += delta
 		for id: StringName in support_flashes:
 			support_flashes[id] = maxf(0, float(support_flashes[id]) - delta)
 		shot_flash = maxf(0.0, shot_flash - delta)
 		hit_flash = maxf(0.0, hit_flash - delta)
-	if session != null and not session.paused:
+		for fragment: Dictionary in fragments: fragment.left -= delta
+		fragments = fragments.filter(func(f: Dictionary) -> bool: return f.left > 0)
 		for pulse: Dictionary in pulses: pulse.left -= delta
 		pulses = pulses.filter(func(p: Dictionary) -> bool: return p.left > 0)
 		for chain: Dictionary in chains: chain.left -= delta
 		chains = chains.filter(func(c: Dictionary) -> bool: return c.left > 0.0)
 	queue_redraw()
+
+func show_event(event: CombatEvent) -> void:
+	feedback.hit(event)
+	if event.kind != CombatEvent.Kind.KILL: return
+	for actor: CombatActor in session.actors:
+		if actor.serial != event.target_id: continue
+		if fragments.size() >= 32: fragments.pop_front()
+		fragments.append({"position": actor.position, "serial": actor.serial, "left": .32})
+		break
 
 func show_shot(at: Vector2) -> void:
 	shot_end = at
@@ -129,20 +143,11 @@ func _draw() -> void:
 	var era: int = RadioArt.era(session)
 	var low: bool = RadioPreferences.current.enabled("low_effects")
 	var reduced: bool = RadioPreferences.current.enabled("reduced_flash")
-	draw_rect(Rect2(Vector2.ZERO, CombatSession.ARENA), RadioArt.BACKGROUNDS[era])
-	RadioEncounters.environment(self, era, low)
-	if not low:
-		for y: int in range(100, 610, 90):
-			draw_line(Vector2(24, y), Vector2(616, y), RadioArt.TRIMS[era].darkened(.65), 1)
-	draw_rect(Rect2(0, SHIELD_LINE_Y, 640, 720 - SHIELD_LINE_Y), Color("15242c"))
+	RadioScenery.background(self, era, low)
 	draw_line(Vector2(0, SHIELD_LINE_Y + 5), Vector2(640, SHIELD_LINE_Y + 5), RadioArt.TRIMS[era], 3)
 	var font: Font = ThemeDB.fallback_font
-	draw_string(font, Vector2(16, 25), tr("COMBAT_SPAWN"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, muted)
-	for x: int in range(225, 611, 16):
-		var reach: float = 10 if x % 3 == 0 else 6
-		draw_line(Vector2(x, 20 - reach), Vector2(x, 20 + reach), RadioArt.TRIMS[era], 1)
-	_sound_path(Vector2(225, 20), Vector2(610, 20), Color("88c9bf"), 9, 44, waveform_time * 5, 2)
 	draw_line(Vector2(0, SHIELD_LINE_Y), Vector2(640, SHIELD_LINE_Y), Color("f78279") if hit_flash > 0 and not reduced else Color("efb178"), 4)
+	RadioShieldVisual.draw_boost(self)
 	draw_set_transform(arena_offset(), 0, arena_stretch())
 	if session.supports != null:
 		var field: Dictionary = session.supports.field
@@ -163,18 +168,17 @@ func _draw() -> void:
 			var tint: Color = DraftPanel.ACCENTS[StringName(zone.source)]
 			if zone.source == "static_net": _net_pattern(Vector2(zone.x, zone.y), float(zone.p.radius), tint)
 			elif zone.source == "reverb_well": _spiral(Vector2(zone.x, zone.y), float(zone.p.radius), tint, waveform_time)
-			else:
-				for ring: int in 3: draw_arc(Vector2(zone.x, zone.y), float(zone.p.radius) * (0.4 + ring * .3), 0, TAU, 24, Color(tint, 0.5), 2)
+			# Bass is an impact pulse; its mechanical zone must not add static rings.
 	for pulse: Dictionary in pulses:
 		var tint: Color = DraftPanel.ACCENTS.get(pulse.source, Color("efa968"))
 		tint.a = .45 if reduced else clampf(float(pulse.left) / .55, .15, .8)
 		var age: float = 1 - float(pulse.left) / .55
 		match String(pulse.source):
-			"static_net": _net_pattern(pulse.center, pulse.radius.x, tint)
-			"reverb_well": _spiral(pulse.center, pulse.radius.x, tint, age * 3)
-			"bass_driver":
-				for ring: int in 3:
-					draw_arc(pulse.center + Vector2(0, pulse.radius.y * .6), pulse.radius.x * (.35 + ring * .25 + age * .15), PI * 1.12, PI * 1.88, 24, tint, 5 - ring)
+			"static_net":
+				# One deployment accent; the live zone supplies the mesh.
+				draw_arc(pulse.center, pulse.radius.x * (.7 + age * .3), 0, TAU, 24, Color(tint, (1 - age) * .3), 2, true)
+			"reverb_well": pass # The persistent well already draws the vortex.
+			"bass_driver": RadioEffects.bass(self, pulse.center, pulse.radius.x, tint, age)
 			"echo_deck":
 				for side: int in [-1, 1]:
 					var center: Vector2 = pulse.center + Vector2(side * pulse.radius.x * .28, 0)
@@ -186,6 +190,16 @@ func _draw() -> void:
 					draw_line(pulse.center + direction * 12, pulse.center + direction * (25 + age * 20), tint, 2)
 			_:
 				_sound_path(pulse.center - Vector2(pulse.radius.x, 0), pulse.center + Vector2(pulse.radius.x, 0), tint, 12, 40, age * 5, 3)
+	for fragment: Dictionary in fragments:
+		var age: float = 1 - float(fragment.left) / .32
+		for index: int in (2 if low else 5):
+			var direction: Vector2 = Vector2.from_angle(index * TAU / 5 + int(fragment.serial) * .7)
+			var at: Vector2 = fragment.position + direction * (6 + age * 22)
+			draw_line(at, at + direction * 5, Color(.65, .83, .86, (1 - age) * (.35 if reduced else .7)), 2, true)
+	if RadioBalance.enabled(session):
+		# Area visuals stop at the same protected approach boundary as damage.
+		draw_set_transform(arena_offset(), 0, arena_stretch())
+		draw_rect(Rect2(0, 0, 640, RadioBalance.ENTRY_Y), Color("0d1c29"))
 	var aimed: CombatActor = session.target()
 	for actor: CombatActor in session.actors:
 		var p: Vector2 = actor.position
@@ -209,13 +223,14 @@ func _draw() -> void:
 			var extent: float = actor.radius * 3.4
 			var tilt: float = sin(actor.age * 3 + actor.serial) * .055 if actor.path_kind == EnemyDefinition.PathKind.DIVE and not low else 0
 			var local_scale: Vector2 = Vector2.ONE * arena_scale()
-			draw_set_transform(arena_offset() + p * arena_stretch(), tilt, local_scale)
+			draw_set_transform(arena_offset() + p * arena_stretch() + feedback.recoil(actor, reduced or low) * arena_scale(), tilt, local_scale)
 			draw_texture_rect(RadioArt.enemy(actor, era), Rect2(-Vector2.ONE * extent * .5, Vector2.ONE * extent), false)
 			draw_set_transform(arena_offset() + p * (arena_stretch() - local_scale), 0, local_scale)
 			if actor.path_kind == EnemyDefinition.PathKind.CARRIER:
 				for n: int in actor.child_limit - actor.children_spawned:
 					draw_rect(Rect2(p + Vector2(-16 + n * 12, actor.radius + 3), Vector2(8, 5)), color)
 		RadioEncounters.actor(self, actor)
+		feedback.decorate_enemy(self, actor)
 		if session.supports != null:
 			if actor.elite and not EncounterDirector.boss(actor):
 				draw_polyline(PackedVector2Array([p + Vector2(-10, -actor.radius - 8), p + Vector2(-10, -actor.radius - 15), p + Vector2(10, -actor.radius - 15), p + Vector2(10, -actor.radius - 8)]), Color("ffdc86"), 3)
@@ -225,7 +240,7 @@ func _draw() -> void:
 				draw_line(p + Vector2(0, actor.radius), p + Vector2(0, actor.radius + 55), Color("f78279"), 2)
 			if actor.status.charged > 0:
 				for charge: int in actor.status.charged: draw_circle(p + Vector2(-12 + charge * 12, actor.radius + 8), 4, Color("bba5f4"))
-			if actor.status.slow > 0:
+			if actor.status.slow > 0 and actor.status.slow_source != &"static_net":
 				for side: int in [-1, 1]: draw_line(p + Vector2(side * 5, actor.radius + 12), p + Vector2(side * 5, actor.radius + 21), Color("7ad8ee"), 3)
 			if actor.status.exposure > 0: draw_line(p + Vector2(-12, -actor.radius), p + Vector2(12, -actor.radius + 12), Color("efa968"), 5)
 			if actor.status.jam_left > 0:
@@ -247,7 +262,11 @@ func _draw() -> void:
 	cyan = station_color
 	var direction: Vector2 = (aimed.position - base).normalized() if aimed != null else Vector2.UP
 	draw_set_transform(arena_offset() + base * arena_stretch(), 0, Vector2.ONE * arena_scale())
-	draw_texture_rect(RadioArt.main_texture(session), Rect2(-48, -64, 96, 96), false)
+	RadioScenery.station(self)
+	feedback.instrument(self, &"main", cyan)
+	feedback.instrument(self, &"shield", Color("efa968"))
+	feedback.instrument(self, &"repair", Color("96dbac"))
+	draw_texture_rect(RadioArt.main_texture(session), Rect2(-48, -82, 96, 96), false)
 	if session.draft != null: RadioEncounters.hardware(self, session.draft.track(&"main"), cyan, true)
 
 	draw_set_transform(arena_offset(), 0, arena_stretch())
@@ -258,7 +277,11 @@ func _draw() -> void:
 	for chain: Dictionary in chains:
 		var tint: Color = chain.get("color", Color("c4aff5") if chain.support else cyan)
 		for index: int in chain.points.size() - 1:
-			_sound_path(chain.points[index], chain.points[index + 1], tint, 8 if chain.support else 4, 28, waveform_time * 12, 3)
+			if not chain.support:
+				var chassis: String = session.draft.loadout.main if session.draft is ArsenalDraft else "pulse"
+				RadioEffects.tower(self, chain.points[index], chain.points[index + 1], chassis, clampf(1 - float(chain.left) / .22, 0, 1), Color("f4c786") if chassis == "burst" else tint)
+			else:
+				_sound_path(chain.points[index], chain.points[index + 1], Color(tint, clampf(float(chain.left) / .18, 0, 1)), 8, 28, waveform_time * 12, 2.4)
 	if shot_flash > 0.0:
 		var chassis: String = session.draft.loadout.main if session.draft is ArsenalDraft else "pulse"
 		var source: Vector2 = base + Vector2(0, -58)
@@ -275,6 +298,26 @@ func _draw() -> void:
 				for ring: int in 3:
 					draw_arc(at, 9 + ring * 8, direction.angle() - 1, direction.angle() + 1, 16, Color(cyan, .9 - ring * .2), 3)
 	_draw_support_turrets(aimed)
+	# Incoming Signals stays above moving actors and every attack effect.
+	draw_set_transform(arena_offset(), 0, deck_stretch())
+	feedback.danger(self)
+	draw_rect(Rect2(0, 0, 640, 40), Color("0d1c29"))
+	var warning: bool = broadcast != null and broadcast.approaching
+	var announcing: bool = feedback.wave_left > 0
+	# Preserve letter proportions on wide screens while the signal spans the field.
+	var text_scale: float = minf(deck_stretch().x, deck_stretch().y)
+	draw_set_transform(arena_offset() + Vector2(16, 25) * deck_stretch(), 0, Vector2.ONE * text_scale)
+	draw_string(font, Vector2.ZERO, tr("P4_APPROACH") if warning else (tr("POLISH_ON_AIR") % feedback.wave if announcing else tr("COMBAT_SPAWN")), HORIZONTAL_ALIGNMENT_LEFT, -1, 20 if announcing or warning else 18, Color("efb178") if announcing or warning else muted)
+	draw_set_transform(arena_offset(), 0, deck_stretch())
+	for x: int in range(225, 611, 16):
+		var reach: float = 10 if x % 3 == 0 else 6
+		draw_line(Vector2(x, 20 - reach), Vector2(x, 20 + reach), RadioArt.TRIMS[era], 1)
+	if warning:
+		# Static interference brackets: no flash, shake, or change to population waveform.
+		for x: int in range(230, 600, 70):
+			draw_polyline(PackedVector2Array([Vector2(x, 6), Vector2(x + 18, 6), Vector2(x + 18, 11)]), Color("efb178"), 2)
+			draw_polyline(PackedVector2Array([Vector2(x + 25, 29), Vector2(x + 25, 34), Vector2(x + 43, 34)]), Color("efb178"), 2)
+	draw_polyline(RadioFeedback.signal_points(RadioFeedback.living_enemies(session), waveform_time * 5),Color("88c9bf"),2,true)
 
 func equipped_supports() -> Array[StringName]:
 	var result: Array[StringName] = []
@@ -300,6 +343,7 @@ func _draw_support_turrets(aimed: CombatActor) -> void:
 		var fraction: float = session.supports.recharge_fraction(session.draft.track(id))
 		# Position follows the expanded field; the miniature and its bar stay undistorted.
 		draw_set_transform(arena_offset() + p * arena_stretch(), 0, Vector2.ONE * arena_scale())
+		feedback.instrument(self, id, tint)
 		var direction: Vector2 = ((aimed.position - p) * arena_stretch()).normalized() if aimed != null else Vector2.UP
 		draw_texture_rect(DraftPanel.ICONS[id], Rect2(-34, -43, 68, 68), false)
 		RadioEncounters.hardware(self, session.draft.track(id), tint)
@@ -323,12 +367,14 @@ func show_chain(points: PackedVector2Array, support: bool) -> void:
 		points = points.duplicate()
 		points[0] = support_position(&"arc_aerial")
 		support_flashes[&"arc_aerial"] = 0.18
-	chains.append({"points": points, "support": support, "left": 0.18})
+	chains.append({"points": points, "support": support, "left": 0.18 if support else .22})
 
 func show_support(source: StringName, center: Vector2, radius: Vector2) -> void:
 	if source in equipped_supports():
 		support_flashes[source] = 0.35
 		if source == &"echo_deck": chains.append({"points": PackedVector2Array([support_position(source), center]), "support": true, "left": 0.22, "color": DraftPanel.ACCENTS[source]})
+	if source in [&"static_net", &"reverb_well"]:
+		pulses = pulses.filter(func(p: Dictionary) -> bool: return p.source != source)
 	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.55})
 
 func _sound_path(start: Vector2, end: Vector2, tint: Color, amplitude: float, wavelength: float, phase: float, width: float) -> void:
@@ -343,12 +389,7 @@ func _sound_path(start: Vector2, end: Vector2, tint: Color, amplitude: float, wa
 	draw_polyline(points, tint, width, true)
 
 func _net_pattern(center: Vector2, radius: float, tint: Color) -> void:
-	var diamond: PackedVector2Array = PackedVector2Array([center + Vector2(0, -radius), center + Vector2(radius, 0), center + Vector2(0, radius), center + Vector2(-radius, 0), center + Vector2(0, -radius)])
-	draw_polyline(diamond, Color(tint, .6), 2, true)
-	for band: int in [-2, -1, 0, 1, 2]:
-		var y: float = radius * band / 3.0
-		var reach: float = radius - absf(y)
-		_sound_path(center + Vector2(-reach, y), center + Vector2(reach, y), Color(tint, .4), 4, 40, waveform_time * 3, 2)
+	RadioEffects.net(self, center, radius, tint)
 
 func _spiral(center: Vector2, radius: float, tint: Color, phase: float) -> void:
 	for arm: int in 3:

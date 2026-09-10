@@ -4,7 +4,6 @@ extends RefCounted
 const VERSION: String = "m4.active.2"
 const LEGACY_VERSION: String = "m4.active.1"
 const COOLDOWN: float = 5.0
-const AUTOMATIC_HEALTH_SCALE: float = 0.7
 const RADIUS: float = 110.0
 var automatic_radio: bool = false
 var cooldown: float = 0.0

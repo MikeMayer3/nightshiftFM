@@ -177,7 +177,7 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	var icon: TextureRect = TextureRect.new()
 	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	icon.texture = RadioArt.main_texture(session) if identity == &"main" else ICONS[identity]
-	icon.custom_minimum_size = Vector2(74, 74)
+	icon.custom_minimum_size = Vector2(92, 92)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	row.add_child(icon)
@@ -193,6 +193,7 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	var caption: Label = label_text(tr("M3_" + String(identity).to_upper() + "_SHORT_NAME") if option != null else tr("M3_STATION"), header, 19)
 	if session.arsenal != null and identity in [&"main", &"shield"]:
 		caption.text = tr(draft.track(identity).definition.name_key)
+	if SignalDraft.is_new(id): caption.text = tr("POLISH_NEW_SUPPORT")
 	caption.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	caption.modulate = accent
 	if option != null and id != SignalDraft.OVERDRIVE:
@@ -209,6 +210,11 @@ func _add_card(session: CombatSession, id: StringName) -> void:
 	info_buttons.append(info)
 	label_text(tr(option.name_key) if option != null else tr("M3_REPAIR_SHORT" if id == DraftState.REPAIR else "M3_REFILL_SHORT"), body, 23)
 	label_text(tr(String(option.name_key).trim_suffix("_NAME") + "_SHORT") if option != null else tr("M3_REPAIR_EFFECT" if id == DraftState.REPAIR else "M3_REFILL_EFFECT"), body, 23)
+	var suggestions: Array[Dictionary] = BuildGuide.suggestions(session, id)
+	if not suggestions.is_empty():
+		var diagram: ConnectionDiagram = ConnectionDiagram.new()
+		body.add_child(diagram)
+		diagram.configure(session, suggestions[0], true)
 	inset.minimum_size_changed.connect(func() -> void:
 		card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y))
 	card.custom_minimum_size.y = maxf(176, inset.get_combined_minimum_size().y)
@@ -221,6 +227,7 @@ func _show_details(session: CombatSession, id: StringName) -> void:
 		label_text(tr(option.name_key), column, 32)
 		label_text(tr(option.description_key), column, 28)
 		button_text(tr("M3_BACK_DRAFT"), column, func() -> void: show_draft(session))
+		_add_build_details(session, id)
 		return
 	if session.supports != null and session.draft.card(id) != null:
 		_show_m4_details(session, id)
@@ -291,20 +298,38 @@ func show_report(session: CombatSession, back: Callable) -> void:
 	_clear()
 	show()
 	label_text(tr("M4_REPORT"), column, 32)
+	button_text(tr("M4_BACK_RESULTS"), column, back)
 	label_text(tr("M4_REPORT_HINT"), column, 24)
+	if BroadcastRules.expanded(session):
+		label_text(tr(PostRunAnalysis.loss_key(session)), column, 26)
+		if session.achievement_run != null:
+			var history: AchievementRun = session.achievement_run
+			label_text(tr("P2_HEALTH_LOST" if history.loss_history.complete else "P2_PARTIAL_HISTORY"), column, 24)
+			for category: String in ["breach", "projectile", "other"]:
+				_report_bar(tr("P2_" + category.to_upper()), float(history.loss_history[category]), history.hull_damage, Color("cc8269"))
+	for owned: UpgradeTrack in session.draft.tracks:
+		var values: Dictionary = session.supports.report.totals[String(owned.definition.id)]
+		var heading: HBoxContainer = HBoxContainer.new()
+		column.add_child(heading)
+		var icon: TextureRect = TextureRect.new()
+		icon.texture = RadioArt.main_texture(session) if owned.definition.id == &"main" else ConnectionDiagram.ICONS.get(owned.definition.id)
+		icon.custom_minimum_size = Vector2(54, 54)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		heading.add_child(icon)
+		var name_label: Label = label_text(tr(owned.definition.name_key), heading, 28)
+		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		_report_bar(tr("P2_DAMAGE"), float(values.damage), PostRunAnalysis.effective_damage(session), Color("69baa9"))
+		var lines: PackedStringArray = []
+		for metric: StringName in ContributionReport.METRICS:
+			if metric != &"damage" and float(values[String(metric)]) > 0:
+				lines.append(tr("M4_METRIC_" + String(metric).to_upper()) % float(values[String(metric)]))
+		if not lines.is_empty(): label_text(" · ".join(lines), column, 25)
 	if session.achievement_run != null:
 		label_text(tr("M9_REPORT_HISTORY") % [session.achievement_run.hull_damage, session.achievement_run.max_supports], column, 25)
 		label_text(tr("M9_RESULT_ELIGIBLE" if session.achievement_run.eligible else "M9_RESULT_PRACTICE"), column, 23)
 		label_text(tr("M9_REPORT_OUTPUT") % [PostRunAnalysis.effective_damage(session), session.intercepted], column, 25)
 		label_text(tr("M9_REPORT_HINT"), column, 23)
-	for owned: UpgradeTrack in session.draft.tracks:
-		var values: Dictionary = session.supports.report.totals[String(owned.definition.id)]
-		label_text(tr(owned.definition.name_key), column, 30)
-		var lines: PackedStringArray = []
-		for metric: StringName in ContributionReport.METRICS:
-			if float(values[String(metric)]) > 0:
-				lines.append(tr("M4_METRIC_" + String(metric).to_upper()) % float(values[String(metric)]))
-		label_text(" · ".join(lines) if not lines.is_empty() else tr("M4_NO_OUTPUT"), column, 25)
 	if session.active_combat != null:
 		label_text(tr("ACTIVE_REPORT") % [session.active_combat.uses, session.active_combat.damage], column, 25)
 		label_text(tr("ACTIVE_REPORT_HINT"), column, 23)
@@ -330,6 +355,7 @@ func _show_m4_details(session: CombatSession, id: StringName) -> void:
 			if alternative.id == id or alternative.id in session.draft.offers: continue
 			var alternative_id: StringName = alternative.id
 			button_text(tr("M4_SWAP_BRANCH") % tr(alternative.name_key), column, func() -> void: branch_swapped.emit(alternative_id))
+	_add_build_details(session, id)
 	if session.arsenal != null:
 		var after: UpgradeTrack = UpgradeTrack.new(owned.definition)
 		for choice: StringName in owned.choices: after.accept(choice, [])
@@ -350,3 +376,32 @@ func _show_m4_details(session: CombatSession, id: StringName) -> void:
 			if future.prerequisite != branch and future.prerequisite not in owned.choices: continue
 			label_text(tr("M4_PATH_STEP") % [future.required_rank, tr(future.name_key)], column, 25)
 			label_text(tr(String(future.name_key).trim_suffix("_NAME") + "_SHORT"), column, 23)
+
+func _add_build_details(session: CombatSession, id: StringName) -> void:
+	for row: Dictionary in BuildGuide.suggestions(session, id):
+		var diagram: ConnectionDiagram = ConnectionDiagram.new()
+		column.add_child(diagram)
+		diagram.configure(session, row)
+
+func _report_bar(caption: String, amount: float, total: float, tint: Color) -> void:
+	var bar: ProgressBar = ProgressBar.new()
+	bar.custom_minimum_size.y = 48
+	bar.max_value = maxf(1.0, total)
+	bar.value = amount
+	bar.show_percentage = false
+	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var background: StyleBoxFlat = StyleBoxFlat.new()
+	background.bg_color = Color("172b34")
+	bar.add_theme_stylebox_override("background", background)
+	var fill: StyleBoxFlat = StyleBoxFlat.new()
+	fill.bg_color = tint.darkened(.4)
+	bar.add_theme_stylebox_override("fill", fill)
+	column.add_child(bar)
+	var text: Label = Label.new()
+	text.text = caption + "  %.1f" % amount
+	text.add_theme_font_size_override("font_size", 23)
+	text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	text.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	text.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	text.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	bar.add_child(text)
