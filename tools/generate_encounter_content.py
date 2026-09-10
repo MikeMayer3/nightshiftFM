@@ -10,7 +10,7 @@ S, D, C = 'm2.swarmer', 'm2.diver', 'm2.carrier'
 ELITES = ['m8.elite_swarmer', 'm8.elite_carrier', 'm8.elite_diver']
 TITLES = ['First Transmission', 'Carrier Traffic', 'Crossed Wires']
 BRIEFS = [
-    'Tight swarms give way to alternating lanes. Aim Burst into groups; focus divers with dive markers before they accelerate. Gold-ring elites appear in wave 6 before the finale.',
+    'Tight swarms give way to alternating lanes. Focus groups and divers with dive markers before they accelerate. Gold-badge elites appear in wave 6 before the finale.',
     'Carriers travel with escorts and release at most three swarmers and three destructible bolts. Focus the carrier early or intercept its bolts. Elite carriers appear in wave 6.',
     'Divers cross between swarm lanes while carriers hold the center. Watch the dive markers, switch focus, and save Burst for clustered threats. Elite divers appear in wave 6.',
 ]
@@ -39,7 +39,7 @@ def generate():
     ]:
         key = 'M8_ELITE_' + family.upper()
         STRINGS[key] = 'Elite ' + family.title()
-        STRINGS[key + '_DESC'] = 'Gold-ring veteran: more health, familiar attack tells and counters.'
+        STRINGS[key + '_DESC'] = 'Gold-badge veteran: more health, familiar attack tells and counters.'
         fields = f'elite = true\nhealth = {health}\nspeed = {speed}\nradius = {radius}\nbreach_damage = {breach}\npath_kind = {path}'
         if family == 'carrier':
             fields += '\nchild_id = &"m2.swarmer"\nchild_limit = 3\nprojectile_limit = 3\nability_interval = 3.0'

@@ -192,7 +192,7 @@ func _draw() -> void:
 		# Fill the battlefield while preserving round enemy silhouettes.
 		draw_set_transform(arena_offset() + p * (arena_stretch() - Vector2.ONE * arena_scale()), 0.0, Vector2.ONE * arena_scale())
 		if session.arsenal != null and session.arsenal.mark_strength(actor.serial) > 0:
-			draw_arc(p, actor.radius + 7, 0, TAU, 24, Color("f3d57b"), 3)
+			draw_colored_polygon(PackedVector2Array([p + Vector2(-5, -actor.radius - 17), p + Vector2(5, -actor.radius - 17), p + Vector2(0, -actor.radius - 10)]), Color("f3d57b"))
 		var color: Color = Color("efa968")
 		if actor.projectile:
 			color = Color("f78279")
@@ -206,34 +206,42 @@ func _draw() -> void:
 		elif actor.path_kind == EnemyDefinition.PathKind.CARRIER:
 			color = Color("b1a1ed")
 		if not actor.projectile:
-			var extent: float = actor.radius * 2.8
-			draw_texture_rect(RadioArt.enemy(actor, era), Rect2(p - Vector2.ONE * extent * .5, Vector2.ONE * extent), false)
+			var extent: float = actor.radius * 3.4
+			var tilt: float = sin(actor.age * 3 + actor.serial) * .055 if actor.path_kind == EnemyDefinition.PathKind.DIVE and not low else 0
+			var local_scale: Vector2 = Vector2.ONE * arena_scale()
+			draw_set_transform(arena_offset() + p * arena_stretch(), tilt, local_scale)
+			draw_texture_rect(RadioArt.enemy(actor, era), Rect2(-Vector2.ONE * extent * .5, Vector2.ONE * extent), false)
+			draw_set_transform(arena_offset() + p * (arena_stretch() - local_scale), 0, local_scale)
 			if actor.path_kind == EnemyDefinition.PathKind.CARRIER:
 				for n: int in actor.child_limit - actor.children_spawned:
 					draw_rect(Rect2(p + Vector2(-16 + n * 12, actor.radius + 3), Vector2(8, 5)), color)
 		RadioEncounters.actor(self, actor)
 		if session.supports != null:
 			if actor.elite and not EncounterDirector.boss(actor):
-				draw_arc(p, actor.radius + 4, PI, TAU, 16, Color("ffdc86"), 5)
+				draw_polyline(PackedVector2Array([p + Vector2(-10, -actor.radius - 8), p + Vector2(-10, -actor.radius - 15), p + Vector2(10, -actor.radius - 15), p + Vector2(10, -actor.radius - 8)]), Color("ffdc86"), 3)
 				draw_string(font, p + Vector2(-24, -actor.radius - 18), tr("M4_ELITE_TAG"), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("ffdc86"))
 			if actor.projectiles_fired < actor.projectile_limit and actor.ability_interval - actor.ability_time < 0.9:
-				draw_arc(p, actor.radius + 14, 0, TAU, 24, Color("f78279"), 3)
+				draw_rect(Rect2(p + Vector2(-18, actor.radius + 8), Vector2(36, 4)), Color("f78279"))
 				draw_line(p + Vector2(0, actor.radius), p + Vector2(0, actor.radius + 55), Color("f78279"), 2)
 			if actor.status.charged > 0:
 				for charge: int in actor.status.charged: draw_circle(p + Vector2(-12 + charge * 12, actor.radius + 8), 4, Color("bba5f4"))
-			if actor.status.slow > 0: draw_arc(p, actor.radius + 5, 0, PI, 16, Color("7ad8ee"), 4)
+			if actor.status.slow > 0:
+				for side: int in [-1, 1]: draw_line(p + Vector2(side * 5, actor.radius + 12), p + Vector2(side * 5, actor.radius + 21), Color("7ad8ee"), 3)
 			if actor.status.exposure > 0: draw_line(p + Vector2(-12, -actor.radius), p + Vector2(12, -actor.radius + 12), Color("efa968"), 5)
 			if actor.status.jam_left > 0:
 				draw_line(p + Vector2(-12, -12), p + Vector2(12, 12), Color.WHITE, 4)
 				draw_line(p + Vector2(-12, 12), p + Vector2(12, -12), Color.WHITE, 4)
-		if actor.health < actor.max_health:
+		if actor.health < actor.max_health and not EncounterDirector.boss(actor):
 			draw_rect(Rect2(p + Vector2(-22,-actor.radius-10), Vector2(44,4)), Color("384252"))
 			draw_rect(Rect2(p + Vector2(-22,-actor.radius-10), Vector2(44 * actor.health / actor.max_health,4)), color)
-		if actor == aimed:
-			draw_arc(p, actor.radius + 8.0, 0, TAU, 32, cyan, 2.0)
+		if actor == aimed and session.focus_active:
+			for side: int in [-1, 1]:
+				var x: float = side * (actor.radius + 10)
+				draw_polyline(PackedVector2Array([p + Vector2(x - side * 5, -7), p + Vector2(x, -7), p + Vector2(x, 7), p + Vector2(x - side * 5, 7)]), cyan, 2)
 	draw_set_transform(arena_offset(), 0.0, arena_stretch())
 	if session.focus_active:
-		draw_circle(session.focus_point, 12.0, cyan, false, 2.0)
+		draw_line(session.focus_point - Vector2(7, 0), session.focus_point + Vector2(7, 0), cyan, 2)
+		draw_line(session.focus_point - Vector2(0, 7), session.focus_point + Vector2(0, 7), cyan, 2)
 
 	var base: Vector2 = tower_position()
 	cyan = station_color

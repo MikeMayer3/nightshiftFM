@@ -31,25 +31,28 @@ static func actor(canvas: CombatArena, value: CombatActor) -> void:
 	var guard: bool = EncounterDirector.protection(s, value) < 1
 	if value.role in [EnemyDefinition.Role.CORE, EnemyDefinition.Role.SILENCE, EnemyDefinition.Role.MIMIC]:
 		label_key = "BROADCAST_GUARDED" if guard else "BROADCAST_OPEN"
-		# A closed hexagon versus four open corners distinguishes state without color.
-		if guard:
-			var hex: PackedVector2Array = []
-			for n: int in 7: hex.append(p + Vector2.from_angle(n * TAU / 6) * radius)
-			canvas.draw_polyline(hex, amber, 2, true)
-		else:
-			for n: int in 4:
-				var at: Vector2 = p + Vector2.from_angle(PI / 4 + n * PI / 2) * radius
-				canvas.draw_line(at, at + (p - at).normalized() * 9, mint, 3)
+		# A compact shield badge changes to a broken shield while vulnerable.
+		var badge: Vector2 = p + Vector2(-7, -radius - 9)
+		var shield: PackedVector2Array = PackedVector2Array([badge, badge + Vector2(14, 0), badge + Vector2(12, 8), badge + Vector2(7, 12), badge + Vector2(2, 8), badge])
+		canvas.draw_polyline(shield, amber if guard else mint, 2, true)
+		if not guard: canvas.draw_line(badge + Vector2(3, -2), badge + Vector2(11, 13), Color("14272d"), 4)
 	if value.role == EnemyDefinition.Role.AERIAL:
-		canvas.draw_arc(p, radius, 0, TAU, 24, mint, 2)
-		canvas.draw_line(p + Vector2(-7, -radius - 6), p + Vector2(7, -radius - 6), mint, 3)
+		canvas.draw_polyline(PackedVector2Array([p + Vector2(-6, -radius - 3), p + Vector2(0, -radius + 3), p + Vector2(6, -radius - 3)]), mint, 3)
 	if EncounterDirector.channel(value):
 		var fraction: float = clampf((value.ability_time - value.ability_interval + 1.25) / 1.25, 0, 1)
-		canvas.draw_arc(p, radius + 6, -PI / 2, -PI / 2 + TAU * fraction, 32, amber, 4)
+		canvas.draw_rect(Rect2(p + Vector2(-21, radius + 5), Vector2(42, 4)), Color("35434e"))
+		canvas.draw_rect(Rect2(p + Vector2(-21, radius + 5), Vector2(42 * fraction, 4)), amber)
 		if value.role in [EnemyDefinition.Role.CASTER, EnemyDefinition.Role.JAMMER]:
 			label_key = "BROADCAST_CHANNEL"
 			if value.role == EnemyDefinition.Role.CASTER:
-				canvas.draw_arc(p, 150, 0, TAU, 32, Color(mint, .35), 2)
+				# Short directional links show which neighbors are actually protected.
+				var links: int = 0
+				for neighbor: CombatActor in s.actors:
+					if neighbor == value or neighbor.projectile or neighbor.resolved or p.distance_to(neighbor.position) >= 150: continue
+					var toward: Vector2 = p.direction_to(neighbor.position)
+					canvas.draw_line(p + toward * radius, p + toward * (radius + 14), Color(mint, .7), 2)
+					links += 1
+					if links == 3: break
 		else:
 			label_key = "BROADCAST_VOLLEY"
 			for lane: int in ([-1, 0, 1] if EncounterDirector.boss(value) else [0]):

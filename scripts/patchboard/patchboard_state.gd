@@ -5,6 +5,7 @@ extends RefCounted
 const METRICS: Array[String] = ["triggers", "damage", "assisted_damage", "control_seconds", "interrupts", "intercepts"]
 var slots: Array[StringName] = [&"", &""]
 var awaiting: bool = true
+var mixer: MixerState
 var counters: Dictionary = {"ball_lightning": 0, "double_drop": 0}
 var cooldowns: Dictionary = {}
 var totals: Dictionary = {}
@@ -28,7 +29,10 @@ func connected(session: CombatSession, id: StringName) -> bool:
 	return id in slots and eligible(session, id)
 
 func rewire(session: CombatSession, index: int, id: StringName) -> bool:
-	if session.paused or not session.is_wiring() or index not in [0, 1]: return false
+	if index not in [0, 1] or session.is_finished(): return false
+	if mixer != null:
+		if not session.paused: return false
+	elif session.paused or not session.is_wiring(): return false
 	if id != &"" and (not eligible(session, id) or id == slots[1 - index]): return false
 	if slots[index] == id: return true
 	slots[index] = id
@@ -134,10 +138,12 @@ func shield_break(session: CombatSession, root: int) -> void:
 	pulse(session, id, ArsenalCombat.nearby(session, CombatSession.TRANSMITTER, ModuleStats.area_radius(session.module_ids(), r.radius), r.target_cap), r.damage * ModuleStats.damage_multiplier(session.module_ids(), id), CombatSession.TRANSMITTER, root, ModuleStats.area_radius(session.module_ids(), r.radius))
 
 func to_data() -> Dictionary:
-	return {"slots": Array(slots), "awaiting": awaiting, "counters": counters.duplicate(), "cooldowns": cooldowns.duplicate(), "totals": totals.duplicate(true)}
+	var data: Dictionary = {"slots": Array(slots), "awaiting": awaiting, "counters": counters.duplicate(), "cooldowns": cooldowns.duplicate(), "totals": totals.duplicate(true)}
+	if mixer != null: data["mixer"] = {"schema": 1, "levels": Array(mixer.levels)}
+	return data
 
 func restore(session: CombatSession, data: Variant) -> bool:
-	if not data is Dictionary or data.size() != 5 or not data.get("awaiting") is bool: return false
+	if not data is Dictionary or data.size() != (6 if data.has("mixer") else 5) or not data.get("awaiting") is bool: return false
 	if not data.get("slots") is Array or data.slots.size() != 2: return false
 	for id: Variant in data.slots:
 		if not (id is String or id is StringName) or (id != "" and not eligible(session, StringName(id))): return false
@@ -154,6 +160,10 @@ func restore(session: CombatSession, data: Variant) -> bool:
 		for key: String in METRICS:
 			if not SaveChecks.number(row.get(key), 0, 100000000, key in ["triggers", "interrupts", "intercepts"]): return false
 	if data.awaiting and session.phase not in [CombatSession.Phase.INTERMISSION, CombatSession.Phase.DRAFT]: return false
+	if data.has("mixer"):
+		var mix: Variant = data.mixer
+		if mixer == null or not mix is Dictionary or mix.size() != 2 or not SaveChecks.number(mix.get("schema"), 1, 1, true): return false
+		if not mixer.restore(mix.get("levels"), MixerState.budget(session.campaign.cleared)): return false
 	slots.assign(data.slots)
 	awaiting = data.awaiting
 	counters = data.counters.duplicate()

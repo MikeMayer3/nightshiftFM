@@ -4,6 +4,7 @@ var definition: TrackDefinition
 var choices: Array[StringName] = []
 var stats: Dictionary = {}
 var modules: Array[StringName] = []
+var mixer: MixerState
 
 func _init(content: TrackDefinition) -> void:
 	definition = content
@@ -47,6 +48,7 @@ func _changes_parameters(card: UpgradeDefinition) -> bool:
 	var prospective: UpgradeTrack = UpgradeTrack.new(definition)
 	prospective.stats = stats.duplicate(true)
 	prospective.modules = modules.duplicate()
+	prospective.mixer = mixer
 	for key: StringName in card.effects: prospective.stats[key] = float(stats.get(key, 0)) + float(card.effects[key])
 	var before: Dictionary = ArsenalStats.parameters(self)
 	var after: Dictionary = ArsenalStats.parameters(prospective)

@@ -17,4 +17,5 @@ static func parameters(owned: UpgradeTrack) -> Dictionary:
 	if result.has(&"delay"): result[&"delay"] = maxf(.08, float(result[&"delay"]))
 	if result.has(&"cooldown"): result[&"cooldown"] = maxf(3, float(result[&"cooldown"]))
 	if result.has(&"capacity"): result[&"capacity"] = maxf(10, float(result[&"capacity"]))
+	if owned.mixer != null: owned.mixer.modify(owned, result)
 	return result

@@ -344,7 +344,7 @@ func _step(delta: float) -> void:
 				return
 			phase = Phase.INTERMISSION
 			phase_time = 2.0
-			if patchboard != null: patchboard.awaiting = campaign == null or campaign.cleared >= 2
+			if patchboard != null: patchboard.awaiting = not BroadcastRules.expanded(self) and (campaign == null or campaign.cleared >= 2)
 		if signal_progress.ready(): _open_signal_choice()
 		elif cleared: checkpoint_changed.emit()
 		return
@@ -454,7 +454,8 @@ func start_campaign(seed_value: int, identity: StringName, loadout: Dictionary, 
 	draft.catalog = draft.catalog.filter(func(definition: TrackDefinition) -> bool: return not definition.support or String(definition.id) in CampaignContent.options(campaign.cleared, "support"))
 	(draft as ArsenalDraft).reroll_limit = 2 + int(ModuleStats.coefficient(campaign.modules, &"rerolls"))
 	draft.rerolls = (draft as ArsenalDraft).reroll_limit
-	patchboard.awaiting = campaign.cleared >= 2
+	patchboard.awaiting = not campaign.expanded and campaign.cleared >= 2
+	if campaign.expanded: patchboard.mixer = MixerState.new()
 	apply_ranks()
 	hull = maximum_hull()
 	run.shield.current = run.shield.capacity
@@ -548,7 +549,9 @@ func shield_stat(key: StringName, fallback: float) -> float:
 
 func apply_ranks() -> void:
 	if campaign != null:
-		for owned: UpgradeTrack in draft.tracks: owned.modules = campaign.modules.duplicate()
+		for owned: UpgradeTrack in draft.tracks:
+			owned.modules = campaign.modules.duplicate()
+			owned.mixer = patchboard.mixer if patchboard != null else null
 	var main: UpgradeTrack = draft.track(&"main")
 	run.main_weapon.rank = main.rank()
 	run.main_weapon.damage = float(main.stats[&"damage"])

@@ -332,8 +332,8 @@ M4_REPORT_HINT,"Effective output. Armor assistance is part of damage, not extra 
 M4_NO_OUTPUT,No effective output recorded.
 M4_BACK_RESULTS,Back to results
 M4_RANKS,%d supports · Builds reset each mission
-M4_LEGEND,"Purple: Charged · Blue: slowed · Orange: exposed
-Cross: jammed · Ring: incoming shot"
+M4_LEGEND,"Dots: Charged · Pause marks: slowed · Slash: exposed
+Cross: jammed · Bar and chevron: incoming shot"
 M4_FINALE,Finale · Overseers resist control
 M4_METRIC_DAMAGE,%.0f damage
 M4_METRIC_SLOW_SECONDS,%.1fs movement prevented
@@ -1833,3 +1833,25 @@ BROADCAST_MUTED,MUTED
 BROADCAST_ALL_CONNECTIONS,All connections
 BROADCAST_READY_CONNECTIONS,Ready connections
 BROADCAST_NO_CONNECTIONS,No connections ready. Go live or browse the recipes.
+MIXER_TITLE,STUDIO MIXER
+MIXER_BUTTON,Mixer
+MIXER_HINT,Paused • Drag a fader to shape your sound
+MIXER_CLOSE,Return to broadcast
+MIXER_CONNECTIONS,Weapon connections  ⌄
+MIXER_DIRECT,Direct
+MIXER_AREA,AOE
+MIXER_CONTROL,Control
+MIXER_POINTS,%d of %d points free
+MIXER_READOUT_0,"+%d%%
+hit damage"
+MIXER_READOUT_1,"+%d%% damage
++%d%% size"
+MIXER_READOUT_2,"+%d%%
+slow / force"
+MIXER_UNLOCK_3,Hard unlock → 5 points • Clear mission 4
+MIXER_UNLOCK_5,Overload unlock → 7 points • Clear mission 12
+MIXER_UNLOCK_7,Full desk unlocked • 4 points max per fader
+MIXER_DETAIL_0,Boost direct weapon hits. Echoes keep the recorded mix.
+MIXER_DETAIL_1,Boost area weapon damage and radius or beam width.
+MIXER_DETAIL_2,Strengthen existing slows and jams plus push and pull. Does not add control to weapons without it.
+MIXER_FADERS,Back to faders

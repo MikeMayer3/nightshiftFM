@@ -1,5 +1,70 @@
 # Implementation status
 
+## Current revision — studio mixer (Pixel 0.10.5)
+
+Owner request: replace the primary patchboard with an always-available sound desk.
+New broadcasts now have three vertical faders (Direct, AOE, Control), four stops
+above neutral, and a shared allocation budget: 3 points immediately, 5 after
+clearing mission 4 (Hard unlock), 7 after clearing mission 12 (Overload unlock).
+Unlocks increase the visible budget, not baseline stats. New runs start neutral;
+allocations persist within the current run and through Continue.
+
+The footer and pause menu open a compact overlay over the battlefield. Mixing
+pauses combat and permits free redistribution. Direct adds 10% weapon hit damage
+per point; AOE adds 8% area-weapon damage and 6% radius/beam width per point;
+Control adds 12% to existing slow/jam strength and push/pull/release force per
+point, respecting existing runtime caps. Echoes and deployed attacks retain their
+captured parameters. No healing, refill, cooldown reset, or gameplay RNG use occurs.
+
+The eight existing connections remain in an optional view inside the same desk.
+Expanded broadcasts no longer force a connection screen between waves, and
+connections can be changed while mixing, with cooldowns preserved. Legacy M6/M7
+runs retain their original connection rules; older expanded checkpoints migrate
+to neutral faders. No profile schema change or shared-resource mutation.
+
+PASS: **5,494 regression checks; 156 rendered/input checks** at 360×640 and
+450×950; 7 foundation checks; import and startup smoke. Native Android emulator
+(1280×2856) checks passed for drag, budget enforcement, redistribution, frozen
+time, restart persistence, and absence of script/crash errors. Only isolated
+`org.nightshiftfm.mixerqa` was installed. Evidence: `docs/evidence/M10-mixer/`;
+rules and commands: `docs/STUDIO_MIXER.md`.
+
+Changed areas: MixerState, UpgradeTrack/ArsenalStats, PatchboardState and its
+versioned nested save payload, CombatSession/CombatScreen, PatchboardPanel,
+MixerDesk/MixerFader and original cap SVG, localized text, regression/visual
+checks, and isolated emulator export tooling.
+
+PASS: authorized physical Pixel 10 Pro XL update to **0.10.5/code 17**.
+`adb install -r` succeeded, the updated game launched in the foreground, both
+existing save files remained byte-identical before/after install and launch, and
+its process logs contain no script/crash errors. Saves were backed up under the
+ignored builds directory. Evidence: `docs/evidence/M10-mixer/pixel-install.json`,
+`pixel-runtime.txt`, `pixel-0105-menu.png`, and `pixel-export.txt`.
+NOT RUN: human gameplay, balance, and usability acceptance on the physical Pixel.
+The 0.10.5 source handoff includes the mixer, frequency/enemy art changes,
+tests, and Pixel delivery evidence. Start a new session with `docs/NEXT_SESSION.md`.
+The prior frequency/enemy-art changes below are preserved.
+
+## Current local revision — decimal frequencies and clearer enemies
+
+Owner request after 0.10.4: vary each tuning target and improve enemy graphics
+without confusing circles. Implemented a separate shuffled decimal FM channel
+deck, stable on resume, without mutating gameplay RNG. Automatic target circles
+and surrounding enemy status rings are replaced by compact non-color-only cues.
+Original enemy SVGs now have layered materials and hardware detail; silhouettes
+are larger and earbuds bank subtly in normal effects mode.
+
+PASS: import; **5,377 regressions**, **14 rendered checks** at 360×640 and 450×950,
+startup smoke and seven foundation checks. Evidence and review images are in
+`docs/evidence/M10-frequency-enemies/`. Commands: `sh tools/godot.sh import`,
+`sh tools/godot.sh test`, `sh tools/godot.sh smoke`, `python3 tools/check_foundation.py`
+and Godot `--script res://tests/visual_enemy_revision.gd` with the pinned engine.
+Changed files: RadioDial, CombatScreen/CombatArena, RadioEncounters, enemy art and
+its generator, localized enemy descriptions, and the presentation checks.
+This was first validated locally and is now included in the 0.10.5 Pixel
+delivery described above.
+
+
 ## Current delivery — M8–M10 continuation, 0.10.4 (2026-09-09)
 
 Implemented twelve authored missions, eight regular enemy roles, three bosses,

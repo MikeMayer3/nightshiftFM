@@ -1,0 +1,52 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-0105-backup-20260909-181653",
+  "before": {
+    "m3_mission.json": {
+      "sha256": "8cae93dd53144293ffb68c117ddfaa3dbea2aa4356a67ab98ebace4eb2cea4f3",
+      "bytes": 7463
+    },
+    "m3_mission.json.bak": {
+      "sha256": "1734f2a2cb1b9f5c785c7d9bea4c8883f2432dbeae29e04b2b1c21456c51ff76",
+      "bytes": 14290
+    }
+  },
+  "apk_sha256": "eb67216cf00831ad4b4eed1d687ffe3a3da905b7237070d3c5877651241e05b7",
+  "install": "Serving...\nAll files should be loaded. Notifying the device.\nPerforming Incremental Install\nSuccess\nInstall command complete in 2061 ms\n",
+  "after_install": {
+    "m3_mission.json": {
+      "sha256": "8cae93dd53144293ffb68c117ddfaa3dbea2aa4356a67ab98ebace4eb2cea4f3",
+      "bytes": 7463
+    },
+    "m3_mission.json.bak": {
+      "sha256": "1734f2a2cb1b9f5c785c7d9bea4c8883f2432dbeae29e04b2b1c21456c51ff76",
+      "bytes": 14290
+    }
+  },
+  "install_preserved_saves": true,
+  "version": [
+    "versionCode=17 minSdk=24 targetSdk=36",
+    "versionName=0.10.5",
+    "lastUpdateTime=2026-09-09 18:17:21"
+  ],
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 1111\nWaitTime: 1112\nComplete\n",
+  "after_launch": {
+    "m3_mission.json": {
+      "sha256": "8cae93dd53144293ffb68c117ddfaa3dbea2aa4356a67ab98ebace4eb2cea4f3",
+      "bytes": 7463
+    },
+    "m3_mission.json.bak": {
+      "sha256": "1734f2a2cb1b9f5c785c7d9bea4c8883f2432dbeae29e04b2b1c21456c51ff76",
+      "bytes": 14290
+    }
+  },
+  "save_byte_identical": true,
+  "pid": "26938",
+  "runtime_errors": [],
+  "foreground": [
+    "topResumedActivity=ActivityRecord{127346917 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6091}"
+  ],
+  "scope": "Physical Pixel in-place package update, launch, and byte-identical save preservation. Human gameplay acceptance not run."
+}

@@ -1,0 +1,12 @@
+test_android_log_rotation (__main__.FoundationChecks) ... ok
+test_bounded_m4_content_and_no_release_credentials (__main__.FoundationChecks) ... ok
+test_resource_paths_exist (__main__.FoundationChecks) ... ok
+test_ui_localization_keys (__main__.FoundationChecks) ... ok
+test_wrapper_contract_with_stub (__main__.FoundationChecks) ... ok
+test_wrapper_missing_executable (__main__.FoundationChecks) ... ok
+test_wrapper_requires_engine (__main__.FoundationChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.499s
+
+OK

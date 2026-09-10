@@ -1,0 +1,26 @@
+{
+  "device": "emulator-5554",
+  "size": "1280x2856",
+  "package": "org.nightshiftfm.mixerqa",
+  "checks": {
+    "native_drag": [
+      true
+    ],
+    "native_limit": [
+      true
+    ],
+    "native_redistribute": [
+      true
+    ],
+    "frozen_time": [
+      true
+    ],
+    "restart_restores_mix": [
+      true
+    ],
+    "no_script_or_crash_errors": [
+      true
+    ]
+  },
+  "player_package_modified": false
+}

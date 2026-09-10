@@ -91,19 +91,33 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 	var offsets: Array[float] = []
 	for tick: int in 240:
 		dial._process(1.0 / 60)
-		offsets.append(dial.displayed - RadioDial.TARGET)
+		offsets.append(dial.displayed - dial.target)
 	t.check(offsets.min() < -.1 and offsets.max() > .1, "radio needle hunts on both sides of its target")
 	dial.value = 9
 	for tick: int in 240:
 		dial._process(1.0 / 60)
-	t.check(absf(dial.displayed - RadioDial.TARGET) <= .0281, "earned signal narrows tuning search")
+	t.check(absf(dial.displayed - dial.target) <= .0281, "earned signal narrows tuning search")
 	dial.running = false
 	var stopped: Vector2 = Vector2(dial.displayed, dial.knob_angle)
 	dial._process(1)
 	t.check(stopped == Vector2(dial.displayed, dial.knob_angle), "pause freezes both needle and rotary knobs")
 	dial.value = 10
 	dial._process(.1)
-	t.check(dial.displayed == RadioDial.TARGET and dial.knob_angle == 0, "ready upgrade locks needle and knobs to station")
+	t.check(dial.displayed == dial.target and dial.knob_angle == 0, "ready upgrade locks needle and knobs to station")
+	var random_before: Dictionary = b.random.to_data()
+	var prior: float = -1
+	var stations: Array[float] = []
+	for cycle: int in 110:
+		dial.set_cycle(b.random.seed_value, cycle)
+		t.check(dial.frequency >= 88.1 and dial.frequency <= 107.9 and int(round(dial.frequency * 10)) % 2 == 1, "tuner uses a decimal FM channel")
+		t.check(dial.frequency != prior, "next tuning cycle changes station")
+		if cycle < 100: stations.append(dial.frequency)
+		prior = dial.frequency
+	var restored_dial: RadioDial = RadioDial.new()
+	restored_dial.set_cycle(b.random.seed_value, 109)
+	t.check(restored_dial.frequency == dial.frequency and b.random.to_data() == random_before, "station survives resume without consuming gameplay RNG")
+	t.check(stations.size() == 100 and SaveChecks.unique(stations), "station deck covers 100 channels before repeating")
+	restored_dial.free()
 	dial.free()
 	screen._open_settings()
 	var elapsed: float = screen.session.elapsed

@@ -30,7 +30,76 @@ def meter(x,y,w=40,tint='#ffe5a4'):
 def cabinet(color='#9a6145',x=14,y=48,w=100,h=63):
     return rect(x,y+6,w,h,'#080f17',8) + rect(x,y,w,h,color,8) + line(f'M{x+7} {y+5}h{w-14}', '#ffffff', 1.5)
 
+def enemy_finish(name, body):
+    """Original vector materials and device-specific machining, with no aura/glow."""
+    import re
+    defs = '''<defs>
+    <linearGradient id="pearl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fcfff5"/><stop offset=".38" stop-color="#d8e4e9"/><stop offset=".62" stop-color="#a6bac8"/><stop offset="1" stop-color="#667b91"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6b829c"/><stop offset=".4" stop-color="#334c66"/><stop offset="1" stop-color="#102237"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#456885"/><stop offset=".4" stop-color="#19384e"/><stop offset="1" stop-color="#081424"/></linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d6d1b9"/><stop offset=".35" stop-color="#7d8e9f"/><stop offset=".7" stop-color="#56647b"/><stop offset="1" stop-color="#bdc1b5"/></linearGradient>
+    </defs>'''
+    shadow = re.sub(r'(fill|stroke)="#[a-fA-F0-9]{6}"', r'\1="#070e19"', body)
+    colors = {'pearl':['#e8ece5','#edf0ec','#cad5df','#d1dce1','#d8dce4','#becde0'],
+              'body':['#344658','#2e4960','#2b304b','#273647','#253c52'],
+              'glass':['#182c40','#1b3142','#213b50','#192f43','#253851','#1c2c49','#173147'],
+              'steel':['#646e7c','#596d86','#476980']}
+    for material, values in colors.items():
+        for color in values: body = body.replace('fill="'+color+'"','fill="url(#'+material+')"')
+    extra = ''
+    def screw(x,y):return circle(x,y,2.2,'#111d2c','#91a6b3',.8)+line(f'M{x-1} {y}h2','#d4e2de',.8)
+    if name.startswith('swarmer'):
+        extra = line('M34 29v65q0 15 12 16M92 30v69','#fbfff4',1.7)
+        extra += '<path d="M41 26h40L41 49Z" fill="#c4edee" opacity=".12"/>'
+        extra += line('M51 78l-4 4 4 4M77 78l4 4-4 4','#6c8194',1.6) + rect(56,108,16,3,'#152434',1,width=0)
+        extra += screw(34,18)+screw(94,110)
+    elif name.startswith('diver'):
+        extra = line('M18 36q0-17 14-19M108 36q0-17-14-19','#ffffff',3)
+        extra += ''.join(line(f'M25 {y}h8M96 {y}h8','#718a9c',1.4) for y in [28,33,38])
+        extra += rect(31,100,12,6,'#879da9',2,width=0)+rect(85,100,12,6,'#879da9',2,width=0)
+        extra += line('M34 57v32M94 57v32','#ffffff',1.6)
+    elif name.startswith('carrier') or name=='core':
+        extra = ''.join(line(f'M28 {y}h72','#0b1e2d',1.5) for y in range(62,99,7))
+        extra += line('M21 50v40q0 18 15 20M106 54v39','#a4c8d4',2)
+        extra += rect(51,107,26,5,'#0c1829',2,width=0)
+        extra += ''.join(rect(53+n*6,108,3,2,'#f59ab5',0,width=0) for n in range(4))
+    elif name=='plated':
+        extra = line('M33 12h43M27 34v47M99 31v48','#c8d5d5',2)
+        extra += ''.join(screw(x,y) for x in [23,105] for y in [23,97])
+        extra += '<path d="M36 26h46L36 53Z" fill="#d0f3e5" opacity=".13"/>'
+        extra += line('M85 80v22M90 80v22','#142c38',2)
+    elif name=='caster':
+        extra = line('M19 49h78M17 52v30','#f3fff6',2)
+        extra += ''.join(rect(20+n*8,61,4,18,'#153149',1,width=0) for n in range(3))
+        extra += ''.join(rect(85+n*7,65,3,13,'#153149',1,width=0) for n in range(3))
+        extra += screw(19,94)+screw(108,94)+line('M21 17l5 21M108 17l-5 21','#e3fff1',2)
+    elif name in ['jammer','silence']:
+        extra = line('M26 47q0-30 24-31M77 16q26 4 26 31','#eef6e7',3)
+        extra += ''.join(line(f'M16 {y}h12M99 {y}h12','#718da5',2) for y in range(67,102,7))
+        extra += rect(19,52,9,4,'#f193b9',1,width=0)+rect(100,52,9,4,'#f193b9',1,width=0)
+        extra += line('M14 59v40M115 59v40','#c8dcd8',1.5)
+    elif name=='mimic':
+        extra = ''.join(rect(56,y,16,4,'#162e41',2,width=0) for y in [4,12,112,120])
+        extra += line('M30 50q0-21 20-21M32 82q0 15 15 15','#f9fff0',2)
+        extra += '<path d="M36 38h43L36 66Z" fill="#a0ebdd" opacity=".15"/>'
+        extra += rect(107,72,5,15,'#849bb3',2,width=0)
+    elif name=='mortar':
+        extra = line('M39 33V19q0-5 5-5h32M15 86h92','#f8fff0',2)
+        extra += '<path d="M45 20h36L45 48Z" fill="#add5ea" opacity=".14"/>'
+        extra += ''.join(screw(x,107) for x in [17,111]) + rect(58,78,14,5,'#07182a',2,width=0)
+    elif name=='caller':
+        extra = line('M24 35V22q0-12 12-12M25 103q0 14 10 15','#edfff6',2)
+        extra += '<path d="M33 22h59L33 71Z" fill="#c6def6" opacity=".12"/>'
+        extra += rect(99,44,4,24,'#e3b38d',1,width=0) + rect(54,116,20,3,'#1c344c',1,width=0)
+        extra += line('M79 88v13M84 88v13','#f8b490',2)
+    elif name=='aerial':
+        extra = ''.join(line(f'M{42+n*8} 44v46','#173247',1.8) for n in range(6))
+        extra += line('M30 57q4-19 20-24','#d6fbef',3) + rect(55,103,18,5,'#77dbcf',2,width=0)
+    return defs + '<g transform="translate(3 4)" opacity=".8">'+shadow+'</g>'+body+extra
+
 def save(name, body):
+    if name.startswith(('swarmer_', 'diver_', 'carrier_')) or name in ['plated','caster','jammer','mimic','mortar','caller','core','silence','aerial']:
+        body = enemy_finish(name, body)
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><g stroke-linecap="round" stroke-linejoin="round">{body}</g></svg>\n'
     (OUT / (name+'.svg')).write_text(svg)
 

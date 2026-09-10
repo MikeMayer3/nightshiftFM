@@ -62,7 +62,7 @@ func run(t: TestContext, tree: SceneTree) -> bool:
 		picker.launch_button.pressed.emit()
 		boot.combat.set_process(false)
 		t.check(not boot.combat.save_failed and boot.combat.session.campaign != null, "campaign UI launches a valid saved run")
-		t.check(boot.combat.session.is_wiring() == (cleared >= 2), "connection tutorial is gated until after the second clear")
+		t.check(not boot.combat.session.is_wiring() and boot.combat.mixer_button != null, "mixer available immediately without forced connection tutorial")
 		t.check(boot.combat.session.draft.track(&"main").rank() == 1 and boot.combat.session.draft.normal_count == 0, "launch starts at rank one without previous choices")
 		var capacity: float = boot.combat.session.run.shield.capacity
 		boot.combat.session.hull = 20

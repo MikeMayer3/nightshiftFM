@@ -8,6 +8,8 @@ var campaign_mission: int = 1
 var campaign_modules: Array[StringName] = []
 var patchboard_enabled: bool = false
 var patchboard_panel: PatchboardPanel
+var mixer_open: bool = false
+var mixer_button: Button
 var arsenal_enabled: bool = false
 var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
 var shield_button: Button
@@ -79,6 +81,7 @@ func _ready() -> void:
 		patchboard_panel = PatchboardPanel.new()
 		add_child(patchboard_panel)
 		patchboard_panel.back_requested.connect(func() -> void: back_requested.emit())
+		patchboard_panel.mixer_closed.connect(close_mixer)
 		_setup_m3()
 	if arsenal_enabled or session.arsenal != null:
 		var actions: HBoxContainer = HBoxContainer.new()
@@ -94,6 +97,15 @@ func _ready() -> void:
 		RadioUI.button(shield_button)
 		actions.add_child(shield_button)
 		shield_button.pressed.connect(func() -> void: session.activate_shield())
+	if session.patchboard != null and session.patchboard.mixer != null:
+		mixer_button = Button.new()
+		mixer_button.text = tr("MIXER_BUTTON")
+		mixer_button.custom_minimum_size = Vector2(180, 76)
+		mixer_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		mixer_button.add_theme_font_size_override("font_size", 26)
+		RadioUI.button(mixer_button)
+		shield_button.get_parent().add_child(mixer_button)
+		mixer_button.pressed.connect(open_mixer)
 	ability_button.visible = session.active_combat == null
 	if session.active_combat == null: ability_button.pressed.connect(use_shield)
 	pause_button.text = "Ⅱ"
@@ -124,6 +136,15 @@ func _ready() -> void:
 		menu_button.get_parent().add_child(finish_button)
 		finish_button.pressed.connect(func() -> void:
 			if session.finish_endless(): back_requested.emit())
+	if mixer_button != null:
+		var pause_mix: Button = Button.new()
+		pause_mix.text = tr("MIXER_BUTTON")
+		pause_mix.custom_minimum_size.y = 76
+		pause_mix.add_theme_font_size_override("font_size", 26)
+		RadioUI.button(pause_mix)
+		menu_button.get_parent().add_child(pause_mix)
+		pause_mix.pressed.connect(open_mixer)
+		pause_mix.visibility_changed.connect(func() -> void: pause_mix.disabled = session.is_finished())
 	settings_button = Button.new()
 	settings_button.text = tr("M10_SETTINGS")
 	settings_button.custom_minimum_size.y = 76
@@ -167,7 +188,26 @@ func _process(delta: float) -> void:
 		if _last_log_second % 5 == 0:
 			_report("tick")
 
+func open_mixer() -> void:
+	if session.is_finished() or save_failed or recovery_required or settings_panel != null: return
+	if session.patchboard == null or session.patchboard.mixer == null: return
+	mixer_open = true
+	_sync_pause()
+	patchboard_panel.open(session, profile, true)
+	_refresh()
+
+func close_mixer() -> void:
+	mixer_open = false
+	patchboard_panel.live = false
+	_sync_pause()
+	# A pre-mixer checkpoint may still be waiting at the old connection screen.
+	if session.is_wiring() and not session.paused: session.launch_wave()
+	_refresh_decision()
+
 func toggle_pause() -> void:
+	if mixer_open:
+		close_mixer()
+		return
 	if settings_panel != null: return
 	if session.is_finished():
 		return
@@ -202,6 +242,7 @@ func use_shield() -> void:
 
 func restart() -> void:
 	report_open = false
+	mixer_open = false
 	if m3_enabled:
 		_start_m3()
 	else:
@@ -231,7 +272,7 @@ func _notification(what: int) -> void:
 
 func _sync_pause() -> void:
 	var was_paused: bool = session.paused
-	session.paused = manual_pause or not focused or app_paused or save_failed or recovery_required
+	session.paused = mixer_open or manual_pause or not focused or app_paused or save_failed or recovery_required
 	if was_paused and not session.paused:
 		_skip_frame = true
 	arena.clear_pointer()
@@ -284,6 +325,7 @@ func _refresh() -> void:
 		if signal_bar != null:
 			signal_bar.get_parent().visible = session.signal_progress != null
 			if session.signal_progress != null:
+				signal_bar.set_cycle(session.random.seed_value, session.signal_progress.choices)
 				signal_bar.max_value = session.signal_progress.threshold()
 				signal_bar.value = session.signal_progress.progress()
 				signal_bar.running = not session.paused and not session.is_finished() and not session.is_deciding() and not session.is_wiring()
@@ -292,11 +334,13 @@ func _refresh() -> void:
 				if session.signal_progress.ready(): signal_label.text = tr("SIGNAL_FULL")
 		draft_panel.visible = report_open or (session.is_deciding() and not session.paused)
 	if patchboard_panel != null:
-		patchboard_panel.visible = session.is_wiring() and not session.paused and not report_open
+		patchboard_panel.visible = (mixer_open or (session.is_wiring() and not session.paused)) and not report_open and not save_failed and not recovery_required
+	if mixer_button != null:
+		mixer_button.disabled = session.is_finished() or mixer_open or save_failed or recovery_required
 	if recovery_required or save_failed:
 		draft_panel.show()
 		return
-	overlay.visible = not report_open and (session.paused or session.is_finished())
+	overlay.visible = not mixer_open and not report_open and (session.paused or session.is_finished())
 	if report_button != null: report_button.visible = session.supports != null and session.is_finished()
 	if finish_button != null:
 		finish_button.visible = not session.is_finished()
@@ -418,7 +462,9 @@ func _retry_save() -> void:
 		_refresh_decision()
 
 func _refresh_decision() -> void:
-	if patchboard_panel != null and session.is_wiring(): patchboard_panel.open(session, profile)
+	if patchboard_panel != null and session.is_wiring() and not mixer_open:
+		if session.patchboard.mixer != null: open_mixer()
+		else: patchboard_panel.open(session, profile)
 	if session.phase == CombatSession.Phase.DRAFT:
 		draft_panel.show_draft(session)
 	elif session.phase == CombatSession.Phase.RECRUIT:
