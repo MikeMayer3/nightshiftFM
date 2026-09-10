@@ -2,14 +2,21 @@
 
 ## Current: 0.10.13 delivery (2026-09-10)
 
-The scrolling and compact-upgrade fixes are included in this delivery commit.
+The scrolling and compact-upgrade fixes are committed and pushed to `main` at
+`172bd9c`; release tag `v0.10.13` points to this source commit.
 Physical Pixel **0.10.13/code 25** installed and visibly launched; all six existing
 save/settings files remained byte-identical through install and launch, with no
 runtime errors. APK SHA-256: `0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346`.
 APK contents were checked to exclude local backups and test/build directories.
 Prior native, regression and Android input results remain documented in the linked evidence.
-GitHub upload verification will be recorded after publication. Earlier local-only
-and disconnected-phone notes below are historical and superseded by this entry.
+[GitHub 0.10.13 release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.13)
+contains the clean APK, anonymized construction summary and checksums. A complete
+authenticated APK download matches the installed SHA-256. The repository is private;
+sign in to GitHub to download. Fresh staged-source import and 6,125 regressions passed.
+The older 0.10.11 APK and checksum remain in place; their removal awaits explicit
+approval because the old export included local backup files. Use 0.10.13 for sharing.
+Earlier local-only and disconnected-phone notes below are historical and superseded
+by this entry.
 
 ## Historical: compact upgrade cards (2026-09-10)
 

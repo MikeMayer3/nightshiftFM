@@ -1,0 +1,30 @@
+{
+  "version": "0.10.13",
+  "code": 25,
+  "source_commit": "172bd9c1b4f5c97ed73fe8f3b3862069b75e41e9",
+  "private_repository": true,
+  "prerelease_url": "https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.13",
+  "download_verified_sha256": "0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346",
+  "retired_0_10_11_assets": [],
+  "assets": [
+    {
+      "name": "nightshift-fm-0.10.13-android-arm64-debug.apk",
+      "bytes": 31436910,
+      "digest": "sha256:0fff8e6594153b2c0400a3a1a8423067bb2c4efcc3b4943a086f1e214e83f346",
+      "download_url": "https://github.com/MikeMayer3/nightshiftFM/releases/download/v0.10.13/nightshift-fm-0.10.13-android-arm64-debug.apk"
+    },
+    {
+      "name": "Nightshift_FM_Construction_Summary.docx",
+      "bytes": 44057,
+      "digest": "sha256:4ddb8769b03c63c6fe204127434b849e2df3756cf4b686d48c646440ceedc2a1",
+      "download_url": "https://github.com/MikeMayer3/nightshiftFM/releases/download/v0.10.13/Nightshift_FM_Construction_Summary.docx"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 218,
+      "digest": "sha256:46ab48ccc130a4ef0ab5220ed0bfa532ba71e7ec60586bdd32c0b25b599f10ea",
+      "download_url": "https://github.com/MikeMayer3/nightshiftFM/releases/download/v0.10.13/SHA256SUMS.txt"
+    }
+  ],
+  "older_asset_removal": "Not performed: explicit approval required to delete the 0.10.11 APK and checksum."
+}

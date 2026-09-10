@@ -30,8 +30,11 @@ a naturally generated offer.
 - PASS: physical Pixel updated in place to **0.10.13/code 25**; all six save/settings
   JSON and backup files byte-identical before/after install and launch. Visible menu
   and clean runtime logs verified. See `evidence/compact-upgrades/pixel-install.json`.
-- Source is included in the 0.10.13 delivery commit. GitHub upload verification
-  will be recorded in the handoff; no store submission is claimed.
+- PASS: fresh staged-source import and 6,125 regression checks; source committed
+  and pushed as `172bd9c` and tagged `v0.10.13`.
+- PASS: GitHub APK upload and full authenticated download SHA-256 verification.
+  The release includes the construction summary and checksums. See
+  `evidence/compact-upgrades/github-release.json`. No store submission is claimed.
 
 ## Reproduce
 
@@ -64,5 +67,8 @@ paths or private screenshot imports remain. No private file contents were copied
 into source or the evidence report. Earlier APKs have not been repackaged by this
 change and should be replaced with a clean build before further sharing.
 
-Download: ignored `builds/android/nightshift-fm-0.10.13-android-arm64-debug.apk`.
+Download: [GitHub 0.10.13 release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.13)
+(requires sign-in to this private repository). The older 0.10.11 APK and checksum
+remain pending explicit approval for removal.
+Local: ignored `builds/android/nightshift-fm-0.10.13-android-arm64-debug.apk`.
 The version, size and SHA-256 are in `evidence/compact-upgrades/package.json`.
