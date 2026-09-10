@@ -1954,3 +1954,19 @@ P4_M4_W4,LINE 4 · There’s a voice under every station now.
 P4_M4_W7,CONTROL · Emergency band: an unknown signal is closing in.
 P4_CALLER_WARNING,CONTROL · The Caller is approaching. Watch the ridge.
 P4_CALLER_ARRIVED,THE CALLER · We found your frequency.
+P6_NEXT,UP NEXT
+P6_LOCKED,LOCKED
+P6_EARNED,EARNED
+P6_EQUIPPED,EQUIPPED
+P6_CLEAR,Complete campaign mission %d.
+P6_STARTER,Available from your first broadcast.
+P6_COLOR,%s station color
+P6_COLOR_REQUIREMENT,Win a campaign mission with %s at rank 8.
+P6_TITLE,Title: %s
+P6_PRACTICE,Practice run: achievement progress is disabled.
+P6_REWARDS,Hardware & colors
+P6_ALL_EARNED,All hardware and station colors earned. Pick a title goal in Awards.
+P6_NEW,JUST EARNED
+P6_USE_COLOR,Use station color
+P6_LOADOUT_HINT,Choose earned hardware in Equip & broadcast.
+P6_TRACKED,TRACKED

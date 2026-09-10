@@ -1,0 +1,111 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-01011-backup-20260910-145638",
+  "version_before": [
+    "versionCode=22 minSdk=24 targetSdk=36",
+    "versionName=0.10.10"
+  ],
+  "before": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 15254,
+      "sha256": "76ad9d6e6c494d12a47f287a422c0a1eb9adc5920e4d65a0a46af0552d104189"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 15289,
+      "sha256": "fa2cf488cacf9a316153bdb29804504d4033eae56b5437e0bee5e1ad5ad2dbff"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "apk_sha256": "5acb21a1a3b36285fd1e956e20da87891de0de6c7b7abe0de29b67cdd37706d8",
+  "install": "Serving...\nPerforming Incremental Install\nSuccess\nInstall command complete in 2591 ms\n",
+  "after_install": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 15254,
+      "sha256": "76ad9d6e6c494d12a47f287a422c0a1eb9adc5920e4d65a0a46af0552d104189"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 15289,
+      "sha256": "fa2cf488cacf9a316153bdb29804504d4033eae56b5437e0bee5e1ad5ad2dbff"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "install_preserved_files": true,
+  "version_after": [
+    "versionCode=23 minSdk=24 targetSdk=36",
+    "versionName=0.10.11"
+  ],
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: UNKNOWN (0)\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nWaitTime: 3017\nComplete\n",
+  "pid": "15755",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 15254,
+      "sha256": "76ad9d6e6c494d12a47f287a422c0a1eb9adc5920e4d65a0a46af0552d104189"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 15289,
+      "sha256": "fa2cf488cacf9a316153bdb29804504d4033eae56b5437e0bee5e1ad5ad2dbff"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "window_state": [
+    "mCurrentFocus=Window{15dd694 u0 NotificationShade}",
+    "mShowingDream=false mDreamingLockscreen=true"
+  ],
+  "locked": true,
+  "foreground": [
+    "Resumed: ActivityRecord{84182647 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6135}",
+    "ResumedActivity: ActivityRecord{84182647 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6135}"
+  ],
+  "visual_launch_verified": false,
+  "visual_launch_note": "Phone locked or game window not visibly focused. Process and resumed activity checked; visible game UI not verified.",
+  "scope": "Physical in-place P6 package update; launch/save verification only. Human next-goal comprehension and P6 phone performance soak not run."
+}

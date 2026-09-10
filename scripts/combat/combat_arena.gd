@@ -178,7 +178,9 @@ func _draw() -> void:
 				# One deployment accent; the live zone supplies the mesh.
 				draw_arc(pulse.center, pulse.radius.x * (.7 + age * .3), 0, TAU, 24, Color(tint, (1 - age) * .3), 2, true)
 			"reverb_well": pass # The persistent well already draws the vortex.
-			"bass_driver": RadioEffects.bass(self, pulse.center, pulse.radius.x, tint, age)
+			"bass_driver":
+				if pulse.get("wideband", false): BassPayoff.pressure(self, pulse.center, pulse.radius.x, age, tint)
+				else: RadioEffects.bass(self, pulse.center, pulse.radius.x, tint, age)
 			"echo_deck":
 				for side: int in [-1, 1]:
 					var center: Vector2 = pulse.center + Vector2(side * pulse.radius.x * .28, 0)
@@ -345,8 +347,9 @@ func _draw_support_turrets(aimed: CombatActor) -> void:
 		draw_set_transform(arena_offset() + p * arena_stretch(), 0, Vector2.ONE * arena_scale())
 		feedback.instrument(self, id, tint)
 		var direction: Vector2 = ((aimed.position - p) * arena_stretch()).normalized() if aimed != null else Vector2.UP
-		draw_texture_rect(DraftPanel.ICONS[id], Rect2(-34, -43, 68, 68), false)
-		RadioEncounters.hardware(self, session.draft.track(id), tint)
+		var wideband: bool = id == &"bass_driver" and BassPayoff.active(session)
+		draw_texture_rect(BassPayoff.texture(session) if id == &"bass_driver" else DraftPanel.ICONS[id], Rect2(-40, -53, 80, 80) if wideband else Rect2(-34, -43, 68, 68), false)
+		if not wideband: RadioEncounters.hardware(self, session.draft.track(id), tint)
 		if BroadcastRules.expanded(session) and EncounterDirector.jammed_support(session) == id:
 			draw_line(Vector2(-25, -35), Vector2(25, 15), Color.WHITE, 4)
 			draw_string(ThemeDB.fallback_font, Vector2(-36, -49), tr("BROADCAST_MUTED"), HORIZONTAL_ALIGNMENT_CENTER, 72, 14, Color.WHITE)
@@ -375,7 +378,7 @@ func show_support(source: StringName, center: Vector2, radius: Vector2) -> void:
 		if source == &"echo_deck": chains.append({"points": PackedVector2Array([support_position(source), center]), "support": true, "left": 0.22, "color": DraftPanel.ACCENTS[source]})
 	if source in [&"static_net", &"reverb_well"]:
 		pulses = pulses.filter(func(p: Dictionary) -> bool: return p.source != source)
-	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.55})
+	pulses.append({"source": source, "center": center, "radius": radius, "left": 0.55, "wideband": source == &"bass_driver" and BassPayoff.active(session)})
 
 func _sound_path(start: Vector2, end: Vector2, tint: Color, amplitude: float, wavelength: float, phase: float, width: float) -> void:
 	var axis: Vector2 = end - start

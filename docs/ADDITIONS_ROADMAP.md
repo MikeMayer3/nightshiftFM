@@ -377,10 +377,32 @@ visible game UI verification remains NOT RUN. Human tone/listening
 and gameplay approval remain NOT RUN. Continue suppresses current-wave dialogue
 without changing save schemas.
 
-P5–P7 and G1–G3 remain **PROPOSED / NOT STARTED**. Existing milestone
+P7 and G1–G3 remain **PROPOSED / NOT STARTED**. Existing milestone
 human/device acceptance is not changed by these increments.
 
 When a selected task is performed, append its date, scope, evidence links and
 status here, and update `IMPLEMENTATION_STATUS.md`. Separate implementation
 completion from human/device/store acceptance. Do not mark a task complete just
 because its plan or test protocol exists.
+
+P5 (2026-09-10): **IMPLEMENTED locally; human listening/art approval OPEN**.
+One existing build, rank-3 Wideband Studio Monitor, now fits a twin-cone cabinet,
+uses distinct pressure fronts and adds one bounded original music voice. Accepted
+branch state drives normal and restored presentation; combat and save schemas are
+unchanged. [P5 scope and evidence](P5_UPGRADE_PAYOFF.md) records automated,
+rendered, real-save and desktop performance checks. No phone install, commit,
+push or release performed. Stop here; P6 is next only when requested.
+
+P5 delivery (2026-09-10): owner requested phone upload. **0.10.10/code 22**
+exported, installed in place and visibly launched on the Pixel. All six prior
+save/settings files preserved byte-for-byte; runtime log clean. Human
+gameplay/listening/art and P5 phone-soak gates remain open. Source remains local.
+
+
+P6 (2026-09-10): **IMPLEMENTED; human next-goal comprehension OPEN**.
+Illustrated route/results goals, authoritative unlock/count data, explicit
+locked/earned/equipped rewards, color/title selection and tracked title cards.
+PASS: 6,084 regressions and 195 native large-text/layout/save/Continue/pointer
+checks. Existing rewards and save schemas remain unchanged. See
+[P6 scope and evidence](P6_PROGRESSION_GOALS.md) and the root handoff for current
+source/phone delivery. P7 is optional and is not started by this task.

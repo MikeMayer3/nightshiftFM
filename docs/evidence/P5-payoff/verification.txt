@@ -1,0 +1,18 @@
+Godot 4.7.2.stable.official.ed1daf0bf / Apple M2 Pro / macOS
+import: PASS; exit 0; known ignored nested builds/p3-qa-src warning
+regression: PASS; exit 0; RESULT: 5719 checks; 0 failures
+foundation: PASS; exit 0;
+smoke: PASS; exit 0;
+native: PASS; exit 0; RESULT: 88 P5 native checks; 0 failures
+footage: PASS; exit 0; RESULT: 3 footage checks; 0 failures
+Performance: PASS within stated desktop target, with measured differences and limitations in performance-comparison.json and P5_UPGRADE_PAYOFF.md.
+Human listening/art approval and physical-phone P5 acceptance: NOT RUN.
+Android export/install, signing, submission, commit and push: NOT RUN.
+Video: PASS; full 450x800 viewport, 30 FPS, 20.03 seconds, H.264/AAC; complete audio/video decode without errors.
+Final diff validation: PASS (git diff --check).
+
+Subsequent owner-authorized phone delivery: PASS, Android 0.10.10/code 22.
+APK contains P5 cabinet/music/script. Six existing JSON/backup files byte-identical
+before install, after install and after launch. Visible unlocked Pixel menu
+inspected; version/process/resumed activity verified; no captured runtime errors.
+Physical P5 gameplay/listening/performance soak: NOT RUN.

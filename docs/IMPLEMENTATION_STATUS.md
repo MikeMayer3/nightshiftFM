@@ -4,6 +4,40 @@ Git handoff: see [`handoff.md`](../handoff.md) for the consolidated commit scope
 and current resume instructions. Earlier local/uncommitted statements below are
 historical checkpoints superseded by that handoff.
 
+## P6 — visible next unlock and progression goals (2026-09-10)
+
+Pixel delivery: **0.10.11/code 23** installed in place; six save/settings files
+byte-identical after install and launch. Version/process/resumed activity and
+runtime logs passed. Phone locked: visible P6 phone UI NOT VERIFIED.
+Clean staged-source import and 6,084 regressions also passed.
+
+Implemented reward cards on route/results, the hardware/color catalogue, tracked title cards and explicit locked/earned/equipped states. Actual unlock/count data and existing reward/save rules remain authoritative. PASS: 6,084 regressions; 195 native large-text/layout/save/Continue/pointer checks; import, seven foundation checks, smoke and Android export. [Scope, commands and acceptance boundaries](P6_PROGRESSION_GOALS.md). P5 and P6 are included in the consolidated source handoff. Human next-goal comprehension remains NOT RUN. The entries below are historical checkpoints.
+
+## P5 Android delivery (2026-09-10)
+
+PASS: P5 exported and installed in place on Pixel 10 Pro XL as **0.10.10/code 22**.
+All six save/settings JSON and backup files remained byte-identical through
+installation and launch. Package/version/process, visible menu and clean runtime
+log verified. [Delivery evidence and exact scope](P5_UPGRADE_PAYOFF.md#p5-physical-pixel-delivery-2026-09-10).
+Human gameplay/listening and a P5 phone performance soak remain NOT RUN.
+No commit or push performed.
+
+## P5 — Wideband major-upgrade payoff (2026-09-10)
+
+Implemented one existing build's rank-3 transition: Wideband Studio Monitor gains
+a twin-speaker cabinet, distinct segmented pressure fronts, and one quiet original
+music layer. Presentation derives from accepted equipment, survives Continue,
+respects mute/low-effects/interruption settings and resets on Restart. Combat and
+save schemas are unchanged. [Scope, assets, commands and evidence](P5_UPGRADE_PAYOFF.md).
+
+PASS: 5,719 regressions, 88 native UI/audio/save checks, 3 gameplay capture
+checks, seven foundation checks, pinned import and startup smoke. Desktop
+frame p95 was 14.119 ms or better; detailed baseline comparison and its
+limitations are recorded in the P5 document. Human art/listening
+approval and physical-phone P5 checks remain NOT RUN. Source is local,
+uncommitted and unpushed; the phone now has P5 0.10.10/code 22.
+**P6 is the next bounded task**, when requested. P6/P7 and G1–G3 are not started.
+
 ## P4 — radio personality and boss anticipation (2026-09-10)
 
 Implemented in the first campaign region: captioned station/caller/emergency

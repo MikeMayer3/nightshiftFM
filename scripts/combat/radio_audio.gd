@@ -5,6 +5,7 @@ const SHOT: AudioStream = preload("res://assets/audio/radio/transmit.wav")
 const HIT: AudioStream = preload("res://assets/audio/radio/hit.wav")
 const TUNE: AudioStream = preload("res://assets/audio/radio/tune.wav")
 const BED: AudioStream = preload("res://assets/audio/radio/station.wav")
+const WIDEBAND: AudioStream = preload("res://assets/audio/radio/wideband.wav")
 const WARNING: AudioStream = preload("res://assets/audio/radio/warning.wav")
 const SHIELD: AudioStream = preload("res://assets/audio/radio/shield.wav")
 const STINGS: Dictionary = {
@@ -17,6 +18,7 @@ var warning_wait: float = 0
 var shield_was_active: bool = false
 var effects: Array[AudioStreamPlayer] = []
 var music: AudioStreamPlayer
+var build_layer: AudioStreamPlayer
 var session: CombatSession
 var _shot_wait: float = 0
 var _haptic_wait: float = 0
@@ -33,6 +35,10 @@ func _ready() -> void:
 	add_child(music)
 	music.finished.connect(func() -> void:
 		if RadioPreferences.current.enabled("music") and session != null and not session.is_finished(): music.play())
+	build_layer = AudioStreamPlayer.new()
+	build_layer.stream = WIDEBAND
+	build_layer.volume_db = -12
+	add_child(build_layer)
 	RadioPreferences.current.changed.connect(_preferences_changed)
 
 func _process(delta: float) -> void:
@@ -42,6 +48,7 @@ func _process(delta: float) -> void:
 	if DisplayServer.get_name() == "headless": return
 	if session.is_finished():
 		music.stop()
+		build_layer.stop()
 		broadcast_player.stop()
 		for player: AudioStreamPlayer in effects: player.stop()
 		return
@@ -49,8 +56,15 @@ func _process(delta: float) -> void:
 	broadcast_player.stream_paused = stopped
 	music.volume_db = -6.0 if broadcast_player.playing else 0.0
 	music.stream_paused = stopped
+	build_layer.stream_paused = stopped
+	build_layer.volume_db = -18.0 if broadcast_player.playing else -12.0
+	var wideband: bool = BassPayoff.active(session) and RadioPreferences.current.enabled("music")
+	if not wideband: build_layer.stop()
 	for player: AudioStreamPlayer in effects: player.stream_paused = stopped
 	if stopped: return
+	# A single music voice, never one per shot/rank/refresh. Restore derives the
+	# branch again; the ambient phrase restarts, not a one-time upgrade fanfare.
+	if wideband and not build_layer.playing: build_layer.play()
 	warning_wait = maxf(0, warning_wait - delta)
 	if BroadcastRules.expanded(session) and warning_wait <= 0 and session.actors.any(func(a: CombatActor) -> bool: return a.role >= EnemyDefinition.Role.CASTER and EncounterDirector.channel(a)):
 		cue(WARNING)
@@ -62,6 +76,9 @@ func _process(delta: float) -> void:
 	if RadioPreferences.current.enabled("music") and not music.playing: music.play()
 
 func _exit_tree() -> void:
+	if is_instance_valid(build_layer):
+		build_layer.stop()
+		build_layer.stream = null
 	if is_instance_valid(broadcast_player):
 		broadcast_player.stop()
 		broadcast_player.stream = null
@@ -75,7 +92,9 @@ func _exit_tree() -> void:
 			player.stream = null
 
 func _preferences_changed() -> void:
-	if not RadioPreferences.current.enabled("music"): music.stop()
+	if not RadioPreferences.current.enabled("music"):
+		music.stop()
+		build_layer.stop()
 	if not RadioPreferences.current.enabled("sound"):
 		broadcast_player.stop()
 		for player: AudioStreamPlayer in effects: player.stop()

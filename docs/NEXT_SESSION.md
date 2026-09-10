@@ -4,6 +4,24 @@ Git handoff: see [`handoff.md`](../handoff.md) for the consolidated commit scope
 and current resume instructions. Earlier local/uncommitted statements below are
 historical checkpoints superseded by that handoff.
 
+## Latest: P6 progression goals (2026-09-10)
+
+Pixel delivery: **0.10.11/code 23** installed in place; six save/settings files
+byte-identical after install and launch. Version/process/resumed activity and
+runtime logs passed. Phone locked: visible P6 phone UI NOT VERIFIED.
+Clean staged-source import and 6,084 regressions also passed.
+
+P6 is implemented. Read [P6_PROGRESSION_GOALS.md](P6_PROGRESSION_GOALS.md) and the root [handoff.md](../handoff.md) for current source/device state. PASS: 6,084 regressions and 195 native checks. Human next-goal comprehension remains open. P5 and P6 are included in the consolidated source handoff. Do not automatically start P7. The next requested work should address 1.0 readiness and its remaining human/release gates. All P5 and earlier next-task/local-state notes below are historical.
+
+Latest roadmap implementation: **P5 — Wideband upgrade payoff** (2026-09-10).
+See [P5_UPGRADE_PAYOFF.md](P5_UPGRADE_PAYOFF.md) for current verification and limits.
+One existing build gets a twin-cone cabinet, segmented pressure fronts and one
+original music layer at its actual rank-3 Wideband choice. Source is local,
+uncommitted and unpushed. Pixel now has P5 0.10.10/code 22; visible menu launch and save preservation passed.
+**Next bounded task: P6 — visible next unlock and progression goals**, when requested.
+
+The P4 and older entries below are historical delivery checkpoints.
+
 Latest roadmap implementation: **P4 radio personality and boss anticipation**
 (2026-09-10). First-region broadcasts, original stings, and the existing Caller's
 five-second approach warning are implemented. See

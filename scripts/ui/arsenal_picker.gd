@@ -57,7 +57,7 @@ func _ready() -> void:
 		var info: VBoxContainer = VBoxContainer.new()
 		info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(info)
-		_label(info, tr("M5_SELECT_" + category.to_upper()).to_upper(), 20).modulate = Color("8eb4b9")
+		_label(info, tr("M5_SELECT_" + category.to_upper()).to_upper() + " · " + tr("P6_EQUIPPED"), 20).modulate = Color("8eb4b9")
 		var choose: OptionButton = OptionButton.new()
 		choose.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		choose.clip_text = true

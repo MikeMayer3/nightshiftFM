@@ -1,0 +1,5 @@
+{
+	"checks": 88,
+	"failures": 0,
+	"scope": "desktop native UI/audio and actual isolated save/Continue/Restart; human and phone acceptance NOT RUN"
+}

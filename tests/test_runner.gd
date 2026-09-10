@@ -76,8 +76,10 @@ func _run() -> void:
 	context.check(preload("res://tests/unit/test_radio_balance.gd").new().run(context) == true, "radio approach and balance suite completed")
 	context.check(preload("res://tests/unit/test_build_guide.gd").new().run(context) == true, "build guidance suite completed")
 	context.check(preload("res://tests/unit/test_radio_broadcast.gd").new().run(context) == true, "radio broadcast suite completed")
+	context.check(preload("res://tests/unit/test_bass_payoff.gd").new().run(context) == true, "Wideband payoff suite completed")
 	context.check(preload("res://tests/unit/test_coaching.gd").new().run(context) == true, "coaching suite completed")
 	context.check(preload("res://tests/unit/test_loss_feedback.gd").new().run(context) == true, "loss feedback suite completed")
+	context.check(await preload("res://tests/integration/test_progression_goals.gd").new().run(context, self) == true, "P6 progression goals suite completed")
 	if "--intentional-failure" in OS.get_cmdline_user_args():
 		context.check(false, "intentional failure proves nonzero exit")
 	_finished = true

@@ -27,6 +27,10 @@ var signal_label: Label
 var m4_enabled: bool = false
 var report_open: bool = false
 var report_button: Button
+var result_goals: VBoxContainer
+var result_goals_ready: bool = false
+var result_checkpoint_ready: bool = false
+var rewards_before: Array[String] = []
 var m3_enabled: bool = false
 var resume_existing: bool = false
 var store: MissionStore = MissionStore.new()
@@ -102,6 +106,7 @@ func _ready() -> void:
 		patchboard_panel.back_requested.connect(func() -> void: back_requested.emit())
 		patchboard_panel.mixer_closed.connect(close_mixer)
 		_setup_m3()
+	rewards_before = ProgressionGoals.earned_ids(profile)
 	if arsenal_enabled or session.arsenal != null:
 		var actions: HBoxContainer = HBoxContainer.new()
 		var footer: Node = ability_button.get_parent()
@@ -210,6 +215,33 @@ func _ready() -> void:
 		report_open = true
 		draft_panel.show_report(session, func() -> void: report_open = false; _refresh())
 		_refresh())
+	if campaign_enabled:
+		# The result sheet can grow with earned/tracked rewards and large text.
+		# Keep its existing controls and references; scroll vertically within it.
+		var result_column: VBoxContainer = menu_button.get_parent() as VBoxContainer
+		var inset: Node = result_column.get_parent()
+		var layout: VBoxContainer = VBoxContainer.new()
+		layout.add_theme_constant_override("separation", 12)
+		inset.add_child(layout)
+		var scroll: ScrollContainer = ScrollContainer.new()
+		scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		scroll.name = "ResultScroll"
+		scroll.follow_focus = true
+		scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+		layout.add_child(scroll)
+		result_column.reparent(scroll)
+		result_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		result_goals = VBoxContainer.new()
+		result_goals.add_theme_constant_override("separation", 12)
+		result_column.add_child(result_goals)
+		result_column.move_child(result_goals, details.get_index() + 1)
+		report_button.reparent(layout)
+		var actions: HBoxContainer = HBoxContainer.new()
+		actions.add_theme_constant_override("separation", 12)
+		layout.add_child(actions)
+		for action: Button in [restart_button, menu_button]:
+			action.reparent(actions)
+			action.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	# The M1 probe owns SceneTree pause only while its page is open.
 	get_tree().paused = false
 	_refresh()
@@ -291,6 +323,13 @@ func use_shield() -> void:
 	_refresh()
 
 func restart() -> void:
+	rewards_before = ProgressionGoals.earned_ids(profile)
+	result_goals_ready = false
+	result_checkpoint_ready = false
+	if result_goals != null:
+		for child: Node in result_goals.get_children():
+			result_goals.remove_child(child)
+			child.queue_free()
 	report_open = false
 	mixer_open = false
 	if m3_enabled:
@@ -401,6 +440,7 @@ func _refresh() -> void:
 		draft_panel.show()
 		return
 	overlay.visible = not mixer_open and not report_open and (session.paused or session.is_finished())
+	if settings_button != null: settings_button.visible = not session.is_finished()
 	if report_button != null: report_button.visible = session.supports != null and session.is_finished()
 	if pause_mixer_button != null: pause_mixer_button.visible = not session.is_finished()
 	if finish_button != null:
@@ -408,6 +448,9 @@ func _refresh() -> void:
 		finish_button.disabled = session.achievement_run.cleared_waves == 0
 	resume_button.visible = not session.is_finished()
 	resume_button.disabled = not focused or app_paused
+	if result_goals != null:
+		result_goals.visible = session.is_finished()
+		if session.is_finished() and not result_goals_ready: _show_result_goals()
 	if session.is_finished():
 		overlay_title.text = tr("COMBAT_VICTORY" if session.phase == CombatSession.Phase.VICTORY else "COMBAT_DEFEAT")
 		var cause: String = tr("COMBAT_CLEAN") if session.damage_taken == 0 else tr("COMBAT_CAUSE") % [tr(session.last_cause), tr(session.last_kind)]
@@ -422,6 +465,18 @@ func _refresh() -> void:
 		if session.active_combat != null: details.text = tr("M10_RADIO_CONTROLS")
 		for id: StringName in profile.achievements.tracked:
 			details.text += "\n" + tr(AchievementCatalog.ALL[id].name_key) + "  " + str(profile.achievements.count(id)) + "/" + str(AchievementCatalog.ALL[id].threshold)
+
+func _show_result_goals() -> void:
+	# Reward commits happen at checkpoints. Build once after that commit, never
+	# award from rendering or show uncommitted rewards as earned.
+	if not result_checkpoint_ready: return
+	result_goals_ready = true
+	for row: Dictionary in ProgressionGoals.newly_earned(profile, rewards_before, loadout):
+		ProgressionCard.add_to(result_goals, row, tr("P6_NEW"))
+	var goal: Dictionary = ProgressionGoals.next(profile)
+	if not goal.is_empty(): ProgressionCard.add_to(result_goals, goal, tr("P6_NEXT"))
+	for id: StringName in profile.achievements.tracked:
+		ProgressionCard.add_to(result_goals, ProgressionGoals.achievement(profile.achievements, id, session.achievement_run.eligible), tr("P6_TRACKED"))
 
 func _report(event: String) -> void:
 	if OS.is_debug_build():
@@ -526,6 +581,7 @@ func _setup_m3() -> void:
 			broadcast_context = {"mode": session.campaign.mode, "difficulty": session.campaign.difficulty, "contract": session.campaign.contract} if session.campaign.expanded else {}
 		else: campaign_enabled = false
 		last_checkpoint = data.run.duplicate(true)
+		result_checkpoint_ready = session.is_finished()
 		_refresh_decision()
 	else:
 		_start_m3()
@@ -570,6 +626,7 @@ func _save_checkpoint() -> void:
 			if id not in profile.discovered: profile.discovered.append(id)
 	last_checkpoint = session.to_checkpoint()
 	_retry_save()
+	result_checkpoint_ready = session.is_finished()
 
 func _retry_save() -> void:
 	save_failed = store.save(profile, last_checkpoint) != OK

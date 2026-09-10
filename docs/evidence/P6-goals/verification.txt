@@ -1,0 +1,13 @@
+P6 verified with Godot 4.7.2 standard on 2026-09-10.
+
+PASS import: completed; no error markers
+PASS regression: RESULT: 6084 checks; 0 failures
+PASS native: RESULT: 195 P6 native checks; 0 failures
+PASS foundation: completed; no error markers
+PASS smoke: completed; no error markers
+PASS android-export: completed; no error markers
+PASS source-import: completed; no error markers
+PASS source-regression: RESULT: 6084 checks; 0 failures
+PASS physical Pixel: 0.10.11/code 23 installed in place; six files byte-identical before/after installation and launch; process/resumed activity and log checked.
+NOT VERIFIED physical visible UI: phone locked during launch check.
+NOT RUN human next-goal comprehension and P6 phone performance soak.

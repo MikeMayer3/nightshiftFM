@@ -1,0 +1,5 @@
+{
+	"checks": 195,
+	"failures": 0,
+	"scope": "Desktop native renderer; isolated synthetic victory through real finish/save path; pointer retry, three window sizes, large text. Human comprehension NOT RUN."
+}

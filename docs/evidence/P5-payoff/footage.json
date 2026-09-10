@@ -1,0 +1,21 @@
+{
+	"captures": {
+		"after": {
+			"rank": 3,
+			"seconds": 24.9999999999999,
+			"wave": 1
+		},
+		"before": {
+			"rank": 2,
+			"seconds": 16.8333333333337,
+			"wave": 1
+		}
+	},
+	"checks": 3,
+	"decision_hold_seconds": 2,
+	"failures": 0,
+	"mission": 1,
+	"scope": "real authored gameplay; automated inputs and isolated legal checkpoint capture, not human play",
+	"seed": 42,
+	"simulation_fps": 30
+}

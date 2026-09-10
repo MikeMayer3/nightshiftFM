@@ -116,6 +116,7 @@ func show_page(page: Page) -> void:
 		if not data.is_empty(): mission_profile.restore(data.profile)
 		campaign_panel = CampaignPanel.new()
 		campaign_panel.profile = mission_profile
+		campaign_panel.loadout = loadout.duplicate()
 		campaign_panel.rules = broadcast_context.duplicate()
 		if returning_to_route: campaign_panel.selected_mission = mission_index
 		add_child(campaign_panel)

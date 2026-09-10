@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Original P5 Wideband cabinet: twin cones and outward-facing horns. -->
+  <rect x="3" y="27" width="122" height="84" rx="10" fill="#392b25" stroke="#efa968" stroke-width="4"/>
+  <path d="M7 25 24 13 24 41 7 35ZM121 25 104 13 104 41 121 35Z" fill="#9b6744" stroke="#efa968" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="36" y="16" width="56" height="19" rx="4" fill="#392b25" stroke="#efa968" stroke-width="4"/>
+  <path d="M44 25H54M59 25H69M74 25H84" stroke="#f7deac" stroke-width="4"/>
+  <g fill="#211f27" stroke="#efa968" stroke-width="4">
+    <circle cx="35" cy="70" r="24"/><circle cx="93" cy="70" r="24"/>
+  </g>
+  <g fill="#b67c50" stroke="#f7deac" stroke-width="3">
+    <circle cx="35" cy="70" r="11"/><circle cx="93" cy="70" r="11"/>
+  </g>
+  <path d="M16 102H48M80 102H112" stroke="#efa968" stroke-width="4"/>
+</svg>

@@ -4,6 +4,7 @@ signal selected(mission: int)
 signal changed
 signal back_requested
 var rules: Dictionary = {"mode": "campaign", "difficulty": 0, "contract": ""}
+var loadout: Dictionary = ArsenalContent.DEFAULT.duplicate()
 var profile: MissionProfile
 var column: VBoxContainer
 var mission_name: Label
@@ -60,6 +61,11 @@ func show_home() -> void:
 	station_buttons.clear()
 	label_text(tr("M10_ROUTE"), 38)
 	label_text(tr("M7_PROGRESS") % [profile.campaign.cleared, 12], 24).modulate = Color("8eb4b9")
+	if profile.achievements.title != &"":
+		label_text(tr("P6_TITLE") % tr(AchievementCatalog.ALL[profile.achievements.title].name_key), 23).modulate = Color("e8bb7a")
+	var goal: Dictionary = ProgressionGoals.next(profile)
+	if not goal.is_empty(): ProgressionCard.add_to(column, goal, tr("P6_NEXT"))
+	else: label_text(tr("P6_ALL_EARNED"), 24)
 	for era_index: int in 3:
 		var panel: PanelContainer = PanelContainer.new()
 		panel.add_theme_stylebox_override("panel", RadioUI.surface())
@@ -101,6 +107,8 @@ func show_home() -> void:
 	launch_button = button(tr("M7_EQUIP"), func() -> void: selected.emit(selected_mission))
 	RadioUI.button(launch_button, true)
 	refresh_mission()
+	for id: StringName in profile.achievements.tracked:
+		ProgressionCard.add_to(column, ProgressionGoals.achievement(profile.achievements, id, AchievementRun.production_build()), tr("P6_TRACKED"))
 	var navigation: HBoxContainer = HBoxContainer.new()
 	navigation.add_theme_constant_override("separation", 10)
 	column.add_child(navigation)
@@ -112,6 +120,7 @@ func show_home() -> void:
 		RadioUI.button(nav)
 		nav.pressed.connect(entry[1])
 		navigation.add_child(nav)
+	button(tr("P6_REWARDS"), show_rewards)
 	button(tr("MENU_BACK"), func() -> void: back_requested.emit())
 	notice = label_text(tr("M7_PRESET_MIGRATION") if profile.campaign.migrated_presets else "", 23)
 	notice.visible = not notice.text.is_empty()
@@ -125,13 +134,20 @@ func refresh_mission() -> void:
 		station.set_pressed_no_signal(index + 1 == selected_mission)
 		station.text = ("✓ " if index < profile.campaign.cleared else "") + str(index + 1)
 
-func next_unlock() -> String:
-	match profile.campaign.cleared:
-		0: return tr("M7_UNLOCK_1")
-		1: return tr("M7_UNLOCK_2")
-		2: return tr("M7_UNLOCK_3")
-		3: return tr("M7_UNLOCK_4")
-		_: return tr("M7_UNLOCK_LATER")
+func show_rewards() -> void:
+	clear()
+	label_text(tr("P6_REWARDS"), 38)
+	label_text(tr("P6_LOADOUT_HINT"), 24)
+	button(tr("MENU_BACK"), show_home)
+	for row: Dictionary in ProgressionGoals.equipment(profile.campaign, loadout) + ProgressionGoals.colors(profile.campaign):
+		ProgressionCard.add_to(column, row)
+		if row.kind == "color" and row.state == "earned":
+			var equip: Button = button(tr("P6_USE_COLOR"), func() -> void:
+				profile.campaign.cosmetic = StringName(row.id)
+				changed.emit()
+				show_rewards())
+			equip.set_meta("color_id", row.id)
+	button(tr("MENU_BACK"), show_home)
 
 func show_achievements() -> void:
 	clear()
@@ -141,21 +157,20 @@ func show_achievements() -> void:
 	label_text(tr("M9_PRACTICE"), 23)
 	label_text(tr("M9_TRACKED"), 28)
 	for id: StringName in profile.achievements.tracked:
-		label_text(tr(AchievementCatalog.ALL[id].name_key) + " · " + tr("M9_PROGRESS") % [profile.achievements.count(id), AchievementCatalog.ALL[id].threshold], 25)
+		ProgressionCard.add_to(column, ProgressionGoals.achievement(profile.achievements, id, AchievementRun.production_build()), tr("P6_TRACKED"))
 	button(tr("MENU_BACK"), show_home)
 	for id: StringName in AchievementCatalog.ALL:
 		var definition: AchievementDefinition = AchievementCatalog.ALL[id]
-		label_text(tr(definition.name_key), 29)
-		label_text(tr(definition.description_key), 24)
+		ProgressionCard.add_to(column, ProgressionGoals.achievement(profile.achievements, id, AchievementRun.production_build()))
 		if not definition.available:
 			label_text(tr(definition.pending_key), 23).modulate = Color("efa968")
 			continue
-		label_text(tr("M9_EARNED") if profile.achievements.earned(id) else tr("M9_PROGRESS") % [profile.achievements.count(id), definition.threshold], 24)
 		if profile.achievements.earned(id):
 			var title_button: Button = button(tr("M9_USE_TITLE"), func() -> void:
 				profile.achievements.select_title(id)
 				changed.emit()
 				show_home())
+			title_button.disabled = profile.achievements.title == id
 			title_button.set_meta("achievement_id", id)
 		else:
 			var track_button: Button = button(tr("M9_UNTRACK" if id in profile.achievements.tracked else "M9_TRACK"), func() -> void:

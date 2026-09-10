@@ -1,0 +1,112 @@
+{
+  "device": "Pixel 10 Pro XL",
+  "serial": "57261FDCQ00593",
+  "package": "org.nightshiftfm.spike",
+  "backup_path": "/Users/michaelmayer/Projects/Nightshift FM/nightshift_fm_codex_pack/builds/android/pixel-01010-backup-20260910-141508",
+  "version_before": [
+    "versionCode=21 minSdk=24 targetSdk=36",
+    "versionName=0.10.9"
+  ],
+  "before": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 14480,
+      "sha256": "d3e350475b00b3cae20739e66d08722283b6da65367d3a4454583cbd5b1244bd"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 16429,
+      "sha256": "4eaf8f4a350d5265d0fb4dcc0d4c2e2f0a3da1a26ce1a870491a19ee87e96751"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "apk_sha256": "1abef1a50b2919fa174c9c2e50d596fe34612b681d46b1b22fe7a92a958090ec",
+  "install": "Serving...\nPerforming Incremental Install\nSuccess\nInstall command complete in 1703 ms\n",
+  "after_install": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 14480,
+      "sha256": "d3e350475b00b3cae20739e66d08722283b6da65367d3a4454583cbd5b1244bd"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 16429,
+      "sha256": "4eaf8f4a350d5265d0fb4dcc0d4c2e2f0a3da1a26ce1a870491a19ee87e96751"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "install_preserved_files": true,
+  "version_after": [
+    "versionCode=22 minSdk=24 targetSdk=36",
+    "versionName=0.10.10"
+  ],
+  "launch": "Starting: Intent { cmp=org.nightshiftfm.spike/com.godot.game.GodotAppLauncher }\nStatus: ok\nLaunchState: COLD\nActivity: org.nightshiftfm.spike/com.godot.game.GodotApp\nTotalTime: 518\nWaitTime: 520\nComplete\n",
+  "pid": "9426",
+  "runtime_errors": [],
+  "after_launch": {
+    "m1_probe.json": {
+      "bytes": 55,
+      "sha256": "f500ff14bd53c7ac7fc3653cbac01ffa824bf9793458259d25fcf43f0d3926bf"
+    },
+    "m1_probe.json.bak": {
+      "bytes": 55,
+      "sha256": "2c67217fcc6a0e1fb620a92d99557032708718b54106a170936827a97424632e"
+    },
+    "m3_mission.json": {
+      "bytes": 14480,
+      "sha256": "d3e350475b00b3cae20739e66d08722283b6da65367d3a4454583cbd5b1244bd"
+    },
+    "m3_mission.json.bak": {
+      "bytes": 16429,
+      "sha256": "4eaf8f4a350d5265d0fb4dcc0d4c2e2f0a3da1a26ce1a870491a19ee87e96751"
+    },
+    "presentation_v1.json": {
+      "bytes": 203,
+      "sha256": "afe03ee5ed3cbc4bebaf55bcaa7fe8d904959037ba22ef531d041690caec7772"
+    },
+    "presentation_v1.json.bak": {
+      "bytes": 195,
+      "sha256": "03193c1c5d576620344a5eb2f3f21b7a830afb704715075c1aab7435df7451a6"
+    }
+  },
+  "mission_and_settings_preserved": true,
+  "window_state": [
+    "mCurrentFocus=Window{e0395e0 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher}",
+    "mShowingDream=false mDreamingLockscreen=false"
+  ],
+  "locked": false,
+  "foreground": [
+    "topResumedActivity=ActivityRecord{46432837 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6134}",
+    "Resumed: ActivityRecord{46432837 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6134}",
+    "ResumedActivity: ActivityRecord{46432837 u0 org.nightshiftfm.spike/com.godot.game.GodotAppLauncher t6134}"
+  ],
+  "visual_launch_verified": true,
+  "visual_launch_note": "Unlocked physical Pixel screenshot visually inspected: Nightshift FM menu, New broadcast, Continue saved mission and Settings visible.",
+  "scope": "Physical in-place P5 package update; launch/save verification only. Human gameplay/listening approval and P5 phone performance soak not run."
+}
