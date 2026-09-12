@@ -26,9 +26,12 @@ static func valid(data: Variant) -> bool:
 			for key: String in ["retarget", "distinct", "priority", "copy_index"]:
 				if not packet.p.has(key): return false
 	for needle: Variant in data.needles:
-		if not needle is Dictionary or needle.size() != 9 or not envelope(needle, ["root", "target", "left", "x", "y"]): return false
+		if not needle is Dictionary or needle.size() not in [9, 13] or not envelope(needle, ["root", "target", "left", "x", "y"]): return false
 		if not SaveChecks.number(needle.get("dx"), -1, 1) or not SaveChecks.number(needle.get("dy"), -1, 1): return false
-		if not needle.get("hits") is Array or needle.hits.size() > 11 or not SaveChecks.unique(needle.hits): return false
+		if needle.size() == 13:
+			if not SaveChecks.number(needle.get("angle"), -TAU, TAU) or not SaveChecks.number(needle.get("wait"), -1, 2): return false
+			if not SaveChecks.number(needle.get("remaining"), 1, 12, true) or not needle.get("orbiting") is bool: return false
+		if not needle.get("hits") is Array or needle.hits.size() > 12 or not SaveChecks.unique(needle.hits): return false
 		for id: Variant in needle.hits:
 			if not SaveChecks.number(id, 1, 10000000, true): return false
 		if not parameters(needle.get("p")): return false

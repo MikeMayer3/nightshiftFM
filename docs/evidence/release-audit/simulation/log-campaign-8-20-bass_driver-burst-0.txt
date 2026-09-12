@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"alive":0,"cause":"BROADCAST_ENEMY_PLATED","choices":13,"cleared":10,"contract":"","difficulty":0,"finished":true,"hull":74.9333333333334,"main":"burst","mission":8,"mode":"campaign","reason":"","restores":13,"seconds":658.083333333064,"style":"bass_driver","valid":true,"victory":true,"wave":10}

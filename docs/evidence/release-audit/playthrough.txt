@@ -1,0 +1,167 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: fresh isolated mission starts
+M2_COMBAT {"actors":0,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: pause freezes combat
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":5,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.5,"shield":65.0,"wave":1}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":45.5999999999987,"shield":65.0,"wave":2}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":91.8833333333294,"shield":65.0,"wave":3}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":144.983333333341,"shield":65.0,"wave":4}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":193.966666666713,"shield":65.0,"wave":5}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":243.600000000086,"shield":65.0,"wave":6}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":298.750000000057,"shield":65.0,"wave":7}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":353.383333333341,"shield":65.0,"wave":8}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":411.616666666621,"shield":65.0,"wave":9}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":79.6666666666669,"instances":1,"paused":false,"phase":1,"seconds":475.38333333323,"shield":15.0,"wave":10}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":79.6666666666669,"instances":1,"paused":false,"phase":2,"seconds":539.883333333171,"shield":48.4500000000001,"wave":10}
+PASS: rendered mission reaches a real result
+PASS: real result saves successfully
+PASS: result returns to splash menu
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: fresh isolated mission starts
+M2_COMBAT {"actors":0,"event":"manual_pause","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+PASS: pause freezes combat
+M2_COMBAT {"actors":0,"event":"tick","focus":false,"hull":100.0,"instances":1,"paused":true,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"manual_resume","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":45.833333333332,"shield":65.0,"wave":2}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":92.0166666666627,"shield":65.0,"wave":3}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":144.28333333334,"shield":65.0,"wave":4}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":193.916666666713,"shield":65.0,"wave":5}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":244.13333333342,"shield":65.0,"wave":6}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":299.816666666723,"shield":75.0,"wave":7}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":357.133333333337,"shield":68.4999999999998,"wave":8}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":415.066666666618,"shield":73.2999999999994,"wave":9}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":478.733333333227,"shield":72.7666666666663,"wave":10}
+PASS: earned decision survives JSON checkpoint restore
+PASS: legal visible upgrade button advances play
+PASS: earned choice highlights the upgraded instrument
+M2_COMBAT {"actors":0,"event":"results","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":2,"seconds":543.166666666501,"shield":74.2333333333319,"wave":10}
+PASS: rendered mission reaches a real result
+PASS: real result saves successfully
+PASS: result returns to splash menu
+RESULT: 130 rendered playthrough checks; 0 failures; [{"breaches":26,"drafts":21,"hull":79.6666666666669,"seconds":539.883333333171,"seed":1790330188,"support":"static_net","victory":true,"wave":10},{"breaches":51,"drafts":19,"hull":100.0,"seconds":543.166666666501,"seed":1804898963,"support":"bass_driver","victory":true,"wave":10}]

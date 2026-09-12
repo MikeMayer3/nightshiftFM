@@ -44,3 +44,12 @@ For each requested milestone:
 A test report must distinguish PASS, FAIL, and NOT RUN. Report warnings and limitations. Human playtesting, asset approval, real-device usability, store signing, and store submission cannot be certified by unit tests.
 
 Never make destructive Git changes, delete unrelated files, or fabricate commits. Keep dependencies minimal, pin approved dependencies, and record their licenses. Original placeholder graphics are acceptable; copyrighted commercial music and unlicensed assets are not.
+
+## Owner delivery preference (2026-09-10)
+
+After implementing and validating game updates, check for the owner's connected
+physical Android phone. If connected and authorized by ADB, build and install the
+updated APK automatically; no additional phone-install confirmation is needed.
+Preserve existing saves/settings, verify installed version and launch, and report
+any device or install blocker. This preference does not authorize Git pushes or
+GitHub/store publishing.

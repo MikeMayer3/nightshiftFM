@@ -1,0 +1,223 @@
+[
+  {
+    "args": [
+      "campaign",
+      "1",
+      "20",
+      "arc_aerial",
+      "",
+      "pulse",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "2",
+      "20",
+      "bass_driver",
+      "",
+      "burst",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "3",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "4",
+      "20",
+      "arc_aerial",
+      "",
+      "pulse",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "5",
+      "20",
+      "bass_driver",
+      "",
+      "burst",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "6",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "7",
+      "20",
+      "arc_aerial",
+      "",
+      "pulse",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "8",
+      "20",
+      "bass_driver",
+      "",
+      "burst",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "9",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "10",
+      "20",
+      "arc_aerial",
+      "",
+      "pulse",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "11",
+      "20",
+      "bass_driver",
+      "",
+      "burst",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "12",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "12",
+      "20",
+      "arc_aerial",
+      "",
+      "pulse",
+      "2"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "12",
+      "20",
+      "bass_driver",
+      "",
+      "burst",
+      "2"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "campaign",
+      "12",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "2"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "endless",
+      "1",
+      "20",
+      "static_net",
+      "",
+      "sweep",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  },
+  {
+    "args": [
+      "contract",
+      "1",
+      "20",
+      "arc_aerial",
+      "fragile_broadcast",
+      "pulse",
+      "0"
+    ],
+    "passed": true,
+    "returncode": 0
+  }
+]

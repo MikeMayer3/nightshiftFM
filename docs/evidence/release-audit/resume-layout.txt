@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":79.6666666666669,"instances":1,"paused":false,"phase":2,"seconds":539.883333333171,"shield":48.4500000000001,"wave":10}
+M2_COMBAT {"actors":0,"event":"lifecycle","focus":false,"hull":79.6666666666669,"instances":1,"paused":false,"phase":2,"seconds":539.883333333171,"shield":48.4500000000001,"wave":10}
+{"bar":"[P: (368.0, 1512.0), S: (340.0, 76.0)]","boost_visible":false,"button":"[P: (517.0, 1418.0), S: (191.0, 88.0)]","button_visible":true,"caption":"Shield 48 / 65","minimum":"(147.0, 32.0)","rect":"[P: (368.0, 1512.0), S: (340.0, 76.0)]"}

@@ -1,0 +1,14 @@
+{
+  "apk_sha256": "14e35302c66c782d9b1970dcc782e83dbfc132c71965b1ece687e039a58be2f7",
+  "package": "org.nightshiftfm.releaseaudit",
+  "boot_source_sha256": "e15554f2032887cd31256bf7fccd399fca3b811434df5460e037a6709c360e34",
+  "runtime_sources_match": true,
+  "physical_device": "Pixel 10 Pro XL",
+  "page_size_bytes": 4096,
+  "player_package_modified": false,
+  "scope": "Isolated QA observer and normal production scenes; no player APK update or release upload.",
+  "temporary_qa_apps_removed": [
+    "physical Pixel",
+    "emulator"
+  ]
+}

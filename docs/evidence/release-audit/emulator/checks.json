@@ -1,0 +1,7 @@
+{
+  "checks": [],
+  "passed": false,
+  "frame_ms": {},
+  "device_kind": "emulator",
+  "scope": "Android OS taps and Back keys; isolated QA package. Completed-result save earned by desktop simulation. Short early-wave timing only, not thermal or full device playthrough acceptance."
+}

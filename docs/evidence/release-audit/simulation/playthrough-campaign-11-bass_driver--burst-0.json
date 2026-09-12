@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "M2_SWARMER_NAME",
+	"choices": 16,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "burst",
+	"mission": 11,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 16,
+	"seconds": 580.349999999801,
+	"style": "bass_driver",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

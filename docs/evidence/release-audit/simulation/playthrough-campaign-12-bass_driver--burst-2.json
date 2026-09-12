@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "COMBAT_PROJECTILE",
+	"choices": 7,
+	"cleared": 5,
+	"contract": "",
+	"difficulty": 2,
+	"finished": true,
+	"hull": 0.0,
+	"main": "burst",
+	"mission": 12,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 7,
+	"seconds": 337.983333333355,
+	"style": "bass_driver",
+	"valid": true,
+	"victory": false,
+	"wave": 6
+}

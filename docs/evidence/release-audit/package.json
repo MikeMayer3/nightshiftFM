@@ -1,0 +1,30 @@
+{
+  "artifact": "nightshift-fm-0.10.13-android-arm64-debug.apk",
+  "native_libraries": [
+    {
+      "library": "lib/arm64-v8a/libc++_shared.so",
+      "load_segment_alignment": [
+        16384,
+        16384,
+        16384
+      ],
+      "supports_16kb_alignment": true
+    },
+    {
+      "library": "lib/arm64-v8a/libgodot_android.so",
+      "load_segment_alignment": [
+        16384,
+        16384,
+        16384
+      ],
+      "supports_16kb_alignment": true
+    }
+  ],
+  "forbidden_resource_paths": [],
+  "debuggable": true,
+  "permissions": [
+    "package: org.nightshiftfm.spike",
+    "uses-permission: name='android.permission.VIBRATE'"
+  ],
+  "scope": "Static inspection of existing 0.10.13 APK. Does not prove runtime behavior on a 16 KB device or certify a production AAB."
+}

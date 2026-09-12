@@ -12,6 +12,7 @@ var generation_depth: int = 0
 var eligible_triggers: int = DIRECT
 var kind: Kind
 var target_id: int
+var critical: bool = false
 var amount: float
 
 func _init(serial: int, root_id: int, source: StringName, type: Kind, target: int, value: float) -> void:

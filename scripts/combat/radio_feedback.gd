@@ -1,6 +1,7 @@
 class_name RadioFeedback
 extends RefCounted
 ## Short-lived presentation state. Never stored in a checkpoint or applied to actors.
+var damage_numbers: DamageNumbers = DamageNumbers.new()
 var reactions: Dictionary = {}
 var upgrades: Dictionary = {}
 var wave: int = 0
@@ -26,6 +27,7 @@ static func signal_points(count: int, phase: float) -> PackedVector2Array:
 	return points
 
 func advance(delta: float) -> void:
+	damage_numbers.advance(delta)
 	wave_left = maxf(0, wave_left - delta)
 	for id: int in reactions.keys():
 		reactions[id].left -= delta
@@ -46,6 +48,7 @@ func upgrade(id: StringName) -> void:
 	if id in ArsenalContent.FAMILIES or id in [&"main",&"shield",&"repair"]: upgrades[id] = 1.3
 
 func reset() -> void:
+	damage_numbers.clear()
 	reactions.clear(); upgrades.clear(); wave = 0; wave_left = 0
 
 func recoil(actor: CombatActor, reduced: bool) -> Vector2:

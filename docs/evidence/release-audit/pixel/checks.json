@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "passed": true,
+      "check": "native fresh menu to campaign to equipment to combat"
+    },
+    {
+      "passed": true,
+      "check": "OS Back closes paused mixer and retains pause"
+    },
+    {
+      "passed": true,
+      "check": "paused combat clock does not advance"
+    },
+    {
+      "passed": true,
+      "check": "OS Back exits settings without resuming"
+    },
+    {
+      "passed": true,
+      "check": "OS Back closes live mixer"
+    },
+    {
+      "passed": true,
+      "check": "native info opens without buying upgrade"
+    },
+    {
+      "passed": true,
+      "check": "force-stop Continue restores actual decision offers"
+    },
+    {
+      "passed": true,
+      "check": "third compact card selects once through OS tap"
+    },
+    {
+      "passed": true,
+      "check": "earned completed save restores on physical Android"
+    },
+    {
+      "passed": true,
+      "check": "native contribution report opens"
+    },
+    {
+      "passed": true,
+      "check": "OS Back returns contribution report to results"
+    },
+    {
+      "passed": true,
+      "check": "native Retry starts a fresh mission"
+    },
+    {
+      "passed": true,
+      "check": "current QA process has no engine or Android crash errors"
+    }
+  ],
+  "passed": true,
+  "frame_ms": {
+    "median": 16.666666666666668,
+    "p95": 16.666666666666668,
+    "samples": 554
+  },
+  "device_kind": "physical",
+  "scope": "Android OS taps and Back keys; isolated QA package. Completed-result save earned by desktop simulation. Short early-wave timing only, not thermal or full device playthrough acceptance."
+}

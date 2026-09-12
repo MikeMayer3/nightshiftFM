@@ -60,7 +60,7 @@ func run(t: TestContext) -> bool:
 	needle.speed = 1000; needle.steering = 0
 	edge.arsenal._needles(edge, visible, needle, 4)
 	edge.arsenal._tick_needles(edge, 1)
-	t.check(hidden.health == hidden.max_health and edge.arsenal.needles.is_empty(), "traveling notes expire at the entry boundary")
+	t.check(hidden.health == hidden.max_health and not edge.arsenal.needles.is_empty(), "note drones orbit a valid target without attacking the protected entry")
 	# Weak choices must remain dangerous; no firing is an unambiguous loss control.
 	var idle: CombatSession = make()
 	idle.auto_fire = false

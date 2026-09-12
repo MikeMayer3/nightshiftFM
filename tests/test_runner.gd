@@ -71,6 +71,8 @@ func _run() -> void:
 	context.check(ENCOUNTER_TEST.new().run(context) == true, "M8 authored encounters suite completed")
 	context.check(ACHIEVEMENT_TEST.new().run(context) == true, "M9 achievement suite completed")
 	context.check(await RADIO_TEST.new().run(context, self) == true, "M10 presentation suite completed")
+	context.check(await preload("res://tests/unit/test_note_drones.gd").new().run(context, self) == true, "note drone and Mixer reminder suite completed")
+	context.check(await preload("res://tests/unit/test_damage_numbers.gd").new().run(context, self) == true, "damage number suite completed")
 	context.check(await preload("res://tests/unit/test_radio_feedback.gd").new().run(context, self) == true, "battlefield presentation and feedback suite completed")
 	context.check(preload("res://tests/unit/test_broadcast.gd").new().run(context) == true, "expanded campaign and mode suite completed")
 	context.check(preload("res://tests/unit/test_mixer.gd").new().run(context) == true, "mixer suite completed")

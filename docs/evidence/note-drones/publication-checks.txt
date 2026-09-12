@@ -1,0 +1,6 @@
+2026-09-11 publication verification
+Godot 4.7.2 pinned toolchain
+Import: PASS
+RESULT: 6159 checks; 0 failures
+Desktop smoke: PASS
+No ERROR, SCRIPT ERROR or FAIL markers in the three logs.

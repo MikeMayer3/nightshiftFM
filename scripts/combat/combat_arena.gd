@@ -11,6 +11,7 @@ var hit_flash: float = 0.0
 var pulses: Array[Dictionary] = []
 var chains: Array[Dictionary] = []
 var fragments: Array[Dictionary] = []
+var drone_shots: Array[Dictionary] = []
 var broadcast: RadioBroadcast
 var feedback: RadioFeedback = RadioFeedback.new()
 var _mouse_held: bool = false
@@ -105,6 +106,8 @@ func _can_aim() -> bool:
 func _process(delta: float) -> void:
 	if session != null and not session.paused and not session.is_deciding() and not session.is_wiring():
 		feedback.advance(delta)
+		for shot: Dictionary in drone_shots: shot.left -= delta
+		drone_shots = drone_shots.filter(func(shot: Dictionary) -> bool: return shot.left > 0)
 		waveform_time += delta
 		for id: StringName in support_flashes:
 			support_flashes[id] = maxf(0, float(support_flashes[id]) - delta)
@@ -120,12 +123,21 @@ func _process(delta: float) -> void:
 
 func show_event(event: CombatEvent) -> void:
 	feedback.hit(event)
+	if event.kind == CombatEvent.Kind.DAMAGE and session != null:
+		for actor: CombatActor in session.actors:
+			if actor.serial == event.target_id:
+				feedback.damage_numbers.hit(event, actor)
+				break
 	if event.kind != CombatEvent.Kind.KILL: return
 	for actor: CombatActor in session.actors:
 		if actor.serial != event.target_id: continue
 		if fragments.size() >= 32: fragments.pop_front()
 		fragments.append({"position": actor.position, "serial": actor.serial, "left": .32})
 		break
+
+func show_drone_shot(origin: Vector2, target: Vector2) -> void:
+	if drone_shots.size() >= 64: drone_shots.pop_front()
+	drone_shots.append({"origin": origin, "target": target, "left": .16})
 
 func show_shot(at: Vector2) -> void:
 	shot_end = at
@@ -161,7 +173,8 @@ func _draw() -> void:
 	if session.arsenal != null:
 		for needle: Dictionary in session.arsenal.needles:
 			var at: Vector2 = Vector2(needle.x, needle.y)
-			draw_circle(at, 5, DraftPanel.ACCENTS[&"needle_swarm"])
+			if needle.get("orbiting", false): draw_arc(at, 11, 0, TAU, 16, Color("cfb4ff", .3), 1.5, true)
+			draw_circle(at, 6, DraftPanel.ACCENTS[&"needle_swarm"])
 			draw_line(at + Vector2(4, 0), at + Vector2(4, -19), DraftPanel.ACCENTS[&"needle_swarm"], 3)
 			draw_arc(at + Vector2(6, -16), 6, -PI * .5, PI * .5, 8, DraftPanel.ACCENTS[&"needle_swarm"], 3)
 		for zone: Dictionary in session.arsenal.zones:
@@ -169,6 +182,11 @@ func _draw() -> void:
 			if zone.source == "static_net": _net_pattern(Vector2(zone.x, zone.y), float(zone.p.radius), tint)
 			elif zone.source == "reverb_well": _spiral(Vector2(zone.x, zone.y), float(zone.p.radius), tint, waveform_time)
 			# Bass is an impact pulse; its mechanical zone must not add static rings.
+	for shot: Dictionary in drone_shots:
+		var alpha: float = float(shot.left) / .16
+		draw_line(shot.origin, shot.target, Color("cfb4ff", alpha * .7), 2, true)
+		var bullet: Vector2 = Vector2(shot.origin).lerp(shot.target, 1 - alpha)
+		draw_circle(bullet, 3.5, Color("f4eee0", alpha))
 	for pulse: Dictionary in pulses:
 		var tint: Color = DraftPanel.ACCENTS.get(pulse.source, Color("efa968"))
 		tint.a = .45 if reduced else clampf(float(pulse.left) / .55, .15, .8)
@@ -300,6 +318,7 @@ func _draw() -> void:
 				for ring: int in 3:
 					draw_arc(at, 9 + ring * 8, direction.angle() - 1, direction.angle() + 1, 16, Color(cyan, .9 - ring * .2), 3)
 	_draw_support_turrets(aimed)
+	feedback.damage_numbers.draw(self)
 	# Incoming Signals stays above moving actors and every attack effect.
 	draw_set_transform(arena_offset(), 0, deck_stretch())
 	feedback.danger(self)

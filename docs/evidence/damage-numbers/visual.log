@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+M2_COMBAT {"actors":12,"event":"lifecycle","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.1,"shield":65.0,"wave":1}
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+M1_PROBE {"active_seconds":187.854192333322,"event":"ready","instances":1,"paused_drift":0,"pauses":0,"resumes":0,"taps":1}
+M2_COMBAT {"actors":0,"event":"start","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":0,"seconds":0.0,"shield":65.0,"wave":0}
+M2_COMBAT {"actors":0,"event":"wave","focus":false,"hull":100.0,"instances":1,"paused":false,"phase":1,"seconds":0.0166666666666667,"shield":65.0,"wave":1}
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+PASS: rendered number animation preserves gameplay and RNG
+PASS: real damage events reach the production arena
+RESULT: 18 rendered damage-number checks; 0 failures

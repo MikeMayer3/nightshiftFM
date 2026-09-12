@@ -1,0 +1,569 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (214 steps)
+[   0% ] update_scripts_classes |
+[   0% ] update_scripts_classes | AchievementCatalog
+[   0% ] update_scripts_classes | AchievementProfile
+[   1% ] update_scripts_classes | AchievementRun
+[   1% ] update_scripts_classes | PostRunAnalysis
+[   2% ] update_scripts_classes | BroadcastContent
+[   2% ] update_scripts_classes | BroadcastProfile
+[   3% ] update_scripts_classes | BroadcastRules
+[   3% ] update_scripts_classes | BroadcastWaves
+[   4% ] update_scripts_classes | CampaignContent
+[   4% ] update_scripts_classes | CampaignProfile
+[   5% ] update_scripts_classes | CampaignRun
+[   5% ] update_scripts_classes | EncounterContent
+[   6% ] update_scripts_classes | EncounterWaves
+[   6% ] update_scripts_classes | ModuleStats
+[   6% ] update_scripts_classes | ProgressionGoals
+[   7% ] update_scripts_classes | ActiveCombat
+[   7% ] update_scripts_classes | ArsenalCombat
+[   8% ] update_scripts_classes | BassPayoff
+[   8% ] update_scripts_classes | CombatActor
+[   9% ] update_scripts_classes | CombatArena
+[   9% ] update_scripts_classes | CombatContent
+[  10% ] update_scripts_classes | CombatEvent
+[  10% ] update_scripts_classes | CombatScreen
+[  11% ] update_scripts_classes | CombatSession
+[  11% ] update_scripts_classes | ContributionReport
+[  12% ] update_scripts_classes | EncounterDirector
+[  12% ] update_scripts_classes | RadioArt
+[  13% ] update_scripts_classes | RadioAudio
+[  13% ] update_scripts_classes | RadioBalance
+[  13% ] update_scripts_classes | RadioBroadcast
+[  14% ] update_scripts_classes | RadioEffects
+[  14% ] update_scripts_classes | RadioEncounters
+[  15% ] update_scripts_classes | RadioFeedback
+[  15% ] update_scripts_classes | RadioScenery
+[  16% ] update_scripts_classes | RadioShieldVisual
+[  16% ] update_scripts_classes | SignalSupportCombat
+[  17% ] update_scripts_classes | StatusState
+[  17% ] update_scripts_classes | SupportCombat
+[  18% ] update_scripts_classes | AchievementDefinition
+[  18% ] update_scripts_classes | ContentDefinition
+[  19% ] update_scripts_classes | EnemyDefinition
+[  19% ] update_scripts_classes | MissionDefinition
+[  20% ] update_scripts_classes | ModuleDefinition
+[  20% ] update_scripts_classes | ShieldDefinition
+[  20% ] update_scripts_classes | SynergyDefinition
+[  21% ] update_scripts_classes | UpgradeDefinition
+[  21% ] update_scripts_classes | WaveDefinition
+[  22% ] update_scripts_classes | WeaponDefinition
+[  22% ] update_scripts_classes | ProfileState
+[  23% ] update_scripts_classes | RunState
+[  23% ] update_scripts_classes | ShieldState
+[  24% ] update_scripts_classes | WeaponState
+[  24% ] update_scripts_classes | ContentValidator
+[  25% ] update_scripts_classes | GameRules
+[  25% ] update_scripts_classes | BuildGuide
+[  26% ] update_scripts_classes | MixerState
+[  26% ] update_scripts_classes | PatchboardContent
+[  26% ] update_scripts_classes | PatchboardState
+[  27% ] update_scripts_classes | AchievementPlatform
+[  27% ] update_scripts_classes | MobileProbe
+[  28% ] update_scripts_classes | ProbeClock
+[  28% ] update_scripts_classes | ProbeStore
+[  29% ] update_scripts_classes | SafeArea
+[  29% ] update_scripts_classes | ActiveContent
+[  30% ] update_scripts_classes | ArsenalContent
+[  30% ] update_scripts_classes | ArsenalDraft
+[  31% ] update_scripts_classes | ArsenalStats
+[  31% ] update_scripts_classes | BroadcastDraft
+[  32% ] update_scripts_classes | BroadcastProgress
+[  32% ] update_scripts_classes | DraftState
+[  33% ] update_scripts_classes | M3Content
+[  33% ] update_scripts_classes | M4Content
+[  33% ] update_scripts_classes | RunRandom
+[  34% ] update_scripts_classes | SignalContent
+[  34% ] update_scripts_classes | SignalDraft
+[  35% ] update_scripts_classes | SignalProgress
+[  35% ] update_scripts_classes | TrackDefinition
+[  36% ] update_scripts_classes | UpgradeTrack
+[  36% ] update_scripts_classes | ArsenalRuntime
+[  37% ] update_scripts_classes | MissionProfile
+[  37% ] update_scripts_classes | MissionStore
+[  38% ] update_scripts_classes | SaveChecks
+[  38% ] update_scripts_classes | SignalSnapshot
+[  39% ] update_scripts_classes | ArsenalPicker
+[  39% ] update_scripts_classes | BootScreen
+[  40% ] update_scripts_classes | BroadcastStrip
+[  40% ] update_scripts_classes | CampaignPanel
+[  40% ] update_scripts_classes | CombatCoach
+[  41% ] update_scripts_classes | ConnectionDiagram
+[  41% ] update_scripts_classes | DraftPanel
+[  42% ] update_scripts_classes | MixerDesk
+[  42% ] update_scripts_classes | MixerFader
+[  43% ] update_scripts_classes | ModuleCard
+[  43% ] update_scripts_classes | PageScroll
+[  44% ] update_scripts_classes | PatchboardPanel
+[  44% ] update_scripts_classes | ProgressionCard
+[  45% ] update_scripts_classes | RadioDial
+[  45% ] update_scripts_classes | RadioPreferences
+[  46% ] update_scripts_classes | RadioSettingsPanel
+[  46% ] update_scripts_classes | RadioUI
+[  46% ] update_scripts_classes | SafeMargin
+[  47% ] update_scripts_classes | SplashArt
+[  47% ] update_scripts_classes | TransmitterArt
+[  48% ] update_scripts_classes |
+[  48% ] update_scripts_classes |
+[  49% ] update_scripts_classes |
+[  49% ] update_scripts_classes |
+[  50% ] update_scripts_classes |
+[  50% ] update_scripts_classes |
+[  51% ] update_scripts_classes |
+[  51% ] update_scripts_classes |
+[  52% ] update_scripts_classes |
+[  52% ] update_scripts_classes |
+[  53% ] update_scripts_classes |
+[  53% ] update_scripts_classes |
+[  53% ] update_scripts_classes |
+[  54% ] update_scripts_classes |
+[  54% ] update_scripts_classes |
+[  55% ] update_scripts_classes |
+[  55% ] update_scripts_classes |
+[  56% ] update_scripts_classes |
+[  56% ] update_scripts_classes |
+[  57% ] update_scripts_classes |
+[  57% ] update_scripts_classes |
+[  58% ] update_scripts_classes |
+[  58% ] update_scripts_classes |
+[  59% ] update_scripts_classes |
+[  59% ] update_scripts_classes |
+[  60% ] update_scripts_classes |
+[  60% ] update_scripts_classes |
+[  60% ] update_scripts_classes |
+[  61% ] update_scripts_classes |
+[  61% ] update_scripts_classes |
+[  62% ] update_scripts_classes |
+[  62% ] update_scripts_classes |
+[  63% ] update_scripts_classes |
+[  63% ] update_scripts_classes |
+[  64% ] update_scripts_classes |
+[  64% ] update_scripts_classes |
+[  65% ] update_scripts_classes |
+[  65% ] update_scripts_classes |
+[  66% ] update_scripts_classes |
+[  66% ] update_scripts_classes |
+[  66% ] update_scripts_classes |
+[  67% ] update_scripts_classes |
+[  67% ] update_scripts_classes |
+[  68% ] update_scripts_classes |
+[  68% ] update_scripts_classes |
+[  69% ] update_scripts_classes |
+[  69% ] update_scripts_classes |
+[  70% ] update_scripts_classes |
+[  70% ] update_scripts_classes |
+[  71% ] update_scripts_classes |
+[  71% ] update_scripts_classes |
+[  72% ] update_scripts_classes |
+[  72% ] update_scripts_classes |
+[  73% ] update_scripts_classes |
+[  73% ] update_scripts_classes |
+[  73% ] update_scripts_classes |
+[  74% ] update_scripts_classes |
+[  74% ] update_scripts_classes |
+[  75% ] update_scripts_classes |
+[  75% ] update_scripts_classes |
+[  76% ] update_scripts_classes |
+[  76% ] update_scripts_classes |
+[  77% ] update_scripts_classes |
+[  77% ] update_scripts_classes |
+[  78% ] update_scripts_classes |
+[  78% ] update_scripts_classes |
+[  79% ] update_scripts_classes |
+[  79% ] update_scripts_classes |
+[  80% ] update_scripts_classes |
+[  80% ] update_scripts_classes |
+[  80% ] update_scripts_classes |
+[  81% ] update_scripts_classes |
+[  81% ] update_scripts_classes |
+[  82% ] update_scripts_classes |
+[  82% ] update_scripts_classes |
+[  83% ] update_scripts_classes |
+[  83% ] update_scripts_classes |
+[  84% ] update_scripts_classes |
+[  84% ] update_scripts_classes | TestContext
+[  85% ] update_scripts_classes |
+[  85% ] update_scripts_classes |
+[  86% ] update_scripts_classes |
+[  86% ] update_scripts_classes |
+[  86% ] update_scripts_classes |
+[  87% ] update_scripts_classes |
+[  87% ] update_scripts_classes |
+[  88% ] update_scripts_classes |
+[  88% ] update_scripts_classes |
+[  89% ] update_scripts_classes |
+[  89% ] update_scripts_classes |
+[  90% ] update_scripts_classes |
+[  90% ] update_scripts_classes |
+[  91% ] update_scripts_classes |
+[  91% ] update_scripts_classes |
+[  92% ] update_scripts_classes |
+[  92% ] update_scripts_classes |
+[  93% ] update_scripts_classes |
+[  93% ] update_scripts_classes |
+[  93% ] update_scripts_classes |
+[  94% ] update_scripts_classes |
+[  94% ] update_scripts_classes |
+[  95% ] update_scripts_classes |
+[  95% ] update_scripts_classes |
+[  96% ] update_scripts_classes |
+[  96% ] update_scripts_classes |
+[  97% ] update_scripts_classes |
+[  97% ] update_scripts_classes |
+[  98% ] update_scripts_classes |
+[  98% ] update_scripts_classes |
+[  99% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started Scanning actions... (64 steps)
+[   0% ] _update_scan_actions | arc.svg
+[   1% ] _update_scan_actions | bass.svg
+[   3% ] _update_scan_actions | bass_wideband.svg
+[   4% ] _update_scan_actions | echo.svg
+[   6% ] _update_scan_actions | needle.svg
+[   7% ] _update_scan_actions | net.svg
+[   9% ] _update_scan_actions | pulse.svg
+[  10% ] _update_scan_actions | repair.svg
+[  12% ] _update_scan_actions | reverb.svg
+[  13% ] _update_scan_actions | shield.svg
+[  15% ] _update_scan_actions | title_reward.svg
+[  16% ] _update_scan_actions | counterweight.svg
+[  18% ] _update_scan_actions | fast_fuse.svg
+[  20% ] _update_scan_actions | glass_tower.svg
+[  21% ] _update_scan_actions | heavy_battery.svg
+[  23% ] _update_scan_actions | hot_tubes.svg
+[  24% ] _update_scan_actions | long_mast.svg
+[  26% ] _update_scan_actions | narrowband_module.svg
+[  27% ] _update_scan_actions | night_ledger.svg
+[  29% ] _update_scan_actions | quiet_room.svg
+[  30% ] _update_scan_actions | signal_booster.svg
+[  32% ] _update_scan_actions | thin_wire.svg
+[  33% ] _update_scan_actions | wideband_module.svg
+[  35% ] _update_scan_actions | aerial.svg
+[  36% ] _update_scan_actions | arc.svg
+[  38% ] _update_scan_actions | bass.svg
+[  40% ] _update_scan_actions | burst.svg
+[  41% ] _update_scan_actions | caller.svg
+[  43% ] _update_scan_actions | carrier_1.svg
+[  44% ] _update_scan_actions | carrier_2.svg
+[  46% ] _update_scan_actions | carrier_3.svg
+[  47% ] _update_scan_actions | caster.svg
+[  49% ] _update_scan_actions | core.svg
+[  50% ] _update_scan_actions | diver_1.svg
+[  52% ] _update_scan_actions | diver_2.svg
+[  53% ] _update_scan_actions | diver_3.svg
+[  55% ] _update_scan_actions | echo.svg
+[  56% ] _update_scan_actions | jammer.svg
+[  58% ] _update_scan_actions | mimic.svg
+[  60% ] _update_scan_actions | mixer_fader.svg
+[  61% ] _update_scan_actions | mortar.svg
+[  63% ] _update_scan_actions | needle.svg
+[  64% ] _update_scan_actions | net.svg
+[  66% ] _update_scan_actions | plated.svg
+[  67% ] _update_scan_actions | pulse.svg
+[  69% ] _update_scan_actions | reverb.svg
+[  70% ] _update_scan_actions | silence.svg
+[  72% ] _update_scan_actions | swarmer_1.svg
+[  73% ] _update_scan_actions | swarmer_2.svg
+[  75% ] _update_scan_actions | swarmer_3.svg
+[  76% ] _update_scan_actions | sweep.svg
+[  78% ] _update_scan_actions | nightshift_station.png
+[  80% ] _update_scan_actions | icon.svg
+[  81% ] _update_scan_actions | hit.wav
+[  83% ] _update_scan_actions | line_open.wav
+[  84% ] _update_scan_actions | ridge_alert.wav
+[  86% ] _update_scan_actions | shield.wav
+[  87% ] _update_scan_actions | sign_on.wav
+[  89% ] _update_scan_actions | station.wav
+[  90% ] _update_scan_actions | transmit.wav
+[  92% ] _update_scan_actions | tune.wav
+[  93% ] _update_scan_actions | warning.wav
+[  95% ] _update_scan_actions | wideband.wav
+[  96% ] _update_scan_actions | ui_strings.csv
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importing Assets (64 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   1% ] reimport | Preparing files to reimport...
+[   3% ] reimport | Preparing files to reimport...
+[   4% ] reimport | Preparing files to reimport...
+[   6% ] reimport | Preparing files to reimport...
+[   7% ] reimport | Preparing files to reimport...
+[   9% ] reimport | Preparing files to reimport...
+[  10% ] reimport | Preparing files to reimport...
+[  12% ] reimport | Preparing files to reimport...
+[  13% ] reimport | Preparing files to reimport...
+[  15% ] reimport | Preparing files to reimport...
+[  16% ] reimport | Preparing files to reimport...
+[  18% ] reimport | Preparing files to reimport...
+[  20% ] reimport | Preparing files to reimport...
+[  21% ] reimport | Preparing files to reimport...
+[  23% ] reimport | Preparing files to reimport...
+[  24% ] reimport | Preparing files to reimport...
+[  26% ] reimport | Preparing files to reimport...
+[  27% ] reimport | Preparing files to reimport...
+[  29% ] reimport | Preparing files to reimport...
+[  30% ] reimport | Preparing files to reimport...
+[  32% ] reimport | Preparing files to reimport...
+[  33% ] reimport | Preparing files to reimport...
+[  35% ] reimport | Preparing files to reimport...
+[  36% ] reimport | Preparing files to reimport...
+[  38% ] reimport | Preparing files to reimport...
+[  40% ] reimport | Preparing files to reimport...
+[  41% ] reimport | Preparing files to reimport...
+[  43% ] reimport | Preparing files to reimport...
+[  44% ] reimport | Preparing files to reimport...
+[  46% ] reimport | Preparing files to reimport...
+[  47% ] reimport | Preparing files to reimport...
+[  49% ] reimport | Preparing files to reimport...
+[  50% ] reimport | Preparing files to reimport...
+[  52% ] reimport | Preparing files to reimport...
+[  53% ] reimport | Preparing files to reimport...
+[  55% ] reimport | Preparing files to reimport...
+[  56% ] reimport | Preparing files to reimport...
+[  58% ] reimport | Preparing files to reimport...
+[  60% ] reimport | Preparing files to reimport...
+[  61% ] reimport | Preparing files to reimport...
+[  63% ] reimport | Preparing files to reimport...
+[  64% ] reimport | Preparing files to reimport...
+[  66% ] reimport | Preparing files to reimport...
+[  67% ] reimport | Preparing files to reimport...
+[  69% ] reimport | Preparing files to reimport...
+[  70% ] reimport | Preparing files to reimport...
+[  72% ] reimport | Preparing files to reimport...
+[  73% ] reimport | Preparing files to reimport...
+[  75% ] reimport | Preparing files to reimport...
+[  76% ] reimport | Preparing files to reimport...
+[  78% ] reimport | Preparing files to reimport...
+[  80% ] reimport | Preparing files to reimport...
+[  81% ] reimport | Preparing files to reimport...
+[  83% ] reimport | Preparing files to reimport...
+[  84% ] reimport | Preparing files to reimport...
+[  86% ] reimport | Preparing files to reimport...
+[  87% ] reimport | Preparing files to reimport...
+[  89% ] reimport | Preparing files to reimport...
+[  90% ] reimport | Preparing files to reimport...
+[  92% ] reimport | Preparing files to reimport...
+[  93% ] reimport | Preparing files to reimport...
+[  95% ] reimport | Preparing files to reimport...
+[  96% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | ui_strings.csv
+[   1% ] reimport | ui_strings.csv
+[   3% ] reimport | caller.svg
+[   4% ] reimport | carrier_1.svg
+[   6% ] reimport | carrier_2.svg
+[   7% ] reimport | carrier_3.svg
+[   9% ] reimport | caster.svg
+[  10% ] reimport | core.svg
+[  12% ] reimport | diver_1.svg
+[  13% ] reimport | diver_2.svg
+[  15% ] reimport | diver_3.svg
+[  16% ] reimport | echo.svg
+[  18% ] reimport | jammer.svg
+[  20% ] reimport | mimic.svg
+[  21% ] reimport | mixer_fader.svg
+[  23% ] reimport | mortar.svg
+[  24% ] reimport | needle.svg
+[  26% ] reimport | net.svg
+[  27% ] reimport | plated.svg
+[  29% ] reimport | pulse.svg
+[  30% ] reimport | reverb.svg
+[  32% ] reimport | silence.svg
+[  33% ] reimport | swarmer_1.svg
+[  35% ] reimport | swarmer_2.svg
+[  36% ] reimport | swarmer_3.svg
+[  38% ] reimport | sweep.svg
+[  40% ] reimport | nightshift_station.png
+[  41% ] reimport | icon.svg
+[  43% ] reimport | arc.svg
+[  44% ] reimport | bass.svg
+[  46% ] reimport | bass_wideband.svg
+[  47% ] reimport | echo.svg
+[  49% ] reimport | needle.svg
+[  50% ] reimport | net.svg
+[  52% ] reimport | pulse.svg
+[  53% ] reimport | repair.svg
+[  55% ] reimport | reverb.svg
+[  56% ] reimport | shield.svg
+[  58% ] reimport | title_reward.svg
+[  60% ] reimport | counterweight.svg
+[  61% ] reimport | fast_fuse.svg
+[  63% ] reimport | burst.svg
+[  64% ] reimport | bass.svg
+[  66% ] reimport | arc.svg
+[  67% ] reimport | aerial.svg
+[  69% ] reimport | wideband_module.svg
+[  70% ] reimport | thin_wire.svg
+[  72% ] reimport | signal_booster.svg
+[  73% ] reimport | glass_tower.svg
+[  75% ] reimport | heavy_battery.svg
+[  76% ] reimport | hot_tubes.svg
+[  78% ] reimport | long_mast.svg
+[  80% ] reimport | narrowband_module.svg
+[  81% ] reimport | night_ledger.svg
+[  83% ] reimport | ui_strings.csv
+[  84% ] reimport | caller.svg
+[  86% ] reimport | carrier_1.svg
+[  87% ] reimport | carrier_2.svg
+[  89% ] reimport | carrier_3.svg
+[  90% ] reimport | caster.svg
+[  92% ] reimport | core.svg
+[  93% ] reimport | diver_1.svg
+[  95% ] reimport | diver_2.svg
+[  96% ] reimport | diver_3.svg
+[  98% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (64 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[ DONE ] loading_editor_layout
+
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] export | Started Exporting for Android (105 steps)
+0 param: --xr_mode_regular
+1 param: --xr-mode
+2 param: off
+3 param: --background_color
+4 param: #000000
+[   0% ] export | Creating APK...
+ADDING: classes.dex
+ADDING: classes10.dex
+ADDING: classes11.dex
+ADDING: classes12.dex
+ADDING: classes13.dex
+ADDING: classes2.dex
+ADDING: classes3.dex
+ADDING: classes4.dex
+ADDING: classes5.dex
+ADDING: classes6.dex
+ADDING: classes7.dex
+ADDING: classes8.dex
+ADDING: classes9.dex
+ADDING: lib/arm64-v8a/libc++_shared.so
+ADDING: lib/arm64-v8a/libgodot_android.so
+Adding application metadata org.godotengine.rendering.method
+Adding application metadata org.godotengine.editor.version
+Adding permission android.permission.VIBRATE
+ADDING: AndroidManifest.xml
+ADDING: res/anim-v21/fragment_fast_out_extra_slow_in.xml
+ADDING: res/animator/fragment_close_enter.xml
+ADDING: res/animator/fragment_close_exit.xml
+ADDING: res/animator/fragment_fade_enter.xml
+ADDING: res/animator/fragment_fade_exit.xml
+ADDING: res/animator/fragment_open_enter.xml
+ADDING: res/animator/fragment_open_exit.xml
+ADDING: res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable-v21/notification_action_background.xml
+ADDING: res/drawable-v23/compat_splash_screen.xml
+ADDING: res/drawable-v23/compat_splash_screen_no_icon_background.xml
+ADDING: res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_normal.9.png
+ADDING: res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+ADDING: res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png
+ADDING: res/drawable/icon_background.xml
+ADDING: res/drawable/notification_bg.xml
+ADDING: res/drawable/notification_bg_low.xml
+ADDING: res/drawable/notification_icon_background.xml
+ADDING: res/drawable/notification_tile_bg.xml
+ADDING: res/drawable/splash_branding_image.webp
+ADDING: res/drawable/splash_icon.webp
+ADDING: res/layout-v21/notification_action.xml
+ADDING: res/layout-v21/notification_action_tombstone.xml
+ADDING: res/layout-v21/notification_template_custom_big.xml
+ADDING: res/layout-v21/notification_template_icon_group.xml
+ADDING: res/layout/custom_dialog.xml
+ADDING: res/layout/godot_app_layout.xml
+ADDING: res/layout/notification_template_part_chronometer.xml
+ADDING: res/layout/notification_template_part_time.xml
+ADDING: res/layout/remote_godot_fragment_layout.xml
+ADDING: res/layout/snackbar.xml
+ADDING: res/layout/splash_screen_view.xml
+ADDING: res/mipmap-anydpi-v26/icon.xml
+ADDING: res/mipmap-hdpi-v4/icon.webp
+ADDING: res/mipmap-hdpi-v4/icon_background.webp
+ADDING: res/mipmap-hdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-hdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-mdpi-v4/icon.webp
+ADDING: res/mipmap-mdpi-v4/icon_background.webp
+ADDING: res/mipmap-mdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-mdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xhdpi-v4/icon.webp
+ADDING: res/mipmap-xhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xxhdpi-v4/icon.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xxhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_background.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_foreground.webp
+ADDING: res/mipmap-xxxhdpi-v4/icon_monochrome.webp
+ADDING: res/mipmap/icon.webp
+ADDING: res/mipmap/icon_background.webp
+ADDING: res/mipmap/icon_foreground.webp
+ADDING: res/mipmap/icon_monochrome.webp
+ADDING: res/xml/godot_provider_paths.xml
+ADDING: resources.arsc
+ADDING: DebugProbesKt.bin
+ADDING: kotlin/annotation/annotation.kotlin_builtins
+ADDING: kotlin/collections/collections.kotlin_builtins
+ADDING: kotlin/concurrent/atomics/atomics.kotlin_builtins
+ADDING: kotlin/coroutines/coroutines.kotlin_builtins
+ADDING: kotlin/internal/internal.kotlin_builtins
+ADDING: kotlin/kotlin.kotlin_builtins
+ADDING: kotlin/ranges/ranges.kotlin_builtins
+ADDING: kotlin/reflect/reflect.kotlin_builtins
+[   0% ] export | Adding files...
+[  97% ] export | Aligning APK...
+[  98% ] export | Signing debug APK...
+Signing binary using:
+<local-path> sign --verbose --ks <REDACTED> --ks-pass pass:<REDACTED> --ks-key-alias <REDACTED> <local-path> FM/nightshift_fm_codex_pack/builds/android/nightshift-release-audit.apk
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:<local-path>
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Signed
+
+[  99% ] export | Verifying APK...
+[ DONE ] export
+
+<local-path> FM/nightshift_fm_codex_pack/builds/android/nightshift-release-audit.apk

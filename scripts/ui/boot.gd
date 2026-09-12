@@ -189,6 +189,11 @@ func _system_back() -> void:
 	if current_page == Page.COMBAT and combat != null:
 		if combat.settings_panel != null:
 			combat.settings_panel.back_requested.emit()
+		elif combat.mixer_open:
+			combat.close_mixer()
+		elif combat.report_open:
+			combat.report_open = false
+			combat._refresh()
 		elif not combat.manual_pause:
 			combat.toggle_pause()
 	elif current_page == Page.MENU:

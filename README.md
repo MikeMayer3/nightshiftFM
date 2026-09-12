@@ -1,23 +1,25 @@
 # Nightshift FM — Codex development handoff
 
-Current build: **0.10.4 — twelve stations, Contracts and Endless.** Defend
-radio with a centered transmission tower and six vintage instrument families
-against modern devices. All twelve ten-wave missions, eight regular enemy roles,
-three bosses, Hard/Overload and six Contracts are playable. All 48 local
-achievement conditions are evaluated; debug/editor play remains ineligible.
+Current build: **0.10.15 — note drones, damage numbers and Mixer guidance.**
+Defend the radio station with a centered transmission tower and six vintage
+instrument families across twelve stations, Contracts and Endless.
 
-The M10 pass adds distinct device tells, rank hardware, regional scenery, original
-music and a compact patchboard. The approved tuning dial, rotating knobs, tall
-field and bottom Station Health layout remain intact. Select **New broadcast**,
-a mission and optionally **Broadcast modes**, then equipment and **Go live**.
-Modules are available immediately. Existing saves retain their original rules.
+[Download the Android APK and construction summary](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.15).
+The release includes SHA-256 checksums. The APK is an Android ARM64 debug build
+(version code 27), not a Play Store production bundle.
 
-Android debug artifact: `builds/android/nightshift-m10.apk` (0.10.4/code 16).
-Updated on the physical Pixel 10 Pro XL with existing saves preserved. Emulator
-playtests and automated checks passed; physical gameplay, iPhone and human
-acceptance remain open. No M11 release work.
-See [delivery and exact evidence](docs/M8_M10_DELIVERY.md) and
-[implementation status](docs/IMPLEMENTATION_STATUS.md).
+Hits display floating damage numbers with larger gold criticals. Turntable notes
+orbit enemies and fire three baseline shots before disappearing. An in-game
+reminder points players to the Mixer. Android Back now closes a paused Mixer and
+returns from the contribution report to results.
+
+Version 0.10.15 is installed on the physical Pixel with saves/settings preserved;
+the phone was locked during the final launch check. Desktop automated and visual
+evidence is recorded in [note drones](docs/NOTE_DRONES.md),
+[damage numbers](docs/DAMAGE_NUMBERS.md) and the
+[release playthrough audit](docs/RELEASE_PLAYTHROUGH_AUDIT.md).
+Human gameplay acceptance, the intermittent Android shield-caption issue and
+remaining store gates are still open. See [current status](docs/IMPLEMENTATION_STATUS.md).
 
 Open `project.godot` in Godot 4.7.2 standard, or follow
 [development instructions](docs/DEVELOPMENT.md) and
@@ -40,8 +42,8 @@ commands, to import with Godot 4.7.2 standard before running tests or the game.
 Generated `.godot/` caches, APKs/builds, credentials, and local saves are excluded.
 GitHub synchronizes source and evidence; it does not synchronize device saves.
 
-Read `docs/IMPLEMENTATION_STATUS.md` before continuing. M10 is the current
-owner-requested milestone; stop and report its evidence before starting M11.
+Read `handoff.md` and `docs/IMPLEMENTATION_STATUS.md` before continuing. The current
+work is owner-directed combat/UI polish; do not start another milestone automatically.
 `prompts/START_HERE.md` preserves the original M0 prompt as history.
 
 | File | Purpose |

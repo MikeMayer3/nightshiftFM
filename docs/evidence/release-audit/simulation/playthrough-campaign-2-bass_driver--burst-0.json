@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "COMBAT_NO_DAMAGE",
+	"choices": 28,
+	"cleared": 10,
+	"contract": "",
+	"difficulty": 0,
+	"finished": true,
+	"hull": 100.0,
+	"main": "burst",
+	"mission": 2,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 28,
+	"seconds": 599.233333333117,
+	"style": "bass_driver",
+	"valid": true,
+	"victory": true,
+	"wave": 10
+}

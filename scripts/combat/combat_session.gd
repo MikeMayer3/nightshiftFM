@@ -7,6 +7,7 @@ signal fired(target: Vector2)
 signal wave_started(number: int)
 signal checkpoint_changed
 signal combat_event(event: CombatEvent)
+signal drone_fired(origin: Vector2, target: Vector2)
 signal support_effect(source: StringName, center: Vector2, radius: Vector2)
 signal chain_fired(points: PackedVector2Array, support: bool)
 
@@ -166,7 +167,7 @@ func target(source: StringName = &"") -> CombatActor:
 			score = candidate
 	return best
 
-func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main", root_id: int = 0, penetration: float = 0.0) -> void:
+func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main", root_id: int = 0, penetration: float = 0.0, critical: bool = false) -> void:
 	if not RadioBalance.can_hit(self, actor, source) or paused or is_finished() or is_deciding() or actor.resolved or amount <= 0.0 or not is_finite(amount):
 		return
 	if signal_progress != null and signal_progress.overdrive_left > 0: amount *= 1.25
@@ -181,7 +182,7 @@ func damage_actor(actor: CombatActor, amount: float, source: StringName = &"main
 	if supports != null and not actor.projectile: supports.report.add(source, &"damage", effective)
 	if patchboard != null and not actor.projectile: patchboard.add(source, "damage", effective)
 	actor.health = maxf(0.0, actor.health - amount)
-	_event(CombatEvent.Kind.DAMAGE, source, root_id, actor.serial, effective)
+	_event(CombatEvent.Kind.DAMAGE, source, root_id, actor.serial, effective, true, critical)
 	if actor.health == 0.0:
 		actor.resolved = true
 		if actor.projectile:
@@ -646,11 +647,12 @@ func _fire_track(owned: UpgradeTrack, first: CombatActor) -> void:
 					victim = candidate
 					origin = endpoint
 
-func _event(kind: CombatEvent.Kind, source: StringName, root_id: int, target_id: int, amount: float, can_echo: bool = true) -> void:
+func _event(kind: CombatEvent.Kind, source: StringName, root_id: int, target_id: int, amount: float, can_echo: bool = true, critical: bool = false) -> void:
 	# A support can refill the shield and an enemy can hit it in the same step.
 	if achievement_run != null and kind == CombatEvent.Kind.SHIELD_HEAL: achievement_run.observe(self)
 	event_serial += 1
 	var event: CombatEvent = CombatEvent.new(event_serial, root_id, source, kind, target_id, amount)
+	event.critical = critical
 	if source == &"main" and can_echo and (arsenal == null or kind == CombatEvent.Kind.ATTACK): event.eligible_triggers |= CombatEvent.CAN_ECHO
 	if arsenal != null and (source in [&"echo_deck", &"shield"] or PatchboardContent.RECIPES.has(source)):
 		event.generation_depth = 1

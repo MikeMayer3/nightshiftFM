@@ -1,0 +1,12 @@
+{
+  "version": "0.10.15",
+  "version_code": 27,
+  "package": "org.nightshiftfm.spike",
+  "filename": "nightshift-fm-0.10.15-android-arm64-debug.apk",
+  "bytes": 31445279,
+  "sha256": "6291dcdffa2e426426c92ed7087cbbf8decc479591e7d844c9da47d0cd326843",
+  "physical_install": "PASS",
+  "save_settings_files_preserved": 6,
+  "visible_launch": "NOT RUN: phone locked",
+  "release_tag": "v0.10.15"
+}

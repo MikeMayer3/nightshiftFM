@@ -732,60 +732,60 @@ M5_NEEDLE_SWARM_T0_DESC,+15% base damage.
 M5_NEEDLE_SWARM_T1_NAME,Tempo
 M5_NEEDLE_SWARM_T1_SHORT,+10% attack speed
 M5_NEEDLE_SWARM_T1_DESC,+10% attack speed.
-M5_NEEDLE_SWARM_T2_NAME,Pierce
-M5_NEEDLE_SWARM_T2_SHORT,+1 pierce
-M5_NEEDLE_SWARM_T2_DESC,+1 pierce.
-M5_NEEDLE_SWARM_T3_NAME,Steering
-M5_NEEDLE_SWARM_T3_SHORT,Sharper homing
-M5_NEEDLE_SWARM_T3_DESC,Sharper homing.
-M5_NEEDLE_SWARM_T4_NAME,Extra Needle
-M5_NEEDLE_SWARM_T4_SHORT,+1 projectiles
-M5_NEEDLE_SWARM_T4_DESC,+1 projectiles.
-M5_NEEDLE_SWARM_T5_NAME,Long Mark
-M5_NEEDLE_SWARM_T5_SHORT,+0.75s duration
-M5_NEEDLE_SWARM_T5_DESC,+0.75s duration.
-M5_NEEDLE_SWARM_B1_NAME,Piercing Needles
-M5_NEEDLE_SWARM_B1_SHORT,"+2 pierce, straight flight"
-M5_NEEDLE_SWARM_B1_DESC,"+2 pierce, straight flight."
+M5_NEEDLE_SWARM_T2_NAME,Encore
+M5_NEEDLE_SWARM_T2_SHORT,+1 shot per note
+M5_NEEDLE_SWARM_T2_DESC,Each note fires one extra shot before disappearing.
+M5_NEEDLE_SWARM_T3_NAME,Faster Rhythm
+M5_NEEDLE_SWARM_T3_SHORT,Faster orbit and firing
+M5_NEEDLE_SWARM_T3_DESC,Notes circle their targets and fire faster.
+M5_NEEDLE_SWARM_T4_NAME,Extra Note
+M5_NEEDLE_SWARM_T4_SHORT,+1 note drone
+M5_NEEDLE_SWARM_T4_DESC,Launch one additional note drone per volley.
+M5_NEEDLE_SWARM_T5_NAME,Long Play
+M5_NEEDLE_SWARM_T5_SHORT,+0.75s drone and mark duration
+M5_NEEDLE_SWARM_T5_DESC,Drones and vulnerability marks last 0.75 seconds longer.
+M5_NEEDLE_SWARM_B1_NAME,Extended Play
+M5_NEEDLE_SWARM_B1_SHORT,"+2 shots per note, slower rhythm"
+M5_NEEDLE_SWARM_B1_DESC,Each note carries two extra shots but orbits and fires more slowly.
 M5_NEEDLE_SWARM_B1M1_NAME,Long Groove
-M5_NEEDLE_SWARM_B1M1_SHORT,"+2 pierce, damage fades after each pierced target"
-M5_NEEDLE_SWARM_B1M1_DESC,"+2 pierce, damage fades after each pierced target."
+M5_NEEDLE_SWARM_B1M1_SHORT,"+2 shots, damage fades with each shot"
+M5_NEEDLE_SWARM_B1M1_DESC,Each note carries two extra shots; successive shots deal less damage.
 M5_NEEDLE_SWARM_B1M2_NAME,Hard Cut
-M5_NEEDLE_SWARM_B1M2_SHORT,"+60% base damage, -1 pierce"
-M5_NEEDLE_SWARM_B1M2_DESC,"+60% base damage, -1 pierce."
+M5_NEEDLE_SWARM_B1M2_SHORT,"+60% base damage, -1 shot per note"
+M5_NEEDLE_SWARM_B1M2_DESC,"+60% base damage, but each note carries one fewer shot."
 M5_NEEDLE_SWARM_B1CAP_NAME,Record Cutter
-M5_NEEDLE_SWARM_B1CAP_SHORT,+3 pierce
-M5_NEEDLE_SWARM_B1CAP_DESC,+3 pierce.
-M5_NEEDLE_SWARM_B2_NAME,Homing Swarm
-M5_NEEDLE_SWARM_B2_SHORT,"Sharper homing, -1 pierce"
-M5_NEEDLE_SWARM_B2_DESC,"Sharper homing, -1 pierce."
+M5_NEEDLE_SWARM_B1CAP_SHORT,+3 shots per note
+M5_NEEDLE_SWARM_B1CAP_DESC,Each note carries three additional shots.
+M5_NEEDLE_SWARM_B2_NAME,Rapid Rhythm
+M5_NEEDLE_SWARM_B2_SHORT,"Faster orbit and firing, -1 shot per note"
+M5_NEEDLE_SWARM_B2_DESC,Notes circle and fire faster but carry one fewer shot.
 M5_NEEDLE_SWARM_B2M1_NAME,Wide Seek
-M5_NEEDLE_SWARM_B2M1_SHORT,"+200 reach, slower projectiles"
-M5_NEEDLE_SWARM_B2M1_DESC,"+200 reach, slower projectiles."
+M5_NEEDLE_SWARM_B2M1_SHORT,"+200 seek range, slower note travel"
+M5_NEEDLE_SWARM_B2M1_DESC,Notes seek replacement targets farther away but travel more slowly. Station range still applies.
 M5_NEEDLE_SWARM_B2M2_NAME,Close Pursuit
-M5_NEEDLE_SWARM_B2M2_SHORT,"Sharper homing, faster projectiles, -0.5s duration"
-M5_NEEDLE_SWARM_B2M2_DESC,"Sharper homing, faster projectiles, -0.5s duration."
+M5_NEEDLE_SWARM_B2M2_SHORT,"Faster rhythm and travel, -0.5s duration"
+M5_NEEDLE_SWARM_B2M2_DESC,"Notes travel, orbit and fire faster, but last half a second less."
 M5_NEEDLE_SWARM_B2CAP_NAME,Needle Hurricane
-M5_NEEDLE_SWARM_B2CAP_SHORT,+3 projectiles
-M5_NEEDLE_SWARM_B2CAP_DESC,+3 projectiles.
+M5_NEEDLE_SWARM_B2CAP_SHORT,+3 note drones
+M5_NEEDLE_SWARM_B2CAP_DESC,Launch three additional note drones per volley.
 M5_NEEDLE_SWARM_B3_NAME,Marking Pins
 M5_NEEDLE_SWARM_B3_SHORT,"+20% mark strength, -20% base damage"
 M5_NEEDLE_SWARM_B3_DESC,"+20% mark strength, -20% base damage."
 M5_NEEDLE_SWARM_B3M1_NAME,Spotlight
-M5_NEEDLE_SWARM_B3M1_SHORT,"+15% mark strength, -1 projectiles"
-M5_NEEDLE_SWARM_B3M1_DESC,"+15% mark strength, -1 projectiles."
+M5_NEEDLE_SWARM_B3M1_SHORT,"+15% mark strength, -1 note"
+M5_NEEDLE_SWARM_B3M1_DESC,"+15% mark strength, but launch one fewer note per volley."
 M5_NEEDLE_SWARM_B3M2_NAME,Full Set
-M5_NEEDLE_SWARM_B3M2_SHORT,"+2 projectiles, -5% mark strength"
-M5_NEEDLE_SWARM_B3M2_DESC,"+2 projectiles, -5% mark strength."
+M5_NEEDLE_SWARM_B3M2_SHORT,"+2 notes, -5% mark strength"
+M5_NEEDLE_SWARM_B3M2_DESC,Launch two additional notes with 5% less mark strength.
 M5_NEEDLE_SWARM_B3CAP_NAME,Perfect Groove
 M5_NEEDLE_SWARM_B3CAP_SHORT,"+15% mark strength, prioritize elites and marked targets"
 M5_NEEDLE_SWARM_B3CAP_DESC,"+15% mark strength, prioritize elites and marked targets."
 M5_NEEDLE_SWARM_NAME,Turntable
-M5_NEEDLE_SWARM_PREVIEW,Traveling projectiles and marks
+M5_NEEDLE_SWARM_PREVIEW,"Note drones orbit enemies and fire three shots each. Upgrades add shots, notes and marks."
 M3_NEEDLE_SWARM_SHORT_NAME,Turntable
 SIGNAL_NEEDLE_SWARM_NEW_NAME,Turntable
-SIGNAL_NEEDLE_SWARM_NEW_SHORT,Traveling projectiles and marks
-SIGNAL_NEEDLE_SWARM_NEW_DESC,Traveling projectiles and marks. Starts at rank 1.
+SIGNAL_NEEDLE_SWARM_NEW_SHORT,"Note drones orbit enemies and fire three shots each. Upgrades add shots, notes and marks."
+SIGNAL_NEEDLE_SWARM_NEW_DESC,"Note drones orbit enemies and fire three shots each. Upgrades add shots, notes and marks. Starts at rank 1."
 M5_REVERB_WELL_T0_NAME,Long Well
 M5_REVERB_WELL_T0_SHORT,+0.6s duration
 M5_REVERB_WELL_T0_DESC,+0.6s duration.
@@ -1938,7 +1938,7 @@ P3_SHIELD_CAPACITOR,Enemies are closing in. Tap Shield Boost for a temporary res
 P3_SHIELD_RELAY,Enemies are closing in. Tap Shield to restart recharge.
 P3_SHIELD_FEEDBACK,Shots incoming? Tap Shield to reflect them briefly.
 P3_BOOST,Violet shield = extra absorption. The thin bar shows time remaining.
-P3_MIXER,New gear in the mix. Open Mixer to shift power and connect matching gear.
+P3_MIXER,"Be sure to use the Mixer! Tap Mixer below to boost damage, area effects or control. Mixing pauses the fight."
 P4_IDLE,NIGHTSHIFT FM · Keeping the mountain company.
 P4_APPROACH,CALLER APPROACH
 P4_M1_W1,CONTROL · Nightshift is on the air. Keep the ridge in sight.

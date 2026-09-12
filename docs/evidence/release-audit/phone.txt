@@ -1,0 +1,14 @@
+PASS: native fresh menu to campaign to equipment to combat
+PASS: OS Back closes paused mixer and retains pause
+PASS: paused combat clock does not advance
+PASS: OS Back exits settings without resuming
+PASS: OS Back closes live mixer
+Waiting for earned Tuned decision...
+PASS: native info opens without buying upgrade
+PASS: force-stop Continue restores actual decision offers
+PASS: third compact card selects once through OS tap
+PASS: earned completed save restores on physical Android
+PASS: native contribution report opens
+PASS: OS Back returns contribution report to results
+PASS: native Retry starts a fresh mission
+PASS: current QA process has no engine or Android crash errors

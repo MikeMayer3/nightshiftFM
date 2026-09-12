@@ -2,6 +2,8 @@ class_name CombatCoach
 extends PanelContainer
 ## Presentation-only coaching. Appearing once is remembered independently of runs.
 var current_hint: String = ""
+var mixer_reminded: bool = false
+var hint_left: float = 0.0
 var caption: Label
 var icon: TextureRect
 var dismiss: Button
@@ -46,15 +48,27 @@ static func relevant(s: CombatSession, id: String) -> bool:
 			for actor: CombatActor in s.actors:
 				if RadioBalance.entered(s,actor) and actor.position.y > 360: return true
 		"boost": return RadioShieldVisual.reserve(s) > 0
-		"mixer": return s.patchboard != null and s.patchboard.mixer != null and s.draft.normal_count > 0
+		"mixer": return s.patchboard != null and s.patchboard.mixer != null and (s.draft.normal_count > 0 or s.elapsed >= 12)
 	return false
 
+func _process(delta: float) -> void:
+	if not visible: return
+	hint_left = maxf(0, hint_left - delta)
+	if hint_left == 0: current_hint = ""; hide()
+
 func refresh(s: CombatSession) -> void:
+	# Once per run, including existing profiles that have already seen onboarding.
+	if not mixer_reminded and relevant(s, "mixer"):
+		mixer_reminded = true
+		current_hint = "mixer"
+		hint_left = 10
+		preferences.remember_coach("mixer")
 	if not current_hint.is_empty() and not relevant(s,current_hint): current_hint = ""
 	if current_hint.is_empty():
 		for id: String in ["boost", "shield", "mixer"]:
 			if id not in preferences.coach_seen and relevant(s,id):
 				current_hint = id
+				hint_left = 8
 				preferences.remember_coach(id)
 				break
 	visible = not current_hint.is_empty()

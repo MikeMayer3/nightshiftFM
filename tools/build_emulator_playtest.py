@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--patchboard', action='store_true', help='Build M6 full-run observer')
 parser.add_argument('--campaign-ui', action='store_true', help='Build read-only campaign UI observer around regular boot')
+parser.add_argument('--release-audit', action='store_true', help='Build isolated current-game release audit observer')
 parser.add_argument('--touch', action='store_true', help='Build the frozen native-touch regression fixture')
 args = parser.parse_args()
 root = Path(__file__).resolve().parents[1]
@@ -23,12 +24,12 @@ with tempfile.TemporaryDirectory(prefix='nightshift-emulator-qa-') as folder:
     shutil.copytree(root, project, ignore=shutil.ignore_patterns('.git', '.godot', 'builds', 'docs', 'prompts'))
     qa = project / 'qa'
     qa.mkdir()
-    shutil.copyfile(root / ('tests/campaign_ui_playtest.gd' if args.campaign_ui else 'tests/touch_playtest.gd' if args.touch else 'tests/patchboard_playtest.gd' if args.patchboard else 'tests/emulator_playtest.gd'), qa / 'observer.gd')
+    shutil.copyfile(root / ('tests/release_android_observer.gd' if args.release_audit else 'tests/campaign_ui_playtest.gd' if args.campaign_ui else 'tests/touch_playtest.gd' if args.touch else 'tests/patchboard_playtest.gd' if args.patchboard else 'tests/emulator_playtest.gd'), qa / 'observer.gd')
     (qa / 'main.tscn').write_text('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="res://qa/observer.gd" id="1"]\n[node name="EmulatorPlaytest" type="Node"]\nscript = ExtResource("1")\n')
     config = project / 'project.godot'
     config.write_text(config.read_text().replace('res://scenes/boot/boot.tscn', 'res://qa/main.tscn'))
     config = project / 'export_presets.cfg'
-    config.write_text(config.read_text().replace('org.nightshiftfm.spike', 'org.nightshiftfm.campaignqa' if args.campaign_ui else 'org.nightshiftfm.touchqa' if args.touch else 'org.nightshiftfm.turretqa').replace('package/name="Nightshift FM"', 'package/name="Nightshift Touch QA"' if args.touch else 'package/name="Nightshift Turret QA"'))
+    config.write_text(config.read_text().replace('org.nightshiftfm.spike', 'org.nightshiftfm.releaseaudit' if args.release_audit else 'org.nightshiftfm.campaignqa' if args.campaign_ui else 'org.nightshiftfm.touchqa' if args.touch else 'org.nightshiftfm.turretqa').replace('package/name="Nightshift FM"', 'package/name="Nightshift Touch QA"' if args.touch else 'package/name="Nightshift Turret QA"'))
     hashes = {}
     for directory in ['scripts', 'scenes', 'content', 'assets']:
         for path in sorted((root / directory).rglob('*')):

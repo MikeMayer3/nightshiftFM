@@ -1,0 +1,130 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M2 Pro
+
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+SCRIPT ERROR: Invalid access to property or key 'radius' on a base object of type 'Dictionary'.
+          at: ArsenalCombat._deploy (res://scripts/combat/arsenal_combat.gd:269)
+          GDScript backtrace (most recent call first):
+              [0] _deploy (res://scripts/combat/arsenal_combat.gd:269)
+              [1] run (res://tests/release_full_deck.gd:28)
+PASS: full-deck fixture has five supports
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+PASS: tower and support art slots remain separated
+RESULT: 36 full-deck checks; 0 failures

@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+{"alive":0,"cause":"M8_ELITE_DIVER","choices":15,"cleared":10,"contract":"","difficulty":0,"finished":true,"hull":100.0,"main":"sweep","mission":9,"mode":"campaign","reason":"","restores":15,"seconds":533.733333333177,"style":"static_net","valid":true,"victory":true,"wave":10}

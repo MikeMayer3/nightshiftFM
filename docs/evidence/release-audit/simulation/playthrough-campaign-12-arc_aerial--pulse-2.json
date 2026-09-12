@@ -1,0 +1,20 @@
+{
+	"alive": 0,
+	"cause": "M2_DIVER_NAME",
+	"choices": 6,
+	"cleared": 4,
+	"contract": "",
+	"difficulty": 2,
+	"finished": true,
+	"hull": 0.0,
+	"main": "pulse",
+	"mission": 12,
+	"mode": "campaign",
+	"reason": "",
+	"restores": 6,
+	"seconds": 279.233333333408,
+	"style": "arc_aerial",
+	"valid": true,
+	"victory": false,
+	"wave": 5
+}

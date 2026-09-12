@@ -1,0 +1,8 @@
+{
+  "boost_visible": false,
+  "shield_button_rect": "[P: (517.0, 1235.0), S: (191.0, 88.0)]",
+  "shield_button_visible": true,
+  "shield_minimum": "(147.0, 32.0)",
+  "shield_rect": "[P: (368.0, 1329.0), S: (340.0, 76.0)]",
+  "shield_text": "Shield 48 / 65"
+}

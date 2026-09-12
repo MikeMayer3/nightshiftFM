@@ -20,7 +20,7 @@ TRACKS = {
  B('Wideband',dict(radius=40,damage_bonus=-.2),('Wide Cone',dict(radius=35,push=-10)),('Deep Cone',dict(radius=-20,push=35)),'Wall of Sound',dict(pulses=2)),
  B('Compression',dict(radius=-30,damage_bonus=.8,exposure=15),('Hard Clip',dict(exposure=25,cadence=-.2)),('Direct Injection',dict(elite_bonus=.5,push=-15)),'Crushing Note',dict(damage_bonus=.6)),
  B('Aftershock',dict(pulses=2,damage_bonus=-.3),('Ringing Floor',dict(duration=2,damage_bonus=-.15)),('Double Thump',dict(pulses=1,duration=-1)),'Seismic Chorus',dict(pulses=2))]),
-'needle_swarm': ('Turntable', 'Traveling projectiles and marks', dict(damage=6,interval=2.4,pierce=1,steering=3,projectiles=4,duration=3,reach=700,speed=500), [
+'needle_swarm': ('Turntable', 'Note drones orbit enemies and fire three shots each. Upgrades add shots, notes and marks.', dict(damage=6,interval=2.4,pierce=1,steering=3,projectiles=4,duration=3,reach=700,speed=500), [
  B('Piercing Needles',dict(pierce=2,steering=-3),('Long Groove',dict(pierce=2,falloff=.15)),('Hard Cut',dict(damage_bonus=.6,pierce=-1)),'Record Cutter',dict(pierce=3)),
  B('Homing Swarm',dict(steering=4,pierce=-1),('Wide Seek',dict(reach=200,speed=-120)),('Close Pursuit',dict(steering=4,speed=100,duration=-.5)),'Needle Hurricane',dict(projectiles=3)),
  B('Marking Pins',dict(mark=.2,damage_bonus=-.2),('Spotlight',dict(mark=.15,projectiles=-1)),('Full Set',dict(projectiles=2,mark=-.05)),'Perfect Groove',dict(mark=.15,priority=1))]),
@@ -73,6 +73,45 @@ for key in ['capacitor','relay','feedback']:
 def val(v):
  if isinstance(v,dict): return '{'+', '.join('&'+json.dumps(k)+': '+val(x) for k,x in v.items())+'}'
  return str(float(v))
+# Player-facing descriptions for the note-drone revision; stable upgrade IDs/stats remain compatible.
+NOTE_COPY = {'M5_NEEDLE_SWARM_B1CAP_DESC': 'Each note carries three additional shots.',
+ 'M5_NEEDLE_SWARM_B1CAP_SHORT': '+3 shots per note',
+ 'M5_NEEDLE_SWARM_B1M1_DESC': 'Each note carries two extra shots; successive shots deal less damage.',
+ 'M5_NEEDLE_SWARM_B1M1_SHORT': '+2 shots, damage fades with each shot',
+ 'M5_NEEDLE_SWARM_B1M2_DESC': '+60% base damage, but each note carries one fewer shot.',
+ 'M5_NEEDLE_SWARM_B1M2_SHORT': '+60% base damage, -1 shot per note',
+ 'M5_NEEDLE_SWARM_B1_DESC': 'Each note carries two extra shots but orbits and fires more slowly.',
+ 'M5_NEEDLE_SWARM_B1_NAME': 'Extended Play',
+ 'M5_NEEDLE_SWARM_B1_SHORT': '+2 shots per note, slower rhythm',
+ 'M5_NEEDLE_SWARM_B2CAP_DESC': 'Launch three additional note drones per volley.',
+ 'M5_NEEDLE_SWARM_B2CAP_SHORT': '+3 note drones',
+ 'M5_NEEDLE_SWARM_B2M1_DESC': 'Notes seek replacement targets farther away but travel more slowly. Station '
+                              'range still applies.',
+ 'M5_NEEDLE_SWARM_B2M1_SHORT': '+200 seek range, slower note travel',
+ 'M5_NEEDLE_SWARM_B2M2_DESC': 'Notes travel, orbit and fire faster, but last half a second less.',
+ 'M5_NEEDLE_SWARM_B2M2_SHORT': 'Faster rhythm and travel, -0.5s duration',
+ 'M5_NEEDLE_SWARM_B2_DESC': 'Notes circle and fire faster but carry one fewer shot.',
+ 'M5_NEEDLE_SWARM_B2_NAME': 'Rapid Rhythm',
+ 'M5_NEEDLE_SWARM_B2_SHORT': 'Faster orbit and firing, -1 shot per note',
+ 'M5_NEEDLE_SWARM_B3M1_DESC': '+15% mark strength, but launch one fewer note per volley.',
+ 'M5_NEEDLE_SWARM_B3M1_SHORT': '+15% mark strength, -1 note',
+ 'M5_NEEDLE_SWARM_B3M2_DESC': 'Launch two additional notes with 5% less mark strength.',
+ 'M5_NEEDLE_SWARM_B3M2_SHORT': '+2 notes, -5% mark strength',
+ 'M5_NEEDLE_SWARM_PREVIEW': 'Note drones orbit enemies and fire three shots each. Upgrades add shots, notes '
+                            'and marks.',
+ 'M5_NEEDLE_SWARM_T2_DESC': 'Each note fires one extra shot before disappearing.',
+ 'M5_NEEDLE_SWARM_T2_NAME': 'Encore',
+ 'M5_NEEDLE_SWARM_T2_SHORT': '+1 shot per note',
+ 'M5_NEEDLE_SWARM_T3_DESC': 'Notes circle their targets and fire faster.',
+ 'M5_NEEDLE_SWARM_T3_NAME': 'Faster Rhythm',
+ 'M5_NEEDLE_SWARM_T3_SHORT': 'Faster orbit and firing',
+ 'M5_NEEDLE_SWARM_T4_DESC': 'Launch one additional note drone per volley.',
+ 'M5_NEEDLE_SWARM_T4_NAME': 'Extra Note',
+ 'M5_NEEDLE_SWARM_T4_SHORT': '+1 note drone',
+ 'M5_NEEDLE_SWARM_T5_DESC': 'Drones and vulnerability marks last 0.75 seconds longer.',
+ 'M5_NEEDLE_SWARM_T5_NAME': 'Long Play',
+ 'M5_NEEDLE_SWARM_T5_SHORT': '+0.75s drone and mark duration'}
+
 def run():
  base=ROOT/'content/arsenal'; (base/'upgrades').mkdir(parents=True,exist_ok=True); (base/'tracks').mkdir(exist_ok=True)
  rows={}
@@ -114,6 +153,7 @@ def run():
   if target not in ['main','shield']:
    label('M3_'+target.upper()+'_SHORT_NAME',name)
    for suffix,text in [('NAME',name),('SHORT',role),('DESC',role+'. Starts at rank 1.')]: label('SIGNAL_'+target.upper()+'_NEW_'+suffix,text)
+ rows.update(NOTE_COPY)
  csvpath=ROOT/'assets/ui_strings.csv'
  with csvpath.open(newline='') as f: existing=list(csv.reader(f))
  existing=[r for r in existing if r[0] not in rows]

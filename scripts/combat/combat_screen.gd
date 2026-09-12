@@ -160,6 +160,7 @@ func _ready() -> void:
 	session.fired.connect(arena.show_shot)
 	session.chain_fired.connect(arena.show_chain)
 	session.support_effect.connect(arena.show_support)
+	session.drone_fired.connect(arena.show_drone_shot)
 	session.station_hit.connect(arena.show_hit)
 	session.finished.connect(_finished)
 	session.wave_started.connect(func(_number: int) -> void: _report("wave"))
@@ -345,6 +346,8 @@ func restart() -> void:
 	arena.pulses.clear()
 	arena.fragments.clear()
 	arena.feedback.reset()
+	arena.drone_shots.clear()
+	if coach != null: coach.mixer_reminded = false; coach.current_hint = ""
 	broadcast.attach(session)
 	if radio_audio != null: radio_audio.broadcast_player.stop()
 	_last_log_second = -1

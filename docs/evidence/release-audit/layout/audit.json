@@ -1,0 +1,486 @@
+{
+	"controls_checked": 3916,
+	"issues": [],
+	"screens": [
+		{
+			"issues": 0,
+			"screen": "320x568-normal-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-normal-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "320x568-large-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-normal-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "360x640-large-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-normal-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "450x1000-large-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-normal-mixer"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-menu"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-settings"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-new-route"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_home"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_rewards"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_achievements"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_codex"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_records"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_modes"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_enemies"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-show_logs"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-equipment"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-combat"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-pause"
+		},
+		{
+			"issues": 0,
+			"screen": "1024x768-large-mixer"
+		}
+	]
+}

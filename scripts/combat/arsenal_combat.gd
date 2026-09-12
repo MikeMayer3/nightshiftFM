@@ -1,6 +1,6 @@
 class_name ArsenalCombat
 extends SupportCombat
-## M5 runtime: bounded packets, traveling needles, persistent fields and shield state.
+## M5 runtime: bounded packets, orbiting note drones, persistent fields and shield state.
 ## Every generated packet keeps its original root and cannot become an echo source.
 var packets: Array[Dictionary] = []
 var recordings: Array[Dictionary] = []
@@ -61,8 +61,9 @@ func mark_strength(serial: int) -> float:
 func hit(session: CombatSession, actor: CombatActor, p: Dictionary, source: StringName, root: int, amount: float = -1) -> void:
 	var damage: float = float(p.damage) if amount < 0 else amount
 	if actor.elite: damage *= 1 + float(p.get(&"elite_bonus", 0))
-	if session.random.rng("combat").randf() < float(p.get(&"crit", 0)): damage *= 1.75
-	session.damage_actor(actor, damage, source, root, float(p.get(&"penetration", 0)))
+	var critical: bool = session.random.rng("combat").randf() < float(p.get(&"crit", 0))
+	if critical: damage *= 1.75
+	session.damage_actor(actor, damage, source, root, float(p.get(&"penetration", 0)), critical)
 
 func fire_main(session: CombatSession, first: CombatActor) -> void:
 	var p: Dictionary = ArsenalStats.parameters(session.draft.track(&"main"))
@@ -214,51 +215,69 @@ func _arc(session: CombatSession, first: CombatActor, p: Dictionary, root: int) 
 			overshield = minf(10, overshield + 2)
 			overshield_left = 4
 
+static func drone_shots(p: Dictionary) -> int:
+	return 2 + int(p.pierce)
+
+static func upgrade_legacy_needle(needle: Dictionary) -> void:
+	if needle.has("remaining"): return
+	needle.angle = Vector2(needle.dx, needle.dy).angle()
+	needle.wait = 0.0
+	needle.remaining = maxi(1, drone_shots(needle.p) - needle.hits.size())
+	needle.orbiting = false
+
 func _needles(session: CombatSession, first: CombatActor, p: Dictionary, root: int) -> void:
-	var targets: Array[CombatActor] = nearby(session, first.position, float(p.reach), 12).filter(func(a: CombatActor) -> bool: return RadioBalance.can_hit(session, a, &"needle_swarm"))
+	var targets: Array[CombatActor] = nearby(session, first.position, float(p.reach), 12).filter(func(a: CombatActor) -> bool: return not a.projectile and RadioBalance.can_hit(session, a, &"needle_swarm"))
 	if targets.is_empty(): return
 	if p.get(&"priority", 0) > 0: targets.sort_custom(func(a: CombatActor, b: CombatActor) -> bool: return priority(a) > priority(b))
 	for index: int in int(p.projectiles):
 		var target: CombatActor = targets[index % targets.size()]
 		var origin: Vector2 = Vector2(320 + (index - int(p.projectiles) / 2) * 7, 678)
-		var direction: Vector2 = (target.position - origin).normalized()
-		needles.append({"x": origin.x, "y": origin.y, "dx": direction.x, "dy": direction.y, "target": target.serial, "root": root, "left": float(p.duration), "hits": [], "p": p.duplicate(true)})
+		needles.append({"x": origin.x, "y": origin.y, "dx": 0.0, "dy": -1.0,
+			"target": target.serial, "root": root, "left": float(p.duration), "hits": [], "p": p.duplicate(true),
+			"angle": TAU * index / int(p.projectiles), "wait": .12 + index * .05,
+			"remaining": drone_shots(p), "orbiting": false})
 	session.support_effect.emit(&"needle_swarm", first.position, Vector2(20, 20))
 
 func _tick_needles(session: CombatSession, delta: float) -> void:
+	if session.paused or session.is_finished() or session.is_deciding(): return
 	for needle: Dictionary in needles:
+		upgrade_legacy_needle(needle)
 		needle.left = maxf(0, float(needle.left) - delta)
+		if needle.left == 0: continue
 		var p: Dictionary = needle.p
 		var start: Vector2 = Vector2(needle.x, needle.y)
-		var direction: Vector2 = Vector2(needle.dx, needle.dy)
 		var target: CombatActor = actor_by_id(session, int(needle.target))
-		if target == null:
-			var candidates: Array[CombatActor] = nearby(session, start, float(p.reach), 12)
-			for candidate: CombatActor in candidates:
-				if candidate.serial not in needle.hits:
-					target = candidate
-					needle.target = target.serial
-					break
-		if target != null and float(p.steering) > 0:
-			direction = direction.slerp((target.position - start).normalized(), clampf(float(p.steering) * delta, 0, 1)).normalized()
-		var end: Vector2 = start + direction * float(p.speed) * delta
-		needle.dx = direction.x
-		needle.dy = direction.y
-		needle.x = clampf(end.x, 0, 640)
-		needle.y = clampf(end.y, 0, 720)
-		for actor: CombatActor in session.actors:
-			if not RadioBalance.can_hit(session, actor, &"needle_swarm") or actor.serial in needle.hits: continue
-			if actor.position.distance_to(Geometry2D.get_closest_point_to_segment(actor.position, start, end)) > actor.radius + 4: continue
-			var amount: float = float(p.damage) * maxf(.25, 1 - needle.hits.size() * float(p.get(&"falloff", 0)))
-			hit(session, actor, p, &"needle_swarm", int(needle.root), amount)
-			needle.hits.append(actor.serial)
-			if p.get(&"mark", 0) > 0 and not actor.projectile:
-				marks = marks.filter(func(m: Dictionary) -> bool: return int(m.target) != actor.serial)
-				marks.append({"target": actor.serial, "strength": minf(.5, float(p.mark)), "left": float(p.duration)})
-			if needle.hits.size() >= 1 + int(p.pierce):
-				needle.left = 0
-				break
-		if not Rect2(Vector2.ZERO, CombatSession.ARENA).has_point(end) or (RadioBalance.enabled(session) and end.y < RadioBalance.ENTRY_Y): needle.left = 0
+		if target == null or target.projectile or not RadioBalance.can_hit(session, target, &"needle_swarm"):
+			target = null
+			for candidate: CombatActor in nearby(session, start, float(p.reach), 12):
+				if not candidate.projectile and RadioBalance.can_hit(session, candidate, &"needle_swarm"):
+					target = candidate; break
+			if target == null: needle.left = 0; continue
+			needle.target = target.serial; needle.orbiting = false
+		var radius: float = target.radius + 22
+		if needle.orbiting:
+			needle.angle = fposmod(float(needle.angle) + (2.5 + float(p.steering) * .35) * delta, TAU)
+		var orbit: Vector2 = target.position + Vector2.from_angle(float(needle.angle)) * radius
+		var at: Vector2 = orbit if needle.orbiting else start.move_toward(orbit, float(p.speed) * delta)
+		needle.x = clampf(at.x, 6, 634); needle.y = clampf(at.y, 6, 714)
+		if not needle.orbiting:
+			if at.distance_to(orbit) > 4: continue
+			needle.orbiting = true
+			# Allow the full firing window after flight; spent drones keep their remaining lifetime.
+			if int(needle.remaining) == drone_shots(p): needle.left = float(p.duration)
+		needle.wait = float(needle.wait) - delta
+		if needle.wait > 0: continue
+		needle.wait += clampf(.38 / (1 + float(p.steering) * .12), .12, .5)
+		var fired: int = drone_shots(p) - int(needle.remaining)
+		var amount: float = float(p.damage) * maxf(.25, 1 - fired * float(p.get(&"falloff", 0)))
+		hit(session, target, p, &"needle_swarm", int(needle.root), amount)
+		session.drone_fired.emit(Vector2(needle.x, needle.y), target.position)
+		needle.remaining = int(needle.remaining) - 1
+		if target.serial not in needle.hits: needle.hits.append(target.serial)
+		if p.get(&"mark", 0) > 0:
+			marks = marks.filter(func(m: Dictionary) -> bool: return int(m.target) != target.serial)
+			marks.append({"target": target.serial, "strength": minf(.5, float(p.mark)), "left": float(p.duration)})
+		if needle.remaining <= 0: needle.left = 0
 	needles = needles.filter(func(n: Dictionary) -> bool: return n.left > 0)
 
 func _deploy(session: CombatSession, at: Vector2, source: StringName, p: Dictionary, root: int) -> void:
@@ -398,6 +417,7 @@ func restore(data: Variant) -> bool:
 	packets.assign(data.packets.duplicate(true))
 	recordings.assign(data.recordings.duplicate(true))
 	needles.assign(data.needles.duplicate(true))
+	for needle: Dictionary in needles: upgrade_legacy_needle(needle)
 	zones.assign(data.zones.duplicate(true))
 	marks.assign(data.marks.duplicate(true))
 	return true

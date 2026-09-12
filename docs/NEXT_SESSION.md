@@ -1,5 +1,83 @@
 # Nightshift FM — resume here
 
+## 0.10.15 GitHub publication (2026-09-11)
+
+Release source includes damage numbers with critical emphasis, close hit placement,
+Turntable note drones, a once-per-run Mixer reminder, and Android Back fixes.
+The validated phone-delivered APK is published under `v0.10.15` with the
+construction summary and SHA256SUMS. See the [release](https://github.com/MikeMayer3/nightshiftFM/releases/tag/v0.10.15).
+The repository is now public (verified against GitHub); downloads do not require
+repository membership. Private phone backups remain excluded from Git and APKs.
+Version 0.10.15/code 27 was installed with all six save/settings files preserved;
+the phone was locked, so final visible launch/gameplay checks remain NOT RUN.
+Future updates should install automatically when the physical phone is connected.
+Prior local-only and old-version entries below describe historical state.
+
+## 0.10.15 phone delivery and standing preference (2026-09-10)
+
+Installed **0.10.15 / code 27** on the connected physical Pixel with the Mixer
+reminder, close damage numbers and Turntable note drones. All six existing
+save/settings files stayed byte-identical through install and process launch.
+Android reported a successful launch and the game process had no runtime errors.
+The phone was locked, so visible in-app launch/gameplay verification was NOT RUN.
+APK: `builds/android/nightshift-fm-0.10.15-android-arm64-debug.apk`.
+SHA-256: `6291dcdffa2e426426c92ed7087cbbf8decc479591e7d844c9da47d0cd326843`.
+Export/packaging passed; private backups and tests/docs/tools are excluded.
+**Standing owner instruction:** automatically build/install validated game updates
+when the physical phone is connected. Recorded in `AGENTS.md` for future sessions.
+Source remains uncommitted/unpushed; GitHub release remains 0.10.13.
+
+## Mixer reminder and note drones (2026-09-10)
+
+Added a once-per-run Mixer reminder, moved damage numbers over their target, and
+changed Turntable notes to drones that fly in, orbit, fire three baseline shots and
+despawn. Upgrades add shots/notes or improve rhythm/marks. Retargeting, protected
+entry and legacy note-save migration are covered. See [NOTE_DRONES.md](NOTE_DRONES.md).
+PASS: 6,159 regressions, import/smoke, 15 native visual/input checks, six captures,
+and a ten-wave automated win with 17 checkpoint restores (13 with live drones).
+These new changes are **local, uncommitted, unpushed and not yet packaged/installed**.
+The phone remains on 0.10.14; GitHub remains on 0.10.13. Physical gameplay acceptance
+for the drone revision and the previous Android shield-caption issue remain open.
+
+## 0.10.14 phone delivery (2026-09-10)
+
+Installed Android **0.10.14 / code 26** on the physical Pixel with damage numbers,
+critical-hit emphasis and the local Android Back-navigation fixes. Package version,
+foreground launch and visible menu were verified; current-process logs contained
+no runtime errors. All six existing save/settings files remained byte-identical
+through install and launch. Private backups/screenshots are excluded under `builds/`.
+APK: `builds/android/nightshift-fm-0.10.14-android-arm64-debug.apk`.
+SHA-256: `44b9957c303e348a34208cb1fb9998d9ff1d86ea44f41330b6dfd5c438148bc8`.
+Export passed; APK includes damage-number code and excludes docs/tests/tools/builds.
+Source is still **uncommitted/unpushed**; GitHub release remains 0.10.13.
+Damage-number gameplay visuals have desktop fixture evidence; physical gameplay
+acceptance and the earlier intermittent shield-caption issue remain open.
+
+## Damage numbers (2026-09-10)
+
+Added floating enemy damage numbers with larger gold criticals, a stronger pop,
+and longer critical lifetime. Rapid hits combine separately by critical status;
+reduced effects and large text are respected. Gameplay damage/RNG are unchanged.
+PASS: import, 6,146 regressions, desktop smoke, 18 rendered checks across nine
+phone-size/desktop screenshots. Physical-phone feature checks: **NOT RUN**.
+Changes remain **local, uncommitted and unpushed** on top of the release-audit fixes;
+phone and GitHub APK still contain 0.10.13. Prior Android glyph issue remains open.
+See [DAMAGE_NUMBERS.md](DAMAGE_NUMBERS.md) for scope, commands and evidence.
+
+## Release playthrough audit (2026-09-10)
+
+Audited 0.10.13 and fixed two Android Back-navigation bugs locally: Mixer opened
+from Pause now closes back to Pause, and contribution reports return to results.
+PASS: 6,130 regressions; two rendered ten-wave victories; 17 completed simulation
+cases and 300 checkpoint restores; 120 layout captures; 36 maximum-deck checks;
+13 physical Pixel OS-input checks repeated twice in an isolated QA app.
+**OPEN:** intermittent missing shield-caption glyphs in fast phone result/report
+transitions; slower replay renders correctly. Evidence and remaining production
+AAB, privacy/listing, 16 KB runtime, device/human and Play testing gates are in
+[RELEASE_PLAYTHROUGH_AUDIT.md](RELEASE_PLAYTHROUGH_AUDIT.md).
+Source/audit changes are **local, uncommitted and unpushed**. The player's app and
+GitHub APK remain 0.10.13. Earlier delivery entries below are historical.
+
 ## 0.10.13 delivery (2026-09-10)
 
 The scrolling and compact-upgrade fixes are committed and pushed to `main` at
